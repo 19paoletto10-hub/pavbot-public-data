@@ -1,0 +1,561 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-08-13",
+  "runTime": "18:02",
+  "status": "Istotna aktualizacja",
+  "headline": "Skwar wraca do Polski, Europa dokłada alarmy",
+  "summary": "Nowy slot wzmacnia pogodowy i zdrowotny blok dnia: TVN24 doprecyzowuje weekendowy upał w Polsce i rekordy u sąsiadów, a reszta feedu trzyma MyDr, UODO, OKI, inflację, Ebolę i tech-platformy.",
+  "items": [
+    {
+      "id": "2026-08-13-1802-01",
+      "section": "Alerty",
+      "title": "Skwar wraca do Polski",
+      "lead": "IMGW może wydać żółte i pomarańczowe alarmy na weekend.",
+      "whatHappened": "TVN24 opisuje dziś powrót fali upałów do Polski. Według publikacji w sobotę temperatura może dojść do 35-36 st. C, a w niedzielę do 34-35 st. C. RCB nadal pokazuje suszę hydrologiczną w całym kraju.",
+      "keyFacts": [
+        "RCB utrzymuje suszę hydrologiczną na terenie całego kraju do odwołania.",
+        "TVN24 wskazuje na możliwe żółte i pomarańczowe alarmy IMGW na weekend."
+      ],
+      "reactions": [
+        "Służby i samorządy muszą utrzymać gotowość wodną i transportową.",
+        "Dla części kraju to ponownie realne ryzyko zdrowotne i infrastrukturalne."
+      ],
+      "whyItMatters": "Upał i susza łączą ryzyko dla zdrowia, wody i transportu w jednym sygnale alarmowym.",
+      "context": "To najświeższy krajowy sygnał pogodowy z tego slotu i pierwsza karta feedu.",
+      "watchNext": [
+        "Sprawdzaj wieczorne aktualizacje IMGW i RCB przed weekendem."
+      ],
+      "sources": [
+        {
+          "title": "Skwar wróci do Polski. Tu mogą zostać wydane alarmy",
+          "url": "https://tvn24.pl/tvnmeteo/polska/pogoda-w-polsce-nadchodzi-upal-mozliwe-zolte-i-pomaranczowe-alarmy-st9187400"
+        },
+        {
+          "title": "RCB: Raport dobowy",
+          "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+        }
+      ],
+      "tags": [
+        "alerty",
+        "IMGW",
+        "RCB",
+        "upał"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-13-1802-02",
+      "section": "Alerty",
+      "title": "Europa podnosi kolejne alarmy",
+      "lead": "Brytania i Francja znów mierzą się z rekordowym skwarem.",
+      "whatHappened": "TVN24 publikuje dziś materiał o rekordach upałów u sąsiadów, a AP opisuje, że Wielka Brytania i Francja weszły w kolejną falę gorąca. Met Office potwierdza Amber Extreme Heat warning, a w części Anglii temperatury mają sięgać około 38 st. C.",
+      "keyFacts": [
+        "Met Office wydał Amber Extreme Heat warning z prognozą około 38 st. C.",
+        "AP opisuje, że brytyjsko-francuska fala upałów jest już kolejną w tym wyjątkowym lecie."
+      ],
+      "reactions": [
+        "Rośnie presja na systemy zdrowia, wodę, transport i straż pożarną.",
+        "To ważny sygnał także dla polskich odbiorców śledzących pogodę w regionie."
+      ],
+      "whyItMatters": "Europejski skwar zwiększa ryzyko pożarów, przeciążeń infrastruktury i dalszych korekt pogodowych w regionie.",
+      "context": "To drugi wyraźny alert pogodowy w tej aktualizacji i główny światowy blok pogodowy.",
+      "watchNext": [
+        "Śledź Met Office oraz kolejne depesze AP i TVN24 o upale i suszy."
+      ],
+      "sources": [
+        {
+          "title": "Upał w Europie. Rekordy u naszych sąsiadów i bratanków",
+          "url": "https://tvn24.pl/najnowsze/upal-w-europie-rekordy-u-naszych-sasiadow-i-bratankow-st9178183"
+        },
+        {
+          "title": "Amber Extreme Heat warning issued by the Met Office",
+          "url": "https://www.metoffice.gov.uk/about-us/news-and-media/media-centre/weather-and-climate-news/2026/amber-extreme-heat-warning-issued-by-the-met-office"
+        },
+        {
+          "title": "Britain and France swelter again as western Europe is hit by another heat wave",
+          "url": "https://apnews.com/article/1efa65679bd29770e3b7ea4a9ca839a4"
+        }
+      ],
+      "tags": [
+        "upał",
+        "Europa",
+        "MetOffice",
+        "AP"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-13-1802-03",
+      "section": "Bezpieczeństwo",
+      "title": "MyDr potwierdza celowy atak",
+      "lead": "Spółka mówi o przestępczym incydencie i danych historycznych.",
+      "whatHappened": "MyDr napisało, że padło celem celowego działania przestępczego. Spółka twierdzi, że incydent objął część danych najpewniej z 2024 roku i lat wcześniejszych, a systemy pozostają operacyjne i bezpieczne w użyciu.",
+      "keyFacts": [
+        "Firma mówi o części danych pochodzących z 2024 roku i wcześniejszych lat.",
+        "Na moment publikacji nie ma dowodów, by dane zostały publicznie opublikowane w dark webie."
+      ],
+      "reactions": [
+        "Sprawa przesuwa się z poziomu spekulacji do formalnej komunikacji spółki.",
+        "Najważniejsze pozostaje teraz szybkie ustalenie pełnego zakresu danych."
+      ],
+      "whyItMatters": "To kluczowy punkt odniesienia dla skali wycieku i dalszych obowiązków wobec pacjentów.",
+      "context": "To już nie tylko medialny szum, ale oficjalne potwierdzenie incydentu przez operatora systemu.",
+      "watchNext": [
+        "Obserwuj, czy MyDr opublikuje pełniejszą listę zakresu danych i podmiotów objętych incydentem."
+      ],
+      "sources": [
+        {
+          "title": "Wyciek danych milionów osób. Nowy komunikat firmy",
+          "url": "https://tvn24.pl/biznes/z-kraju/wyciek-danych-milionow-osob-nowy-komunikat-firmy-st9187638"
+        },
+        {
+          "title": "Komunikat po spotkaniu Połączonego Centrum Operacyjnego Cyberbezpieczeństwa",
+          "url": "https://www.gov.pl/web/baza-wiedzy/komunikat-po-spotkaniu-polaczonego-centrum-operacyjnego-cyberbezpieczenstwa"
+        }
+      ],
+      "tags": [
+        "MyDr",
+        "cyberbezpieczeństwo",
+        "dane",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-13-1802-04",
+      "section": "Bezpieczeństwo",
+      "title": "LUX MED ostrzega przed phishingiem",
+      "lead": "Sieć analizuje skutki incydentu i prosi pacjentów o czujność.",
+      "whatHappened": "LUX MED reaguje na incydent w MyDr i analizuje możliwe skutki dla pacjentów. Firma ostrzega też przed próbami phishingu, czyli wiadomościami i kontaktami podszywającymi się pod oficjalne kanały.",
+      "keyFacts": [
+        "LUX MED publicznie potwierdza, że bada skutki incydentu.",
+        "Pacjenci mają zachować czujność wobec SMS-ów, e-maili i telefonów o wyciekach lub rzekomych dopłatach."
+      ],
+      "reactions": [
+        "To wzmacnia presję na szybką i spójną komunikację do pacjentów.",
+        "Incydent może teraz przekształcić się w falę prób oszustw wtórnych."
+      ],
+      "whyItMatters": "W praktyce największe szkody po wycieku często pojawiają się dopiero w kolejnym kroku, przez phishing i podszywanie się pod zaufane instytucje.",
+      "context": "Ten komunikat dopełnia obraz reakcji rynku medycznego na wyciek MyDr.",
+      "watchNext": [
+        "Sprawdzaj, czy pojawią się kolejne komunikaty placówek medycznych i operatorów usług zdrowotnych."
+      ],
+      "sources": [
+        {
+          "title": "LUX MED reaguje na incydent w MyDr. Ostrzega pacjentów przed phishingiem",
+          "url": "https://tvn24.pl/biznes/z-kraju/incydent-bezpieczenstwa-danych-w-mydr-lux-med-wydal-oswiadczenie-st9188154"
+        }
+      ],
+      "tags": [
+        "MyDr",
+        "LUX MED",
+        "phishing",
+        "cyberbezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-13-1802-05",
+      "section": "Polska",
+      "title": "UODO przypomina zasady po wycieku",
+      "lead": "Urząd wskazuje obowiązek zgłoszenia i ochronę PESEL.",
+      "whatHappened": "UODO wyjaśnia, co administratorzy powinni zrobić po naruszeniu ochrony danych, w tym jak zgłaszać incydent i jak ograniczać skutki dla osób, których dane dotyczą. Urząd przypomina także o większej ostrożności w SMS-ach, e-mailach i połączeniach telefonicznych.",
+      "keyFacts": [
+        "UODO wskazuje obowiązek zgłoszenia naruszenia i zawiadomienia osób przy wysokim ryzyku.",
+        "W komunikatach przewija się zastrzeżenie numeru PESEL jako praktyczny krok ograniczający ryzyko."
+      ],
+      "reactions": [
+        "To przejmuje temat z poziomu medialnego na poziom procedur RODO.",
+        "Dla administratorów liczy się teraz tempo i jakość komunikacji."
+      ],
+      "whyItMatters": "To wyznacza formalny standard reakcji dla kolejnych podmiotów, których dane mogły trafić do wycieku.",
+      "context": "W praktyce ten komunikat spina publikacje o MyDr z oficjalnym poradnikiem UODO.",
+      "watchNext": [
+        "Obserwuj, czy UODO opublikuje kolejne wytyczne lub decyzje dotyczące konkretnych administratorów."
+      ],
+      "sources": [
+        {
+          "title": "Jak chronić swoje dane osobowe? Urząd wyjaśnia",
+          "url": "https://tvn24.pl/biznes/z-kraju/incydent-mydr-co-zrobic-kiedy-moje-dane-wyciekly-urzad-ochrony-danych-osobowych-wyjasnia-st9186365"
+        },
+        {
+          "title": "UODO: Administrator musi zgłosić wyciek",
+          "url": "https://uodo.gov.pl/pl/138/4538"
+        },
+        {
+          "title": "UODO: Wyciek danych – co dalej?",
+          "url": "https://uodo.gov.pl/pl/138/4539"
+        },
+        {
+          "title": "BezpieczneDane.gov.pl",
+          "url": "https://bezpiecznedane.gov.pl/"
+        }
+      ],
+      "tags": [
+        "UODO",
+        "RODO",
+        "MyDr",
+        "PESEL"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-08-13-1802-06",
+      "section": "Polityka",
+      "title": "Romanowski pisze z Tyraspola",
+      "lead": "Nowy materiał TVN24 utrzymuje temat Naddniestrza w obiegu politycznym.",
+      "whatHappened": "TVN24 podaje, że list podpisany przez Marcina Romanowskiego został wysłany z Tyraspola w prorosyjskim Naddniestrzu. W komentarzach polityków wątek jest czytany jako kolejny sygnał o rosyjskich wpływach i ochronie po stronie lokalnych struktur.",
+      "keyFacts": [
+        "Materiał TVN24 pokazuje, że list trafił do prokuratury z Tyraspola.",
+        "W debacie politycznej sprawa jest nadal łączona z wątkiem rosyjskich wpływów."
+      ],
+      "reactions": [
+        "Sprawa pozostaje politycznie wybuchowa i łatwo wraca w debacie publicznej.",
+        "Każdy nowy szczegół wzmacnia presję na prokuraturę i rząd."
+      ],
+      "whyItMatters": "To łączy wątek karny z polityką i geopolityką, więc pozostaje mocnym sygnałem w krajowym feedzie.",
+      "context": "To rozwinięcie porannego motywu z Naddniestrza, już z nową ramą medialną.",
+      "watchNext": [
+        "Sprawdzaj, czy prokuratura i MSZ doprecyzują kolejne kroki po tym sygnale."
+      ],
+      "sources": [
+        {
+          "title": "Marcin Romanowski napisał list z prorosyjskiego Naddniestrza",
+          "url": "https://tvn24.pl/polska/marcin-romanowski-napisal-list-z-prorosyjskiego-naddniestrza-st9185535"
+        }
+      ],
+      "tags": [
+        "Romanowski",
+        "Naddniestrze",
+        "polityka",
+        "Polska"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-13-1802-07",
+      "section": "Polska",
+      "title": "MiG-29 wraca z lądowania z uszkodzonymi oponami",
+      "lead": "Incydent w Malborku skończył się bez ofiar.",
+      "whatHappened": "W Malborku po locie treningowym pary dyżurnej MiG-29 doszło do zablokowania hamulców jednego z myśliwców i uszkodzenia dwóch opon. Maszyna wylądowała normalnie, drugi samolot skierowano na lotnisko zapasowe, a nikt nie ucierpiał.",
+      "keyFacts": [
+        "Dwie opony zostały uszkodzone, a drugi samolot wylądował na lotnisku zapasowym.",
+        "Sprawą ma się zająć Komisja Badania Wypadków Lotniczych Lotnictwa Państwowego."
+      ],
+      "reactions": [
+        "To wygląda na incydent techniczny, ale wymaga formalnego sprawdzenia.",
+        "Dla Sił Powietrznych ważne jest teraz wyciągnięcie wniosków bez eskalacji szumu."
+      ],
+      "whyItMatters": "Nawet bez ofiar taki incydent ma znaczenie dla gotowości operacyjnej i bezpieczeństwa lotów.",
+      "context": "Artykuł TVN24 z 12 sierpnia nadal krąży w bieżącym obiegu newsowym.",
+      "watchNext": [
+        "Obserwuj, czy komisja poda przyczynę awarii i zakres ewentualnych zaleceń."
+      ],
+      "sources": [
+        {
+          "title": "Incydent z udziałem myśliwca MiG-29 w Malborku",
+          "url": "https://tvn24.pl/polska/incydent-z-udzialem-mysliwca-mig-29-w-malborku-st9187090"
+        }
+      ],
+      "tags": [
+        "wojsko",
+        "MiG-29",
+        "bezpieczeństwo",
+        "Polska"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-08-13-1802-08",
+      "section": "Gospodarka",
+      "title": "Prezydent podpisał OKI",
+      "lead": "Osobiste Konta Inwestycyjne mają ruszyć od stycznia 2027 roku.",
+      "whatHappened": "Karol Nawrocki podpisał ustawę wprowadzającą Osobiste Konta Inwestycyjne. TVN24 podaje, że nowe rozwiązanie zacznie obowiązywać od stycznia 2027 roku, a pełniejsze szczegóły mają pojawić się później.",
+      "keyFacts": [
+        "Ustawa została podpisana 13 sierpnia 2026 roku.",
+        "Start nowego instrumentu zaplanowano na styczeń 2027 roku."
+      ],
+      "reactions": [
+        "To ważny sygnał dla rynku oszczędności i kapitału w Polsce.",
+        "Szczegóły wykonawcze zdecydują, czy OKI będą realnie masowym produktem."
+      ],
+      "whyItMatters": "OKI mogą wpłynąć na zachowania inwestorów detalicznych i debatę o oszczędzaniu w Polsce.",
+      "context": "To najnowsza decyzja prezydenta w bieżącym bloku gospodarczym TVN24.",
+      "watchNext": [
+        "Czekaj na publikację szczegółów podatkowych i operacyjnych nowego rozwiązania."
+      ],
+      "sources": [
+        {
+          "title": "Prezydent Karol Nawrocki zadecydował w sprawie Osobistych Kont Inwestycyjnych",
+          "url": "https://tvn24.pl/biznes/z-kraju/prezydent-karol-nawrocki-zadecydowal-w-sprawie-osobistych-kont-inwestycyjnych-st9188486"
+        }
+      ],
+      "tags": [
+        "OKI",
+        "prezydent",
+        "oszczędności",
+        "gospodarka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-08-13-1802-09",
+      "section": "Gospodarka",
+      "title": "Inflacja w lipcu odbija do 3,0 proc.",
+      "lead": "GUS podał wyższy odczyt niż w czerwcu.",
+      "whatHappened": "GUS opublikował szybki szacunek CPI za lipiec 2026 roku. Inflacja wyniosła 3,0 proc. rok do roku i 0,8 proc. miesiąc do miesiąca, a TVN24 wskazuje, że wzrost napędzały głównie usługi i paliwa.",
+      "keyFacts": [
+        "GUS podał 3,0 proc. r/r oraz 0,8 proc. m/m w szybkim szacunku za lipiec.",
+        "TVN24 łączy wyższy odczyt przede wszystkim z usługami i paliwami."
+      ],
+      "reactions": [
+        "Rynek dostaje sygnał, że ścieżka dezinflacji nie jest liniowa.",
+        "To nadal ważny punkt odniesienia dla stóp, konsumpcji i kosztów życia."
+      ],
+      "whyItMatters": "Inflacja wpływa na dochody realne, politykę pieniężną i narrację o tempie wychodzenia z presji cenowej.",
+      "context": "To jeden z kluczowych krajowych odczytów dnia w części gospodarczej feedu.",
+      "watchNext": [
+        "Śledź kolejne komentarze ekonomistów oraz reakcję rynku na lipcowy odczyt."
+      ],
+      "sources": [
+        {
+          "title": "Szybki szacunek wskaźnika cen towarów i usług konsumpcyjnych w lipcu 2026 r.",
+          "url": "https://stat.gov.pl/obszary-tematyczne/ceny-handel/wskazniki-cen/szybki-szacunek-wskaznika-cen-towarow-i-uslug-konsumpcyjnych-w-lipcu-2026-r-%2C21%2C43.html"
+        },
+        {
+          "title": "Nowe dane o inflacji",
+          "url": "https://tvn24.pl/biznes/z-kraju/nowe-dane-o-inflacji-st9187385"
+        }
+      ],
+      "tags": [
+        "inflacja",
+        "GUS",
+        "ceny",
+        "gospodarka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-13-1802-10",
+      "section": "Świat",
+      "title": "Brytania i Francja znów w skwarze",
+      "lead": "Południe Europy i Wyspy Brytyjskie walczą z kolejną falą upałów.",
+      "whatHappened": "AP opisuje, że Wielka Brytania i Francja mierzą się z kolejną falą upałów tego wyjątkowego lata. W Londynie temperatura sięgała 38,1 st. C, a we Francji miejscami dochodziła do około 40 st. C. Rosną też problemy z suszą i pożarami.",
+      "keyFacts": [
+        "AP podaje, że to już piąta fala upałów w tym lecie dla części Zachodniej Europy.",
+        "Met Office potwierdza Amber Extreme Heat warning i temperatury około 38 st. C."
+      ],
+      "reactions": [
+        "Systemy zdrowia i straż pożarna pozostają pod silną presją.",
+        "Skala suszy zwiększa ryzyko dalszych ograniczeń wody i pożarów."
+      ],
+      "whyItMatters": "Zachodnioeuropejski skwar wpływa na infrastrukturę, zdrowie publiczne i odporność systemów kryzysowych.",
+      "context": "To najbardziej wyrazisty światowy alert pogodowy w tym slocie i naturalne rozwinięcie materiału TVN24.",
+      "watchNext": [
+        "Monitoruj następne aktualizacje AP i Met Office o rekordach temperatur i pożarach."
+      ],
+      "sources": [
+        {
+          "title": "Britain and France swelter again as western Europe is hit by another heat wave",
+          "url": "https://apnews.com/article/1efa65679bd29770e3b7ea4a9ca839a4"
+        },
+        {
+          "title": "Amber Extreme Heat warning issued by the Met Office",
+          "url": "https://www.metoffice.gov.uk/about-us/news-and-media/media-centre/weather-and-climate-news/2026/amber-extreme-heat-warning-issued-by-the-met-office"
+        }
+      ],
+      "tags": [
+        "upał",
+        "Europa",
+        "AP",
+        "MetOffice"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-13-1802-11",
+      "section": "Świat",
+      "title": "Ebola w Kongu i Ugandzie przyspiesza",
+      "lead": "CDC ostrzega, że ognisko jest drugie co do wielkości w historii.",
+      "whatHappened": "CDC informuje, że epidemia Eboli w Demokratycznej Republice Konga i Ugandzie szerzy się szybciej niż poprzednie ogniska i jest obecnie drugą największą w historii. WHO przypomina, że w odpowiedzi używa się m.in. szczepień, śledzenia kontaktów i wsparcia laboratoryjnego.",
+      "keyFacts": [
+        "CDC mówi o szybkim tempie szerzenia się ogniska i o ponad 100 zgonach zgłoszonych w pierwszym tygodniu lipca.",
+        "WHO potwierdza istnienie dwóch zatwierdzonych szczepionek oraz standardowe działania outbreak response."
+      ],
+      "reactions": [
+        "Ryzyko międzynarodowe pozostaje niskie, ale sytuacja wymaga ciągłej obserwacji.",
+        "Każde pogorszenie warunków bezpieczeństwa może utrudnić kontakt tracing i opiekę medyczną."
+      ],
+      "whyItMatters": "To ważny wskaźnik dla zdrowia publicznego i gotowości służb poza samą Afryką.",
+      "context": "Ten wątek utrzymuje się w światowym feedzie jako jedna z najpoważniejszych historii zdrowotnych dnia.",
+      "watchNext": [
+        "Śledź kolejne komunikaty CDC, WHO oraz ministerstw zdrowia DRC i Ugandy."
+      ],
+      "sources": [
+        {
+          "title": "Congo's Ebola outbreak is on track to surpass history's deadliest one, WHO says",
+          "url": "https://apnews.com/article/congo-ebola-outbreak-africa-who-d9bb9bfa9816e278ba36a2382334d65f"
+        },
+        {
+          "title": "CDC: Ebola Outbreak Current Situation",
+          "url": "https://www.cdc.gov/ebola/situation-summary/index.html"
+        },
+        {
+          "title": "WHO: Ebola disease",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/ebola-disease"
+        }
+      ],
+      "tags": [
+        "Ebola",
+        "CDC",
+        "WHO",
+        "zdrowie"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-13-1802-12",
+      "section": "Technologia",
+      "title": "Twitch daje opt-out z treningu AI",
+      "lead": "Streamerzy mogą wyłączyć użycie treści kanału do treningu AI Amazona.",
+      "whatHappened": "Twitch Support opublikował komunikat o możliwości wyłączenia wykorzystywania treści kanału do treningu generatywnej AI Amazona. To kolejny sygnał, że platformy streamingowe zaczynają formalizować kontrolę nad danymi twórców.",
+      "keyFacts": [
+        "Twitch wprowadza możliwość opt-out dla wykorzystania treści kanału w treningu AI.",
+        "Kontekst rynkowy wskazuje, że temat ochrony treści twórców wciąż się zaostrza."
+      ],
+      "reactions": [
+        "Dla streamerów to istotna zmiana w kontroli nad własnym materiałem.",
+        "Dla platform to test, jak połączyć rozwój AI z zaufaniem twórców i odbiorców."
+      ],
+      "whyItMatters": "To ważny sygnał dla szerszej debaty o platformach, prawach do treści i wykorzystaniu materiałów do trenowania modeli.",
+      "context": "Technologia w tym feedzie pojawia się tylko wtedy, gdy ma szeroki wpływ na rynek lub użytkowników końcowych.",
+      "watchNext": [
+        "Sprawdzaj, czy podobne opt-outy pojawią się na innych platformach wideo i live."
+      ],
+      "sources": [
+        {
+          "title": "Twitch Support: opt-out from generative AI training",
+          "url": "https://x.com/TwitchSupport/status/2087572924450455558"
+        },
+        {
+          "title": "The Verge: Twitch streamers can now opt out from training Amazon's AI",
+          "url": "https://www.theverge.com/tech/979112/twitch-streamers-can-now-opt-out-from-training-amazons-ai"
+        }
+      ],
+      "tags": [
+        "Twitch",
+        "AI",
+        "platformy",
+        "technologia"
+      ],
+      "priority": "medium"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "RCB: Raport dobowy",
+      "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+    },
+    {
+      "title": "TVN24: Skwar wróci do Polski",
+      "url": "https://tvn24.pl/tvnmeteo/polska/pogoda-w-polsce-nadchodzi-upal-mozliwe-zolte-i-pomaranczowe-alarmy-st9187400"
+    },
+    {
+      "title": "TVN24: Upał w Europie. Rekordy u naszych sąsiadów i bratanków",
+      "url": "https://tvn24.pl/najnowsze/upal-w-europie-rekordy-u-naszych-sasiadow-i-bratankow-st9178183"
+    },
+    {
+      "title": "Wyciek danych milionów osób. Nowy komunikat firmy",
+      "url": "https://tvn24.pl/biznes/z-kraju/wyciek-danych-milionow-osob-nowy-komunikat-firmy-st9187638"
+    },
+    {
+      "title": "Komunikat po spotkaniu Połączonego Centrum Operacyjnego Cyberbezpieczeństwa",
+      "url": "https://www.gov.pl/web/baza-wiedzy/komunikat-po-spotkaniu-polaczonego-centrum-operacyjnego-cyberbezpieczenstwa"
+    },
+    {
+      "title": "LUX MED reaguje na incydent w MyDr. Ostrzega pacjentów przed phishingiem",
+      "url": "https://tvn24.pl/biznes/z-kraju/incydent-bezpieczenstwa-danych-w-mydr-lux-med-wydal-oswiadczenie-st9188154"
+    },
+    {
+      "title": "Jak chronić swoje dane osobowe? Urząd wyjaśnia",
+      "url": "https://tvn24.pl/biznes/z-kraju/incydent-mydr-co-zrobic-kiedy-moje-dane-wyciekly-urzad-ochrony-danych-osobowych-wyjasnia-st9186365"
+    },
+    {
+      "title": "UODO: Administrator musi zgłosić wyciek",
+      "url": "https://uodo.gov.pl/pl/138/4538"
+    },
+    {
+      "title": "UODO: Wyciek danych – co dalej?",
+      "url": "https://uodo.gov.pl/pl/138/4539"
+    },
+    {
+      "title": "BezpieczneDane.gov.pl",
+      "url": "https://bezpiecznedane.gov.pl/"
+    },
+    {
+      "title": "Marcin Romanowski napisał list z prorosyjskiego Naddniestrza",
+      "url": "https://tvn24.pl/polska/marcin-romanowski-napisal-list-z-prorosyjskiego-naddniestrza-st9185535"
+    },
+    {
+      "title": "Incydent z udziałem myśliwca MiG-29 w Malborku",
+      "url": "https://tvn24.pl/polska/incydent-z-udzialem-mysliwca-mig-29-w-malborku-st9187090"
+    },
+    {
+      "title": "Prezydent Karol Nawrocki zadecydował w sprawie Osobistych Kont Inwestycyjnych",
+      "url": "https://tvn24.pl/biznes/z-kraju/prezydent-karol-nawrocki-zadecydowal-w-sprawie-osobistych-kont-inwestycyjnych-st9188486"
+    },
+    {
+      "title": "Nowe dane o inflacji",
+      "url": "https://tvn24.pl/biznes/z-kraju/nowe-dane-o-inflacji-st9187385"
+    },
+    {
+      "title": "Szybki szacunek wskaźnika cen towarów i usług konsumpcyjnych w lipcu 2026 r.",
+      "url": "https://stat.gov.pl/obszary-tematyczne/ceny-handel/wskazniki-cen/szybki-szacunek-wskaznika-cen-towarow-i-uslug-konsumpcyjnych-w-lipcu-2026-r-%2C21%2C43.html"
+    },
+    {
+      "title": "Britain and France swelter again as western Europe is hit by another heat wave",
+      "url": "https://apnews.com/article/1efa65679bd29770e3b7ea4a9ca839a4"
+    },
+    {
+      "title": "Amber Extreme Heat warning issued by the Met Office",
+      "url": "https://www.metoffice.gov.uk/about-us/news-and-media/media-centre/weather-and-climate-news/2026/amber-extreme-heat-warning-issued-by-the-met-office"
+    },
+    {
+      "title": "CDC: Ebola Outbreak Current Situation",
+      "url": "https://www.cdc.gov/ebola/situation-summary/index.html"
+    },
+    {
+      "title": "WHO: Ebola disease",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/ebola-disease"
+    },
+    {
+      "title": "Congo's Ebola outbreak is on track to surpass history's deadliest one, WHO says",
+      "url": "https://apnews.com/article/congo-ebola-outbreak-africa-who-d9bb9bfa9816e278ba36a2382334d65f"
+    },
+    {
+      "title": "Twitch Support: opt-out from generative AI training",
+      "url": "https://x.com/TwitchSupport/status/2087572924450455558"
+    },
+    {
+      "title": "The Verge: Twitch streamers can now opt out from training Amazon's AI",
+      "url": "https://www.theverge.com/tech/979112/twitch-streamers-can-now-opt-out-from-training-amazons-ai"
+    },
+    {
+      "title": "BBC News X: Temperatures may soar to 38C",
+      "url": "https://x.com/BBCNews/status/2087781463219400816"
+    },
+    {
+      "title": "BBC World X: Ebola outbreak on track to be deadliest ever",
+      "url": "https://x.com/BBCWorld/status/2087714455987560595"
+    },
+    {
+      "title": "CNN X: White House press secretary Karoline Leavitt will leave",
+      "url": "https://x.com/CNN/status/2087629196398887127"
+    },
+    {
+      "title": "BBC News X: Trump says White House press secretary Karoline Leavitt to leave post",
+      "url": "https://x.com/BBCNews/status/2087629473101361241"
+    }
+  ]
+}
