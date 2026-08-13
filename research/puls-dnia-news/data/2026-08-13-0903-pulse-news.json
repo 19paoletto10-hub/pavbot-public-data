@@ -1,0 +1,595 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-08-13",
+  "runTime": "09:03",
+  "status": "Istotna aktualizacja",
+  "headline": "MyDr, Romanowski i nowe ryzyka morskie",
+  "summary": "Poranny puls łączy MyDr, Romanowskiego, nowy sondaż, alert upałowy w Wielkiej Brytanii, Morze Czarne, Ebolę, Ormuz i blok AI/platform.",
+  "checkedSources": [
+    {
+      "title": "TVN24: najnowsze",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24 Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "TVN24 Świat",
+      "url": "https://tvn24.pl/swiat"
+    },
+    {
+      "title": "TVN24 Meteo",
+      "url": "https://tvn24.pl/tvnmeteo"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "BBC Technology RSS",
+      "url": "https://feeds.bbci.co.uk/news/technology/rss.xml"
+    },
+    {
+      "title": "BBC Weather RSS",
+      "url": "https://feeds.bbci.co.uk/weather/rss.xml"
+    },
+    {
+      "title": "CNN sitemap/news",
+      "url": "https://www.cnn.com/sitemap/news.xml"
+    },
+    {
+      "title": "gov.pl/RCB: raport dobowy",
+      "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+    },
+    {
+      "title": "UODO: Administrator musi zgłosić wyciek",
+      "url": "https://uodo.gov.pl/pl/138/4538"
+    },
+    {
+      "title": "UODO: Wyciek danych – co dalej?",
+      "url": "https://uodo.gov.pl/pl/138/4539"
+    },
+    {
+      "title": "Met Office: UK warnings",
+      "url": "https://weather.metoffice.gov.uk/warnings-and-advice/uk-warnings"
+    },
+    {
+      "title": "CDC: Ebola Outbreak Current Situation",
+      "url": "https://www.cdc.gov/ebola/situation-summary/index.html"
+    },
+    {
+      "title": "WHO: Ebola disease fact sheet",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/ebola-disease"
+    },
+    {
+      "title": "ECDC: Ebola disease outbreak in DRC and Uganda",
+      "url": "https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda"
+    }
+  ],
+  "items": [
+    {
+      "id": "2026-08-13-0903-01",
+      "section": "Alerty",
+      "title": "RCB utrzymuje hydrologię na Pomorzu",
+      "lead": "Pomorze nadal ma alert hydrologiczny, a susza hydrologiczna obejmuje kraj.",
+      "whatHappened": "RCB w porannym raporcie nadal pokazuje ostrzeżenie hydrologiczne 2. stopnia dla Pomorza do 10:00 oraz suszę hydrologiczną dla całego kraju do odwołania. W komunikatach nie widać nowych ostrzeżeń meteorologicznych.",
+      "keyFacts": [
+        "Pomorze ma ostrzeżenie hydrologiczne 2. stopnia do 10:00.",
+        "Susza hydrologiczna obowiązuje w całym kraju do odwołania.",
+        "W raporcie dobowym brak nowych ostrzeżeń meteorologicznych."
+      ],
+      "reactions": [
+        "Służby lokalne i samorządy nadal muszą pilnować poziomu wód.",
+        "Hydrologia pozostaje jedynym twardym krajowym alertem."
+      ],
+      "whyItMatters": "Ryzyko dla transportu, lokalnych ujęć wody i gotowości służb pozostaje.",
+      "context": "Temat utrzymuje się od wczoraj, ale poranny slot nie przynosi jeszcze deeskalacji.",
+      "watchNext": [
+        "Sprawdź, czy po 10:00 RCB lub IMGW zmienią status.",
+        "Obserwuj lokalne komunikaty z Pomorza."
+      ],
+      "sources": [
+        {
+          "title": "RCB: raport dobowy",
+          "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+        }
+      ],
+      "tags": [
+        "alerty",
+        "rcb",
+        "hydrologia",
+        "susza-hydrologiczna"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-13-0903-02",
+      "section": "Bezpieczeństwo",
+      "title": "MyDr wchodzi w formalną reakcję",
+      "lead": "UODO przypomina o obowiązkach po wycieku, a państwowy zespół liczy skalę incydentu.",
+      "whatHappened": "TVN24 podaje, że zespół cyberbezpieczeństwa dalej bada zakres wycieku MyDr. UODO publikuje dziś przypomnienie, że administratorzy muszą ocenić ryzyko, zgłosić naruszenie i powiadomić osoby, których dane mogły wyciec.",
+      "keyFacts": [
+        "UODO wskazuje na obowiązek analizy ryzyka i zgłoszeń.",
+        "Sprawa dotyczy danych osobowych niemal 19 mln Polaków według doniesień medialnych.",
+        "Zespół cyberbezpieczeństwa nadal ustala pełny zakres incydentu."
+      ],
+      "reactions": [
+        "Wątek przechodzi z fazy szoku do procedur i odpowiedzialności.",
+        "Ryzyko phishingu i wtórnych nadużyć nadal jest wysokie."
+      ],
+      "whyItMatters": "Skala danych i medyczny kontekst zwiększają ryzyko dla użytkowników i administratorów.",
+      "context": "To jeden z najmocniejszych krajowych wątków cyberbezpieczeństwa tego poranka.",
+      "watchNext": [
+        "Sprawdź, czy Ministerstwo Cyfryzacji poda zakres danych.",
+        "Obserwuj, czy pojawią się oficjalne komunikaty dla użytkowników."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Gawkowski: wszyscy jesteśmy narażeni",
+          "url": "https://tvn24.pl/biznes/tech/gawkowski-wszyscy-jestesmy-narazeni-st9185811"
+        },
+        {
+          "title": "UODO: Administrator musi zgłosić wyciek",
+          "url": "https://uodo.gov.pl/pl/138/4538"
+        },
+        {
+          "title": "UODO: Wyciek danych – co dalej?",
+          "url": "https://uodo.gov.pl/pl/138/4539"
+        }
+      ],
+      "tags": [
+        "cyberbezpieczenstwo",
+        "mydr",
+        "uodo",
+        "ochrona-danych"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-13-0903-03",
+      "section": "Polityka",
+      "title": "List Romanowskiego z Naddniestrza porusza polityków",
+      "lead": "TVN24 pokazuje list wysłany z Tyraspola i komentarze po jego publikacji.",
+      "whatHappened": "TVN24 podaje, że list Marcina Romanowskiego został wysłany z Tyraspola w prorosyjskim Naddniestrzu. W komentarzach politycy próbują rozdzielić aspekt procesowy od symbolicznego ciężaru miejsca, z którego pismo wyszło.",
+      "keyFacts": [
+        "List pochodzi z Tyraspola, czyli z prorosyjskiego Naddniestrza.",
+        "Sprawa wywołuje komentarze polityków i mediów.",
+        "Wątek miesza wymiar prawny z komunikacją polityczną."
+      ],
+      "reactions": [
+        "Dla opozycji i koalicji to kolejny spór o wiarygodność i bezpieczeństwo państwa.",
+        "Temat może wracać przy kolejnych komentarzach z sejmowych klubów."
+      ],
+      "whyItMatters": "Miejsce wysłania listu wzmacnia polityczny i geopolityczny wymiar całej sprawy.",
+      "context": "To świeży krajowy wątek, który dziś konkuruje z MyDr i sondażem o uwagę feedu.",
+      "watchNext": [
+        "Obserwuj odpowiedzi prokuratury i polityków.",
+        "Sprawdź, czy pojawią się nowe dokumenty lub komentarze."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: List od Marcina Romanowskiego z Naddniestrza",
+          "url": "https://tvn24.pl/polska/list-od-marcina-romanowskiego-z-nadniestrza-komentarze-politykow-st9185591"
+        }
+      ],
+      "tags": [
+        "polityka",
+        "romanowski",
+        "naddniestrze",
+        "sejm"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-08-13-0903-04",
+      "section": "Polityka",
+      "title": "Nowy sondaż wzmacnia napięcie na prawicy",
+      "lead": "KO prowadzi, PiS spada po rozłamie, a Konfederacja dobija do drugiego miejsca.",
+      "whatHappened": "TVN24 publikuje nowy sondaż United Surveys/IBRiS dla WP. KO ma 28,7 proc., PiS 16,9 proc., a Konfederacja 14,4 proc., co potwierdza napięcie po rozłamie w PiS.",
+      "keyFacts": [
+        "KO utrzymuje prowadzenie z 28,7 proc.",
+        "PiS spada do 16,9 proc.",
+        "Konfederacja ma 14,4 proc. i zbliża się do PiS."
+      ],
+      "reactions": [
+        "Sondaż będzie paliwem dla bieżącego sporu o układ sił po prawej stronie.",
+        "Dla mniejszych ugrupowań to sygnał trudniejszej jesieni."
+      ],
+      "whyItMatters": "Układ sił przed jesienią i kolejnymi testami parlamentarnymi staje się bardziej płynny.",
+      "context": "To wyraźniejszy sygnał niż poprzednie badanie z wczorajszego wieczoru.",
+      "watchNext": [
+        "Sprawdź, czy pojawi się kolejny sondaż potwierdzający trend.",
+        "Obserwuj reakcje PiS i Konfederacji."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Nowy sondaż partyjny",
+          "url": "https://tvn24.pl/polska/sondaz-partyjny-united-surveys-by-ibris-dla-wp-sierpien-2026-st9183650"
+        }
+      ],
+      "tags": [
+        "polityka",
+        "sondaz",
+        "pis",
+        "konfederacja"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-08-13-0903-05",
+      "section": "Gospodarka",
+      "title": "Polacy częściej rezerwują urlop na drugą połowę sierpnia",
+      "lead": "Rynek krajowych wyjazdów odbija, a górskie rezerwacje rosną wyraźnie.",
+      "whatHappened": "TVN24 Biznes podaje, że pierwsza połowa sierpnia wygląda lepiej dla krajowej turystyki niż początek wakacji. Według Travelist liczba rezerwacji w górach wzrosła w tym miesiącu o ponad połowę względem lipca.",
+      "keyFacts": [
+        "Liczba rezerwacji na urlop w górach wzrosła o ponad połowę względem lipca.",
+        "Sierpniowy popyt wygląda lepiej niż na starcie sezonu.",
+        "Źródłem danych jest Travelist.pl."
+      ],
+      "reactions": [
+        "To sygnał, że część popytu przesuwa się na last minute.",
+        "Dla branży turystycznej to ważny oddech po słabszym początku wakacji."
+      ],
+      "whyItMatters": "Krajowy popyt turystyczny wpływa na przychody hoteli, gastronomii i transportu.",
+      "context": "Temat jest bardziej gospodarczy niż polityczny, ale ma realny wpływ na lokalne rynki usług.",
+      "watchNext": [
+        "Sprawdź, czy dane rezerwacyjne utrzymają trend do końca sierpnia.",
+        "Obserwuj, czy pogoda nie zmieni popytu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Polacy wyjeżdżają w drugiej połowie wakacji",
+          "url": "https://tvn24.pl/biznes/turystyka/urlop-w-2026-roku-polacy-wyjezdzaja-w-drugiej-polowie-wakacji-znaczny-wzrost-rezerwacji-st9185628"
+        }
+      ],
+      "tags": [
+        "gospodarka",
+        "turystyka",
+        "wakacje",
+        "travelist"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-08-13-0903-06",
+      "section": "Alerty",
+      "title": "Brytyjski alert upałowy wchodzi w szczyt",
+      "lead": "Met Office ostrzega przed 37-38C i ryzykiem dla transportu, infrastruktury i zdrowia.",
+      "whatHappened": "BBC i Met Office potwierdzają amber extreme heat warning dla Anglii. Najwyższe temperatury mają dziś sięgać 37-38C w części wschodniej, południowo-wschodniej i w Midlands, z możliwymi skutkami dla transportu, infrastruktury i zdrowia.",
+      "keyFacts": [
+        "Amber warning obowiązuje dziś w Anglii.",
+        "W części kraju możliwe są 37-38C.",
+        "Met Office ostrzega o wpływie na transport, infrastrukturę i zdrowie."
+      ],
+      "reactions": [
+        "To nadal jeden z najmocniejszych alertów pogodowych w Europie.",
+        "Lokalne instytucje mogą wprowadzać zmiany godzin pracy i usług."
+      ],
+      "whyItMatters": "Skala upału ma znaczenie dla zdrowia publicznego i odporności infrastruktury.",
+      "context": "To nadal konsekwencja fali ciepła, która już wcześniej podbijała brytyjski feed BBC.",
+      "watchNext": [
+        "Sprawdź, czy Met Office przedłuży lub zaostrzy warning.",
+        "Obserwuj lokalne zamknięcia i komunikaty samorządów."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Temperatures to soar to 38C as amber extreme heat warning comes into force",
+          "url": "https://www.bbc.co.uk/weather/articles/ce85pj0e20po?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "Met Office: UK warnings",
+          "url": "https://weather.metoffice.gov.uk/warnings-and-advice/uk-warnings"
+        }
+      ],
+      "tags": [
+        "alerty",
+        "uk",
+        "upał",
+        "metoffice"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-13-0903-07",
+      "section": "Świat",
+      "title": "Black Sea trafia znowu w rosyjskie terminale zbożowe",
+      "lead": "BBC opisuje atak, który uderza w logistykę eksportu i ryzyko dla żeglugi.",
+      "whatHappened": "BBC podaje, że w ataku na rosyjskie terminale eksportu zboża na Morzu Czarnym ucierpiały elementy infrastruktury portowej. To kolejny sygnał, że szlaki morskie wokół Novorosyjska i Odesy pozostają pod presją wojny.",
+      "keyFacts": [
+        "Atak dotyczy rosyjskich terminali eksportu zboża.",
+        "Wątek wpływa na logistykę i ryzyko żeglugi.",
+        "Region Morza Czarnego pozostaje newralgiczny dla handlu żywnością."
+      ],
+      "reactions": [
+        "Rynek zboża i ubezpieczenia żeglugowe obserwują kolejny impuls ryzyka.",
+        "To wzmacnia presję na alternatywne trasy eksportowe."
+      ],
+      "whyItMatters": "Zakłócenia w Black Sea mogą przenosić się na ceny żywności i koszty transportu.",
+      "context": "To świeższy, bardziej konkretny sygnał niż wczorajszy ogólny wątek o napięciach na Morzu Czarnym.",
+      "watchNext": [
+        "Śledź kolejne komunikaty Reuters i BBC.",
+        "Sprawdź, czy pojawią się oficjalne dane o przestojach terminali."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Major Russian grain export terminals hit in Ukraine Black Sea port attack",
+          "url": "https://www.bbc.co.uk/news/articles/c5y49xp2wrno?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "swiat",
+        "morze-czarne",
+        "ukraina",
+        "zboze"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-13-0903-08",
+      "section": "Świat",
+      "title": "Ebola w Kongu rośnie szybciej niż poprzednie ogniska",
+      "lead": "WHO i CDC ostrzegają, że obecny wybuch może być najgroźniejszy w historii.",
+      "whatHappened": "BBC podaje, że epidemia Ebola w Demokratycznej Republice Konga jest na ścieżce, by przebić najtragiczniejsze ognisko w historii. CDC potwierdza, że obecny wybuch w DRC i Ugandzie rozprzestrzenia się szybciej niż wcześniejsze ogniska, choć ryzyko dla USA i podróżnych pozostaje niskie.",
+      "keyFacts": [
+        "WHO szacuje bardzo szybkie tempo wzrostu ogniska.",
+        "CDC mówi o bardzo niskim ryzyku dla USA i podróżnych.",
+        "Ognisko dotyczy DRC i Ugandy."
+      ],
+      "reactions": [
+        "To pozostaje główny międzynarodowy wątek zdrowotny w feedzie.",
+        "Instytucje zdrowia publicznego muszą równoważyć alarm z oceną niskiego ryzyka dla Europy."
+      ],
+      "whyItMatters": "Szybki wzrost ogniska może obciążyć lokalne systemy zdrowia i pomoc humanitarną.",
+      "context": "Wątek był już wczoraj obecny, ale dziś BBC nadaje mu wyraźnie ostrzejszy ton.",
+      "watchNext": [
+        "Śledź nowy bilans WHO i CDC.",
+        "Obserwuj, czy pojawią się nowe komunikaty o szczepieniach lub kontroli ogniska."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Ebola outbreak on track to be deadliest ever, WHO chief says",
+          "url": "https://www.bbc.co.uk/news/articles/cgk4pex4mn8o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CDC: Ebola Outbreak Current Situation",
+          "url": "https://www.cdc.gov/ebola/situation-summary/index.html"
+        },
+        {
+          "title": "WHO: Ebola disease fact sheet",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/ebola-disease"
+        }
+      ],
+      "tags": [
+        "swiat",
+        "ebola",
+        "zdrowie-publiczne",
+        "who"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-13-0903-09",
+      "section": "Świat",
+      "title": "Cieśnina Ormuz pozostaje przytłumiona",
+      "lead": "CNN pokazuje, że ruch przez Ormuz pozostaje niski, a rynek zużywa zapasy ropy.",
+      "whatHappened": "CNN w bieżącym live-news wskazuje, że ruch przez cieśninę Ormuz pozostaje niski, podczas gdy świat szybko zużywa zapasy ropy. To utrzymuje presję na rynek energii i transport morski w regionie.",
+      "keyFacts": [
+        "Ruch przez Ormuz pozostaje niski.",
+        "CNN łączy to z szybkim zużyciem globalnych zapasów ropy.",
+        "Wątek bezpośrednio dotyka rynku energii."
+      ],
+      "reactions": [
+        "Analitycy rynku ropy nadal wyceniają ryzyko eskalacji.",
+        "To może przenieść się na ceny paliw i frachtu."
+      ],
+      "whyItMatters": "Ormuz jest jednym z najważniejszych chokepointów dla światowej energii.",
+      "context": "To świeży globalny wątek, który podbija ryzyko gospodarcze obok Morza Czarnego.",
+      "watchNext": [
+        "Obserwuj kolejne komunikaty CNN i rynku ropy.",
+        "Sprawdź, czy pojawią się oficjalne dane o zmianie żeglugi."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Strait of Hormuz traffic remains low as world rapidly burns through oil stockpiles",
+          "url": "https://www.cnn.com/2026/08/13/world/live-news/iran-war-trump"
+        },
+        {
+          "title": "CNN: Trump keeps saying the US controls the Strait of Hormuz. Does it?",
+          "url": "https://www.cnn.com/2026/08/13/middleeast/who-controls-strait-of-hormuz-iran-us-intl-hnk"
+        }
+      ],
+      "tags": [
+        "swiat",
+        "ormuz",
+        "ropa",
+        "energetyka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-13-0903-10",
+      "section": "Bezpieczeństwo",
+      "title": "Korea Południowa bada szpiegostwo przy bazach USA",
+      "lead": "CNN opisuje zarzuty wobec byłych chińskich wojskowych działających w pobliżu amerykańskich baz.",
+      "whatHappened": "CNN podaje, że południowokoreańska policja oskarża byłych chińskich wojskowych o działania szpiegowskie w pobliżu baz USA. To kolejny sygnał, że bezpieczeństwo wokół infrastruktury wojskowej w Azji pozostaje wysokim ryzykiem.",
+      "keyFacts": [
+        "Sprawa dotyczy byłych chińskich wojskowych.",
+        "Miejsce zdarzenia to okolice baz USA w Korei Południowej.",
+        "Wątek ma wyraźny wymiar wywiadowczy."
+      ],
+      "reactions": [
+        "To może podbić napięcie między Pekinem, Seulem i Waszyngtonem.",
+        "Służby kontrwywiadowcze dostają kolejny alarmowy sygnał."
+      ],
+      "whyItMatters": "Dla regionu Indo-Pacyfiku to sygnał o szerzeniu się ryzyka szpiegowskiego wokół baz i infrastruktury.",
+      "context": "To jeden z mocniejszych światowych wątków bezpieczeństwa z dzisiejszych feedów CNN.",
+      "watchNext": [
+        "Obserwuj reakcje władz Korei Południowej i USA.",
+        "Sprawdź, czy pojawią się oficjalne akty oskarżenia lub szczegóły śledztwa."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Ex-Chinese military men accused of espionage activities near US bases in South Korea, police say",
+          "url": "https://www.cnn.com/2026/08/13/asia/south-korea-military-airport-arrests-intl-hnk"
+        }
+      ],
+      "tags": [
+        "bezpieczenstwo",
+        "korea-poludniowa",
+        "szpiegostwo",
+        "chiny"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-08-13-0903-11",
+      "section": "Polityka",
+      "title": "Karoline Leavitt odchodzi z Białego Domu",
+      "lead": "CNN i BBC potwierdzają, że rzeczniczka Trumpa kończy pracę pod koniec sierpnia.",
+      "whatHappened": "CNN i BBC podają, że Karoline Leavitt odchodzi z funkcji rzeczniczki Białego Domu pod koniec sierpnia, by skupić się na rodzinie. Trump zapowiada, że pozostanie ważną zewnętrzną doradczynią, ale jej odejście otwiera nowy spór o komunikację administracji.",
+      "keyFacts": [
+        "Odejście ma nastąpić pod koniec sierpnia.",
+        "Leavitt ma pozostać doradczynią poza Białym Domem.",
+        "CNN sugeruje, że będzie ją trudno zastąpić."
+      ],
+      "reactions": [
+        "To ważna zmiana w aparacie komunikacyjnym Trumpa.",
+        "Wątek już zbiera komentarze o stylu i lojalności administracji."
+      ],
+      "whyItMatters": "Zmiana rzecznika wpływa na przekaz Białego Domu i rytm politycznego news cycle.",
+      "context": "To świeży follow-up do wczorajszego wątku z ostatniego runa, ale dziś ma już twardszy status.",
+      "watchNext": [
+        "Obserwuj, kto zostanie następcą.",
+        "Sprawdź, czy Trump ogłosi zmianę w tym tygodniu."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Why Karoline Leavitt might be impossible for Trump to replace",
+          "url": "https://www.cnn.com/2026/08/13/politics/karoline-leavitt-leaving-white-house-trump"
+        },
+        {
+          "title": "BBC: Trump says White House press secretary Karoline Leavitt to leave post",
+          "url": "https://www.bbc.co.uk/news/articles/cvglzrvyrz3o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "polityka",
+        "usa",
+        "white-house",
+        "trump"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-08-13-0903-12",
+      "section": "Technologia",
+      "title": "Twitch daje użytkownikom blokadę trenowania AI",
+      "lead": "BBC opisuje nowe ustawienie, które pozwala wyłączyć użycie treści do treningu modeli.",
+      "whatHappened": "BBC podaje, że użytkownicy Twitcha mogą teraz zablokować Amazonowi używanie ich treści do trenowania AI. To ważny sygnał, że platformy zaczynają dawać bardziej granularną kontrolę nad danymi i materiałami twórców.",
+      "keyFacts": [
+        "Użytkownik może wyłączyć użycie treści do treningu AI.",
+        "Zmiana dotyczy platformy Twitch i spółki Amazon.",
+        "To kolejny przykład polityki opt-out w big tech."
+      ],
+      "reactions": [
+        "Twórcy dostają bardziej bezpośrednią kontrolę nad danymi.",
+        "Platformy mogą być pod presją, by oferować podobne opcje szerzej."
+      ],
+      "whyItMatters": "To realny sygnał, że spór o trening AI przenosi się z deklaracji do ustawień produktu.",
+      "context": "Wątek łączy technologię, prawa twórców i publiczną debatę o danych do treningu modeli.",
+      "watchNext": [
+        "Sprawdź, czy inne platformy skopiują ten model ustawień.",
+        "Obserwuj, czy Amazon rozszerzy to na kolejne usługi."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Twitch users can block Amazon from using content for AI",
+          "url": "https://www.bbc.co.uk/news/articles/cp30pz8d09jo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "technologia",
+        "ai",
+        "twitch",
+        "amazon"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-08-13-0903-13",
+      "section": "Gospodarka",
+      "title": "Lakers mają rekordową cenę 12,5 mld dolarów",
+      "lead": "CNN opisuje jedną z największych transakcji w sporcie, jeśli NBA ją zatwierdzi.",
+      "whatHappened": "CNN podaje, że Los Angeles Lakers mają zostać sprzedani za rekordowe 12,5 mld dolarów. Transakcja jest jeszcze do zatwierdzenia przez NBA, ale sama wycena już pokazuje skalę kapitału płynącego do sportowych aktywów.",
+      "keyFacts": [
+        "Cena transakcji to 12,5 mld dolarów.",
+        "Transakcja wymaga zatwierdzenia NBA.",
+        "To jeden z największych dealów w sporcie."
+      ],
+      "reactions": [
+        "Rynek sportu i mediów traktuje to jako benchmark wycen.",
+        "To kolejny sygnał, że topowe marki sportowe są traktowane jak aktywa premium."
+      ],
+      "whyItMatters": "Takie wyceny wpływają na oczekiwania wobec wycen klubów i praw medialnych.",
+      "context": "To bardziej biznesowy niż sportowy news, ale skala transakcji czyni go feed-worthy.",
+      "watchNext": [
+        "Sprawdź, czy NBA zatwierdzi sprzedaż.",
+        "Obserwuj reakcje rynku i innych właścicieli klubów."
+      ],
+      "sources": [
+        {
+          "title": "CNN: LA Lakers to sell for record $12.5B",
+          "url": "https://www.cnn.com/2026/08/13/business/video/lakes-sale-iger-kushner-woike-michaelson-intv-tsi-081312aseg2-cnni-business-fast"
+        }
+      ],
+      "tags": [
+        "gospodarka",
+        "sport",
+        "transakcje",
+        "nba"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-08-13-0903-14",
+      "section": "Świat",
+      "title": "Japonia protestuje przeciw wizycie Putina na spornych wyspach",
+      "lead": "BBC dodaje nowy punkt napięcia wokół rosyjskich terytoriów spornych z Tokio.",
+      "whatHappened": "BBC podaje, że Japonia protestuje przeciwko wizycie Putina na spornych wyspach. Spór utrzymuje napięcie między Tokio a Moskwą i przypomina, że wojna w Ukrainie nadal rezonuje w innych punktach geopolitycznych.",
+      "keyFacts": [
+        "Japonia złożyła protest dyplomatyczny.",
+        "Wizyta dotyczy spornych wysp.",
+        "Wątek podtrzymuje napięcie z Rosją."
+      ],
+      "reactions": [
+        "Tokio sygnalizuje, że nie akceptuje rosyjskich gestów suwerenności.",
+        "To kolejny temat, w którym wojna w Ukrainie odbija się szerzej w Azji."
+      ],
+      "whyItMatters": "Spory terytorialne wokół Rosji i Japonii wzmacniają regionalne napięcia i izolację Moskwy.",
+      "context": "To świeży wątek z BBC World RSS, który dodaje geopolityczny ciężar dzisiejszemu feedowi.",
+      "watchNext": [
+        "Obserwuj dalsze reakcje MSZ Japonii.",
+        "Sprawdź, czy Kreml odpowie na protest."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Japan protests against Putin visit to disputed islands",
+          "url": "https://www.bbc.co.uk/news/articles/cqx7ple0nxxo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "swiat",
+        "japonia",
+        "rosja",
+        "dyplomacja"
+      ],
+      "priority": "medium"
+    }
+  ]
+}
