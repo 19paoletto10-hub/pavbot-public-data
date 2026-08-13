@@ -1,5 +1,15 @@
 # Puls Dnia News Backlog
 
+## 2026-08-13 06:02
+
+- Watch whether RCB or IMGW change the hydrology status after 10:00.
+- Watch for official cyber follow-up on MyDr from UODO or Ministerstwo Cyfryzacji.
+- Watch whether PSE or ENTSO-E publish a post-eclipse system note.
+- Watch whether Reuters, BBC or official sources confirm further Black Sea shipping effects.
+- Watch whether German authorities add more detail on the Lipsk drone incident.
+- Watch whether WHO or ECDC update Ebola counts later today.
+- Watch whether Twitch or Amazon widen the AI-training opt-out story to other platforms.
+
 ## 2026-08-12 21:07
 
 - Watch whether UODO or the Ministry of Digital Affairs publish a firmer confirmation of the MyDr breach scope and notification steps.
