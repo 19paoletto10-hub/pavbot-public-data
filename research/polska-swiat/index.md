@@ -1,8 +1,19 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-08-12
+Last updated: 2026-08-13
 
 ## Current Understanding
+
+Po porannym runie 13 sierpnia środek ciężkości przesunął się z samego
+Noworosyjska na szerszą ukraińską sekwencję: atak na rosyjski bastion morski,
+deklarowane postępy w sektorze oleksandriwskim i pilną lukę Patriotów przed
+zimą. Drugim mocnym blokiem jest humanitarny wymiar wojny, bo AP relacjonuje
+szacunek ONZ o ponad 16 tysiącach ukraińskich cywilów nadal zatrzymywanych
+przez Rosję. Bliski Wschód wrócił jako pakiet Gaza, Bab el-Mandeb, Ormuz i
+mediacja Pakistanu, Kolumbia podniosła katastrofę do cięższego bilansu co
+najmniej 265 ofiar i 500 zaginionych, a w Polsce porządek Rady Ministrów na
+13 sierpnia ustawia ETIAS, Data Act, Prawo lotnicze, Kodeks wyborczy i CPK jako
+główne proceduralne follow-upy przed komunikatem po posiedzeniu.
 
 Po porannym runie 12 sierpnia centrum ciężkości przesunęło się na cztery bloki: ukraiński atak na rosyjski węzeł morski w Noworosyjsku i dalszy nacisk na obronę nad Morzem Czarnym; świeży epizod na Bab el-Mandeb, gdzie Houthi zabijają trzech Pakistańczyków na statku i Pakistan wchodzi w rolę mediatora; krajową sekwencję legislacyjną, bo KPRM i WPLiP pokazują nowe publikacje oraz skierowanie projektów z 11 sierpnia do Sejmu; oraz polski blok obronny z chrztem fregaty Wicher i dalszym harmonogramem programu Miecznik. Równolegle Kolumbia podniosła bilans trzęsienia do 181 ofiar i 2595 rannych, a RCB utrzymuje tylko hydrologiczne ostrzeżenie w Pomorskiem i suszę hydrologiczną w skali kraju.
 
@@ -651,6 +662,11 @@ konfliktowaniu Polaków i Ukraińców.
 
 ## Recent Reports
 
+- [2026-08-13](runs/2026-08-13.md)
+- [2026-08-12](runs/2026-08-12.md)
+- [2026-08-11](runs/2026-08-11.md)
+- [2026-08-07](runs/2026-08-07.md)
+- [2026-08-06](runs/2026-08-06.md)
 - [2026-08-05](runs/2026-08-05.md)
 - [2026-08-04-1937](runs/2026-08-04-1937.md)
 - [2026-08-04](runs/2026-08-04.md)

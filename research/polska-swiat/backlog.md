@@ -4,6 +4,12 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track 13 August Novorossiysk, Patriot and Oleksandrivskyi follow-up | AP and Guardian now connect Ukraine's Black Sea strike with reported battlefield gains and a concrete request for more U.S. Patriot interceptors before winter | Watch AP, Guardian, President of Ukraine, Ukrainian Air Force, White House, Pentagon, NATO and Russian regional statements for port-damage confirmation, casualty updates, interceptor decisions and any Russian retaliation | Open |
+| High | Track UN civilian-detainee estimate in Russia | AP reports the UN estimate that more than 16,000 Ukrainian civilians detained by Russia remain deprived of liberty, with widespread torture and ill-treatment allegations | Watch UN OHCHR, Security Council follow-ups, AP/Reuters mirrors, Ukraine ombudsman, ICRC access statements and Russian responses; separate verified UN data from survivor testimony and political claims | Open |
+| High | Track 13 August Middle East maritime and Gaza package | AP now links Israel's targeted Gaza strike, the Houthi Bab el-Mandeb deaths including three Pakistanis, Hormuz closure and Pakistan's mediation effort | Watch AP, UKMTO, Pakistan MFA, Iran, U.S. statements, Israel, Hamas, Yemen authorities and shipping data for ceasefire extension, further vessel attacks and Gaza plan implementation | Open |
+| High | Track Colombia quake toll and foreign-aid dispute | AP's latest material raises the Colombian earthquake picture to at least 265 dead, 500 missing in the national tally and more than 4,100 unaccounted for in an independent database | Watch AP, Colombian presidency/disaster agency, UN, local authorities and aid organizations for corrected casualty data, rescue access, foreign-team decisions and early accountability disputes | Open |
+| Medium | Track 13 August Council of Ministers agenda | KPRM lists ETIAS, Data Act implementation, Aviation Law, election-code amendments and CPK reports on today's Council of Ministers agenda | Recheck KPRM after the 12:00 meeting for adopted decisions, changes to draft status, communication after the cabinet meeting and Sejm timetable | Open |
+| Medium | Track 13-16 August Polish Armed Forces Day and Apache center follow-up | MON and KPRP start the Święto Wojska Polskiego sequence while MON's Apache offset release keeps the service-center story active | Watch MON, KPRP, Warsaw/Gdynia city services and Boeing/WZL follow-ups for event safety, equipment announcements, industrial milestones and any new procurement commitments | Open |
 | High | Track 11 August Czyste Powietrze relief and deregulatory bills | Rada Ministrów przyjęła pomoc dla oszukanych beneficjentów programu Czyste Powietrze oraz pakiet projektów deregulacyjnych, a 12 sierpnia KPRM pokazało już ich formalny ruch w Sejmie | Watch KPRM, Sejm, ZUS, RCL and affected beneficiary groups for parliamentary route, implementation timing and practical guidance | Open |
 | Medium | Track ORP Wicher and Miecznik rollout | Chrzest pierwszej fregaty Miecznik daje pierwszy twardy kamień milowy dla polskiej marynarki i przemysłu stoczniowego | Watch MON, BBN, KPRM and PGZ for wodowanie, sea-trial schedule, contract milestones and industrial follow-up | Open |
 | High | Track 6 August Kyiv attack and Patriot gap | AP now reports a fresh Russian attack on Kyiv and other Ukrainian cities, while a second AP explainer says Patriots remain the only effective shield against the ballistic missiles that keep getting through | Watch AP, President of Ukraine, NATO, White House, Pentagon, EU and air-defense manufacturers for casualty updates, interceptor decisions, sanctions on missile production and allied reaction | Open |
@@ -136,6 +142,14 @@
 
 ## Review Notes
 
+- 2026-08-13: Morning research created a material update. Strongest sources
+  were AP for Noworosyjsk, UN detainees, Bab el-Mandeb/Gaza/Hormuz and
+  Colombia, Guardian for the Ukraine front/Patriot context, KPRM for the 13
+  August cabinet agenda and draft details, MON/KPRP for the Armed Forces Day
+  and Apache-service-center context, and RCB for practical domestic risk. The
+  podcast should lead Ukraine, then UN detainees, then the Middle East maritime
+  package; KPRM is a pre-meeting agenda item and needs an afternoon follow-up
+  before treating anything as adopted.
 - 2026-08-05: Research created a material update. Strongest sources were AP for
   Kyiv/Patriot and Ormuz, Saxony plus Guardian for Leipzig/Halle, Guardian for
   Ceuta, President of Ukraine for the EU/air-defense frame, and KPRM/RCB for
