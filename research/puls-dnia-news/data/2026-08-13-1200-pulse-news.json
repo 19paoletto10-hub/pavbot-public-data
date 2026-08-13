@@ -1,0 +1,509 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-08-13",
+  "runTime": "12:00",
+  "status": "Istotna aktualizacja",
+  "headline": "Alerty upałowe, MyDr i światowe napięcia",
+  "summary": "Krajowy feed przesuwa się na hydrologię, cyber i politykę, a blok światowy trzyma UK heat, Black Sea, Ebola, Leavitt, Twitch, Japonię i rekordową sprzedaż Lakersów.",
+  "items": [
+    {
+      "id": "2026-08-13-1200-01",
+      "section": "Alerty",
+      "title": "Susza hydrologiczna i upał trzymają kraj w gotowości",
+      "lead": "Polska wciąż żyje suszą hydrologiczną, a na horyzoncie wraca fala upału.",
+      "whatHappened": "RCB w raporcie dobowym z 13 sierpnia utrzymuje suszę hydrologiczną dla całego kraju, a TVN Meteo ostrzega, że w weekend mogą wrócić żółte i pomarańczowe alarmy upałowe. To nadal jest najważniejszy krajowy sygnał alertowy tego slotu.",
+      "keyFacts": [
+        "RCB podaje suszę hydrologiczną na terenie całego kraju do odwołania.",
+        "TVN Meteo opisuje możliwe żółte i pomarańczowe alarmy na weekend."
+      ],
+      "reactions": [
+        "Samorządy i służby muszą liczyć się z presją na wodę i infrastrukturę.",
+        "Wysokie temperatury mogą ponownie obciążyć transport i zdrowie publiczne."
+      ],
+      "whyItMatters": "To łączy ryzyko pogodowe, gospodarkę wodną i gotowość operacyjną służb.",
+      "context": "W poprzednim slocie alert dla Pomorza wygasał o 10:00 dnia wcześniejszego, ale krajowa susza hydrologiczna pozostała aktywna.",
+      "watchNext": [
+        "Sprawdzaj kolejne aktualizacje RCB i IMGW po południu."
+      ],
+      "sources": [
+        {
+          "title": "Raport dobowy - RCB",
+          "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+        },
+        {
+          "title": "Skwar wróci do Polski. Tu mogą zostać wydane alarmy - TVN24 Meteo",
+          "url": "https://tvn24.pl/tvnmeteo/polska/pogoda-w-polsce-nadchodzi-upal-mozliwe-zolte-i-pomaranczowe-alarmy-st9187400"
+        }
+      ],
+      "tags": [
+        "alerty",
+        "IMGW",
+        "susza",
+        "upał"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-13-1200-02",
+      "section": "Technologia",
+      "title": "UODO zaostrza zasady po wycieku MyDr",
+      "lead": "Po wycieku MyDr administratorzy muszą działać bez zwłoki.",
+      "whatHappened": "UODO przypomina, że administratorzy korzystający z MyDr muszą bez zbędnej zwłoki zgłosić naruszenie i zawiadomić osoby, których dane mogły wyciec. Urząd publikuje też praktyczne przypomnienie, jak prowadzić reakcję na naruszenie ochrony danych.",
+      "keyFacts": [
+        "UODO wskazuje obowiązek zgłoszenia naruszenia w ciągu 72 godzin od stwierdzenia.",
+        "UODO podkreśla też obowiązek zawiadomienia osób przy wysokim ryzyku naruszenia praw lub wolności."
+      ],
+      "reactions": [
+        "Sprawa przechodzi z etapu medialnego szumu do formalnej procedury RODO.",
+        "Administratorzy muszą szybko ocenić zakres ryzyka i przygotować komunikację."
+      ],
+      "whyItMatters": "To wyznacza praktyczny standard reakcji na jeden z największych krajowych incydentów danych tego sezonu.",
+      "context": "UODO nie rozstrzyga jeszcze skali szkody, ale wyraźnie ustawia obowiązki po stronie administratorów.",
+      "watchNext": [
+        "Obserwuj, czy pojawią się indywidualne zawiadomienia i formalne zgłoszenia do UODO."
+      ],
+      "sources": [
+        {
+          "title": "Administrator musi zgłosić wyciek - UODO",
+          "url": "https://uodo.gov.pl/pl/138/4538"
+        },
+        {
+          "title": "Wyciek danych – co dalej? - UODO",
+          "url": "https://uodo.gov.pl/pl/138/4539"
+        }
+      ],
+      "tags": [
+        "MyDr",
+        "UODO",
+        "RODO",
+        "cyberbezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-13-1200-03",
+      "section": "Polityka",
+      "title": "Nadal brak terminu dla nominacji szefów służb",
+      "lead": "Kancelaria prezydenta mówi, że decyzja należy wyłącznie do prezydenta.",
+      "whatHappened": "TVN24 podaje, że Zbigniew Bogucki odrzuca tezę o blokowaniu awansów i podkreśla, że prezydent nie ma terminu na rozpatrzenie wniosków o nominacje dla szefów służb. Spór o decyzję pozostaje więc otwarty.",
+      "keyFacts": [
+        "Artykuł TVN24 został opublikowany 13 sierpnia o 10:29.",
+        "Temat dotyczy awansów w ABW, AW i SWW."
+      ],
+      "reactions": [
+        "Opozycja i media mają kolejny punkt nacisku na Pałac Prezydencki.",
+        "Służby nadal pracują bez finalnej formalizacji awansów."
+      ],
+      "whyItMatters": "To wpływa na relacje prezydent-rząd i na wizerunek kierownictwa służb.",
+      "context": "Wątek pozostaje aktywny od kilku miesięcy i wciąż wraca w dniu kolejnych rocznic i uroczystości państwowych.",
+      "watchNext": [
+        "Sprawdź, czy przed 15 sierpnia pojawi się decyzja prezydenta."
+      ],
+      "sources": [
+        {
+          "title": "Kiedy prezydent podpisze nominacje dla szefów służb? - TVN24",
+          "url": "https://tvn24.pl/polska/kiedy-prezydent-podpisze-nominacje-dla-szefow-sluzb-zbigniew-bogucki-komentuje-st9187442"
+        }
+      ],
+      "tags": [
+        "prezydent",
+        "służby",
+        "nominacje",
+        "polityka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-13-1200-04",
+      "section": "Bezpieczeństwo",
+      "title": "Gawkowski mówi o 19 milionach rekordów",
+      "lead": "Wicepremier odcina trop zagranicznego ataku i mówi o motywie zarobkowym.",
+      "whatHappened": "W programie TVN24 Krzysztof Gawkowski mówi o wycieku nawet 19 milionów rekordów z MyDr, podkreśla stan krytyczny i wskazuje, że incydent miał charakter zarobkowy, a nie zagraniczny. To wzmacnia wrażenie, że sprawa ma realny wymiar operacyjny, nie tylko medialny.",
+      "keyFacts": [
+        "Gawkowski mówi o wycieku danych nawet 19 milionów Polaków.",
+        "Minister apeluje o zastrzeganie numerów PESEL."
+      ],
+      "reactions": [
+        "Temat staje się jednym z głównych krajowych problemów cyber i danych osobowych.",
+        "W administracji rośnie presja na szybką, spójną komunikację."
+      ],
+      "whyItMatters": "To pierwszy twardy polityczny komentarz o skali i motywie incydentu MyDr.",
+      "context": "Ten sygnał dobrze łączy się z komunikatami UODO i podbija wagę całego przypadku.",
+      "watchNext": [
+        "Obserwuj, czy pojawi się oficjalna liczba poszkodowanych i dalsza atrybucja."
+      ],
+      "sources": [
+        {
+          "title": "Minister cyfryzacji Krzysztof Gawkowski o gigantycznym wycieku danych - TVN24",
+          "url": "https://tvn24.pl/plus/programy/fakty-po-faktach/minister-cyfryzacji-krzysztof-gawkowski-o-gigantycznym-wycieku-danych-vc9186227"
+        }
+      ],
+      "tags": [
+        "MyDr",
+        "cyberbezpieczeństwo",
+        "PESEL",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-13-1200-05",
+      "section": "Polska",
+      "title": "Mandat za bieg przez tory w Bolesławcu",
+      "lead": "Policja pokazuje nagranie i karze 20-latka za ryzykowny wybryk.",
+      "whatHappened": "W Bolesławcu 20-latek został ukarany mandatem 2 tys. zł za przebiegnięcie przez tory przed nadjeżdżającym pociągiem. Policja opublikowała nagranie ku przestrodze i przypomniała, że podobne zachowanie zagraża pasażerom i obsłudze składu.",
+      "keyFacts": [
+        "Mandat wyniósł 2 tys. zł.",
+        "Policja podkreśla ryzyko nagłego hamowania kilkudziesięciotonowego pociągu."
+      ],
+      "reactions": [
+        "Nagranie ma pełnić funkcję odstraszającą i edukacyjną.",
+        "Sprawa zamyka się mandatem, nie cięższym postępowaniem karnym."
+      ],
+      "whyItMatters": "To prosty, ale bardzo czytelny przykład ryzyka dla ruchu kolejowego i bezpieczeństwa publicznego.",
+      "context": "Tego typu materiały często robią większe wrażenie niż same komunikaty, bo pokazują realne zagrożenie.",
+      "watchNext": [
+        "Obserwuj, czy policja lub PKP wykorzystają nagranie w kampanii prewencyjnej."
+      ],
+      "sources": [
+        {
+          "title": "Bolesławiec. Przebiegł przez tory tuż przed jadącym pociągiem - TVN24",
+          "url": "https://tvn24.pl/wroclaw/boleslawiec-przebiegl-przez-tory-tuz-przed-jadacym-pociagiem-nagranie-st9187553"
+        }
+      ],
+      "tags": [
+        "kolej",
+        "policja",
+        "bezpieczeństwo",
+        "Polska"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-08-13-1200-06",
+      "section": "Gospodarka",
+      "title": "Lakers idą pod młotek za rekordowe 12,5 mld dolarów",
+      "lead": "Nowi właściciele czekają jeszcze na zgodę NBA.",
+      "whatHappened": "CNN podaje, że Los Angeles Lakers mają zostać sprzedani za rekordowe 12,5 miliarda dolarów biznesmenom Bobowi Igerowi i Joshowi Kushnerowi. Transakcja nadal wymaga zatwierdzenia przez NBA, ale już teraz staje się jednym z największych tematów rynku sportowego.",
+      "keyFacts": [
+        "To rekordowa wycena dla amerykańskiej drużyny sportowej.",
+        "Finalizacja zależy jeszcze od zgody ligi."
+      ],
+      "reactions": [
+        "Rynek sportowy dostaje kolejny sygnał, że wyceny klubów nadal rosną agresywnie.",
+        "Historia łączy media, rozrywkę i kapitał prywatny w jednej transakcji."
+      ],
+      "whyItMatters": "To duża wiadomość biznesowa i symbol dalszej inflacji wycen w sporcie premium.",
+      "context": "CNN traktuje sprawę jako twardą historię biznesową, nie tylko sportowy transfer własności.",
+      "watchNext": [
+        "Sprawdź, czy NBA potwierdzi harmonogram zatwierdzania transakcji."
+      ],
+      "sources": [
+        {
+          "title": "LA Lakers to sell for record $12.5B - CNN",
+          "url": "https://www.cnn.com/2026/08/13/business/video/lakes-sale-iger-kushner-woike-michaelson-intv-tsi-081312aseg2-cnni-business-fast"
+        }
+      ],
+      "tags": [
+        "CNN",
+        "Lakers",
+        "biznes",
+        "sport"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-08-13-1200-07",
+      "section": "Świat",
+      "title": "Met Office trzyma amber warning na upał",
+      "lead": "W Anglii temperatura może dojść do 38 stopni Celsjusza.",
+      "whatHappened": "Met Office utrzymuje amber weather warning dla ekstremalnego upału na 13 sierpnia, a BBC opisuje ryzyko temperatur nawet do 38C. Ostrzeżenie obejmuje także możliwe skutki dla transportu, energii i zdrowia publicznego.",
+      "keyFacts": [
+        "Warning obowiązuje dziś do 23:59 czasu lokalnego.",
+        "Met Office wskazuje możliwe zakłócenia, przerwy w dostawach prądu i obciążenie systemów."
+      ],
+      "reactions": [
+        "Władze i przewoźnicy muszą liczyć się z opóźnieniami i zmianami planów.",
+        "Dla części mieszkańców to realne ryzyko zdrowotne, nie tylko dyskomfort."
+      ],
+      "whyItMatters": "Brytyjski alert jest ważnym sygnałem, że ekstremalne upały pozostają kluczowym globalnym ryzykiem letnim.",
+      "context": "To ten sam blok pogodowy, który BBC rozgrzewało od rana jako jedną z głównych historii dnia.",
+      "watchNext": [
+        "Obserwuj, czy Met Office przedłuży warning lub obniży jego rangę."
+      ],
+      "sources": [
+        {
+          "title": "UK weather warnings - Met Office",
+          "url": "https://weather.metoffice.gov.uk/warnings-and-advice/uk-warnings"
+        },
+        {
+          "title": "Temperatures may soar to 38C amid amber extreme heat warning - BBC News",
+          "url": "https://www.bbc.co.uk/weather/articles/ce85pj0e20po?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "BBC",
+        "Met Office",
+        "upał",
+        "alert"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-13-1200-08",
+      "section": "Świat",
+      "title": "BBC opisuje uderzenie w rosyjskie terminale zbożowe",
+      "lead": "Morze Czarne znów wraca jako punkt ryzyka dla logistyki i eksportu.",
+      "whatHappened": "BBC podaje, że rosyjskie terminale eksportu zboża na Morzu Czarnym zostały trafione w ukraińskim ataku. To utrzymuje presję na żeglugę, eksport surowców i szerzej na bezpieczeństwo morskie w regionie.",
+      "keyFacts": [
+        "Temat pojawił się dziś w BBC News jako jeden z głównych wątków światowych.",
+        "Atak uderza w infrastrukturę eksportową, nie tylko w sam front."
+      ],
+      "reactions": [
+        "Rynek i operatorzy morscy będą szukać potwierdzeń skali szkód.",
+        "Każdy taki incydent może podbijać koszty ubezpieczenia i frachtu."
+      ],
+      "whyItMatters": "Morze Czarne nadal pozostaje jednym z najbardziej wrażliwych punktów dla energii, żywności i transportu.",
+      "context": "To kontynuacja napięć wokół infrastruktury eksportowej, które wciąż mają globalne skutki uboczne.",
+      "watchNext": [
+        "Śledź komunikaty rosyjskie, ukraińskie i ruch statków w regionie."
+      ],
+      "sources": [
+        {
+          "title": "Major Russian grain export terminals hit in Ukraine Black Sea port attack - BBC News",
+          "url": "https://www.bbc.co.uk/news/articles/c5y49xp2wrno?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "BBC",
+        "Morze Czarne",
+        "zboże",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-13-1200-09",
+      "section": "Bezpieczeństwo",
+      "title": "Ebola rośnie szybciej niż poprzednie ogniska",
+      "lead": "CDC i WHO ostrzegają przed bardzo dynamicznym przebiegiem epidemii.",
+      "whatHappened": "CDC informuje, że ognisko Ebola w Demokratycznej Republice Konga i Ugandzie rozprzestrzenia się szybciej niż poprzednie i jest już drugim największym na rekordzie CDC. WHO przypomina, że część wariantów wciąż nie ma zatwierdzonej szczepionki ani leczenia, a akcja gaśnicza epidemiologiczna pozostaje trudna.",
+      "keyFacts": [
+        "CDC nie potwierdza dotąd przypadków w USA związanych z tym ogniskiem.",
+        "WHO podkreśla, że średnia śmiertelność Ebola wynosi około 50 procent."
+      ],
+      "reactions": [
+        "Służby zdrowia publicznego zwiększają czujność, ale ryzyko dla USA pozostaje niskie.",
+        "Najtrudniejsze są konflikty, słaba infrastruktura i dezinformacja."
+      ],
+      "whyItMatters": "To jeden z najpoważniejszych globalnych wątków zdrowotno-bezpieczeństwowych dnia.",
+      "context": "Wątek wpisuje się w serię ostrzeżeń o chorobach zakaźnych, które wymagają stałej obserwacji mimo niskiego ryzyka dla Europy.",
+      "watchNext": [
+        "Sprawdzaj codzienne aktualizacje CDC, WHO i lokalnych ministerstw zdrowia."
+      ],
+      "sources": [
+        {
+          "title": "Ebola Outbreak: Current Situation - CDC",
+          "url": "https://www.cdc.gov/ebola/situation-summary/index.html"
+        },
+        {
+          "title": "Ebola disease - WHO",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/ebola-disease"
+        },
+        {
+          "title": "Ebola outbreak on track to be deadliest ever, WHO chief says - BBC World",
+          "url": "https://www.bbc.co.uk/news/articles/cgk4pex4mn8o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Ebola",
+        "CDC",
+        "WHO",
+        "zdrowie"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-13-1200-10",
+      "section": "Polityka",
+      "title": "Leavitt kończy pracę w Białym Domu",
+      "lead": "Trump ogłasza odejście swojej rzeczniczki pod koniec sierpnia.",
+      "whatHappened": "CNN i BBC potwierdzają, że Karoline Leavitt odejdzie z funkcji sekretarz prasowej Białego Domu pod koniec sierpnia, pozostając jednocześnie zewnętrzną doradczynią Donalda Trumpa. To jedna z ważniejszych zmian kadrowych w obecnym układzie medialnym Białego Domu.",
+      "keyFacts": [
+        "Trump nie ogłosił jeszcze następcy.",
+        "Leavitt ma nadal doradzać z zewnątrz po odejściu z roli rzecznikowej."
+      ],
+      "reactions": [
+        "W Waszyngtonie rusza spekulacja o nowym układzie komunikacji administracji.",
+        "Dla komentatorów to także sygnał o zmianie stylu briefingów."
+      ],
+      "whyItMatters": "Leavitt była jedną z najbardziej widocznych twarzy komunikacji Trumpa, więc jej odejście ma wagę polityczną i medialną.",
+      "context": "Wątek ma dziś bardzo szeroki zasięg w CNN i BBC, więc nadaje się jako mocny polityczny sygnał z USA.",
+      "watchNext": [
+        "Śledź nazwiska potencjalnych następców i zmiany w harmonogramie briefingów."
+      ],
+      "sources": [
+        {
+          "title": "White House press secretary Karoline Leavitt will leave the role at the end of August - CNN",
+          "url": "https://x.com/CNN/status/2087629196398887127"
+        },
+        {
+          "title": "Trump says White House press secretary Karoline Leavitt to leave post - BBC News",
+          "url": "https://www.bbc.co.uk/news/articles/cvglzrvyrz3o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "CNN",
+        "BBC",
+        "USA",
+        "Biały Dom"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-13-1200-11",
+      "section": "Technologia",
+      "title": "Twitch daje opcję wyłączenia treningu AI",
+      "lead": "Twórcy mogą teraz ograniczyć użycie swoich treści do modeli generatywnych.",
+      "whatHappened": "Twitch Support ogłasza ustawienie pozwalające wyłączyć używanie treści kanału do treningu generatywnej AI w ekosystemie Amazona. BBC podjęło ten temat jako kolejny spór o zgodę twórców, wykorzystanie streamów i granice platformowego treningu modeli.",
+      "keyFacts": [
+        "Opcja znajduje się w ustawieniach Security and Privacy.",
+        "Dotyczy materiałów kanałowych, które mogą zasilać generatywne modele."
+      ],
+      "reactions": [
+        "Twórcy dostają większą kontrolę nad danymi i wizerunkiem.",
+        "Platformy muszą wyjaśnić, co dokładnie trafia do treningu i na jakiej podstawie."
+      ],
+      "whyItMatters": "To ważny precedens dla relacji między platformami streamingowymi a zgodą użytkowników na trening AI.",
+      "context": "Wątki AI i prawa do treści coraz częściej wychodzą poza marketing i trafiają do polityki platformowej.",
+      "watchNext": [
+        "Obserwuj, czy BBC lub Twitch doprecyzują zakres danych objętych opt-outem."
+      ],
+      "sources": [
+        {
+          "title": "Twitch Support: opt-out from generative AI training",
+          "url": "https://x.com/TwitchSupport/status/2087572924450455558"
+        },
+        {
+          "title": "Twitch users can block Amazon from using content for AI - BBC World",
+          "url": "https://www.bbc.co.uk/news/articles/cp30pz8d09jo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Twitch",
+        "Amazon",
+        "AI",
+        "technologia"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-08-13-1200-12",
+      "section": "Świat",
+      "title": "Japonia protestuje po wizycie Putina na Kurylach",
+      "lead": "Spór o sporne wyspy wraca na front dyplomatyczny.",
+      "whatHappened": "BBC podaje, że Japonia oficjalnie zaprotestowała przeciw wizycie Władimira Putina na spornych Wyspach Kurylskich. Spór terytorialny znów trafia do głównego obiegu informacji i przypomina, że Tokio i Moskwa nadal nie mają trwałego porozumienia.",
+      "keyFacts": [
+        "BBC opisuje wizytę jako pierwszy taki krok rosyjskiego przywódcy od dłuższego czasu.",
+        "Kuryle pozostają jednym z najdłużej nierozwiązanych sporów terytorialnych w regionie."
+      ],
+      "reactions": [
+        "Japonia podtrzymuje oficjalny sprzeciw i presję dyplomatyczną.",
+        "Rosja wykorzystuje wizytę do demonstracji obecności na spornym terytorium."
+      ],
+      "whyItMatters": "To kolejny sygnał, że napięcia wokół Rosji nie ograniczają się wyłącznie do Ukrainy i Europy.",
+      "context": "Wątek wpisuje się w szerszą geopolitykę Azji Północnej i historyczny spór o pokój po II wojnie światowej.",
+      "watchNext": [
+        "Sprawdzaj, czy Tokio i Moskwa wymienią kolejne noty lub oświadczenia."
+      ],
+      "sources": [
+        {
+          "title": "Japan protests Putin visit to disputed islands - BBC World",
+          "url": "https://www.bbc.co.uk/news/articles/cqx7ple0nxxo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "BBC",
+        "Japonia",
+        "Rosja",
+        "geopolityka"
+      ],
+      "priority": "medium"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Raport dobowy - RCB",
+      "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+    },
+    {
+      "title": "Skwar wróci do Polski. Tu mogą zostać wydane alarmy - TVN24 Meteo",
+      "url": "https://tvn24.pl/tvnmeteo/polska/pogoda-w-polsce-nadchodzi-upal-mozliwe-zolte-i-pomaranczowe-alarmy-st9187400"
+    },
+    {
+      "title": "Administrator musi zgłosić wyciek - UODO",
+      "url": "https://uodo.gov.pl/pl/138/4538"
+    },
+    {
+      "title": "Wyciek danych – co dalej? - UODO",
+      "url": "https://uodo.gov.pl/pl/138/4539"
+    },
+    {
+      "title": "Kiedy prezydent podpisze nominacje dla szefów służb? - TVN24",
+      "url": "https://tvn24.pl/polska/kiedy-prezydent-podpisze-nominacje-dla-szefow-sluzb-zbigniew-bogucki-komentuje-st9187442"
+    },
+    {
+      "title": "Minister cyfryzacji Krzysztof Gawkowski o gigantycznym wycieku danych - TVN24",
+      "url": "https://tvn24.pl/plus/programy/fakty-po-faktach/minister-cyfryzacji-krzysztof-gawkowski-o-gigantycznym-wycieku-danych-vc9186227"
+    },
+    {
+      "title": "Bolesławiec. Przebiegł przez tory tuż przed jadącym pociągiem - TVN24",
+      "url": "https://tvn24.pl/wroclaw/boleslawiec-przebiegl-przez-tory-tuz-przed-jadacym-pociagiem-nagranie-st9187553"
+    },
+    {
+      "title": "LA Lakers to sell for record $12.5B - CNN",
+      "url": "https://www.cnn.com/2026/08/13/business/video/lakes-sale-iger-kushner-woike-michaelson-intv-tsi-081312aseg2-cnni-business-fast"
+    },
+    {
+      "title": "UK weather warnings - Met Office",
+      "url": "https://weather.metoffice.gov.uk/warnings-and-advice/uk-warnings"
+    },
+    {
+      "title": "Temperatures may soar to 38C amid amber extreme heat warning - BBC News",
+      "url": "https://x.com/BBCNews/status/2087781463219400816"
+    },
+    {
+      "title": "Major Russian grain export terminals hit in Ukraine Black Sea port attack - BBC News",
+      "url": "https://x.com/BBCNews/status/2087608552185552992"
+    },
+    {
+      "title": "Ebola outbreak on track to be deadliest ever, WHO chief says - BBC World",
+      "url": "https://x.com/BBCWorld/status/2087714455987560595"
+    },
+    {
+      "title": "Ebola Outbreak: Current Situation - CDC",
+      "url": "https://www.cdc.gov/ebola/situation-summary/index.html"
+    },
+    {
+      "title": "Ebola disease - WHO",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/ebola-disease"
+    },
+    {
+      "title": "White House press secretary Karoline Leavitt will leave the role at the end of August - CNN",
+      "url": "https://x.com/CNN/status/2087629196398887127"
+    },
+    {
+      "title": "Trump says White House press secretary Karoline Leavitt to leave post - BBC News",
+      "url": "https://x.com/BBCNews/status/2087629473101361241"
+    },
+    {
+      "title": "Twitch Support: opt-out from generative AI training",
+      "url": "https://x.com/TwitchSupport/status/2087572924450455558"
+    },
+    {
+      "title": "Japan protests Putin visit to disputed islands - BBC World",
+      "url": "https://x.com/BBCWorld/status/2087764818107240463"
+    }
+  ]
+}
