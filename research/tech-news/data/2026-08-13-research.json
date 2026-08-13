@@ -1,0 +1,371 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-08-13",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Dzisiejszy run pokazuje, że OpenAI przesuwa się od samego modelowego hype'u do pełnego stacku monetyzacji i adopcji. Reklamy w ChatGPT wychodzą poza USA, enterprise report mówi wprost o przejściu z assistance do execution, a Daybreak trafia na AWS jako kontrolowany kanał dla frontier cyber.",
+    "Po drugiej stronie rynku xAI wypuszcza Grok 4.6 z naciskiem na long-running agents, DeepSeek publikuje V4 Pro 0813 jako GA release z 1M context i agresywnym pricingiem, a Lovable domyka rundę $400M przy wycenie $13.3B. To razem wygląda jak kolejny dzień przyspieszania rywalizacji o agentic workflows, niski koszt i dystrybucję.",
+    "Community signal jest spójny: Hacker News i Product Hunt nadal premiują modele, agent OS, voice productivity i produkty wokół realnych workflowów, a nie ogólne chatbot demo."
+  ],
+  "summaryBullets": [
+    "Produkty: OpenAI otwiera ChatGPT Ads",
+    "AI: OpenAI pokazuje depth użycia w enterprise",
+    "Cyber: Daybreak trafia na AWS"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-08-13-0-openai-otwiera-chatgpt-ads-17ee7ea916",
+      "section": "Produkty",
+      "title": "OpenAI otwiera ChatGPT Ads",
+      "standfirst": "ChatGPT Ads są już live w UK, Meksyku, Brazylii, Japonii i Korei Południowej. OpenAI podtrzymuje tezę, że reklamy mają wspierać darmowy dostęp i nie zmieniać odpowiedzi modelu.",
+      "whatHappened": "OpenAI opublikowało aktualizację, że ads są już dostępne w pięciu nowych rynkach i że advertiser updates są dostępne przez stronę dla reklamodawców.",
+      "whyItMatters": "To zamienia ChatGPT z samej powierzchni odpowiedzi w realny kanał przychodowy i testuje, czy użytkownicy zaakceptują reklamy w interfejsie rozmowy.",
+      "deeperAnalysis": [
+        "OpenAI nie sprzedaje już wyłącznie modeli albo planów subskrypcyjnych. Reklamy oznaczają nowy typ inventory: konwersacyjne, wysokointencyjne i osadzone w momencie decyzji, czyli dokładnie tam, gdzie klasyczne search ads historycznie działały najlepiej.",
+        "To ważne także dlatego, że OpenAI ustawia ads jako produkt z governance, a nie jako prosty slot monetizacyjny. Firma podkreśla labelowanie sponsorowanych treści, rozdzielenie odpowiedzi od reklam i kontrolę nad tym, gdzie reklamy mogą się pojawiać.",
+        "W praktyce ChatGPT zaczyna przypominać hybrydę wyszukiwarki, asystenta i platformy reklamowej. Jeśli rollout się utrzyma, kolejnym pytaniem będzie nie to, czy reklamy istnieją, ale jak szybko przełożą się na większy model biznesowy."
+      ],
+      "contextPoints": [
+        "Co się stało: Ads rozszerzono na kolejne rynki, a nie tylko na rynek testowy w USA.",
+        "Dlaczego ważne: To pierwsza twarda oznaka, że ChatGPT ma być wspierany przez reklamę, nie tylko przez subskrypcję.",
+        "Na co patrzeć dalej: Czy pojawią się kolejne kraje, formaty i wskaźniki skuteczności dla reklamodawców."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI: Testing ads in ChatGPT",
+          "url": "https://openai.com/index/testing-ads-in-chatgpt/"
+        },
+        {
+          "title": "OpenAI News",
+          "url": "https://openai.com/news/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "ChatGPT",
+        "reklamy",
+        "monetization",
+        "global rollout"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-13-1-openai-pokazuje-depth-uzycia-w-enterprise-ef17e03dc8",
+      "section": "AI",
+      "title": "OpenAI pokazuje depth użycia w enterprise",
+      "standfirst": "OpenAI publikuje dwa raporty o tym, jak firmy używają AI. Frontier firms generują 8.3x tyle output tokenów per active user co typowe firmy, a Codex odpowiada za 64% łącznego enterprise output.",
+      "whatHappened": "Firma opisuje przesunięcie z assistance do execution w enterprise i pokazuje, że coraz więcej pracy idzie przez agentowe workflowy.",
+      "whyItMatters": "To jeden z najlepszych publicznych sygnałów, że agenci już wchodzą do realnej produkcji i coraz mniej wyglądają jak demo.",
+      "deeperAnalysis": [
+        "OpenAI używa token depth jako proxy głębokości adopcji, co jest sensowne: jeśli firmy kończą na krótkich promptach, to jest to inny etap niż długie, wieloetapowe workflowy z narzędziami, plikami i review.",
+        "W tym ujęciu rosnąca przewaga frontier firms sugeruje, że największą wartość tworzą nie same modele, lecz organizacje, które potrafią przebudować procesy wokół agentów. To też wyjaśnia, dlaczego usage rośnie dziś szybciej w legal, sales, recruiting i marketing niż w engineering.",
+        "Najważniejszy wniosek jest prosty: adopcja nie jest już tylko pytaniem o dostęp do modelu. Jest pytaniem o to, czy firma potrafi zbudować workflow, który naprawdę wykona pracę."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI opisało realne użycie agentów i pluginów w firmach.",
+        "Dlaczego ważne: Zmienia to rozmowę z „czy firma testuje AI?” na „jak głęboko AI jest już w procesach”.",
+        "Na co patrzeć dalej: Czy przewaga frontier firms utrzyma się i czy zwykłe firmy dogonią je przez gotowe workflowy."
+      ],
+      "sources": [
+        {
+          "title": "From assistance to execution: How enterprises put AI to work",
+          "url": "https://openai.com/index/how-enterprises-put-ai-to-work/"
+        },
+        {
+          "title": "OpenAI News",
+          "url": "https://openai.com/news/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "enterprise",
+        "Codex",
+        "plugins",
+        "adoption",
+        "workflow"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-13-2-daybreak-trafia-na-aws-803a02655b",
+      "section": "Cyber",
+      "title": "Daybreak trafia na AWS",
+      "standfirst": "OpenAI przenosi Daybreak Red i Blue do Amazon Bedrock. Dostęp jest approval-based, a modele mają działać w izolowanych środowiskach dla defensywnego cyber work.",
+      "whatHappened": "Daybreak jest teraz dostępny na AWS dla kwalifikowanych klientów, z kontrolowanym dostępem i sandboxowanym użyciem.",
+      "whyItMatters": "Frontier cyber nie jest już tylko kwestią model carda, ale dystrybucji, kontroli dostępu i enterprise cloud integration.",
+      "deeperAnalysis": [
+        "To ważne, bo cyber capability staje się osobnym produktem z wyraźnie zatwierdzanym dostępem. W praktyce oznacza to, że najbardziej wrażliwe use cases nie będą rozprowadzane przez zwykły publiczny interfejs, tylko przez Bedrock i podobne kanały z loggingiem, governance i environment isolation.",
+        "Drugi kontekst jest rynkowy: AWS staje się naturalnym miejscem do komercjalizacji zaawansowanych cyber modeli, bo duże zespoły bezpieczeństwa już mają tam swoje workflowy i polityki. OpenAI nie tylko sprzedaje capability, ale też pokazuje, że bezpieczeństwo, procurement i access control są teraz częścią produktu.",
+        "To przesuwa frontier cyber z obszaru safety statement do obszaru dystrybucji. Jeśli taki model się przyjmie, następne high-risk tiers mogą być sprzedawane podobnie."
+      ],
+      "contextPoints": [
+        "Co się stało: Daybreak Red i Blue są dostępne przez AWS Bedrock.",
+        "Dlaczego ważne: Frontier cyber dostaje kontrolowany kanał dystrybucji dla enterprise.",
+        "Na co patrzeć dalej: Czy podobny model kontroli pojawi się przy innych high-risk model tiers."
+      ],
+      "sources": [
+        {
+          "title": "Daybreak models are now available on AWS",
+          "url": "https://openai.com/index/daybreak-models-are-now-available-on-aws/"
+        },
+        {
+          "title": "OpenAI Security",
+          "url": "https://openai.com/news/security/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "AWS",
+        "Daybreak",
+        "cyber",
+        "Bedrock",
+        "access control"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-13-3-grok-4-6-przyspiesza-agentic-coding-28bb93849b",
+      "section": "AI",
+      "title": "Grok 4.6 przyspiesza agentic coding",
+      "standfirst": "xAI wypuszcza Grok 4.6 z naciskiem na long-running agents i ambitne interactive/visual work. Model jest dostępny w Cursor, Grok Build i API, a xAI mówi, że dorównuje GPT-5.6 Sol na AA Intelligence Index.",
+      "whatHappened": "Grok 4.6 wszedł do produktu i partner integrations z naciskiem na długie zadania.",
+      "whyItMatters": "To utrzymuje presję na frontier model race, ale z naciskiem na agentic workflows, nie tylko na benchmark hype.",
+      "deeperAnalysis": [
+        "xAI pozycjonuje Grok 4.6 jako model do długich zadań: research, analiza informacji, praca na codebase i budowanie artefaktów. To ważne, bo category battle przesuwa się z „kto najlepiej odpowiada” do „kto najlepiej dowozi wieloetapową pracę”.",
+        "Warto też zwrócić uwagę na dystrybucję. Cursor i Grok Build dają modelowi natychmiastowe wejście do narzędzi developerskich, a API plus partnerzy typu OpenRouter, Vercel i Cloudflare robią z niego nie tylko model, ale element stacku.",
+        "Jeśli Grok 4.6 faktycznie utrzyma deklarowaną jakość w długich workflowach, rynek dostanie kolejny punkt odniesienia dla agentic coding poza ekosystemem OpenAI."
+      ],
+      "contextPoints": [
+        "Co się stało: xAI wypuściło Grok 4.6 i ustawiło go pod agentic coding oraz knowledge work.",
+        "Dlaczego ważne: To kolejny dowód, że model competition jest coraz bardziej o work execution, nie tylko o odpowiedzi.",
+        "Na co patrzeć dalej: Czy third-party evals potwierdzą xAI claims i czy Cursor/Grok Build zwiększą usage."
+      ],
+      "sources": [
+        {
+          "title": "Introducing Grok 4.6",
+          "url": "https://x.ai/news/grok-4-6"
+        },
+        {
+          "title": "News: Research, Product & Company Updates",
+          "url": "https://x.ai/news"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "xAI",
+        "Grok",
+        "agents",
+        "coding",
+        "benchmarks",
+        "Cursor"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-13-4-deepseek-v4-pro-0813-scina-koszt-847163da67",
+      "section": "AI",
+      "title": "DeepSeek V4 Pro 0813 ścina koszt",
+      "standfirst": "DeepSeek V4 Pro 0813 jest GA release DeepSeek V4 Pro, z 1M-token context, thinking mode, tool calls i Responses API support. Cennik na docsach pokazuje $0.435 input i $0.87 output per 1M tokenów.",
+      "whatHappened": "DeepSeek opublikował zaktualizowane modele i pricing, a OpenRouter już pokazuje GA release.",
+      "whyItMatters": "To utrzymuje presję na koszty i długi context w wyścigu modeli, zwłaszcza dla agentów i code-heavy workflows.",
+      "deeperAnalysis": [
+        "DeepSeek nie sprzedaje tu tylko tańszego modelu, ale całą ekonomię długiego contextu. 1M tokens w połączeniu z tool calls i thinking mode oznacza, że model jest praktyczny dla agentów, którzy muszą przerabiać długie repozytoria, dokumenty i task streams bez ciągłego cięcia kontekstu.",
+        "Istotny jest też sygnał cenowy. DeepSeek wprost zastrzega, że planuje podnieść ceny w przyszłości, więc obecny poziom można czytać jako agresywną ofertę wejściową w czasie intensywnej walki o mindshare i integracje.",
+        "W praktyce to kolejny dzień, w którym długie contexty i niska cena stają się bronią strategiczną. Jeżeli firmy zaczną optymalizować pod takie modele, reszta rynku będzie musiała odpowiedzieć ekosystemem, governance albo lepszymi narzędziami."
+      ],
+      "contextPoints": [
+        "Co się stało: DeepSeek wypuścił V4 Pro 0813 jako GA release.",
+        "Dlaczego ważne: Model łączy 1M context z bardzo niską ceną, co jest bezpośrednim naciskiem na rynek agentów.",
+        "Na co patrzeć dalej: Czy pricing zostanie utrzymany i czy model pojawi się szerzej w publicznych toolchains."
+      ],
+      "sources": [
+        {
+          "title": "Models & Pricing | DeepSeek API Docs",
+          "url": "https://api-docs.deepseek.com/quick_start/pricing/"
+        },
+        {
+          "title": "DeepSeek V4 Pro 0813 | OpenRouter",
+          "url": "https://openrouter.ai/deepseek/deepseek-v4-pro-0813"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "DeepSeek",
+        "open model",
+        "context window",
+        "pricing",
+        "agents",
+        "long context"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-13-5-lovable-zamyka-ogromna-runde-ce99e760e8",
+      "section": "Produkty",
+      "title": "Lovable zamyka ogromną rundę",
+      "standfirst": "Lovable zamyka rundę 400M USD przy wycenie 13.3B USD i dalej pozostaje jednym z najgorętszych graczy vibe-coding. TechCrunch podaje, że startup mówił o 500M USD ARR w czerwcu.",
+      "whatHappened": "Lovable potwierdziło nową rundę i wycenę; rynek dostał kolejny dowód, że AI coding nadal przyciąga ogromny kapitał.",
+      "whyItMatters": "To nie jest już niszowy launch-culture story, tylko jeden z najpoważniejszych sygnałów, że vibe coding stał się pełnoprawną kategorią wzrostu.",
+      "deeperAnalysis": [
+        "Lovable jest ważne nie tylko dlatego, że rośnie szybko, ale dlatego, że łączy dwa rzadkie sygnały naraz: ogromny product-led popyt i bardzo wysoką wycenę venture. Kiedy model buildera i model monetizacji opierają się na natural language app creation, rynek zaczyna wyceniać nie tylko narzędzie, ale nowy sposób produkcji software'u.",
+        "Warto też odczytać tę rundę przez konkurencję. Jeśli Lovable nadal tak mocno rośnie, Replit, Framer i inne vibe-coding surfaces będą musiały walczyć nie tylko o funkcje, ale też o zaufanie enterprise, security posture i dystrybucję.",
+        "To właśnie w takich momentach kategoria przechodzi z inspirującego demo do poważnej platform battle. Kapitalizacja Lovable sugeruje, że inwestorzy wierzą, iż ten rynek jeszcze się nie nasycił."
+      ],
+      "contextPoints": [
+        "Co się stało: Lovable poinformowało o rundzie $400M i wycenie $13.3B.",
+        "Dlaczego ważne: To utrwala vibe coding jako poważny segment rynku, nie tylko trend społecznościowy.",
+        "Na co patrzeć dalej: Czy ARR i projekt velocity utrzymają tempo po wejściu większego kapitału."
+      ],
+      "sources": [
+        {
+          "title": "Lovable blog: Series C",
+          "url": "https://lovable.dev/blog/series-c"
+        },
+        {
+          "title": "TechCrunch: Lovable confirms new $13.3B valuation, raises another $400M",
+          "url": "https://techcrunch.com/2026/08/12/lovable-confirms-new-13-3b-valuation-raises-another-400m/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Lovable",
+        "vibe coding",
+        "funding",
+        "startup",
+        "ARR",
+        "Europe"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-13-6-hn-i-product-hunt-premiuja-agentow-6995e6b0d2",
+      "section": "Produkty",
+      "title": "HN i Product Hunt premiują agentów",
+      "standfirst": "Hacker News dziś ma DeepSeek V4 Pro 0813, Grok 4.6, Lovable i reliability/security stories wysoko na froncie. Product Hunt pokazuje, że sierpień nadal należy do AI ads, AI assistants, voice productivity i agent OS.",
+      "whatHappened": "Community feed nadal nagradza agentowe surfaces, nie ogólne chatbot demo.",
+      "whyItMatters": "To pomaga odróżnić chwilowy hype od rzeczywistych kierunków popytu builderów.",
+      "deeperAnalysis": [
+        "HN jest dziś znowu dobrym barometrem dojrzałości rynku: zamiast ogólnych zachwytów nad AI, front page pokazuje wydajność inference, security i provenance. Product Hunt dokłada do tego warstwę launchową: AI ads, executive assistants, voice productivity i agent OS wyglądają jak produkty projektowane wokół konkretnego workflow, a nie wokół samej chatowości.",
+        "To pasuje do szerszego obrazu dnia. Model vendors walczą o capability i pricing, ale publiczny rynek sygnalizuje zainteresowanie surfaces, które od razu przekładają się na pracę, dystrybucję albo monetyzację.",
+        "Innymi słowy: community nie kupuje już wyłącznie modeli, tylko sposób, w jaki model staje się produktem."
+      ],
+      "contextPoints": [
+        "Co się stało: HN i PH nadal premiują produkty wokół agentów, lokalnego uruchamiania i review.",
+        "Dlaczego ważne: Early demand signal wskazuje na narzędzia, nie tylko na modele.",
+        "Na co patrzeć dalej: Czy secure agent environments i local inference przełożą się na trwałe przychody."
+      ],
+      "sources": [
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/"
+        },
+        {
+          "title": "Best products of August 2026 | Product Hunt",
+          "url": "https://www.producthunt.com/products"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Hacker News",
+        "Product Hunt",
+        "agents",
+        "local inference",
+        "voice",
+        "community signal"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "OpenAI otwiera ChatGPT Ads",
+      "rationale": "Reklamy w ChatGPT wychodzą poza USA i zamieniają asystenta w realną powierzchnię inventory.",
+      "sourcesLabel": "OpenAI ads; OpenAI News"
+    },
+    {
+      "priority": "High",
+      "title": "OpenAI pokazuje depth użycia w enterprise",
+      "rationale": "8.3x token gap i 64% Codex share to mocny sygnał, że agenci wchodzą do produkcji.",
+      "sourcesLabel": "OpenAI enterprise report; OpenAI News"
+    },
+    {
+      "priority": "High",
+      "title": "Daybreak trafia na AWS",
+      "rationale": "Frontier cyber dostaje gated commercial path przez Amazon Bedrock i enterprise governance.",
+      "sourcesLabel": "OpenAI Daybreak; OpenAI Security"
+    },
+    {
+      "priority": "High",
+      "title": "Grok 4.6 przyspiesza agentic coding",
+      "rationale": "xAI pcha model w długie zadania, partner integracje i benchmark race z GPT-5.6.",
+      "sourcesLabel": "xAI Grok 4.6; xAI News"
+    },
+    {
+      "priority": "High",
+      "title": "DeepSeek V4 Pro 0813 ścina koszt",
+      "rationale": "1M context i agresywny cennik robią presję na frontier pricing i long-context workflows.",
+      "sourcesLabel": "DeepSeek docs; OpenRouter"
+    },
+    {
+      "priority": "High",
+      "title": "Lovable zamyka ogromną rundę",
+      "rationale": "$400M przy $13.3B wycenie potwierdza, że vibe coding nadal przyciąga kapitał.",
+      "sourcesLabel": "Lovable blog; TechCrunch"
+    },
+    {
+      "priority": "Medium",
+      "title": "HN i Product Hunt premiują agentów",
+      "rationale": "Community sygnał nadal wskazuje na agent OS, voice productivity i workflow tooling.",
+      "sourcesLabel": "Hacker News; Product Hunt"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "OpenAI: Testing ads in ChatGPT",
+      "url": "https://openai.com/index/testing-ads-in-chatgpt/"
+    },
+    {
+      "title": "OpenAI: From assistance to execution: How enterprises put AI to work",
+      "url": "https://openai.com/index/how-enterprises-put-ai-to-work/"
+    },
+    {
+      "title": "OpenAI: Daybreak models are now available on AWS",
+      "url": "https://openai.com/index/daybreak-models-are-now-available-on-aws/"
+    },
+    {
+      "title": "OpenAI News",
+      "url": "https://openai.com/news/"
+    },
+    {
+      "title": "xAI: Introducing Grok 4.6",
+      "url": "https://x.ai/news/grok-4-6"
+    },
+    {
+      "title": "xAI News",
+      "url": "https://x.ai/news"
+    },
+    {
+      "title": "DeepSeek API Docs: Models & Pricing",
+      "url": "https://api-docs.deepseek.com/quick_start/pricing/"
+    },
+    {
+      "title": "OpenRouter: DeepSeek V4 Pro 0813",
+      "url": "https://openrouter.ai/deepseek/deepseek-v4-pro-0813"
+    },
+    {
+      "title": "Lovable blog: Series C",
+      "url": "https://lovable.dev/blog/series-c"
+    },
+    {
+      "title": "TechCrunch: Lovable confirms new $13.3B valuation, raises another $400M",
+      "url": "https://techcrunch.com/2026/08/12/lovable-confirms-new-13-3b-valuation-raises-another-400m/"
+    },
+    {
+      "title": "Hacker News front page",
+      "url": "https://news.ycombinator.com/"
+    },
+    {
+      "title": "Product Hunt: Best products of August 2026",
+      "url": "https://www.producthunt.com/products"
+    }
+  ]
+}

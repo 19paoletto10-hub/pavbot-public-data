@@ -1,8 +1,14 @@
 # Topic Index: tech-news
 
-Last updated: 2026-08-12
+Last updated: 2026-08-13
 
 ## Current Understanding
+
+Dzisiejszy run z 2026-08-13 pokazuje, że OpenAI przechodzi od modelowego hype'u do pełnego stacku monetyzacji i adopcji. ChatGPT Ads są już live w UK, Meksyku, Brazylii, Japonii i Korei Południowej, a enterprise study mówi wprost o przejściu z assistance do execution. Frontier firms generują 8.3x tyle output tokens per active user co typowe firmy, a Codex odpowiada za 64% łącznego enterprise output. To sugeruje, że rynek zaczyna wyceniać nie tylko capability, ale depth of use i możliwość zmonetyzowania rozmowy.
+
+Równolegle frontier cyber trafia do AWS przez Daybreak, więc safety gating i enterprise deployment zaczynają działać jako wspólny produkt. Po drugiej stronie rynku xAI wypuszcza Grok 4.6 z naciskiem na long-running agents, DeepSeek publikuje V4 Pro 0813 jako GA release z 1M context i niską ceną, a Lovable domyka $400M przy $13.3B wycenie. To razem wygląda jak kolejny dzień przyspieszania rywalizacji o agentic workflows, niski koszt i dystrybucję.
+
+Community signal jest spójny z tą osią. Hacker News i Product Hunt nadal premiują modele, agent OS, voice productivity i produkty wokół realnych workflowów, a nie ogólne chatbot demo. HN front page dziś trzyma DeepSeek V4 Pro 0813, Grok 4.6, Lovable i reliability/security w górnym torze, a Product Hunt August leaderboard promuje AdAnt AI, Hey Noah, Wispr Flow, Coldtea.ai, Soloop, Cloudflare, AgentSky i Omniwork.
 
 Dzisiejszy run z 2026-08-12 dodaje consumer-device surface do już widocznej osi compute finance i monetization. Google na Made by Google 2026 pokazuje Pixel 11, Pixel 11 Pro, Pixel 11 Pro XL i Pixel 11 Pro Fold z Tensor G6, mocniejszym Gemini Intelligence, większym naciskiem na kamerę, tłumaczenie i proaktywną pomoc, a Pro buyers dostają sześć miesięcy AI Pro. Pixel Watch 5 i Pixel Tag domykają szerszy bundle sprzętowy, więc wyścig coraz mocniej obejmuje nie tylko modele i centra danych, ale też to, gdzie AI trafia do codziennego użycia.
 
@@ -347,8 +353,12 @@ transparentność środowiskową AI.
 
 ## Watch Items
 
-- OpenAI Health in ChatGPT: watch U.S. rollout, privacy defaults and whether med-data usage becomes a durable product line.
-- OpenAI Presence and SMB/newsroom programs: watch whether sector workflows turn into repeatable enterprise deployment motions.
+- OpenAI ChatGPT Ads and enterprise depth: watch whether the international rollout, advertiser uptake and execution metrics turn into durable revenue signals.
+- OpenAI Daybreak on AWS: watch access approvals, Bedrock adoption and whether other high-risk model tiers copy the gated distribution pattern.
+- Grok 4.6 distribution: watch third-party benchmarks, Cursor/Grok Build uptake and whether pricing or partner integrations move quickly.
+- DeepSeek V4 Pro 0813 pricing: watch whether the low-cost context story survives future pricing changes and wider toolchain adoption.
+- Lovable post-Series C scaling: watch ARR, enterprise uptake and whether competition from Replit, Framer and similar surfaces intensifies.
+- HN and Product Hunt agent signals: watch whether AI ads, agent OS and voice productivity keep dominating community demand.
 - Google ATLAS: watch the next release, methodology scrutiny and whether outside researchers treat it as a real adoption benchmark.
 - AMD-Anthropic partnership: watch whether the 2 GW / $5B commitment turns into a reusable financing pattern for AI infrastructure.
 - AI Kill Switch Act: watch bill text, committee movement and whether incident reporting becomes a regulatory norm.
@@ -696,6 +706,8 @@ transparentność środowiskową AI.
 
 ## Recent Reports
 
+- [2026-08-13](runs/2026-08-13.md)
+- [2026-08-12](runs/2026-08-12.md)
 - [2026-08-03](runs/2026-08-03.md)
 - [2026-07-12-1933](runs/2026-07-12-1933.md)
 - [2026-07-12](runs/2026-07-12.md)
