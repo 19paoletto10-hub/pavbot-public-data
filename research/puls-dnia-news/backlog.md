@@ -1,5 +1,13 @@
 # Puls Dnia News Backlog
 
+# 2026-08-20 18:01
+
+- Watch whether RCB or IMGW issue a late-evening upgrade or cancellation.
+- Watch whether GUS comments or market coverage change after the wage, employment, industry and housing releases.
+- Watch whether the tourism-fee proposal gets a concrete draft or a sharper political reaction.
+- Watch whether Kyiv, Iran, the Manchester case or the Home Office booklet get new official detail before the next slot.
+- Watch whether the AI-book sourcing story gets a rights-holder or publisher response.
+
 # 2026-08-20 15:01
 
 - Watch whether RCB or IMGW issue a second note after the afternoon alert.

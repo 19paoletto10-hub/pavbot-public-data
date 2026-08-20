@@ -2,7 +2,7 @@
 
 ## Current State
 
-Slot 2026-08-20 15:01 rozszerza krajowy alert RCB na osiem województw i dokłada oficjalne limity paliw na piątek. Nadal dominują bezpieczeństwo publiczne, pogoda, cyber, infrastruktura, energia i regulacje, a MyDr pozostaje aktywnym wątkiem nadzorczym UODO.
+Slot 2026-08-20 18:01 zawęża krajowy alert RCB do burz, wiatru i hydrologii, dokłada świeże odczyty GUS o płacach, zatrudnieniu, przemyśle i budownictwie oraz nowy spór o opłatę turystyczną. W tle pozostają Kijów, Iran, brytyjska polityka migracyjna, bezpieczeństwo publiczne i spór o dane treningowe AI.
 
 ## Data Shape
 
@@ -25,4 +25,4 @@ The newest valid JSON is shown as paired cards under `Dzisiaj`. Tapping a card o
 - Keep at least two `Polska` or `Polityka` items and at least two `Świat` items to protect the home feed balance.
 - Prefer operational alerts, public-safety events, geopolitics and major economy moves over softer feature content.
 - Favor stories with concrete official or primary links when they are available alongside TVN24, BBC or CNN.
-- Current emphasis should stay on alert logic, data-breach response, Black Sea and Hormuz shipping risk, hydrology, U.S. debt and Fed tone, South Korea security, platform regulation and cyber/AI risk.
+- Current emphasis should stay on alert logic, hydrology, market data, Ukraine, Iran, UK security and cyber/AI risk.

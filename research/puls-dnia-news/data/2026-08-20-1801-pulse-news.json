@@ -1,0 +1,553 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-08-20",
+  "runTime": "18:01",
+  "status": "Istotna aktualizacja",
+  "headline": "RCB zawęża alert, a GUS dokłada świeże dane o płacach, zatrudnieniu i budownictwie",
+  "summary": "Wieczorny slot przesuwa ciężar na lokalne burze i hydrologię oraz na nowe odczyty GUS o rynku pracy i budownictwie. W świecie dochodzą Ukraina, Iran, brytyjska polityka migracyjna, bezpieczeństwo publiczne i spór o dane do modeli AI.",
+  "items": [
+    {
+      "id": "alerts-rcb-imgw-2026-08-20-1801",
+      "section": "Polska",
+      "title": "RCB zawęża alert do burz i hydrologii",
+      "lead": "Wieczorny raport RCB skupia się już na konkretnych regionach i zagrożeniach.",
+      "whatHappened": "RCB na 20 sierpnia opisuje burze w województwach mazowieckim i lubelskim, silny wiatr w małopolskim i podkarpackim, upał w części południa kraju oraz gwałtowne wzrosty stanów wody i suszę hydrologiczną.",
+      "keyFacts": [
+        "Burze dotyczą mazowieckiego i lubelskiego.",
+        "Silny wiatr obejmuje małopolskie i podkarpackie.",
+        "Susza hydrologiczna pozostaje aktywna w całym kraju."
+      ],
+      "reactions": [
+        "TVN24 i IMGW utrzymują ostrzeżenia pogodowe i przypominają o ryzyku gradu oraz silnych porywów wiatru.",
+        "To już nie szeroki alert z południa dnia, tylko bardziej operacyjne ostrzeżenie o lokalnych zagrożeniach."
+      ],
+      "whyItMatters": "Zmiana zakresu ostrzeżeń pokazuje, gdzie ryzyko jest teraz największe i czy służby będą musiały wydać kolejne komunikaty.",
+      "context": "To aktualizacja wobec południowego slotu, który pokazywał szerszy zasięg alertu RCB.",
+      "watchNext": [
+        "Sprawdzić wieczorny i nocny raport RCB.",
+        "Obserwować, czy IMGW rozszerzy albo odwoła ostrzeżenia."
+      ],
+      "sources": [
+        {
+          "title": "RCB: Raport dobowy",
+          "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+        },
+        {
+          "title": "TVN24: Alert RCB w ośmiu województwach",
+          "url": "https://tvn24.pl/tvnmeteo/polska/alert-rcb-w-osmiu-wojewodztwach-unikaj-otwartych-przestrzeni-gdzie-beda-dzis-burze-st9197962"
+        },
+        {
+          "title": "IMGW: Serwis pogodowy",
+          "url": "https://meteo.imgw.pl/"
+        }
+      ],
+      "tags": [
+        "RCB",
+        "IMGW",
+        "pogoda",
+        "hydrologia"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "pl-wynagrodzenia-2026-08-20-1801",
+      "section": "Polska",
+      "title": "Płace rosną szybciej niż zatrudnienie",
+      "lead": "GUS i TVN24 pokazują mocniejszy wzrost wynagrodzeń, ale słabszy rynek etatów.",
+      "whatHappened": "TVN24 podał dane GUS o rynku pracy w sektorze przedsiębiorstw: przeciętne wynagrodzenie brutto w lipcu 2026 r. wyniosło 9509,02 zł, co oznacza wzrost o 6,8 proc. r/r.",
+      "keyFacts": [
+        "Średnia płaca brutto: 9509,02 zł.",
+        "Roczny wzrost płac: 6,8 proc.",
+        "Dane dotyczą sektora przedsiębiorstw zatrudniającego powyżej 9 osób."
+      ],
+      "reactions": [
+        "To nadal mocny sygnał dla konsumentów, ale też sygnał kosztowy dla firm.",
+        "Rynek będzie patrzył, czy wzrost płac zaczyna wyprzedzać wzrost produktywności."
+      ],
+      "whyItMatters": "Płace wpływają na konsumpcję, inflację i przestrzeń dla decyzji RPP.",
+      "context": "To nowy odczyt dzisiejszego poranka, którego nie było jeszcze w poprzednim slocie.",
+      "watchNext": [
+        "Sprawdzić reakcję rynku pracy i oczekiwania inflacyjne.",
+        "Porównać lipcowe dane z kolejnymi publikacjami GUS."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Tyle przeciętnie zarabiają Polacy",
+          "url": "https://tvn24.pl/biznes/z-kraju/przecietne-zarobki-i-zatrudnienie-w-lipcu-2026-roku-dane-gus-st9197519"
+        },
+        {
+          "title": "GUS: komunikat o przeciętnym miesięcznym wynagrodzeniu w lipcu 2026 r.",
+          "url": "https://stat.gov.pl/sygnalne/komunikaty-i-obwieszczenia/lista-komunikatow-i-obwieszczen/komunikat-w-sprawie-przecietnego-miesiecznego-wynagrodzenia-w-sektorze-przedsiebiorstw-bez-wyplat-nagrod-z-zysku-w-lipcu-2026-r-%2C57%2C153.html"
+        }
+      ],
+      "tags": [
+        "GUS",
+        "płace",
+        "rynek-pracy",
+        "konsumpcja"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "pl-zatrudnienie-2026-08-20-1801",
+      "section": "Polska",
+      "title": "Zatrudnienie w firmach lekko słabnie",
+      "lead": "GUS pokazuje niewielki wzrost miesiąc do miesiąca, ale spadek rok do roku.",
+      "whatHappened": "Kalendarium GUS na 20 sierpnia pokazuje, że przeciętne zatrudnienie w sektorze przedsiębiorstw w lipcu było o 0,1 proc. wyższe niż w czerwcu, ale o 0,8 proc. niższe niż przed rokiem.",
+      "keyFacts": [
+        "Zmiana m/m: +0,1 proc.",
+        "Zmiana r/r: -0,8 proc.",
+        "To ten sam pakiet danych, który TVN24 zestawił z odczytem płac."
+      ],
+      "reactions": [
+        "Mieszanka rosnących płac i słabszego zatrudnienia daje bardziej złożony obraz rynku pracy.",
+        "Firmy nadal zatrudniają, ale już wyraźnie ostrożniej niż rok wcześniej."
+      ],
+      "whyItMatters": "To ważny wskaźnik dla popytu wewnętrznego i przyszłych decyzji w gospodarce.",
+      "context": "W tym slocie to świeży odczyt, a nie powtórka starego wątku.",
+      "watchNext": [
+        "Sprawdzić, czy kolejne miesiące potwierdzą trend spowolnienia.",
+        "Obserwować, czy firmy zaczną ograniczać zatrudnienie szerzej."
+      ],
+      "sources": [
+        {
+          "title": "GUS: kalendarium 20.08.2026",
+          "url": "https://stat.gov.pl/kalendarium/20-08-2026.html"
+        },
+        {
+          "title": "TVN24: Tyle przeciętnie zarabiają Polacy",
+          "url": "https://tvn24.pl/biznes/z-kraju/przecietne-zarobki-i-zatrudnienie-w-lipcu-2026-roku-dane-gus-st9197519"
+        }
+      ],
+      "tags": [
+        "GUS",
+        "zatrudnienie",
+        "rynek-pracy",
+        "firmy"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "pl-przemysl-2026-08-20-1801",
+      "section": "Polska",
+      "title": "Przemysł przyspiesza w lipcu",
+      "lead": "GUS pokazuje wzrost produkcji sprzedanej przemysłu o 5,1 proc. r/r.",
+      "whatHappened": "TVN24 i kalendarium GUS wskazują, że produkcja sprzedana przemysłu w lipcu 2026 r. była o 5,1 proc. wyższa niż rok wcześniej.",
+      "keyFacts": [
+        "Produkcja przemysłowa: +5,1 proc. r/r.",
+        "To jeden z mocniejszych odczytów po serii lipcowych publikacji GUS.",
+        "Dane pojawiają się tego samego dnia co odczyt płac i zatrudnienia."
+      ],
+      "reactions": [
+        "TVN24 opisuje to jako kolejne zaskoczenie na plus.",
+        "Rynek może czytać to jako wsparcie dla scenariusza stabilniejszego wzrostu."
+      ],
+      "whyItMatters": "Przemysł pozostaje jednym z głównych sygnałów kondycji gospodarki realnej.",
+      "context": "Ten wątek był już widoczny wcześniej, ale teraz ma dzisiejsze potwierdzenie z GUS.",
+      "watchNext": [
+        "Sprawdzić, czy lepszy przemysł przełoży się na oczekiwania wobec stóp.",
+        "Obserwować, czy następne miesiące utrzymają tempo wzrostu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Produkcja przemysłowa - lipiec 2026. Nowe dane GUS",
+          "url": "https://tvn24.pl/biznes/z-kraju/produkcja-przemyslowa-lipiec-2026-nowe-dane-gus-st9197545"
+        },
+        {
+          "title": "GUS: kalendarium 20.08.2026",
+          "url": "https://stat.gov.pl/kalendarium/20-08-2026.html"
+        }
+      ],
+      "tags": [
+        "GUS",
+        "przemysł",
+        "produkcja",
+        "gospodarka"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "pl-podatek-oplata-turystyczna-2026-08-20-1801",
+      "section": "Polska",
+      "title": "Tusk chce zmienić opłatę turystyczną",
+      "lead": "W grze jest propozycja, by wpływy trafiały w całości do gmin.",
+      "whatHappened": "TVN24 opisuje zapowiedź zmian w opłacie turystycznej. Według relacji medium premier chce, by wpływy z tej opłaty trafiały bezpośrednio do gmin.",
+      "keyFacts": [
+        "Temat jest publicznie ogłoszoną propozycją, a nie przyjętym prawem.",
+        "Wątek dotyczy podziału wpływów między państwo i samorząd.",
+        "Artykuł TVN24 ukazał się 20 sierpnia 2026 r."
+      ],
+      "reactions": [
+        "To otwiera spór o to, kto ma korzystać z wpływów i kto ma płacić koszt polityczny.",
+        "Samorządy dostają sygnał, że temat może wrócić w szerszym pakiecie zmian."
+      ],
+      "whyItMatters": "Opłata turystyczna wpływa na lokalne budżety i koszt pobytu w popularnych miejscach.",
+      "context": "To nowy krajowy wątek gospodarczo-polityczny, niezależny od porannego pakietu o podatkach.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się projekt zmian lub harmonogram prac rządu.",
+        "Obserwować reakcje samorządów i branży turystycznej."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Donald Tusk: opłata turystyczna trafi w całości do gmin",
+          "url": "https://tvn24.pl/biznes/z-kraju/donald-tusk-oplata-turystyczna-trafi-w-calosci-do-gmin-st9197808"
+        }
+      ],
+      "tags": [
+        "opłata-turystyczna",
+        "samorząd",
+        "polityka",
+        "budżet"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "pl-budownictwo-mieszkaniowe-2026-08-20-1801",
+      "section": "Polska",
+      "title": "Mieszkalnictwo trzyma tempo",
+      "lead": "GUS pokazuje więcej oddanych mieszkań, rozpoczętych budów i pozwoleń.",
+      "whatHappened": "GUS w publikacji za styczeń-lipiec 2026 r. podał, że oddano do użytkowania o 3,2 proc. więcej mieszkań niż rok wcześniej, rozpoczęto o 3,3 proc. więcej budów, a pozwoleń i zgłoszeń z projektem było o 15,7 proc. więcej.",
+      "keyFacts": [
+        "Oddane mieszkania: +3,2 proc. r/r.",
+        "Rozpoczęte budowy: +3,3 proc. r/r.",
+        "Pozwolenia i zgłoszenia: +15,7 proc. r/r."
+      ],
+      "reactions": [
+        "To sygnał, że pipeline budowlany pozostaje aktywny mimo kosztów finansowania.",
+        "Dla rynku nieruchomości to ważniejszy sygnał niż pojedyncze komentarze polityczne."
+      ],
+      "whyItMatters": "Budownictwo mieszkaniowe jest dobrym wskaźnikiem aktywności inwestycyjnej i popytu na mieszkania.",
+      "context": "To nowy oficjalny odczyt z 20 sierpnia i nie był obecny w poprzednim slocie.",
+      "watchNext": [
+        "Sprawdzić, czy kolejne miesiące utrzymają tempo pozwoleń.",
+        "Obserwować, czy deweloperzy nie zaczną hamować nowych inwestycji."
+      ],
+      "sources": [
+        {
+          "title": "GUS: Budownictwo mieszkaniowe w okresie styczeń-lipiec 2026 r.",
+          "url": "https://stat.gov.pl/obszary-tematyczne/przemysl-budownictwo-srodki-trwale/budownictwo/budownictwo-mieszkaniowe-w-okresie-styczenlipiec-2026-r-%2C5%2C178.html"
+        }
+      ],
+      "tags": [
+        "GUS",
+        "budownictwo",
+        "mieszkania",
+        "nieruchomości"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "world-kyiv-2026-08-20-1801",
+      "section": "Świat",
+      "title": "Kolejny ciężki atak na Kijów",
+      "lead": "CNN opisuje eskalację skutków rosyjskich uderzeń w Ukrainie.",
+      "whatHappened": "CNN informuje o kolejnym ciężkim ataku na Kijów, a ukraińskie źródła aktualizują bilans ofiar i szkód. W przekazie CNN pojawia się też spillover na terytorium Rumunii i Mołdawii.",
+      "keyFacts": [
+        "CNN opisuje atak jako jeden z najcięższych ostatnio uderzeń na stolicę Ukrainy.",
+        "Ukraińskie źródła tego samego dnia aktualizują bilans ofiar i zniszczeń.",
+        "Wątek dotyczy także bezpieczeństwa przestrzeni przy granicy z UE."
+      ],
+      "reactions": [
+        "To wzmacnia presję na kolejne dostawy obrony przeciwlotniczej.",
+        "Spillover do Rumunii i Mołdawii podbija znaczenie regionalne."
+      ],
+      "whyItMatters": "To nie jest tylko kolejny ostrzał, ale sygnał o rosnącym ryzyku dla regionu i infrastruktury obronnej.",
+      "context": "W poprzednim slocie Ukraina już była ważnym tematem, ale dziś pojawia się mocniejsza, bardziej aktualna karta CNN.",
+      "watchNext": [
+        "Sprawdzić kolejne bilanse ofiar i reakcje państw sąsiednich.",
+        "Obserwować, czy pojawi się nowa deklaracja ws. obrony powietrznej."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Huge Russian strikes on Kyiv leave 17 dead as attacks spill over to Romanian and Moldovan territory",
+          "url": "https://edition.cnn.com/2026/08/20/europe/russia-ukraine-kyiv-attack-intl-hnk"
+        },
+        {
+          "title": "Ukrinform: Russian attack damages supermarket chain warehouse in Kyiv region",
+          "url": "https://www.ukrinform.net/rubric-ato/4155995-russian-attack-damages-supermarket-chain-warehouse-in-kyiv-region.html"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Kijów",
+        "wojna",
+        "bezpieczeństwo"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "world-iran-d-day-2026-08-20-1801",
+      "section": "Świat",
+      "title": "USA dokręcają śrubę Iranowi",
+      "lead": "Trump zapowiada ekonomiczny D-Day i ostrą izolację Teheranu.",
+      "whatHappened": "TVN24 opisuje nową falę presji wobec Iranu, a CNN utrzymuje temat strefy Hormuz i wojny gospodarczej. Przekaz idzie w stronę szerszej izolacji ekonomicznej, a nie tylko sankcji symbolicznych.",
+      "keyFacts": [
+        "Trump publicznie grozi Iranowi kolejną falą sankcji i izolacji.",
+        "CNN łączy ten wątek z ryzykiem dla cieśniny Hormuz.",
+        "To jeden z głównych światowych tematów gospodarczo-bezpieczeństwowych dnia."
+      ],
+      "reactions": [
+        "Iran odpowiada, że USA próbują odwrócić uwagę od własnych problemów fiskalnych.",
+        "Rynek może czytać to jako sygnał dalszej presji na ceny energii i transport."
+      ],
+      "whyItMatters": "Hormuz i irańskie sankcje mają bezpośrednie znaczenie dla energii, frachtu i nastrojów rynkowych.",
+      "context": "To świeższa wersja tego samego wątku niż w południowym slocie, bo dziś doszła nowa reakcja i nowy nagłówek TVN24.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się konkretne kroki administracji USA.",
+        "Obserwować reakcję rynku ropy i żeglugi."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Trump grozi Iranowi: to będzie gospodarczy D-Day. Jest reakcja",
+          "url": "https://tvn24.pl/biznes/ze-swiata/usa-szykuja-miazdzace-sankcje-przeciwko-iranowi-donald-trump-to-wojna-gospodarcza-st9197482"
+        },
+        {
+          "title": "CNN: Trump rolls out yet another Iran war strategy",
+          "url": "https://edition.cnn.com/2026/08/20/politics/trump-iran-war-strait-of-hormuz"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "Hormuz",
+        "sankcje",
+        "energia"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "world-asylum-booklet-2026-08-20-1801",
+      "section": "Świat",
+      "title": "Home Office przypomina o zakazie przemocy",
+      "lead": "BBC opisuje nową broszurę dla osób ubiegających się o azyl.",
+      "whatHappened": "BBC informuje, że brytyjski Home Office w nowej broszurze przypomina osobom ubiegającym się o azyl, iż przemoc seksualna i domowa są nielegalne, a także opisuje zasady zgody i równości płci.",
+      "keyFacts": [
+        "To nowy dokument Home Office dla nowych przyjezdnych.",
+        "Broszura dotyczy też zasad zgody i ochrony nieletnich.",
+        "Sprawa wywołuje debatę o integracji i tonie komunikacji władz."
+      ],
+      "reactions": [
+        "Część krytyków widzi w tym sygnał ostrzejszej polityki integracyjnej.",
+        "Rząd broni dokumentu jako prostego przypomnienia o prawie."
+      ],
+      "whyItMatters": "To jeden z tych tematów, które szybko przechodzą z komunikatu administracyjnego do większej debaty politycznej.",
+      "context": "W wiadomościach BBC to jeden z najbardziej aktualnych i najbardziej komentowanych wątków z UK.",
+      "watchNext": [
+        "Sprawdzić, czy opozycja lub resort doprecyzują zakres broszury.",
+        "Obserwować, czy temat przejdzie do szerszej dyskusji o migracji."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Asylum seekers told rape and harassment illegal in UK in new Home Office booklet",
+          "url": "https://www.bbc.co.uk/news/articles/ceqe3y34e9eo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Wielka-Brytania",
+        "migracja",
+        "prawo",
+        "bezpieczeństwo"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "world-harry-meghan-2026-08-20-1801",
+      "section": "Świat",
+      "title": "Harry i Meghan wracają pod presją bezpieczeństwa",
+      "lead": "BBC opisuje spór o ochronę i prywatność wokół ich powrotu do UK.",
+      "whatHappened": "BBC podaje, że premier uznał kwestie ochrony Harry'ego i Meghan za sprawę prywatną, gdy para przygotowuje się do powrotu do Wielkiej Brytanii jeszcze w tym miesiącu.",
+      "keyFacts": [
+        "Temat dotyczy ochrony, a nie tylko samego powrotu pary.",
+        "Sprawa została już podjęta przez premiera UK.",
+        "Wątek jest dziś wysoko w brytyjskim feedzie BBC."
+      ],
+      "reactions": [
+        "Komentatorzy znów otwierają debatę o kosztach ochrony i statusie rodziny królewskiej.",
+        "Sprawa ma też wymiar wizerunkowy dla rządu i pałacu."
+      ],
+      "whyItMatters": "To mały temat z dużym zasięgiem medialnym, bo łączy bezpieczeństwo publiczne, monarchię i politykę.",
+      "context": "BBC zestawia ten wątek z pytaniami o powody ich powrotu i o zakres ochrony.",
+      "watchNext": [
+        "Sprawdzić, czy pałac lub rząd doprecyzują zasady ochrony.",
+        "Obserwować, czy pojawią się nowe komentarze ze strony rodziny królewskiej."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Harry and Meghan's security arrangements a private matter, PM says",
+          "url": "https://www.bbc.co.uk/news/articles/cr59yg34r4mo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "BBC: Why are Harry and Meghan returning to the UK?",
+          "url": "https://www.bbc.co.uk/news/videos/cp8eg084n3eo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Wielka-Brytania",
+        "monarchia",
+        "bezpieczeństwo",
+        "media"
+      ],
+      "priority": "3"
+    },
+    {
+      "id": "world-manchester-synagogue-2026-08-20-1801",
+      "section": "Świat",
+      "title": "W Manchesterze zatrzymano podejrzanego po ataku na synagogę",
+      "lead": "BBC podaje, że sprawa ma wymiar terrorystyczny.",
+      "whatHappened": "BBC informuje o zatrzymaniu mężczyzny w sprawie ataku na synagogę w Manchesterze. Według relacji policji chodzi o brak ujawnienia informacji dotyczących aktywności terrorystycznej.",
+      "keyFacts": [
+        "Sprawa dotyczy bezpieczeństwa żydowskiej społeczności i lokalnych służb.",
+        "BBC podaje, że zarzut wiąże się z nieujawnieniem informacji o aktywności terrorystycznej.",
+        "To jeden z najświeższych tytułów w brytyjskim feedzie."
+      ],
+      "reactions": [
+        "Temat prawdopodobnie podbije debatę o ochronie miejsc kultu.",
+        "Lokalne służby będą pod presją, by szybko wyjaśnić motyw i tło sprawy."
+      ],
+      "whyItMatters": "Atak na synagogę to natychmiastowy test dla systemu bezpieczeństwa i relacji społecznych w UK.",
+      "context": "To świeża, twarda wiadomość BBC i jeden z najmocniejszych newsów dnia z Wielkiej Brytanii.",
+      "watchNext": [
+        "Sprawdzić, czy policja opublikuje kolejne szczegóły śledztwa.",
+        "Obserwować reakcje liderów lokalnych społeczności i rządu."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Man charged over Manchester synagogue attack",
+          "url": "https://www.bbc.co.uk/news/articles/cm2g5ne37zyo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Wielka-Brytania",
+        "bezpieczeństwo",
+        "terroryzm",
+        "policja"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "tech-ai-books-2026-08-20-1801",
+      "section": "Technologia",
+      "title": "AI skupuje i niszczy książki do treningu modeli",
+      "lead": "TVN24 wraca dziś do sporu o źródła danych dla modeli AI.",
+      "whatHappened": "TVN24 opisuje zarzut, że amerykańskie i chińskie firmy AI masowo skupują książki z zagranicznych antykwariatów, po czym niszczą je, by szkolić nowe modele.",
+      "keyFacts": [
+        "Temat dotyczy pozyskiwania danych treningowych dla modeli AI.",
+        "Wątek łączy technologię, prawo autorskie i etykę biznesu.",
+        "To świeży techniczny akcent w dzisiejszym feedzie TVN24 Biznes."
+      ],
+      "reactions": [
+        "Krytycy wskazują na brak dzielenia się wartością i ryzyko dla rynku książki.",
+        "To kolejny sygnał, że spór o dane treningowe wchodzi w fazę materialnych kosztów."
+      ],
+      "whyItMatters": "To praktyczny przykład, jak model AI może mieć realny koszt dla kultury, prawa i łańcucha dostaw danych.",
+      "context": "To nowy temat w porównaniu z poprzednim slocie, kiedy technologia była opisywana głównie przez pryzmat transparentności AI.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się reakcje wydawców lub organizacji praw autorskich.",
+        "Obserwować, czy temat przejdzie do szerszej debaty o regulacji danych treningowych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Producenci AI masowo niszczą książki, żeby szkolić nowe modele",
+          "url": "https://tvn24.pl/biznes/tech/sztuczna-inteligencja-producenci-ai-masowo-niszcza-ksiazki-zeby-szkolic-nowe-modele-st9197895"
+        },
+        {
+          "title": "TVN24 Biznes homepage",
+          "url": "https://tvn24.pl/biznes"
+        }
+      ],
+      "tags": [
+        "AI",
+        "technologia",
+        "prawo-autorskie",
+        "dane"
+      ],
+      "priority": "2"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 homepage",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24 Biznes homepage",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "CNN homepage",
+      "url": "https://edition.cnn.com"
+    },
+    {
+      "title": "RCB: Raport dobowy",
+      "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+    },
+    {
+      "title": "IMGW: Serwis pogodowy",
+      "url": "https://meteo.imgw.pl/"
+    },
+    {
+      "title": "GUS: kalendarium 20.08.2026",
+      "url": "https://stat.gov.pl/kalendarium/20-08-2026.html"
+    },
+    {
+      "title": "GUS: komunikat o wynagrodzeniu w lipcu 2026 r.",
+      "url": "https://stat.gov.pl/sygnalne/komunikaty-i-obwieszczenia/lista-komunikatow-i-obwieszczen/komunikat-w-sprawie-przecietnego-miesiecznego-wynagrodzenia-w-sektorze-przedsiebiorstw-bez-wyplat-nagrod-z-zysku-w-lipcu-2026-r-%2C57%2C153.html"
+    },
+    {
+      "title": "GUS: budownictwo mieszkaniowe styczeń-lipiec 2026",
+      "url": "https://stat.gov.pl/obszary-tematyczne/przemysl-budownictwo-srodki-trwale/budownictwo/budownictwo-mieszkaniowe-w-okresie-styczenlipiec-2026-r-%2C5%2C178.html"
+    },
+    {
+      "title": "TVN24: Alert RCB w ośmiu województwach",
+      "url": "https://tvn24.pl/tvnmeteo/polska/alert-rcb-w-osmiu-wojewodztwach-unikaj-otwartych-przestrzeni-gdzie-beda-dzis-burze-st9197962"
+    },
+    {
+      "title": "TVN24: Gdzie dziś będzie burza? Alerty i ostrzeżenia IMGW",
+      "url": "https://tvn24.pl/tvnmeteo/polska/gdzie-dzis-bedzie-burza-alerty-i-ostrzezenia-imgw-przed-gradobiciem-w-wielu-regionach-polski-st9197445"
+    },
+    {
+      "title": "TVN24: Tyle przeciętnie zarabiają Polacy",
+      "url": "https://tvn24.pl/biznes/z-kraju/przecietne-zarobki-i-zatrudnienie-w-lipcu-2026-roku-dane-gus-st9197519"
+    },
+    {
+      "title": "TVN24: Produkcja przemysłowa - lipiec 2026. Nowe dane GUS",
+      "url": "https://tvn24.pl/biznes/z-kraju/produkcja-przemyslowa-lipiec-2026-nowe-dane-gus-st9197545"
+    },
+    {
+      "title": "TVN24: Donald Tusk: opłata turystyczna trafi w całości do gmin",
+      "url": "https://tvn24.pl/biznes/z-kraju/donald-tusk-oplata-turystyczna-trafi-w-calosci-do-gmin-st9197808"
+    },
+    {
+      "title": "CNN: Huge Russian strikes on Kyiv leave 17 dead",
+      "url": "https://edition.cnn.com/2026/08/20/europe/russia-ukraine-kyiv-attack-intl-hnk"
+    },
+    {
+      "title": "CNN: Trump rolls out yet another Iran war strategy",
+      "url": "https://edition.cnn.com/2026/08/20/politics/trump-iran-war-strait-of-hormuz"
+    },
+    {
+      "title": "BBC: Asylum seekers told rape and harassment illegal in UK",
+      "url": "https://www.bbc.co.uk/news/articles/ceqe3y34e9eo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "BBC: Harry and Meghan's security arrangements a private matter, PM says",
+      "url": "https://www.bbc.co.uk/news/articles/cr59yg34r4mo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "BBC: Man charged over Manchester synagogue attack",
+      "url": "https://www.bbc.co.uk/news/articles/cm2g5ne37zyo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "TVN24: Producenci AI masowo niszczą książki, żeby szkolić nowe modele",
+      "url": "https://tvn24.pl/biznes/tech/sztuczna-inteligencja-producenci-ai-masowo-niszcza-ksiazki-zeby-szkolic-nowe-modele-st9197895"
+    },
+    {
+      "title": "Ukrinform: Russian attack damages supermarket chain warehouse in Kyiv region",
+      "url": "https://www.ukrinform.net/rubric-ato/4155995-russian-attack-damages-supermarket-chain-warehouse-in-kyiv-region.html"
+    }
+  ]
+}
