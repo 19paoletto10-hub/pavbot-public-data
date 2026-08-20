@@ -1,5 +1,12 @@
 # Puls Dnia News Backlog
 
+# 2026-08-20 15:01
+
+- Watch whether RCB or IMGW issue a second note after the afternoon alert.
+- Watch whether Ministerstwo Energii revises the 21 August fuel caps again before midnight.
+- Watch whether UODO or CBZC add concrete MyDr follow-up.
+- Watch whether Kijów, Ormuz, dług USA and AI get fresh official confirmation before the next slot.
+
 # 2026-08-20 09:05
 
 - Watch whether RCB or DORSZ add a second operational note after the morning alert.
