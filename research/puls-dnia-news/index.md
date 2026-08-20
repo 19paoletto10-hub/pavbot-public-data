@@ -2,7 +2,7 @@
 
 ## Current State
 
-Slot 2026-08-20 09:05 przesuwa feed w stronę porannego alertu RCB, reformy PIT, formalnej kontroli MyDr, napięć na Morzu Czarnym i w Ormuz oraz długów USA i tonu Fed. Nadal dominują bezpieczeństwo publiczne, cyber, infrastruktura, energia i regulacje AI, a IMGW utrzymuje aktywny monitoring meteorologiczno-hydrologiczny.
+Slot 2026-08-20 12:02 utrzymuje nacisk na alerty i pogodę w Polsce, ale dokłada wyraźnie świeższy pakiet BBC/CNN: Kijów, Ormuz, dług USA, jastrzębi Fed i unijne reguły przejrzystości AI. Nadal dominują bezpieczeństwo publiczne, cyber, infrastruktura, energia i regulacje, a MyDr pozostaje aktywnym wątkiem nadzorczym UODO.
 
 ## Data Shape
 

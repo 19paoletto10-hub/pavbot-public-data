@@ -1,0 +1,574 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-08-20",
+  "runTime": "12:02",
+  "status": "Istotna aktualizacja",
+  "headline": "Alerty RCB, PIT i MyDr; świat kręci się wokół Kijowa, Ormuzu, długu USA i AI",
+  "summary": "Południowy slot utrzymuje polski nacisk na alerty, pogodę i podatki, a światowy feed przesuwa się w stronę Ukrainy, Ormuz, długu USA, ostrożnego Fed i nowych reguł przejrzystości AI w UE.",
+  "items": [
+    {
+      "id": "2026-08-20-1202-alert-rcb-ukraina",
+      "section": "Alerty",
+      "title": "RCB ostrzegło po ataku na Kijów",
+      "lead": "Alert objął Lubelszczyznę i Podkarpacie po rosyjskim ataku na Ukrainę.",
+      "whatHappened": "TVN24 opisał poranny alert RCB po zmasowanym rosyjskim ataku na Ukrainę. Polska poderwała myśliwce i wysłała SMS-y do mieszkańców przygranicznych województw, a komunikaty miały charakter prewencyjny.",
+      "keyFacts": [
+        "Alert objął województwo lubelskie i podkarpackie.",
+        "Działania wojska miały charakter prewencyjny.",
+        "Alerty wynikają z ryzyka dla przestrzeni powietrznej i ludności przy granicy."
+      ],
+      "reactions": [
+        "RCB wezwało do śledzenia oficjalnych komunikatów.",
+        "Wojsko utrzymuje gotowość do kolejnych działań."
+      ],
+      "whyItMatters": "To bezpośredni sygnał, że wojna w Ukrainie nadal uruchamia krajowe procedury bezpieczeństwa w Polsce.",
+      "context": "W takich slotach alerty często idą w parze z monitoringiem lotnictwa i przestrzeni powietrznej.",
+      "watchNext": [
+        "Sprawdź, czy DORSZ lub RCB opublikuje kolejną aktualizację.",
+        "Obserwuj, czy alert wróci po następnych atakach na Ukrainę."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Zmasowany atak na Ukrainę, są ranni i ofiary śmiertelne. W Polsce alerty RCB",
+          "url": "https://tvn24.pl/swiat/wojna-w-ukrainie-kijow-zaatakowany-rosyjskimi-rakietami-polska-poderwala-mysliwce-st9197423"
+        },
+        {
+          "title": "RCB: Raport dobowy",
+          "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+        }
+      ],
+      "tags": [
+        "alert",
+        "rcb",
+        "ukraina",
+        "bezpieczenstwo",
+        "polska"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "2026-08-20-1202-imgw-upal-burze",
+      "section": "Polska",
+      "title": "IMGW utrzymuje ostrzeżenia przed burzami i upałem",
+      "lead": "Część kraju ma żółte alerty na burze, upał i silny wiatr.",
+      "whatHappened": "TVN24 podał, że IMGW utrzymuje ostrzeżenia pierwszego stopnia przed burzami, upałem i silnym wiatrem. Oficjalny serwis meteorologiczny nadal pokazuje aktywny monitoring zagrożeń.",
+      "keyFacts": [
+        "Żółte ostrzeżenia obejmują wybrane województwa południowe i wschodnie.",
+        "W ciągu dnia możliwe są porywy wiatru i lokalne burze.",
+        "Oficjalny serwis IMGW nadal pokazuje aktywne ostrzeżenia."
+      ],
+      "reactions": [
+        "Służby pogodowe zalecają ostrożność na otwartej przestrzeni.",
+        "W takich warunkach rośnie ryzyko przerw w dostawie prądu i zakłóceń transportu."
+      ],
+      "whyItMatters": "Pogoda może jeszcze dziś zmienić plan podróży, pracę szkół i ryzyko lokalnych szkód.",
+      "context": "Letni front burzowy zwykle szybko aktualizuje mapę zagrożeń.",
+      "watchNext": [
+        "Sprawdź, czy IMGW podniesie lub obniży stopień ostrzeżeń.",
+        "Obserwuj, czy RCB dołoży lokalne komunikaty o zagrożeniach."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Burze, upał i silny wiatr. IMGW wydał ostrzeżenia",
+          "url": "https://tvn24.pl/polska/pogoda-w-polsce-ostrzezenia-imgw-w-czwartek-20-sierpnia-burze-upal-i-silny-wiatr-imgw-wydal-alarmy-st9197445"
+        },
+        {
+          "title": "IMGW: Strona główna",
+          "url": "https://imgw.pl/"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "imgw",
+        "alert",
+        "burze",
+        "upal"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "2026-08-20-1202-pit-prog-130k",
+      "section": "Polityka",
+      "title": "Koalicja podnosi próg PIT",
+      "lead": "Rząd zapowiedział wyższy próg podatkowy i nową stawkę 24 proc.",
+      "whatHappened": "TVN24 opisał zapowiedź rządu: próg PIT ma wzrosnąć do 130 tys. zł, a między 130 tys. a 150 tys. zł ma wejść nowa stawka 24 proc. Zmiana ma być częścią szerszego pakietu korekt podatkowych.",
+      "keyFacts": [
+        "Zmiana dotyczy PIT, a szerzej także CIT, ryczałtu i daniny solidarnościowej.",
+        "Koalicja przedstawia to jako korektę systemu, nie pełną reformę.",
+        "Wątek nadal żyje politycznie po porannym ogłoszeniu."
+      ],
+      "reactions": [
+        "Czarzasty nazwał to początkiem drogi.",
+        "Debata publiczna skupia się na tym, kto realnie zyska i kto straci."
+      ],
+      "whyItMatters": "To jedna z ważniejszych zmian fiskalnych dnia i bezpośrednio dotyka pracowników oraz budżetu.",
+      "context": "Zmiana jest częścią szerszej dyskusji o progresji podatkowej, konsumpcji i dochodach państwa.",
+      "watchNext": [
+        "Sprawdź, czy MF pokaże dokładne wyliczenia dla grup dochodowych.",
+        "Obserwuj parlamentarny harmonogram projektu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Sześć rzeczy, które warto dziś wiedzieć",
+          "url": "https://tvn24.pl/polska/szesc-rzeczy-ktore-warto-wiedziec-we-czwartek-20-sierpnia-najwazniejsze-informacje-st9197430"
+        },
+        {
+          "title": "TVN24: Włodzimierz Czarzasty o zmianie w podatkach",
+          "url": "https://tvn24.pl/biznes/z-kraju/wlodzimierz-czarzasty-o-zmianie-w-podatkach-to-jest-poczatek-drogi-st9197590"
+        }
+      ],
+      "tags": [
+        "podatki",
+        "pit",
+        "polityka",
+        "gospodarka"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "2026-08-20-1202-mydr-uodo",
+      "section": "Polska",
+      "title": "UODO kontroluje MyDr",
+      "lead": "Urząd sprawdza zabezpieczenia po wycieku danych pacjentów.",
+      "whatHappened": "UODO opublikował kartę kontroli spółki MyDr. Z opisu wynika, że urząd sprawdza środki techniczne i organizacyjne oraz analizę ryzyka po wycieku danych o stanie zdrowia pacjentów.",
+      "keyFacts": [
+        "Kontrola dotyczy zabezpieczeń i analizy ryzyka.",
+        "CBZC prowadzi sprawę pod nadzorem prokuratury.",
+        "To formalny etap reakcji na wyciek, a nie tylko medialny opis incydentu."
+      ],
+      "reactions": [
+        "UODO sygnalizuje możliwe konsekwencje nadzorcze.",
+        "CBZC nadal komunikuje sprawę jako incydent bezpieczeństwa danych."
+      ],
+      "whyItMatters": "To nadal jeden z ważniejszych krajowych wątków cyberbezpieczeństwa, bo dotyczy danych zdrowotnych.",
+      "context": "Sprawa przechodzi z etapu medialnego w etap formalnej kontroli i śledztwa.",
+      "watchNext": [
+        "Śledź, czy UODO poda zakres kontroli i możliwe sankcje.",
+        "Sprawdzaj kolejne komunikaty CBZC o skali danych i sprawie."
+      ],
+      "sources": [
+        {
+          "title": "UODO: Prezes UODO skontroluje spółkę MyDr",
+          "url": "https://uodo.gov.pl/pl/138/4540"
+        },
+        {
+          "title": "CBZC: Komunikat dot. wycieku danych pacjentów z systemu informatycznego",
+          "url": "https://cbzc.policja.gov.pl/bzc/aktualnosci/1013%2CKomunikat-dot-wycieku-danych-pacjentow-z-systemu-informatycznego.html"
+        }
+      ],
+      "tags": [
+        "cyber",
+        "uodo",
+        "mydr",
+        "zdrowie",
+        "polska"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "2026-08-20-1202-gus-przemysl",
+      "section": "Gospodarka",
+      "title": "Przemysł odbił w lipcu o 5,1 proc.",
+      "lead": "GUS pokazał wyższy roczny odczyt produkcji przemysłowej.",
+      "whatHappened": "TVN24 podał, że produkcja przemysłowa w lipcu wzrosła o 5,1 proc. r/r. To kolejny szybki sygnał z gospodarki realnej, który wspiera narrację o lekkim odbiciu po słabszych odczytach.",
+      "keyFacts": [
+        "Odczyt jest roczny i dotyczy produkcji sprzedanej przemysłu.",
+        "Wynik jest zgodny z obrazem umiarkowanego odbicia.",
+        "Kolejne dane o cenach i zamówieniach pokażą, czy ruch jest trwały."
+      ],
+      "reactions": [
+        "Rynek będzie patrzył na dalsze odczyty inflacji i popytu.",
+        "Politycznie to paliwo do rozmów o kondycji gospodarki."
+      ],
+      "whyItMatters": "Produkcja przemysłowa jest jednym z lepszych, szybkich sygnałów kondycji gospodarki.",
+      "context": "Jeden miesiąc nie przesądza trendu, ale zmienia ton debaty o wzroście.",
+      "watchNext": [
+        "Sprawdź, czy kolejne odczyty potwierdzą odbicie.",
+        "Obserwuj komentarze GUS i rządu po publikacji."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Produkcja przemysłowa - lipiec 2026. Nowe dane GUS",
+          "url": "https://tvn24.pl/biznes/z-kraju/produkcja-przemyslowa-lipiec-2026-nowe-dane-gus-st9197545"
+        },
+        {
+          "title": "GUS: Główny Urząd Statystyczny",
+          "url": "https://new.stat.gov.pl/"
+        }
+      ],
+      "tags": [
+        "gospodarka",
+        "gus",
+        "przemysl",
+        "polska"
+      ],
+      "priority": "3"
+    },
+    {
+      "id": "2026-08-20-1202-stuu-zarzuty",
+      "section": "Polska",
+      "title": "Stuu usłyszał zarzuty",
+      "lead": "Warszawska prokuratura postawiła zarzuty w sprawie Pandora Gate.",
+      "whatHappened": "TVN24 podał, że Stuart K.-B., znany jako Stuu, usłyszał w warszawskiej prokuraturze zarzuty pedofilii i rozpijania nieletnich. Sprawa dotyczy czynów z lat 2015-2018.",
+      "keyFacts": [
+        "Sprawa dotyczy okresu 2015-2018.",
+        "Podejrzany nie przyznaje się do winy.",
+        "Śledczy zapowiadają wniosek o dalsze aresztowanie."
+      ],
+      "reactions": [
+        "Sprawa pozostaje w centrum zainteresowania opinii publicznej.",
+        "To kolejny etap długiego postępowania karnego."
+      ],
+      "whyItMatters": "To jeden z mocniejszych krajowych wątków prawnych i społecznych poświęconych ochronie małoletnich.",
+      "context": "Pandora Gate wraca tu w kolejnym etapie formalnego postępowania.",
+      "watchNext": [
+        "Sprawdź, czy prokuratura opublikuje dalsze kroki procesowe.",
+        "Obserwuj, czy sąd zdecyduje o przedłużeniu aresztu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Youtuber Stuu usłyszał zarzuty w sprawie Pandora Gate",
+          "url": "https://tvn24.pl/tvnwarszawa/srodmiescie/warszawa-prokuratura-przesluchala-youtubera-stuu-w-sprawie-pandora-gate-st9196045"
+        }
+      ],
+      "tags": [
+        "prawo",
+        "prokuratura",
+        "pandoragate",
+        "polska"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "2026-08-20-1202-kyiv-bbc",
+      "section": "Świat",
+      "title": "Kijów po nocnym ataku znów pokazuje lukę w obronie",
+      "lead": "BBC podało, że w stolicy Ukrainy zginęło co najmniej 13 osób.",
+      "whatHappened": "BBC opisało nocny rosyjski atak na Kijów i wskazało, że Ukraina nadal zmaga się z brakami w obronie przeciwlotniczej. Ten sam poranny atak uruchomił też polski alert RCB.",
+      "keyFacts": [
+        "BBC podało, że w Kijowie zginęło co najmniej 13 osób.",
+        "W relacji pojawia się temat braków w obronie powietrznej Ukrainy.",
+        "Polska odczuła skutki operacyjne w postaci własnego alertu."
+      ],
+      "reactions": [
+        "Zelenski ponowił apel o wsparcie przeciwlotnicze.",
+        "Region przygraniczny pozostaje w stanie podwyższonej czujności."
+      ],
+      "whyItMatters": "Ataki na Kijów wciąż przekładają się na bezpieczeństwo regionalne i na europejską politykę wsparcia Ukrainy.",
+      "context": "To kolejny sygnał, że rosyjskie uderzenia nadal mają bezpośredni efekt na Polskę i państwa sąsiednie.",
+      "watchNext": [
+        "Sprawdź, czy pojawią się kolejne dane o ofiarach lub zniszczeniach.",
+        "Obserwuj, czy Zachód ogłosi nowe wsparcie przeciwlotnicze."
+      ],
+      "sources": [
+        {
+          "title": "BBC: At least 13 killed in Kyiv as Ukraine grapples with air defence shortages",
+          "url": "https://www.bbc.co.uk/news/articles/c98vzmden5yo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "TVN24: Zmasowany atak na Ukrainę, są ranni i ofiary śmiertelne. W Polsce alerty RCB",
+          "url": "https://tvn24.pl/swiat/wojna-w-ukrainie-kijow-zaatakowany-rosyjskimi-rakietami-polska-poderwala-mysliwce-st9197423"
+        }
+      ],
+      "tags": [
+        "ukraina",
+        "kijow",
+        "wojna",
+        "bezpieczenstwo",
+        "swiat"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "2026-08-20-1202-hormuz-cnn",
+      "section": "Świat",
+      "title": "Ormuz wraca jako główne ryzyko dla ropy",
+      "lead": "CNN opisuje nacisk na Iran i handel ropą przez cieśninę Ormuz.",
+      "whatHappened": "CNN prowadzi dziś karty o presji Trumpa na irańską gospodarkę i o tym, jak Ormuz pozostaje krytycznym wąskim gardłem dla ropy i żeglugi. Najmocniejszy ton to ekonomiczny nacisk zamiast klasycznych negocjacji.",
+      "keyFacts": [
+        "CNN wiąże temat z presją na irańską gospodarkę i eksport ropy.",
+        "Ormuz pozostaje kluczowym wąskim gardłem dla energii i żeglugi.",
+        "Każdy incydent podnosi premię ryzyka dla transportu morskiego."
+      ],
+      "reactions": [
+        "Rynki patrzą na sygnały z Waszyngtonu i Zatoki Perskiej.",
+        "Ubezpieczyciele i armatorzy reagują na każdy nowy sygnał eskalacji."
+      ],
+      "whyItMatters": "To jeden z najsilniejszych czynników wpływających na ceny energii i koszty transportu.",
+      "context": "Wątek Ormuzu pozostaje połączony z wojną w regionie i z szerszym konfliktem o eksport ropy.",
+      "watchNext": [
+        "Sprawdź, czy pojawi się nowe stanowisko USA lub Iranu.",
+        "Obserwuj, czy rosną stawki ubezpieczeniowe i frachtowe."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Trump has a new plan to crush Iran’s economy. But will he stay the course?",
+          "url": "https://edition.cnn.com/2026/08/20/politics/trump-iran-war-strait-of-hormuz"
+        },
+        {
+          "title": "CNN: Trump is squeezing Iran’s economy and oil sales. It may still have the upper hand in Hormuz",
+          "url": "https://edition.cnn.com/2026/08/20/business/iran-economy-war-leverage-intl"
+        }
+      ],
+      "tags": [
+        "swiat",
+        "iran",
+        "hormuz",
+        "ropa",
+        "bezpieczenstwo"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "2026-08-20-1202-us-debt-40t",
+      "section": "Gospodarka",
+      "title": "Dług USA przekroczył 40 bilionów",
+      "lead": "CNN opisuje rekordowy poziom zadłużenia Stanów Zjednoczonych.",
+      "whatHappened": "CNN zaznacza rekordowy poziom długu USA i przekroczenie progu 40 bln dolarów. Oficjalny zestaw danych Treasury nadal pokazuje dzienne zmiany zadłużenia i potwierdza skalę problemu.",
+      "keyFacts": [
+        "CNN opisuje rekordowy poziom zadłużenia.",
+        "Treasury Fiscal Data publikuje dzienne dane o długu.",
+        "Wysoki dług zwiększa wrażliwość rynku na stopy i rentowności."
+      ],
+      "reactions": [
+        "Komentatorzy łączą to z kosztami obsługi długu i polityką fiskalną.",
+        "Każdy kolejny odczyt może wzmacniać presję na Treasury."
+      ],
+      "whyItMatters": "To ważny sygnał dla rynku obligacji, dolara i globalnej płynności.",
+      "context": "Wysoki dług w USA nakłada się dziś na drogie finansowanie i napięcia geopolityczne.",
+      "watchNext": [
+        "Obserwuj kolejne ruchy Treasury i rentowności obligacji.",
+        "Sprawdź, czy pojawią się nowe komentarze kongresu lub administracji."
+      ],
+      "sources": [
+        {
+          "title": "CNN: US national debt reaches record high. How’d we get here?",
+          "url": "https://edition.cnn.com/2026/08/20/us/video/us-national-debt-reaches-record-high-how-we-get-here-digvid-vrtc"
+        },
+        {
+          "title": "U.S. Treasury Fiscal Data: Debt to the Penny",
+          "url": "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/"
+        }
+      ],
+      "tags": [
+        "gospodarka",
+        "usa",
+        "dlug",
+        "obligacje",
+        "rynki"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "2026-08-20-1202-fed-minutes",
+      "section": "Gospodarka",
+      "title": "Fed nadal brzmi jastrzębio",
+      "lead": "Minuty z lipcowego posiedzenia pokazują gotowość do dalszego zacieśniania.",
+      "whatHappened": "Fed opublikował minuty z posiedzenia 28-29 lipca 2026 r. Dokument pokazuje, że część członków nadal widzi ryzyko uporczywej inflacji i dopuszcza potrzebę wyższych stóp, jeśli presja cenowa nie puści.",
+      "keyFacts": [
+        "Minutes opublikowano 19 sierpnia 2026 r.",
+        "Komitet utrzymał stopę funduszy federalnych na 3,5-3,75 proc.",
+        "Część uczestników uważa, że przy uporczywej inflacji mogą być potrzebne wyższe stopy."
+      ],
+      "reactions": [
+        "Rynki długu reagują na bardziej jastrzębi ton.",
+        "Fed nie sygnalizuje szybkiego luzowania."
+      ],
+      "whyItMatters": "To bezpośrednio wpływa na koszt kredytu, wyceny aktywów i oczekiwania co do jesiennej polityki pieniężnej.",
+      "context": "Twarda inflacja i wyższe rentowności utrzymują presję na warunki finansowania w USA.",
+      "watchNext": [
+        "Sprawdź, czy kolejne dane CPI lub PCE zmienią ton Fed.",
+        "Obserwuj wypowiedzi członków FOMC przed wrześniem."
+      ],
+      "sources": [
+        {
+          "title": "Federal Reserve: Minutes of the Federal Open Market Committee, July 28-29, 2026",
+          "url": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20260729.htm"
+        },
+        {
+          "title": "Federal Reserve: FOMC statement, July 29, 2026",
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm"
+        }
+      ],
+      "tags": [
+        "gospodarka",
+        "usa",
+        "fed",
+        "inflacja",
+        "stopy"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "2026-08-20-1202-ai-transparency",
+      "section": "Technologia",
+      "title": "Unijne zasady przejrzystości AI już obowiązują",
+      "lead": "Komisja Europejska uruchomiła obowiązki oznaczania AI i deepfake’ów.",
+      "whatHappened": "Komisja Europejska podtrzymuje, że reguły przejrzystości AI obowiązują od 2 sierpnia 2026 r. To pierwszy mocny, konsumencki etap wdrażania AI Act z wymogami informowania o interakcji z AI i oznaczania treści syntetycznych.",
+      "keyFacts": [
+        "Obowiązki przejrzystości obowiązują od 2 sierpnia 2026 r.",
+        "Komisja opisuje wymóg informowania o interakcji z AI i oznaczania treści syntetycznych.",
+        "Niezastosowanie może skończyć się karami do 15 mln euro lub 3 proc. obrotu."
+      ],
+      "reactions": [
+        "Platformy i dostawcy wdrażają oznaczenia i procedury.",
+        "To pierwszy szeroki, konsumencki etap egzekwowania AI Act."
+      ],
+      "whyItMatters": "To może szybko zmienić sposób publikowania treści syntetycznych, deepfake’ów i chatbotów w Europie.",
+      "context": "Reguły są już aktywne, ale praktyka wdrożenia może się różnić między państwami i platformami.",
+      "watchNext": [
+        "Sprawdź, czy platformy opublikują praktyczne instrukcje wdrożenia.",
+        "Obserwuj, czy Komisja lub krajowe organy wydadzą nowe wytyczne."
+      ],
+      "sources": [
+        {
+          "title": "European Commission: Safer and more transparent AI",
+          "url": "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en"
+        },
+        {
+          "title": "European Commission: Guidelines on transparency obligations for providers and deployers of AI systems",
+          "url": "https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-transparency-obligations"
+        }
+      ],
+      "tags": [
+        "technologia",
+        "ai",
+        "ue",
+        "regulacje",
+        "deepfake"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "2026-08-20-1202-uk-asylum-booklet",
+      "section": "Świat",
+      "title": "Home Office przypomina o zakazie przemocy i nękania",
+      "lead": "BBC opisało nowy buklet dla osób ubiegających się o azyl w Wielkiej Brytanii.",
+      "whatHappened": "BBC podało, że brytyjskie Home Office wydało nowy buklet dla osób ubiegających się o azyl. Materiał przypomina, że przemoc seksualna i nękanie są nielegalne, a sprawa weszła do bieżącej debaty politycznej w UK.",
+      "keyFacts": [
+        "To policyjny i komunikacyjny materiał Home Office.",
+        "BBC podaje go jako aktualny temat krajowej debaty.",
+        "Wątek dotyczy zachowań, prawa i sposobu komunikacji państwa."
+      ],
+      "reactions": [
+        "Tego typu materiały zwykle wywołują spór o ton i skuteczność.",
+        "Temat może wrócić w debacie o migracji i bezpieczeństwie publicznym."
+      ],
+      "whyItMatters": "To bieżący polityczny sygnał z Wielkiej Brytanii o podejściu do migracji i porządku publicznego.",
+      "context": "To nie jest zmiana prawa, ale ważny komunikat administracyjny i polityczny.",
+      "watchNext": [
+        "Sprawdź, czy Home Office lub ministerstwo opublikuje szersze wyjaśnienie.",
+        "Obserwuj, czy temat przeniesie się do parlamentu lub mediów głównego nurtu."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Asylum seekers told rape and harassment illegal in UK in new Home Office booklet",
+          "url": "https://www.bbc.co.uk/news/articles/ceqe3y34e9eo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "swiat",
+        "uk",
+        "migracja",
+        "polityka",
+        "bezpieczenstwo"
+      ],
+      "priority": "3"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 homepage",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24: Zmasowany atak na Ukrainę, są ranni i ofiary śmiertelne. W Polsce alerty RCB",
+      "url": "https://tvn24.pl/swiat/wojna-w-ukrainie-kijow-zaatakowany-rosyjskimi-rakietami-polska-poderwala-mysliwce-st9197423"
+    },
+    {
+      "title": "TVN24: Burze, upał i silny wiatr. IMGW wydał ostrzeżenia",
+      "url": "https://tvn24.pl/polska/pogoda-w-polsce-ostrzezenia-imgw-w-czwartek-20-sierpnia-burze-upal-i-silny-wiatr-imgw-wydal-alarmy-st9197445"
+    },
+    {
+      "title": "TVN24: Sześć rzeczy, które warto dziś wiedzieć",
+      "url": "https://tvn24.pl/polska/szesc-rzeczy-ktore-warto-wiedziec-we-czwartek-20-sierpnia-najwazniejsze-informacje-st9197430"
+    },
+    {
+      "title": "TVN24: Włodzimierz Czarzasty o zmianie w podatkach",
+      "url": "https://tvn24.pl/biznes/z-kraju/wlodzimierz-czarzasty-o-zmianie-w-podatkach-to-jest-poczatek-drogi-st9197590"
+    },
+    {
+      "title": "UODO: Prezes UODO skontroluje spółkę MyDr",
+      "url": "https://uodo.gov.pl/pl/138/4540"
+    },
+    {
+      "title": "CBZC: Komunikat dot. wycieku danych pacjentów z systemu informatycznego",
+      "url": "https://cbzc.policja.gov.pl/bzc/aktualnosci/1013%2CKomunikat-dot-wycieku-danych-pacjentow-z-systemu-informatycznego.html"
+    },
+    {
+      "title": "TVN24: Produkcja przemysłowa - lipiec 2026. Nowe dane GUS",
+      "url": "https://tvn24.pl/biznes/z-kraju/produkcja-przemyslowa-lipiec-2026-nowe-dane-gus-st9197545"
+    },
+    {
+      "title": "TVN24: Youtuber Stuu usłyszał zarzuty w sprawie Pandora Gate",
+      "url": "https://tvn24.pl/tvnwarszawa/srodmiescie/warszawa-prokuratura-przesluchala-youtubera-stuu-w-sprawie-pandora-gate-st9196045"
+    },
+    {
+      "title": "BBC RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC: At least 13 killed in Kyiv as Ukraine grapples with air defence shortages",
+      "url": "https://www.bbc.co.uk/news/articles/c98vzmden5yo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "BBC: Asylum seekers told rape and harassment illegal in UK in new Home Office booklet",
+      "url": "https://www.bbc.co.uk/news/articles/ceqe3y34e9eo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "CNN homepage",
+      "url": "https://edition.cnn.com"
+    },
+    {
+      "title": "CNN: Trump has a new plan to crush Iran’s economy. But will he stay the course?",
+      "url": "https://edition.cnn.com/2026/08/20/politics/trump-iran-war-strait-of-hormuz"
+    },
+    {
+      "title": "CNN: Trump is squeezing Iran’s economy and oil sales. It may still have the upper hand in Hormuz",
+      "url": "https://edition.cnn.com/2026/08/20/business/iran-economy-war-leverage-intl"
+    },
+    {
+      "title": "CNN: US national debt reaches record high. How’d we get here?",
+      "url": "https://edition.cnn.com/2026/08/20/us/video/us-national-debt-reaches-record-high-how-we-get-here-digvid-vrtc"
+    },
+    {
+      "title": "Federal Reserve: Minutes of the Federal Open Market Committee, July 28-29, 2026",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20260729.htm"
+    },
+    {
+      "title": "Federal Reserve: FOMC statement, July 29, 2026",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm"
+    },
+    {
+      "title": "European Commission: Safer and more transparent AI",
+      "url": "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en"
+    },
+    {
+      "title": "European Commission: Guidelines on transparency obligations for providers and deployers of AI systems",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-transparency-obligations"
+    },
+    {
+      "title": "RCB: Raport dobowy",
+      "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+    },
+    {
+      "title": "GUS: Główny Urząd Statystyczny",
+      "url": "https://new.stat.gov.pl/"
+    },
+    {
+      "title": "U.S. Treasury Fiscal Data: Debt to the Penny",
+      "url": "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/"
+    }
+  ]
+}
