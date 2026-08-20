@@ -1,14 +1,13 @@
 # Puls Dnia News Backlog
 
-# 2026-08-13 09:03
+# 2026-08-20 09:05
 
-- Watch whether RCB or IMGW change the hydrology status after 10:00.
-- Watch whether UODO or Ministerstwo Cyfryzacji publish firmer MyDr notification guidance.
-- Watch whether BBC or CNN add more detail on Black Sea and Hormuz shipping impacts.
-- Watch whether Met Office extends or downgrades the UK heat warning later today.
-- Watch whether CDC, WHO or ECDC update Ebola counts or risk assessments.
-- Watch whether CNN or BBC add named successors or firmer timelines for Karoline Leavitt.
-- Watch whether Twitch or Amazon widen the AI-training opt-out story to other platforms.
+- Watch whether RCB or DORSZ add a second operational note after the morning alert.
+- Watch whether UODO, Ministerstwo Cyfryzacji or CBZC publish firmer MyDr notification guidance.
+- Watch whether AP or official sources add new shipping or casualty detail for Black Sea and Hormuz incidents.
+- Watch whether IMGW downgrades or extends the current meteorological and hydrological monitoring.
+- Watch whether the Fed or Treasury add new market guidance after the minutes and debt milestone.
+- Watch whether the European Commission or big platforms publish first practical enforcement notes for AI transparency rules.
 
 ## 2026-08-13 06:02
 

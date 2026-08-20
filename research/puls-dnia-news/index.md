@@ -2,7 +2,7 @@
 
 ## Current State
 
-Slot 2026-08-13 09:03 przesuwa feed z zaćmienia na MyDr, list Romanowskiego, nowy sondaż, alert upałowy w Wielkiej Brytanii, Morze Czarne, Ormuz, Koreę Południową, Ebolę i świeży blok AI/regulacji platform. Nadal dominują bezpieczeństwo publiczne, energia, cyber i ryzyko infrastrukturalne, a krajowy alert hydrologiczny wciąż pozostaje aktywny.
+Slot 2026-08-20 09:05 przesuwa feed w stronę porannego alertu RCB, reformy PIT, formalnej kontroli MyDr, napięć na Morzu Czarnym i w Ormuz oraz długów USA i tonu Fed. Nadal dominują bezpieczeństwo publiczne, cyber, infrastruktura, energia i regulacje AI, a IMGW utrzymuje aktywny monitoring meteorologiczno-hydrologiczny.
 
 ## Data Shape
 
@@ -25,4 +25,4 @@ The newest valid JSON is shown as paired cards under `Dzisiaj`. Tapping a card o
 - Keep at least two `Polska` or `Polityka` items and at least two `Świat` items to protect the home feed balance.
 - Prefer operational alerts, public-safety events, geopolitics and major economy moves over softer feature content.
 - Favor stories with concrete official or primary links when they are available alongside TVN24, BBC or CNN.
-- Current emphasis should stay on hydrology and alert logic, data-breach response, Black Sea and Hormuz shipping risk, UK heat alerts, Ukraine/Russia, Korea-related security, platform regulation and cyber/AI risk.
+- Current emphasis should stay on alert logic, data-breach response, Black Sea and Hormuz shipping risk, hydrology, U.S. debt and Fed tone, South Korea security, platform regulation and cyber/AI risk.

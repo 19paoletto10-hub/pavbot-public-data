@@ -1,0 +1,531 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-08-20",
+  "runTime": "09:05",
+  "status": "Istotna aktualizacja",
+  "headline": "Alert RCB po nocnym ataku, reformy podatkowe i rosnące ryzyka morskie",
+  "summary": "Poranny slot przesuwa feed w stronę bezpieczeństwa i kosztu ryzyka: Polska dostała alert RCB po zmasowanym ataku na zachodnią Ukrainę, rząd ogłosił reformę podatkową, a MyDr wszedł w fazę formalnej kontroli. Globalnie dominują Morze Czarne, Ormuz, dług USA, Fed i nowe reguły przejrzystości AI w UE.",
+  "items": [
+    {
+      "id": "2026-08-20-0905-alert-rcb-ukraina",
+      "section": "Alerty",
+      "title": "Alert RCB po nocnym ataku na Ukrainę",
+      "lead": "RCB wysłało rano alert do dwóch województw po rosyjskim ataku na zachodnią Ukrainę.",
+      "whatHappened": "Około 4:20 RCB wysłało SMS do mieszkańców woj. lubelskiego i podkarpackiego. TVN24 podał też, że Polska poderwała myśliwce w związku z rosyjskim uderzeniem na Kijów. Około 5:30 zagrożenie zostało odwołane.",
+      "keyFacts": [
+        "Alert objął woj. lubelskie i podkarpackie.",
+        "Komunikat dotyczył zmasowanego ataku powietrznego na zachodnią Ukrainę.",
+        "RCB odwołało alert około 5:30.",
+        "Dowództwo Operacyjne utrzymało gotowość systemów obrony powietrznej."
+      ],
+      "reactions": [
+        "RCB wezwało do śledzenia komunikatów.",
+        "Wojsko potraktowało operację jako prewencyjną."
+      ],
+      "whyItMatters": "To bezpośredni sygnał, że wojna w Ukrainie nadal może uruchamiać krajowe procedury alarmowe w Polsce.",
+      "context": "Poranne alerty w tym regionie zwykle idą w parze z podniesieniem gotowości lotnictwa i monitorowaniem przestrzeni powietrznej.",
+      "watchNext": [
+        "Sprawdź, czy RCB lub DORSZ opublikuje późniejszy komunikat operacyjny.",
+        "Obserwuj, czy alert wróci przy kolejnych nocnych atakach."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Zmasowany atak na Ukrainę. RCB: odwołanie zagrożenia",
+          "url": "https://tvn24.pl/polska/wojna-w-ukrainie-kijow-zaatakowany-rosyjskimi-rakietami-polska-poderwala-mysliwce-st9197423"
+        },
+        {
+          "title": "RCB: Strona główna i aktualności",
+          "url": "https://www.gov.pl/web/rcb"
+        }
+      ],
+      "tags": [
+        "polska",
+        "alert",
+        "rcb",
+        "ukraina",
+        "bezpieczenstwo"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "2026-08-20-0905-pit-prog-130k",
+      "section": "Polska",
+      "title": "Rząd podnosi próg podatkowy",
+      "lead": "Tusk i Domański ogłosili podwyższenie progu PIT do 130 tys. zł i nowy próg 24 proc.",
+      "whatHappened": "KPRM opublikowała komunikat o sprawiedliwszym systemie podatkowym. Zmiana ma wejść od 2027 r. i ma być jedną z większych korekt fiskalnych w tym roku.",
+      "keyFacts": [
+        "Pierwszy próg ma wzrosnąć z 120 tys. zł do 130 tys. zł.",
+        "Między 130 tys. zł a 150 tys. zł ma obowiązywać stawka 24 proc.",
+        "Rząd wskazuje 3,5 mln podatników jako beneficjentów.",
+        "TVN24 opisał reformę jako jeden z głównych tematów dnia."
+      ],
+      "reactions": [
+        "W debacie publicznej pojawiły się głosy, że zmiana jest umiarkowana.",
+        "Rząd przedstawia ją jako korektę korzystną dla klasy średniej."
+      ],
+      "whyItMatters": "To jedna z największych krajowych zmian fiskalnych w tym tygodniu i będzie wpływać na portfele klasy średniej.",
+      "context": "Pakiet wpisuje się w szerszą dyskusję o obciążeniach pracy, konsumpcji i dochodach budżetowych.",
+      "watchNext": [
+        "Sprawdź, czy MF pokaże dokładne wyliczenia dla grup dochodowych.",
+        "Obserwuj parlamentarny harmonogram projektu."
+      ],
+      "sources": [
+        {
+          "title": "KPRM: Sprawiedliwsze podatki i więcej w portfelach Polek i Polaków",
+          "url": "https://www.gov.pl/web/premier/sprawiedliwsze-podatki-i-wiecej-w-portfelach-polek-i-polakow"
+        },
+        {
+          "title": "TVN24: Domański o zmianach w podatkach",
+          "url": "https://tvn24.pl/biznes/z-kraju/reforma-podatkow-minister-finansow-andrzej-domanski-tlumaczy-nowy-prog-podatkowy-dla-klasy-sredniej-st9197268"
+        }
+      ],
+      "tags": [
+        "polska",
+        "podatki",
+        "budzet",
+        "gospodarka"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "2026-08-20-0905-mydr-uodo-cbzc",
+      "section": "Polska",
+      "title": "MyDr pod kontrolą UODO i CBZC",
+      "lead": "Po wycieku danych pacjentów UODO uruchomił kontrolę, a CBZC prowadzi czynności pod nadzorem prokuratury.",
+      "whatHappened": "Ministerstwo Cyfryzacji potwierdziło omówienie incydentu na posiedzeniu Połączonego Centrum Operacyjnego Cyberbezpieczeństwa. UODO zapowiedział kontrolę, a CBZC opublikowało komunikat o prowadzonym śledztwie.",
+      "keyFacts": [
+        "MC opisało incydent jako sprawę firmy MyDr.",
+        "UODO skontroluje środki techniczne, organizacyjne i analizę ryzyka.",
+        "CBZC działa pod nadzorem Prokuratury Okręgowej w Warszawie.",
+        "W komunikacie CBZC wskazano próbę nieuprawnionego dostępu do systemu i serwerów."
+      ],
+      "reactions": [
+        "UODO przypomniał o obowiązkach administratorów po wycieku danych.",
+        "CBZC zapowiedziało dalsze informowanie opinii publicznej."
+      ],
+      "whyItMatters": "To wciąż jeden z ważniejszych krajowych wątków cyberbezpieczeństwa, bo dotyczy danych zdrowotnych i szerokiej bazy pacjentów.",
+      "context": "Wyciek przenosi się z etapu medialnego na formalne działania nadzorcze i śledcze.",
+      "watchNext": [
+        "Śledź, czy UODO poda zakres kontroli i możliwe sankcje.",
+        "Sprawdzaj kolejne komunikaty CBZC o skali danych i sprawcy."
+      ],
+      "sources": [
+        {
+          "title": "UODO: Prezes UODO skontroluje spółkę MyDr",
+          "url": "https://uodo.gov.pl/pl/138/4540"
+        },
+        {
+          "title": "Ministerstwo Cyfryzacji: Komunikat po spotkaniu Połączonego Centrum Operacyjnego Cyberbezpieczeństwa",
+          "url": "https://www.gov.pl/web/cyfryzacja/komunikat-po-spotkaniu-polaczonego-centrum-operacyjnego-cyberbezpieczenstwa"
+        },
+        {
+          "title": "CBZC: Komunikat dot. wycieku danych pacjentów z systemu informatycznego",
+          "url": "https://cbzc.policja.gov.pl/bzc/aktualnosci/1013%2CKomunikat-dot-wycieku-danych-pacjentow-z-systemu-informatycznego.html"
+        }
+      ],
+      "tags": [
+        "polska",
+        "cyber",
+        "zdrowie",
+        "uodo"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "2026-08-20-0905-us-debt-40t",
+      "section": "Gospodarka",
+      "title": "Dług USA przekracza 40 bilionów",
+      "lead": "Amerykański dług publiczny osiągnął historyczny poziom 40 bln dolarów.",
+      "whatHappened": "AP i Treasury Fiscal Data potwierdziły nowe maksimum zadłużenia. Wzrost napędzają koszty obsługi długu, wydatki obronne i programy socjalne.",
+      "keyFacts": [
+        "AP podał, że próg 40 bln USD został przekroczony 20 sierpnia 2026 r.",
+        "Treasury Fiscal Data śledzi dług dziennie.",
+        "Zadłużenie rosło o kolejne biliony w krótkich odstępach czasu.",
+        "Rynek obligacji zareagował nerwowo."
+      ],
+      "reactions": [
+        "Departament Skarbu uruchamia buybacki obligacji, by uspokoić rynek.",
+        "Komentatorzy wskazują na ryzyko wyższych kosztów kredytu."
+      ],
+      "whyItMatters": "To ważny sygnał dla globalnych rynków stóp, obligacji i dolara.",
+      "context": "Wysoki dług łączy się z uporczywą inflacją, kosztami wojny w Iranie i napięciami wokół finansowania państwa.",
+      "watchNext": [
+        "Obserwuj kolejne ruchy Treasury na rynku długu.",
+        "Sprawdzaj, czy rentowności 10- i 30-letnich obligacji uspokoją się po interwencji."
+      ],
+      "sources": [
+        {
+          "title": "AP: The US national debt now stands at $40 trillion",
+          "url": "https://apnews.com/article/a27a8d3651ff810b25c610d3e1b6259d"
+        },
+        {
+          "title": "U.S. Treasury Fiscal Data: Debt to the Penny",
+          "url": "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/"
+        }
+      ],
+      "tags": [
+        "gospodarka",
+        "usa",
+        "dlug",
+        "rynki"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "2026-08-20-0905-fed-jastrzebio",
+      "section": "Gospodarka",
+      "title": "Fed pozostaje jastrzębi",
+      "lead": "Minuty FOMC pokazują, że wielu członków Fed nadal rozważa wyższe stopy, jeśli inflacja nie spadnie.",
+      "whatHappened": "Fed opublikował minuty posiedzenia z 28-29 lipca 2026 r. Dokument wskazuje, że inflacja pozostaje podwyższona, a część uczestników widzi potrzebę dalszego zacieśnienia.",
+      "keyFacts": [
+        "Minutes opublikowano 19 sierpnia 2026 r.",
+        "Komitet utrzymał stopę funduszy federalnych na 3,5-3,75 proc.",
+        "W minucie pada ocena, że inflacja pozostaje elevated.",
+        "Część uczestników dopuszcza wyższe stopy, jeśli presja cenowa nie puści."
+      ],
+      "reactions": [
+        "Fed nie sygnalizuje szybkiego luzowania.",
+        "Rynki długu i stopy reagują na bardziej ostrożny przekaz."
+      ],
+      "whyItMatters": "To bezpośrednio wpływa na koszt kredytu, wyceny aktywów i oczekiwania co do jesiennej polityki pieniężnej.",
+      "context": "Twarda inflacja, cła i wydatki na AI nadal mieszają w obrazie makro USA.",
+      "watchNext": [
+        "Sprawdź, czy kolejne dane CPI/PCE zmienią ton Fed.",
+        "Obserwuj wypowiedzi członków FOMC przed wrześniem."
+      ],
+      "sources": [
+        {
+          "title": "Federal Reserve: Minutes of the Federal Open Market Committee, July 28-29, 2026",
+          "url": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20260729.htm"
+        },
+        {
+          "title": "Federal Reserve: FOMC statement, July 29, 2026",
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm"
+        }
+      ],
+      "tags": [
+        "gospodarka",
+        "usa",
+        "fed",
+        "inflacja"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "2026-08-20-0905-black-sea-bases",
+      "section": "Świat",
+      "title": "Ukraina bije w rosyjskie zaplecze Morza Czarnego",
+      "lead": "AP opisuje nocny cios dronów i pocisków w rosyjskie zaplecze morskie nad Morzem Czarnym.",
+      "whatHappened": "Ukraińskie drony i pociski miały uderzyć w ważny rosyjski ośrodek morski na wybrzeżu Morza Czarnego. Kijów przedstawia to jako operację osłabiającą rosyjską flotę i logistykę.",
+      "keyFacts": [
+        "AP opisał atak jako unique nighttime operation.",
+        "Celem były okręty i infrastruktura morska.",
+        "Ukraina od miesięcy naciska na rosyjskie szlaki eksportowe.",
+        "Efekt to dalsze ryzyko dla żeglugi i ubezpieczeń."
+      ],
+      "reactions": [
+        "Rosja tradycyjnie minimalizuje skutki takich operacji.",
+        "Kijów mówi o presji na rosyjską gospodarkę wojenną."
+      ],
+      "whyItMatters": "Morze Czarne pozostaje punktem nacisku na eksport, ceny surowców i bezpieczeństwo żeglugi.",
+      "context": "Ten wątek łączy wojnę z realnym ryzykiem dla handlu i łańcuchów dostaw.",
+      "watchNext": [
+        "Obserwuj dalsze skutki dla portów i ubezpieczeń.",
+        "Sprawdź, czy pojawią się oficjalne dane o stratach po obu stronach."
+      ],
+      "sources": [
+        {
+          "title": "AP: An overnight Ukrainian blitz damages Russia's Black Sea naval stronghold",
+          "url": "https://apnews.com/article/russia-ukraine-black-sea-attack-9eadff0d7590923e3d98c99e2b61150b"
+        }
+      ],
+      "tags": [
+        "swiat",
+        "ukraina",
+        "rosja",
+        "morze-czarne",
+        "bezpieczenstwo"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "2026-08-20-0905-hormuz-tankers",
+      "section": "Świat",
+      "title": "Hormuz znów pod presją po atakach na tankowce",
+      "lead": "Drony uderzyły w tankowce przy cieśninie Ormuz, a ZEA zaostrzyły reakcję na Iran.",
+      "whatHappened": "AP podał, że jednostki ADNOC zostały zaatakowane dronami podczas tranzytu przez cieśninę. W innym materiale AP opisał też szerszą reakcję ZEA i rosnący spór o bezpieczeństwo szlaku.",
+      "keyFacts": [
+        "Ataki miały miejsce 14-15 sierpnia 2026 r.",
+        "Nie odnotowano ofiar.",
+        "ZEA przypisały incydent Iranowi.",
+        "Szlak pozostaje krytyczny dla globalnych przepływów ropy."
+      ],
+      "reactions": [
+        "ZEA oskarżyły Iran o piractwo i zagrożenie żeglugi.",
+        "Rynki nadal wyceniają ryzyko blokad i opóźnień."
+      ],
+      "whyItMatters": "Każde nowe uderzenie w Hormuz szybko przenosi się na ceny energii, fracht i inflację.",
+      "context": "Wojna na Bliskim Wschodzie od miesięcy rozlewa się na żeglugę i ubezpieczenia morskie.",
+      "watchNext": [
+        "Obserwuj, czy pojawią się kolejne ataki na tankowce.",
+        "Sprawdzaj ruchy cen ropy i komunikaty armatorów."
+      ],
+      "sources": [
+        {
+          "title": "AP: 2 UAE tankers attacked while transiting Strait of Hormuz",
+          "url": "https://apnews.com/article/iran-uae-us-strait-hormuz-august-14-2026-e8565c608ac5283ec8103c85df924b13"
+        },
+        {
+          "title": "AP: United Arab Emirates suspends trade with Iran after coming under renewed missile fire",
+          "url": "https://apnews.com/article/47c95fe382c49289ab0419310b6d8057"
+        }
+      ],
+      "tags": [
+        "swiat",
+        "hormuz",
+        "ropa",
+        "bezpieczenstwo"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "2026-08-20-0905-korea-poludniowa-drills",
+      "section": "Polityka",
+      "title": "Trump tnie ćwiczenia z Koreą Południową",
+      "lead": "Waszyngton ogranicza wspólne manewry, co podbija napięcie wokół sojuszu z Seulem.",
+      "whatHappened": "AP opisuje decyzję Trumpa o ograniczeniu ćwiczeń wojskowych z Koreą Południową po jego sporze z Seulem o wsparcie dla wojny w Iranie.",
+      "keyFacts": [
+        "Decyzja dotyczyła wspólnych ćwiczeń U.S.-South Korea.",
+        "Krytycy widzą w niej sygnał osłabienia odstraszania.",
+        "Pjongjang zareagował chłodno na gest Trumpa.",
+        "Sojusznicy w regionie obawiają się o wiarygodność USA."
+      ],
+      "reactions": [
+        "Eksperci ostrzegają przed erozją zaufania sojuszników.",
+        "Seul oficjalnie zachowuje współpracę, ale z niepokojem."
+      ],
+      "whyItMatters": "To ważny test dla bezpieczeństwa Indo-Pacyfiku i dla relacji USA z kluczowym sojusznikiem.",
+      "context": "Sprawa łączy się z szerszą debatą o transakcyjnej polityce bezpieczeństwa Trumpa.",
+      "watchNext": [
+        "Sprawdź, czy Pentagon poda zmieniony harmonogram ćwiczeń.",
+        "Obserwuj reakcje Japonii i Tajwanu."
+      ],
+      "sources": [
+        {
+          "title": "AP: Trump's slight of South Korea in favor of the North raises broader US security concerns",
+          "url": "https://apnews.com/article/c602b29c49f56f2acdcca96bb6df08f3"
+        }
+      ],
+      "tags": [
+        "polityka",
+        "usa",
+        "korea-poludniowa",
+        "bezpieczenstwo"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "2026-08-20-0905-disney-fcc",
+      "section": "Polityka",
+      "title": "Disney pozywa FCC Trumpa",
+      "lead": "Disney zaskarżył FCC po sporze o licencje ABC i wolność słowa.",
+      "whatHappened": "AP poinformował o pozwie przeciw administracji Trumpa po tym, jak szef FCC zakwestionował licencje ABC. Spór dotyczy granicy między regulacją a presją polityczną.",
+      "keyFacts": [
+        "Pozew dotyczy rzekomego odwetu za satyrę polityczną.",
+        "Komisarz FCC Anna Gomez poparła Disney.",
+        "Spór może mieć szerszy efekt mrożący dla mediów.",
+        "Temat łączy się z rosnącą kontrolą nad platformami i nadawcami."
+      ],
+      "reactions": [
+        "Biały Dom i FCC bronią swoich działań.",
+        "Media i organizacje wolności słowa ostrzegają przed precedensem."
+      ],
+      "whyItMatters": "To test dla niezależności mediów i regulatorów w USA.",
+      "context": "W tej samej administracji narastają spory o taryfy, transakcje medialne i polityczne naciski.",
+      "watchNext": [
+        "Sprawdź, czy sąd przyjmie wniosek o zabezpieczenie.",
+        "Obserwuj odpowiedź FCC i kolejne kroki Disneya."
+      ],
+      "sources": [
+        {
+          "title": "AP: The Latest: Disney sues Trump's FCC over broadcast license challenge",
+          "url": "https://apnews.com/article/883b7ed5481b94f354dc23cc795e21aa"
+        }
+      ],
+      "tags": [
+        "polityka",
+        "usa",
+        "media",
+        "regulacje"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "2026-08-20-0905-wildfires-europe",
+      "section": "Bezpieczeństwo",
+      "title": "Europa walczy z pożarami lasów",
+      "lead": "Belgijski pożar wymknął się spod kontroli, a Grecja bada śmiertelny pożar na Salaminie.",
+      "whatHappened": "AP opisał rozległy pożar w Belgii przy granicy z Niemcami oraz kolejne ogniska pożarowe i śledztwa w Grecji. Fale upałów i susza nadal podnoszą ryzyko w wielu krajach Europy.",
+      "keyFacts": [
+        "Ogień w Belgii objął około 30 km2.",
+        "Do gaszenia użyto setek strażaków i wsparcia z powietrza.",
+        "W Grecji śledztwo dotyczy śmiertelnego pożaru na Salaminie.",
+        "Kontynent nadal zmaga się z upałem i suszą."
+      ],
+      "reactions": [
+        "Lokalne władze utrzymują ewakuacje prewencyjne.",
+        "Służby ostrzegają przed kolejnymi wzrostami ryzyka pożarowego."
+      ],
+      "whyItMatters": "To kolejny sygnał, że ekstremalna pogoda coraz częściej przekłada się na realne zagrożenie dla ludzi i infrastruktury.",
+      "context": "W tle mamy wyschnięte gleby, ograniczenia wodne i napiętą sytuację energetyczną w części Europy.",
+      "watchNext": [
+        "Obserwuj, czy Belgia i Grecja zaktualizują bilans szkód.",
+        "Sprawdzaj kolejne mapy pożarowego ryzyka w Europie."
+      ],
+      "sources": [
+        {
+          "title": "AP: Belgian wildfire approaches Germany as Greece probes deadly blaze",
+          "url": "https://apnews.com/article/cd5a8524ca3136b009422bd24eb4194e"
+        }
+      ],
+      "tags": [
+        "bezpieczenstwo",
+        "europa",
+        "pozary",
+        "upal"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "2026-08-20-0905-imgw-alerts",
+      "section": "Bezpieczeństwo",
+      "title": "IMGW utrzymuje szerokie ostrzeżenia",
+      "lead": "Polski serwis pogodowy nadal pokazuje aktywne ostrzeżenia meteorologiczne i hydrologiczne.",
+      "whatHappened": "IMGW nadal publikuje aktualne ostrzeżenia i hydrologiczne komunikaty. Na stronach serwisu widać aktywny monitoring pogody, stanu wód i suszy hydrologicznej.",
+      "keyFacts": [
+        "IMGW pokazuje aktywne ostrzeżenia meteorologiczne i hydrologiczne.",
+        "Serwis nadal monitoruje suszę hydrologiczną.",
+        "Bieżące mapy pogodowe są aktualizowane przez cały dzień.",
+        "Ryzyko dotyczy lokalnych opadów, wiatru i stanu wód."
+      ],
+      "reactions": [
+        "Instytut zachęca do regularnego sprawdzania map i komunikatów.",
+        "Lokalne służby mogą dołączać własne ostrzeżenia operacyjne."
+      ],
+      "whyItMatters": "To ważny alert infrastrukturalny, bo susza i gwałtowne opady mogą jednocześnie destabilizować wodę, transport i bezpieczeństwo lokalne.",
+      "context": "Ten typ alertu jest bardziej operacyjny niż medialny, ale bezpośrednio wpływa na codzienne funkcjonowanie wielu regionów.",
+      "watchNext": [
+        "Sprawdź, czy IMGW zmieni status ostrzeżeń do wieczora.",
+        "Obserwuj, czy RCB dołoży lokalne komunikaty."
+      ],
+      "sources": [
+        {
+          "title": "IMGW: Strona główna",
+          "url": "https://imgw.pl/"
+        },
+        {
+          "title": "IMGW: Serwis pogodowy",
+          "url": "https://meteo.imgw.pl/"
+        }
+      ],
+      "tags": [
+        "bezpieczenstwo",
+        "imgw",
+        "alerty",
+        "hydrologia"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "2026-08-20-0905-eu-ai-transparency",
+      "section": "Technologia",
+      "title": "UE uruchamia nowe reguły przejrzystości AI",
+      "lead": "Od 2 sierpnia 2026 r. obowiązują nowe zasady przejrzystości modeli i treści generowanych przez AI.",
+      "whatHappened": "Komisja Europejska poinformowała, że weszły w życie nowe reguły przejrzystości AI. Google ogłosił podpisanie kodeksu praktyk, co pokazuje, że duzi gracze dostosowują się do nowych wymogów.",
+      "keyFacts": [
+        "Komisja Europejska wskazała datę wejścia w życie na 2 sierpnia 2026 r.",
+        "Zasady dotyczą przejrzystości treści generowanych przez AI.",
+        "Google publicznie potwierdził podpisanie kodeksu praktyk.",
+        "To część szerszego unijnego reżimu AI Act."
+      ],
+      "reactions": [
+        "Firmy technologiczne stawiają na zgodność i standardy oznaczania treści.",
+        "Regulatorzy podkreślają bezpieczeństwo i zaufanie użytkowników."
+      ],
+      "whyItMatters": "To jeden z najważniejszych bieżących punktów regulacyjnych dla całego sektora AI w Europie.",
+      "context": "Wejście przepisów wzmacnia presję na transparentność, pochodzenie treści i narzędzia detekcji.",
+      "watchNext": [
+        "Obserwuj, czy KE poda pierwsze działania egzekucyjne.",
+        "Sprawdzaj, jak duże platformy wdrażają oznaczanie treści AI."
+      ],
+      "sources": [
+        {
+          "title": "European Commission: Safer and more transparent AI",
+          "url": "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en"
+        },
+        {
+          "title": "Google: EU AI Act Transparency Code of Practice",
+          "url": "https://blog.google/company-news/outreach-and-initiatives/public-policy/eu-ai-act-transparency-code-of-practice/"
+        }
+      ],
+      "tags": [
+        "technologia",
+        "ai",
+        "ue",
+        "regulacje"
+      ],
+      "priority": "2"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24: Sześć rzeczy, które warto dziś wiedzieć",
+      "url": "https://tvn24.pl/polska/szesc-rzeczy-ktore-warto-wiedziec-w-czwartek-20-sierpnia-najwazniejsze-informacje-st9197430"
+    },
+    {
+      "title": "BBC News: search check",
+      "url": "https://www.bbc.com/news"
+    },
+    {
+      "title": "CNN: search check",
+      "url": "https://www.cnn.com/world"
+    },
+    {
+      "title": "RCB: Strona główna i aktualności",
+      "url": "https://www.gov.pl/web/rcb"
+    },
+    {
+      "title": "KPRM: Sprawiedliwsze podatki i więcej w portfelach Polek i Polaków",
+      "url": "https://www.gov.pl/web/premier/sprawiedliwsze-podatki-i-wiecej-w-portfelach-polek-i-polakow"
+    },
+    {
+      "title": "UODO: Prezes UODO skontroluje spółkę MyDr",
+      "url": "https://uodo.gov.pl/pl/138/4540"
+    },
+    {
+      "title": "Ministerstwo Cyfryzacji: Komunikat po spotkaniu Połączonego Centrum Operacyjnego Cyberbezpieczeństwa",
+      "url": "https://www.gov.pl/web/cyfryzacja/komunikat-po-spotkaniu-polaczonego-centrum-operacyjnego-cyberbezpieczenstwa"
+    },
+    {
+      "title": "CBZC: Komunikat dot. wycieku danych pacjentów z systemu informatycznego",
+      "url": "https://cbzc.policja.gov.pl/bzc/aktualnosci/1013%2CKomunikat-dot-wycieku-danych-pacjentow-z-systemu-informatycznego.html"
+    },
+    {
+      "title": "AP News: World / Technology / Security coverage",
+      "url": "https://apnews.com/"
+    },
+    {
+      "title": "Federal Reserve: News and Events",
+      "url": "https://www.federalreserve.gov/newsevents.htm"
+    },
+    {
+      "title": "IMGW: Strona główna",
+      "url": "https://imgw.pl/"
+    },
+    {
+      "title": "European Commission: Safer and more transparent AI",
+      "url": "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en"
+    }
+  ]
+}
