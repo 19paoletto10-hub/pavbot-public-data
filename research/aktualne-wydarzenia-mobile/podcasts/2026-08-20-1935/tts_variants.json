@@ -1,0 +1,30 @@
+{
+  "created_at": "2026-08-20T17:43:18.877456+00:00",
+  "language": "pl",
+  "language_detection": "local-polish-heuristic",
+  "speed": 1.03,
+  "variants": [
+    {
+      "id": "female-piper",
+      "engine": "piper",
+      "voice": "pl_PL-gosia-medium",
+      "model": "rhasspy/piper-voices:pl_PL-gosia-medium",
+      "status": "ok",
+      "duration_seconds": 210.95288,
+      "output_file": "/Users/promaczek/Documents/CODEX-Pavbot/research/aktualne-wydarzenia-mobile/podcasts/2026-08-20-1935/audio/female-piper/podcast.mp3",
+      "render_json": "/Users/promaczek/Documents/CODEX-Pavbot/research/aktualne-wydarzenia-mobile/podcasts/2026-08-20-1935/audio/female-piper/render.json",
+      "error": null
+    },
+    {
+      "id": "male-xtts",
+      "engine": "xtts",
+      "voice": "Andrew Chipper",
+      "model": "coqui/XTTS-v2",
+      "status": "failed",
+      "duration_seconds": null,
+      "output_file": null,
+      "render_json": "/Users/promaczek/Documents/CODEX-Pavbot/research/aktualne-wydarzenia-mobile/podcasts/2026-08-20-1935/audio/male-xtts/render.json",
+      "error": "Render wrapper stalled before finalizing audio; no public MP3 produced for male-xtts in this run."
+    }
+  ]
+}
