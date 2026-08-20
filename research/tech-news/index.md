@@ -1,8 +1,16 @@
 # Topic Index: tech-news
 
-Last updated: 2026-08-13
+Last updated: 2026-08-20
 
 ## Current Understanding
+
+Dzisiejszy run z 2026-08-20 przesuwa oś z samych premier modeli na routing, prywatność i dystrybucję. Stripe bierze OpenRouter, więc multi-model token routing staje się osobną warstwą infrastruktury, a nie tylko dodatkiem do endpointów.
+
+OpenAI składa ZDR, Private Safety Processing, ChatGPT for Teens i pacing model development wokół cyber w jeden pakiet kontroli. To sugeruje, że regulacja, age gating i monitoring across interactions są już częścią product design, a nie tylko policy appendix.
+
+Anthropic watermarking spotyka obejścia, Google nadal otwiera Play Store dla rival stores, a Linear i Etched pokazują, że adoption i infra capex remain hot. Community signal nadal faworyzuje praktyczne surfaces, ale teraz wygrywają te, które potrafią udowodnić provenance, routing i realne użycie.
+
+Wieczorny run z 2026-08-13 przesuwa oś z samych modeli w stronę natywnych runtime’ów. Google publikuje Gemini 3 Flash Preview i wypycha go do Gemini CLI, OpenAI pokazuje preview desktopowego Codex na Linuxie, a DeepSeek wypuszcza Harness developer preview razem z GA dla V4 Pro. Wspólny wzór to agentowe workflowy pakowane jako terminal, desktop i harness, a nie tylko API albo benchmark.
 
 Dzisiejszy run z 2026-08-13 pokazuje, że OpenAI przechodzi od modelowego hype'u do pełnego stacku monetyzacji i adopcji. ChatGPT Ads są już live w UK, Meksyku, Brazylii, Japonii i Korei Południowej, a enterprise study mówi wprost o przejściu z assistance do execution. Frontier firms generują 8.3x tyle output tokens per active user co typowe firmy, a Codex odpowiada za 64% łącznego enterprise output. To sugeruje, że rynek zaczyna wyceniać nie tylko capability, ale depth of use i możliwość zmonetyzowania rozmowy.
 
@@ -320,6 +328,7 @@ transparentność środowiskową AI.
 
 ## Review Notes
 
+- 2026-08-20: Stripe/OpenRouter, OpenAI ZDR/Private Safety Processing/Teens/cyber pacing, Claude watermark bypasses, Google rival app stores, Etched i Linear razem przesuwają temat z model launches na routing, provenance i distribution.
 - 2026-08-04: publiczny framework review, eval-time incidents i aktywny Shai-Hulud ustawiają dzisiaj oś wokół kontroli, izolacji i provenance, podczas gdy GPT-5.6 oraz GPT-Live przesuwają produkt w stronę tańszego, ciągłego work/voice control.
 - 2026-08-04: deployment layer, governed vibe coding i AI-vs-AI security wyglądają na nową oś dnia; HN/PH nadal premiują control surfaces, a Apple/OpenAI oraz Airtable dodają hardware/IP i SaaS consolidation do obrazu rynku.
 - 2026-07-30: OpenAI tnie ceny GPT-5.6 i dodaje Fast mode; HN promuje Gemini Robotics 2 i stacked PRs, więc wieczór domyka się wokół price/performance, physical AI i workflow topology.
@@ -353,6 +362,12 @@ transparentność środowiskową AI.
 
 ## Watch Items
 
+- Stripe/OpenRouter routing layer: watch whether the acquisition closes cleanly and whether token routing, observability and pricing stay neutral.
+- OpenAI privacy/safety stack: watch whether ZDR, Private Safety Processing and Teens expand beyond preview into broader defaults.
+- OpenAI Astra cyber gating: watch whether the monitoring regime and threshold language spread to public products or later model stages.
+- Claude watermark pressure: watch the detection API timeline and whether bypass tooling keeps eroding provenance claims.
+- Google rival app stores: watch whether rollout becomes consistent across devices and whether more stores join Play distribution.
+- Linear adoption metrics: watch whether the next data drop confirms the broad AI usage curve across functions and company sizes.
 - OpenAI ChatGPT Ads and enterprise depth: watch whether the international rollout, advertiser uptake and execution metrics turn into durable revenue signals.
 - OpenAI Daybreak on AWS: watch access approvals, Bedrock adoption and whether other high-risk model tiers copy the gated distribution pattern.
 - Grok 4.6 distribution: watch third-party benchmarks, Cursor/Grok Build uptake and whether pricing or partner integrations move quickly.
@@ -706,6 +721,7 @@ transparentność środowiskową AI.
 
 ## Recent Reports
 
+- [2026-08-20](runs/2026-08-20.md)
 - [2026-08-13](runs/2026-08-13.md)
 - [2026-08-12](runs/2026-08-12.md)
 - [2026-08-03](runs/2026-08-03.md)

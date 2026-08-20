@@ -4,6 +4,15 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track OpenRouter acquisition close | Stripe's deal could turn routing into a core AI infra layer and reset neutrality expectations | Watch close terms, integration details and whether token pricing changes | Open |
+| High | Track OpenAI privacy and teen stack | ZDR, Private Safety Processing and Teens are now bundled safety surfaces, not separate stories | Watch rollout scope, customer defaults and family-safety controls | Open |
+| High | Track Astra cyber gating | OpenAI's threshold language suggests release timing may now depend on internal cyber risk gates | Watch the technical paper, monitoring changes and whether the guardrails spread to public products | Open |
+| High | Track Claude watermark bypasses | Public workaround tools can weaken provenance claims very quickly | Watch the detection API timeline, removal tools and platform responses | Open |
+| High | Track Android rival store rollout | Google is being forced to lower friction around third-party app stores | Watch rollout consistency, additional store launches and legal follow-through | Open |
+| Medium | Track Linear AI adoption data | Linear's dataset is one of the few public reads on real AI adoption inside teams | Watch the next data drop and compare it with other usage datasets | Open |
+| High | Track Etched deployment signal | The valuation jump is big, but production proof is what will matter next | Watch customer deployments, financing details and any benchmark claims | Open |
+| High | Track native agent runtime surfaces | Gemini 3 Flash in CLI, Codex Linux preview and DeepSeek Harness show the fight moving to terminal, desktop and harness runtimes | Watch rollout breadth, packaging issues and whether developers prefer integrated runtimes over raw APIs | Open |
+| High | Track DeepSeek pricing reset | DeepSeek says the V4 Pro family will move to peak/off-peak pricing on 2026-08-16, so cost pressure may change quickly | Recheck pricing after the change and compare against Google/OpenAI tooling | Open |
 | Medium | Track Pixel 11 as Gemini acquisition funnel | Google is bundling Pixel 11, Pixel Watch 5 and Pixel Tag around Gemini and AI Pro upsell, turning consumer hardware into a distribution story | Watch preorder demand, AI Pro conversion and carrier promotions | Open |
 | High | Track NVIDIA AI compute financing platforms | NVIDIA's $500B financing push turns compute into a financeable asset class and may reshape infra funding | Watch final agreements, first financed deployments and partner adoption | Open |
 | High | Track ChatGPT monetization rollout | OpenAI's ads expansion plus Premium seats make monetization a first-class product story | Watch market availability, advertiser uptake, user backlash and business-seat adoption | Open |
@@ -283,6 +292,7 @@
 
 ## Review Notes
 
+- 2026-08-20: Stripe/OpenRouter, OpenAI ZDR/Private Safety Processing/Teens/cyber pacing, Claude watermark bypasses, Google rival app stores, Etched i Linear razem przesuwają temat z model launches na routing, provenance i distribution.
 - 2026-08-03: Google Earth rollback and Chrome AI security now make trust and patch cadence the near-term axis; Qwen3.8-Max plus Pacing the Frontier keep competition and governance active, while Cyera/Oasis points to non-human identity consolidation.
 - 2026-07-29: Pacing the Frontier, OpenAI task crossover/scientific computing i Seagate FY26 results przesuwają temat w stronę governance, reorganizacji pracy i storage demand; HN/PH nadal premiują control-first tooling.
 - 2026-07-28: Open Secure AI Alliance, OpenAI/Hugging Face postmortem, Microsoft Project Perception i report o Nvidii/Hut 8 ustawiają security/open weights oraz infra finance jako główne watch items na kolejny run.
