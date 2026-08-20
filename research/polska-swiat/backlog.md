@@ -4,6 +4,14 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track 20 August Kyiv attack and Polish air-alert follow-up | AP reports at least 12 killed and 33 wounded in Kyiv, while Polish outlets report military aviation activity and RCB alerts for parts of Lubelskie and Podkarpackie | Recheck DORSZ, RCB, MON, AP and Ukrainian emergency updates for final casualty count, end-of-operation communication, any airspace violation statement and whether alerts are repeated in later attacks | Open |
+| High | Track Russia fuel-import signal | Guardian now describes confirmed Russian fuel imports from India, Belarus and Kazakhstan after Ukrainian strikes on refineries and depots | Watch Reuters/Guardian/AP mirrors, Russian government statements, fuel-price and rationing reports, sanctions context and further Ukrainian refinery strikes before calling it a durable fuel crisis | Open |
+| High | Track Ukraine governance crisis after Mudra dismissal and Fedorov election call | AP links a new anti-corruption investigation near the presidential office with Fedorov's public demand for a wartime election mechanism | Watch AP, Guardian, NABU, Ukrainian presidential office, Verkhovna Rada and EU statements; separate facts of the investigation from political interpretations and avoid implying Zelenskyy is a suspect | Open |
+| High | Track UAE-Iran trade break and Hormuz shipping | AP reports that the UAE suspended trade and financial transactions with Iran after a disputed missile incident, while Guardian describes U.S. economic pressure on Iran's trade partners | Watch AP, Guardian, UAE MFA, Iran MFA, UKMTO, MarineTraffic, oil prices and U.S. sanctions announcements for confirmation of embargo scope, shipping volume and retaliation risk | Open |
+| Medium | Track 20 August Council of Ministers package | KPRM lists a broad agenda including KPK, taxes, market capital, public registries, health, the nuclear program, district heating and ECHR execution report | Recheck KPRM after the 11:00 meeting for adopted decisions, project status, exact communication and Sejm timetable; do not treat the morning agenda as adopted law | Open |
+| Medium | Track 2027 tax package | Business Insider Polska and TVN24 report Tusk's PIT/CIT/solidarity levy/ryczałt announcement, but it is not yet a passed project | Watch KPRM, MF, RCL, Sejm, President's Office and business/tax expert reactions for bill text, fiscal impact, presidential veto risk and distributional effects | Open |
+| Medium | Track RCB Połaniec-Wiązownica water alert and drought | RCB reports no meteo warnings but keeps nationwide hydrological drought and a local water alert after Escherichia coli was detected in the Połaniec-Wiązownica supply | Watch RCB, Sanepid, gmina Połaniec and IMGW for alert cancellation, bottled-water logistics and return of storm or hydrology warnings | Open |
+| Low | Track Wanda Traczyk-Stawska memorial follow-up | TVN24 and PAP report the death of Wanda Traczyk-Stawska and Warsaw's condolence book in the Izba Pamięci | Watch Warsaw city, Museum of Warsaw Uprising, PAP and official memorial notices for funeral and commemoration details; keep podcast tone civic and non-partisan | Open |
 | High | Track 13 August Ukrainian refinery strike and Odesa train attack | AP now reports a strike on Gazprom Neftekhim Salavat in Bashkortostan and a Russian drone hit on a passenger train in Odesa that killed the engineer and his assistant | Watch AP, Ukrzaliznytsia, Ukrainian General Staff, Russian regional authorities and refinery/rail follow-ups for casualty revisions, outage duration and any shift from port strikes to energy-and-rail pressure | Open |
 | High | Track 13 August Novorossiysk, Patriot and Oleksandrivskyi follow-up | AP and Guardian now connect Ukraine's Black Sea strike with reported battlefield gains and a concrete request for more U.S. Patriot interceptors before winter | Watch AP, Guardian, President of Ukraine, Ukrainian Air Force, White House, Pentagon, NATO and Russian regional statements for port-damage confirmation, casualty updates, interceptor decisions and any Russian retaliation | Open |
 | High | Track UN civilian-detainee estimate in Russia | AP reports the UN estimate that more than 16,000 Ukrainian civilians detained by Russia remain deprived of liberty, with widespread torture and ill-treatment allegations | Watch UN OHCHR, Security Council follow-ups, AP/Reuters mirrors, Ukraine ombudsman, ICRC access statements and Russian responses; separate verified UN data from survivor testimony and political claims | Open |
@@ -143,6 +151,14 @@
 
 ## Review Notes
 
+- 2026-08-20: Morning research created a material update after the local gap
+  since 13 August. Strongest sources were AP for Kyiv, Ukraine governance,
+  Kherson aid-worker risk, Gaza accountability and UAE-Iran; Guardian for
+  Russian fuel imports and U.S. economic pressure on Iran; KPRM for the Council
+  of Ministers agenda and nuclear-program update; Business Insider Polska and
+  TVN24 for the tax package; RCB for practical domestic alerts. Podcast should
+  lead Kyiv plus the Polish air-alert response, then Russian fuel imports, then
+  UAE-Iran/Hormuz, with taxes and KPRM as the main domestic policy block.
 - 2026-08-13: Morning research created a material update. Strongest sources
   were AP for Noworosyjsk, UN detainees, Bab el-Mandeb/Gaza/Hormuz and
   Colombia, Guardian for the Ukraine front/Patriot context, KPRM for the 13

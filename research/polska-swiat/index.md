@@ -1,8 +1,20 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-08-13
+Last updated: 2026-08-20
 
 ## Current Understanding
+
+Po porannym runie 20 sierpnia centrum ciężkości przesunęło się na bezpośredni
+związek wojny w Ukrainie z polskim bezpieczeństwem: AP opisuje rosyjski atak
+na Kijów z co najmniej 12 zabitymi i 33 rannymi, a polskie media potwierdzają
+poderwanie lotnictwa oraz alerty RCB dla części województw lubelskiego i
+podkarpackiego. Drugą osią jest ekonomiczny skutek ukraińskich uderzeń w
+rosyjskie paliwa, bo Guardian opisuje potwierdzony import benzyny przez Rosję.
+Na Bliskim Wschodzie ZEA zawiesiły handel i transakcje z Iranem, a krajowo
+Tusk zapowiedział pakiet podatkowy na 2027 rok, KPRM wystawiła szeroką agendę
+Rady Ministrów z programem jądrowym i finansami, RCB utrzymuje suszę
+hydrologiczną oraz lokalny alert wodny w Połańcu, a Warszawa żegna Wandę
+Traczyk-Stawską.
 
 Po wieczornym runie 13 sierpnia do porannego obrazu dołożył się nowy blok uderzeń w rosyjskie paliwa i logistykę: AP opisuje pożar w rafinerii Gazprom Neftekhim Salavat w Baszkirii, a rosyjski dron uderzył w pociąg pasażerski w obwodzie odeskim, zabijając dwóch kolejarzy. Krajowo nie widać jeszcze materialnej zmiany po posiedzeniu Rady Ministrów; publiczna strona KPRM nadal pokazuje agendę ETIAS/Data Act/Prawo lotnicze/Kodeks wyborczy/CPK, RCB utrzymuje brak ostrzeżeń meteo przy suszy hydrologicznej, a MON pozostaje w trybie obchodów Święta Wojska Polskiego.
 
@@ -664,6 +676,7 @@ konfliktowaniu Polaków i Ukraińców.
 
 ## Recent Reports
 
+- [2026-08-20](runs/2026-08-20.md)
 - [2026-08-13-1934](runs/2026-08-13-1934.md)
 - [2026-08-13](runs/2026-08-13.md)
 - [2026-08-12](runs/2026-08-12.md)
