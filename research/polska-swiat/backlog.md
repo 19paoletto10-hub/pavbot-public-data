@@ -4,6 +4,14 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track 21 August Kyiv, Romania Neptun Deep and eastern-flank response | Guardian raises Kyiv toll and describes Romania destroying an explosive marine drone near Neptun Deep | Watch Guardian/AP/Reuters mirrors, Romania MoD, NATO/EC, Ukrainian air force and Polish MON/DORSZ for attribution, damage, Patriot decisions and follow-up incidents | Open |
+| High | Track ABW Serhij P. attempted-assassination case | Polish outlets citing ABW/PAP say a 63-year-old Ukrainian suspect was detained in Warsaw after a failed Irpin bombing attempt allegedly on behalf of Russian services | Watch ABW, Prokuratura Krajowa, court or extradition decisions and Ukrainian services; keep language process-based and avoid presuming guilt | Open |
+| High | Track Białka Kolonia rail incident | Onet says police, ABW, CBŚP and SKW are checking wires and a flash near railway tracks; no explosives or track damage confirmed initially | Watch police/prosecutor/PKP PLK updates and distinguish confirmed facts from the sabotage hypothesis | Open |
+| High | Track U.S. economic D-Day and Iran secondary sanctions | AP says the Trump administration is pivoting to "economic D-Day" with possible secondary sanctions while UAE embargo and Hormuz disruption continue | Watch Treasury sanctions list, China/India/EU response, oil prices, Hormuz transits and Iranian reply | Open |
+| Medium | Track North Korea missiles after shortened U.S.-South Korea drills | AP says North Korea fired about 10 short-range missiles and U.S./South Korean drills end six days early | Watch AP, South Korea/Japan/U.S. commands and DPRK statements for follow-up launches or diplomacy | Open |
+| Medium | Track CPN 2.0 fuel-price pass-through | BI says 95 gasoline averaged 6.41 PLN after CPN 2.0; KPRM says VAT was cut from 23 to 8 percent and daily maximum prices run through 31 August | Watch e-petrol/BI, ME maximum prices, Orlen, budget cost, inflation and whether the program extends | Open |
+| Medium | Track RCB 21 August storms and alert levels | RCB forecasts level-2 severe storms in four województwa, level-1 storms in eight and keeps alert levels to 31 August | Recheck IMGW/RCB/PSP before audio/push, especially power outages and transport disruption | Open |
+| Medium | Track Panama Canal drought restrictions | Guardian says daily transits fall to 34 from 3 September and 32 from 15 September | Watch Panama Canal Authority, Reuters/Guardian and shipping-cost data for global logistics effects | Open |
 | High | Track 20 August Kyiv attack and Polish air-alert follow-up | AP reports at least 12 killed and 33 wounded in Kyiv, while Polish outlets report military aviation activity and RCB alerts for parts of Lubelskie and Podkarpackie | Recheck DORSZ, RCB, MON, AP and Ukrainian emergency updates for final casualty count, end-of-operation communication, any airspace violation statement and whether alerts are repeated in later attacks | Open |
 | High | Track Russia fuel-import signal | Guardian now describes confirmed Russian fuel imports from India, Belarus and Kazakhstan after Ukrainian strikes on refineries and depots | Watch Reuters/Guardian/AP mirrors, Russian government statements, fuel-price and rationing reports, sanctions context and further Ukrainian refinery strikes before calling it a durable fuel crisis | Open |
 | High | Track Ukraine governance crisis after Mudra dismissal and Fedorov election call | AP links a new anti-corruption investigation near the presidential office with Fedorov's public demand for a wartime election mechanism | Watch AP, Guardian, NABU, Ukrainian presidential office, Verkhovna Rada and EU statements; separate facts of the investigation from political interpretations and avoid implying Zelenskyy is a suspect | Open |
@@ -151,6 +159,12 @@
 
 ## Review Notes
 
+- 2026-08-21: Morning research created a material update. Strongest sources
+  were Guardian for Kyiv/Fedorov/Romania, Polsat/RMF/WP/Onet for Polish
+  security incidents, AP for Iran/Hormuz/ZEA and Korea, KPRM/BI for taxes and
+  CPN, and RCB for practical alerts. Podcast should lead eastern-flank security,
+  then Polish ABW/rail cases, then Iran/Ormuz, with CPN/taxes and RCB as shorter
+  domestic blocks.
 - 2026-08-20: Morning research created a material update after the local gap
   since 13 August. Strongest sources were AP for Kyiv, Ukraine governance,
   Kherson aid-worker risk, Gaza accountability and UAE-Iran; Guardian for

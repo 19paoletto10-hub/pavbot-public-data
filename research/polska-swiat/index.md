@@ -1,8 +1,20 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-08-20
+Last updated: 2026-08-21
 
 ## Current Understanding
+
+Po porannym runie 21 sierpnia główny obraz przesuwa się z samego bilansu ataku
+na Kijów w szerszy pakiet presji bezpieczeństwa na wschodniej flance: Guardian
+podaje co najmniej 16 zabitych w Kijowie i problem brakujących pocisków Patriot,
+Rumunia niszczy morski dron z ładunkiem przy Neptun Deep, a polskie źródła
+opisują zatrzymanie przez ABW Serhija P. po nieudanej próbie zamachu w Irpieniu
+oraz śledztwo przy torach w Białce Kolonii. Światowo USA przechodzą wobec Iranu
+do zapowiedzi "economic D-Day", ZEA odcinają handel z Teheranem, Ormuz pozostaje
+ograniczony, a Korea Północna odpowiada salwą około 10 rakiet na skrócenie
+ćwiczeń USA-Korea Południowa. Krajowo CPN 2.0 realnie obniżył ceny paliw,
+podatki 2027 pozostają dużą zapowiedzią rządu, a RCB znów pokazuje burze
+i utrzymane stopnie alarmowe.
 
 Po porannym runie 20 sierpnia centrum ciężkości przesunęło się na bezpośredni
 związek wojny w Ukrainie z polskim bezpieczeństwem: AP opisuje rosyjski atak
@@ -676,6 +688,7 @@ konfliktowaniu Polaków i Ukraińców.
 
 ## Recent Reports
 
+- [2026-08-21](runs/2026-08-21.md)
 - [2026-08-20](runs/2026-08-20.md)
 - [2026-08-13-1934](runs/2026-08-13-1934.md)
 - [2026-08-13](runs/2026-08-13.md)
