@@ -7,6 +7,13 @@
 - Watch whether BBC, Home Office or Counter Terrorism Policing add more detail on Harry, Meghan, Manchester or asylum policy.
 - Watch whether Iran or Ormuz rhetoric turns into a concrete market move in oil and fuels.
 
+# 2026-08-21 12:00
+
+- Watch whether IMGW or RCB turn the current monitoring block into a clearer escalation or downgrade.
+- Watch whether police or ministries add more detail on the Warsaw government-car incident, Zakroczym crash or Ochota doctor case.
+- Watch whether OpenAI, Walmart, ONS or Panama Canal publish follow-up detail that changes the economic or tech angle.
+- Watch whether Ukraine, West Bank, Hong Kong or Alaska stories get official follow-up that materially changes the feed.
+
 # 2026-08-20 18:01
 
 - Watch whether RCB or IMGW issue a late-evening upgrade or cancellation.

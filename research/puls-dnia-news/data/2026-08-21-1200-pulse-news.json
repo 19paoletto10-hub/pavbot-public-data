@@ -1,0 +1,497 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-08-21",
+  "runTime": "12:00",
+  "status": "Material update",
+  "headline": "Warszawa, AI i światowa gospodarka wypychają poranny układ tematów",
+  "summary": "Południowy slot dokłada świeże krajowe incydenty, dwa mocne wątki AI i kilka dużych tematów gospodarczych oraz geopolitycznych z UK, Kanału Panamskiego, Ukrainy, Zachodniego Brzegu, Hongkongu, Alaski i Walmartu.",
+  "items": [
+    {
+      "id": "imgw-monitoring",
+      "section": "Alerty",
+      "title": "IMGW nadal monitoruje burze",
+      "lead": "Na stronie IMGW dalej widać aktywny blok opadów, burz i ostrzeżeń.",
+      "whatHappened": "Oficjalny panel IMGW dla osłony granic nadal pokazuje moduły monitoringu opadów, burz i prognoz krótkoterminowych. To wygląda na utrzymanie gotowości, a nie nową eskalację względem porannego slotu.",
+      "keyFacts": [
+        "IMGW nadal eksponuje monitoring burz, opadów i ostrzeżeń.",
+        "W tym slocie nie widać nowego ogólnokrajowego skoku alertowego.",
+        "Najbardziej wrażliwe pozostają obszary z lokalnymi burzami i intensywnym opadem."
+      ],
+      "reactions": [
+        "To utrzymuje czujność służb i samorządów bez konieczności zmiany tonu na alarmowy.",
+        "Dla odbiorcy feedu to sygnał, żeby dalej sprawdzać pogodę przed podróżą."
+      ],
+      "whyItMatters": "Nawet bez nowej eskalacji temat nadal wpływa na transport, lokalne podtopienia i wydarzenia plenerowe.",
+      "context": "Alerty pogodowe i hydrologiczne były jednym z głównych krajowych tematów poranka.",
+      "watchNext": [
+        "Sprawdź kolejny refresh IMGW i RCB przed następnym slotem.",
+        "Obserwuj, czy blok monitoringu przejdzie w wyraźną eskalację albo zostanie wygaszony."
+      ],
+      "sources": [
+        {
+          "title": "IMGW: Prognozy meteorologiczne dla osłony granic",
+          "url": "https://cmm.imgw.pl/?page_id=35717"
+        }
+      ],
+      "tags": [
+        "alerty",
+        "IMGW",
+        "pogoda",
+        "burze"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "warszawa-rzadowe-auto",
+      "section": "Polityka",
+      "title": "Rządowe auto zatrzymane w Warszawie",
+      "lead": "Na rondzie de Gaulle'a kierowca miał zmusić do zatrzymania rządowy samochód.",
+      "whatHappened": "TVN24 opisuje zdarzenie z czwartego kwartału dnia w centrum Warszawy. Policja prowadzi czynności, a premier skomentował sprawę jako nietypową sytuację z udziałem ministerialnego auta.",
+      "keyFacts": [
+        "Do zdarzenia doszło w rejonie ronda de Gaulle'a.",
+        "W aucie jechała podsekretarz stanu w Ministerstwie Finansów.",
+        "Sprawą zajmuje się policja."
+      ],
+      "reactions": [
+        "Na tym etapie to bardziej incydent uliczny niż pełny skandal polityczny.",
+        "Wątek może zyskać ciężar, jeśli śledczy podadzą więcej danych o motywie."
+      ],
+      "whyItMatters": "To publiczny sygnał o bezpieczeństwie transportu osób pełniących funkcje państwowe w centrum stolicy.",
+      "context": "To świeży krajowy temat, który wszedł do feedu po porannym slocie.",
+      "watchNext": [
+        "Obserwuj komunikaty policji.",
+        "Sprawdź, czy pojawi się stanowisko Ministerstwa Finansów."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Rządowe auto zatrzymane w Warszawie",
+          "url": "https://tvn24.pl/tvnwarszawa/srodmiescie/warszawa-zatrzymal-na-ulicy-rzadowy-samochod-jest-w-rekach-policji-st9199316?source=rss"
+        }
+      ],
+      "tags": [
+        "Warszawa",
+        "polityka",
+        "policja",
+        "bezpieczeństwo"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "zakroczym-dachowanie",
+      "section": "Polska",
+      "title": "Dachowanie w Zakroczymiu",
+      "lead": "Auto uderzyło w przepust i ogrodzenie, po czym dachowało.",
+      "whatHappened": "W Zakroczymiu samochód osobowy zjechał z drogi, uderzył w przepust i ogrodzenie, a następnie dachował. Trzy osoby trafiły do szpitala, a policja podała, że kierowca miał aktywny zakaz prowadzenia pojazdów.",
+      "keyFacts": [
+        "W zdarzeniu uczestniczyły trzy osoby.",
+        "Wszystkie trzy osoby przewieziono do szpitala.",
+        "Policja wskazała na aktywny zakaz prowadzenia pojazdów u kierowcy."
+      ],
+      "reactions": [
+        "To klasyczny przykład lokalnego zdarzenia drogowego z potencjałem na dalsze ustalenia policji.",
+        "W praktyce wzmaga temat egzekwowania zakazów prowadzenia pojazdów."
+      ],
+      "whyItMatters": "To bezpośrednie ryzyko drogowe i kolejny sygnał, że lokalne bezpieczeństwo pozostaje problemem codziennym.",
+      "context": "To nowy krajowy temat w południowym slocie, obok warszawskiego incydentu i sprawy lekarza.",
+      "watchNext": [
+        "Sprawdź, czy policja poda nowe szczegóły o stanie uczestników.",
+        "Obserwuj, czy pojawi się decyzja prokuratury w sprawie kierowcy."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Dachowanie w Zakroczymiu",
+          "url": "https://tvn24.pl/tvnwarszawa/okolice/zakroczym-uderzyl-w-ogrodzenie-i-dachowal-trzy-osoby-w-szpitalu-st9199258?source=rss"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "wypadek",
+        "drogi",
+        "Mazowsze"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "ochota-pijany-lekarz",
+      "section": "Bezpieczeństwo",
+      "title": "Lekarz dyżurował po alkoholu",
+      "lead": "Na Ochocie prokuratura bada dyżur lekarza po alkoholu.",
+      "whatHappened": "Policja i prokuratura prowadzą czynności po sygnale od współpracowników. Według TVN24 lekarz zdążył przyjąć pacjentów w przychodni, a badanie alkomatem potwierdziło podejrzenia o alkohol na dyżurze.",
+      "keyFacts": [
+        "Sprawą zajmuje się prokuratura.",
+        "Lekarz miał przyjąć kilkunastu pacjentów.",
+        "Badanie alkomatem potwierdziło podejrzenia współpracowników."
+      ],
+      "reactions": [
+        "To natychmiast podnosi pytania o nadzór nad dyżurami i kontrolę w placówkach.",
+        "Temat ma wysoką wrażliwość społeczną, bo dotyczy pacjentów i zaufania do systemu opieki."
+      ],
+      "whyItMatters": "To bezpośrednie ryzyko dla pacjentów i temat odpowiedzialności placówek medycznych.",
+      "context": "To trzeci krajowy incydent z dużym komponentem bezpieczeństwa w tym samym slocie.",
+      "watchNext": [
+        "Obserwuj, czy prokuratura poda zarzuty lub środki wobec lekarza.",
+        "Sprawdź, czy placówka wyda własny komunikat."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Lekarz dyżurował po alkoholu",
+          "url": "https://tvn24.pl/tvnwarszawa/ochota/warszawa-pijany-lekarz-przyjmowal-pacjentow-w-przychodni-na-ochocie-st9199221?source=rss"
+        }
+      ],
+      "tags": [
+        "bezpieczeństwo",
+        "zdrowie",
+        "prokuratura",
+        "Warszawa"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "ai-glos-lektora",
+      "section": "Technologia",
+      "title": "AI miało sklonować głos lektora",
+      "lead": "TVN24 opisuje spór o reklamę i syntetyczny głos znanego lektora.",
+      "whatHappened": "Spór dotyczy wykorzystania głosu Jarosława Łukomskiego w reklamie szamba. Według TVN24 strony są już na etapie sądowym, a wątek zahacza o generatywne użycie AI i prawa do głosu jako dobra osobistego.",
+      "keyFacts": [
+        "Sprawa jest rozpatrywana w warszawskim sądzie rejonowym.",
+        "Lektor twierdzi, że jego głos wykorzystano bezprawnie.",
+        "TVN24 opisuje jasne potwierdzenie użycia AI."
+      ],
+      "reactions": [
+        "To ważny sygnał dla rynku reklamowego i producentów audio.",
+        "Spór może stać się punktem odniesienia dla kolejnych spraw o syntetyczne głosy."
+      ],
+      "whyItMatters": "To praktyczny przykład, jak generatywne AI wchodzi w spory o prawa osobiste i zgodę na użycie głosu.",
+      "context": "W tym slocie technologia jest widoczna nie tylko w polityce platform, ale też w lokalnym sporze sądowym.",
+      "watchNext": [
+        "Obserwuj, czy sąd wyda dodatkowe ustalenia.",
+        "Sprawdź, czy firma odpowie publicznie na zarzuty."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: AI miało sklonować głos lektora",
+          "url": "https://tvn24.pl/biznes/tech/ai-mialo-sklonowac-glos-znanego-lektora-mamy-jasne-potwierdzenie-st9199240?source=rss"
+        }
+      ],
+      "tags": [
+        "AI",
+        "prawo",
+        "głos",
+        "technologia"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "openai-chatgpt-teens",
+      "section": "Technologia",
+      "title": "OpenAI uruchamia ChatGPT for Teens",
+      "lead": "OpenAI wprowadza osobne doświadczenie dla nastolatków z większą ochroną.",
+      "whatHappened": "OpenAI ogłosiło ChatGPT for Teens, czyli tryb dla użytkowników 13-17 lat z dodatkowymi zabezpieczeniami, kontrolą rodzicielską i zdrowymi nawykami użycia. CNN opisuje ten ruch jako odpowiedź na rosnącą presję wokół bezpieczeństwa dzieci.",
+      "keyFacts": [
+        "OpenAI twierdzi, że system może automatycznie przenosić rozpoznanych nieletnich do wersji Teens.",
+        "Nowy tryb ma mocniejsze zabezpieczenia i kontrolę rodziców.",
+        "Ruch pojawia się w czasie szerszej krytyki bezpieczeństwa młodszych użytkowników AI."
+      ],
+      "reactions": [
+        "To kolejny sygnał, że bezpieczeństwo nieletnich staje się standardowym wymaganiem produktowym.",
+        "Inne platformy AI mogą dostać presję, by podnieść własne zabezpieczenia."
+      ],
+      "whyItMatters": "To jedna z ważniejszych zmian produktowych w AI dla masowego odbiorcy w tym tygodniu.",
+      "context": "Ten temat dobrze uzupełnia polski spór o syntetyczny głos i pokazuje, jak bezpieczeństwo AI rozchodzi się od polityki po produkt.",
+      "watchNext": [
+        "Obserwuj, czy OpenAI opublikuje więcej detali o wieku i kontroli rodzicielskiej.",
+        "Sprawdź, czy inni gracze na rynku AI odpowiedzą podobnym trybem bezpieczeństwa."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI: ChatGPT for Teens",
+          "url": "https://openai.com/index/chatgpt-for-teens/"
+        },
+        {
+          "title": "CNN: OpenAI introduces ChatGPT for Teens",
+          "url": "https://www.cnn.com/2026/08/18/tech/openai-chatgpt-for-teens"
+        }
+      ],
+      "tags": [
+        "AI",
+        "OpenAI",
+        "bezpieczeństwo",
+        "nastolatki"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "perm-rafineria",
+      "section": "Świat",
+      "title": "Ukraina uderza w rafinerię w Permie",
+      "lead": "Kijów twierdzi, że drony trafiły w rafinerię daleko za frontem.",
+      "whatHappened": "Zełenski przekazał, że ukraińskie drony uderzyły w rafinerię ropy w rosyjskim Permie, ponad 1600 kilometrów od granicy z Ukrainą. Według opisu po ataku wybuchł pożar, a Kijów podkreśla odwracanie skutków wojny na rosyjskie zaplecze.",
+      "keyFacts": [
+        "Perm leży daleko od frontu, więc to głęboki zasięgowo atak.",
+        "Ukraina przedstawia to jako presję na rosyjskie zaplecze wojenne.",
+        "Zdarzenie może mieć znaczenie dla rynku paliw i energii."
+      ],
+      "reactions": [
+        "Rosja może odpowiedzieć komunikatem o zestrzeleniach lub minimalizacji skutków.",
+        "Rynek ropy będzie wrażliwy na każdy potwierdzony pożar w rafinerii."
+      ],
+      "whyItMatters": "To uderza w paliwa, logistykę i narrację o odporności rosyjskiego zaplecza.",
+      "context": "To jeden z najmocniejszych geopolitycznych tematów nowego slota.",
+      "watchNext": [
+        "Sprawdź, czy pojawią się rosyjskie potwierdzenia albo korekty skali szkód.",
+        "Obserwuj, czy rynek ropy zareaguje na potwierdzone zdjęcia lub dane."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Ukraiński atak w głąb Rosji",
+          "url": "https://tvn24.pl/swiat/ukrainski-atak-w-glab-rosji-uderzono-w-rafinerie-st9199342?source=rss"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Rosja",
+        "ropa",
+        "wojna"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "zachodni-brzeg-osiedle",
+      "section": "Świat",
+      "title": "Izrael ponownie uruchamia osiedle na Zachodnim Brzegu",
+      "lead": "BBC opisuje powrót osadników do wcześniej zamkniętej lokalizacji.",
+      "whatHappened": "BBC podaje, że na teren osiedla wróciły tak zwane rodziny pionierskie, mimo rosnących protestów międzynarodowych. Palestyńscy mieszkańcy w pobliżu mówią o strachu, a ruch jest wiązany z falą nacjonalizmu wokół rządu Izraela.",
+      "keyFacts": [
+        "BBC opisuje ponowne uruchomienie wcześniej zamkniętego osiedla.",
+        "Lokalni Palestyńczycy obawiają się dalszej presji.",
+        "Temat wywołuje rosnące reakcje dyplomatyczne."
+      ],
+      "reactions": [
+        "To może podbijać napięcie między Izraelem a krytykami osadnictwa.",
+        "Spór o Zachodni Brzeg pozostaje jednym z najtwardszych punktów konfliktu."
+      ],
+      "whyItMatters": "To stały punkt zapalny w obecnym konflikcie bliskowschodnim.",
+      "context": "W tym slocie temat Zachodniego Brzegu pojawia się zarówno w BBC, jak i w polskim feedzie.",
+      "watchNext": [
+        "Obserwuj komunikaty izraelskie i palestyńskie.",
+        "Sprawdź, czy pojawi się szersza reakcja dyplomatyczna."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Israel re-establishes closed West Bank settlement",
+          "url": "https://www.bbc.co.uk/news/articles/cn7n0l4p0kzo"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Izrael",
+        "Palestyna",
+        "Zachodni Brzeg"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "hongkong-activists",
+      "section": "Świat",
+      "title": "Hongkong skazuje aktywistów Tiananmen",
+      "lead": "BBC opisuje wyrok w procesie bezpieczeństwa narodowego.",
+      "whatHappened": "BBC pisze, że trójka aktywistów została uznana za winnych w procesie pod chińskim prawem bezpieczeństwa narodowego. Oskarżenie dotyczyło podżegania do obalenia władzy i wiąże się z pamięcią o Tiananmen.",
+      "keyFacts": [
+        "To sprawa prowadzona w ramach prawa bezpieczeństwa narodowego.",
+        "Temat dotyczy pamięci o Tiananmen i aktywności prodemokratycznej.",
+        "Wyrok może być odczytany jako kolejny sygnał zaostrzenia kontroli."
+      ],
+      "reactions": [
+        "Wyrok będzie czytany jako sygnał dla opozycji i organizacji prodemokratycznych.",
+        "Możliwe są reakcje Zachodu i kolejne symboliczne protesty."
+      ],
+      "whyItMatters": "To ważny wskaźnik, jak Pekin i lokalne władze traktują opozycję i pamięć historyczną.",
+      "context": "To jeden z najczytelniejszych światowych tematów z porannego BBC feedu, który dalej żyje w południowym slocie.",
+      "watchNext": [
+        "Obserwuj reakcje rządów zachodnich i organizacji praw człowieka.",
+        "Sprawdź, czy pojawią się kolejne decyzje sądowe w podobnych sprawach."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Hong Kong's Tiananmen activists guilty",
+          "url": "https://www.bbc.co.uk/news/articles/c1l10mdrld5o"
+        }
+      ],
+      "tags": [
+        "Hongkong",
+        "Chiny",
+        "prawa człowieka",
+        "polityka"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "uk-borrowing",
+      "section": "Gospodarka",
+      "title": "Brytyjskie pożyczki przekraczają prognozy",
+      "lead": "ONS podał, że lipcowe zadłużenie publiczne było wyższe od oczekiwań.",
+      "whatHappened": "Oficjalny odczyt ONS pokazuje, że public sector borrowing był w lipcu o 2.3 mld funtów wyższy od prognozy, głównie przez wyższe niż oczekiwano zadłużenie rządu centralnego. BBC łączy to z przygotowaniami do pierwszego budżetu Johna Healeya.",
+      "keyFacts": [
+        "To oficjalny odczyt ONS za lipiec 2026.",
+        "Różnica względem prognozy wyniosła 2.3 mld funtów.",
+        "Temat bezpośrednio wchodzi w debatę budżetową."
+      ],
+      "reactions": [
+        "Presja na jesienny budżet rośnie.",
+        "Rynek będzie patrzył na podatki, wydatki i wiarygodność fiskalną."
+      ],
+      "whyItMatters": "To jedna z ważniejszych liczb fiskalnych dnia dla UK i rynków obligacji.",
+      "context": "BBC opublikowało ten materiał już rano, ale o 12:00 pozostaje on jednym z głównych twardych sygnałów gospodarczych.",
+      "watchNext": [
+        "Obserwuj komentarze HM Treasury i OBR.",
+        "Sprawdź, czy rynek długu zareaguje na ten odczyt."
+      ],
+      "sources": [
+        {
+          "title": "ONS: Public sector finances, UK: July 2026",
+          "url": "https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/publicsectorfinance/bulletins/publicsectorfinances/july2026"
+        },
+        {
+          "title": "BBC: UK borrows more than expected in July",
+          "url": "https://www.bbc.co.uk/news/articles/cly8kzkyvwgo"
+        }
+      ],
+      "tags": [
+        "UK",
+        "budżet",
+        "fiskalna",
+        "gospodarka"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "panama-canal-cuts",
+      "section": "Gospodarka",
+      "title": "Kanał Panamski tnie liczbę statków",
+      "lead": "Kanał ogranicza przepustowość przez niższe opady i El Niño.",
+      "whatHappened": "BBC i władze Kanału Panamskiego opisują kolejne ograniczenia przepustowości kanału. Powodem są niższe opady i prognozowane skutki El Niño, które ograniczają zasoby wody w zlewni kanału.",
+      "keyFacts": [
+        "Kanał publikuje kolejne advisory dla armatorów.",
+        "Zmiany mają charakter operacyjny i wyprzedzający.",
+        "Wpływ może przełożyć się na harmonogramy i koszty transportu."
+      ],
+      "reactions": [
+        "Armatorzy będą musieli dopasować rezerwacje i trasy.",
+        "Temat może znów przełożyć się na stawki frachtowe."
+      ],
+      "whyItMatters": "Kanał Panamski jest krytycznym wąskim gardłem handlu światowego.",
+      "context": "To kolejny mocny sygnał gospodarczy z tego samego newsowego koszyka co UK borrowing i Walmart.",
+      "watchNext": [
+        "Sprawdź, czy Panama Canal Authority opublikuje kolejne advisory.",
+        "Obserwuj, czy przewoźnicy zgłoszą opóźnienia lub zmiany stawek."
+      ],
+      "sources": [
+        {
+          "title": "Panama Canal Authority: Additional measures to address reduced precipitation",
+          "url": "https://pancanal.com/en/panama-canal-adopts-additional-measures-to-address-reduced-precipitation-in-the-canal-watershed/"
+        },
+        {
+          "title": "BBC: Panama Canal to cut number of ships passing through due to El Niño",
+          "url": "https://www.bbc.co.uk/news/articles/cwyl0jkxxryo"
+        }
+      ],
+      "tags": [
+        "Panama",
+        "handel",
+        "logistyka",
+        "El Niño"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "walmart-tariff-refund",
+      "section": "Gospodarka",
+      "title": "Walmart przerzuca zwrot ceł w ceny",
+      "lead": "Walmart mówi o cenach po zwrocie niemal 2.9 mld dolarów ceł.",
+      "whatHappened": "Walmart podał wyniki Q2 FY27 i opisał, że firma otrzymała niemal 2.9 mld dolarów zwrotu z ceł IEEPA. CNN opisuje to w kontekście presji cenowej i zachowania amerykańskich konsumentów.",
+      "keyFacts": [
+        "Walmart opublikował wyniki za Q2 FY27.",
+        "Firma mówi o niemal 2.9 mld dolarów zwrotu z ceł IEEPA.",
+        "W komunikacji firmy centralnym tematem są ceny i wartość dla klienta."
+      ],
+      "reactions": [
+        "To może być ważny sygnał dla detalistów i konsumentów w USA.",
+        "Rynek będzie patrzył, czy inne sieci detaliczne pójdą podobną drogą."
+      ],
+      "whyItMatters": "To jeden z najbardziej czytelnych sygnałów o tym, jak taryfy, marże i ceny detaliczne spotykają się w praktyce.",
+      "context": "To mocny amerykański element gospodarczego bloku w południowym slocie.",
+      "watchNext": [
+        "Obserwuj reakcję konkurentów i komentatorów rynku detalicznego.",
+        "Sprawdź, czy pojawi się dalszy wpływ na koszyk cenowy konsumenta."
+      ],
+      "sources": [
+        {
+          "title": "Walmart: Q2 FY27 earnings",
+          "url": "https://corporate.walmart.com/news/2026/08/20/walmart-releases-q2-fy27-earnings"
+        },
+        {
+          "title": "CNN: Walmart promises price cuts after tariff refund",
+          "url": "https://www.cnn.com/2026/08/20/business/walmart-tariff-refund"
+        }
+      ],
+      "tags": [
+        "Walmart",
+        "USA",
+        "ceny",
+        "handel"
+      ],
+      "priority": "2"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 najnowsze RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC News RSS: World",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "BBC News RSS: Business",
+      "url": "https://feeds.bbci.co.uk/news/business/rss.xml"
+    },
+    {
+      "title": "BBC News RSS: Technology",
+      "url": "https://feeds.bbci.co.uk/news/technology/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://www.cnn.com/world"
+    },
+    {
+      "title": "CNN Business",
+      "url": "https://www.cnn.com/business"
+    },
+    {
+      "title": "CNN Tech",
+      "url": "https://www.cnn.com/tech"
+    },
+    {
+      "title": "IMGW: Prognozy meteorologiczne dla osłony granic",
+      "url": "https://cmm.imgw.pl/?page_id=35717"
+    },
+    {
+      "title": "ONS: Public sector finances, UK: July 2026",
+      "url": "https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/publicsectorfinance/bulletins/publicsectorfinances/july2026"
+    },
+    {
+      "title": "Panama Canal Authority: Additional measures to address reduced precipitation",
+      "url": "https://pancanal.com/en/panama-canal-adopts-additional-measures-to-address-reduced-precipitation-in-the-canal-watershed/"
+    },
+    {
+      "title": "OpenAI: ChatGPT for Teens",
+      "url": "https://openai.com/index/chatgpt-for-teens/"
+    },
+    {
+      "title": "Walmart: Q2 FY27 earnings",
+      "url": "https://corporate.walmart.com/news/2026/08/20/walmart-releases-q2-fy27-earnings"
+    }
+  ]
+}
