@@ -1,0 +1,505 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-08-21",
+  "runTime": "09:02",
+  "status": "Material update",
+  "headline": "Poranny slot przesuwa feed na bezpieczeństwo, podatki i świeże sygnały ze świata",
+  "summary": "Najmocniejsze nowe wątki to alerty IMGW, Braun, zatrzymanie 23-latka przez CBZC, cięcie limitu ryczałtu, Peru, Zachodni Brzeg, Kanał Panamski, Hongkong, USA, OpenAI i Flock.",
+  "items": [
+    {
+      "id": "alerty-imgw-opady",
+      "section": "Alerty",
+      "title": "IMGW utrzymuje deszczowy front",
+      "lead": "Poranny blok pogodowy nadal jest aktywny.",
+      "whatHappened": "TVN24 wskazał w piątkowym komunikacie IMGW intensywne opady deszczu. To utrzymuje krajowy alertowy fundament dla części kraju.",
+      "keyFacts": [
+        "Komunikat jest aktualny rano 21.08.2026.",
+        "Ryzyko dotyczy przede wszystkim opadów i lokalnych utrudnień."
+      ],
+      "reactions": [
+        "To nadal temat dla samorządów, służb i kierowców.",
+        "Na razie nie widać sygnału natychmiastowej eskalacji."
+      ],
+      "whyItMatters": "Utrzymuje ryzyko podtopień, utrudnień drogowych i lokalnych interwencji.",
+      "context": "To kontynuacja porannego pasma alertów pogodowych z wcześniejszego slotu.",
+      "watchNext": [
+        "Sprawdź kolejny refresh RCB i IMGW.",
+        "Obserwuj, czy strefa alertów się rozszerzy albo wygaśnie."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Ostrzeżenia IMGW. Tu pojawią się intensywne opady deszczu",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/ostrzezenia-imgw-w-piatek-21-08-gdzie-bedzie-padal-ulewny-deszcz-st9199103?source=rss"
+        },
+        {
+          "title": "RCB: Raport dobowy",
+          "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+        },
+        {
+          "title": "IMGW: mapy dynamiczne",
+          "url": "https://meteo.imgw.pl/dyn/"
+        }
+      ],
+      "tags": [
+        "alerty",
+        "pogoda",
+        "IMGW"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "polska-braun-zarzuty",
+      "section": "Polska",
+      "title": "Braun usłyszał kolejne zarzuty",
+      "lead": "Prokuratura krajowa podała szczegóły nowego etapu sprawy.",
+      "whatHappened": "TVN24 podał, że Grzegorz Braun usłyszał kolejne zarzuty dotyczące czterech czynów. Materiał cytuje prokuratora krajowego Dariusza Korneluka i opisuje kontekst śledztwa.",
+      "keyFacts": [
+        "Podejrzany nie przyznał się do winy i odmówił wyjaśnień.",
+        "TVN24 wiąże sprawę z wydarzeniami z wiosny ubiegłego roku."
+      ],
+      "reactions": [
+        "To podnosi temperaturę wokół rozliczeń i sporów polityczno-prawnych.",
+        "Wątek może wracać przy kolejnych decyzjach procesowych."
+      ],
+      "whyItMatters": "To głośny krajowy wątek polityczno-karny z potencjałem na dalsze decyzje instytucji.",
+      "context": "Sprawa dokłada się do szerokiego bloku sporów wokół odpowiedzialności publicznej i immunitetów.",
+      "watchNext": [
+        "Obserwuj, czy pojawi się oficjalny komunikat prokuratury.",
+        "Sprawdź, czy politycy zareagują na treść zarzutów."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Grzegorz Braun usłyszał kolejne zarzuty",
+          "url": "https://tvn24.pl/polska/grzegorz-braun-uslyszal-kolejne-zarzuty-prokurator-krajowy-o-szczegolach-st9199161?source=rss"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "prokuratura",
+        "polityka"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "bezpieczenstwo-cbzc-23-latek",
+      "section": "Bezpieczeństwo",
+      "title": "CBZC zatrzymało 23-latka po groźbach",
+      "lead": "Policja i CBZC opisują planowany atak na polityków.",
+      "whatHappened": "CBZC opisało zatrzymanie 23-latka, który miał planować zamach terrorystyczny na czołowych polskich polityków. TVN24 podał, że sprawa wyszła z wpisów w sieci i trafiła do dalszego postępowania.",
+      "keyFacts": [
+        "CBZC opublikowało własny komunikat z 21.08.2026.",
+        "Sprawa jest prowadzona pod nadzorem prokuratury."
+      ],
+      "reactions": [
+        "To wyraźnie podbija krajowy blok bezpieczeństwa publicznego.",
+        "Wątek może przynieść kolejne oficjalne informacje o skali zagrożenia."
+      ],
+      "whyItMatters": "Łączy cybermonitoring, bezpieczeństwo polityków i ryzyko przemocy.",
+      "context": "To jeden z najbardziej materialnych krajowych tematów bezpieczeństwa w tym slocie.",
+      "watchNext": [
+        "Sprawdź, czy CBZC lub prokuratura opublikują dalsze szczegóły.",
+        "Obserwuj, czy pojawią się reakcje rządu lub służb."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Pytał w sieci o zamach na życie czołowych polskich polityków",
+          "url": "https://tvn24.pl/lublin/pytal-w-sieci-o-zamach-na-zycie-czolowych-polskich-politykow-zatrzymali-23-latka-st9199122?source=rss"
+        },
+        {
+          "title": "CBZC: Zatrzymanie 23-latka, który planował zamach terrorystyczny na czołowych polskich polityków",
+          "url": "https://cbzc.policja.gov.pl/bzc/aktualnosci/1015%2CZatrzymanie-23-latka-ktory-planowal-zamach-terrorystyczny-na-czolowych-polskich-.html"
+        }
+      ],
+      "tags": [
+        "bezpieczeństwo",
+        "CBZC",
+        "politycy"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "gospodarka-ryczalt-limit",
+      "section": "Gospodarka",
+      "title": "Rząd tnie limit ryczałtu",
+      "lead": "Przedsiębiorcy mogą stracić prostsze rozliczenie.",
+      "whatHappened": "TVN24 i Rzecznik MŚP opisują projekt obniżenia limitu ryczałtu do 250 tys. euro, czyli około 1 mln zł. Rzecznik MŚP ostrzega, że dla wielu firm oznacza to zmianę formy opodatkowania i dodatkowe koszty.",
+      "keyFacts": [
+        "Obecny limit na 2026 rok wynosi 2 mln euro.",
+        "Nowy próg miałby wejść od 2027 roku."
+      ],
+      "reactions": [
+        "Rzecznik MŚP przedstawia temat jako realny koszt dla firm o wyższej rentowności.",
+        "To może wrócić w debacie o prostocie i przewidywalności podatków."
+      ],
+      "whyItMatters": "To potencjalnie duża zmiana dla mikro i małych firm rozliczających się ryczałtem.",
+      "context": "To jeden z najbardziej konkretnych wątków gospodarczych w tym slocie.",
+      "watchNext": [
+        "Sprawdź, czy resort finansów doprecyzuje projekt.",
+        "Obserwuj, czy przedsiębiorcy zgłoszą szerszy sprzeciw."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Limit ryczałtu ostro w dół",
+          "url": "https://tvn24.pl/biznes/pieniadze/zmiany-w-pit-i-cit-od-2027-roku-jaki-nowy-limit-ryczaltu-kto-skorzysta-st9199138?source=rss"
+        },
+        {
+          "title": "Rzecznik MŚP: Rząd planuje zmiany w PIT od 2027",
+          "url": "https://rzecznikmsp.gov.pl/rzad-planuje-zmiany-w-pit-od-2027-co-moze-czekac-przedsiebiorcow-na-ryczalcie/"
+        }
+      ],
+      "tags": [
+        "gospodarka",
+        "podatki",
+        "MŚP"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "swiat-peru-trzesienie-ziemi",
+      "section": "Świat",
+      "title": "Trzęsienie ziemi w Peru",
+      "lead": "Ludzie zostali ranni, budynki są uszkodzone.",
+      "whatHappened": "TVN24 podał, że w południowym Peru doszło do silnego trzęsienia ziemi. W materiale pojawia się informacja o rannych i o zniszczeniach w budynkach mieszkalnych oraz użyteczności publicznej.",
+      "keyFacts": [
+        "Służby szacują skalę szkód.",
+        "Na tym etapie nie ma pełnego obrazu strat."
+      ],
+      "reactions": [
+        "To przede wszystkim temat ratunkowy i infrastrukturalny.",
+        "Dalsze dane mogą szybko zmienić ocenę skali zdarzenia."
+      ],
+      "whyItMatters": "To nagły kryzys lokalny z potencjalnym wpływem na bezpieczeństwo i logistykę regionu.",
+      "context": "Wiadomość wchodzi do feedu jako świeży incydent geofizyczny, a nie szeroki trend.",
+      "watchNext": [
+        "Sprawdź kolejne komunikaty lokalnych służb w Peru.",
+        "Obserwuj, czy pojawi się oficjalny bilans ofiar i szkód."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Trzęsienie ziemi w Peru. Ranni i uszkodzone budynki",
+          "url": "https://tvn24.pl/tvnmeteo/swiat/trzesienie-ziemi-w-peru-ranni-i-uszkodzone-budynki-st9199196?source=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "katastrofy",
+        "Peru"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "swiat-west-bank-settlement",
+      "section": "Polityka",
+      "title": "Sojusznicy potępiają projekt osiedli",
+      "lead": "Wielka Brytania i partnerzy naciskają na Izrael.",
+      "whatHappened": "BBC podało, że Wielka Brytania, Francja, Niemcy, Włochy i Kanada potępiły izraelski projekt rozbudowy osiedli na Zachodnim Brzegu. GOV.UK potwierdza, że Londyn uznał ruch za nie do przyjęcia.",
+      "keyFacts": [
+        "Spór dotyczy projektu E1 i jego wpływu na spójność terytorialną Zachodniego Brzegu.",
+        "Oficjalna reakcja UK została opublikowana 20.08.2026."
+      ],
+      "reactions": [
+        "To wzmacnia presję dyplomatyczną na Izrael.",
+        "Temat może wrócić w szerszej debacie o dwóch państwach i bezpieczeństwie regionalnym."
+      ],
+      "whyItMatters": "To jeden z ważniejszych bieżących punktów sporu na Bliskim Wschodzie.",
+      "context": "To kolejna wyraźna międzynarodowa reakcja na politykę osiedleńczą.",
+      "watchNext": [
+        "Obserwuj reakcję izraelskiego rządu.",
+        "Sprawdź, czy dołączą kolejne państwa lub instytucje."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: UK, France, Germany, Italy and Canada condemn Israel's West Bank settlement project",
+          "url": "https://www.bbc.co.uk/news/articles/c998evlgz8ko?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "GOV.UK: Joint statement on Israeli Government's decision to publish construction tenders for the E1 settlement project",
+          "url": "https://www.gov.uk/government/news/joint-statement-on-israeli-governments-decision-to-publish-construction-tenders-for-the-e1-settlement-project"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Polityka",
+        "Bliski Wschód"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "swiat-panama-canal-nino",
+      "section": "Gospodarka",
+      "title": "Kanał Panamski tnie przepustowość",
+      "lead": "El Niño znów uderza w żeglugę.",
+      "whatHappened": "BBC podało, że operator Kanału Panamskiego ogranicza liczbę statków przechodzących przez kanał z powodu niskich opadów. Oficjalny komunikat Canal Authority potwierdza przesunięcia w limitach zanurzenia związane z pogodą i poziomem wody.",
+      "keyFacts": [
+        "Oficjalny advisory przesuwa część ograniczeń na późniejsze daty.",
+        "Kanał łączy decyzję z prognozą silniejszego El Nino 2026–2027."
+      ],
+      "reactions": [
+        "To sygnał dla rynku frachtu i handlu międzynarodowego.",
+        "Na krótką metę może podbić koszty i czas dostaw."
+      ],
+      "whyItMatters": "Kanał Panamski to kluczowe wąskie gardło dla globalnej logistyki.",
+      "context": "To materialny wątek gospodarczo-klimatyczny z natychmiastowym przełożeniem na transport morski.",
+      "watchNext": [
+        "Sprawdź, czy Canal Authority ogłosi kolejne korekty draftu.",
+        "Obserwuj reakcję armatorów i rynku frachtu."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Panama Canal to cut number of ships passing through due to El Niño",
+          "url": "https://www.bbc.co.uk/news/articles/cwyl0jkxxryo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "Panama Canal Authority: Advisory to Shipping",
+          "url": "https://pancanal.com/en/maritime-services/advisory-to-shipping/"
+        }
+      ],
+      "tags": [
+        "świat",
+        "gospodarka",
+        "logistyka"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "swiat-korea-pn-rosja-drony",
+      "section": "Bezpieczeństwo",
+      "title": "Korea Północna wspiera Rosję mocniej",
+      "lead": "Ukraina mówi o operatorach dronów i szerszej pomocy.",
+      "whatHappened": "CNN podało, że Korea Północna zwiększa wsparcie dla Rosji, obejmujące operatorów dronów. To wzmacnia obraz coraz głębszej współpracy wojskowej między Pjongjangiem a Moskwą.",
+      "keyFacts": [
+        "Wątek dotyczy bezpośrednio wojny w Ukrainie.",
+        "CNN opisuje go jako rozszerzenie wcześniej znanych form wsparcia."
+      ],
+      "reactions": [
+        "To podbija ryzyko na osi Rosja-Ukraina-Korea Północna.",
+        "W praktyce zwiększa znaczenie dronów i szkoleń dla pola walki."
+      ],
+      "whyItMatters": "To sygnał, że wojna w Ukrainie pozostaje polem testu dla nowej współpracy wojskowej.",
+      "context": "Wątek wpisuje się w serię sygnałów o rosnącej roli Pjongjangu po stronie Moskwy.",
+      "watchNext": [
+        "Obserwuj, czy pojawi się potwierdzenie z ukraińskich lub amerykańskich źródeł.",
+        "Sprawdź, czy NATO skomentuje nowe doniesienia."
+      ],
+      "sources": [
+        {
+          "title": "CNN: North Korea boosts support for Russia to include drone operators, Ukraine says",
+          "url": "https://www.cnn.com/2026/08/21/europe/russia-north-korea-ukraine-drones-intl"
+        }
+      ],
+      "tags": [
+        "świat",
+        "bezpieczeństwo",
+        "Ukraina"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "gospodarka-us-debt-warning",
+      "section": "Gospodarka",
+      "title": "USA biją alarm ekonomiczny",
+      "lead": "BBC ostrzega, że dług i napięcia finansowe rosną.",
+      "whatHappened": "BBC pisze o nowych alarmach wokół amerykańskiej gospodarki i o tym, że USA przekroczyły ważny próg zadłużenia. To podtrzymuje temat słabszej odporności największej gospodarki świata.",
+      "keyFacts": [
+        "Materiał łączy próg długu z pytaniem o trwałość wzrostu.",
+        "Temat trafia do feedu jako szersza analiza, nie jednorazowy incydent."
+      ],
+      "reactions": [
+        "To ma znaczenie dla rynków, dolara i oczekiwań wobec polityki fiskalnej.",
+        "W kolejnym slocie warto sprawdzić komentarze instytucji finansowych."
+      ],
+      "whyItMatters": "To jeden z nielicznych globalnych tematów, który może mieć efekt rynkowy poza samą narracją newsową.",
+      "context": "BBC traktuje go jako analizę szerszego stanu gospodarki USA, a nie krótką notkę.",
+      "watchNext": [
+        "Sprawdź reakcję Treasury lub Fed na kolejny próg długu.",
+        "Obserwuj, czy rynki obligacji podbiją temat."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Why the US economy is ringing alarm bells",
+          "url": "https://www.bbc.co.uk/news/articles/c9d8z72nn02o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "gospodarka",
+        "USA",
+        "rynek"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "swiat-hongkong-tiananmen",
+      "section": "Świat",
+      "title": "Hongkońscy aktywiści skazani",
+      "lead": "Sąd bezpieczeństwa narodowego wydał wyrok.",
+      "whatHappened": "BBC podało, że aktywiści z Hongkongu zostali uznani za winnych w procesie bezpieczeństwa narodowego. To wzmacnia obraz zaostrzania presji politycznej w mieście.",
+      "keyFacts": [
+        "Sprawa dotyczy oskarżeń o podważanie władzy.",
+        "To kolejny etap w długim sporze o swobody obywatelskie w Hongkongu."
+      ],
+      "reactions": [
+        "To prawdopodobnie spotka się z krytyką organizacji praw człowieka.",
+        "Dla Pekinu to element utrwalania kontroli politycznej."
+      ],
+      "whyItMatters": "To ważny sygnał dla obserwatorów praw obywatelskich i bezpieczeństwa w Azji.",
+      "context": "To kolejna twarda decyzja w sprawie napięć wokół Hongkongu.",
+      "watchNext": [
+        "Obserwuj reakcje zagranicznych rządów i NGO.",
+        "Sprawdź, czy obrońcy zapowiedzą apelację."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Hong Kong's Tiananmen activists guilty in national security trial",
+          "url": "https://www.bbc.co.uk/news/articles/c1l10mdrld5o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "świat",
+        "polityka",
+        "Hongkong"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "technologia-openai-teens",
+      "section": "Technologia",
+      "title": "OpenAI uruchamia ChatGPT for Teens",
+      "lead": "Nowy tryb ma mocniejsze zabezpieczenia dla nastolatków.",
+      "whatHappened": "OpenAI ogłosiło ChatGPT for Teens jako osobne doświadczenie z mocniejszymi ochronami, kontrolą rodzicielską i zasadami zdrowego użycia. To wzmacnia wątek teen-safety w produktach konsumenckich AI.",
+      "keyFacts": [
+        "OpenAI mówi o automatycznym przypisaniu części użytkowników do wersji teen.",
+        "Strona produktu podkreśla bezpieczeństwo, naukę i kontrolę rodziców."
+      ],
+      "reactions": [
+        "To sygnał, że safety dla nieletnich staje się głównym kierunkiem produktowym.",
+        "Może zwiększyć presję na konkurentów, by pokazać podobne zabezpieczenia."
+      ],
+      "whyItMatters": "To ważne dla debaty o bezpieczeństwie AI w segmencie nastoletnim i szkolnym.",
+      "context": "OpenAI rozwija ten wątek od kilku miesięcy, więc launch wpisuje się w szerszą strategię bezpieczeństwa.",
+      "watchNext": [
+        "Obserwuj, czy pojawią się komentarze regulatorów i rodziców.",
+        "Sprawdź, czy produkt trafi do kolejnych rynków lub języków."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI: Introducing ChatGPT for Teens",
+          "url": "https://openai.com/index/chatgpt-for-teens/"
+        },
+        {
+          "title": "OpenAI: Why teens deserve access to safe AI",
+          "url": "https://openai.com/index/why-teens-deserve-access-safe-ai/"
+        }
+      ],
+      "tags": [
+        "technologia",
+        "OpenAI",
+        "bezpieczeństwo dzieci"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "technologia-flock-safeguards",
+      "section": "Technologia",
+      "title": "Flock dokłada nowe bezpieczniki",
+      "lead": "Firma odpowiada na presję wokół prywatności i nadzoru.",
+      "whatHappened": "Flock ogłosił nowe zabezpieczenia prywatności, accountability i transparentności. Zmiany obejmują krótszą domyślną retencję, obowiązkowe wykrywanie nadużyć i mocniejsze audyty dostępu.",
+      "keyFacts": [
+        "Flock mówi o siedmiodniowej domyślnej retencji.",
+        "Nowe kontrolki mają ułatwić audyt i wykrywanie nadużyć przez klientów."
+      ],
+      "reactions": [
+        "To próba odzyskania zaufania po sporach o nadzór i użycie danych.",
+        "Pokazuje też, że public safety tech jest pod coraz ostrzejszą kontrolą."
+      ],
+      "whyItMatters": "To ważny przykład, jak firmy od monitoringu muszą sprzedawać nie tylko funkcje, ale i gwarancje kontroli.",
+      "context": "Wątek łączy technologię, bezpieczeństwo publiczne i prywatność użytkowników.",
+      "watchNext": [
+        "Obserwuj, czy regulatorzy uznają zmiany za wystarczające.",
+        "Sprawdź, czy inni dostawcy ALPR pójdą tą samą drogą."
+      ],
+      "sources": [
+        {
+          "title": "Flock: Privacy, Accountability, Security, and Transparency Safeguards",
+          "url": "https://www.flocksafety.com/blog/flock-guardrails-address-lpr-privacy-concerns-and-police-transparency"
+        },
+        {
+          "title": "Flock: Customers Own and Control Their Flock Data",
+          "url": "https://www.flocksafety.com/blog/customers-own-and-control-their-flock-data"
+        }
+      ],
+      "tags": [
+        "technologia",
+        "prywatność",
+        "public safety"
+      ],
+      "priority": "2"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24: Najnowsze wiadomości",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "TVN24: Grzegorz Braun usłyszał kolejne zarzuty",
+      "url": "https://tvn24.pl/polska/grzegorz-braun-uslyszal-kolejne-zarzuty-prokurator-krajowy-o-szczegolach-st9199161?source=rss"
+    },
+    {
+      "title": "TVN24: CBZC zatrzymało 23-latka",
+      "url": "https://tvn24.pl/lublin/pytal-w-sieci-o-zamach-na-zycie-czolowych-polskich-politykow-zatrzymali-23-latka-st9199122?source=rss"
+    },
+    {
+      "title": "TVN24: Limit ryczałtu ostro w dół",
+      "url": "https://tvn24.pl/biznes/pieniadze/zmiany-w-pit-i-cit-od-2027-roku-jaki-nowy-limit-ryczaltu-kto-skorzysta-st9199138?source=rss"
+    },
+    {
+      "title": "TVN24: Trzęsienie ziemi w Peru",
+      "url": "https://tvn24.pl/tvnmeteo/swiat/trzesienie-ziemi-w-peru-ranni-i-uszkodzone-budynki-st9199196?source=rss"
+    },
+    {
+      "title": "BBC News RSS: World",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "BBC News RSS: Business",
+      "url": "https://feeds.bbci.co.uk/news/business/rss.xml"
+    },
+    {
+      "title": "BBC News RSS: Technology",
+      "url": "https://feeds.bbci.co.uk/news/technology/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://www.cnn.com/world"
+    },
+    {
+      "title": "CNN Business",
+      "url": "https://www.cnn.com/business"
+    },
+    {
+      "title": "GOV.UK: Joint statement on Israeli Government's decision to publish construction tenders for the E1 settlement project",
+      "url": "https://www.gov.uk/government/news/joint-statement-on-israeli-governments-decision-to-publish-construction-tenders-for-the-e1-settlement-project"
+    },
+    {
+      "title": "Panama Canal Authority: Advisory to Shipping",
+      "url": "https://pancanal.com/en/maritime-services/advisory-to-shipping/"
+    },
+    {
+      "title": "OpenAI: Introducing ChatGPT for Teens",
+      "url": "https://openai.com/index/chatgpt-for-teens/"
+    },
+    {
+      "title": "Flock: Privacy, Accountability, Security, and Transparency Safeguards",
+      "url": "https://www.flocksafety.com/blog/flock-guardrails-address-lpr-privacy-concerns-and-police-transparency"
+    },
+    {
+      "title": "Rzecznik MŚP: Rząd planuje zmiany w PIT od 2027",
+      "url": "https://rzecznikmsp.gov.pl/rzad-planuje-zmiany-w-pit-od-2027-co-moze-czekac-przedsiebiorcow-na-ryczalcie/"
+    },
+    {
+      "title": "CBZC: Zatrzymanie 23-latka, który planował zamach terrorystyczny",
+      "url": "https://cbzc.policja.gov.pl/bzc/aktualnosci/1015%2CZatrzymanie-23-latka-ktory-planowal-zamach-terrorystyczny-na-czolowych-polskich-.html"
+    }
+  ]
+}
