@@ -1,5 +1,14 @@
 # Puls Dnia News Backlog
 
+# 2026-08-21 15:02
+
+- Watch whether IMGW or RCB upgrade the current storm block or start reporting outages.
+- Watch whether police, prokuratura or ministries add more detail on the Warsaw government-car incident, Zakroczym crash, Ochota doctor case or Kraków ambulance death.
+- Watch whether the Ministry of Culture or the president's office add a sharper follow-up on Warszawa 44 and lex szarlatan.
+- Watch whether BBC or official sources add new facts on the Russian petrol shortage, Imran Khan case or Swiss glacier find.
+- Watch whether the Meta trial or OpenAI security story gets a new ruling, company response or technical detail.
+- Watch whether Royal Mail or broader UK macro data sharpen the consumer and fiscal pressure angle before the next slot.
+
 # 2026-08-21 06:00
 
 - Watch whether RCB or IMGW refresh the morning alert set or shrink the hydrological block.

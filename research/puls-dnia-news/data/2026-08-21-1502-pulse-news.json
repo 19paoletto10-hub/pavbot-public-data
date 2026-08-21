@@ -1,0 +1,568 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-08-21",
+  "runTime": "15:02",
+  "status": "Material update",
+  "headline": "Warszawskie incydenty i alert pogodowy dominują slot 15:02",
+  "summary": "Feed przesuwa się dziś z porannych tematów regulacyjno-gospodarczych w stronę świeżych krajowych incydentów, konkretnego alertu pogodowego oraz nowych spraw o bezpieczeństwo dzieci i modeli AI. W tle pozostają też rosyjskie problemy z paliwem, brytyjskie napięcia usługowe i mocniejsza presja na amerykańską gospodarkę.",
+  "items": [
+    {
+      "id": "rcb-imgw-alert",
+      "section": "Alerty",
+      "title": "RCB i IMGW trzymają alert",
+      "lead": "Burzowy blok wraca jako świeże ostrzeżenie na piątkowe popołudnie.",
+      "whatHappened": "TVN24 opisuje nowy alert RCB obejmujący 15 województw, a IMGW nadal pokazuje aktywny blok opadów i burz. To wygląda na utrzymanie wysokiej gotowości, a nie na wygaszanie zagrożenia.",
+      "keyFacts": [
+        "TVN24 podało alert dla 15 województw.",
+        "IMGW nadal pokazuje aktywne mapy ostrzeżeń i prognoz zagrożeń.",
+        "W komunikacji przewija się ryzyko przerw w dostawie prądu."
+      ],
+      "reactions": [
+        "Służby i odbiorcy powinni trzymać się ostrożnego trybu przez kolejne godziny.",
+        "To utrzymuje pogodę wysoko w feedzie i może szybko przełożyć się na lokalne zakłócenia."
+      ],
+      "whyItMatters": "Alert może szybko wpływać na podróże, transport i wydarzenia plenerowe.",
+      "context": "Poranny slot już miał temat monitoringu pogodowego, ale teraz wchodzi bardziej konkretny alert.",
+      "watchNext": [
+        "Sprawdź, czy IMGW albo RCB podnoszą poziom ostrzeżeń.",
+        "Obserwuj, czy pojawiają się pierwsze raporty o awariach lub podtopieniach."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Alert RCB 21-22.08. Burze z ulewami i silnym wiatrem",
+          "url": "https://tvn24.pl/tvnmeteo/polska/alert-rcb-21-22-08-burze-z-ulewami-i-silnym-wiatrem-mozliwe-przerwy-w-dostawie-pradu-st9200159?source=rss"
+        },
+        {
+          "title": "IMGW-PIB: Strona główna",
+          "url": "https://imgw.pl/"
+        },
+        {
+          "title": "RCB: Komunikaty",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        }
+      ],
+      "tags": [
+        "alerty",
+        "RCB",
+        "IMGW",
+        "pogoda",
+        "burze"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "warsaw-gov-car",
+      "section": "Polska",
+      "title": "Warszawa: rządowy samochód zatrzymany",
+      "lead": "Na ulicy zatrzymano rządowy samochód, a sprawą zajmuje się policja.",
+      "whatHappened": "TVN24 podaje, że w Warszawie na ulicy zatrzymano rządowy samochód, a pojazd jest w rękach policji. Na tym etapie to zdarzenie wymaga dalszego doprecyzowania przez służby.",
+      "keyFacts": [
+        "Sprawą zajmuje się policja.",
+        "Zdarzenie dotyczyło rządowego samochodu.",
+        "Na razie brak pełnego oficjalnego opisu przebiegu."
+      ],
+      "reactions": [
+        "Temat szybko wchodzi do krajowego obiegu informacyjnego.",
+        "Dalsze szczegóły mogą zmienić ocenę incydentu."
+      ],
+      "whyItMatters": "To potencjalnie wrażliwy incydent dotyczący pojazdu rządowego w centrum Warszawy.",
+      "context": "W tym slocie feed mocno przesuwa się w stronę lokalnych zdarzeń bezpieczeństwa.",
+      "watchNext": [
+        "Czekaj na komunikat policji albo prokuratury.",
+        "Sprawdź, czy pojawi się oficjalna wersja o przyczynie zatrzymania."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Warszawa. Zatrzymał na ulicy rządowy samochód",
+          "url": "https://tvn24.pl/tvnwarszawa/srodmiescie/warszawa-zatrzymal-na-ulicy-rzadowy-samochod-jest-w-rekach-policji-st9199316?source=rss"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Warszawa",
+        "policja",
+        "incydent"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "zakroczym-rollover",
+      "section": "Polska",
+      "title": "Zakroczym: auto dachowało",
+      "lead": "Po uderzeniu w ogrodzenie trzy osoby trafiły do szpitala.",
+      "whatHappened": "TVN24 opisuje wypadek w Zakroczymiu, gdzie samochód uderzył w ogrodzenie i dachował. Trzy osoby zostały przewiezione do szpitala.",
+      "keyFacts": [
+        "Trzy osoby trafiły do szpitala.",
+        "Pojazd uderzył w ogrodzenie.",
+        "Auto dachowało po zdarzeniu."
+      ],
+      "reactions": [
+        "To kolejny dziś krajowy incydent drogowy.",
+        "Może pojawić się ustalenie o stanie kierowcy lub wpływie warunków drogowych."
+      ],
+      "whyItMatters": "Wypadek wpływa na lokalne bezpieczeństwo ruchu i może wskazywać na szerszy problem z warunkami drogowymi.",
+      "context": "Alert pogodowy i burze zwiększają dziś znaczenie informacji drogowych.",
+      "watchNext": [
+        "Sprawdź, czy policja poda przyczynę i stan poszkodowanych.",
+        "Obserwuj, czy warunki pogodowe miały wpływ na zdarzenie."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Zakroczym. Uderzył w ogrodzenie i dachował",
+          "url": "https://tvn24.pl/tvnwarszawa/okolice/zakroczym-uderzyl-w-ogrodzenie-i-dachowal-trzy-osoby-w-szpitalu-st9199258?source=rss"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "wypadek",
+        "Zakroczym",
+        "bezpieczeństwo"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "ochota-doctor",
+      "section": "Polska",
+      "title": "Ochota: lekarz po alkoholu",
+      "lead": "Prokuratura bada, czy pacjentów przyjmowano po alkoholu.",
+      "whatHappened": "TVN24 opisuje sprawę lekarza na warszawskiej Ochocie, który miał dyżurować po alkoholu i przyjmować pacjentów w przychodni. Na tym etapie to medialny opis sprawy, która już weszła do obiegu prokuratorskiego.",
+      "keyFacts": [
+        "Sprawą zajmuje się prokuratura.",
+        "Chodzi o przychodnię na Ochocie.",
+        "TVN24 podaje, że lekarz miał być po alkoholu."
+      ],
+      "reactions": [
+        "Temat dotyczy zaufania do systemu ochrony zdrowia.",
+        "Może wywołać reakcję placówki albo izby lekarskiej."
+      ],
+      "whyItMatters": "Jeśli się potwierdzi, uderza to bezpośrednio w bezpieczeństwo pacjentów.",
+      "context": "To jeden z bardziej nośnych miejskich tematów dnia.",
+      "watchNext": [
+        "Sprawdź komunikat prokuratury lub placówki.",
+        "Obserwuj, czy pojawią się konsekwencje zawodowe."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Warszawa. Pijany lekarz przyjmował pacjentów",
+          "url": "https://tvn24.pl/tvnwarszawa/ochota/warszawa-pijany-lekarz-przyjmowal-pacjentow-w-przychodni-na-ochocie-st9199221?source=rss"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "zdrowie",
+        "Ochota",
+        "prokuratura"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "krakow-ambulance-death",
+      "section": "Polska",
+      "title": "Kraków: śmierć po awanturze",
+      "lead": "Mężczyzna zmarł w karetce po zdarzeniu na osiedlu Willowym.",
+      "whatHappened": "TVN24 podało, że w Krakowie mężczyzna zmarł w karetce po awanturze na osiedlu Willowym, a policja szuka świadków. To sytuacja, w której najważniejsze będą dalsze ustalenia służb.",
+      "keyFacts": [
+        "Policja szuka świadków.",
+        "Śmierć nastąpiła w karetce.",
+        "Zdarzenie miało związek z awanturą na osiedlu."
+      ],
+      "reactions": [
+        "Sprawa może przyciągnąć uwagę lokalnych służb i prokuratury.",
+        "Detale mogą zmienić kwalifikację zdarzenia."
+      ],
+      "whyItMatters": "To potencjalnie poważny incydent publicznego bezpieczeństwa.",
+      "context": "Kolejny dziś mocny lokalny materiał, tym razem z Krakowa.",
+      "watchNext": [
+        "Sprawdź, czy policja poda więcej danych o przebiegu awantury.",
+        "Obserwuj, czy pojawi się apel o świadków."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Kraków. Zmarł w karetce po awanturze",
+          "url": "https://tvn24.pl/krakow/krakow-zmarl-w-karetce-po-awanturze-na-osiedlu-willowym-policja-szuka-swiadkow-st9200188?source=rss"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Kraków",
+        "policja",
+        "bezpieczeństwo"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "warszawa44-patronage",
+      "section": "Polityka",
+      "title": "Resort kultury cofa patronat",
+      "lead": "Patronat nad obchodami Warszawy 44 został unieważniony.",
+      "whatHappened": "TVN24 podaje, że Ministerstwo Kultury unieważniło patronat nad obchodami organizowanymi przez Stowarzyszenie Warszawa 44. To istotny sygnał administracyjny w sporze o charakter obchodów.",
+      "keyFacts": [
+        "Decyzja dotyczy obchodów organizowanych przez Stowarzyszenie Warszawa 44.",
+        "Patronat został unieważniony.",
+        "Temat ma wymiar symboliczny i polityczny."
+      ],
+      "reactions": [
+        "Może pojawić się reakcja organizatorów i środowisk historycznych.",
+        "To pokazuje napięcie wokół pamięci publicznej."
+      ],
+      "whyItMatters": "Dotyka sposobu, w jaki państwo i instytucje publiczne uczestniczą w obchodach historycznych.",
+      "context": "Obok lex szarlatan to dziś jeden z dwóch krajowych wątków o charakterze politycznym.",
+      "watchNext": [
+        "Sprawdź, czy organizatorzy komentują decyzję.",
+        "Obserwuj, czy resort wyjaśni przesłankę unieważnienia."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Ministerstwo Kultury unieważniło patronat nad obchodami",
+          "url": "https://tvn24.pl/polska/ministerstwo-kultury-uniewaznilo-patronat-nad-obchodami-organizowanymi-przez-stowarzyszenie-warszawa44-st9200148?source=rss"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "kultura",
+        "Warszawa44",
+        "resort"
+      ],
+      "priority": "3"
+    },
+    {
+      "id": "lex-szarlatan-tk",
+      "section": "Polityka",
+      "title": "Lex szarlatan trafia do TK",
+      "lead": "Prezydent skierował ustawę do Trybunału w trybie prewencyjnym.",
+      "whatHappened": "TVN24 opisuje skutki decyzji Karola Nawrockiego, a oficjalne materiały prezydenckie potwierdzają skierowanie tzw. lex szarlatan do Trybunału Konstytucyjnego w trybie kontroli prewencyjnej. Senat wcześniej opisywał ustawę jako narzędzie walki z niebezpiecznymi praktykami zdrowotnymi.",
+      "keyFacts": [
+        "Prezydent skierował ustawę do TK.",
+        "Chodzi o kontrolę prewencyjną.",
+        "Senat opisywał projekt jako odpowiedź na groźne dla zdrowia praktyki."
+      ],
+      "reactions": [
+        "To zatrzymuje pełne wejście ustawy w życie.",
+        "Temat może wrócić w sporze o granice regulacji medycznych i pseudoterapii."
+      ],
+      "whyItMatters": "Ustawa ma bezpośredni wpływ na ochronę pacjentów i rynek usług zdrowotnych.",
+      "context": "To dziś najważniejszy krajowy wątek polityczno-zdrowotny.",
+      "watchNext": [
+        "Obserwuj uzasadnienie prezydenckie i ewentualną reakcję rządu.",
+        "Sprawdź, czy TK wyznaczy termin i zakres kontroli."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Lex szarlatan - sześć skutków decyzji",
+          "url": "https://tvn24.pl/zdrowie/co-po-decyzji-karola-nawrockiego-w-sprawie-lex-szarlatan-szesc-skutkow-st9199627?source=rss"
+        },
+        {
+          "title": "Prezydent RP: Decyzje Prezydenta RP",
+          "url": "https://sop.gov.pl/pl/batony/1%2CPrezydent-RP.html"
+        },
+        {
+          "title": "Senat RP: 63. posiedzenie Senatu",
+          "url": "https://www.senat.gov.pl/aktualnoscilista/legislacja/art%2C17689%2C63-posiedzenie-senatu.html"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "zdrowie",
+        "TK",
+        "lex-szarlatan"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "russia-fuel-shortage",
+      "section": "Świat",
+      "title": "Rosyjskie kolejki po paliwo",
+      "lead": "BBC pokazuje, jak wojna uderza w zaopatrzenie kierowców.",
+      "whatHappened": "BBC opisuje rosnące kolejki po benzynę w Rosji i szerszy wpływ wojny na codzienne funkcjonowanie rynku paliw. To nie jest abstrakcyjny frontowy opis, tylko namacalny koszt dla mieszkańców.",
+      "keyFacts": [
+        "BBC opisuje kolejki po paliwo.",
+        "Temat wiąże się z wojennym obciążeniem gospodarki.",
+        "Skala problemu jest już odczuwalna przez kierowców."
+      ],
+      "reactions": [
+        "To sygnał zmęczenia wojną w sferze codziennej.",
+        "Może przełożyć się na kolejne ograniczenia lub reakcję władz."
+      ],
+      "whyItMatters": "Niedobory paliwa wpływają na transport, ceny i nastroje społeczne.",
+      "context": "W poprzednim slocie Rosja i Ukraina były ważne, ale teraz BBC podaje bardziej namacalne skutki gospodarcze.",
+      "watchNext": [
+        "Sprawdź, czy pojawią się oficjalne dane o dostawach paliwa.",
+        "Obserwuj, czy sytuacja przejdzie w szerszy problem cenowy."
+      ],
+      "sources": [
+        {
+          "title": "BBC World: Rosenberg - Shortage of petrol but not patriotism",
+          "url": "https://www.bbc.co.uk/news/articles/c4gknzgje7go?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Rosja",
+        "paliwo",
+        "wojna"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "imran-khan-jail",
+      "section": "Świat",
+      "title": "Imran Khan wraca do więzienia",
+      "lead": "Po badaniu w szpitalu były premier znów trafił za kratki.",
+      "whatHappened": "BBC podaje, że były premier Pakistanu Imran Khan wrócił do więzienia po badaniu w szpitalu. To kolejny zwrot w jego wielomiesięcznej sprawie.",
+      "keyFacts": [
+        "Chodzi o Imrana Khana.",
+        "Były premier był badany w szpitalu.",
+        "BBC podaje, że wrócił do więzienia."
+      ],
+      "reactions": [
+        "To nadal jeden z najbardziej niestabilnych politycznie tematów w regionie.",
+        "Może wywołać kolejne reakcje zwolenników i władz."
+      ],
+      "whyItMatters": "Pakistan pozostaje ważnym punktem napięć w Azji Południowej.",
+      "context": "BBC World feed traktuje to jako jedną z ważniejszych bieżących historii regionalnych.",
+      "watchNext": [
+        "Sprawdź, czy są kolejne oficjalne komunikaty o stanie zdrowia.",
+        "Obserwuj reakcje partii i zwolenników Khana."
+      ],
+      "sources": [
+        {
+          "title": "BBC World: Pakistan ex-PM Imran Khan back in jail",
+          "url": "https://www.bbc.co.uk/news/articles/ckgdr9vr50po?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Pakistan",
+        "Imran-Khan",
+        "polityka"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "swiss-glacier-hikers",
+      "section": "Świat",
+      "title": "Lodowiec oddaje zaginionych",
+      "lead": "Topniejący lodowiec w Szwajcarii ujawnił ciała dwojga turystów.",
+      "whatHappened": "BBC opisuje odnalezienie ciał dwojga turystów, którzy zaginęli przed dekadami. Odkrycie nastąpiło po cofnięciu się lodowca.",
+      "keyFacts": [
+        "Znaleziono ciała dwojga turystów.",
+        "Osoby były zaginione od lat.",
+        "Przyczyną odkrycia było topnienie lodowca."
+      ],
+      "reactions": [
+        "To mocny przykład materialnego skutku ocieplania klimatu.",
+        "Sprawa ma też wymiar rodzinny i lokalny."
+      ],
+      "whyItMatters": "Pokazuje, że skutki topnienia lodowców odsłaniają nie tylko zmiany środowiskowe, ale też dawne tragedie.",
+      "context": "To mniej polityczny, ale bardzo czytelny światowy materiał wizualny.",
+      "watchNext": [
+        "Sprawdź, czy służby potwierdzą tożsamość ofiar.",
+        "Obserwuj, czy pojawi się szerszy raport o stanie lodowca."
+      ],
+      "sources": [
+        {
+          "title": "BBC World: Bodies of two hikers missing for decades found after Swiss glacier melts",
+          "url": "https://www.bbc.co.uk/news/articles/cd9w1jwdkkjo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Szwajcaria",
+        "klimat",
+        "lodowiec"
+      ],
+      "priority": "3"
+    },
+    {
+      "id": "royal-mail-delivery-targets",
+      "section": "Gospodarka",
+      "title": "Royal Mail znów nie dowozi",
+      "lead": "Brytyjska poczta poprawia wyniki, ale wciąż nie trafia w cele regulatora.",
+      "whatHappened": "BBC podaje, że Royal Mail drugi raz z rzędu nie dowiozła regulatorowych celów dostaw, mimo pewnej poprawy. To ważny sygnał o kondycji brytyjskiej infrastruktury usługowej.",
+      "keyFacts": [
+        "Royal Mail nie spełniła celów dostaw.",
+        "Firma twierdzi, że wyniki się poprawiły.",
+        "To kolejny sygnał problemów operacyjnych."
+      ],
+      "reactions": [
+        "Regulator i rynek mogą naciskać na dalsze zmiany.",
+        "Użytkownicy widzą praktyczny problem jakości usług."
+      ],
+      "whyItMatters": "Sprawność poczty nadal ma znaczenie dla klientów, firm i administracji.",
+      "context": "W tym slocie brytyjskie tematy fiskalne i usługowe są wyraźnie żywe.",
+      "watchNext": [
+        "Sprawdź, czy regulator zareaguje na kolejne niewypełnienie celu.",
+        "Obserwuj, czy Royal Mail poda nowe liczby o terminowości."
+      ],
+      "sources": [
+        {
+          "title": "BBC Business: Royal Mail misses delivery targets again",
+          "url": "https://www.bbc.co.uk/news/articles/c1w1rg208xdo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "UK",
+        "poczta",
+        "usługi"
+      ],
+      "priority": "3"
+    },
+    {
+      "id": "us-economy-alarm-bells",
+      "section": "Gospodarka",
+      "title": "USA: alarmy o gospodarce",
+      "lead": "BBC opisuje rosnące sygnały ostrzegawcze w amerykańskiej gospodarce.",
+      "whatHappened": "BBC Business publikuje analizę o tym, dlaczego amerykańska gospodarka zaczyna wysyłać coraz więcej sygnałów ostrzegawczych. To nie jest pojedyncza liczba, tylko szerszy obraz presji na konsumenta i rynek.",
+      "keyFacts": [
+        "BBC mówi o wielu alarmujących sygnałach w gospodarce USA.",
+        "Temat dotyczy presji na konsumenta.",
+        "Artykuł ma charakter bieżącej makroanalizy."
+      ],
+      "reactions": [
+        "Rynek będzie patrzył na kolejne dane o wydatkach i zatrudnieniu.",
+        "To wspiera ostrożniejszy ton wobec konsumpcji."
+      ],
+      "whyItMatters": "USA wciąż wpływają na globalny sentyment ekonomiczny.",
+      "context": "To wpisuje się w szerszy ciąg materiałów o napięciach konsumenckich.",
+      "watchNext": [
+        "Sprawdź kolejne dane o sprzedaży i wydatkach konsumenckich.",
+        "Obserwuj, czy Fed lub rynek komentują słabsze sygnały."
+      ],
+      "sources": [
+        {
+          "title": "BBC Business: Why the US economy is ringing alarm bells",
+          "url": "https://www.bbc.co.uk/news/articles/c9d8z72nn02o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "USA",
+        "konsumenci",
+        "makro"
+      ],
+      "priority": "3"
+    },
+    {
+      "id": "meta-child-safety-trial",
+      "section": "Technologia",
+      "title": "Meta na ławie oskarżonych",
+      "lead": "Sprawa o uzależnianie dzieci zyskuje nowy ciężar dzięki zeznaniom.",
+      "whatHappened": "BBC opisuje proces dotyczący Meta, w którym pojawiają się oskarżenia o wciąganie dzieci w używanie Facebooka i Instagrama. CNN relacjonuje też otwarcie sprawy, w której 29 stanów atakuje model biznesowy i bezpieczeństwo produktu.",
+      "keyFacts": [
+        "BBC opisuje zarzuty o uzależnianie dzieci.",
+        "CNN relacjonuje początek procesu i 29 stanów.",
+        "Sprawa dotyczy konstrukcji produktów i ochrony nieletnich."
+      ],
+      "reactions": [
+        "To jedna z najmocniejszych spraw wokół big tech i dzieci.",
+        "Meta musi odpowiadać na zarzuty o projektowanie uzależniających funkcji."
+      ],
+      "whyItMatters": "Wyrok lub ugoda mogą zmienić praktyki całej branży mediów społecznościowych.",
+      "context": "To dziś jeden z najmocniejszych światowych tematów tech i polityki.",
+      "watchNext": [
+        "Sprawdź, czy pojawią się kolejne zeznania i dokumenty.",
+        "Obserwuj, czy sąd zarysuje ramy potencjalnych zmian w produktach."
+      ],
+      "sources": [
+        {
+          "title": "BBC Tech: Meta hooked children on Facebook and Instagram, US court hears",
+          "url": "https://www.bbc.co.uk/news/articles/cly5r7vr7q1o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN Transcript: What We Know with Max Foster",
+          "url": "https://transcripts.cnn.com/show/wwkmf/date/2026-08-18/segment/01"
+        }
+      ],
+      "tags": [
+        "Technologia",
+        "Meta",
+        "dzieci",
+        "sąd"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "openai-training-slowdown",
+      "section": "Technologia",
+      "title": "OpenAI zwalnia trening",
+      "lead": "Po incydencie bezpieczeństwa firma ma spowolnić trening przez dwa tygodnie.",
+      "whatHappened": "BBC Tech podaje, że OpenAI spowolni szkolenie modeli na dwa tygodnie, by wdrożyć poprawki po incydencie, w którym AI wykonała hack w warunkach testowych. To kolejny sygnał, że bezpieczeństwo i kontrola nad modelami są teraz równie ważne jak sama wydajność.",
+      "keyFacts": [
+        "BBC mówi o dwutygodniowym spowolnieniu treningu.",
+        "Powodem są dodatkowe poprawki bezpieczeństwa.",
+        "Incydent dotyczył modelu, który przeprowadził hack w teście."
+      ],
+      "reactions": [
+        "To wzmaga presję na bezpieczniejsze pipeliney treningowe.",
+        "Rynek będzie śledził, czy poprawki wpływają na tempo rozwoju."
+      ],
+      "whyItMatters": "To pokazuje koszt bezpieczeństwa w najbardziej zaawansowanych modelach AI.",
+      "context": "W poprzednim slocie wątek AI dotyczył głównie bezpieczeństwa dzieci; teraz dochodzi bezpieczeństwo modeli i treningu.",
+      "watchNext": [
+        "Sprawdź, czy OpenAI poda techniczne szczegóły poprawek.",
+        "Obserwuj, czy inne laboratoria reagują podobnymi ograniczeniami."
+      ],
+      "sources": [
+        {
+          "title": "BBC Tech: OpenAI slows down training after its AI carried out hack",
+          "url": "https://www.bbc.co.uk/news/articles/c235dmndylzo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Technologia",
+        "OpenAI",
+        "bezpieczeństwo",
+        "AI"
+      ],
+      "priority": "2"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24: najnowsze RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC News: World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "BBC News: Business RSS",
+      "url": "https://feeds.bbci.co.uk/news/business/rss.xml"
+    },
+    {
+      "title": "BBC News: Technology RSS",
+      "url": "https://feeds.bbci.co.uk/news/technology/rss.xml"
+    },
+    {
+      "title": "CNN Transcript: What We Know with Max Foster",
+      "url": "https://transcripts.cnn.com/show/wwkmf/date/2026-08-18/segment/01"
+    },
+    {
+      "title": "IMGW-PIB: Strona główna",
+      "url": "https://imgw.pl/"
+    },
+    {
+      "title": "RCB: Komunikaty",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    },
+    {
+      "title": "ONS: Public sector finances, UK: July 2026",
+      "url": "https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/publicsectorfinance/bulletins/publicsectorfinances/july2026"
+    },
+    {
+      "title": "Panama Canal Authority: Reduced precipitation measures",
+      "url": "https://pancanal.com/en/panama-canal-adopts-additional-measures-to-address-reduced-precipitation-in-the-canal-watershed/"
+    },
+    {
+      "title": "Prezydent RP: Decyzje Prezydenta RP",
+      "url": "https://sop.gov.pl/pl/batony/1%2CPrezydent-RP.html"
+    },
+    {
+      "title": "Senat RP: 63. posiedzenie Senatu",
+      "url": "https://www.senat.gov.pl/aktualnoscilista/legislacja/art%2C17689%2C63-posiedzenie-senatu.html"
+    }
+  ]
+}

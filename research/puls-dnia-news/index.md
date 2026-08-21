@@ -2,7 +2,7 @@
 
 ## Current State
 
-Slot 2026-08-21 12:00 przesuwa feed z porannych wątków MyDr, energii i brytyjskiego bezpieczeństwa w stronę świeżych krajowych incydentów, AI safety i bieżącej gospodarki. W centrum są Warszawa, Zakroczym, Ochota, ukraiński atak na rafinerię, Zachodni Brzeg, Hongkong, Alaska, UK, Kanał Panamski, Walmart i OpenAI.
+Slot 2026-08-21 15:02 przesuwa feed z porannych wątków energetyczno-regulacyjnych w stronę świeżych krajowych incydentów, nowego alertu pogodowego i kolejnej fali materiałów o bezpieczeństwie dzieci w AI. W centrum są Warszawa, Zakroczym, Ochota, Kraków, lex szarlatan, patronat Warszawy 44, RCB/IMGW, proces Mety, OpenAI oraz świeże tematy światowe i gospodarcze z Rosji i Wielkiej Brytanii.
 
 ## Data Shape
 
@@ -25,4 +25,4 @@ The newest valid JSON is shown as paired cards under `Dzisiaj`. Tapping a card o
 - Keep at least two `Polska` or `Polityka` items and at least two `Świat` items to protect the home feed balance.
 - Prefer operational alerts, public-safety events, geopolitics and major economy moves over softer feature content.
 - Favor stories with concrete official or primary links when they are available alongside TVN24, BBC or CNN.
-- Current emphasis should stay on alert logic, public-safety incidents, Ukraine, West Bank, AI safety and consumer/economic pressure.
+- Current emphasis should stay on alert logic, public-safety incidents, AI child-safety litigation, OpenAI security hardening, UK fiscal/consumer pressure and concrete world disruption rather than softer feature content.
