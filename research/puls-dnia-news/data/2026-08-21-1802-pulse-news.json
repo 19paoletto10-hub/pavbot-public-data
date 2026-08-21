@@ -1,0 +1,478 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-08-21",
+  "runTime": "18:02",
+  "status": "Material update",
+  "headline": "Burze, lokalne incydenty i świeże światowe leady dominują slot 18:02",
+  "summary": "Nowy slot przesuwa feed w stronę lokalnych incydentów, oficjalnych ostrzeżeń pogodowych i mocniejszych leadów z BBC. W technologiach wyróżnia się reakcja biznesu wokół Mety, a gospodarka trzyma się brytyjskich finansów, Royal Mail i napięć handlowych USA-Kanada.",
+  "items": [
+    {
+      "id": "alerty-podkarpacie-storms",
+      "section": "Alerty",
+      "title": "Podkarpacie i Śląsk pod ostrzeżeniami",
+      "lead": "Burze, silny wiatr i lokalne podtopienia pozostają realnym ryzykiem.",
+      "whatHappened": "Oficjalne strony regionalne pokazują aktywne ostrzeżenia meteorologiczne i hydrologiczne. W Podkarpackiem obowiązują alerty na burze i gwałtowne wzrosty stanów wody, a na Śląsku widoczny jest nadal szeroki blok komunikatów ostrzegawczych.",
+      "keyFacts": [
+        "W Podkarpackiem obowiązują ostrzeżenia na burze i gwałtowne wzrosty stanów wody.",
+        "Na Śląsku dalej widać aktywne komunikaty ostrzegawcze.",
+        "Ryzyko obejmuje silny wiatr, intensywny deszcz i lokalne podtopienia."
+      ],
+      "reactions": [
+        "To utrzymuje pogodę wysoko w priorytecie lokalnych służb i mediów.",
+        "Przesuwa uwagę na transport, przerwy w zasilaniu i bezpieczeństwo w terenie."
+      ],
+      "whyItMatters": "Alerty mogą szybko przełożyć się na awarie, opóźnienia i ryzyko dla mieszkańców.",
+      "context": "To najważniejszy aktywny sygnał bezpieczeństwa w tym slocie.",
+      "watchNext": [
+        "Sprawdzać, czy IMGW lub RCB podnoszą poziom ostrzeżeń.",
+        "Obserwować, czy pojawią się raporty o awariach albo podtopieniach."
+      ],
+      "sources": [
+        {
+          "title": "Rzeszów UW: Ostrzeżenia",
+          "url": "https://rzeszow.uw.gov.pl/wczk/ostrzezenia"
+        },
+        {
+          "title": "Katowice UW: Komunikaty i ostrzeżenia",
+          "url": "https://www.katowice.uw.gov.pl/wydzial/wydzial-bezpieczenstwa-i-zarzadzania-kryzysowego/komunikaty-i-ostrzezenia"
+        },
+        {
+          "title": "RCB: Komunikaty",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        }
+      ],
+      "tags": [
+        "alerty",
+        "pogoda",
+        "burze",
+        "RCB",
+        "IMGW"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "kluczbork-police-shot",
+      "section": "Polska",
+      "title": "Kluczbork: strzał podczas interwencji",
+      "lead": "Mężczyzna uciekł przez balkon i celował w policjanta.",
+      "whatHappened": "TVN24 opisuje incydent w Kluczborku, gdzie mężczyzna próbował uciec przed policją, wyskoczył przez balkon i miał celować w funkcjonariusza. W trakcie interwencji padł strzał.",
+      "keyFacts": [
+        "Sprawa dotyczy interwencji policji w Kluczborku.",
+        "Mężczyzna uciekł przez balkon.",
+        "W komunikacji medialnej pojawia się informacja o oddanym strzale."
+      ],
+      "reactions": [
+        "To kolejny dziś lokalny incydent bezpieczeństwa z potencjalnie kryminalnym rozwinięciem.",
+        "Dalsze ustalenia mogą zmienić obraz przebiegu interwencji."
+      ],
+      "whyItMatters": "Tego typu zdarzenia szybko wpływają na ocenę bezpieczeństwa publicznego i pracy służb.",
+      "context": "Feed mocno przesuwa się dziś w stronę krótkich, ostrych incydentów lokalnych.",
+      "watchNext": [
+        "Sprawdzać, czy policja poda własną wersję zdarzeń.",
+        "Obserwować, czy pojawią się informacje o stanie uczestników interwencji."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Kluczbork. Wyskoczył przez balkon, celował w policjanta",
+          "url": "https://tvn24.pl/opole/kluczbork-wyskoczyl-przez-balkon-uciekal-przed-policja-padl-strzal-st9200414?source=rss"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Kluczbork",
+        "policja",
+        "bezpieczeństwo"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "poreba-mops-assault",
+      "section": "Polska",
+      "title": "Poręba: zarzuty po ataku na MOPS",
+      "lead": "48-latka usłyszała zarzuty po ataku na pracownicę socjalną.",
+      "whatHappened": "TVN24 podaje, że w Porębie 48-latka usłyszała zarzuty po ataku na pracownicę MOPS-u. To sprawa karna, która może jeszcze dostać kolejne procesowe szczegóły.",
+      "keyFacts": [
+        "Sprawa dotyczy Poręby i pracownicy MOPS-u.",
+        "Podejrzana usłyszała zarzuty.",
+        "Temat wszedł już w obieg policyjno-prokuratorski."
+      ],
+      "reactions": [
+        "Takie incydenty szybko uruchamiają reakcję samorządu i instytucji społecznych.",
+        "Dalsze ustalenia mogą zmienić kwalifikację czynu."
+      ],
+      "whyItMatters": "To bezpośrednio dotyczy bezpieczeństwa pracowników pomocy społecznej.",
+      "context": "Krajowy feed dziś mocno przechylił się w stronę gwałtownych zdarzeń lokalnych.",
+      "watchNext": [
+        "Sprawdzać komunikaty policji i prokuratury.",
+        "Obserwować, czy pojawi się informacja o motywie lub skutkach ataku."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Zaatakowała pracownicę MOPS-u",
+          "url": "https://tvn24.pl/katowice/poreba-zaatakowala-pracownice-mops-u-48-latka-uslyszala-zarzuty-st9200362?source=rss"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Poręba",
+        "MOPS",
+        "prokuratura"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "polakow-portret-wlasny-prosecutor",
+      "section": "Polityka",
+      "title": "Prokuratura bada raport o Polakach",
+      "lead": "W sprawie „Polaków portret własny” ruszyły czynności sprawdzające.",
+      "whatHappened": "TVN24 informuje, że prokuratura wszczęła czynności sprawdzające dotyczące raportu „Polaków portret własny”. To oznacza, że sprawa wchodzi w formalny etap weryfikacji, choć bez przesądzania wyniku.",
+      "keyFacts": [
+        "Prokuratura uruchomiła czynności sprawdzające.",
+        "Sprawa dotyczy raportu „Polaków portret własny”.",
+        "Na tym etapie nie ma jeszcze finalnej oceny prawnej."
+      ],
+      "reactions": [
+        "Temat może wywołać dalsze komentarze polityczne i medialne.",
+        "Wątek ma potencjał na kolejne doprecyzowania proceduralne."
+      ],
+      "whyItMatters": "To sygnał, że spór wokół raportu przeszedł z poziomu komentarzy do formalnej weryfikacji.",
+      "context": "To jeden z bardziej procesowych krajowych wątków w tym slocie.",
+      "watchNext": [
+        "Obserwować, czy prokuratura poda zakres sprawdzanych wątków.",
+        "Sprawdzać, czy pojawią się reakcje autorów raportu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Sprawa raportu \"Polaków portret własny\"",
+          "url": "https://tvn24.pl/polska/sprawa-raportu-polakow-portret-wlasny-ruch-prokuratury-st9200338?source=rss"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "prokuratura",
+        "raport",
+        "Polska"
+      ],
+      "priority": "3"
+    },
+    {
+      "id": "sweden-school-sword-attack",
+      "section": "Świat",
+      "title": "Szwecja: atak z użyciem miecza w szkole",
+      "lead": "Kilka osób zostało rannych po ataku w szkole.",
+      "whatHappened": "BBC i TVN24 opisują atak w szkole w Szwecji, w którym kilka osób zostało rannych po użyciu miecza. To jeden z mocniejszych europejskich newsów bezpieczeństwa w tym slocie.",
+      "keyFacts": [
+        "Kilka osób zostało rannych.",
+        "Atak miał miejsce w szkole w Szwecji.",
+        "Użyto miecza jako narzędzia ataku."
+      ],
+      "reactions": [
+        "Sprawa szybko trafiła do europejskich serwisów jako poważny incydent szkolny.",
+        "Najważniejsze będą kolejne komunikaty policji i służb medycznych."
+      ],
+      "whyItMatters": "To wysokopriorytetowy sygnał bezpieczeństwa publicznego i szkolnego.",
+      "context": "BBC World dziś mocno akcentuje incydenty i napięcia, nie tylko politykę.",
+      "watchNext": [
+        "Sprawdzać liczbę rannych i status zatrzymanego.",
+        "Obserwować, czy policja poda motyw i dokładne miejsce zdarzenia."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Several injured after sword attack at Swedish school",
+          "url": "https://www.bbc.co.uk/news/articles/c3r0g7gj2n3o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "TVN24: Atak z użyciem miecza w szkole",
+          "url": "https://tvn24.pl/swiat/szwecja-fagersta-atak-z-uzyciem-miecza-w-szkole-kilka-osob-zostalo-rannych-st9200374?source=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Szwecja",
+        "szkoła",
+        "bezpieczeństwo"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "imran-khan-jail",
+      "section": "Świat",
+      "title": "Imran Khan wraca do więzienia",
+      "lead": "Były premier Pakistanu znów trafił do aresztu po badaniu w szpitalu.",
+      "whatHappened": "BBC podaje, że Imran Khan wrócił do więzienia po badaniu w szpitalu. To kolejna odsłona długiego i politycznie obciążonego sporu wokół byłego premiera Pakistanu.",
+      "keyFacts": [
+        "Chodzi o byłego premiera Pakistanu.",
+        "Do więzienia wrócił po badaniu w szpitalu.",
+        "Wątek ma wyraźny wymiar polityczny."
+      ],
+      "reactions": [
+        "Sprawa nadal będzie przyciągać uwagę krajowych i zagranicznych mediów.",
+        "Może wpłynąć na ocenę stabilności politycznej w Pakistanie."
+      ],
+      "whyItMatters": "To jeden z najważniejszych politycznych procesów i napięć w Azji Południowej.",
+      "context": "BBC World trzyma dziś kilka tematów o wysokiej wadze politycznej i bezpieczeństwa.",
+      "watchNext": [
+        "Sprawdzać, czy pojawią się nowe informacje o stanie zdrowia i warunkach osadzenia.",
+        "Obserwować reakcje władz Pakistanu i obozu Khana."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Pakistan ex-PM Imran Khan back in jail after hospital examination",
+          "url": "https://www.bbc.co.uk/news/articles/ckgdr9vr50po?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Pakistan",
+        "polityka",
+        "więzienie"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "swiss-alpine-fire",
+      "section": "Świat",
+      "title": "Szwajcaria: pożar i pięć osób zaginionych",
+      "lead": "Po pożarze w alpejskim mieście zaginęło pięć osób.",
+      "whatHappened": "BBC opisuje pożar w szwajcarskim alpejskim miasteczku, po którym pięć osób uznano za zaginione. To wątek o wysokim ciężarze lokalnym i ratunkowym.",
+      "keyFacts": [
+        "Pożar wybuchł w alpejskim mieście w Szwajcarii.",
+        "Pięć osób jest zaginionych.",
+        "Temat ma silny komponent ratowniczy."
+      ],
+      "reactions": [
+        "Najważniejsze będą komunikaty służb i liczenie strat.",
+        "Sprawa może szybko przejść w raport o poszukiwaniach i przyczynie pożaru."
+      ],
+      "whyItMatters": "To potencjalnie poważny incydent bezpieczeństwa i ratownictwa w Europie.",
+      "context": "W dzisiejszym feedzie BBC World pojawia się więcej nagłych zdarzeń niż twardej polityki.",
+      "watchNext": [
+        "Sprawdzać, czy służby potwierdzą liczbę poszkodowanych.",
+        "Obserwować, czy pojawi się oficjalna przyczyna pożaru."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Five missing after fire in Swiss Alpine town",
+          "url": "https://www.bbc.co.uk/news/articles/cy8e6g13497o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Szwajcaria",
+        "pożar",
+        "ratownictwo"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "drc-ebola-vaccine",
+      "section": "Świat",
+      "title": "DR Kongo startuje próbę szczepionki na Ebola",
+      "lead": "BBC podaje alarm o tempie zakażeń i start badania szczepionkowego.",
+      "whatHappened": "BBC informuje, że w Demokratycznej Republice Konga ma ruszyć próba szczepionki przeciw Ebola, a ostrzeżenie dotyczy tempa rozprzestrzeniania się zakażeń. To ważny sygnał zdrowotny z regionu wysokiego ryzyka.",
+      "keyFacts": [
+        "Ma ruszyć próba szczepionki przeciw Ebola.",
+        "BBC ostrzega o szybkim tempie zakażeń.",
+        "Temat dotyczy Demokratycznej Republiki Konga."
+      ],
+      "reactions": [
+        "To podbija uwagę wokół gotowości zdrowotnej i monitoringu epidemicznego.",
+        "Może wywołać dalsze oficjalne komunikaty zdrowotne."
+      ],
+      "whyItMatters": "Wczesna reakcja na Ebola ma duże znaczenie dla ograniczania ognisk zakażeń.",
+      "context": "To jedyny wyraźnie zdrowotny temat w obecnym bloku światowym BBC.",
+      "watchNext": [
+        "Sprawdzać, czy WHO lub lokalne służby podadzą więcej danych.",
+        "Obserwować, czy liczba zakażeń rośnie szybciej niż oczekiwano."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Ebola vaccine trial to start in DR Congo as warning issued over speed of infections",
+          "url": "https://www.bbc.co.uk/news/articles/czxe9n0vxzdo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Ebola",
+        "DR Kongo",
+        "zdrowie"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "royal-mail-targets",
+      "section": "Gospodarka",
+      "title": "Royal Mail znów nie dowozi celów",
+      "lead": "Brytyjska poczta chwali oznaki poprawy, ale wyniki dalej zawodzą.",
+      "whatHappened": "BBC Business podaje, że Royal Mail po raz kolejny nie dowiozło celów doręczeń, choć firma mówi o zachęcających sygnałach. To pokazuje, że presja operacyjna na usługach nadal trwa.",
+      "keyFacts": [
+        "Royal Mail ponownie nie trafiło w cele doręczeń.",
+        "Firma jednocześnie mówi o zachęcających oznakach poprawy.",
+        "Temat dotyczy jakości usług i wydajności operacyjnej."
+      ],
+      "reactions": [
+        "Rynek będzie patrzył na to jako na test realnej poprawy w usługach pocztowych.",
+        "Sygnały z Royal Mail mogą wpływać na szerszą ocenę kondycji brytyjskich usług."
+      ],
+      "whyItMatters": "To ważny wskaźnik jakości usług konsumenckich w Wielkiej Brytanii.",
+      "context": "BBC Business łączy dziś pojedyncze spółki z szerszą presją na gospodarkę UK.",
+      "watchNext": [
+        "Sprawdzać, czy firma poda mocniejsze liczby poprawy.",
+        "Obserwować reakcję regulatorów i rynku."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Royal Mail misses delivery targets again but hails 'encouraging' signs",
+          "url": "https://www.bbc.co.uk/news/articles/c1w1rg208xdo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "Wielka Brytania",
+        "Royal Mail",
+        "usługi"
+      ],
+      "priority": "3"
+    },
+    {
+      "id": "uk-borrowing-july",
+      "section": "Gospodarka",
+      "title": "UK pożycza więcej niż oczekiwano",
+      "lead": "Lipiec przyniósł wyższe niż zakładano pożyczki publiczne.",
+      "whatHappened": "BBC podaje, że brytyjskie pożyczki publiczne w lipcu były wyższe od prognoz, a temat wchodzi w przygotowania do pierwszego budżetu Johna Healeya. To wzmacnia presję fiskalną wokół jesiennych decyzji.",
+      "keyFacts": [
+        "Lipiec przyniósł wyższe pożyczki publiczne niż oczekiwano.",
+        "Sprawa łączy się z przygotowaniami do pierwszego budżetu Johna Healeya.",
+        "To kolejny sygnał napięcia fiskalnego w UK."
+      ],
+      "reactions": [
+        "Rynek będzie szukał sygnałów, jak rząd zamierza domykać dziurę fiskalną.",
+        "Temat może wrócić w debacie o podatkach i wydatkach."
+      ],
+      "whyItMatters": "Wyższe pożyczki ograniczają przestrzeń manewru dla rządu i podbijają znaczenie budżetu.",
+      "context": "To drugi dziś mocny brytyjski temat gospodarczy obok Royal Mail.",
+      "watchNext": [
+        "Sprawdzać, czy ONS poda korekty lub głębszy rozkład danych.",
+        "Obserwować, czy pojawi się reakcja ministerstwa lub rynku długu."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: UK borrows more than expected in July as Healey prepares for first Budget",
+          "url": "https://www.bbc.co.uk/news/articles/cly8kzkyvwgo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "Wielka Brytania",
+        "budżet",
+        "dług"
+      ],
+      "priority": "3"
+    },
+    {
+      "id": "meta-business-reaction",
+      "section": "Technologia",
+      "title": "Biznes reaguje na konflikt z Metą",
+      "lead": "W TVN24 pojawia się nowa reakcja biznesu na spór wokół Mety.",
+      "whatHappened": "TVN24 publikuje nowy materiał o reakcji biznesu na konflikt z Metą. To nie jest już sam wątek ogólnego bezpieczeństwa AI, tylko bardziej bezpośrednia reakcja rynku na spór wokół platformy.",
+      "keyFacts": [
+        "Materiał dotyczy reakcji biznesu na konflikt z Metą.",
+        "To świeży krajowy wątek technologiczno-rynkowy.",
+        "Temat jest osadzony w sporze wokół platform i oszustw."
+      ],
+      "reactions": [
+        "To może otworzyć kolejne komentarze branżowe lub prawne.",
+        "Wątek dobrze pasuje do obecnej mieszanki tech i regulacji w feedzie."
+      ],
+      "whyItMatters": "Meta pozostaje punktem odniesienia dla sporów o bezpieczeństwo, reklamy i odpowiedzialność platform.",
+      "context": "W poprzednich slotach technologia była zdominowana przez AI; teraz akcent przesuwa się na reakcję biznesu wobec Mety.",
+      "watchNext": [
+        "Sprawdzać, czy pojawi się oficjalna odpowiedź Mety.",
+        "Obserwować, czy wątek przejdzie w debatę regulacyjną lub sądową."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Biznes reaguje na konflikt z Metą",
+          "url": "https://tvn24.pl/biznes/tech/nie-mozna-zarabiac-na-oszustwie-polska-rada-biznesu-reaguje-na-konflikt-z-meta-st9200313?source=rss"
+        }
+      ],
+      "tags": [
+        "Technologia",
+        "Meta",
+        "biznes",
+        "platformy"
+      ],
+      "priority": "3"
+    },
+    {
+      "id": "canada-trade-deadline",
+      "section": "Gospodarka",
+      "title": "Kanada szykuje się na twardą walkę handlową",
+      "lead": "BBC opisuje presję przed upływem terminu w relacjach z USA.",
+      "whatHappened": "BBC Business podaje, że premier Manitoby mówi o potrzebie twardej postawy Kanady, gdy zbliża się termin handlowy z USA. To sygnał, że napięcie między Ottawą a Waszyngtonem pozostaje wysokie.",
+      "keyFacts": [
+        "To temat związany z terminem handlowym USA-Kanada.",
+        "BBC cytuje premiera Manitoby.",
+        "Ton wypowiedzi jest wyraźnie konfrontacyjny."
+      ],
+      "reactions": [
+        "Rynek będzie śledził, czy pojawi się kompromis, czy eskalacja.",
+        "Temat może wpływać na nastroje wokół ceł i łańcuchów dostaw."
+      ],
+      "whyItMatters": "USA-Kanada to jeden z kluczowych handlowych kanałów dla północnoamerykańskiej gospodarki.",
+      "context": "To trzeci mocny biznesowy lead BBC w tym slocie, obok UK i Royal Mail.",
+      "watchNext": [
+        "Sprawdzać, czy strony opublikują komunikat po terminie.",
+        "Obserwować, czy pojawią się sygnały o nowych taryfach lub ustępstwach."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Canada 'should fight' as US trade deadline looms, Manitoba premier says",
+          "url": "https://www.bbc.co.uk/news/articles/czjlr0evy0do?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "Kanada",
+        "USA",
+        "handel"
+      ],
+      "priority": "3"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24: najnowsze RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC News: World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "BBC News: Business RSS",
+      "url": "https://feeds.bbci.co.uk/news/business/rss.xml"
+    },
+    {
+      "title": "BBC News: Technology RSS",
+      "url": "https://feeds.bbci.co.uk/news/technology/rss.xml"
+    },
+    {
+      "title": "Google News: Top stories",
+      "url": "https://news.google.com/"
+    },
+    {
+      "title": "Rzeszów UW: Ostrzeżenia",
+      "url": "https://rzeszow.uw.gov.pl/wczk/ostrzezenia"
+    },
+    {
+      "title": "Katowice UW: Komunikaty i ostrzeżenia",
+      "url": "https://www.katowice.uw.gov.pl/wydzial/wydzial-bezpieczenstwa-i-zarzadzania-kryzysowego/komunikaty-i-ostrzezenia"
+    },
+    {
+      "title": "RCB: Komunikaty",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    }
+  ]
+}

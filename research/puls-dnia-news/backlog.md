@@ -1,5 +1,13 @@
 # Puls Dnia News Backlog
 
+# 2026-08-21 18:02
+
+- Watch whether IMGW or RCB escalate the Podkarpacie / Śląsk warning block or add outage reports.
+- Watch whether police or prokuratura publish firmer details on Kluczbork, Poręba or the report inquiry.
+- Watch whether BBC or official sources add more detail on Sweden, Imran Khan, the Swiss fire or Ebola.
+- Watch whether Royal Mail, UK borrowing or the Canada-US trade deadline get fresh official numbers before the next slot.
+- Watch whether Meta or business sources issue a sharper follow-up to the current conflict story.
+
 # 2026-08-21 15:02
 
 - Watch whether IMGW or RCB upgrade the current storm block or start reporting outages.
