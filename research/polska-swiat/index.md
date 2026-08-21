@@ -4,6 +4,15 @@ Last updated: 2026-08-21
 
 ## Current Understanding
 
+Po wieczornym runie 21 sierpnia główny obraz przesuwa się z samego ataku na
+Kijów na Kryvyi Rih: AP podaje 14 zabitych i 121 rannych po uderzeniu dronów
+na centrum handlowe, a Guardian opisuje wygaszanie protestów wokół Fedorowa
+oraz zmianę kadrową w ukraińskim resorcie obrony. Równolegle europejski blok
+bezpieczeństwa rozszerza się o niemiecki arsenał pod Berlinem, australijską
+sprawę foreign interference i rumuńskie zniszczenie drona przy Neptun Deep,
+a w kraju RCB wysyła alert o treningu syren w Parczewie i szeroki alert
+burzowy na 21/22 sierpnia.
+
 Po porannym runie 21 sierpnia główny obraz przesuwa się z samego bilansu ataku
 na Kijów w szerszy pakiet presji bezpieczeństwa na wschodniej flance: Guardian
 podaje co najmniej 16 zabitych w Kijowie i problem brakujących pocisków Patriot,
