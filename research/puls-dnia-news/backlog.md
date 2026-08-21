@@ -1,5 +1,12 @@
 # Puls Dnia News Backlog
 
+# 2026-08-21 06:00
+
+- Watch whether RCB or IMGW refresh the morning alert set or shrink the hydrological block.
+- Watch whether UODO, Ministerstwo Zdrowia or Ministerstwo Cyfryzacji publish further MyDr findings or guidance.
+- Watch whether BBC, Home Office or Counter Terrorism Policing add more detail on Harry, Meghan, Manchester or asylum policy.
+- Watch whether Iran or Ormuz rhetoric turns into a concrete market move in oil and fuels.
+
 # 2026-08-20 18:01
 
 - Watch whether RCB or IMGW issue a late-evening upgrade or cancellation.
