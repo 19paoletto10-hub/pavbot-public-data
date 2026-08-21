@@ -1,8 +1,14 @@
 # Topic Index: tech-news
 
-Last updated: 2026-08-20
+Last updated: 2026-08-21
 
 ## Current Understanding
+
+Run z 2026-08-21 przesuwa oś z samych modeli na pełny agentowy stack i jego governance. OpenAI startuje AI Futures jako osobny kanał myślenia o prawach, autonomii i koncentracji władzy, a równolegle pcha ChatGPT i Codex głębiej do przeglądarki: Chrome extension, browser history, tab context, Apple Messages i wygaszanie Atlasu pokazują, że browser-based work staje się jednym z głównych surfaces.
+
+Google odpowiada po dwóch stronach: Gemini w Chrome na Androidzie trafia do wszystkich użytkowników w USA, a AI Max dostaje narzędzia do testowania budżetów, ROI i kontroli brand/location. To razem wygląda jak ruch od „AI jako model” do „AI jako domyślny interfejs i mierzalny lejek reklamowy”.
+
+Po stronie adopcji OpenAI zaczyna odzyskiwać teren w biznesie według Ramp, a Stampli pokazuje, że ChatGPT Work i Codex skracają launch production z tygodni do dni. Anthropic z kolei wzmacnia ślad AI-for-science: protein design i analytical chemistry sugerują, że model wchodzi do bardziej wymagających workflowów niż tylko coding. Community signal z HN i Product Hunt nadal premiuje browser agents, security i workflow tooling, a nie sam model hype.
 
 Dzisiejszy run z 2026-08-20 przesuwa oś z samych premier modeli na routing, prywatność i dystrybucję. Stripe bierze OpenRouter, więc multi-model token routing staje się osobną warstwą infrastruktury, a nie tylko dodatkiem do endpointów.
 

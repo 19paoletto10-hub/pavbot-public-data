@@ -1,0 +1,307 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-08-21",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "To jest dzień przesunięcia z samego model hype'u na pełny agentowy stack. OpenAI uruchamia AI Futures i jednocześnie skleja browser-based work w ChatGPT/Codex, Google rozpycha Gemini w Chrome na Androidzie oraz AI Max w Search, a zewnętrzne dane o spendzie i customer story Stampli pokazują, że enterprise traction nadal może się szybko przestawiać między OpenAI i Anthropic.",
+    "Najciekawsze jest to, że wszystkie trzy warstwy, które dziś rosną, są już productized: governance, browser control i mierzalna monetyzacja. OpenAI zaczyna opisywać AI jako pytanie o prawa, agency i koncentrację władzy, Google robi z przeglądarki i Search kolejny kontrolowany surface, a Anthropic pokazuje, że Claude może wchodzić do laboratoriów i workflowów science. Community signal z HN i Product Hunt nadal premiuje browser agents, security i workflow tooling, nie sam modelowy szum."
+  ],
+  "summaryBullets": [
+    "Regulacje: OpenAI uruchamia AI Futures",
+    "Produkty: ChatGPT staje się agentem przeglądarki",
+    "Produkty: Google łączy Chrome i Search w jeden lejek AI"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-08-21-0-openai-uruchamia-ai-futures-6eead32185",
+      "section": "Regulacje",
+      "title": "OpenAI uruchamia AI Futures",
+      "standfirst": "OpenAI startuje AI Futures jako blog Strategic Futures teamu i wprost stawia pytanie o to, jak free society ma zachować individual rights i agency w świecie transformacyjnej AI.",
+      "whatHappened": "Firma dołożyła do produktowych i safety update'ów nowy kanał myślenia o wpływie AI na koncentrację władzy, instytucje i prawa jednostki.",
+      "whyItMatters": "To sygnał, że OpenAI próbuje opisać AI nie tylko jako technologię, ale jako problem ustroju i legitymizacji użycia.",
+      "deeperAnalysis": [
+        "AI Futures jest ciekawy nie dlatego, że zawiera kolejny manifest o „bezpieczeństwie”, tylko dlatego, że przesuwa język rozmowy na poziom politycznej architektury. Dean Ball nie pisze o modelach, tylko o tym, jak AI może zmienić równowagę między państwem, firmami i jednostką, oraz jak utrzymać możliwość działania bez oddawania całej kontroli centralnym aktorom.",
+        "To dobrze spina się z wcześniejszymi ruchami OpenAI wokół ZDR, Private Safety Processing, Teen surface i cyber pacing. W praktyce firma zaczyna składać prywatność, age-gating, monitoring ryzyk i browser work w jeden większy obraz tego, co wolno, kto widzi dane i kto może wykonać działanie. Na razie to jeszcze publicystyka wewnętrzna, ale trudno nie czytać tego jako próbę ustawienia własnej narracji przed kolejną falą regulacji i sporów o odpowiedzialność.",
+        "Warto też zauważyć, że blog jest jawnie autorowany i zastrzega, że wyraża poglądy autora, nie całej organizacji. To daje OpenAI elastyczność polityczną, ale jednocześnie pozwala testować granice tego, jak daleko firma chce iść w opisie AI jako czynnika przebudowującego społeczeństwo i państwo."
+      ],
+      "contextPoints": [
+        "Strategic Futures team startuje w dniu 2026-08-20.",
+        "Post akcentuje bounded legibility, individual autonomy i narrow collective action.",
+        "Temat pojawia się zaraz po ZDR, Teens i cyber pacing."
+      ],
+      "sources": [
+        {
+          "title": "Introducing AI Futures",
+          "url": "https://openai.com/index/introducing-ai-futures/"
+        },
+        {
+          "title": "OpenAI News",
+          "url": "https://openai.com/news/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "governance",
+        "policy",
+        "agency",
+        "safety"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-21-1-chatgpt-staje-sie-agentem-przegladarki-73b9f31bae",
+      "section": "Produkty",
+      "title": "ChatGPT staje się agentem przeglądarki",
+      "standfirst": "OpenAI rozszerza browser-based work w ChatGPT i Codex, a Chrome extension oraz Atlas wind-down pokazują, że przeglądarka staje się centralnym surface'em produktu.",
+      "whatHappened": "ChatGPT Work i Codex dostają mocniejszy browser surface, a na Apple silicon Macach dochodzi plugin Messages do iMessage, SMS i RCS.",
+      "whyItMatters": "To przesuwa ChatGPT z czatu do domyślnego interfejsu pracy w przeglądarce i zmniejsza dystans między asystą a wykonaniem zadania.",
+      "deeperAnalysis": [
+        "Najważniejsze w tym pakiecie nie jest samo „zobaczę twoje karty”, tylko to, że OpenAI próbuje złożyć browser workflow w jeden spójny produkt. Chrome extension może korzystać z otwartych kart, zaznaczonego tekstu, YouTube i kontekstu z paska menu, a przed użyciem historii przeglądarki wymaga zgody. To jest wyraźny krok od asystenta rozmów do asystenta pracy w toku.",
+        "Atlas idzie do wygaszenia, co sugeruje, że OpenAI nie chce już utrzymywać osobnego browser browser product obok ChatGPT desktop app i Chrome extension. Dodatkowy Messages plugin pokazuje, że ta sama logika ma wejść także w komunikację osobistą i roboczą. W obu przypadkach kluczowe są approval flows, ale produktowo ważniejsze jest to, że OpenAI próbuje przejąć kontrolę nad miejscem, gdzie użytkownik faktycznie pracuje.",
+        "To dobrze pasuje do obecnej fali agentowych produktów: nie chodzi już o to, czy model odpowie lepiej, tylko czy umie bezpiecznie przejść przez ciąg kart, plików, wiadomości i działań. Jeśli rollout utrzyma obecne tempo, browser-control stanie się dla ChatGPT i Codex równie ważny jak sam model branding."
+      ],
+      "contextPoints": [
+        "Atlas ma planowane wyłączenie i supportowe ścieżki migracji do ChatGPT desktop oraz Chrome extension.",
+        "Chrome extension jest aktualizowane jako oficjalny OpenAI surface na Chrome Web Store.",
+        "Release notes potwierdzają Apple Messages plugin w ChatGPT Work i Codex."
+      ],
+      "sources": [
+        {
+          "title": "What's new | ChatGPT Learn",
+          "url": "https://developers.openai.com/codex/whats-new"
+        },
+        {
+          "title": "Evolving Atlas into ChatGPT for browser-based agentic work",
+          "url": "https://help.openai.com/en/articles/20001371-evolving-atlas-into-chatgpt-for-browser-based-agentic-work"
+        },
+        {
+          "title": "ChatGPT - Chrome Web Store",
+          "url": "https://chromewebstore.google.com/detail/chatgpt/hehggadaopoacecdllhhajmbjkdcmajg?hl=en"
+        },
+        {
+          "title": "ChatGPT Release Notes",
+          "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "ChatGPT",
+        "Chrome",
+        "Atlas",
+        "Codex",
+        "browser",
+        "Messages"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-21-2-google-laczy-chrome-i-search-w-jeden-lejek-ai-e70fce586a",
+      "section": "Produkty",
+      "title": "Google łączy Chrome i Search w jeden lejek AI",
+      "standfirst": "Gemini in Chrome na Androidzie jest już dostępne dla wszystkich użytkowników w USA, a AI Max dostaje nowe testy budżetów, ROI i kontrolę brand/location.",
+      "whatHappened": "Google rozszerza browser assistant na masowy mobile surface i równolegle uzbraja reklamodawców w narzędzia do mierzenia, czy AI Max faktycznie skaluje wyniki.",
+      "whyItMatters": "To pokazuje, że browser i search ads są dziś jednym z głównych pól walki o dystrybucję, zachowanie użytkownika i monetyzację AI.",
+      "deeperAnalysis": [
+        "Gemini in Chrome to nie tylko kolejny chatbot w zakładce. Google daje użytkownikom automatyczne podsumowania, odpowiedzi na pytania o stronę, połączenia z Calendar i Keep, generowanie obrazów z Nano Banana oraz auto browse dla użytkowników AI Pro i AI Ultra. Ważne jest też to, że firma jawnie dorzuca zabezpieczenia: detekcję prompt injection i dodatkowe potwierdzenia dla wrażliwych działań.",
+        "AI Max domyka ten sam ruch po stronie przychodowej. Nowe testy pozwalają porównywać budżety i targety ROI across multiple campaigns, a brand i location controls mają utrzymać marketerów w bezpiecznym paśmie eksperymentów. W praktyce Google mówi klientom: możecie skalować AI w Search, ale będziemy wam też bardziej precyzyjnie mierzyć, co naprawdę działa.",
+        "To razem wygląda jak pełna pętla dystrybucji: użytkownik trafia do Chrome, tam dostaje Gemini, a reklamodawca dostaje AI Max do optymalizacji tego samego toru uwagi. Dla rynku to ważne, bo pokazuje, że przeglądarka i Search pozostają jednymi z najcenniejszych powierzchni do osadzania AI."
+      ],
+      "contextPoints": [
+        "Gemini in Chrome na Androidzie ruszyło 2026-08-18.",
+        "Auto browse jest dostępne dla subskrybentów AI Pro i AI Ultra w USA.",
+        "AI Max testy mają roll out we wrześniu 2026."
+      ],
+      "sources": [
+        {
+          "title": "Tap into the power of Gemini in Chrome on Android",
+          "url": "https://blog.google/products-and-platforms/products/chrome/gemini-in-chrome-android-auto-browse/"
+        },
+        {
+          "title": "Make AI Max work for your business with new testing and planning tools",
+          "url": "https://blog.google/products/ads-commerce/ai-max-testing-planning-tools/"
+        },
+        {
+          "title": "How AI Max for Search campaigns works",
+          "url": "https://support.google.com/google-ads/answer/15910187?hl=en"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Google",
+        "Gemini",
+        "Chrome",
+        "AI Max",
+        "Search",
+        "Ads"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-21-3-openai-dogania-anthropic-w-firmach-792abc6dae",
+      "section": "Produkty",
+      "title": "OpenAI dogania Anthropic w firmach",
+      "standfirst": "Dane Ramp pokazują, że OpenAI znów przyspiesza wśród płacących biznesów, a case study Stampli opisuje, jak ChatGPT Work i Codex skróciły launch production z 243 godzin do 77.",
+      "whatHappened": "Enterprise traction OpenAI przestaje być tylko deklaracją sprzedażową, bo widać ją już w zewnętrznych spend data i w konkretnym customer story.",
+      "whyItMatters": "Rynek zaczyna wyceniać depth of use, a nie samą liczbę użytkowników czy model launchy.",
+      "deeperAnalysis": [
+        "Ramp nie pokazuje pełnego rynku, ale pokazuje coś bardzo ważnego: biznesy przełączają się między labami szybciej, niż zwykle sugerują publiczne narracje o „lojalności” do jednego modelu. W danych za lipiec Anthropic prowadzi z około 44% udziału, a OpenAI ma niemal 40%, ale to OpenAI rośnie szybciej w Q3 to date. To nie jest dominacja, tylko sygnał, że przewaga jednego gracza nad drugim nie jest stała.",
+        "Stampli dokłada do tego drugi rodzaj dowodu: nie share, tylko time-to-launch. OpenAI opisuje, jak ChatGPT Work i Codex pomogły zbudować system produkcji materiałów marketingowych, executive context i launch assets, skracając cały proces z tygodni do dni. To ważne, bo pokazuje, że produkt zaczyna pracować poza czystym engineeringiem, w obszarach GTM, ops i komunikacji wewnętrznej.",
+        "Jeśli takie historie będą się mnożyć, będzie coraz trudniej mówić o OpenAI i Anthropic wyłącznie jako o dostawcach modeli. W praktyce konkurują oni o to, kto lepiej osadzi się w codziennych workflowach firmy i kto będzie widoczny w spend data, a nie tylko w benchmarkach."
+      ],
+      "contextPoints": [
+        "Ramp obejmuje ponad 70 tysięcy amerykańskich firm i mocno skłania się ku techowi.",
+        "Stampli mówi o setkach materiałów tygodniowo tworzonych z ChatGPT Work.",
+        "OpenAI twierdzi, że ponad milion firm osiąga z ich produktami meaningful results."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI is gaining on Anthropic with business users, new data indicates",
+          "url": "https://techcrunch.com/2026/08/20/openai-is-gaining-on-anthropic-with-business-users-new-data-indicates/"
+        },
+        {
+          "title": "Stampli cuts launch hours by 68% using ChatGPT Work",
+          "url": "https://openai.com/index/stampli/"
+        },
+        {
+          "title": "Customer stories",
+          "url": "https://openai.com/business/customer-stories/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "Anthropic",
+        "enterprise",
+        "Ramp",
+        "Stampli",
+        "Codex"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-21-4-claude-wchodzi-do-laboratorium-e464208cfd",
+      "section": "AI",
+      "title": "Claude wchodzi do laboratorium",
+      "standfirst": "Anthropic pokazuje, że Claude projektuje bindery proteinowe przeciw 14 z 15 celów i potrafi zamknąć zadania analityki chemicznej w kilkanaście minut.",
+      "whatHappened": "Firma publikuje nowe wyniki z proteomiki i chemii, a równocześnie zapowiada program dostępu dla naukowców.",
+      "whyItMatters": "To przesuwa Claude z kategorii kodowania i polityki do bardziej wymagającego AI-for-science workflow.",
+      "deeperAnalysis": [
+        "Wynik z protein design jest mocny przede wszystkim dlatego, że nie jest tylko benchmarkowym slide deckiem. Anthropic opisuje kampanię, w której Claude sam orchestruje kilka modeli specjalistycznych, generuje kandydatów, iteruje ich strukturę i przechodzi przez eksperymentalną walidację zewnętrznych laboratoriów. Dla 14 z 15 targetów udało się uzyskać bindery, a część wyników była konkurencyjna wobec najlepszych wcześniej publikowanych rezultatów.",
+        "Drugi test, analityka chemiczna, jest równie interesujący, bo pokazuje lepsze osadzenie w pracy laboratoryjnej niż klasyczne demo QA. Claude Opus 5 miał do dyspozycji surowe dane NMR i LC-MS, a mimo to w kilkanaście minut zwrócił wynik zgodny z laboratorium. To nie oznacza jeszcze end-to-end drug discovery, ale pokazuje realną redukcję czasu i ręcznej ekspertyzy na początku procesu.",
+        "Najbardziej znaczący jest jednak sygnał strategiczny: Anthropic mówi wprost, że chce później otworzyć program dostępu dla scientistów. To sugeruje, że firma widzi w AI-for-science osobny funnel produktu i partnerstw, nie tylko jednorazowy research PR. Dla podcastu to ważne, bo zbliża front modelowy do biotechnologii, a nie tylko do kodu i workflowów biurowych."
+      ],
+      "contextPoints": [
+        "Wyniki opierają się na Mythos Preview, Opus 4.8 i Opus 5.",
+        "Anthropic współpracowało z Adaptyv Bio i Twist Bioscience przy walidacji labowej.",
+        "Firma pisze, że life science tasks są obecnie blokowane w jej najpotężniejszym modelu."
+      ],
+      "sources": [
+        {
+          "title": "How Claude is accelerating protein design and analytical chemistry",
+          "url": "https://www.anthropic.com/research/Claude-accelerates-protein-design"
+        },
+        {
+          "title": "Anthropic research",
+          "url": "https://www.anthropic.com/research"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Anthropic",
+        "science",
+        "biotech",
+        "protein design",
+        "chemistry"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "OpenAI uruchamia AI Futures",
+      "rationale": "OpenAI przechodzi z opowieści o modelach do języka praw, agency i koncentracji władzy, co może wpłynąć na kolejne decyzje produktowe i regulacyjne.",
+      "sourcesLabel": "OpenAI AI Futures; OpenAI News"
+    },
+    {
+      "priority": "High",
+      "title": "ChatGPT staje się agentem przeglądarki",
+      "rationale": "Browser extension, Atlas wind-down i Messages plugin pokazują, że ChatGPT/Codex coraz bardziej wchodzą w codzienną pracę w przeglądarce.",
+      "sourcesLabel": "ChatGPT Learn; Atlas help; Chrome Web Store; ChatGPT Release Notes"
+    },
+    {
+      "priority": "High",
+      "title": "Google łączy Chrome i Search w jeden lejek AI",
+      "rationale": "Gemini w Chrome i nowe testy AI Max spinają dystrybucję, automatyzację i reklamową monetyzację w jeden ruch produktowy.",
+      "sourcesLabel": "Gemini in Chrome on Android; AI Max blog; AI Max support"
+    },
+    {
+      "priority": "High",
+      "title": "OpenAI dogania Anthropic w firmach",
+      "rationale": "Ramp data i case study Stampli pokazują, że enterprise spend i workflow depth zaczynają znów przechylać się na stronę OpenAI.",
+      "sourcesLabel": "TechCrunch; Stampli"
+    },
+    {
+      "priority": "High",
+      "title": "Claude wchodzi do laboratorium",
+      "rationale": "Wyniki Anthropic z protein design i analytical chemistry pokazują, że model zaczyna mieć znaczenie także poza codingiem i supportem.",
+      "sourcesLabel": "Anthropic science; Anthropic research"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Introducing AI Futures",
+      "url": "https://openai.com/index/introducing-ai-futures/"
+    },
+    {
+      "title": "OpenAI News",
+      "url": "https://openai.com/news/"
+    },
+    {
+      "title": "ChatGPT Release Notes",
+      "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+    },
+    {
+      "title": "What's new | ChatGPT Learn",
+      "url": "https://developers.openai.com/codex/whats-new"
+    },
+    {
+      "title": "Evolving Atlas into ChatGPT for browser-based agentic work",
+      "url": "https://help.openai.com/en/articles/20001371-evolving-atlas-into-chatgpt-for-browser-based-agentic-work"
+    },
+    {
+      "title": "ChatGPT - Chrome Web Store",
+      "url": "https://chromewebstore.google.com/detail/chatgpt/hehggadaopoacecdllhhajmbjkdcmajg?hl=en"
+    },
+    {
+      "title": "Tap into the power of Gemini in Chrome on Android",
+      "url": "https://blog.google/products-and-platforms/products/chrome/gemini-in-chrome-android-auto-browse/"
+    },
+    {
+      "title": "Make AI Max work for your business with new testing and planning tools",
+      "url": "https://blog.google/products/ads-commerce/ai-max-testing-planning-tools/"
+    },
+    {
+      "title": "How AI Max for Search campaigns works",
+      "url": "https://support.google.com/google-ads/answer/15910187?hl=en"
+    },
+    {
+      "title": "OpenAI is gaining on Anthropic with business users, new data indicates",
+      "url": "https://techcrunch.com/2026/08/20/openai-is-gaining-on-anthropic-with-business-users-new-data-indicates/"
+    },
+    {
+      "title": "Stampli cuts launch hours by 68% using ChatGPT Work",
+      "url": "https://openai.com/index/stampli/"
+    },
+    {
+      "title": "How Claude is accelerating protein design and analytical chemistry",
+      "url": "https://www.anthropic.com/research/Claude-accelerates-protein-design"
+    },
+    {
+      "title": "Hacker News front page",
+      "url": "https://news.ycombinator.com/"
+    },
+    {
+      "title": "Best of Product Hunt: August 20, 2026",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/8/20?ref=header_nav"
+    }
+  ]
+}
