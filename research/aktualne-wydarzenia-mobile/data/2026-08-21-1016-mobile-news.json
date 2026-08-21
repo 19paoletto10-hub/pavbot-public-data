@@ -1,0 +1,354 @@
+{
+  "schemaVersion": 1,
+  "topic": "aktualne-wydarzenia-mobile",
+  "runDate": "2026-08-21",
+  "runTime": "10:16",
+  "status": "Material update",
+  "headline": "Niemcy po burzy, Bałkany przy ogniu",
+  "leadParagraphs": [
+    "Wydanie zawiera aktualne informacje z Polski i świata."
+  ],
+  "checkedSources": [
+    {
+      "title": "RCB: Raport dobowy",
+      "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+    },
+    {
+      "title": "JRC: Current wildfire situation in Europe",
+      "url": "https://joint-research-centre.ec.europa.eu/projects-and-activities/natural-and-man-made-hazards/forest-fires/current-wildfire-situation-europe_en"
+    },
+    {
+      "title": "AP: Deadly overnight storms batter Germany as Balkan countries fight wildfires",
+      "url": "https://apnews.com/article/40f057a1faff2ad0a4428a54f95fa44c"
+    },
+    {
+      "title": "AP: Croatia orders detention of Ukrainian man wanted in Germany for Nord Stream blasts in 2022",
+      "url": "https://apnews.com/article/b1389f14fd31caa21f9e4596c58c7d41"
+    },
+    {
+      "title": "U.S. Department of the Treasury: Treasury Increases Sanctions on Hizballah and Targets Network Smuggling Millions in Cash for Hizballah",
+      "url": "https://home.treasury.gov/news/press-releases/sb0611"
+    },
+    {
+      "title": "AP: Iran dismisses US economic threats, and other developments in the Middle East",
+      "url": "https://apnews.com/article/bbc5df71e56f000515edef0817468c9d"
+    },
+    {
+      "title": "KPRM: Premier",
+      "url": "https://www.gov.pl/web/premier"
+    },
+    {
+      "title": "KPRM: Sprawiedliwszy system podatkowy - propozycje zmian",
+      "url": "https://www.gov.pl/web/premier/sprawiedliwy-system-podatkowy---propozycje-zmian"
+    },
+    {
+      "title": "KPRM: Przyspieszamy strategiczne inwestycje i wzmacniamy ochronę działalności rolniczej",
+      "url": "https://www.gov.pl/web/premier/przyspieszamy-strategiczne-inwestycje-i-wzmacniamy-ochrone-dzialalnosci-rolniczej"
+    },
+    {
+      "title": "KPRM: Uchwała Rady Ministrów w sprawie zmiany programu Fundusze Europejskie dla Nowoczesnej Gospodarki 2021-2027",
+      "url": "https://www.gov.pl/web/premier/projekt-uchwaly-rady-ministrow-w-sprawie-zmiany-programu-fundusze-europejskie-dla-nowoczesnej-gospodarki-20212029"
+    },
+    {
+      "title": "European Commission: AI Act",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+    },
+    {
+      "title": "Ministerstwo Cyfryzacji: AI Act - co się zmieniło 2 sierpnia 2026 roku?",
+      "url": "https://www.gov.pl/web/cyfryzacja/ai-act--co-sie-zmienilo-2-sierpnia-2026-roku"
+    }
+  ],
+  "sections": [
+    {
+      "id": "ogolne",
+      "title": "Ogólne",
+      "summary": "Europa rano nadal wygląda jak kontynent rozciągnięty między burzą a pożarem. Jedna część walczy z wiatrem i wodą, druga z ogniem i zasobami ratunkowymi.",
+      "articles": [
+        {
+          "id": "ogolne-1-niemcy-po-burzy-bakany-przy-ogniu",
+          "section": "Ogólne",
+          "title": "Niemcy po burzy, Bałkany przy ogniu",
+          "lead": "Nocne burze w Niemczech zabiły jedną osobę, a na Bałkanach pożary dalej zjadają zasoby ratunkowe.",
+          "facts": [
+            "AP podaje, że w Niemczech zginęła jedna kobieta, co najmniej dwie osoby zostały ranne, a w regionie Berlina i Hesji doszło do zniszczeń, przerw w dostawie prądu i ewakuacji festiwalu.",
+            "Ten sam materiał AP pokazuje, że Bałkany dalej walczą z pożarami, w tym z użyciem rosyjskiego samolotu gaśniczego w Serbii oraz z pomocą chorwackich strażaków przy pożarze w Bośni."
+          ],
+          "analysis": "To już nie jest pojedynczy alert pogodowy, tylko równoległy nacisk na służby, energetykę i transport.",
+          "whyItMatters": "Dla odbiorcy mobilnego to sygnał, że europejskie lato wciąż generuje realne ryzyko operacyjne, a nie tylko ładne mapy w wiadomościach.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/40f057a1faff2ad0a4428a54f95fa44c"
+            }
+          ],
+          "tags": [
+            "Ogólne"
+          ],
+          "ttsText": "Nocne burze w Niemczech zabiły jedną osobę, a na Bałkanach pożary dalej zjadają zasoby ratunkowe. AP podaje, że w Niemczech zginęła jedna kobieta, co najmniej dwie osoby zostały ranne, a w regionie Berlina i Hesji doszło do zniszczeń, przerw w dostawie prądu i ewakuacji festiwalu. Ten sam materiał AP pokazuje, że Bałkany dalej walczą z pożarami, w tym z użyciem rosyjskiego samolotu gaśniczego w Serbii oraz z pomocą chorwackich strażaków przy pożarze w Bośni. To już nie jest pojedynczy alert pogodowy, tylko równoległy nacisk na służby, energetykę i transport. Dla odbiorcy mobilnego to sygnał, że europejskie lato wciąż generuje realne ryzyko operacyjne, a nie tylko ładne mapy w wiadomościach.",
+          "priority": "High"
+        },
+        {
+          "id": "ogolne-2-pozary-nie-schodza-z-czerwonej-strefy",
+          "section": "Ogólne",
+          "title": "Pożary nie schodzą z czerwonej strefy",
+          "lead": "JRC nadal pokazuje sezon pożarowy jako europejski problem systemowy, a nie tylko lokalny pożarowy epizod.",
+          "facts": [
+            "JRC aktualizuje bilans do 619 613 hektarów spalonych od początku roku i 1 768 pożarów.",
+            "Ta sama mapa JRC pokazuje bardzo ekstremalne warunki nad Rumunią i Węgrami oraz wysoki lub ekstremalny poziom zagrożenia w szerokim pasie od Bałkanów po Ukrainę i Rosję."
+          ],
+          "analysis": "Gdy liczby nie spadają mimo kolejnych aktualizacji, nie mówimy już o pojedynczym kryzysie, tylko o stanie sezonu.",
+          "whyItMatters": "To pomaga oddzielić lokalne newsy od strukturalnego problemu europejskiej odporności.",
+          "sources": [
+            {
+              "title": "JRC",
+              "url": "https://joint-research-centre.ec.europa.eu/projects-and-activities/natural-and-man-made-hazards/forest-fires/current-wildfire-situation-europe_en"
+            }
+          ],
+          "tags": [
+            "Ogólne"
+          ],
+          "ttsText": "JRC nadal pokazuje sezon pożarowy jako europejski problem systemowy, a nie tylko lokalny pożarowy epizod. JRC aktualizuje bilans do 619 613 hektarów spalonych od początku roku i 1 768 pożarów. Ta sama mapa JRC pokazuje bardzo ekstremalne warunki nad Rumunią i Węgrami oraz wysoki lub ekstremalny poziom zagrożenia w szerokim pasie od Bałkanów po Ukrainę i Rosję. Gdy liczby nie spadają mimo kolejnych aktualizacji, nie mówimy już o pojedynczym kryzysie, tylko o stanie sezonu. To pomaga oddzielić lokalne newsy od strukturalnego problemu europejskiej odporności.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "polska",
+      "title": "Polska",
+      "summary": "Polska dziś zaczyna od deszczu w północno-zachodniej części kraju, ale kończy nadal z ogólnokrajową suszą hydrologiczną. To dość polski układ: dwa przeciwne sygnały naraz.",
+      "articles": [
+        {
+          "id": "polska-1-deszczowy-front-nad-ponocnym-zachodem",
+          "section": "Polska",
+          "title": "Deszczowy front nad północnym zachodem",
+          "lead": "RCB przesuwa pogodowe ryzyko na silny deszcz z burzami w zachodniej i północno-zachodniej Polsce.",
+          "facts": [
+            "RCB pokazuje silny deszcz z burzami w Kujawsko-Pomorskiem, Wielkopolsce, Dolnym Śląsku i Lubuskiem do 11:00 22 sierpnia.",
+            "Ten sam raport RCB utrzymuje intensywne opady w Kujawsko-Pomorskiem, Wielkopolsce i Lubuskiem do 10:00 22 sierpnia oraz ogólnokrajową suszę hydrologiczną do odwołania."
+          ],
+          "analysis": "To klasyczny układ, w którym jedna część kraju dostaje ryzyko podtopień, a druga nadal żyje w trybie deficytu wody.",
+          "whyItMatters": "Dla odbiorcy oznacza możliwe opóźnienia, lokalne szkody i zmienną sytuację w ciągu dnia.",
+          "sources": [
+            {
+              "title": "RCB",
+              "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+            }
+          ],
+          "tags": [
+            "Polska"
+          ],
+          "ttsText": "RCB przesuwa pogodowe ryzyko na silny deszcz z burzami w zachodniej i północno-zachodniej Polsce. RCB pokazuje silny deszcz z burzami w Kujawsko-Pomorskiem, Wielkopolsce, Dolnym Śląsku i Lubuskiem do 11:00 22 sierpnia. Ten sam raport RCB utrzymuje intensywne opady w Kujawsko-Pomorskiem, Wielkopolsce i Lubuskiem do 10:00 22 sierpnia oraz ogólnokrajową suszę hydrologiczną do odwołania. To klasyczny układ, w którym jedna część kraju dostaje ryzyko podtopień, a druga nadal żyje w trybie deficytu wody. Dla odbiorcy oznacza możliwe opóźnienia, lokalne szkody i zmienną sytuację w ciągu dnia.",
+          "priority": "High"
+        },
+        {
+          "id": "polska-2-alarmy-i-pozary-nadal-w-tle",
+          "section": "Polska",
+          "title": "Alarmy i pożary nadal w tle",
+          "lead": "Poza deszczem wciąż żyją stopnie alarmowe i pożary lasów, więc bezpieczeństwo nie wraca jeszcze do normy.",
+          "facts": [
+            "RCB odnotowuje wczoraj sześć pożarów lasów.",
+            "Premier przedłużył obowiązywanie stopni alarmowych CHARLIE, BRAVO-CRP i BRAVO do 31 sierpnia 2026 r. w tym samym komunikacie RCB."
+          ],
+          "analysis": "Ten fragment dnia nie wygląda jak jednorazowy alert, tylko jak przedłużony tryb ostrożności służb.",
+          "whyItMatters": "Wpływa na kolej, cyberbezpieczeństwo i zwykłą codzienność, nawet jeśli nie widać tego na pierwszym ekranie telefonu.",
+          "sources": [
+            {
+              "title": "RCB",
+              "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+            }
+          ],
+          "tags": [
+            "Polska"
+          ],
+          "ttsText": "Poza deszczem wciąż żyją stopnie alarmowe i pożary lasów, więc bezpieczeństwo nie wraca jeszcze do normy. RCB odnotowuje wczoraj sześć pożarów lasów. Premier przedłużył obowiązywanie stopni alarmowych CHARLIE, BRAVO-CRP i BRAVO do 31 sierpnia 2026 r. w tym samym komunikacie RCB. Ten fragment dnia nie wygląda jak jednorazowy alert, tylko jak przedłużony tryb ostrożności służb. Wpływa na kolej, cyberbezpieczeństwo i zwykłą codzienność, nawet jeśli nie widać tego na pierwszym ekranie telefonu.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "polityka",
+      "title": "Polityka",
+      "summary": "W polityce dzień zaczyna się od braku nowego komunikatu. To też jest informacja, bo odróżnia agendę od realnej decyzji.",
+      "articles": [
+        {
+          "id": "polityka-1-kprm-jeszcze-bez-nowego-readoutu",
+          "section": "Polityka",
+          "title": "KPRM jeszcze bez nowego readoutu",
+          "lead": "Na 10:16 KPRM wciąż nie dała nowego komunikatu po posiedzeniu, więc nie ma świeżego politycznego zwrotu do podania.",
+          "facts": [
+            "KPRM nadal pokazuje wstępne materiały z 19 i 18 sierpnia, ale rano nie ma jeszcze nowego publicznego readoutu po posiedzeniu.",
+            "To oznacza, że na tę chwilę nie pojawił się osobny komunikat, który zmieniałby poranny obraz polityczny."
+          ],
+          "analysis": "Czasem najuczciwsza redakcja polega na tym, żeby nie mylić zapowiedzi z decyzją.",
+          "whyItMatters": "Bez tego łatwo byłoby przepisać samą agendę jako gotowy fakt.",
+          "sources": [
+            {
+              "title": "KPRM",
+              "url": "https://www.gov.pl/web/premier"
+            }
+          ],
+          "tags": [
+            "Polityka"
+          ],
+          "ttsText": "Na 10:16 KPRM wciąż nie dała nowego komunikatu po posiedzeniu, więc nie ma świeżego politycznego zwrotu do podania. KPRM nadal pokazuje wstępne materiały z 19 i 18 sierpnia, ale rano nie ma jeszcze nowego publicznego readoutu po posiedzeniu. To oznacza, że na tę chwilę nie pojawił się osobny komunikat, który zmieniałby poranny obraz polityczny. Czasem najuczciwsza redakcja polega na tym, żeby nie mylić zapowiedzi z decyzją. Bez tego łatwo byłoby przepisać samą agendę jako gotowy fakt.",
+          "priority": "High"
+        },
+        {
+          "id": "polityka-2-podatki-i-inwestycje-nadal-robia-to",
+          "section": "Polityka",
+          "title": "Podatki i inwestycje nadal robią tło",
+          "lead": "Najmocniejszy krajowy spór nadal kręci się wokół podatków, infrastruktury i dual-use.",
+          "facts": [
+            "KPRM proponuje podniesienie pierwszego progu PIT do 130 tys. zł, nową stawkę 24 procent między 130 tys. a 150 tys. zł oraz wyższy CIT dla największych firm.",
+            "KPRM przyjęła też projekt przyspieszający strategiczne inwestycje i ustawę wzmacniającą ochronę działalności rolniczej, a KPRM rozszerza FENG o technologie obronne i dual-use."
+          ],
+          "analysis": "To jest blok, który może nie zmienił się dziś rano, ale nadal wyznacza kierunek rządowej opowieści i potencjalnego sporu sejmowego.",
+          "whyItMatters": "W polityce publicznej liczy się nie tylko to, co nowe dziś, ale też to, co za chwilę wejdzie w formalny bieg.",
+          "sources": [
+            {
+              "title": "KPRM",
+              "url": "https://www.gov.pl/web/premier/sprawiedliwy-system-podatkowy---propozycje-zmian"
+            },
+            {
+              "title": "KPRM",
+              "url": "https://www.gov.pl/web/premier/przyspieszamy-strategiczne-inwestycje-i-wzmacniamy-ochrone-dzialalnosci-rolniczej"
+            },
+            {
+              "title": "KPRM",
+              "url": "https://www.gov.pl/web/premier/projekt-uchwaly-rady-ministrow-w-sprawie-zmiany-programu-fundusze-europejskie-dla-nowoczesnej-gospodarki-20212029"
+            }
+          ],
+          "tags": [
+            "Polityka"
+          ],
+          "ttsText": "Najmocniejszy krajowy spór nadal kręci się wokół podatków, infrastruktury i dual-use. KPRM proponuje podniesienie pierwszego progu PIT do 130 tys. zł, nową stawkę 24 procent między 130 tys. a 150 tys. zł oraz wyższy CIT dla największych firm. KPRM przyjęła też projekt przyspieszający strategiczne inwestycje i ustawę wzmacniającą ochronę działalności rolniczej, a KPRM rozszerza FENG o technologie obronne i dual-use. To jest blok, który może nie zmienił się dziś rano, ale nadal wyznacza kierunek rządowej opowieści i potencjalnego sporu sejmowego. W polityce publicznej liczy się nie tylko to, co nowe dziś, ale też to, co za chwilę wejdzie w formalny bieg.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "sprawy-zagraniczne",
+      "title": "Sprawy zagraniczne",
+      "summary": "Poza Polską ruch idzie jednocześnie przez sądy i sankcje. Jedno przenosi spór do ekstradycji, drugie do finansów i dyplomacji.",
+      "articles": [
+        {
+          "id": "sprawy-zagraniczne-1-nord-stream-wchodzi-w-etap-zatrzymania",
+          "section": "Sprawy zagraniczne",
+          "title": "Nord Stream wchodzi w etap zatrzymania",
+          "lead": "Chorwacja zatrzymała podejrzanego, więc Nord Stream przechodzi z watcha do procedury sądowo-ekstradycyjnej.",
+          "facts": [
+            "AP podaje, że chorwacki sędzia zarządził zatrzymanie Ukraińca poszukiwanego przez Niemcy w związku z eksplozjami Nord Stream.",
+            "Ten sam materiał AP mówi, że podejrzany czeka teraz na postępowanie ekstradycyjne, a niemieccy prokuratorzy łączą go z grupą, która miała podłożyć ładunki w pobliżu Bornholmu."
+          ],
+          "analysis": "To przesuwa temat z poziomu wieloletnich domysłów do realnego procesu sądowego, choć nadal bez finału i bez prawomocnego rozstrzygnięcia.",
+          "whyItMatters": "Dla Europy to sprawa energii, bezpieczeństwa i odpowiedzialności, czyli dokładnie tej mieszanki, która lubi wracać w najmniej wygodnym momencie.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/b1389f14fd31caa21f9e4596c58c7d41"
+            }
+          ],
+          "tags": [
+            "Sprawy zagraniczne"
+          ],
+          "ttsText": "Chorwacja zatrzymała podejrzanego, więc Nord Stream przechodzi z watcha do procedury sądowo-ekstradycyjnej. AP podaje, że chorwacki sędzia zarządził zatrzymanie Ukraińca poszukiwanego przez Niemcy w związku z eksplozjami Nord Stream. Ten sam materiał AP mówi, że podejrzany czeka teraz na postępowanie ekstradycyjne, a niemieccy prokuratorzy łączą go z grupą, która miała podłożyć ładunki w pobliżu Bornholmu. To przesuwa temat z poziomu wieloletnich domysłów do realnego procesu sądowego, choć nadal bez finału i bez prawomocnego rozstrzygnięcia. Dla Europy to sprawa energii, bezpieczeństwa i odpowiedzialności, czyli dokładnie tej mieszanki, która lubi wracać w najmniej wygodnym momencie.",
+          "priority": "High"
+        },
+        {
+          "id": "sprawy-zagraniczne-2-bliski-wschod-nadal-bez-ulgi",
+          "section": "Sprawy zagraniczne",
+          "title": "Bliski Wschód nadal bez ulgi",
+          "lead": "Sankcje USA i kolejna AP-owa runda napięcia nie dają dziś sygnału deeskalacji.",
+          "facts": [
+            "Treasury nakłada sankcje na dziesięć osób z sieci przerzucającej gotówkę do Hizballah między Libanem, Turcją, ZEA i Iranem.",
+            "AP dokłada do tego tło o odrzuceniu amerykańskich gróźb przez Iran, krytyce projektu osadniczego na Zachodnim Brzegu oraz kolejnym masowym pogrzebie w Gazie."
+          ],
+          "analysis": "To jest raczej dzień kolejnych tarć niż dzień przełomu.",
+          "whyItMatters": "Jeśli słuchacz ma tylko minutę, ta sekcja mówi mu jedno: region dalej nie schodzi z trybu kryzysowego.",
+          "sources": [
+            {
+              "title": "Treasury",
+              "url": "https://home.treasury.gov/news/press-releases/sb0611"
+            },
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/bbc5df71e56f000515edef0817468c9d"
+            }
+          ],
+          "tags": [
+            "Sprawy zagraniczne"
+          ],
+          "ttsText": "Sankcje USA i kolejna AP-owa runda napięcia nie dają dziś sygnału deeskalacji. Treasury nakłada sankcje na dziesięć osób z sieci przerzucającej gotówkę do Hizballah między Libanem, Turcją, ZEA i Iranem. AP dokłada do tego tło o odrzuceniu amerykańskich gróźb przez Iran, krytyce projektu osadniczego na Zachodnim Brzegu oraz kolejnym masowym pogrzebie w Gazie. To jest raczej dzień kolejnych tarć niż dzień przełomu. Jeśli słuchacz ma tylko minutę, ta sekcja mówi mu jedno: region dalej nie schodzi z trybu kryzysowego.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "technologia",
+      "title": "Technologia",
+      "summary": "Technologia dziś nie ma własnego fajerwerku. Nadal żyje głównie zgodnością, finansowaniem i bezpieczeństwem, a nie nową premierą produktu.",
+      "articles": [
+        {
+          "id": "technologia-1-ai-act-bez-nowego-zwrotu",
+          "section": "Technologia",
+          "title": "AI Act bez nowego zwrotu",
+          "lead": "Nie ma dziś nowej interpretacji ani nowego terminu, który zmieniałby obowiązki z art. 50 AI Act.",
+          "facts": [
+            "European Commission nadal przypomina, że obowiązki transparentności zaczęły obowiązywać w sierpniu 2026 roku.",
+            "Ministerstwo Cyfryzacji nadal mówi o oznaczaniu treści generowanych lub modyfikowanych przez AI i o obowiązku informowania o interakcji z AI."
+          ],
+          "analysis": "To ważny temat compliance, ale bez świeżego zwrotu regulacyjnego nie ma sensu go sztucznie pompować.",
+          "whyItMatters": "W briefie mobilnym lepiej rozróżnić stały obowiązek od prawdziwej zmiany.",
+          "sources": [
+            {
+              "title": "European Commission",
+              "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+            },
+            {
+              "title": "Ministerstwo Cyfryzacji",
+              "url": "https://www.gov.pl/web/cyfryzacja/ai-act--co-sie-zmienilo-2-sierpnia-2026-roku"
+            }
+          ],
+          "tags": [
+            "Technologia"
+          ],
+          "ttsText": "Nie ma dziś nowej interpretacji ani nowego terminu, który zmieniałby obowiązki z art. 50 AI Act. European Commission nadal przypomina, że obowiązki transparentności zaczęły obowiązywać w sierpniu 2026 roku. Ministerstwo Cyfryzacji nadal mówi o oznaczaniu treści generowanych lub modyfikowanych przez AI i o obowiązku informowania o interakcji z AI. To ważny temat compliance, ale bez świeżego zwrotu regulacyjnego nie ma sensu go sztucznie pompować. W briefie mobilnym lepiej rozróżnić stały obowiązek od prawdziwej zmiany.",
+          "priority": "High"
+        },
+        {
+          "id": "technologia-2-dual-use-nadal-trzyma-technologie-panstwa",
+          "section": "Technologia",
+          "title": "Dual-use nadal trzyma technologię państwa",
+          "lead": "Jeśli dziś szukać technologicznego konkretu państwa, to nadal jest nim dual-use i finansowanie infrastruktury.",
+          "facts": [
+            "KPRM przyjęła projekt przyspieszający inwestycje drogowe, kolejowe, lotnicze, morskie i przeciwpowodziowe.",
+            "KPRM rozszerza FENG o technologie obronne i dual-use."
+          ],
+          "analysis": "To pokazuje, że technologia w polityce państwa coraz częściej oznacza odporność, logistykę i przemysł, a nie samą nowinkę.",
+          "whyItMatters": "Dla rynku i administracji to sygnał, gdzie będą szły pieniądze i uwaga rządu.",
+          "sources": [
+            {
+              "title": "KPRM",
+              "url": "https://www.gov.pl/web/premier/przyspieszamy-strategiczne-inwestycje-i-wzmacniamy-ochrone-dzialalnosci-rolniczej"
+            },
+            {
+              "title": "KPRM",
+              "url": "https://www.gov.pl/web/premier/projekt-uchwaly-rady-ministrow-w-sprawie-zmiany-programu-fundusze-europejskie-dla-nowoczesnej-gospodarki-20212029"
+            }
+          ],
+          "tags": [
+            "Technologia"
+          ],
+          "ttsText": "Jeśli dziś szukać technologicznego konkretu państwa, to nadal jest nim dual-use i finansowanie infrastruktury. KPRM przyjęła projekt przyspieszający inwestycje drogowe, kolejowe, lotnicze, morskie i przeciwpowodziowe. KPRM rozszerza FENG o technologie obronne i dual-use. To pokazuje, że technologia w polityce państwa coraz częściej oznacza odporność, logistykę i przemysł, a nie samą nowinkę. Dla rynku i administracji to sygnał, gdzie będą szły pieniądze i uwaga rządu.",
+          "priority": "High"
+        }
+      ]
+    }
+  ],
+  "audioArtifacts": [
+    {
+      "variant": "female-piper",
+      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-08-21-1016/audio/female-piper/podcast.mp3"
+    }
+  ]
+}
