@@ -1,3 +1,11 @@
+# 2026-08-24 18:01
+
+- Watch whether Météo-France extends or cancels the current orange thunderstorm alerts.
+- Watch whether MON publishes fuller details on the Piorun contract and delivery timetable.
+- Watch whether Treasury or Iranian sources add fresh sanctions or counterstatements.
+- Watch whether Canada or the White House publish the next round of tariff or retaliation details.
+- Watch whether New Zealand advances the Online Safety Bill timetable or changes the age threshold.
+
 # 2026-08-24 15:00
 
 - Watch whether the prokuratura in Kraków confirms further measures or custody details in the Solna case.
