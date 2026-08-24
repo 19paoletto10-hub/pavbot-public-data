@@ -4,6 +4,11 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track ChatGPT o3 retirement impact | OpenAI set 2026-08-26 as the ChatGPT cutoff for o3, so saved workflows and model defaults may break or shift suddenly | Watch model picker behavior, saved task settings and user-facing migration notes | Open |
+| High | Track Thomson Reuters Thomson rollout | Thomson Reuters launched its first proprietary LLM, so the key question is whether it becomes a real customer-facing model or mostly a brand wrapper | Watch product access, workflow coverage and early customer feedback | Open |
+| High | Track Anthropic RSP v3.4 adoption | The updated threshold language is now live, and the real signal is whether it changes release timing or public interpretation | Watch follow-up commentary, external review notes and future model gating | Open |
+| High | Track General Intuition robotics round | The $6B valuation talk is a major physical-AI signal, but it still needs closure and deployment proof | Watch round close, compute spend and robotics embodiment milestones | Open |
+| High | Track Hugging Face sale talks | A possible sale would reshape the AI developer infrastructure layer and could change neutrality expectations | Watch buyer identity, valuation confirmation and any product/roadmap statements | Open |
 | High | Track OpenRouter acquisition close | Stripe's deal could turn routing into a core AI infra layer and reset neutrality expectations | Watch close terms, integration details and whether token pricing changes | Open |
 | High | Track OpenAI privacy and teen stack | ZDR, Private Safety Processing and Teens are now bundled safety surfaces, not separate stories | Watch rollout scope, customer defaults and family-safety controls | Open |
 | High | Track Astra cyber gating | OpenAI's threshold language suggests release timing may now depend on internal cyber risk gates | Watch the technical paper, monitoring changes and whether the guardrails spread to public products | Open |

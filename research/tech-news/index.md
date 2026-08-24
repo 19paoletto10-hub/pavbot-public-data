@@ -1,28 +1,18 @@
 # Topic Index: tech-news
 
-Last updated: 2026-08-21
+Last updated: 2026-08-24
 
 ## Current Understanding
 
-Wieczorny run z 2026-08-21 domyka dzień przesunięciem z browser stacku na repo-native integracje i jawniejsze governance. OpenAI otwiera Codex Cloud na GitLab beta i jednocześnie ustawia termin wycofania GPT-5.4 oraz GPT-5.4 mini z Codex na 2026-08-31, więc temat model lifecycle management staje się tak samo ważny jak sama jakość modelu.
+Wieczorny run z 2026-08-24 przesuwa temat z modelowego rollout'u na lifecycle management i produkcyjne agent surfaces. OpenAI opisuje ChatGPT Work jako sposób delegowania realnej pracy, a jednocześnie wycofuje o3 i GPT-4.5 z ChatGPT na 2026-08-26. To znaczy, że model retirement, workspace controls i approval flows są już częścią tej samej historii produktu, a nie osobnymi wątkami.
 
-Anthropic dokłada do tego formalny sierpniowy risk report z aktualizacją progów dla automatyzacji AI R&D oraz nowych biologicznych i chemicznych weapon thresholds, a osobny postmortem o trzech incydentach w cybersecurity evals pokazuje, jak szybko misconfiguration potrafi zamienić symulację w realny attack surface.
+Anthropic z kolei robi z bezpieczeństwa operacyjny system. Wersja 3.4 Responsible Scaling Policy revises threshold dla automated R&D oraz novel chemical/biological weapons, a sierpniowy Risk Report jest już jawnie powiązany z coverage date i redactions. Równolegle firma rozszerza AI-for-Science na rare disease research grants i pokazuje w matematyce, że długie, subagentowe workflowy naprawdę potrafią utrzymać złożony problem przez miliony tokenów.
 
-Google z kolei rozszerza consumer AI z upsellu Gemini do funkcji dostępności: Pixel 11 dostaje sign-to-text dla ASL w Live Transcribe i Gboard. To przesuwa uwagę z „AI jako feature” na „AI jako praktyczne wsparcie komunikacji”.
+Po stronie profesjonalnych platform Thomson Reuters zaczyna budować własny model Thomson i osadza go w CoCounsel oraz guided workflows dla legal, tax i risk. To mocny sygnał, że incumbenci nie chcą już tylko kupować frontier API, ale chcą kontrolować cały trust stack.
 
-Community signal nadal jest spójny z ostatnimi dniami. HN i Product Hunt premiują dziś local-first AI, coding agents, scoped access i lekkie runtime'y, więc dzisiejsze newsy są raczej kolejną warstwą tego samego stacku niż zmianą kierunku.
+Kapitał nadal płynie do robotyki i core infra. General Intuition ma negocjować rundę przy wycenie 6 mld USD, a Hugging Face jest podobno w rozmowach o sprzedaży przy wycenie 13 mld USD lub wyżej. Community signal z HN i Product Hunt pozostaje spójny: wygrywają control surfaces, spend tracking, browser agents, watermarking i produkty infrastrukturalne, a nie ogólny chatbot hype.
 
-Run z 2026-08-21 przesuwa oś z samych modeli na pełny agentowy stack i jego governance. OpenAI startuje AI Futures jako osobny kanał myślenia o prawach, autonomii i koncentracji władzy, a równolegle pcha ChatGPT i Codex głębiej do przeglądarki: Chrome extension, browser history, tab context, Apple Messages i wygaszanie Atlasu pokazują, że browser-based work staje się jednym z głównych surfaces.
-
-Google odpowiada po dwóch stronach: Gemini w Chrome na Androidzie trafia do wszystkich użytkowników w USA, a AI Max dostaje narzędzia do testowania budżetów, ROI i kontroli brand/location. To razem wygląda jak ruch od „AI jako model” do „AI jako domyślny interfejs i mierzalny lejek reklamowy”.
-
-Po stronie adopcji OpenAI zaczyna odzyskiwać teren w biznesie według Ramp, a Stampli pokazuje, że ChatGPT Work i Codex skracają launch production z tygodni do dni. Anthropic z kolei wzmacnia ślad AI-for-science: protein design i analytical chemistry sugerują, że model wchodzi do bardziej wymagających workflowów niż tylko coding. Community signal z HN i Product Hunt nadal premiuje browser agents, security i workflow tooling, a nie sam model hype.
-
-Dzisiejszy run z 2026-08-20 przesuwa oś z samych premier modeli na routing, prywatność i dystrybucję. Stripe bierze OpenRouter, więc multi-model token routing staje się osobną warstwą infrastruktury, a nie tylko dodatkiem do endpointów.
-
-OpenAI składa ZDR, Private Safety Processing, ChatGPT for Teens i pacing model development wokół cyber w jeden pakiet kontroli. To sugeruje, że regulacja, age gating i monitoring across interactions są już częścią product design, a nie tylko policy appendix.
-
-Anthropic watermarking spotyka obejścia, Google nadal otwiera Play Store dla rival stores, a Linear i Etched pokazują, że adoption i infra capex remain hot. Community signal nadal faworyzuje praktyczne surfaces, ale teraz wygrywają te, które potrafią udowodnić provenance, routing i realne użycie.
+Wieczorny run z 2026-08-21 nadal pozostaje ważnym tłem, ale dzisiejsze źródła przesuwają akcent dalej: z browser stacku na lifecycle modeli, z ogólnego governance na wersjonowane progi bezpieczeństwa i z model-first narrative na trust-first, workflow-first productization.
 
 Wieczorny run z 2026-08-13 przesuwa oś z samych modeli w stronę natywnych runtime’ów. Google publikuje Gemini 3 Flash Preview i wypycha go do Gemini CLI, OpenAI pokazuje preview desktopowego Codex na Linuxie, a DeepSeek wypuszcza Harness developer preview razem z GA dla V4 Pro. Wspólny wzór to agentowe workflowy pakowane jako terminal, desktop i harness, a nie tylko API albo benchmark.
 
