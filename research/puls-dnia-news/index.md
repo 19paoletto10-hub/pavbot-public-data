@@ -2,7 +2,7 @@
 
 ## Current State
 
-Slot 2026-08-24 18:01 przesuwa feed w stronę transportowych incydentów w Polsce, umowy na Pioruny, Ukrainy, Iranu, Kanady, Nowej Zelandii oraz alertów pogodowych i klimatycznych we Francji i na oceanach.
+Slot 2026-08-24 21:01 przesuwa feed w stronę świeżych incydentów bezpieczeństwa w Polsce, follow-upu Piesiewicza, transakcji Trumpa, amerykańskiej presji finansowej na Iran, brytyjskich spraw karnych, pożaru pod Reno, recallu Tesli w Chinach i słabnącego monsunu w Indiach.
 
 ## Data Shape
 
@@ -25,4 +25,4 @@ The newest valid JSON is shown as paired cards under `Dzisiaj`. Tapping a card o
 - Keep at least two `Polska` or `Polityka` items and at least two `Świat` items to protect the home feed balance.
 - Prefer operational alerts, public-safety incidents, geopolitics and major economy moves over softer feature content.
 - Favor stories with concrete official or primary links when they are available alongside TVN24, BBC or CNN.
-- Current emphasis should stay on transport safety, defense procurement, Ukraine war updates, sanctions pressure, platform policy changes and weather or climate alerts.
+- Current emphasis should stay on transport safety, political follow-ups, sanctions pressure, major product recalls, wildfire alerts and weather or climate risks.

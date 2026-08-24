@@ -1,3 +1,13 @@
+# 2026-08-24 21:01
+
+- Watch whether policja albo prokuratura poda więcej szczegółów po wypadku w Kałuszynie.
+- Watch whether TVN24 lub sam Piesiewicz doprecyzuje certyfikat, adres i źródło zegarka.
+- Watch whether Treasury poda pierwsze konkretne banki lub podmioty objęte kampanią przeciw Iranowi.
+- Watch whether IMGW skróci lub rozszerzy nocne ostrzeżenia o mgłę.
+- Watch whether Reno albo Nevada officials podadzą nowy bilans ewakuacji i zasięgu pożaru.
+- Watch whether BBC lub UK authorities doprecyzują tożsamość Brytyjczyka walczącego po stronie Rosji.
+- Watch whether IMD lub Reuters podniosą prognozę deficytu monsunu w Indiach.
+
 # 2026-08-24 18:01
 
 - Watch whether Météo-France extends or cancels the current orange thunderstorm alerts.
