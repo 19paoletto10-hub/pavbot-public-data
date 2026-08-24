@@ -2,7 +2,7 @@
 
 ## Current State
 
-Slot 2026-08-24 06:01 przesuwa feed od poprzedniego bloku burzowego do krajowych wypadków i incydentów, nowego sporu wokół weta prezydenckiego, tarć handlowych USA-Kanada oraz pakietu BBC o Grecji, Tajlandii, Bałtyku, DR Kongo, Shein, Tesli i TikToku.
+Slot 2026-08-24 09:02 przesuwa feed do krakowskich incydentów, sprawy Zondacrypto/PKOl, kanadyjskiego sporu celnego, ukraińskiego szczytu NB8, bałtyckiego cyklonu oraz nowych ruchów na YouTube, TikToku i Shein.
 
 ## Data Shape
 
@@ -25,4 +25,4 @@ The newest valid JSON is shown as paired cards under `Dzisiaj`. Tapping a card o
 - Keep at least two `Polska` or `Polityka` items and at least two `Świat` items to protect the home feed balance.
 - Prefer operational alerts, public-safety events, geopolitics and major economy moves over softer feature content.
 - Favor stories with concrete official or primary links when they are available alongside TVN24, BBC or CNN.
-- Current emphasis should stay on alert logic, public-safety incidents, transatlantic trade pressure, EV and platform regulation, and concrete world disruption rather than softer feature content.
+- Current emphasis should stay on alert logic, public-safety incidents, transatlantic trade pressure, platform regulation, Kyiv diplomacy and concrete world disruption rather than softer feature content.

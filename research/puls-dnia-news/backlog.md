@@ -1,5 +1,13 @@
 # Puls Dnia News Backlog
 
+# 2026-08-24 09:02
+
+- Watch whether Kraków police or prokuratura add charges, toxicology detail or witness statements.
+- Watch whether RCB or IMGW change the hydrological monitoring status in the next map refresh.
+- Watch whether Canada, the White House or CNN add fresh official detail on the tariff escalation.
+- Watch whether the KPRP Ukrainy or the Vatican/Moscow track adds a follow-up statement.
+- Watch whether YouTube, TikTok or Shein publish follow-up statements or formal filing details.
+
 # 2026-08-24 06:01
 
 - Watch whether IMGW or RCB escalate, narrow, or cancel the hydrological warnings.
