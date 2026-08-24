@@ -1,0 +1,19 @@
+# Brief mobilny. 24 sierpnia 2026, godzina 10:16
+
+Dobry poranek. Dziś telefon znowu nie daje spokoju, bo w jednym wydaniu zmieściły się pogoda, budżet, Ukraina, Gaza i jeszcze instrukcja obsługi sztucznej inteligencji. Kto powiedział, że poniedziałek nie może być wielowątkowy, ten chyba nie widział naszego briefu.
+
+W Polsce RCB nie pokazuje już ostrzeżeń meteorologicznych, ale hydrologia nadal trzyma poziom napięcia. Wezbranie z przekroczeniem stanów ostrzegawczych obowiązuje w Dolnośląskiem i Wielkopolskiem do 25 sierpnia, a susza hydrologiczna obejmuje cały kraj. Do tego RCB notuje trzy pożary lasów i przedłuża stopnie alarmowe CHARLIE, BRAVO-CRP i BRAVO do 31 sierpnia. Dobra wiadomość jest taka, że nie trzeba dziś patrzeć w niebo jak w ekran z powiadomieniami. Zła jest taka, że woda i lasy nadal każą się pilnować.
+
+Jest też konkretny ruch infrastrukturalny. Ministerstwo Infrastruktury zapowiedziało dziś briefing w Gdyni przy okazji podpisania umowy na trzeci tor i nowe przystanki na trójmiejskim odcinku linii 201. To brzmi mniej dramatycznie niż cyklon czy wojna, ale w praktyce właśnie takie podpisy robią różnicę między planem a cegłą, szyną i realnym rozkładem.
+
+Po stronie polityki rząd stawia budżet 2027 na trzech nogach: bezpieczeństwie, ochronie zdrowia i inwestycjach. KPRM mówi o pięciu procentach PKB na obronność, siedemnastu miliardach złotych więcej na zdrowie i zmianach w PIT. To jest klasyczny pakiet: dużo państwa, dużo odpowiedzialności i mało miejsca na polityczne fajerwerki. Na razie publiczna strona KPRM nadal nie pokazuje nic świeższego niż materiały z 21 sierpnia, więc nie warto udawać, że komunikat sam się dopisał.
+
+Za granicą pogoda też zrobiła swoje. Cyklon nad krajami bałtyckimi zabił dwie osoby, zostawił bez prądu około pół miliona ludzi na Łotwie i Litwie, a na północnym wschodzie Polski pozbawił zasilania ponad sto tysięcy odbiorców. Tymczasem w Ameryce Północnej USA i Kanada zeszły jeszcze niżej w wojnę celną. Waszyngton nałożył pięćdziesięcioprocentowe cła na import wart 20 miliardów dolarów, a Ottawa zapowiada odwet od 8 września. Czyli nawet handel dziś brzmi jak rozmowa przy zamkniętych drzwiach, tylko z większą liczbą zer.
+
+W Ukrainie rocznica niepodległości stała się okazją do demonstracji wsparcia. Do Kijowa przyjechali Andy Burnham i inni europejscy liderzy, a Londyn ma odtajnieniem informacji o brytyjskich komponentach w pocisku SCALP pomóc w dalszej produkcji tej broni w Ukrainie. To ważne, bo wsparcie z sojuszu przestaje być tylko deklaracją, a zaczyna przypominać projekt przemysłowy. Jednocześnie Wołodymyr Zełenski publicznie opisał spór z odwołanym ministrem obrony Mychajłem Fedorowem i znów zwrócił uwagę na braki w pociskach Patriot. Innymi słowy: zewnętrzne wsparcie jest realne, ale wewnętrzne napięcie też nie zniknęło.
+
+Na Bliskim Wschodzie mechanika pokoju nadal działa bardzo wolno. Oficerowie z Ugandy i Burundi rozmawiali w Izraelu o wysłaniu sił do Gazy, a jednocześnie na Zachodnim Brzegu zginął siedemnastoletni Palestyńczyk po starciu z osadnikami. Turcja chce też międzynarodowego nakazu aresztowania Netanjahu. To nie jest jedna historia, tylko kilka równoległych, które razem mówią jedno: region nadal jest daleki od stabilizacji, nawet jeśli pojawiają się nowe formaty bezpieczeństwa.
+
+Na koniec technologia, czyli ten obszar, który kiedyś miał być tylko wygodny, a dziś wymaga tabelki zgodności. Komisja Europejska zaczęła egzekwować AI Act, a polskie Ministerstwo Cyfryzacji przypomina, że treści generowane albo modyfikowane przez AI trzeba oznaczać jasno i w sposób czytelny także dla maszyn. Czasem najbardziej futurystyczna rzecz dnia brzmi po prostu: proszę podpisać, co zrobiła sztuczna inteligencja.
+
+Tak wygląda poranny obraz 24 sierpnia: Polska między suszą, alarmami i infrastrukturą, Europa między cyklonem a cłami, a świat między Kijowem, Gazą i AI Act. Krótko mówiąc, poniedziałek nie odpuścił nikomu, więc brief też nie odpuszcza.
