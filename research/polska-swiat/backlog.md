@@ -4,10 +4,15 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track Ukraine Independence Day support package | AP, President of Ukraine and Consilium show a new allied package in Kyiv with missile-production support and a winter air-defense frame | Watch AP, President of Ukraine, Consilium and French/UK follow-ups for delivery timing, financing and any reaction from Moscow | Open |
+| High | Track Iran sanctions and rial collapse | AP reports a record-low rial and a fresh sanctions cycle that could spill into Hormuz, oil and regional diplomacy | Watch AP, Treasury, Iran MFA, China, Oman and shipping data for real economic and maritime effects | Open |
+| Medium | Track Nord Stream arrest and Polish security reaction | The Croatian arrest revives the sabotage and counterintelligence thread that keeps touching Poland, Germany and Ukraine | Watch German prosecutors, Polish officials, Onet/RMF24 and extradition steps for procedural updates | Open |
+| Medium | Track Canada-U.S. tariff escalation | AP says Ontario may cut electricity and critical minerals while Washington escalates tariffs, turning a trade dispute into an energy-security story | Watch AP, Ottawa, Ontario and U.S. trade statements for retaliation, exceptions and market spillovers | Open |
+| Low | Track RCB hydrology and alarm levels | RCB has no meteo alerts today, but hydrological warning and alarm levels still matter for practical safety | Watch the next RCB and IMGW reports for any change in water risk or alarm status | Open |
 | High | Track 21 August Kryvyi Rih mall attack | AP says Russian drones killed 14 and wounded 121 in a double-tap strike on a shopping mall in Kryvyi Rih | Watch AP, Guardian, Ukrainian local officials and President's Office for casualty updates, air-defense requests and any Western response | Open |
 | High | Track Germany weapons cache near Berlin | AP and Guardian say Germany found a weapons stash near Berlin that may have been meant for attacks, with a suspect arrested in Romania | Watch Bundesanwaltschaft, Interior Ministry, Romanian extradition and any confirmed link to Russian services | Open |
 | Medium | Track Australia foreign interference charge | AFP charged a Russian-Australian dual national in Brisbane over alleged transfer of Ukrainian military intel to Russian agents | Watch AFP, ASIO and court updates; keep the case separate from broader espionage claims until charges are clearer | Open |
-| Medium | Track RCB 21 August storms and Parczew siren drill | RCB now combines a 21/22 August storm alert with a 22 August siren training in Parczew | Recheck RCB/IMGW before audio or push; note the drill separately from any real warning | Open |
+| Medium | Track RCB 21 August storms and Parczew siren drill | RCB now combines a 21/22 August storm alert with a 22 August siren training in Parczew | Recheck RCB/IMGW before audio or push; note the drill separately from any real warning | Done |
 | High | Track 21 August Kyiv, Romania Neptun Deep and eastern-flank response | Guardian raises Kyiv toll and describes Romania destroying an explosive marine drone near Neptun Deep | Watch Guardian/AP/Reuters mirrors, Romania MoD, NATO/EC, Ukrainian air force and Polish MON/DORSZ for attribution, damage, Patriot decisions and follow-up incidents | Open |
 | High | Track ABW Serhij P. attempted-assassination case | Polish outlets citing ABW/PAP say a 63-year-old Ukrainian suspect was detained in Warsaw after a failed Irpin bombing attempt allegedly on behalf of Russian services | Watch ABW, Prokuratura Krajowa, court or extradition decisions and Ukrainian services; keep language process-based and avoid presuming guilt | Open |
 | High | Track Białka Kolonia rail incident | Onet says police, ABW, CBŚP and SKW are checking wires and a flash near railway tracks; no explosives or track damage confirmed initially | Watch police/prosecutor/PKP PLK updates and distinguish confirmed facts from the sabotage hypothesis | Open |
@@ -162,6 +167,8 @@
 | Medium | Track Bangkok fire accountability | AP raised death toll to 32 and families are seeking compensation while exits/cause remain under investigation | Watch AP and Thai authorities for investigation, compensation and critical patient updates | Open |
 
 ## Review Notes
+
+- 2026-08-24: Evening research added the Ukraine Independence Day coalition package, Iran sanctions/rial collapse, Nord Stream arrest, Canada-U.S. tariff escalation and a quiet RCB hydrology follow-up. The 21/22 August RCB storm and siren item is now done.
 
 - 2026-08-21: Morning research created a material update. Strongest sources
   were Guardian for Kyiv/Fedorov/Romania, Polsat/RMF/WP/Onet for Polish

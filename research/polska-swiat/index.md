@@ -1,8 +1,10 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-08-21
+Last updated: 2026-08-24
 
 ## Current Understanding
+
+Po wieczornym runie 24 sierpnia główny ciężar przesuwa się na Kijów: AP, oficjalne źródła Ukrainy i Rady Europejskiej opisują 35-lecie niepodległości Ukrainy z udziałem europejskich liderów, decyzję Londynu o udostępnieniu informacji o komponentach SCALP oraz dalsze wzmacnianie koalicji chętnych. Równolegle Iran wchodzi w nową falę presji sankcyjnej z rekordowo słabym rialem, a w Polsce odżywa wątek Nord Stream, choć krajowo RCB pokazuje dziś brak ostrzeżeń meteorologicznych przy utrzymanej hydrologii i stopniach alarmowych.
 
 Po wieczornym runie 21 sierpnia główny obraz przesuwa się z samego ataku na
 Kijów na Kryvyi Rih: AP podaje 14 zabitych i 121 rannych po uderzeniu dronów
