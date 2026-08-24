@@ -1,5 +1,13 @@
 # Puls Dnia News Backlog
 
+# 2026-08-24 06:01
+
+- Watch whether IMGW or RCB escalate, narrow, or cancel the hydrological warnings.
+- Watch whether police or prokuratura add firmer details on Tomaszów Mazowiecki or the powiat zambrowski case.
+- Watch whether Sejm or KPRP confirm the timetable and whip positions around the veto vote.
+- Watch whether Canada, the White House, or CNN add a fresh official response to the tariff escalation.
+- Watch whether Shein, Tesla, or TikTok publish follow-up statements or whether regulators extend the pressure.
+
 # 2026-08-21 18:02
 
 - Watch whether IMGW or RCB escalate the Podkarpacie / Śląsk warning block or add outage reports.

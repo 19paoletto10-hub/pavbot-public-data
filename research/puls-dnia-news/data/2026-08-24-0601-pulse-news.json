@@ -1,0 +1,489 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-08-24",
+  "runTime": "06:01",
+  "status": "Material update",
+  "headline": "Wypadki, weto i spór USA-Kanada przesuwają poranny Puls Dnia",
+  "summary": "Poranny slot z 24 sierpnia przesuwa feed od starego bloku burzowego do świeżych krajowych incydentów, nowego sporu o weto prezydenckie, napięć handlowych USA-Kanada oraz mocnych leadów BBC o Grecji, Tajlandii, Bałtyku, DR Kongo, Shein, Tesli i TikToku.",
+  "items": [
+    {
+      "id": "polska-tomaszow-lpr",
+      "section": "Polska",
+      "title": "Tomaszów Mazowiecki: auto uderzyło w drzewo",
+      "lead": "Nieprzytomnego kierowcę zabrał śmigłowiec LPR.",
+      "whatHappened": "TVN24 podał, że w Tomaszowie Mazowieckim samochód uderzył w drzewo. Kierowca był nieprzytomny, a na miejsce wezwano śmigłowiec Lotniczego Pogotowia Ratunkowego.",
+      "keyFacts": [
+        "Wypadek dotyczy Tomaszowa Mazowieckiego.",
+        "Kierowca był nieprzytomny.",
+        "Transport medyczny przejął śmigłowiec LPR."
+      ],
+      "reactions": [
+        "Służby ratunkowe zareagowały bezpośrednio na ciężki wypadek drogowy.",
+        "Dalsze komunikaty mogą doprecyzować stan kierowcy i przyczynę zdarzenia."
+      ],
+      "whyItMatters": "To świeży sygnał bezpieczeństwa publicznego i ruchu drogowego.",
+      "context": "Poranny feed otwiera się dziś mocniej na lokalne incydenty niż na szerokie tło pogodowe.",
+      "watchNext": [
+        "Sprawdzać, czy policja poda przyczynę wypadku.",
+        "Obserwować, czy pojawią się informacje o stanie kierowcy."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Samochód uderzył w drzewo",
+          "url": "https://tvn24.pl/lodz/tomaszow-mazowiecki-samochod-uderzyl-w-drzewo-nieprzytomnego-kierowce-zabral-smiglowiec-lpr-st9202584?source=rss"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "wypadek",
+        "LPR",
+        "bezpieczeństwo"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "polska-zambrow-postrzelona",
+      "section": "Polska",
+      "title": "Auto wjechało w ogrodzenie, są zatrzymania",
+      "lead": "Kierowca miał ranę postrzałową.",
+      "whatHappened": "TVN24 informuje o zdarzeniu w powiecie zambrowskim, gdzie samochód wjechał w ogrodzenie. Kierowca miał ranę postrzałową, a w sprawie doszło do zatrzymań.",
+      "keyFacts": [
+        "Incydent miał miejsce w powiecie zambrowskim.",
+        "Kierowca miał ranę postrzałową.",
+        "Policja dokonała zatrzymań."
+      ],
+      "reactions": [
+        "Sprawa wygląda na kryminalną, a nie tylko komunikacyjną.",
+        "Najważniejsze będą ustalenia policji i prokuratury."
+      ],
+      "whyItMatters": "To potencjalnie violentny incydent z bezpośrednim skutkiem dla bezpieczeństwa lokalnego.",
+      "context": "To jeden z ostrzejszych krajowych leadów tego poranka.",
+      "watchNext": [
+        "Śledzić komunikaty policji.",
+        "Sprawdzać, czy prokuratura poda kwalifikację czynu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Auto wjechało w ogrodzenie",
+          "url": "https://tvn24.pl/bialystok/powiat-zambrowski-auto-wjechalo-w-ogrodzenie-kierowca-mial-rane-postrzalowa-st9202389?source=rss"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "bezpieczeństwo",
+        "policja",
+        "Zambrów"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "polityka-veto-kotula",
+      "section": "Polityka",
+      "title": "Kotula podała termin głosowania nad wetem",
+      "lead": "Koalicja chce odrzucić prezydenckie weto.",
+      "whatHappened": "TVN24 podał, że Katarzyna Kotula zapowiedziała próbę odrzucenia prezydenckiego weta i wskazała termin głosowania. To oznacza kolejny krok w krajowym sporze legislacyjnym.",
+      "keyFacts": [
+        "Chodzi o prezydenckie weto do ustawy o statusie osoby najbliższej.",
+        "Kotula podała termin głosowania.",
+        "Spór ma bezpośredni wymiar parlamentarny."
+      ],
+      "reactions": [
+        "Temat może szybko wrócić do politycznej debaty i dyscypliny w koalicji.",
+        "Kolejne głosowanie pokaże, czy obóz rządzący ma większość do odrzucenia weta."
+      ],
+      "whyItMatters": "To test siły większości sejmowej i sygnał, jak rząd chce rozegrać spór z Pałacem Prezydenckim.",
+      "context": "To najważniejszy krajowy wątek stricte polityczny w tym slocie.",
+      "watchNext": [
+        "Sprawdzać termin i wynik głosowania.",
+        "Obserwować reakcje KPRP i klubów parlamentarnych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Spróbują obalić prezydenckie weto",
+          "url": "https://tvn24.pl/polska/to-nie-koniec-ustawy-o-statusie-osoby-najblizszej-katarzyna-kotula-sprobujemy-odrzucic-weto-karola-nawrockiego-st9202474?source=rss"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "weto",
+        "Sejm",
+        "Kotula"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "polityka-usa-kanada-trade-war",
+      "section": "Polityka",
+      "title": "USA i Kanada pogłębiają spór handlowy",
+      "lead": "Trump mówi o korzyściach z bycia stanem USA po fiasku rozmów.",
+      "whatHappened": "CNN Newsroom opisał załamanie rozmów handlowych między USA i Kanadą, po którym weszły nowe cła na kanadyjskie towary. BBC podaje, że Kanada szykuje odwet, a premier Mark Carney mówi o amerykańskiej wojnie handlowej.",
+      "keyFacts": [
+        "Rozmowy handlowe upadły pod koniec tygodnia.",
+        "Weszły nowe cła na około 20 miliardów dolarów kanadyjskich towarów.",
+        "Kanada zapowiada odwet dolar za dolara od 8 września."
+      ],
+      "reactions": [
+        "Ottawa traktuje ruch Waszyngtonu jako bezpośredni atak handlowy.",
+        "Spór zwiększa niepewność dla łańcuchów dostaw i relacji gospodarczych w Ameryce Północnej."
+      ],
+      "whyItMatters": "To jeden z najważniejszych dziś konfliktów polityczno-handlowych między bliskimi sojusznikami.",
+      "context": "CNN dał tu jeden z najmocniejszych sygnałów poranka, a BBC potwierdza główne linie sporu.",
+      "watchNext": [
+        "Śledzić kolejne oficjalne oświadczenia Waszyngtonu i Ottawy.",
+        "Sprawdzać, czy lista taryf lub termin odwetowy ulegną zmianie."
+      ],
+      "sources": [
+        {
+          "title": "CNN Newsroom transcript: Escalating Trade War",
+          "url": "https://transcripts.cnn.com/show/cnr/date/2026-08-23/segment/20"
+        },
+        {
+          "title": "BBC News: Trump says Canada wants benefits of being US state after trade talks collapse",
+          "url": "https://www.bbc.co.uk/news/articles/cx272np7vgyo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "USA",
+        "Kanada",
+        "cła"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "swiat-grecja-upaly",
+      "section": "Świat",
+      "title": "Grecję uderza kolejna fala upałów",
+      "lead": "Termometry mają sięgnąć 40 stopni.",
+      "whatHappened": "TVN24 informuje o kolejnej fali upałów w Grecji. Prognozy wskazują temperatury do 40 stopni Celsjusza, co podnosi ryzyko zdrowotne i pożarowe.",
+      "keyFacts": [
+        "Dotyczy Grecji i południowej Europy.",
+        "Temperatura może dojść do 40 stopni Celsjusza.",
+        "To zwiększa ryzyko upałów i pożarów."
+      ],
+      "reactions": [
+        "Służby i mieszkańcy znów wchodzą w tryb reagowania na ekstremalną pogodę.",
+        "Może to wpływać na turystykę i lokalne ograniczenia."
+      ],
+      "whyItMatters": "To realny alert pogodowo-zdrowotny dla regionu z dużym ruchem turystycznym.",
+      "context": "W dzisiejszym feedzie klimat i bezpieczeństwo znów wracają jako twardy news, nie jako tło.",
+      "watchNext": [
+        "Sprawdzać, czy greckie władze rozszerzą ostrzeżenia.",
+        "Obserwować, czy pojawią się informacje o pożarach albo ewakuacjach."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Grecja. Kolejna fala upałów",
+          "url": "https://tvn24.pl/tvnmeteo/swiat/grecja-kolejna-fala-upalow-termometry-pokaza-do-40-stopni-celsjusza-st9202498?source=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Grecja",
+        "upał",
+        "pogoda"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "swiat-tajlandia-podpalenia",
+      "section": "Świat",
+      "title": "Fala podpaleń na południu Tajlandii",
+      "lead": "Służby mówią o próbie wywołania niepokojów.",
+      "whatHappened": "TVN24 i BBC opisują skoordynowaną falę podpaleń na południu Tajlandii. Wojsko twierdzi, że celem miało być wywołanie zamieszek, a żadna grupa nie przyznała się do ataków.",
+      "keyFacts": [
+        "Ataki były skoordynowane.",
+        "Dotyczyły południa Tajlandii.",
+        "Nie ma oficjalnego przyznania się do odpowiedzialności."
+      ],
+      "reactions": [
+        "Wątek szybko wchodzi do kategorii bezpieczeństwa wewnętrznego.",
+        "Wojsko i policja będą pod presją, by wskazać sprawców i motyw."
+      ],
+      "whyItMatters": "To nie wygląda na pojedynczy incydent, tylko na zorganizowaną próbę destabilizacji.",
+      "context": "BBC World dziś daje kilka mocnych, twardych materiałów o bezpieczeństwie i konflikcie.",
+      "watchNext": [
+        "Sprawdzać, czy pojawi się oficjalny trop operacyjny.",
+        "Obserwować, czy rośnie liczba miejsc objętych atakami."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Fala podpaleń na południu Tajlandii",
+          "url": "https://tvn24.pl/swiat/tajlandia-fala-podpalen-na-poludniu-kraju-celem-ma-byc-wywolanie-niepokojow-st9202456?source=rss"
+        },
+        {
+          "title": "BBC News: Dozens of co-ordinated arson attacks hit southern Thailand",
+          "url": "https://www.bbc.co.uk/news/articles/c8enegx4xy3o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Tajlandia",
+        "bezpieczeństwo",
+        "pożary"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "swiat-baltyk-burze",
+      "section": "Świat",
+      "title": "Litwa i Łotwa po najsilniejszych burzach od 20 lat",
+      "lead": "Setki tysięcy osób zostało bez prądu.",
+      "whatHappened": "TVN24 podał, że Litwę i Łotwę uderzyły najsilniejsze od dwóch dekad burze. Skala zniszczeń przełożyła się na masowe przerwy w dostawach prądu.",
+      "keyFacts": [
+        "Burze objęły Litwę i Łotwę.",
+        "Bez prądu zostały setki tysięcy osób.",
+        "To jeden z najmocniejszych europejskich sygnałów pogodowych w tej rundzie."
+      ],
+      "reactions": [
+        "Operatorzy sieci i lokalne służby muszą skupić się na przywracaniu zasilania.",
+        "Możliwe są dalsze raporty o stratach i zamknięciach infrastruktury."
+      ],
+      "whyItMatters": "Skala awarii pokazuje, jak szybko pogoda może uderzyć w infrastrukturę i codzienne funkcjonowanie państw.",
+      "context": "To dobry kontrapunkt dla polskich ostrzeżeń hydrologicznych w tym samym slocie.",
+      "watchNext": [
+        "Sprawdzać, jak szybko wraca zasilanie.",
+        "Obserwować, czy pojawią się dane o ofiarach albo uszkodzonej infrastrukturze."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Najsilniejsze burze od 20 lat",
+          "url": "https://tvn24.pl/tvnmeteo/swiat/litwa-lotwa-najsilniejsze-burze-od-20-lat-setki-tysiecy-osob-bez-pradu-st9202333?source=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Litwa",
+        "Łotwa",
+        "burze"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "swiat-dr-kongo-m23",
+      "section": "Świat",
+      "title": "DR Kongo i M23 uzgodnili plan rozmów pokojowych",
+      "lead": "Strony spotkały się w Szwajcarii, by ustalić kolejne kroki.",
+      "whatHappened": "BBC podało, że przedstawiciele DR Konga i M23 spotkali się w Szwajcarii, by wypracować kolejne etapy rozmów pokojowych. To nie jest finał konfliktu, ale konkretny sygnał dyplomatyczny.",
+      "keyFacts": [
+        "Spotkanie odbyło się w Szwajcarii.",
+        "Celem było ustalenie kolejnych kroków do rozmów pokojowych.",
+        "Wątek dotyczy konfliktu we wschodnim Kongu."
+      ],
+      "reactions": [
+        "To ostrożny sygnał polityczny, nie gwarancja przełomu.",
+        "Kolejne komunikaty pokażą, czy plan przerodzi się w realny proces."
+      ],
+      "whyItMatters": "Każdy ruch w stronę rozmów może zmieniać bezpieczeństwo regionalne i presję humanitarną.",
+      "context": "BBC World dziś mocno miesza bezpieczeństwo, dyplomację i gospodarkę.",
+      "watchNext": [
+        "Sprawdzać, czy pojawi się harmonogram formalnych negocjacji.",
+        "Obserwować reakcje państw regionu i mediatorów."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: DR Congo and M23 rebels agree roadmap for peace talks",
+          "url": "https://www.bbc.co.uk/news/articles/cre4e1q3wewo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "DR Kongo",
+        "M23",
+        "dyplomacja"
+      ],
+      "priority": "3"
+    },
+    {
+      "id": "gospodarka-shein-ipo",
+      "section": "Gospodarka",
+      "title": "Shein celuje w wycenę blisko 27 mld dolarów",
+      "lead": "Gigant fast fashion szykuje debiut giełdowy w Hongkongu.",
+      "whatHappened": "BBC Business podało, że Shein celuje w wycenę blisko 27 miliardów dolarów przy debiucie giełdowym. Akcje mają zacząć się handlować w Hongkongu 1 września.",
+      "keyFacts": [
+        "Plan dotyczy debiutu w Hongkongu.",
+        "Wycena jest zbliżona do 27 miliardów dolarów.",
+        "Start notowań ma nastąpić 1 września."
+      ],
+      "reactions": [
+        "Rynek dostaje kolejny test popytu na duże oferty z sektora consumer tech i fast fashion.",
+        "Temat może wrócić w kontekście regulacji, marż i łańcucha dostaw."
+      ],
+      "whyItMatters": "To ważny sygnał dla globalnego rynku IPO i wyceny marek e-commerce.",
+      "context": "BBC Business dziś łączy rynek kapitałowy z pytaniami o regulację i konsumenta.",
+      "watchNext": [
+        "Sprawdzać, czy pojawi się finalna cena i popyt inwestorów.",
+        "Obserwować reakcje regulatorów i rynku po debiucie."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Shein aims for almost $27bn valuation in stock market debut",
+          "url": "https://www.bbc.co.uk/news/articles/cdeweewjdxno?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "Shein",
+        "IPO",
+        "Hongkong"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "gospodarka-tesla-recall-china",
+      "section": "Gospodarka",
+      "title": "Chiny wycofują prawie 3 mln Tesli",
+      "lead": "Powodem są ukryte klamki drzwi.",
+      "whatHappened": "BBC podało, że w Chinach wycofywanych jest prawie 3 miliony Tesli z powodu problemu z ukrytymi klamkami drzwi. W tej samej historii pojawiają się także inne marki, co wzmacnia wątek bezpieczeństwa produktów.",
+      "keyFacts": [
+        "Recall dotyczy prawie 3 milionów aut Tesli w Chinach.",
+        "Problem wiąże się z ukrytymi klamkami drzwi.",
+        "Wątek obejmuje też inne marki obecne na rynku chińskim."
+      ],
+      "reactions": [
+        "Sprawa może zwiększyć presję na Teslę i chińskich regulatorów.",
+        "To kolejny sygnał, że jakość i bezpieczeństwo EV pozostają pod ostrym nadzorem."
+      ],
+      "whyItMatters": "To duży, kosztowny i wizerunkowo ważny problem dla jednego z najważniejszych producentów EV.",
+      "context": "BBC Business dorzuca dziś do rynku nie tylko IPO, ale też realny problem bezpieczeństwa produktu.",
+      "watchNext": [
+        "Śledzić reakcję Tesli i chińskiego regulatora.",
+        "Sprawdzać, czy recall rozszerzy się na inne rynki."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Nearly 3 million Teslas recalled in China over hidden door handles",
+          "url": "https://www.bbc.co.uk/news/articles/c4g6ggdg030o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "Tesla",
+        "Chiny",
+        "EV"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "technologia-tiktok-settlement",
+      "section": "Technologia",
+      "title": "TikTok zgadza się na ugodę 400 mln dolarów",
+      "lead": "Sprawa dotyczy prywatności dzieci i danych użytkowników.",
+      "whatHappened": "BBC Technology poinformowało, że TikTok zgodził się na ugodę w wysokości 400 milionów dolarów w jednej z największych spraw dotyczących prywatności dzieci. Spór wyrasta z pozwu o gromadzenie danych użytkowników poniżej 13 lat.",
+      "keyFacts": [
+        "Ugoda ma wartość 400 milionów dolarów.",
+        "Sprawa dotyczy prywatności dzieci.",
+        "W tle jest pozew dotyczący danych użytkowników poniżej 13 lat."
+      ],
+      "reactions": [
+        "To utrzymuje wysoką presję regulacyjną na platformy społecznościowe.",
+        "Może być używane jako precedens w kolejnych sporach o dane nieletnich."
+      ],
+      "whyItMatters": "To jeden z największych sygnałów, że prywatność dzieci pozostaje wysokim ryzykiem dla firm technologicznych.",
+      "context": "W technologii feed wraca dziś do twardej regulacji i odpowiedzialności platform, a nie do samego AI.",
+      "watchNext": [
+        "Sprawdzać, czy pojawią się szczegóły wykonania ugody.",
+        "Obserwować, czy regulatorzy rozszerzą presję na inne platformy."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: TikTok to pay $400m to US in one of largest child privacy settlements",
+          "url": "https://www.bbc.co.uk/news/articles/cwyr0l45xjro?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Technologia",
+        "TikTok",
+        "prywatność",
+        "dzieci"
+      ],
+      "priority": "3"
+    },
+    {
+      "id": "alerty-imgw-hydrology",
+      "section": "Alerty",
+      "title": "IMGW trzyma hydrologiczne ostrzeżenia",
+      "lead": "Wyrwa w kanale i przekroczony stan alarmowy podtrzymują ryzyko.",
+      "whatHappened": "TVN24 opisuje wyrwę w kanale i przekroczony stan alarmowy jako aktywny blok ostrzeżeń hydrologicznych IMGW. Oficjalne mapy IMGW i portal hydro IMGW potwierdzają, że monitoring pogodowo-wodny pozostaje aktywny.",
+      "keyFacts": [
+        "Ostrzeżenia dotyczą sytuacji hydrologicznej.",
+        "TVN24 wiąże je z wyrwą w kanale i stanem alarmowym.",
+        "IMGW prowadzi bieżący monitoring na mapach i w portalu hydro."
+      ],
+      "reactions": [
+        "Lokalne służby muszą trzymać gotowość na eskalację lub zmiany komunikatów.",
+        "To wciąż jeden z najważniejszych sygnałów bezpieczeństwa w kraju."
+      ],
+      "whyItMatters": "Ryzyko hydrologiczne może szybko przełożyć się na podtopienia, awarie i ograniczenia lokalne.",
+      "context": "Poranny slot przeszedł z szerokiego bloku burzowego do bardziej precyzyjnego monitoringu hydrologicznego.",
+      "watchNext": [
+        "Sprawdzać, czy IMGW lub RCB podniosą poziom ostrzeżeń.",
+        "Obserwować, czy pojawią się raporty o awariach, zalaniach lub ewakuacjach."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Wyrwa w kanale, przekroczony stan alarmowy",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/wyrwa-w-kanale-przekroczony-stan-alarmowy-sa-ostrzezenia-hydrologiczne-imgw-st9202443?source=rss"
+        },
+        {
+          "title": "IMGW Hydro portal",
+          "url": "https://hydro.imgw.pl/"
+        },
+        {
+          "title": "IMGW METEO dynamic map",
+          "url": "https://meteo.imgw.pl/dyn/?osmet=true"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "IMGW",
+        "hydrologia",
+        "ostrzeżenia"
+      ],
+      "priority": "1"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24: najnowsze RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "TVN24: świat RSS",
+      "url": "https://tvn24.pl/swiat.xml"
+    },
+    {
+      "title": "BBC News: World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "BBC News: Business RSS",
+      "url": "https://feeds.bbci.co.uk/news/business/rss.xml"
+    },
+    {
+      "title": "BBC News: Technology RSS",
+      "url": "https://feeds.bbci.co.uk/news/technology/rss.xml"
+    },
+    {
+      "title": "CNN Newsroom transcript: Escalating Trade War",
+      "url": "https://transcripts.cnn.com/show/cnr/date/2026-08-23/segment/20"
+    },
+    {
+      "title": "CNN Newsroom transcript: U.S. and Canada Escalating Trade Tensions",
+      "url": "https://transcripts.cnn.com/show/cnr/date/2026-08-23/segment/21"
+    },
+    {
+      "title": "IMGW METEO dynamic map",
+      "url": "https://meteo.imgw.pl/dyn/?osmet=true"
+    },
+    {
+      "title": "IMGW Hydro portal",
+      "url": "https://hydro.imgw.pl/"
+    },
+    {
+      "title": "RCB communications",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    }
+  ]
+}
