@@ -2,7 +2,7 @@
 
 ## Current State
 
-Slot 2026-08-24 09:02 przesuwa feed do krakowskich incydentów, sprawy Zondacrypto/PKOl, kanadyjskiego sporu celnego, ukraińskiego szczytu NB8, bałtyckiego cyklonu oraz nowych ruchów na YouTube, TikToku i Shein.
+Slot 2026-08-24 12:00 rozszerza feed o drugi krakowski lead, sprawę Zondacrypto/PKOl, wyciek MyDr, deficyt i progi podatkowe, kanadyjskie cła, szczyt NB8, wizytę Gallaghera w Moskwie, bałtycki cyklon, tajskie ataki, grecką falę upałów, YouTube, TikTok i Shein.
 
 ## Data Shape
 
@@ -23,6 +23,6 @@ The newest valid JSON is shown as paired cards under `Dzisiaj`. Tapping a card o
 
 - Keep at least 12 items and an even count so the app renders exact card pairs.
 - Keep at least two `Polska` or `Polityka` items and at least two `Świat` items to protect the home feed balance.
-- Prefer operational alerts, public-safety events, geopolitics and major economy moves over softer feature content.
+- Prefer operational alerts, public-safety incidents, geopolitics and major economy moves over softer feature content.
 - Favor stories with concrete official or primary links when they are available alongside TVN24, BBC or CNN.
-- Current emphasis should stay on alert logic, public-safety incidents, transatlantic trade pressure, platform regulation, Kyiv diplomacy and concrete world disruption rather than softer feature content.
+- Current emphasis should stay on Kraków incidents, fiscal policy, Canada trade pressure, Ukrainian diplomacy, Baltic weather disruption, regional security shocks, platform policy changes and retail/IPO pressure.

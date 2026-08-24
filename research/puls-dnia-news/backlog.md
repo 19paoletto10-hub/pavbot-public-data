@@ -1,3 +1,12 @@
+# 2026-08-24 12:00
+
+- Watch whether Kraków police or prokuratura add zarzuty albo nowe ustalenia z monitoringu.
+- Watch whether UODO, CBZC or MyDr publish the leak scope, remediation or notification guidance.
+- Watch whether Canada, the White House or CNN add fresh official detail on the tariff escalation.
+- Watch whether the KPRP Ukrainy or Vatican News add follow-up on NB8 albo Gallaghera.
+- Watch whether YouTube, TikTok or Shein publish clarification, pricing or rollout details.
+- Watch whether Greek meteorological or civil-protection sources upgrade the heatwave warnings.
+
 # Puls Dnia News Backlog
 
 # 2026-08-24 09:02
