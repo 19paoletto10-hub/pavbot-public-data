@@ -1,3 +1,12 @@
+# 2026-08-24 15:00
+
+- Watch whether the prokuratura in Kraków confirms further measures or custody details in the Solna case.
+- Watch whether the police publish an identification, arrest or witness lead in the Osiedle Willowe case.
+- Watch whether Canada or the White House publish fresh tariff lists or retaliation details.
+- Watch whether IMGW, RCB or Greek sources upgrade the heatwave warning in the next cycle.
+- Watch whether Reno or Nevada officials expand evacuation zones or issue new containment numbers.
+- Watch whether Hungarian defense officials release a preliminary report on the Gripen crash.
+
 # 2026-08-24 12:00
 
 - Watch whether Kraków police or prokuratura add zarzuty albo nowe ustalenia z monitoringu.
