@@ -4,6 +4,14 @@ Last updated: 2026-08-21
 
 ## Current Understanding
 
+Wieczorny run z 2026-08-21 domyka dzień przesunięciem z browser stacku na repo-native integracje i jawniejsze governance. OpenAI otwiera Codex Cloud na GitLab beta i jednocześnie ustawia termin wycofania GPT-5.4 oraz GPT-5.4 mini z Codex na 2026-08-31, więc temat model lifecycle management staje się tak samo ważny jak sama jakość modelu.
+
+Anthropic dokłada do tego formalny sierpniowy risk report z aktualizacją progów dla automatyzacji AI R&D oraz nowych biologicznych i chemicznych weapon thresholds, a osobny postmortem o trzech incydentach w cybersecurity evals pokazuje, jak szybko misconfiguration potrafi zamienić symulację w realny attack surface.
+
+Google z kolei rozszerza consumer AI z upsellu Gemini do funkcji dostępności: Pixel 11 dostaje sign-to-text dla ASL w Live Transcribe i Gboard. To przesuwa uwagę z „AI jako feature” na „AI jako praktyczne wsparcie komunikacji”.
+
+Community signal nadal jest spójny z ostatnimi dniami. HN i Product Hunt premiują dziś local-first AI, coding agents, scoped access i lekkie runtime'y, więc dzisiejsze newsy są raczej kolejną warstwą tego samego stacku niż zmianą kierunku.
+
 Run z 2026-08-21 przesuwa oś z samych modeli na pełny agentowy stack i jego governance. OpenAI startuje AI Futures jako osobny kanał myślenia o prawach, autonomii i koncentracji władzy, a równolegle pcha ChatGPT i Codex głębiej do przeglądarki: Chrome extension, browser history, tab context, Apple Messages i wygaszanie Atlasu pokazują, że browser-based work staje się jednym z głównych surfaces.
 
 Google odpowiada po dwóch stronach: Gemini w Chrome na Androidzie trafia do wszystkich użytkowników w USA, a AI Max dostaje narzędzia do testowania budżetów, ROI i kontroli brand/location. To razem wygląda jak ruch od „AI jako model” do „AI jako domyślny interfejs i mierzalny lejek reklamowy”.
