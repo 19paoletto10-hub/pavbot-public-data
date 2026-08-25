@@ -1,3 +1,11 @@
+# 2026-08-25 23:08
+
+- Watch whether prokuratura albo TVN24 doprecyzują status zarzutów w sprawie Zondacrypto.
+- Watch whether IMGW skróci, rozszerzy albo anuluje current fog alerts.
+- Watch whether Finance Canada, the White House or Treasury publish fuller tariff and sanctions lists.
+- Watch whether OpenAI or Alabama AG publish more detail on the subpoena and incident scope.
+- Watch whether BBC or CNN add an official follow-up on Hormuz, Moscow or Ukraine before the next slot.
+
 # 2026-08-24 21:01
 
 - Watch whether policja albo prokuratura poda więcej szczegółów po wypadku w Kałuszynie.
