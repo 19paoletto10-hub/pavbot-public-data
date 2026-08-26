@@ -51,13 +51,13 @@
 
 # Puls Dnia News Backlog
 
-# 2026-08-24 09:02
+# 2026-08-26 12:02
 
-- Watch whether Kraków police or prokuratura add charges, toxicology detail or witness statements.
-- Watch whether RCB or IMGW change the hydrological monitoring status in the next map refresh.
-- Watch whether Canada, the White House or CNN add fresh official detail on the tariff escalation.
-- Watch whether the KPRP Ukrainy or the Vatican/Moscow track adds a follow-up statement.
-- Watch whether YouTube, TikTok or Shein publish follow-up statements or formal filing details.
+- Watch whether prokuratura or TVN24 add names, zarzuty or seizure detail in Zondacrypto.
+- Watch whether IMGW upgrades, narrows or cancels the weekend heat and storm alerts.
+- Watch whether Finance Canada, Treasury or the White House publish the next tariff and sanctions follow-up.
+- Watch whether CNN or BBC add an official follow-up on the Moscow visit or Ukraine context.
+- Watch whether Ofgem, Tesla or SpaceX issue a concrete response that changes the business and tech cards.
 
 # 2026-08-24 06:01
 

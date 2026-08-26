@@ -2,7 +2,7 @@
 
 ## Current State
 
-Slot 2026-08-26 06:03 przesuwa feed w stronę ceł Kanada-USA, presji Treasury na Iran, niejawnej wizyty szefa CIA w Moskwie, cyberobławy w Afryce Zachodniej oraz krajowych wątków Zondacrypto, tragedii w Krakowie, mgły i cen paliw.
+Slot 2026-08-26 12:02 przesuwa feed w stronę formalnych list ceł Kanada-USA, operacji Treasury przeciw Iranowi, potwierdzonej wizyty CIA w Moskwie, obławy Interpolu w Afryce Zachodniej oraz krajowych filarów: Zondacrypto, wet prezydenckich, cen paliw i alertu IMGW.
 
 ## Data Shape
 
@@ -23,6 +23,6 @@ The newest valid JSON is shown as paired cards under `Dzisiaj`. Tapping a card o
 
 - Keep at least 12 items and an even count so the app renders exact card pairs.
 - Keep at least two `Polska` or `Polityka` items and at least two `Świat` items to protect the home feed balance.
-- Prefer operational alerts, transport safety, geopolitical escalation, sanctions pressure and major economy moves over softer feature content.
+- Prefer operational alerts, tariff escalation, sanctions pressure, cybercrime, energy costs and weather alerts over softer feature content.
 - Favor stories with concrete official or primary links when they are available alongside TVN24, BBC or CNN.
 - Current emphasis should stay on transport safety, tariff escalation, sanctions pressure, cybercrime and weather alerts, while keeping at least one strong Polish follow-up in each run.

@@ -1,0 +1,536 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-08-26",
+  "runTime": "12:02",
+  "status": "Material update",
+  "headline": "Cła, sankcje i alerty wracają do centrum",
+  "summary": "Feed przesuwa się dziś w stronę twardych decyzji: Kanada publikuje listę ceł, Treasury rozwija kampanię przeciw Iranowi, CNN potwierdza podróż CIA do Moskwy, a w Polsce trzymają uwagę IMGW, paliwa, Zondacrypto i spór o weta.",
+  "items": [
+    {
+      "id": "alerty-imgw-upal-burze",
+      "section": "Alerty",
+      "title": "IMGW zapowiada upał i burze",
+      "lead": "Pod koniec tygodnia pogoda znów zrobi się niebezpieczna.",
+      "whatHappened": "IMGW prognozuje powrót upału i burz. TVN24 podaje, że w piątek możliwe są pomarańczowe alarmy w woj. śląskim, a w sobotę burze mogą rozszerzyć się na kolejne regiony.",
+      "keyFacts": [
+        "Piątek: możliwe pomarańczowe alarmy w woj. śląskim.",
+        "Wiele innych województw może dostać ostrzeżenia pierwszego stopnia.",
+        "Na sobotę IMGW też przewiduje burze."
+      ],
+      "reactions": [
+        "TVN24 ostrzega, że warunki mogą utrudnić ruch drogowy i plany plenerowe.",
+        "Synoptycy wprost odsyłają do śledzenia kolejnych komunikatów."
+      ],
+      "whyItMatters": "Feed dostaje jasny alert pogodowy z potencjałem na utrudnienia dla kierowców i weekendowych wydarzeń.",
+      "context": "To zmiana względem porannych mgieł: ryzyko przesuwa się z widoczności na burze i skwar.",
+      "watchNext": [
+        "Sprawdź kolejną aktualizację IMGW przed popołudniem.",
+        "Obserwuj komunikaty RCB i lokalnych służb."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Prognoza ostrzeżeń IMGW",
+          "url": "https://tvn24.pl/tvnmeteo/polska/pogoda-w-polsce-prognoza-zagrozen-imgw-upal-i-burze-st9206308"
+        },
+        {
+          "title": "IMGW: prognoza zagrożeń",
+          "url": "https://meteo.imgw.pl/dyn/?osmet=true"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "IMGW",
+        "alert",
+        "burze"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polska-paliwa-limity",
+      "section": "Polska",
+      "title": "Nowe limity cen paliw",
+      "lead": "Kierowcy zapłacą dziś według nowych maksymalnych stawek.",
+      "whatHappened": "TVN24 podaje, że od środy 26 sierpnia obowiązują nowe maksymalne ceny paliw wyznaczone przez ministra energii Miłosza Motykę.",
+      "keyFacts": [
+        "Pb95: 6,58 zł za litr.",
+        "Pb98: 7,40 zł za litr.",
+        "Olej napędowy: 7,54 zł za litr."
+      ],
+      "reactions": [
+        "Dla kierowców oznacza to krótkoterminową kotwicę cenową.",
+        "To temat wrażliwy dla kosztów transportu i dostaw."
+      ],
+      "whyItMatters": "Paliwo nadal wpływa na szeroki koszyk kosztów w gospodarce i na nastroje konsumentów.",
+      "context": "To jeden z najbardziej czytelnych krajowych sygnałów kosztowych w dzisiejszym feedzie.",
+      "watchNext": [
+        "Porównaj nowe stawki z kolejnymi komunikatami stacji.",
+        "Sprawdź, czy kolejne dni przyniosą zmianę limitów."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Ceny paliw na środę 26 sierpnia",
+          "url": "https://tvn24.pl/biznes/z-kraju/ceny-paliw-w-srode-26-sierpnia-ile-zaplacimy-za-benzyne-i-olej-napedowy-st9204421"
+        }
+      ],
+      "tags": [
+        "paliwa",
+        "gospodarka",
+        "transport"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polityka-weta-budzet",
+      "section": "Polityka",
+      "title": "Debata o koszcie wet prezydenta",
+      "lead": "TVN24 opisuje rachunek za weta Karola Nawrockiego.",
+      "whatHappened": "Według opisywanego przez TVN24 wyliczenia sześć zawetowanych ustaw ma kosztować budżet 8,04 mld zł, a rzecznik prezydenta odpowiada, że decyzje są uzasadnione.",
+      "keyFacts": [
+        "W grę wchodzi 8,04 mld zł kosztu fiskalnego.",
+        "Rzecznik prezydenta Rafał Leśkiewicz odniósł się do wyliczeń.",
+        "Spór dotyczy budżetowych skutków podpisów i wet."
+      ],
+      "reactions": [
+        "Wątek wzmacnia konflikt o finanse publiczne i styl sprawowania urzędu.",
+        "Temat ma potencjał na dalsze komentarze rządu i pałacu prezydenckiego."
+      ],
+      "whyItMatters": "To bieżący sygnał o napięciu między prezydentem a rządem oraz o kosztach blokowania ustaw.",
+      "context": "W poprzednim slocie podobne napięcie było już obecne, ale dziś wchodzi twarde liczbowe doprecyzowanie.",
+      "watchNext": [
+        "Obserwuj, czy pojawi się pełne zestawienie ustaw i kosztów.",
+        "Sprawdź, czy pałac prezydencki odpowie kolejnym oświadczeniem."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Weta prezydenta Karola Nawrockiego",
+          "url": "https://tvn24.pl/biznes/z-kraju/weta-prezydenta-karola-nawrockiego-moga-kosztowac-budzet-ponad-8-miliardow-zlotych-odpowiedz-rzecznika-prezydenta-rafala-leskiewicza-st9204729"
+        }
+      ],
+      "tags": [
+        "polityka",
+        "prezydent",
+        "budżet",
+        "weta"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "polska-zondacrypto-przelom",
+      "section": "Polska",
+      "title": "Zondacrypto: prokuratura mówi o przełomie",
+      "lead": "Żurek twierdzi, że śledztwo wchodzi w nową fazę.",
+      "whatHappened": "TVN24 relacjonuje, że prokurator generalny Waldemar Żurek nazwał śledztwo w sprawie Zondacrypto dynamicznym i wskazał na istotny przełom. Reporter Michał Fuja ocenił, że pojawili się podejrzani i w najbliższych dniach czynności mogą się zintensyfikować.",
+      "keyFacts": [
+        "Żurek mówi o istotnym przełomie.",
+        "TVN24 podaje, że sprawa jest prowadzona intensywnie.",
+        "Roman Giertych ogłosił, że od maja broni Przemysława Krala."
+      ],
+      "reactions": [
+        "Fuja studzi optymizm, dodając, że do obrazu trzeba dodać trochę dziegciu.",
+        "Prokuratura nadal nie ujawnia pełnych szczegółów."
+      ],
+      "whyItMatters": "To najważniejszy krajowy follow-up po porannym przebiegu i potencjalnie jeden z głównych tematów dnia.",
+      "context": "Temat został już mocno osadzony w poprzednich slotach; teraz dostaje bardziej konkretny sygnał procesowy.",
+      "watchNext": [
+        "Śledź kolejne komunikaty prokuratury.",
+        "Sprawdź, czy pojawią się nazwiska podejrzanych albo zarzuty."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Nowe informacje o śledztwie w sprawie Zondacrypto",
+          "url": "https://tvn24.pl/polska/nowe-informacje-o-sledztwie-w-sprawie-zondacrypto-michal-fuja-wyglada-ze-mamy-rzeczywiscie-przelom-st9205486"
+        },
+        {
+          "title": "TVN24: Zondacrypto, oświadczenie prokuratora generalnego",
+          "url": "https://tvn24.pl/polska/sledztwo-w-sprawie-zondacrypto-jest-oswiadczenie-prokuratora-generalnego-st9205098"
+        }
+      ],
+      "tags": [
+        "zondacrypto",
+        "prokuratura",
+        "kryptowaluty",
+        "śledztwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-kanada-cla-odwet",
+      "section": "Świat",
+      "title": "Kanada publikuje listę ceł odwetowych",
+      "lead": "Ottawa przechodzi od zapowiedzi do wykonania.",
+      "whatHappened": "Finance Canada opublikowało listę produktów z USA objętych cłami od 8 września 2026 r. Stawki 15, 25 i 50 proc. obejmują towary o wartości 27,6 mld CAD.",
+      "keyFacts": [
+        "Wejście w życie: 8 września 2026 r., 12:01 a.m.",
+        "Zakres: 27,6 mld CAD importu z USA.",
+        "Celują w stal, nabiał, sprzęt AGD, rolnictwo, papier i elektronikę."
+      ],
+      "reactions": [
+        "Rząd Kanady nazywa to odpowiedzią dolara za dolara.",
+        "BBC opisuje to jako eskalację wojny handlowej USA-Kanada."
+      ],
+      "whyItMatters": "To już nie tylko retoryka, ale gotowy mechanizm, który może podbić ceny i napięcia w łańcuchach dostaw.",
+      "context": "To najtwardsze potwierdzenie dzisiejszego wątku taryfowego i jeden z głównych światowych impulsów dnia.",
+      "watchNext": [
+        "Sprawdź, czy Waszyngton odpowie kolejną rundą ceł.",
+        "Obserwuj reakcję branż na liście produktów."
+      ],
+      "sources": [
+        {
+          "title": "Finance Canada: Counter-tariff list",
+          "url": "https://www.canada.ca/en/department-finance/news/2026/08/list-of-products-from-the-united-states-subject-to-counter-tariffs-effective-september-8-2026.html"
+        },
+        {
+          "title": "BBC News: Canada retaliatory tariffs",
+          "url": "https://www.bbc.co.uk/news/articles/c3v4xg5klx7o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "handel",
+        "Kanada",
+        "USA",
+        "cła"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-cia-moskwa",
+      "section": "Świat",
+      "title": "CIA potwierdza niejawna wizyta w Moskwie",
+      "lead": "CNN mówi, że Ratcliffe pojechał na rozmowy do Rosji.",
+      "whatHappened": "CNN podało, że szef CIA John Ratcliffe pojechał nocą do Moskwy na rozmowy z rosyjskimi urzędnikami. To jego pierwsza znana podróż do Rosji jako dyrektor CIA.",
+      "keyFacts": [
+        "CNN podało, że USA prosiły Ukrainę o wstrzymanie uderzeń w Moskwę przed wizytą.",
+        "CIA odmówiła komentarza.",
+        "Kreml twierdził, że nie planowano spotkania z Putinem."
+      ],
+      "reactions": [
+        "Wątek wzmacnia spekulacje o zakulisowych rozmowach USA-Rosja.",
+        "Sprawa nakłada się na zastoje w negocjacjach dotyczących Ukrainy."
+      ],
+      "whyItMatters": "To rzadki, wysoki poziom kanałów kontaktu, który może sygnalizować szerszy ruch dyplomatyczny albo wymianę zakulisowych sygnałów.",
+      "context": "Ten sam wątek pojawił się rano jako niepotwierdzony rumor; teraz ma mocniejsze pokrycie CNN.",
+      "watchNext": [
+        "Sprawdź, czy pojawi się oficjalne potwierdzenie lub dementi.",
+        "Obserwuj, czy Moskwa lub Biały Dom dodadzą kontekst."
+      ],
+      "sources": [
+        {
+          "title": "CNN via News Channel 3-12: CIA visit to Moscow",
+          "url": "https://keyt.com/news/2026/08/25/cia-director-makes-unannounced-visit-to-moscow-to-meet-with-russian-officials-source-says/"
+        },
+        {
+          "title": "BBC News: CIA chief travels to Moscow",
+          "url": "https://www.bbc.co.uk/news/articles/c87vg9x5d7do?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "CIA",
+        "Moskwa",
+        "Rosja",
+        "Ukraina"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "bezpieczenstwo-west-africa-cyber",
+      "section": "Bezpieczeństwo",
+      "title": "Interpol: 58 aresztowań w akcji Jackal IV",
+      "lead": "Globalna akcja przeciw zachodnioafrykańskim grupom przestępczym przyniosła zatrzymania.",
+      "whatHappened": "Interpol podał, że ośmiomiesięczna operacja wymierzona w zachodnioafrykańskie grupy przestępcze zakończyła się 58 aresztowaniami i identyfikacją 263 podejrzanych. W samej RPA zatrzymano 39 osób.",
+      "keyFacts": [
+        "Operacja Jackal IV trwała od listopada 2025 do czerwca 2026.",
+        "Celem było pranie pieniędzy, identyfikacja celów i wsparcie zatrzymań.",
+        "Akcja miała wymiar transgraniczny i operacyjny."
+      ],
+      "reactions": [
+        "Interpol mówi o zorganizowanej, międzynarodowej skali procederu.",
+        "BBC opisało to jako masowe aresztowania w globalnej obławie."
+      ],
+      "whyItMatters": "To sygnał dla tematu cyberprzestępczości i oszustw internetowych w całym regionie.",
+      "context": "W przeciwieństwie do wielu miękkich newsów to ma twarde liczby i oficjalne źródło policyjne.",
+      "watchNext": [
+        "Sprawdź, czy Interpol lub lokalne służby podadzą kolejne nazwiska.",
+        "Obserwuj, czy pojawi się związek z konkretnymi platformami lub centrami scamowymi."
+      ],
+      "sources": [
+        {
+          "title": "Interpol: 58 arrests in West African organized crime operation",
+          "url": "https://www.interpol.int/News-and-Events/News/2026/58-arrests-in-global-effort-to-dismantle-West-African-organized-crime-groups"
+        },
+        {
+          "title": "BBC News: West African cyber-crime arrests",
+          "url": "https://www.bbc.co.uk/news/articles/cq5xdnxppl4o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Interpol",
+        "cybercrime",
+        "oszustwa",
+        "Afryka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-iran-sankcje",
+      "section": "Świat",
+      "title": "USA uruchamiają nową kampanię przeciw Iranowi",
+      "lead": "Treasury zaczyna Operation Economic Outcast.",
+      "whatHappened": "U.S. Treasury ogłosił uruchomienie Operation Economic Outcast, opisując ją jako bezprecedensową kampanię przeciw Iranowi i jego sieciom wsparcia. Sekretarz Scott Bessent mówi o odcięciu każdej gospodarczej żyły ratunkowej reżimu.",
+      "keyFacts": [
+        "Operacja wystartowała 24 sierpnia 2026 r.",
+        "Treasury wzywa państwa do natychmiastowego zamknięcia aktywności powiązanej z Iranem.",
+        "BBC podaje, że Iran deklaruje gotowość do kontrreakcji, a Chiny krytykują sankcje."
+      ],
+      "reactions": [
+        "To podbija napięcie na osi Waszyngton-Teheran.",
+        "Wątek łączy się z energią, handlem i ryzykiem wtórnych sankcji."
+      ],
+      "whyItMatters": "To jeden z najmocniejszych globalnych impulsów geopolitycznych w dzisiejszym feedzie.",
+      "context": "W porannym slocie był to już duży temat; teraz mamy oficjalny komunikat i mocniejszą ramę polityczną.",
+      "watchNext": [
+        "Sprawdź, czy Treasury opublikuje pełną listę podmiotów.",
+        "Obserwuj odpowiedź Iranu i partnerów handlowych."
+      ],
+      "sources": [
+        {
+          "title": "U.S. Treasury: Operation Economic Outcast",
+          "url": "https://home.treasury.gov/news/press-releases/sb0614"
+        },
+        {
+          "title": "BBC News: China hits out at new US sanctions on Iran",
+          "url": "https://www.bbc.co.uk/news/articles/c0qxew81y83o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "sankcje",
+        "Treasury",
+        "geopolityka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "gospodarka-ofgem-rachunki",
+      "section": "Gospodarka",
+      "title": "Ofgem podnosi rachunki za energię",
+      "lead": "Brytyjskie gospodarstwa domowe zapłacą więcej od października.",
+      "whatHappened": "Ofgem podał, że od 1 października do 31 grudnia 2026 r. price cap wyniesie 1 723 funty rocznie, czyli o 4 proc. więcej niż w poprzednim okresie.",
+      "keyFacts": [
+        "To trzymiesięczny limit dla płatności Direct Debit w Anglii, Szkocji i Walii.",
+        "Prąd: 26.32 p/kWh i 54.83 p dziennej opłaty.",
+        "Gaz: 7.97 p/kWh i 29.68 p dziennej opłaty."
+      ],
+      "reactions": [
+        "BBC opisuje to jako nowy trzyletni szczyt rachunków.",
+        "To zwiększa presję kosztową przed zimą."
+      ],
+      "whyItMatters": "To prosty sygnał kosztowy o dużym znaczeniu dla gospodarstw domowych i nastrojów konsumenckich.",
+      "context": "Wątek wpisuje się w szerszy obraz droższej energii i napięć na rynku surowców.",
+      "watchNext": [
+        "Obserwuj, czy rząd UK odpowie wsparciem dla gospodarstw domowych.",
+        "Sprawdź kolejne analizy wpływu na inflację."
+      ],
+      "sources": [
+        {
+          "title": "Ofgem: Energy price cap from 1 October 2026",
+          "url": "https://www.ofgem.gov.uk/information-consumers/energy-advice-households/energy-price-cap-unit-rates-and-standing-charges"
+        },
+        {
+          "title": "BBC Business: Household energy bills to hit three-year high",
+          "url": "https://www.bbc.co.uk/news/articles/cqjkl1xvgw5o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "energia",
+        "Ofgem",
+        "rachunki",
+        "UK"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "gospodarka-spacex-louisiana",
+      "section": "Gospodarka",
+      "title": "SpaceX chce zbudować nowy megaport",
+      "lead": "Firma Muska zapowiada ogromną inwestycję w Luizjanie.",
+      "whatHappened": "BBC Business podało, że SpaceX planuje budowę wartego 100 mld dolarów ośrodka startowego w Luizjanie. CNN w socialowym przekazie również opisało projekt jako nową bazę launchową dla Starship.",
+      "keyFacts": [
+        "Projekt ma wspierać starty Starshipa.",
+        "Construction ma ruszyć w 2027 r., a pierwszy lot jest targetowany na 2029 r.",
+        "Lokalne środowisko i mieszkańcy sygnalizują obawy o wpływ na wybrzeże."
+      ],
+      "reactions": [
+        "To sygnał o skali ambicji SpaceX i dalszym rozbudowaniu amerykańskiej infrastruktury kosmicznej.",
+        "BBC i CNN przedstawiają to jako ważną inwestycję biznesową."
+      ],
+      "whyItMatters": "To jeden z największych prywatnych projektów infrastrukturalnych dnia.",
+      "context": "W feedzie biznesowym wypycha w cień bardziej rutynowe tematy i dobrze łapie uwagę użytkownika.",
+      "watchNext": [
+        "Obserwuj lokalne reakcje władz Luizjany.",
+        "Sprawdź, czy pojawią się terminy pozwoleń i oceny środowiskowe."
+      ],
+      "sources": [
+        {
+          "title": "BBC Business: SpaceX to build $100bn launch facility",
+          "url": "https://www.bbc.co.uk/news/articles/cq5xel4v642o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN post on SpaceX Louisiana project",
+          "url": "https://www.facebook.com/cnn/posts/spacex-has-unveiled-plans-to-construct-a-massive-100-billion-spaceport-in-louisi/1451870896805557/"
+        }
+      ],
+      "tags": [
+        "SpaceX",
+        "Elon Musk",
+        "Luizjana",
+        "kosmos"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "technologia-tesla-recall",
+      "section": "Technologia",
+      "title": "Tesla wraca do problemu recallu w Chinach",
+      "lead": "BBC opisuje kolejną dużą akcję serwisową.",
+      "whatHappened": "BBC Business opisuje, dlaczego Tesla znów znalazła się w centrum dużego recallu w Chinach. Temat dotyczy problemów technicznych zgłaszanych przez chińskie organy nadzoru.",
+      "keyFacts": [
+        "Wątek dotyczy bezpieczeństwa i jakości aut sprzedawanych w Chinach.",
+        "Sprawa dokłada presję do działalności Tesli na największym rynku EV.",
+        "BBC umieszcza to w szerszym kontekście chińskich regulacji i konkurencji."
+      ],
+      "reactions": [
+        "To może mieć wpływ na markę i sprzedaż w Chinach.",
+        "Temat nadaje się do dalszego follow-upu, jeśli regulator poda dokładniejsze liczby."
+      ],
+      "whyItMatters": "Tesla pozostaje jedną z najbardziej śledzonych firm technologiczno-motoryzacyjnych, a chiński recall ma szeroki zasięg medialny.",
+      "context": "To wyraźny sygnał z punktu styku technologii, regulacji i rynku aut elektrycznych.",
+      "watchNext": [
+        "Sprawdź, czy regulator poda pełną liczbę aut i modeli.",
+        "Obserwuj reakcję Tesli."
+      ],
+      "sources": [
+        {
+          "title": "BBC Business: Why Tesla has been caught up in a massive car recall in China",
+          "url": "https://www.bbc.co.uk/news/articles/c9w4jx2rvgro?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Tesla",
+        "Chiny",
+        "EV",
+        "recall"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "technologia-ai-livestreams",
+      "section": "Technologia",
+      "title": "Twitch i Amazon pozwane za szkolenie AI",
+      "lead": "BBC opisuje spór o wykorzystanie transmisji na żywo.",
+      "whatHappened": "BBC Technology podało, że Twitch i Amazon stają przed pozwem za rzekome używanie livestreamów do trenowania AI. To kolejny spór o dane, prawa twórców i granice treningu modeli.",
+      "keyFacts": [
+        "Sprawa dotyczy wykorzystania materiałów twórców.",
+        "Twitch i Amazon są w centrum debaty o zgodzie i licencjonowaniu.",
+        "To jeden z mocniejszych tegorocznych newsów o prawie i AI w feedzie."
+      ],
+      "reactions": [
+        "Twórcy mogą traktować sprawę jako precedens dla innych platform.",
+        "BBC łączy to z szerszym konfliktem o dane treningowe."
+      ],
+      "whyItMatters": "To publicznie czytelny konflikt między platformami a twórcami, ważny dla użytkowników technologii i mediów.",
+      "context": "W dzisiejszym feedzie technologia nie jest abstrakcją: wchodzi w spory prawne i ekonomiczne.",
+      "watchNext": [
+        "Obserwuj, czy Amazon lub Twitch odpowie publicznie.",
+        "Sprawdź, czy pojawią się kolejne podobne pozwy."
+      ],
+      "sources": [
+        {
+          "title": "BBC Technology: Twitch and Amazon face legal action over using livestreams to train AI",
+          "url": "https://www.bbc.co.uk/news/articles/c70ljqk5kjqo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Twitch",
+        "Amazon",
+        "prawo"
+      ],
+      "priority": "medium"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24: Prognoza ostrzeżeń IMGW",
+      "url": "https://tvn24.pl/tvnmeteo/polska/pogoda-w-polsce-prognoza-zagrozen-imgw-upal-i-burze-st9206308"
+    },
+    {
+      "title": "TVN24: Ceny paliw na środę 26 sierpnia",
+      "url": "https://tvn24.pl/biznes/z-kraju/ceny-paliw-w-srode-26-sierpnia-ile-zaplacimy-za-benzyne-i-olej-napedowy-st9204421"
+    },
+    {
+      "title": "TVN24: Weta prezydenta Karola Nawrockiego",
+      "url": "https://tvn24.pl/biznes/z-kraju/weta-prezydenta-karola-nawrockiego-moga-kosztowac-budzet-ponad-8-miliardow-zlotych-odpowiedz-rzecznika-prezydenta-rafala-leskiewicza-st9204729"
+    },
+    {
+      "title": "TVN24: Zondacrypto, nowy sygnał przełomu",
+      "url": "https://tvn24.pl/polska/nowe-informacje-o-sledztwie-w-sprawie-zondacrypto-michal-fuja-wyglada-ze-mamy-rzeczywiscie-przelom-st9205486"
+    },
+    {
+      "title": "BBC News: Canada retaliatory tariffs",
+      "url": "https://www.bbc.co.uk/news/articles/c3v4xg5klx7o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "BBC News: CIA chief travels to Moscow",
+      "url": "https://www.bbc.co.uk/news/articles/c87vg9x5d7do?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "BBC News: West African cyber-crime arrests",
+      "url": "https://www.bbc.co.uk/news/articles/cq5xdnxppl4o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "BBC Business: Household energy bills to hit three-year high",
+      "url": "https://www.bbc.co.uk/news/articles/cqjkl1xvgw5o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "BBC Business: SpaceX to build $100bn launch facility",
+      "url": "https://www.bbc.co.uk/news/articles/cq5xel4v642o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "BBC Business: Tesla recall in China",
+      "url": "https://www.bbc.co.uk/news/articles/c9w4jx2rvgro?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "BBC Technology: Twitch and Amazon face legal action over AI training",
+      "url": "https://www.bbc.co.uk/news/articles/c70ljqk5kjqo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "BBC World: China hits out at new US sanctions on Iran",
+      "url": "https://www.bbc.co.uk/news/articles/c0qxew81y83o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "Finance Canada: Counter-tariff list",
+      "url": "https://www.canada.ca/en/department-finance/news/2026/08/list-of-products-from-the-united-states-subject-to-counter-tariffs-effective-september-8-2026.html"
+    },
+    {
+      "title": "U.S. Treasury: Operation Economic Outcast",
+      "url": "https://home.treasury.gov/news/press-releases/sb0614"
+    },
+    {
+      "title": "Ofgem: Energy price cap from 1 October 2026",
+      "url": "https://www.ofgem.gov.uk/information-consumers/energy-advice-households/energy-price-cap-unit-rates-and-standing-charges"
+    },
+    {
+      "title": "Interpol: 58 arrests in West African organized crime operation",
+      "url": "https://www.interpol.int/News-and-Events/News/2026/58-arrests-in-global-effort-to-dismantle-West-African-organized-crime-groups"
+    },
+    {
+      "title": "CNN: CIA visit to Moscow",
+      "url": "https://keyt.com/news/2026/08/25/cia-director-makes-unannounced-visit-to-moscow-to-meet-with-russian-officials-source-says/"
+    },
+    {
+      "title": "CNN post on SpaceX Louisiana project",
+      "url": "https://www.facebook.com/cnn/posts/spacex-has-unveiled-plans-to-construct-a-massive-100-billion-spaceport-in-louisi/1451870896805557/"
+    }
+  ]
+}
