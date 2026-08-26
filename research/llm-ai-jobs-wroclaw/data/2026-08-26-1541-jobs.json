@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-08-26",
+  "runTime": "15:41",
+  "executiveSummary": "Dzisiejszy sweep znów jest materialny: Wrocław/remote board odświeżył się o nowe leady na Just Join IT i Pracuj.pl, Sii ma dziś aktywny oficjalny lead AI Architect - GenAI & Cloud, a EPAM nadal utrzymuje kilka live ról AI-native, platformowych i security z Wrocławiem w zasięgu. Jednocześnie przynajmniej jeden wcześniej widoczny board lead po stronie Capgemini jest dziś już expired na canonical page, więc rynek dalej rotuje szybciej niż pojedynczy employer cluster.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "EMEA Cloud Platform & Infra Engineer - Remote (EMEA)",
+      "company": "Just Join IT",
+      "location": "Wrocław / remote",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "GenAI, LLM, RAG, GCP, Python, Dialogflow CX i Vertex AI.",
+      "whyInteresting": "to świeży board lead z szerokim, ale bardzo praktycznym scope'em platformowym.",
+      "uncertainty": "board card może jeszcze zmienić tytuł, deadline lub liczbę lokalizacji.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "GenAI",
+        "Python",
+        "GCP"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "AI Architect - GenAI & Cloud (f/m/x)",
+      "company": "Sii Sp. z o.o.",
+      "location": "Wrocław / remote-hybrid",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "GenAI i cloud architecture z wyraźnym Wrocław office presence.",
+      "whyInteresting": "Sii wrócił dziś jako kanoniczny, aktywny employer lead.",
+      "uncertainty": "board mirror może jeszcze drgnąć względem canonical page.",
+      "sourceURLs": [
+        "https://www.pracuj.pl/praca/ai-architect-genai-cloud-f-m-x-wroclaw-na-ostatnim-groszu-3%2Coferta%2C1005009533"
+      ],
+      "tags": [
+        "GenAI"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "Senior AI Platform Engineer",
+      "company": "EPAM Systems",
+      "location": "Remote Poland",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Senior",
+      "fitSummary": "enterprise agent development platform, evaluation frameworks i LLM-as-a-judge gates.",
+      "whyInteresting": "potwierdza, że EPAM utrzymuje osobny, live platformowy tor AI.",
+      "uncertainty": "adjacent EPAM roles mogą wymagać ręcznej deduplikacji przy kolejnym board sweepie.",
+      "sourceURLs": [
+        "https://careers.epam.com/en/vacancy/senior-ai-platform-engineer-bltwpb7wu3ynnxvq15i_en"
+      ],
+      "tags": [
+        "LLM"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "Senior SecOps Engineer",
+      "company": "EPAM Systems",
+      "location": "Remote Poland",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Senior",
+      "fitSummary": "AI security testing and benchmarking platform z MCP i agentic approaches.",
+      "whyInteresting": "rzadki, wysokosygnałowy intersection AI security plus platform engineering.",
+      "uncertainty": "to może jeszcze mieszać się z pokrewnymi EPAM security/infra leadami.",
+      "sourceURLs": [
+        "https://careers.epam.com/en/vacancy/senior-secops-engineer-bltawunp0lz3mv32bt6_en"
+      ],
+      "tags": [
+        "Agentic AI"
+      ]
+    }
+  ],
+  "changes": [
+    "Wczorajszy focus na zamkniętym TAURONie ustąpił dziś miejsca nowemu board refreshowi na Just Join IT i Pracuj.pl.",
+    "Sii wrócił jako aktywny, kanoniczny employer lead z GenAI/cloud scope, więc warto go trzymać w stałej obserwacji.",
+    "EPAM nadal wygląda na stabilny, ale dziś bardziej interesują jego platform/security role niż sam fakt obecności.",
+    "Capgemini pokazał dziś ważny sygnał negatywny: board mirror potrafi jeszcze eksponować AI leady, ale canonical page już wygasła."
+  ],
+  "risks": [
+    "Board-first leady mogą zmienić tytuł, salary albo status w ciągu jednego dnia.",
+    "Część nowego ruchu jest szeroko platformowa, więc fit do stricte LLM engineering trzeba dalej sprawdzać ręcznie.",
+    "Expired canonical pages mogą jeszcze przez jakiś czas żyć w board mirrors, więc status trzeba zawsze potwierdzać na źródle pierwotnym."
+  ],
+  "recommendedActions": [
+    "Re-check w następnym przebiegu: nowe leady z Just Join IT, AI Architect - GenAI & Cloud w Sii oraz live EPAM AI-native/platform/security pages.",
+    "Nie traktować już Senior Microsoft Business Applications & AI Engineer jako aktywnej okazji, dopóki nie wróci nowy canonical page.",
+    "Zachować monitoring TAURON tylko jako watch na ewentualny reappearance pod nowymi ID."
+  ],
+  "checkedSources": [
+    {
+      "title": "Just Join IT: Job offers AI/ML Wrocław",
+      "url": "https://justjoin.it/job-offers/wroclaw/ai",
+      "status": "checked"
+    },
+    {
+      "title": "Pracuj.pl: Praca ai, Wrocław",
+      "url": "https://www.pracuj.pl/praca/ai%3Bkw/wroclaw%3Bwp?pn=2",
+      "status": "checked"
+    },
+    {
+      "title": "EPAM Senior AI-Native Engineer",
+      "url": "https://careers.epam.com/en/vacancy/senior-ai-native-engineer-bltra6lba5g82vw17xu_en",
+      "status": "checked"
+    },
+    {
+      "title": "EPAM Senior AI & Agentic Systems Engineer (Java)",
+      "url": "https://careers.epam.com/en/vacancy/senior-ai-agentic-systems-engineer-java-blte35dpj1r8hefrppw_en",
+      "status": "checked"
+    },
+    {
+      "title": "EPAM Senior AI Platform Engineer",
+      "url": "https://careers.epam.com/en/vacancy/senior-ai-platform-engineer-bltwpb7wu3ynnxvq15i_en",
+      "status": "checked"
+    }
+  ]
+}

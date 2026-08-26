@@ -1,8 +1,10 @@
 # Topic Index: llm-ai-jobs-wroclaw
 
-Last updated: 2026-08-25 23:08 CEST
+Last updated: 2026-08-26 15:41 CEST
 
 ## Current Understanding
+
+Runda z `2026-08-26 15:41 CEST` przesunęła uwagę z zamkniętego TAURONa z powrotem na board refresh i live canonical pages. `Just Join IT` pokazuje dziś nowy, szeroki AI/ML Wrocław tail z `EMEA Cloud Platform & Infra Engineer – Remote (EMEA)`, `AI/ML Developer (Mid/Senior)`, `Senior ML/AI Engineer` i `Full Stack Engineer, AI systems`, `Sii` ma aktywne `AI Architect – GenAI & Cloud (f/m/x)`, a `EPAM` nadal utrzymuje równolegle live role AI-native, platformowe i security z Wrocławiem w zasięgu. `Capgemini` za to potwierdził, że przynajmniej jeden z widocznych wcześniej leadów jest już expired na canonical page, więc board mirror może jeszcze chwilowo pokazywać szerszy tail niż źródło pierwotne.
 
 Runda z `2026-08-25 23:08 CEST` skorygowała wcześniejszy watch TAURON: wszystkie trzy wrocławskie strony `TAURON Nowa Energia` dziś resolvują jako wygasłe, więc ten employer-klaster nie wygląda już na aktywny. Jednocześnie `Just Join IT` odświeżył board o nowe leady wokół `Capgemini` (`Senior Lead Engineer (AI)`, `Platform Engineering Manager`), `NEXA` (`Mid AI Engineer (k/m)`), `KUBO` (`AI Architect`), `Centra` (`AI Engineer`) oraz kilka pokrewnych kart `Accenture` / `Surveily` / `Sigmoidal`, więc dzisiejszy ruch przesunął się z nowego employer-klastra na szeroki board refresh.
 
@@ -111,6 +113,7 @@ konkretny platformowy, delivery lub toolingowy scope.
 
 ## Recent Reports
 
+- [2026-08-26 15:41 CEST](runs/2026-08-26-1541.md)
 - [2026-08-24 15:40 CEST](runs/2026-08-24-1540.md)
 - [2026-08-20 15:43 CEST](runs/2026-08-20-1543.md)
 - [2026-08-08 15:43 CEST](runs/2026-08-08-1543.md)
@@ -129,6 +132,12 @@ only when something meaningful changes.
 
 | Canonical key | Company | Title | Location / remote | First seen | Last seen | Status | Material changes | Source |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| justjoin-centrum-respo-emea-cloud-platform-infra-engineer-remote-emea | Centrum Respo | EMEA Cloud Platform & Infra Engineer – Remote (EMEA) | Wrocław / remote | 2026-08-26-1541 | 2026-08-26-1541 | Open | New board lead; GenAI, LLM, RAG, GCP, Python, Dialogflow CX and Vertex AI. | [Just Join IT](https://justjoin.it/job-offers/wroclaw/ai) |
+| justjoin-axabee-ai-ml-developer-wroclaw-remote | Axabee | AI/ML Developer (Mid/Senior) | Wrocław / remote | 2026-08-26-1541 | 2026-08-26-1541 | Open | New board lead; OpenAI, RAG, PyTorch, API work and a strong production AI signal. | [Just Join IT](https://justjoin.it/job-offers/wroclaw/ai) |
+| justjoin-integral-solutions-senior-ml-ai-engineer-wroclaw-remote | Integral Solutions | Senior ML/AI Engineer | Wrocław / remote | 2026-08-26-1541 | 2026-08-26-1541 | Open | New board lead; machine learning, AI, LLM and Python with a live Wrocław/remote card. | [Just Join IT](https://justjoin.it/job-offers/wroclaw/ai) |
+| sii-ai-architect-genai-cloud-wroclaw-remote | Sii Sp. z o.o. | AI Architect – GenAI & Cloud (f/m/x) | Wrocław / remote-hybrid | 2026-08-26-1541 | 2026-08-26-1541 | Open | New canonical Pracuj.pl lead; GenAI and cloud architecture with Wrocław office presence. | [Pracuj.pl](https://www.pracuj.pl/praca/ai-architect-genai-cloud-f-m-x-wroclaw-na-ostatnim-groszu-3%2Coferta%2C1005009533) |
+| epam-senior-ai-platform-engineer-poland-remote | EPAM Systems | Senior AI Platform Engineer | Remote Poland | 2026-08-26-1541 | 2026-08-26-1541 | Open | New live EPAM platform role; enterprise agent development platform, evaluation frameworks and LLM-as-a-judge gates. | [EPAM Careers](https://careers.epam.com/en/vacancy/senior-ai-platform-engineer-bltwpb7wu3ynnxvq15i_en) |
+| epam-senior-secops-engineer-ai-security-platform-poland-remote | EPAM Systems | Senior SecOps Engineer | Remote Poland | 2026-08-26-1541 | 2026-08-26-1541 | Open | New live EPAM security role; AI security testing and benchmarking platform with MCP and agentic approaches. | [EPAM Careers](https://careers.epam.com/en/vacancy/senior-secops-engineer-bltawunp0lz3mv32bt6_en) |
 | tauron-ai-developer-wroclaw | TAURON Nowa Energia | AI Developer | Wrocław | 2026-08-24-1540 | 2026-08-24-1540 | Open | New direct-employer Wrocław role; Google, Microsoft, Oracle, UiPath, agents and automation. | [Pracuj.pl](https://www.pracuj.pl/praca/ai-developer-wroclaw%2Coferta%2C1004850239) |
 | tauron-ai-data-scientist-wroclaw | TAURON Nowa Energia | AI Data Scientist | Wrocław | 2026-08-24-1540 | 2026-08-24-1540 | Open | New direct-employer Wrocław role; GenAI, LLM, RAG, vector databases, MLOps and LLMOps. | [Pracuj.pl](https://www.pracuj.pl/praca/ai-data-scientist-wroclaw%2Coferta%2C1004854464) |
 | tauron-ai-product-owner-wroclaw | TAURON Nowa Energia | AI Product Owner | Wrocław | 2026-08-24-1540 | 2026-08-24-1540 | Open | New Wrocław AI product role; end-to-end product lifecycle from concept and MVP to rollout and scaling. | [Pracuj.pl](https://www.pracuj.pl/praca/ai-product-owner-wroclaw%2Coferta%2C1004850229) |
@@ -442,6 +451,7 @@ only when something meaningful changes.
 
 ## Recent Reports
 
+- [2026-08-26 15:41 CEST](runs/2026-08-26-1541.md)
 - [2026-08-25-2308](runs/2026-08-25-2308.md)
 - [2026-07-18-1544](runs/2026-07-18-1544.md)
 - [2026-07-20-1541](runs/2026-07-20-1541.md)
@@ -483,6 +493,7 @@ only when something meaningful changes.
 
 - 2026-08-04: Today's sweep added a new DataArt LLM orchestration role, a live deepsense.ai Senior Machine Learning Engineer (LLMs) card, and two Spyrosoft signals (Azure delivery and Lead AI Consultant); public salary now spans CHF, PLN and board-only snapshots in the same cluster.
 - 2026-08-07: current board added a broader agentic-platform / consulting burst around Addepto, Itransition, EPAM, cloudatus, Accenture and Team Up; keep duplicate suppression tight because several roles now appear first as board mirrors.
+- 2026-08-26: Just Join IT refreshed the Wrocław AI board with new Axabee, Integral Solutions and Centrum Respo leads; Sii returned as an active GenAI/cloud employer lead and EPAM kept live AI-native, platform and security roles in scope.
 - 2026-07-18: Spyrosoft opened a new fully remote Poland cluster around OpenAI, AI architecture, AI engineering and AI-assisted fullstack delivery; keep the official jobs hub and board mirrors paired because the family is broad and likely to drift by title or salary band.
 - 2026-07-18: `Tooploox Senior AI Engineer` now has a stronger public board mirror with higher salary and `Wrocław, Tęczowa 7 / Hybrid +1` wording, while the official careers page still shows the broader remote Poland framing.
 - 2026-07-16: The new run added Intellias, Andersen, Tooploox, Cloudfide, Spyrosoft and a refreshed ITDS security signal, while Sii stayed active but did not add a new Wrocław-specific card.

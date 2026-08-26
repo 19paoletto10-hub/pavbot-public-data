@@ -4,6 +4,9 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Monitor August 26 board refresh | Just Join IT added new Axabee, Integral Solutions and Centrum Respo leads; Sii exposed a live AI Architect role and EPAM kept platform/security roles in scope. | Re-check those exact roles next run for expiry, salary drift and canonical-page emergence. | Open |
+| Medium | Track Sii AI Architect live lead | Sii now has an active `AI Architect – GenAI & Cloud` page with Wrocław presence. | Re-check whether the role keeps the same title, remote wording and canonical URL next run. | Open |
+| Medium | Watch EPAM platform/security cluster | EPAM now has live AI platform and AI security pages that explicitly mention Wrocław and agentic tooling. | Re-check whether the platform and SecOps roles stay open and whether adjacent EPAM roles dedupe cleanly. | Open |
 | High | Monitor August 24 EPAM / board follow-up | TAURON's Wrocław trio is now expired, but EPAM AI-native / agentic roles remain live and Just Join IT now shows additional Wrocław/remote leads. | Re-check those live roles next run for expiry, salary drift and canonical-page emergence. | Open |
 | High | Monitor August 21 board expansion | Today's sweep added KPMG Manager AI/GenAI, Górażdże Expert System Engineer and a new EPAM Senior AI Engineer (Generative AI / LLM Systems) tail. | Re-check those exact roles next run for expiry, salary drift and canonical-page emergence. | Open |
 | High | Monitor August 20 agentic/Copilot burst | Today's sweep added a fresh Hiberus lead, Sii Copilot / agentic roles, KODA AI Platform, YOUR ITEAMS GenAI/GCP, 4soft AI security and DEVAPO LLM signals. | Re-check those exact roles next run for expiry, salary drift and canonical-page emergence. | Open |
