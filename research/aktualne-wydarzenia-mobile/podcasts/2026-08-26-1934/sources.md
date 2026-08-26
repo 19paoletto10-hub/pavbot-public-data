@@ -1,11 +1,14 @@
 ## Źródła użyte w scenariuszu
 
 - [RCB: Raport dobowy](https://www.gov.pl/web/rcb/raport-dobowy3)
+- [RCB: Przedłużenie obowiązywania stopni alarmowych (do 30 listopada 2026 r.)](https://www.gov.pl/web/rcb/przedluzenie-obowiazywania-stopni-alarmowych-do-30-listopada-2026-r)
+- [RCB: Alert RCB - trening systemu ostrzegania z wykorzystaniem syren (26.08)](https://www.gov.pl/web/rcb/alert-rcb---trening-systemu-ostrzegania-z-wykorzystaniem-syren-2608)
 - [KPRM: Strona główna i komunikaty CIR](https://www.gov.pl/web/premier)
 - [Ministerstwo Infrastruktury: Strona główna](https://www.gov.pl/web/infrastruktura)
 - [Official website of the President of Ukraine: Current events](https://www.president.gov.ua/en/news/last)
-- [Guardian: Ukraine war briefing: Small batch of Patriots arrives as Zelenskyy pleads for more](https://www.theguardian.com/world/2026/aug/26/ukraine-war-briefing-small-batch-of-patriots-arrives-as-zelenskyy-pleads-for-more)
+- [Official website of the President of Ukraine: Assistance in Obtaining Interceptors for Ukrainian Air Defense and Security Threats](https://www.president.gov.ua/en/news/dopomoga-z-otrimannyam-perehoplyuvachiv-dlya-ukrayinskoyi-pp-106085)
 - [AP: Putin decree lets Russia take control of infrastructure damaged in Ukrainian drone attacks](https://apnews.com/article/f2ef0ded42dfab093bd9b08a8157b931)
+- [AP: The US and Canada could pull back from an all-out trade war. It's not clear that they will](https://apnews.com/article/cd5f861f990b7e594ea1803a6ba1bf46)
 - [Euronews: Those behind hybrid attacks against Germany 'will pay,' Merz says, as officials find third drone at airport](https://www.euronews.com/my-europe/2026/08/25/german-investigators-find-third-drone-and-suspected-explosives-at-leipzighalle-airport-loc)
 - [Météo-France: Tornades et trombes](https://meteofrance.com/meteo-a-z/tornades-et-trombes)
 - [AP: A tornado tears through a village in southern France, wrecking 300 homes](https://apnews.com/article/176e48d07dad6d5caadfe40e54d721ee)
@@ -16,12 +19,11 @@
 ## Źródła sprawdzone, ale niewykorzystane
 
 - [AP: Canada strikes back at US with retaliatory tariffs as trade war escalates](https://apnews.com/article/810649a0a4143d9042094626c4a36dad)
-- [AP: Canada targets steel, fish and hundreds of other goods as Trump trade war escalates](https://apnews.com/article/4f0d3e8f6945cd941cb50972fb657465)
-- [AP: European leaders mark Ukraine's 35th Independence Day as Russian invasion pushes on](https://apnews.com/article/f9db9e721a230e5881405603a423785c)
-- [AP: Uganda and Burundi military officials visit Israel to discuss Gaza troop deployment](https://apnews.com/article/17b0ce84e2dd7e8800ff1bf2dee803c5)
-- [AP: Settlers kill a Palestinian teen in a West Bank clash, and other Middle East developments](https://apnews.com/article/129bdcff86f21b8a493ac817472af5c6)
+- [AP: Strikes in Gaza kill 4, including 2 children, a week after US asked Israel to curb attacks](https://apnews.com/article/39f50725df3fc132adabef2a8cbec9c5)
+- [AP: A wildfire burns through war-torn history as buried bombs and mines explode across Europe](https://apnews.com/article/5390dcf3c92c41ec44c2b0a4d9d80157)
 
 ## Źródła niedostępne lub niejednoznaczne
 
-- Liczba rannych po tornadzie w Pomas różni się między relacjami wtórnymi; AP podaje 39, a część innych materiałów 41, więc w scenariuszu utrzymano ostrożny opis bez podbijania liczby.
-- Odpowiedzialność za incydent przy Leipzig/Halle nie jest jeszcze oficjalnie przypisana, więc w scenariuszu użyto języka o podejrzeniu i śledztwie, nie o potwierdzonym sprawcy.
+- Część dzisiejszych wpisów na stronie prezydenta Ukrainy była łatwiej widoczna na bieżącej stronie `Current events` niż przez osobne, stabilne URL-e indeksowane w wyszukiwarce, więc opis utrzymano ostrożnie i bez dopisywania szczegółów, których nie dało się wygodnie zweryfikować w drugim źródle.
+- Liczba rannych po tornadzie w Pomas różni się między częścią materiałów wtórnych; w scenariuszu utrzymano liczbę 39 z AP.
+- W sprawie Leipzig/Halle brak oficjalnie potwierdzonego sprawcy, więc zachowano język o śledztwie i podejrzeniu, a nie o rozstrzygniętym ataku.
