@@ -2,7 +2,7 @@
 
 ## Current State
 
-Slot 2026-08-25 23:08 przesuwa feed w stronę ceł Kanady wobec USA, presji finansowej USA na Iran, niejawnej wizyty szefa CIA w Moskwie, cyberobławy w Afryce Zachodniej oraz krajowych alertów drogowo-pogodowych i śledztwa Zondacrypto.
+Slot 2026-08-26 06:03 przesuwa feed w stronę ceł Kanada-USA, presji Treasury na Iran, niejawnej wizyty szefa CIA w Moskwie, cyberobławy w Afryce Zachodniej oraz krajowych wątków Zondacrypto, tragedii w Krakowie, mgły i cen paliw.
 
 ## Data Shape
 

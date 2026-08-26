@@ -1,3 +1,10 @@
+# 2026-08-26 06:03
+
+- Watch whether prokuratura albo TVN24 doprecyzują kolejne kroki w sprawie Zondacrypto.
+- Watch whether IMGW skróci, rozszerzy albo anuluje poranne ostrzeżenia przed mgłą.
+- Watch whether Finance Canada i Biały Dom opublikują pełną listę taryf lub odpowiedź.
+- Watch whether U.S. Treasury, BBC albo CNN dodadzą nowy oficjalny follow-up do Iranu, Moskwy albo Ukrainy.
+
 # 2026-08-25 23:08
 
 - Watch whether prokuratura albo TVN24 doprecyzują status zarzutów w sprawie Zondacrypto.
