@@ -1,0 +1,371 @@
+{
+  "schemaVersion": 1,
+  "topic": "aktualne-wydarzenia-mobile",
+  "runDate": "2026-08-26",
+  "runTime": "10:20",
+  "status": "Material update",
+  "headline": "Dzisiejszy run jest materialny, bo RCB zmienił obraz ryzyka na poranny alert o gęstej mgle i utrzymaną suszę hydrologiczną w całym kraju, a jednocześnie zszedł z mapy wąski, wczorajszy układ hydrologicznych ostrzeżeń 2. stopnia w czterech województwach.",
+  "leadParagraphs": [
+    "Dzisiejszy run jest materialny, bo RCB zmienił obraz ryzyka na poranny alert o gęstej mgle i utrzymaną suszę hydrologiczną w całym kraju, a jednocześnie zszedł z mapy wąski, wczorajszy układ hydrologicznych ostrzeżeń 2. stopnia w czterech województwach.",
+    "Po stronie zagranicznej wróciły świeże, twarde follow-upy bezpieczeństwa: oficjalny ukraiński readout o interceptorach i wsparciu obrony powietrznej, rosyjski dekret o przejmowaniu uszkodzonej infrastruktury oraz niemiecki i francuski wątek hybrydowo-pogodowy.",
+    "KPRM i Ministerstwo Infrastruktury nadal nie pokazują nowego publicznego komunikatu wykonawczego, więc krajowa polityka pozostaje bardziej w trybie ciszy niż ogłoszenia."
+  ],
+  "checkedSources": [
+    {
+      "title": "RCB: Raport dobowy",
+      "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+    },
+    {
+      "title": "KPRM: Strona główna i komunikaty CIR",
+      "url": "https://www.gov.pl/web/premier"
+    },
+    {
+      "title": "Ministerstwo Infrastruktury: Strona główna",
+      "url": "https://www.gov.pl/web/infrastruktura"
+    },
+    {
+      "title": "Official website of the President of Ukraine: Current events",
+      "url": "https://www.president.gov.ua/en/news/last"
+    },
+    {
+      "title": "AP: Putin decree lets Russia take control of infrastructure damaged in Ukrainian drone attacks",
+      "url": "https://apnews.com/article/f2ef0ded42dfab093bd9b08a8157b931"
+    },
+    {
+      "title": "Guardian: Ukraine war briefing: Small batch of Patriots arrives as Zelenskyy pleads for more",
+      "url": "https://www.theguardian.com/world/2026/aug/26/ukraine-war-briefing-small-batch-of-patriots-arrives-as-zelenskyy-pleads-for-more"
+    },
+    {
+      "title": "Euronews: Those behind hybrid attacks against Germany 'will pay,' Merz says, as officials find third drone at airport",
+      "url": "https://www.euronews.com/my-europe/2026/08/25/german-investigators-find-third-drone-and-suspected-explosives-at-leipzighalle-airport-loc"
+    },
+    {
+      "title": "Météo-France: Tornades et trombes",
+      "url": "https://meteofrance.com/meteo-a-z/tornades-et-trombes"
+    },
+    {
+      "title": "AP: A tornado tears through a village in southern France, wrecking 300 homes",
+      "url": "https://apnews.com/article/176e48d07dad6d5caadfe40e54d721ee"
+    },
+    {
+      "title": "European Commission: Commission starts enforcing AI Act rules and new transparency requirements on 2 August",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august"
+    },
+    {
+      "title": "European Commission: Guidelines on transparency obligations for providers and deployers of certain AI systems",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-transparency-obligations"
+    },
+    {
+      "title": "Ministerstwo Cyfryzacji: AI Act - co się zmieniło 2 sierpnia 2026 roku?",
+      "url": "https://www.gov.pl/web/cyfryzacja/ai-act--co-sie-zmienilo-2-sierpnia-2026-roku"
+    }
+  ],
+  "sections": [
+    {
+      "id": "ogolne",
+      "title": "Ogólne",
+      "summary": "Poranek nie daje jednego wielkiego headline'u, tylko dwa równoległe sygnały: lokalnie mgłę i suszę, a w Europie zachodniej nagłą, bardzo kosztowną pogodową szkodę.",
+      "articles": [
+        {
+          "id": "ogolne-1-poranek-miedzy-mga-a-susza",
+          "section": "Ogólne",
+          "title": "Poranek między mgłą a suszą",
+          "lead": "RCB przesuwa krajowy obraz dnia z wczorajszego alertu hydrologicznego na poranną mgłę i utrzymaną suszę w skali całego kraju.",
+          "facts": [
+            "RCB pokazuje do godziny 9:00 gęstą mgłę w pięciu województwach oraz brak innych ostrzeżeń meteorologicznych.",
+            "Ten sam raport RCB utrzymuje suszę hydrologiczną w całym kraju i lokalne przekroczenia stanów ostrzegawczych na czterech stacjach."
+          ],
+          "analysis": "To zmiana skali, nie kierunku. Ryzyko nie znikło, tylko przestało wyglądać jak jeden duży alert i zaczęło działać bardziej punktowo.",
+          "whyItMatters": "W mobilnym briefie takie przesunięcie mówi więcej niż sama ikona pogodowa, bo pokazuje realne napięcie w terenie i infrastrukturze.",
+          "sources": [
+            {
+              "title": "RCB",
+              "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+            }
+          ],
+          "tags": [
+            "Ogólne"
+          ],
+          "ttsText": "RCB przesuwa krajowy obraz dnia z wczorajszego alertu hydrologicznego na poranną mgłę i utrzymaną suszę w skali całego kraju. RCB pokazuje do godziny 9:00 gęstą mgłę w pięciu województwach oraz brak innych ostrzeżeń meteorologicznych. Ten sam raport RCB utrzymuje suszę hydrologiczną w całym kraju i lokalne przekroczenia stanów ostrzegawczych na czterech stacjach. To zmiana skali, nie kierunku. Ryzyko nie znikło, tylko przestało wyglądać jak jeden duży alert i zaczęło działać bardziej punktowo. W mobilnym briefie takie przesunięcie mówi więcej niż sama ikona pogodowa, bo pokazuje realne napięcie w terenie i infrastrukturze.",
+          "priority": "High"
+        },
+        {
+          "id": "ogolne-2-tornado-w-pomas",
+          "section": "Ogólne",
+          "title": "Tornado w Pomas",
+          "lead": "Francja dostała świeży, lokalny, ale bardzo kosztowny sygnał pogodowy, który wybił się ponad zwykłą letnią burzę.",
+          "facts": [
+            "Météo-France potwierdza tornado w rejonie Pomas w Aude i łączy je z gwałtowną konwekcją po stronie komórek burzowych.",
+            "AP podaje 39 rannych, około 300 uszkodzonych domów i około 1400 gospodarstw bez prądu."
+          ],
+          "analysis": "To nie jest news tylko o pogodzie. To news o szkódach, odbudowie i o tym, jak szybko lokalny epizod może wejść do porządku dnia służb i samorządów.",
+          "whyItMatters": "Czytelnik widzi, że europejskie ryzyko pogodowe nadal może przeskoczyć z prognozy do realnych strat w ciągu minut.",
+          "sources": [
+            {
+              "title": "Météo-France",
+              "url": "https://meteofrance.com/meteo-a-z/tornades-et-trombes"
+            },
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/176e48d07dad6d5caadfe40e54d721ee"
+            }
+          ],
+          "tags": [
+            "Ogólne"
+          ],
+          "ttsText": "Francja dostała świeży, lokalny, ale bardzo kosztowny sygnał pogodowy, który wybił się ponad zwykłą letnią burzę. Météo-France potwierdza tornado w rejonie Pomas w Aude i łączy je z gwałtowną konwekcją po stronie komórek burzowych. AP podaje 39 rannych, około 300 uszkodzonych domów i około 1400 gospodarstw bez prądu. To nie jest news tylko o pogodzie. To news o szkódach, odbudowie i o tym, jak szybko lokalny epizod może wejść do porządku dnia służb i samorządów. Czytelnik widzi, że europejskie ryzyko pogodowe nadal może przeskoczyć z prognozy do realnych strat w ciągu minut.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "polska",
+      "title": "Polska",
+      "summary": "W kraju dzień jest bardziej o śledzeniu oficjalnych tablic niż o nowej decyzji. Najważniejsze jest dziś to, czego państwo jeszcze nie dopisało.",
+      "articles": [
+        {
+          "id": "polska-1-kprm-dalej-bez-nowego-readoutu",
+          "section": "Polska",
+          "title": "KPRM dalej bez nowego readoutu",
+          "lead": "Kancelaria Premiera nadal nie pokazuje świeżego publicznego komunikatu ponad materiały sprzed kilku dni.",
+          "facts": [
+            "KPRM nadal pokazuje 21 sierpnia 2026 jako najnowszy materiał w aktualnościach.",
+            "Ta sama strona KPRM pokazuje 19 sierpnia 2026 jako ostatni komunikat CIR."
+          ],
+          "analysis": "To nie brzmi jak news, ale właśnie dlatego jest istotne: przy bieżącej agendzie państwa brak publikacji też jest sygnałem redakcyjnym.",
+          "whyItMatters": "W briefie mobilnym trzeba umieć odróżnić zapowiedź, szum i prawdziwy, opublikowany decyzjami ślad.",
+          "sources": [
+            {
+              "title": "KPRM",
+              "url": "https://www.gov.pl/web/premier"
+            }
+          ],
+          "tags": [
+            "Polska"
+          ],
+          "ttsText": "Kancelaria Premiera nadal nie pokazuje świeżego publicznego komunikatu ponad materiały sprzed kilku dni. KPRM nadal pokazuje 21 sierpnia 2026 jako najnowszy materiał w aktualnościach. Ta sama strona KPRM pokazuje 19 sierpnia 2026 jako ostatni komunikat CIR. To nie brzmi jak news, ale właśnie dlatego jest istotne: przy bieżącej agendzie państwa brak publikacji też jest sygnałem redakcyjnym. W briefie mobilnym trzeba umieć odróżnić zapowiedź, szum i prawdziwy, opublikowany decyzjami ślad.",
+          "priority": "High"
+        },
+        {
+          "id": "polska-2-ministerstwo-infrastruktury-nadal-czeka-z-follow-upem",
+          "section": "Polska",
+          "title": "Ministerstwo Infrastruktury nadal czeka z follow-upem",
+          "lead": "Briefing o LK 201 w Gdyni nadal nie ma osobnego, późniejszego komunikatu wykonawczego na stronie resortu.",
+          "facts": [
+            "Ministerstwo Infrastruktury pokazuje dziś nadal tylko wcześniejsze materiały z 21 i 20 sierpnia.",
+            "Na stronie Ministerstwa Infrastruktury nie widać jeszcze osobnego wieczornego wpisu opisującego formalny rezultat briefingu o trzecim torze i nowych przystankach."
+          ],
+          "analysis": "To jest klasyczny przypadek, w którym lepiej utrzymać watch niż udawać, że zapowiedź już stała się opublikowaną decyzją.",
+          "whyItMatters": "Dla odbiorcy mobilnego wiarygodność zależy od tego, czy mówimy o czymś, co państwo powiedziało, czy tylko o czymś, co może jeszcze powiedzieć.",
+          "sources": [
+            {
+              "title": "Ministerstwo Infrastruktury",
+              "url": "https://www.gov.pl/web/infrastruktura"
+            }
+          ],
+          "tags": [
+            "Polska"
+          ],
+          "ttsText": "Briefing o LK 201 w Gdyni nadal nie ma osobnego, późniejszego komunikatu wykonawczego na stronie resortu. Ministerstwo Infrastruktury pokazuje dziś nadal tylko wcześniejsze materiały z 21 i 20 sierpnia. Na stronie Ministerstwa Infrastruktury nie widać jeszcze osobnego wieczornego wpisu opisującego formalny rezultat briefingu o trzecim torze i nowych przystankach. To jest klasyczny przypadek, w którym lepiej utrzymać watch niż udawać, że zapowiedź już stała się opublikowaną decyzją. Dla odbiorcy mobilnego wiarygodność zależy od tego, czy mówimy o czymś, co państwo powiedziało, czy tylko o czymś, co może jeszcze powiedzieć.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "polityka",
+      "title": "Polityka",
+      "summary": "Polityczny blok nadal obraca się wokół budżetu i braku nowego rządowego readoutu. Dziś nie ma nowego sporu, jest za to stary, ale nadal ważny kierunek.",
+      "articles": [
+        {
+          "id": "polityka-1-budzet-2027-pozostaje-gowna-osia-przekazu",
+          "section": "Polityka",
+          "title": "Budżet 2027 pozostaje główną osią przekazu",
+          "lead": "Skoro nie doszedł nowy komunikat, to najważniejszym politycznym materiałem nadal pozostaje budżetowy pakiet z 21 sierpnia.",
+          "facts": [
+            "KPRM trzyma jako trzy filary bezpieczeństwo, ochronę zdrowia i inwestycje.",
+            "Ten sam materiał KPRM mówi o 5 procentach PKB na obronność i o 17 miliardach złotych więcej na zdrowie."
+          ],
+          "analysis": "To nadal główna państwowa narracja dnia, bo bez nowego komunikatu to właśnie ten pakiet ustawia rozmowę o priorytetach.",
+          "whyItMatters": "Taki punkt odniesienia wróci przy każdej kolejnej debacie o deficycie, obronności i usługach publicznych.",
+          "sources": [
+            {
+              "title": "KPRM",
+              "url": "https://www.gov.pl/web/premier/budzetowe-priorytety-rzadu--bezpieczenstwo-ochrona-zdrowia-oraz-inwestycje"
+            }
+          ],
+          "tags": [
+            "Polityka"
+          ],
+          "ttsText": "Skoro nie doszedł nowy komunikat, to najważniejszym politycznym materiałem nadal pozostaje budżetowy pakiet z 21 sierpnia. KPRM trzyma jako trzy filary bezpieczeństwo, ochronę zdrowia i inwestycje. Ten sam materiał KPRM mówi o 5 procentach PKB na obronność i o 17 miliardach złotych więcej na zdrowie. To nadal główna państwowa narracja dnia, bo bez nowego komunikatu to właśnie ten pakiet ustawia rozmowę o priorytetach. Taki punkt odniesienia wróci przy każdej kolejnej debacie o deficycie, obronności i usługach publicznych.",
+          "priority": "High"
+        },
+        {
+          "id": "polityka-2-brak-materialnej-zmiany-w-komunikatach-cir",
+          "section": "Polityka",
+          "title": "Brak materialnej zmiany w komunikatach CIR",
+          "lead": "Wieczorny przegląd nie przynosi nowego komunikatu, który zmieniłby polityczny obraz dnia.",
+          "facts": [
+            "KPRM nadal pokazuje 19 sierpnia 2026 jako ostatni komunikat CIR.",
+            "Do zamknięcia runu nie pojawił się nowy publiczny readout, który zastąpiłby wcześniejsze materiały z 21 i 19 sierpnia."
+          ],
+          "analysis": "To nie jest pusty wpis. To kontrola jakości, która chroni brief przed nadpisywaniem rzeczywistości życzeniami.",
+          "whyItMatters": "W bieżącym newsie brak publikacji też może być informacją, jeśli dotyczy agendy rządu.",
+          "sources": [
+            {
+              "title": "KPRM",
+              "url": "https://www.gov.pl/web/premier"
+            }
+          ],
+          "tags": [
+            "Polityka"
+          ],
+          "ttsText": "Wieczorny przegląd nie przynosi nowego komunikatu, który zmieniłby polityczny obraz dnia. KPRM nadal pokazuje 19 sierpnia 2026 jako ostatni komunikat CIR. Do zamknięcia runu nie pojawił się nowy publiczny readout, który zastąpiłby wcześniejsze materiały z 21 i 19 sierpnia. To nie jest pusty wpis. To kontrola jakości, która chroni brief przed nadpisywaniem rzeczywistości życzeniami. W bieżącym newsie brak publikacji też może być informacją, jeśli dotyczy agendy rządu.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "sprawy-zagraniczne",
+      "title": "Sprawy zagraniczne",
+      "summary": "Za granicą dzień nie jest spokojniejszy. Ukraina, Rosja i Niemcy dorzucają trzy nowe twarde sygnały, które przesuwają temat z poziomu komentarza na poziom bezpieczeństwa i infrastruktury.",
+      "articles": [
+        {
+          "id": "sprawy-zagraniczne-1-kijow-wraca-do-interceptorow",
+          "section": "Sprawy zagraniczne",
+          "title": "Kijów wraca do interceptorów",
+          "lead": "Ukraina znowu ustawia obronę powietrzną w centrum rozmowy, a oficjalny przekaz z Kijowa idzie w stronę konkretów o interceptorach.",
+          "facts": [
+            "Oficjalny serwis Prezydenta Ukrainy publikuje 25 sierpnia 2026 readout po spotkaniu Wołodymyra Zełenskiego z prezydentem Estonii Alarem Karisem, wprost poświęcony interceptorom i bezpieczeństwu.",
+            "Guardian podaje, że Ukraina miała dostać ograniczoną liczbę interceptorów Patriot i potwierdzone przyszłe dostawy Crotale."
+          ],
+          "analysis": "To nie jest jeszcze przełom, ale wyraźny sygnał, że temat obrony powietrznej wraca na najwyższy poziom polityczny, a nie tylko wojskowy.",
+          "whyItMatters": "Bez interceptorów nie ma mowy o stabilniejszej obronie przed kolejnymi atakami rakietowymi i dronowymi.",
+          "sources": [
+            {
+              "title": "Prezydenta Ukrainy",
+              "url": "https://www.president.gov.ua/en/news/last"
+            },
+            {
+              "title": "Guardian",
+              "url": "https://www.theguardian.com/world/2026/aug/26/ukraine-war-briefing-small-batch-of-patriots-arrives-as-zelenskyy-pleads-for-more"
+            }
+          ],
+          "tags": [
+            "Sprawy zagraniczne"
+          ],
+          "ttsText": "Ukraina znowu ustawia obronę powietrzną w centrum rozmowy, a oficjalny przekaz z Kijowa idzie w stronę konkretów o interceptorach. Oficjalny serwis Prezydenta Ukrainy publikuje 25 sierpnia 2026 readout po spotkaniu Wołodymyra Zełenskiego z prezydentem Estonii Alarem Karisem, wprost poświęcony interceptorom i bezpieczeństwu. Guardian podaje, że Ukraina miała dostać ograniczoną liczbę interceptorów Patriot i potwierdzone przyszłe dostawy Crotale. To nie jest jeszcze przełom, ale wyraźny sygnał, że temat obrony powietrznej wraca na najwyższy poziom polityczny, a nie tylko wojskowy. Bez interceptorów nie ma mowy o stabilniejszej obronie przed kolejnymi atakami rakietowymi i dronowymi.",
+          "priority": "High"
+        },
+        {
+          "id": "sprawy-zagraniczne-2-moskwa-chce-przejac-uszkodzona-infrastrukture",
+          "section": "Sprawy zagraniczne",
+          "title": "Moskwa chce przejąć uszkodzoną infrastrukturę",
+          "lead": "Rosja odpowiada na ukraińskie ataki dronowe nie tylko obroną, ale też nowym narzędziem nacisku na biznes i właścicieli infrastruktury.",
+          "facts": [
+            "AP podaje, że Putin podpisał dekret pozwalający państwu tymczasowo przejąć kontrolę nad kluczową infrastrukturą, jeśli właściciele nie zabezpieczą obiektów lub nie naprawią szkód.",
+            "Ten sam materiał AP wymienia energetykę, przemysł, łączność, transport i logistykę jako sektory objęte mechanizmem."
+          ],
+          "analysis": "To sygnał, że wojna coraz mocniej wchodzi w rosyjską gospodarkę i zarządzanie własnością, a nie tylko w sam front.",
+          "whyItMatters": "Takie decyzje pokazują, jak bardzo ataki na infrastrukturę potrafią zmieniać reguły gry po obu stronach konfliktu.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/f2ef0ded42dfab093bd9b08a8157b931"
+            }
+          ],
+          "tags": [
+            "Sprawy zagraniczne"
+          ],
+          "ttsText": "Rosja odpowiada na ukraińskie ataki dronowe nie tylko obroną, ale też nowym narzędziem nacisku na biznes i właścicieli infrastruktury. AP podaje, że Putin podpisał dekret pozwalający państwu tymczasowo przejąć kontrolę nad kluczową infrastrukturą, jeśli właściciele nie zabezpieczą obiektów lub nie naprawią szkód. Ten sam materiał AP wymienia energetykę, przemysł, łączność, transport i logistykę jako sektory objęte mechanizmem. To sygnał, że wojna coraz mocniej wchodzi w rosyjską gospodarkę i zarządzanie własnością, a nie tylko w sam front. Takie decyzje pokazują, jak bardzo ataki na infrastrukturę potrafią zmieniać reguły gry po obu stronach konfliktu.",
+          "priority": "High"
+        },
+        {
+          "id": "sprawy-zagraniczne-3-niemcy-widza-trzeci-dron-przy-leipzig-halle",
+          "section": "Sprawy zagraniczne",
+          "title": "Niemcy widzą trzeci dron przy Leipzig/Halle",
+          "lead": "Niemiecki wątek hybrydowy robi się poważniejszy, bo śledczy mówią już nie o jednym incydencie, ale o całym pakiecie podejrzanych znalezisk.",
+          "facts": [
+            "Euronews informuje o trzecim dronie i podejrzanych materiałach wybuchowych znalezionych przy Leipzig/Halle Airport.",
+            "Ten sam materiał Euronews podkreśla, że oficjalnie nie przypisano jeszcze odpowiedzialności, ale sprawa jest prowadzona jako groźny epizod dla infrastruktury logistycznej."
+          ],
+          "analysis": "To podbija stawkę w niemieckim śledztwie, bo mówimy już o możliwym schemacie, a nie o pojedynczym incydencie.",
+          "whyItMatters": "Dla Polski i NATO to sygnał, że hybrydowe zagrożenia dla logistyki są coraz bardziej namacalne także poza linią frontu.",
+          "sources": [
+            {
+              "title": "Euronews",
+              "url": "https://www.euronews.com/my-europe/2026/08/25/german-investigators-find-third-drone-and-suspected-explosives-at-leipzighalle-airport-loc"
+            }
+          ],
+          "tags": [
+            "Sprawy zagraniczne"
+          ],
+          "ttsText": "Niemiecki wątek hybrydowy robi się poważniejszy, bo śledczy mówią już nie o jednym incydencie, ale o całym pakiecie podejrzanych znalezisk. Euronews informuje o trzecim dronie i podejrzanych materiałach wybuchowych znalezionych przy Leipzig/Halle Airport. Ten sam materiał Euronews podkreśla, że oficjalnie nie przypisano jeszcze odpowiedzialności, ale sprawa jest prowadzona jako groźny epizod dla infrastruktury logistycznej. To podbija stawkę w niemieckim śledztwie, bo mówimy już o możliwym schemacie, a nie o pojedynczym incydencie. Dla Polski i NATO to sygnał, że hybrydowe zagrożenia dla logistyki są coraz bardziej namacalne także poza linią frontu.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "technologia",
+      "title": "Technologia",
+      "summary": "W technologiach nadal najważniejsze są zasady użycia, a nie nowe produkty. AI Act pozostaje w fazie egzekwowania, czyli w tej mniej widowiskowej, ale dużo bardziej realnej części historii.",
+      "articles": [
+        {
+          "id": "technologia-1-ai-act-juz-jest-w-egzekwowaniu",
+          "section": "Technologia",
+          "title": "AI Act już jest w egzekwowaniu",
+          "lead": "Komisja Europejska nie mówi już o przyszłych terminach, tylko o obowiązkach, które właśnie działają.",
+          "facts": [
+            "European Commission podaje, że od 2 sierpnia 2026 AI Act jest egzekwowany przez AI Office i krajowe organy.",
+            "European Commission wymaga informowania użytkownika o interakcji z AI i stosowania oznaczeń możliwych do odczytu maszynowego."
+          ],
+          "analysis": "To już nie jest dyskusja o tym, czy przepisy wejdą, tylko jak szybko firmy nauczą się je stosować bez błędów.",
+          "whyItMatters": "Dla twórców treści, mediów i platform to od teraz kwestia procesu, a nie wyboru.",
+          "sources": [
+            {
+              "title": "European Commission",
+              "url": "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august"
+            },
+            {
+              "title": "European Commission",
+              "url": "https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-transparency-obligations"
+            }
+          ],
+          "tags": [
+            "Technologia"
+          ],
+          "ttsText": "Komisja Europejska nie mówi już o przyszłych terminach, tylko o obowiązkach, które właśnie działają. European Commission podaje, że od 2 sierpnia 2026 AI Act jest egzekwowany przez AI Office i krajowe organy. European Commission wymaga informowania użytkownika o interakcji z AI i stosowania oznaczeń możliwych do odczytu maszynowego. To już nie jest dyskusja o tym, czy przepisy wejdą, tylko jak szybko firmy nauczą się je stosować bez błędów. Dla twórców treści, mediów i platform to od teraz kwestia procesu, a nie wyboru.",
+          "priority": "High"
+        },
+        {
+          "id": "technologia-2-polska-warstwa-wdrozeniowa-bez-korekty",
+          "section": "Technologia",
+          "title": "Polska warstwa wdrożeniowa bez korekty",
+          "lead": "Po stronie krajowej nie ma dziś nowej zmiany, jest za to stabilne przypomnienie o obowiązkach.",
+          "facts": [
+            "Ministerstwo Cyfryzacji nadal przypomina o oznaczaniu treści wygenerowanych lub zmodyfikowanych przez AI.",
+            "Ten sam materiał Ministerstwo Cyfryzacji utrzymuje wymóg formatu nadającego się do odczytu maszynowego i późniejsze terminy dla części systemów wysokiego ryzyka."
+          ],
+          "analysis": "To ważne nie dlatego, że jest nowe, tylko dlatego, że nic się nie cofnęło.",
+          "whyItMatters": "Stabilność wdrożenia bywa dla odbiorcy równie istotna jak sam headline o nowych przepisach.",
+          "sources": [
+            {
+              "title": "Ministerstwo Cyfryzacji",
+              "url": "https://www.gov.pl/web/cyfryzacja/ai-act--co-sie-zmienilo-2-sierpnia-2026-roku"
+            }
+          ],
+          "tags": [
+            "Technologia"
+          ],
+          "ttsText": "Po stronie krajowej nie ma dziś nowej zmiany, jest za to stabilne przypomnienie o obowiązkach. Ministerstwo Cyfryzacji nadal przypomina o oznaczaniu treści wygenerowanych lub zmodyfikowanych przez AI. Ten sam materiał Ministerstwo Cyfryzacji utrzymuje wymóg formatu nadającego się do odczytu maszynowego i późniejsze terminy dla części systemów wysokiego ryzyka. To ważne nie dlatego, że jest nowe, tylko dlatego, że nic się nie cofnęło. Stabilność wdrożenia bywa dla odbiorcy równie istotna jak sam headline o nowych przepisach.",
+          "priority": "High"
+        }
+      ]
+    }
+  ],
+  "audioArtifacts": [
+    {
+      "variant": "female-piper",
+      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-08-26-1020/audio/female-piper/podcast.mp3"
+    }
+  ]
+}
