@@ -51,6 +51,14 @@
 
 # Puls Dnia News Backlog
 
+# 2026-08-26 18:01
+
+- Watch whether prokuratura or TVN24 add formal detail to the Michał Moskal/Zondacrypto track.
+- Watch whether IMGW upgrades, narrows or cancels the late-week alert block.
+- Watch whether CNN or official sources raise the toll or rescue detail in Nepal and Pakistan.
+- Watch whether Meta publishes the promised product changes after the settlement.
+- Watch whether Microsoft adds a price point, launch window or ownership detail for next-gen Xbox.
+
 # 2026-08-26 12:02
 
 - Watch whether prokuratura or TVN24 add names, zarzuty or seizure detail in Zondacrypto.
