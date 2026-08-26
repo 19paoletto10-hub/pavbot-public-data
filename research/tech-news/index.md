@@ -1,8 +1,14 @@
 # Topic Index: tech-news
 
-Last updated: 2026-08-24
+Last updated: 2026-08-26
 
 ## Current Understanding
+
+Dzisiejszy run z 2026-08-26 przesuwa temat z samego modelowego rollout'u na lifecycle modeli, desktopowe harnessy dla agentów i konsolidację warstwy danych. OpenAI potwierdza cutoff o3 w ChatGPT, ale równolegle publikuje twarde case studies z loveholidays i Asany, które pokazują mierzalny ROI z Codex i przesunięcie budowy software'u poza wąskie zespoły engineeringowe.
+
+AWS przejmuje DuckLabs, Glean uruchamia Tau jako desktopowy workspace z open-source harness, a QueryStory i Runable wychodzą z mocno wyspecjalizowanymi produktami wokół zaufania do analityki i wzrostu biznesu. To sugeruje, że rynek coraz mniej pyta o sam model, a coraz częściej o to, gdzie siedzi kontekst, jak wygląda review i kto kontroluje koszt.
+
+Google dokłada warstwę energetyczną: 28 startupów w akceleratorze AI dla energii i sieci, w tym polskie EasySolar AI. W tle społeczność HN i Product Hunt nadal premiuje routing, review workflow, agent tooling i produkty obudowujące modele w praktyczne powierzchnie pracy zamiast samego chatbot hype'u.
 
 Wieczorny run z 2026-08-24 przesuwa temat z modelowego rollout'u na lifecycle management i produkcyjne agent surfaces. OpenAI opisuje ChatGPT Work jako sposób delegowania realnej pracy, a jednocześnie wycofuje o3 i GPT-4.5 z ChatGPT na 2026-08-26. To znaczy, że model retirement, workspace controls i approval flows są już częścią tej samej historii produktu, a nie osobnymi wątkami.
 

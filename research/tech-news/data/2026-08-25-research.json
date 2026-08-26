@@ -1,0 +1,274 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-08-25",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Dzisiejszy publiczny fallback research potwierdza jedną dominującą oś: AI przesuwa się z ogólnych modeli do regulowanych workflowów, infrastruktury i kontroli. Google uruchamia Gemini Enterprise dla legal i finansów, a Thomson Reuters odpowiada własnym modelem Thomson, budowanym na własnych treściach i pod własną kontrolą. W Europie ten ruch jest czytany przez pryzmat AI Act, bo transparentność i oznaczanie treści generowanych przez AI są już elementem wdrożeń, a nie tylko deklaracją compliance.",
+    "Równolegle kapitał dalej płynie do warstw podstawowych. Stability AI dostaje nowy zastrzyk finansowania, Keenable buduje wyszukiwanie dla agentów, a Gatik pokazuje, że autonomia zaczyna wyglądać jak komercyjna logistyka, a nie tylko pilotaż. Builder signal z Product Hunt i Hacker News pozostaje spójny: rynek premiuje limity, evale, orchestration, dictation, retrieval i sandboxing, czyli narzędzia, które pomagają uruchamiać AI w prawdziwej pracy."
+  ],
+  "summaryBullets": [
+    "Produkty: Google i Thomson Reuters wchodzą w regulated AI",
+    "AI: Stability AI przyciąga świeży kapitał",
+    "Infrastruktura: Keenable buduje wyszukiwanie dla agentów"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-08-25-0-google-i-thomson-reuters-wchodza-w-regulated-ai-cd00ac3da4",
+      "section": "Produkty",
+      "title": "Google i Thomson Reuters wchodzą w regulated AI",
+      "standfirst": "Google uruchamia Gemini Enterprise dla legal i finansów, a Thomson Reuters odpowiada własnym modelem Thomson osadzonym na trusted content.",
+      "whatHappened": "Obie firmy pokazują, że regulated sectors chcą agentic AI, ale pod własną kontrolą, z audytem i bez używania klientowskich danych do treningu bazowego.",
+      "whyItMatters": "To mocny sygnał, że wartość przesuwa się z samego modelu do warstwy trust stack, citations i workflow integration.",
+      "deeperAnalysis": [
+        "Google wchodzi do legal i financial services z ofertą, która nie sprzedaje samego modelu, tylko zintegrowane, fully governed środowisko pracy. W legal chodzi o skills, MCP connectors i agentów wykonujących pracę, a w finansach dodatkowo o confidence scores, metodologie i audytowalne snapshoty danych.",
+        "Thomson Reuters odpowiada własnym modelem Thomson, trenowanym na open-source foundation i rozwijanym w oparciu o własne treści oraz ekspertów merytorycznych. To nie jest tylko produktowa ciekawostka. To jest sygnał, że incumbenci z najwyższym poziomem odpowiedzialności nie chcą być wyłącznie klientami frontier labs.",
+        "Wspólny mianownik jest prosty: regulated AI sprzedaje się tylko wtedy, gdy da się go obronić, zintegrować i rozliczyć. To ważne zarówno dla Europy, jak i dla polskich firm patrzących na legaltech i finanse."
+      ],
+      "contextPoints": [
+        "Google mówi o danych klientów, które nie trafiają do treningu modeli bazowych.",
+        "Thomson Reuters podaje koszt treningu Thomsona na około 40 mln USD.",
+        "AI Act wymusza transparentność i identyfikowalność treści generowanych przez AI."
+      ],
+      "sources": [
+        {
+          "title": "Introducing Gemini Enterprise for Legal",
+          "url": "https://cloud.google.com/blog/products/ai-machine-learning/introducing-gemini-enterprise-for-legal"
+        },
+        {
+          "title": "Introducing Gemini Enterprise for Financial Services",
+          "url": "https://cloud.google.com/blog/products/ai-machine-learning/introducing-gemini-enterprise-for-financial-services"
+        },
+        {
+          "title": "Thomson Reuters Leverages its World-Class Data Assets to Launch Its Own Frontier Model",
+          "url": "https://www.thomsonreuters.com/en/press-releases/2026/august/thomson-reuters-leverages-its-world-class-data-assets-to-launch-its-own-frontier-model"
+        },
+        {
+          "title": "AI Act | Shaping Europe’s digital future",
+          "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Google",
+        "Thomson Reuters",
+        "legal AI",
+        "financial services",
+        "governance",
+        "enterprise"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-25-1-stability-ai-przyciaga-swiezy-kapital-ec0813694b",
+      "section": "AI",
+      "title": "Stability AI przyciąga świeży kapitał",
+      "standfirst": "Stability AI pozyskuje 76 mln USD w Series B, a łączna suma finansowania rośnie do 232 mln USD.",
+      "whatHappened": "Firma stojąca za Stable Diffusion dalej finansuje rozwój produktu i monetyzację generatywnego obrazu.",
+      "whyItMatters": "To sygnał, że image generation nie zniknęło z rynku, tylko przesuwa się w stronę narzędzi i workflowów.",
+      "deeperAnalysis": [
+        "Nowa runda Stability AI pokazuje, że generowanie obrazów nie jest martwą kategorią. Zamiast wielkiego hype’u mamy bardziej zwykły, ale dużo zdrowszy rynek narzędzi, integracji i workflowów produkcyjnych.",
+        "Dla odbiorców to ważne, bo oznacza, że poza LLM-ami nadal istnieje aktywny segment generatywnej grafiki. Jeśli firma potrafi dostarczyć produkt, który pasuje do pracy zespołów kreatywnych, marek i pipeline’ów produkcyjnych, kapitał nadal będzie płynął.",
+        "To także przypomnienie, że rynek generatywnej AI nie jest jednolity. Część kategorii dojrzewa szybciej, część pozostaje kapitałowo atrakcyjna mimo słabszego rozgłosu."
+      ],
+      "contextPoints": [
+        "Funding total reaches 232 million USD.",
+        "Stable Diffusion remains the brand anchor.",
+        "Segment is moving from hype to tooling."
+      ],
+      "sources": [
+        {
+          "title": "Stability AI, maker of image generator Stable Diffusion, raises $76 million in fresh funding",
+          "url": "https://techcrunch.com/2026/08/25/stability-ai-maker-of-image-generator-stable-diffusion-raises-76-million-in-fresh-funding/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Stability AI",
+        "Stable Diffusion",
+        "fundraising",
+        "generative media",
+        "creative workflow"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-25-2-keenable-buduje-wyszukiwanie-dla-agentow-0ca8098680",
+      "section": "Infrastruktura",
+      "title": "Keenable buduje wyszukiwanie dla agentów",
+      "standfirst": "Keenable wychodzi ze stealth z 26 mln USD seed i twierdzi, że buduje indeks ponad 100 mld dokumentów dla agentów.",
+      "whatHappened": "Startup celuje w retrieval infrastructure dla modeli i agentów, a nie w klasyczne wyszukiwanie dla ludzi.",
+      "whyItMatters": "Jeśli agenci mają odpowiadać na aktualne pytania, muszą mieć własną warstwę wyszukiwania i kosztową optymalizację.",
+      "deeperAnalysis": [
+        "Keenable pokazuje bardzo konkretny problem: web search budowano dla człowieka, ale coraz więcej zapytań stawiają boty i agenci. To wymaga innej infrastruktury, szybszego zawężania przestrzeni odpowiedzi i lepszego grounding w źródłach.",
+        "Jeżeli firma naprawdę utrzymuje indeks obejmujący ponad 100 miliardów dokumentów, to nie jest to tylko kolejny search startup. To próba wejścia w warstwę, która będzie potrzebna modelom pracującym na świeżym kontekście.",
+        "To też dobrze tłumaczy, dlaczego rynek tak chętnie finansuje wyszukiwanie, routing i retrieval. Modele są coraz lepsze, ale bez aktualnego indeksu pozostają odcięte od świata."
+      ],
+      "contextPoints": [
+        "API is already used in production by several AI labs and inference providers.",
+        "Search for humans and search for agents are diverging use cases.",
+        "Cost discipline is central because giant indices are expensive to maintain."
+      ],
+      "sources": [
+        {
+          "title": "Accel-backed Keenable is indexing the web for AI agents",
+          "url": "https://techcrunch.com/2026/08/25/accel-backed-keenable-is-indexing-the-web-for-ai-agents/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Keenable",
+        "search",
+        "agents",
+        "retrieval",
+        "web index",
+        "infrastructure"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-25-3-gatik-wychodzi-z-pilotazy-do-komercji-89b804cf59",
+      "section": "Produkty",
+      "title": "Gatik wychodzi z pilotaży do komercji",
+      "standfirst": "Gatik zbiera 200 mln USD po wieloletniej umowie z PepsiCo i coraz mocniej wygląda jak komercyjny operator driverless logistics.",
+      "whatHappened": "Autonomous trucking przestaje być tylko demonstracją i coraz wyraźniej wchodzi w etap skalowania usług i tras.",
+      "whyItMatters": "To sygnał, że autonomia w logistyce przechodzi z PR do operacyjnej ekonomii.",
+      "deeperAnalysis": [
+        "Gatik jest ważny, bo zamiast gonić za efektownym robotaxi storytellingiem skupia się na krótszych, przewidywalnych trasach i realnych kontraktach. To dużo mniej widowiskowe, ale znacznie bliższe momentowi, w którym autonomia zaczyna zarabiać.",
+        "Po rundzie 200 milionów dolarów i po umowie z PepsiCo firma wygląda jak operator, który chce skalować flotę, klientów i miasta. W tym segmencie najważniejsze nie jest już samo demo, tylko powtarzalność, koszt i obsługa długich kontraktów.",
+        "Jeśli ten model biznesowy zadziała, będzie to mocny sygnał dla całego rynku robotyki i autonomii, że narrow routes i konkretne use cases wygrywają z szeroką obietnicą pełnej automatyzacji od razu."
+      ],
+      "contextPoints": [
+        "Gatik has about 500 million USD raised since stealth.",
+        "The company focuses on short-haul delivery and fixed routes.",
+        "Investors are treating autonomy more like infrastructure than consumer spectacle."
+      ],
+      "sources": [
+        {
+          "title": "Self-driving truck startup Gatik raises $200M following PepsiCo deal",
+          "url": "https://techcrunch.com/2026/08/25/self-driving-truck-startup-gatik-raises-200m-following-pepsico-deal/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Gatik",
+        "autonomy",
+        "trucking",
+        "logistics",
+        "PepsiCo",
+        "commercialization"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-25-4-builderzy-premiuja-control-surfaces-3a92b67076",
+      "section": "Produkty",
+      "title": "Builderzy premiują control surfaces",
+      "standfirst": "Product Hunt i Hacker News pokazują dziś bardzo praktyczny popyt: limit monitors, eval tooling, dictation, orchestration i sandboxing.",
+      "whatHappened": "Społeczność builderów nagradza produkty, które pomagają uruchamiać i kontrolować AI, a nie tylko kolejne demo modelu.",
+      "whyItMatters": "To dobry sygnał, że rynek popytu wspiera praktyczne surfaces, compliance helpers i workflow tooling.",
+      "deeperAnalysis": [
+        "Na Product Hunt wysoko są dziś narzędzia typu Diet Claude, Agnost AI, Memoria, Flare, Ninjō AI i Wispr Flow. To zestaw produktów, które mówią wprost: kluczowy problem nie brzmi już „czy model działa?”, tylko „jak go ograniczyć, połączyć i wykorzystać w realnej pracy”.",
+        "Hacker News podbija ten sam kierunek. W front page widać wątki o bezpieczeństwie, limitach, agentach, atakach i sandboxach, a nie o czystym modelowym entuzjazmie. To oznacza, że społeczność techniczna przesuwa się od podziwu dla capability do myślenia o guardrails.",
+        "To dobry sygnał dla całego rynku. Jeśli builderzy premiują control surfaces, to właśnie tam pojawi się najwięcej kolejnych produktów, integracji i defensywnych narzędzi."
+      ],
+      "contextPoints": [
+        "Product Hunt premiuje praktyczne produkty wokół AI agents, dictation i evals.",
+        "Hacker News pokazuje zainteresowanie security, sandboxingiem i limitami użycia modeli.",
+        "Community signal jest zgodny z ruchem w enterprise AI."
+      ],
+      "sources": [
+        {
+          "title": "Best of Product Hunt: August 25, 2026",
+          "url": "https://www.producthunt.com/leaderboard/daily/2026/8/25?ref=header_nav"
+        },
+        {
+          "title": "2026-08-25 front - Hacker News",
+          "url": "https://news.ycombinator.com/front?day=2026-08-25"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Product Hunt",
+        "Hacker News",
+        "agents",
+        "evals",
+        "dictation",
+        "workflow tooling"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Google i Thomson Reuters wchodzą w regulated AI",
+      "rationale": "Obie firmy pokazują, że legal i financial AI stają się kolejnym frontem walki o kontrolę, audyt i trusted content.",
+      "sourcesLabel": "Gemini Enterprise for Legal; Gemini Enterprise for Financial Services; Thomson Reuters press release"
+    },
+    {
+      "priority": "High",
+      "title": "AI Act już wymusza transparentność",
+      "rationale": "Europejskie przepisy przechodzą z fazy deklaracji do egzekwowania, więc oznaczanie treści AI staje się częścią produktu.",
+      "sourcesLabel": "AI Act"
+    },
+    {
+      "priority": "High",
+      "title": "Stability AI wciąż przyciąga kapitał",
+      "rationale": "Nowa runda pokazuje, że generowanie obrazów nadal jest aktywnym i finansowalnym segmentem rynku.",
+      "sourcesLabel": "TechCrunch Stability AI"
+    },
+    {
+      "priority": "High",
+      "title": "Keenable buduje wyszukiwanie dla agentów",
+      "rationale": "Agentic search i retrieval infrastructure stają się osobną kategorią, a nie dodatkiem do wyszukiwania dla ludzi.",
+      "sourcesLabel": "TechCrunch Keenable"
+    },
+    {
+      "priority": "High",
+      "title": "Gatik wychodzi z pilotów do komercji",
+      "rationale": "Autonomous trucking wchodzi w etap realnych kontraktów i skalowania operacyjnego.",
+      "sourcesLabel": "TechCrunch Gatik"
+    },
+    {
+      "priority": "Medium",
+      "title": "Builderzy premiują limit monitors i eval tooling",
+      "rationale": "Product Hunt i Hacker News wskazują, że rynek lubi praktyczne control surfaces, a nie same demo modeli.",
+      "sourcesLabel": "Product Hunt; Hacker News"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Introducing Gemini Enterprise for Legal | Google Cloud Blog",
+      "url": "https://cloud.google.com/blog/products/ai-machine-learning/introducing-gemini-enterprise-for-legal"
+    },
+    {
+      "title": "Introducing Gemini Enterprise for Financial Services | Google Cloud Blog",
+      "url": "https://cloud.google.com/blog/products/ai-machine-learning/introducing-gemini-enterprise-for-financial-services"
+    },
+    {
+      "title": "Thomson Reuters Leverages its World-Class Data Assets to Launch Its Own Frontier Model | Thomson Reuters",
+      "url": "https://www.thomsonreuters.com/en/press-releases/2026/august/thomson-reuters-leverages-its-world-class-data-assets-to-launch-its-own-frontier-model"
+    },
+    {
+      "title": "Stability AI, maker of image generator Stable Diffusion, raises $76 million in fresh funding | TechCrunch",
+      "url": "https://techcrunch.com/2026/08/25/stability-ai-maker-of-image-generator-stable-diffusion-raises-76-million-in-fresh-funding/"
+    },
+    {
+      "title": "Accel-backed Keenable is indexing the web for AI agents | TechCrunch",
+      "url": "https://techcrunch.com/2026/08/25/accel-backed-keenable-is-indexing-the-web-for-ai-agents/"
+    },
+    {
+      "title": "Self-driving truck startup Gatik raises $200M following PepsiCo deal | TechCrunch",
+      "url": "https://techcrunch.com/2026/08/25/self-driving-truck-startup-gatik-raises-200m-following-pepsico-deal/"
+    },
+    {
+      "title": "AI Act | Shaping Europe’s digital future",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+    },
+    {
+      "title": "Best of Product Hunt: August 25, 2026 | Product Hunt",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/8/25?ref=header_nav"
+    },
+    {
+      "title": "2026-08-25 front - Hacker News",
+      "url": "https://news.ycombinator.com/front?day=2026-08-25"
+    }
+  ]
+}
