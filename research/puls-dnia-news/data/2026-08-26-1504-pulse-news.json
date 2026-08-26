@@ -1,0 +1,568 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-08-26",
+  "runTime": "15:04",
+  "status": "Material update",
+  "headline": "Zondacrypto, taryfy i alerty utrzymują feed",
+  "summary": "Nowy slot dodaje polityczny follow-up wokół Zondacrypto, twardą listę ceł Kanady, zakulisową wizytę CIA w Moskwie i kilka mocnych sygnałów z rynku energii, AI oraz IMGW.",
+  "items": [
+    {
+      "id": "polska-zondacrypto-polityczny-followup",
+      "section": "Polska",
+      "title": "Zondacrypto wchodzi do sporu politycznego",
+      "lead": "Nowe ustalenia i komentarz premiera utrzymują sprawę na froncie krajowym.",
+      "whatHappened": "TVN24 podało, że poseł PiS Michał Moskal potwierdził spotkanie z Przemysławem Kralem na Ibizie, a Donald Tusk publicznie skomentował sprawę, mówiąc, że serial Zonda się rozkręca.",
+      "keyFacts": [
+        "Moskal i Kral mieli spotkać się 7 sierpnia 2025 roku na Ibizie.",
+        "TVN24 łączy sprawę z szerszym politycznym sporem o kryptowaluty.",
+        "W tle pozostaje trwające śledztwo wokół Zondacrypto."
+      ],
+      "reactions": [
+        "Donald Tusk używa sprawy jako politycznego ataku na PiS.",
+        "TVN24 opisuje sprawę jako coraz bardziej wielowątkową."
+      ],
+      "whyItMatters": "To obecnie najważniejszy krajowy follow-up, bo łączy śledztwo, kryptowaluty i politykę.",
+      "context": "Wcześniejsze materiały TVN24 wskazywały na intensyfikację czynności śledczych i medialny nacisk wokół giełdy.",
+      "watchNext": [
+        "Czy prokuratura poda nowe nazwiska lub zarzuty.",
+        "Czy pojawi się oficjalna odpowiedź zainteresowanych stron."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Zondacrypto, nowy sygnał przełomu",
+          "url": "https://tvn24.pl/polska/nowe-informacje-o-sledztwie-w-sprawie-zondacrypto-michal-fuja-wyglada-ze-mamy-rzeczywiscie-przelom-st9205486"
+        },
+        {
+          "title": "TVN24: Poseł PiS spotkał się na Ibizie z szefem Zondacrypto",
+          "url": "https://tvn24.pl/polska/posel-pis-spotkal-sie-na-ibizie-z-szefem-zondacrypto-st9205985"
+        },
+        {
+          "title": "TVN24: Donald Tusk komentuje serial Zonda",
+          "url": "https://tvn24.pl/polska/donald-tusk-komentuje-serial-zonda-sie-rozkreca-st9206710"
+        }
+      ],
+      "tags": [
+        "kryptowaluty",
+        "PiS",
+        "Tusk",
+        "śledztwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polska-gus-bezrobocie-lipiec-2026",
+      "section": "Polska",
+      "title": "Bezrobocie w lipcu bez zmiany",
+      "lead": "GUS podał odczyt, który nie zaskakuje rynku pracy.",
+      "whatHappened": "GUS poinformował, że stopa bezrobocia rejestrowanego w lipcu 2026 r. wyniosła 5,8 proc. i pozostała na poziomie z czerwca.",
+      "keyFacts": [
+        "Liczba zarejestrowanych bezrobotnych wyniosła 906,4 tys.",
+        "Nowo zarejestrowanych bezrobotnych było 99,7 tys."
+      ],
+      "reactions": [
+        "W materiale nie pojawia się polityczna reakcja, to czysty odczyt statystyczny.",
+        "TVN24 traktuje publikację jako neutralny makro-update."
+      ],
+      "whyItMatters": "To jeden z podstawowych wskaźników kondycji rynku pracy przed kolejnymi odczytami makro.",
+      "context": "Dane GUS uzupełniają obraz sezonowy i pozwalają porównać lipiec z czerwcem oraz drugim kwartałem.",
+      "watchNext": [
+        "Czy sierpniowy odczyt pokaże sezonową poprawę.",
+        "Czy resort pracy zaktualizuje własne szacunki."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Bezrobocie w Polsce w lipcu 2026",
+          "url": "https://tvn24.pl/biznes/dla-pracownika/bezrobocie-w-polsce-w-lipcu-2026-dane-gus-st9204463"
+        },
+        {
+          "title": "GUS: Rynek pracy 25.08.2026",
+          "url": "https://ssgk.stat.gov.pl/"
+        }
+      ],
+      "tags": [
+        "GUS",
+        "rynek pracy",
+        "bezrobocie",
+        "makro"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "gospodarka-ceny-paliw-26-sierpnia",
+      "section": "Gospodarka",
+      "title": "Maksymalne ceny paliw pozostają wysokie",
+      "lead": "Na stacjach nadal widać poziomy, które obciążają kierowców.",
+      "whatHappened": "TVN24 podało maksymalne ceny obowiązujące w środę 26 sierpnia: 6,58 zł za Pb95, 7,40 zł za Pb98 i 7,54 zł za olej napędowy.",
+      "keyFacts": [
+        "Pb95 to 6,58 zł za litr.",
+        "Pb98 to 7,40 zł za litr.",
+        "ON to 7,54 zł za litr."
+      ],
+      "reactions": [
+        "Rynek paliw pozostaje wrażliwy na ceny hurtowe i decyzje regulacyjne.",
+        "W materiale nie ma nowej reakcji rządowej."
+      ],
+      "whyItMatters": "Paliwo nadal jest ważnym codziennym kosztem dla gospodarstw domowych i transportu.",
+      "context": "TVN24 opisuje te stawki jako obowiązujące dla maksymalnych cen na dany dzień.",
+      "watchNext": [
+        "Czy kolejne obwieszczenie obniży poziomy.",
+        "Czy spadki w hurcie przełożą się na detal."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Ceny paliw w środę 26 sierpnia",
+          "url": "https://tvn24.pl/biznes/z-kraju/ceny-paliw-w-srode-26-sierpnia-ile-zaplacimy-za-benzyne-i-olej-napedowy-st9204421"
+        }
+      ],
+      "tags": [
+        "paliwa",
+        "inflacja",
+        "transport",
+        "gospodarka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "polityka-weta-prezydenta-koszt-804mld",
+      "section": "Polityka",
+      "title": "Spór o koszt wet prezydenta",
+      "lead": "TVN24 znów stawia pytanie o finansowy efekt decyzji głowy państwa.",
+      "whatHappened": "Według TVN24 i wyliczeń Ministerstwa Finansów sześć wet Karola Nawrockiego może oznaczać dla budżetu 8,04 mld zł ubytku dochodów; rzecznik prezydenta odrzuca zarzut manipulacji.",
+      "keyFacts": [
+        "W wyliczeniu mowa o sześciu zawetowanych ustawach.",
+        "Kwota 8,04 mld zł dotyczy skutku fiskalnego wskazanego przez MF."
+      ],
+      "reactions": [
+        "Rzecznik prezydenta odpowiada, że obarczanie Nawrockiego winą to manipulacja.",
+        "Sprawa pozostaje elementem politycznego sporu o finanse publiczne."
+      ],
+      "whyItMatters": "To jeden z najmocniejszych krajowych konfliktów łączących budżet, legislację i politykę.",
+      "context": "TVN24 opiera materiał na wyliczeniach Ministerstwa Finansów cytowanych przez prasę.",
+      "watchNext": [
+        "Czy pojawi się pełniejsza lista skutków budżetowych.",
+        "Czy Sejm lub KPRP dadzą dodatkowy komentarz."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Weta prezydenta Karola Nawrockiego",
+          "url": "https://tvn24.pl/biznes/z-kraju/weta-prezydenta-karola-nawrockiego-moga-kosztowac-budzet-ponad-8-miliardow-zlotych-odpowiedz-rzecznika-prezydenta-rafala-leskiewicza-st9204729"
+        }
+      ],
+      "tags": [
+        "weto",
+        "budżet",
+        "prezydent",
+        "MF"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-kanada-cla-odwetowe-700-produktow",
+      "section": "Świat",
+      "title": "Kanada publikuje listę ceł odwetowych",
+      "lead": "Ottawa przechodzi od zapowiedzi do konkretnej listy produktów.",
+      "whatHappened": "Finance Canada opublikowało listę około 700 amerykańskich produktów objętych cłami od 8 września 2026 r.; stawki wynoszą 15, 25 i 50 proc., a wartość pakietu to 27,6 mld CAD.",
+      "keyFacts": [
+        "Pakiet obejmuje około 700 pozycji.",
+        "Wartość objętych towarów to 27,6 mld CAD.",
+        "Termin wejścia w życie to 8 września 2026 r."
+      ],
+      "reactions": [
+        "TVN24 opisuje to jako odpowiedź Kanady na presję Trumpa.",
+        "Kanadyjskie władze przedstawiają ruch jako kalibrację typu dolar za dolar."
+      ],
+      "whyItMatters": "To jedna z najbardziej konkretnych eskalacji handlowych w dzisiejszym feedzie.",
+      "context": "Ruch następuje po załamaniu negocjacji handlowych i wcześniejszych amerykańskich taryfach.",
+      "watchNext": [
+        "Czy Biały Dom ogłosi odpowiedź.",
+        "Czy lista zostanie rozszerzona przed 8 września."
+      ],
+      "sources": [
+        {
+          "title": "Finance Canada: Counter-tariff list",
+          "url": "https://www.canada.ca/en/department-finance/news/2026/08/list-of-products-from-the-united-states-subject-to-counter-tariffs-effective-september-8-2026.html"
+        },
+        {
+          "title": "TVN24: Kanada odpowiada Trumpowi",
+          "url": "https://tvn24.pl/biznes/ze-swiata/kanada-odpowiada-trumpowi-beda-cla-odwetowe-na-700-produktow-st9205770"
+        }
+      ],
+      "tags": [
+        "Kanada",
+        "USA",
+        "cła",
+        "handel"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-cia-moskwa-tajne-rozmowy",
+      "section": "Świat",
+      "title": "CNN potwierdza wyjazd CIA do Moskwy",
+      "lead": "Niejawna wizyta Ratcliffe'a wraca do centrum uwagi.",
+      "whatHappened": "CNN podał, że szef CIA John Ratcliffe pojechał do Moskwy na niejawne rozmowy z rosyjskimi urzędnikami; CIA nie komentuje treści spotkań.",
+      "keyFacts": [
+        "To pierwszy znany wyjazd Ratcliffe'a do Rosji na tym stanowisku.",
+        "Źródło CNN nie ujawnia tematu rozmów."
+      ],
+      "reactions": [
+        "AP i inne media piszą o rzadkim wysokim kontakcie wywiadowczym USA-Rosja.",
+        "Kreml nie podaje szczegółów negocjacyjnych."
+      ],
+      "whyItMatters": "To sygnał, że kanały wywiadowcze między USA a Rosją nadal działają mimo wojny i napięć.",
+      "context": "W tle pozostają Ukraina, wymiana więźniów i presja wokół Iranu.",
+      "watchNext": [
+        "Czy pojawi się oficjalne potwierdzenie z Białego Domu.",
+        "Czy strona rosyjska poda choćby częściowy kontekst."
+      ],
+      "sources": [
+        {
+          "title": "CNN via mirror: CIA visit to Moscow",
+          "url": "https://keyt.com/politics/cnn-us-politics/2026/08/25/cia-director-makes-unannounced-visit-to-moscow-to-meet-with-russian-officials-source-says/"
+        },
+        {
+          "title": "AP: CIA director makes an unannounced visit to Moscow",
+          "url": "https://apnews.com/article/4efffcaac5ef6736e2b10cef73054e48"
+        }
+      ],
+      "tags": [
+        "USA",
+        "Rosja",
+        "CIA",
+        "dyplomacja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-treasury-operation-economic-outcast",
+      "section": "Świat",
+      "title": "Treasury uruchamia kampanię przeciw Iranowi",
+      "lead": "Waszyngton przechodzi do nowej fazy presji ekonomicznej.",
+      "whatHappened": "U.S. Treasury ogłosił Operation Economic Outcast, czyli szeroką kampanię wymierzoną w Iran i jego sieć wsparcia gospodarczo-finansowego, w tym IRGC.",
+      "keyFacts": [
+        "Komunikat mówi o sustained and systematic campaign.",
+        "Celem są finansowe lifelines reżimu i jego zaplecze."
+      ],
+      "reactions": [
+        "Treasury przedstawia operację jako rozpoczętą natychmiast.",
+        "W zewnętrznej analizie pojawia się nacisk na partnerów Iranu i ryzyko wtórnych sankcji."
+      ],
+      "whyItMatters": "To może przełożyć się na handel, shipping, cyfrowe aktywa i szerszy rynek ropy.",
+      "context": "USA stosują wobec Iranu strategię maksymalnej presji, ale skutki zależą od egzekucji i reakcji partnerów handlowych.",
+      "watchNext": [
+        "Czy Treasury wskaże kolejne konkretne podmioty.",
+        "Czy Iran lub jego partnerzy ogłoszą kontrreakcję."
+      ],
+      "sources": [
+        {
+          "title": "U.S. Treasury: Operation Economic Outcast",
+          "url": "https://home.treasury.gov/news/press-releases/sb0614"
+        },
+        {
+          "title": "FT: Scott Bessent fires warning shot at Iran's economic partners",
+          "url": "https://www.ft.com/content/b7a62337-c0f8-41f2-b4d4-7afbe6d63af1"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "sankcje",
+        "Treasury",
+        "geopolityka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "bezpieczenstwo-interpol-jackal-iv",
+      "section": "Bezpieczeństwo",
+      "title": "Interpol raportuje 58 aresztowań",
+      "lead": "Operacja Jackal IV uderza w zachodnioafrykańskie grupy przestępcze.",
+      "whatHappened": "Interpol podał, że operacja Jackal IV doprowadziła do 58 aresztowań w skoordynowanych działaniach przeciw zachodnioafrykańskim grupom przestępczym.",
+      "keyFacts": [
+        "Aresztowania objęły kilka krajów.",
+        "Interpol traktuje to jako część szerszej akcji przeciw zorganizowanej przestępczości."
+      ],
+      "reactions": [
+        "Organizacja opisuje akcję jako międzynarodową i operacyjnie skoordynowaną.",
+        "Lisbońskie spotkanie pooperacyjne potwierdza wielopaństwowy charakter śledztw."
+      ],
+      "whyItMatters": "To ważny sygnał dla walki z cyberprzestępczością i oszustwami transgranicznymi.",
+      "context": "Jackal IV należy do serii operacji Interpolu wymierzonych w sieci działające poza jednym państwem.",
+      "watchNext": [
+        "Czy pojawią się dalsze zatrzymania lub zajęcia majątku.",
+        "Czy dojdą kolejne państwa partnerskie."
+      ],
+      "sources": [
+        {
+          "title": "Interpol: 58 arrests in global effort to dismantle West African organized crime groups",
+          "url": "https://www.interpol.int/News-and-Events/News/2026/58-arrests-in-global-effort-to-dismantle-West-African-organized-crime-groups"
+        }
+      ],
+      "tags": [
+        "Interpol",
+        "przestępczość",
+        "cybercrime",
+        "bezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "gospodarka-ofgem-cap-1723",
+      "section": "Gospodarka",
+      "title": "Ofgem podnosi price cap do 1 723 funtów",
+      "lead": "Brytyjskie rachunki za energię znów idą w górę.",
+      "whatHappened": "Ofgem ogłosił, że od 1 października 2026 r. price cap wzrośnie o 4 proc. do 1 723 funtów rocznie dla typowego gospodarstwa domowego.",
+      "keyFacts": [
+        "Zmiana dotyczy okresu 1 października - 31 grudnia 2026 r.",
+        "Regulator mówi o wzroście o 4 proc. względem poprzedniego okresu."
+      ],
+      "reactions": [
+        "BBC i inne media opisują to jako nowy impuls dla presji kosztowej na gospodarstwa domowe.",
+        "Właściciele domów dostaną kolejny sygnał o wrażliwości rynku na gaz i sytuację geopolityczną."
+      ],
+      "whyItMatters": "To podnosi koszt życia i może przełożyć się na polityczne naciski na rząd w Londynie.",
+      "context": "Ofgem podaje ten poziom jako typowy annual bill dla systemu Direct Debit w Anglii, Szkocji i Walii.",
+      "watchNext": [
+        "Czy rząd przedstawi nowe wsparcie dla gospodarstw domowych.",
+        "Czy styczniowa korekta będzie kolejnym wzrostem."
+      ],
+      "sources": [
+        {
+          "title": "Ofgem: Energy price cap will rise 4% from October 2026",
+          "url": "https://www.ofgem.gov.uk/press-release/energy-price-cap-will-rise-4-october-2026"
+        },
+        {
+          "title": "Ofgem: Energy price cap from 1 October to 31 December 2026",
+          "url": "https://www.ofgem.gov.uk/information-consumers/energy-advice-households/energy-price-cap-unit-rates-and-standing-charges"
+        }
+      ],
+      "tags": [
+        "energia",
+        "Ofgem",
+        "rachunki",
+        "UK"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "technologia-twitch-amazon-ai-lawsuit",
+      "section": "Technologia",
+      "title": "BBC opisuje pozew przeciw Twitchowi i Amazonowi",
+      "lead": "Spór o dane twórców znowu trafia na pierwszy plan.",
+      "whatHappened": "BBC informuje o pozwie zbiorowym wobec Twitcha i Amazona, który zarzuca wykorzystanie streamów do trenowania AI bez zgody twórców i bez odpowiedniej komunikacji.",
+      "keyFacts": [
+        "Pozew dotyczy użycia treści streamerskich jako danych treningowych.",
+        "W materiale pada zarzut braku maili, pop-upów i jasnej zgody."
+      ],
+      "reactions": [
+        "Twitch i Amazon nie skomentowały sprawy w źródłowym materiale.",
+        "Sprawa wzmacnia krytykę opt-out jako modelu zgody."
+      ],
+      "whyItMatters": "To potencjalny precedens dla sporów o prawa autorskie i zgodę w treningu modeli AI.",
+      "context": "BBC łączy sprawę z rosnącym napięciem między platformami a twórcami treści.",
+      "watchNext": [
+        "Czy sąd dopuści pozew jako class action.",
+        "Czy platformy zmienią politykę danych."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Twitch and Amazon face legal action over AI training",
+          "url": "https://www.bbc.co.uk/news/articles/c70ljqk5kjqo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "AOL mirror: Twitch and Amazon face legal action over using livestreams to train AI",
+          "url": "https://www.aol.com/articles/twitch-amazon-face-legal-action-130949000.html"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Twitch",
+        "Amazon",
+        "prawo autorskie"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "technologia-tesla-recall-china",
+      "section": "Technologia",
+      "title": "Tesla wycofuje auta w Chinach",
+      "lead": "BBC opisuje jeden z największych ostatnio recalli w EV.",
+      "whatHappened": "BBC podał, że w Chinach wycofywane są niemal trzy miliony Tesli z powodu problemów z wewnętrznymi klamkami drzwi.",
+      "keyFacts": [
+        "Skala dotyczy niemal trzech milionów pojazdów.",
+        "Powodem są kwestie bezpieczeństwa związane z klamkami."
+      ],
+      "reactions": [
+        "Recall podbija presję regulacyjną i wizerunkową wokół Tesli.",
+        "Chińskie władze utrzymują nacisk na bezpieczeństwo pojazdów."
+      ],
+      "whyItMatters": "Tak duża akcja serwisowa może wpływać na sprzedaż, koszty i postrzeganie marki na kluczowym rynku.",
+      "context": "Wcześniejsze skargi wokół elementów konstrukcyjnych elektryków wracają do debaty o standardach bezpieczeństwa.",
+      "watchNext": [
+        "Czy regulator poda pełny harmonogram napraw.",
+        "Czy inne rynki dostaną podobne działania."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Nearly three million Teslas recalled in China",
+          "url": "https://www.bbc.co.uk/news/articles/c4g6ggdg030o"
+        },
+        {
+          "title": "AOL mirror: Nearly 3 million Teslas recalled in China",
+          "url": "https://www.aol.com/articles/nearly-3-million-teslas-recalled-032717000.html"
+        }
+      ],
+      "tags": [
+        "Tesla",
+        "Chiny",
+        "EV",
+        "bezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "alerty-imgw-upal-burze-weekend",
+      "section": "Alerty",
+      "title": "IMGW ostrzega przed upałem i burzami",
+      "lead": "Końcówka tygodnia znów wygląda na pogodowo trudną.",
+      "whatHappened": "IMGW prognozuje, że w piątek w większości kraju wystąpią burze, a na Śląsku mogą pojawić się pomarańczowe alarmy; w wielu innych regionach przewidziano ostrzeżenia najniższego stopnia.",
+      "keyFacts": [
+        "Czwartek ma być względnie spokojny.",
+        "Piątek przynosi wzrost ryzyka burzowego i upał."
+      ],
+      "reactions": [
+        "TVN24 traktuje to jako istotny alert do planowania transportu i wydarzeń plenerowych.",
+        "Meteorolodzy wskazują na możliwą zmianę zasięgu ostrzeżeń przed weekendem."
+      ],
+      "whyItMatters": "To może wpływać na bezpieczeństwo, transport i lokalne wydarzenia w dużej części kraju.",
+      "context": "Sygnał z IMGW jest spójny z wcześniejszymi falami niestabilnej pogody w tym sezonie.",
+      "watchNext": [
+        "Czy IMGW rozszerzy lub skróci ostrzeżenia.",
+        "Czy pojawią się komunikaty o porywach wiatru i ulewach."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Prognoza ostrzeżeń IMGW",
+          "url": "https://tvn24.pl/tvnmeteo/polska/pogoda-w-polsce-prognoza-zagrozen-imgw-upal-i-burze-st9206308"
+        },
+        {
+          "title": "IMGW",
+          "url": "https://imgw.pl/"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "IMGW",
+        "alert",
+        "burze"
+      ],
+      "priority": "high"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24: Prognoza ostrzeżeń IMGW",
+      "url": "https://tvn24.pl/tvnmeteo/polska/pogoda-w-polsce-prognoza-zagrozen-imgw-upal-i-burze-st9206308"
+    },
+    {
+      "title": "TVN24: Ceny paliw na 26 sierpnia",
+      "url": "https://tvn24.pl/biznes/z-kraju/ceny-paliw-w-srode-26-sierpnia-ile-zaplacimy-za-benzyne-i-olej-napedowy-st9204421"
+    },
+    {
+      "title": "TVN24: Weta prezydenta Karola Nawrockiego",
+      "url": "https://tvn24.pl/biznes/z-kraju/weta-prezydenta-karola-nawrockiego-moga-kosztowac-budzet-ponad-8-miliardow-zlotych-odpowiedz-rzecznika-prezydenta-rafala-leskiewicza-st9204729"
+    },
+    {
+      "title": "TVN24: Zondacrypto, nowy sygnał przełomu",
+      "url": "https://tvn24.pl/polska/nowe-informacje-o-sledztwie-w-sprawie-zondacrypto-michal-fuja-wyglada-ze-mamy-rzeczywiscie-przelom-st9205486"
+    },
+    {
+      "title": "TVN24: Zondacrypto, spotkanie na Ibizie",
+      "url": "https://tvn24.pl/polska/posel-pis-spotkal-sie-na-ibizie-z-szefem-zondacrypto-st9205985"
+    },
+    {
+      "title": "TVN24: Donald Tusk komentuje serial Zonda",
+      "url": "https://tvn24.pl/polska/donald-tusk-komentuje-serial-zonda-sie-rozkreca-st9206710"
+    },
+    {
+      "title": "TVN24: Bezrobocie w lipcu 2026",
+      "url": "https://tvn24.pl/biznes/dla-pracownika/bezrobocie-w-polsce-w-lipcu-2026-dane-gus-st9204463"
+    },
+    {
+      "title": "TVN24: Kanada odpowiada Trumpowi",
+      "url": "https://tvn24.pl/biznes/ze-swiata/kanada-odpowiada-trumpowi-beda-cla-odwetowe-na-700-produktow-st9205770"
+    },
+    {
+      "title": "BBC News: Canada retaliatory tariffs",
+      "url": "https://www.bbc.co.uk/news/articles/c3v4xg5klx7o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "BBC News: CIA chief travels to Moscow",
+      "url": "https://www.bbc.co.uk/news/articles/c87vg9x5d7do?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "BBC News: West African cyber-crime arrests",
+      "url": "https://www.bbc.co.uk/news/articles/cq5xdnxppl4o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "BBC Business: Household energy bills to hit three-year high",
+      "url": "https://www.bbc.co.uk/news/articles/cqjkl1xvgw5o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "BBC Business: Tesla recall in China",
+      "url": "https://www.bbc.co.uk/news/articles/c4g6ggdg030o"
+    },
+    {
+      "title": "BBC Technology: Twitch and Amazon face legal action over AI training",
+      "url": "https://www.bbc.co.uk/news/articles/c70ljqk5kjqo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "CNN via mirror: CIA visit to Moscow",
+      "url": "https://keyt.com/politics/cnn-us-politics/2026/08/25/cia-director-makes-unannounced-visit-to-moscow-to-meet-with-russian-officials-source-says/"
+    },
+    {
+      "title": "AP: CIA director makes an unannounced visit to Moscow",
+      "url": "https://apnews.com/article/4efffcaac5ef6736e2b10cef73054e48"
+    },
+    {
+      "title": "U.S. Treasury: Operation Economic Outcast",
+      "url": "https://home.treasury.gov/news/press-releases/sb0614"
+    },
+    {
+      "title": "FT: Scott Bessent fires warning shot at Iran's economic partners",
+      "url": "https://www.ft.com/content/b7a62337-c0f8-41f2-b4d4-7afbe6d63af1"
+    },
+    {
+      "title": "Finance Canada: Counter-tariff list",
+      "url": "https://www.canada.ca/en/department-finance/news/2026/08/list-of-products-from-the-united-states-subject-to-counter-tariffs-effective-september-8-2026.html"
+    },
+    {
+      "title": "Interpol: 58 arrests in global effort to dismantle West African organized crime groups",
+      "url": "https://www.interpol.int/News-and-Events/News/2026/58-arrests-in-global-effort-to-dismantle-West-African-organized-crime-groups"
+    },
+    {
+      "title": "Ofgem: Energy price cap will rise 4% from October 2026",
+      "url": "https://www.ofgem.gov.uk/press-release/energy-price-cap-will-rise-4-october-2026"
+    },
+    {
+      "title": "Ofgem: Energy price cap from 1 October to 31 December 2026",
+      "url": "https://www.ofgem.gov.uk/information-consumers/energy-advice-households/energy-price-cap-unit-rates-and-standing-charges"
+    },
+    {
+      "title": "GUS: Rynek pracy 25.08.2026",
+      "url": "https://ssgk.stat.gov.pl/"
+    },
+    {
+      "title": "IMGW",
+      "url": "https://imgw.pl/"
+    },
+    {
+      "title": "AOL mirror: Twitch and Amazon face legal action over using livestreams to train AI",
+      "url": "https://www.aol.com/articles/twitch-amazon-face-legal-action-130949000.html"
+    },
+    {
+      "title": "AOL mirror: Nearly 3 million Teslas recalled in China",
+      "url": "https://www.aol.com/articles/nearly-3-million-teslas-recalled-032717000.html"
+    }
+  ]
+}
