@@ -1,0 +1,377 @@
+{
+  "schemaVersion": 1,
+  "topic": "aktualne-wydarzenia-mobile",
+  "runDate": "2026-08-27",
+  "runTime": "10:16",
+  "status": "Material update",
+  "headline": "Europa dalej w ogniu",
+  "leadParagraphs": [
+    "Wydanie zawiera aktualne informacje z Polski i świata."
+  ],
+  "checkedSources": [
+    {
+      "title": "RCB: Raport dobowy",
+      "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+    },
+    {
+      "title": "RCB: Przedłużenie obowiązywania stopni alarmowych (do 30 listopada 2026 r.)",
+      "url": "https://www.gov.pl/web/rcb/przedluzenie-obowiazywania-stopni-alarmowych-do-30-listopada-2026-r"
+    },
+    {
+      "title": "KPRM: Strona główna i komunikaty CIR",
+      "url": "https://www.gov.pl/web/premier"
+    },
+    {
+      "title": "Ministerstwo Infrastruktury: Strona główna",
+      "url": "https://www.gov.pl/web/infrastruktura"
+    },
+    {
+      "title": "Ministerstwo Cyfryzacji: Wiadomości",
+      "url": "https://www.gov.pl/web/cyfryzacja/wiadomosci"
+    },
+    {
+      "title": "Department of Finance Canada: List of products from the United States subject to counter-tariffs effective September 8, 2026",
+      "url": "https://www.canada.ca/en/department-finance/news/2026/08/list-of-products-from-the-united-states-subject-to-counter-tariffs-effective-september-8-2026.html"
+    },
+    {
+      "title": "The White House: President Trump Is Finally Ending Canada's Free Ride",
+      "url": "https://www.whitehouse.gov/releases/2026/08/president-trump-is-finally-ending-canadas-free-ride/"
+    },
+    {
+      "title": "JRC: Current wildfire situation in Europe",
+      "url": "https://joint-research-centre.ec.europa.eu/projects-and-activities/natural-and-man-made-hazards/forest-fires/current-wildfire-situation-europe_en"
+    },
+    {
+      "title": "AP: Once welcomed, Ukrainian refugees face growing hostility in Poland",
+      "url": "https://apnews.com/article/poland-ukraine-women-refugees-war-discrimination-fe6ce57b628e01799c3a76b18932f298"
+    },
+    {
+      "title": "AP: Russian strike injures four in Odesa",
+      "url": "https://apnews.com/video/russian-strike-injures-four-in-odesa-e18b6780cfd34b94801eb49642f6136d"
+    },
+    {
+      "title": "AP: Ukraine receives 10 soldiers in the latest prisoner exchange with Russia",
+      "url": "https://apnews.com/video/ukraine-receives-10-soldiers-in-the-latest-prisoner-exchange-with-russia-3d3871c2675840a6a7a1c5cb090bb908"
+    },
+    {
+      "title": "AP: Putin decree lets Russia take control of infrastructure damaged in Ukrainian drone attacks",
+      "url": "https://apnews.com/article/russia-ukraine-war-putin-companies-drones-f2ef0ded42dfab093bd9b08a8157b931"
+    },
+    {
+      "title": "AP: Pro-Russian hackers claim responsibility for major cyberattack on Norway’s public digital services",
+      "url": "https://apnews.com/article/norway-cyber-attack-public-services-pro-russia-hackers-fdb32290906168cd7f4a587f5288473a"
+    },
+    {
+      "title": "European Commission: Guidelines on transparency obligations for providers and deployers of certain AI systems",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-transparency-obligations"
+    }
+  ],
+  "sections": [
+    {
+      "id": "ogolne",
+      "title": "Ogólne",
+      "summary": "Najszerszy obraz dnia to miks odporności państwa, presji gospodarczej i długiego europejskiego sezonu pożarowego. Nie ma jednego przełomu, ale kilka twardych sygnałów zmienia ramę całego poranka.",
+      "articles": [
+        {
+          "id": "ogolne-1-europa-dalej-w-ogniu",
+          "section": "Ogólne",
+          "title": "Europa dalej w ogniu",
+          "lead": "Europejski sezon pożarowy nie zwalnia, a oficjalne dane JRC pokazują, że problem wciąż ma skalę kontynentalną.",
+          "facts": [
+            "JRC podaje 627 611 hektarów spalonych od początku roku oraz 1 822 pożary w UE do 25 sierpnia 2026.",
+            "Ten sam raport JRC wskazuje bardzo ekstremalne warunki pożarowe nad Rumunią i Węgrami oraz wysokie lub ekstremalne ryzyko przez Bałkany, Ukrainę i Rosję."
+          ],
+          "analysis": "To nie jest już lokalny epizod pogodowy, tylko stały element europejskiego ryzyka kryzysowego.",
+          "whyItMatters": "Dla czytelnika mobilnego liczy się nie tylko bieżący ogień, ale też to, że region nadal wchodzi w kolejne dni bez wyraźnej ulgi.",
+          "sources": [
+            {
+              "title": "JRC",
+              "url": "https://joint-research-centre.ec.europa.eu/projects-and-activities/natural-and-man-made-hazards/forest-fires/current-wildfire-situation-europe_en"
+            }
+          ],
+          "tags": [
+            "Ogólne"
+          ],
+          "ttsText": "Europejski sezon pożarowy nie zwalnia, a oficjalne dane JRC pokazują, że problem wciąż ma skalę kontynentalną. JRC podaje 627 611 hektarów spalonych od początku roku oraz 1 822 pożary w UE do 25 sierpnia 2026. Ten sam raport JRC wskazuje bardzo ekstremalne warunki pożarowe nad Rumunią i Węgrami oraz wysokie lub ekstremalne ryzyko przez Bałkany, Ukrainę i Rosję. To nie jest już lokalny epizod pogodowy, tylko stały element europejskiego ryzyka kryzysowego. Dla czytelnika mobilnego liczy się nie tylko bieżący ogień, ale też to, że region nadal wchodzi w kolejne dni bez wyraźnej ulgi.",
+          "priority": "High"
+        },
+        {
+          "id": "ogolne-2-kanada-i-usa-ida-w-twarde-ca",
+          "section": "Ogólne",
+          "title": "Kanada i USA idą w twarde cła",
+          "lead": "Spór handlowy między Ottawa i Waszyngtonem przeszedł do etapu oficjalnych list i dat, a nie tylko politycznych gróźb.",
+          "facts": [
+            "Department of Finance Canada publikuje listę produktów objętych cłami odwetowymi od 8 września 2026.",
+            "The White House potwierdza własne działania taryfowe wobec Kanady i trzydniowe zawieszenie części opłat po konsultacjach wykonawczych."
+          ],
+          "analysis": "To już nie jest tylko spór komunikacyjny. To realny harmonogram presji gospodarczej.",
+          "whyItMatters": "Cła wchodzą w okres, w którym szybko mogą przebić się do cen, logistyki i polityki wewnętrznej po obu stronach granicy.",
+          "sources": [
+            {
+              "title": "Department of Finance Canada",
+              "url": "https://www.canada.ca/en/department-finance/news/2026/08/list-of-products-from-the-united-states-subject-to-counter-tariffs-effective-september-8-2026.html"
+            },
+            {
+              "title": "The White House",
+              "url": "https://www.whitehouse.gov/presidential-actions/2026/08/temporary-suspension-of-additional-duties-to-offset-canadian-discrimination-against-the-commerce-of-the-united-states-with-respect-to-alcoholic-beverages-dairy-and-motor-vehicles/"
+            }
+          ],
+          "tags": [
+            "Ogólne"
+          ],
+          "ttsText": "Spór handlowy między Ottawa i Waszyngtonem przeszedł do etapu oficjalnych list i dat, a nie tylko politycznych gróźb. Department of Finance Canada publikuje listę produktów objętych cłami odwetowymi od 8 września 2026. The White House potwierdza własne działania taryfowe wobec Kanady i trzydniowe zawieszenie części opłat po konsultacjach wykonawczych. To już nie jest tylko spór komunikacyjny. To realny harmonogram presji gospodarczej. Cła wchodzą w okres, w którym szybko mogą przebić się do cen, logistyki i polityki wewnętrznej po obu stronach granicy.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "polska",
+      "title": "Polska",
+      "summary": "Krajowy poranek jest spokojniejszy pogodowo, ale nie spokojniejszy społecznie. Państwo ma dziś mniej ostrzeżeń w eterze, a więcej twardych problemów w tle.",
+      "articles": [
+        {
+          "id": "polska-1-hydrologia-nadal-nie-odpuszcza",
+          "section": "Polska",
+          "title": "Hydrologia nadal nie odpuszcza",
+          "lead": "RCB poprawia meteorologiczny obraz dnia, ale nie poprawia hydrologii.",
+          "facts": [
+            "RCB z 27 sierpnia pokazuje brak ostrzeżeń meteorologicznych i nadal ogólnokrajową suszę hydrologiczną.",
+            "Ten sam raport RCB notuje 1 przekroczenie stanu ostrzegawczego w dorzeczu Wisły, 1 w dorzeczu Odry i 1 na rzece w dorzeczu Przymorza."
+          ],
+          "analysis": "Pogoda się uspokaja, ale zasoby wodne nie wracają do równowagi w tempie, które pozwalałoby odetchnąć.",
+          "whyItMatters": "To sygnał dla samorządów, służb i mieszkańców, że lato jeszcze się nie skończyło, jeśli chodzi o ryzyko wodne.",
+          "sources": [
+            {
+              "title": "RCB",
+              "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+            }
+          ],
+          "tags": [
+            "Polska"
+          ],
+          "ttsText": "RCB poprawia meteorologiczny obraz dnia, ale nie poprawia hydrologii. RCB z 27 sierpnia pokazuje brak ostrzeżeń meteorologicznych i nadal ogólnokrajową suszę hydrologiczną. Ten sam raport RCB notuje 1 przekroczenie stanu ostrzegawczego w dorzeczu Wisły, 1 w dorzeczu Odry i 1 na rzece w dorzeczu Przymorza. Pogoda się uspokaja, ale zasoby wodne nie wracają do równowagi w tempie, które pozwalałoby odetchnąć. To sygnał dla samorządów, służb i mieszkańców, że lato jeszcze się nie skończyło, jeśli chodzi o ryzyko wodne.",
+          "priority": "High"
+        },
+        {
+          "id": "polska-2-uchodzcy-z-ukrainy-pod-wieksza-presja",
+          "section": "Polska",
+          "title": "Uchodźcy z Ukrainy pod większą presją",
+          "lead": "W Polsce nie kończy się już opowieść o pomocy dla Ukraińców, tylko zaczyna się opowieść o zmęczeniu nią.",
+          "facts": [
+            "AP opisuje rosnącą niechęć wobec Ukraińców i spadek finansowania pomocy dla uchodźczyń.",
+            "Ten sam materiał AP wskazuje, że politycy coraz częściej wykorzystują antyuchodźcze nastroje w debacie publicznej."
+          ],
+          "analysis": "To ważny sygnał społeczny, bo pokazuje zmianę temperatury wokół jednej z najdłuższych konsekwencji wojny tuż za granicą.",
+          "whyItMatters": "Jeśli ten trend się utrzyma, wpływa nie tylko na organizacje pomocowe, ale też na politykę lokalną i ogólnokrajową.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/poland-ukraine-women-refugees-war-discrimination-fe6ce57b628e01799c3a76b18932f298"
+            }
+          ],
+          "tags": [
+            "Polska"
+          ],
+          "ttsText": "W Polsce nie kończy się już opowieść o pomocy dla Ukraińców, tylko zaczyna się opowieść o zmęczeniu nią. AP opisuje rosnącą niechęć wobec Ukraińców i spadek finansowania pomocy dla uchodźczyń. Ten sam materiał AP wskazuje, że politycy coraz częściej wykorzystują antyuchodźcze nastroje w debacie publicznej. To ważny sygnał społeczny, bo pokazuje zmianę temperatury wokół jednej z najdłuższych konsekwencji wojny tuż za granicą. Jeśli ten trend się utrzyma, wpływa nie tylko na organizacje pomocowe, ale też na politykę lokalną i ogólnokrajową.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "polityka",
+      "title": "Polityka",
+      "summary": "W polityce centralnej nie ma dziś nowego wielkiego spektaklu. Są za to dwa administracyjne ruchy, które mówią sporo o kierunku państwa.",
+      "articles": [
+        {
+          "id": "polityka-1-kprm-nadal-bez-swiezego-komunikatu",
+          "section": "Polityka",
+          "title": "KPRM nadal bez świeżego komunikatu",
+          "lead": "Polityczne centrum nie podaje dziś nowego publicznego readoutu, więc ciężar dnia przechodzi na twarde decyzje administracyjne.",
+          "facts": [
+            "KPRM nadal pokazuje 21 sierpnia jako najnowszy materiał w aktualnościach i 19 sierpnia jako ostatni komunikat CIR.",
+            "Ministerstwo Infrastruktury nie publikuje osobnego follow-upu po wcześniejszych zapowiedziach i briefingach."
+          ],
+          "analysis": "To kontrolowany brak ruchu, nie przypadkowa cisza.",
+          "whyItMatters": "W takim dniu łatwo byłoby dopisać politykę tam, gdzie jej nie ma, więc brak aktualizacji też trzeba traktować jako informację.",
+          "sources": [
+            {
+              "title": "KPRM",
+              "url": "https://www.gov.pl/web/premier"
+            },
+            {
+              "title": "Ministerstwo Infrastruktury",
+              "url": "https://www.gov.pl/web/infrastruktura"
+            }
+          ],
+          "tags": [
+            "Polityka"
+          ],
+          "ttsText": "Polityczne centrum nie podaje dziś nowego publicznego readoutu, więc ciężar dnia przechodzi na twarde decyzje administracyjne. KPRM nadal pokazuje 21 sierpnia jako najnowszy materiał w aktualnościach i 19 sierpnia jako ostatni komunikat CIR. Ministerstwo Infrastruktury nie publikuje osobnego follow-upu po wcześniejszych zapowiedziach i briefingach. To kontrolowany brak ruchu, nie przypadkowa cisza. W takim dniu łatwo byłoby dopisać politykę tam, gdzie jej nie ma, więc brak aktualizacji też trzeba traktować jako informację.",
+          "priority": "High"
+        },
+        {
+          "id": "polityka-2-nowe-zasady-transkrypcji-mazenstw",
+          "section": "Polityka",
+          "title": "Nowe zasady transkrypcji małżeństw",
+          "lead": "Ministerstwo Cyfryzacji wprowadza od 23 sierpnia nowe wzory dokumentów, które zamykają długi praktyczny problem urzędów stanu cywilnego.",
+          "facts": [
+            "Ministerstwo Cyfryzacji podaje, że nowe wzory odpisów skróconych i zupełnych aktów małżeństwa umożliwiają prawidłową transkrypcję zagranicznych aktów małżeństw jednopłciowych.",
+            "Ten sam komunikat Ministerstwa Cyfryzacji wskazuje, że rozporządzenie weszło w życie 23 sierpnia 2026 i kończy wieloletnie problemy praktyczne z rejestracją takich aktów w Polsce."
+          ],
+          "analysis": "To administracyjny detal, ale z dużą wagą społeczną i prawną.",
+          "whyItMatters": "Dla zainteresowanych rodzin to nie kosmetyka, tylko realna możliwość uporządkowania stanu cywilnego w urzędzie.",
+          "sources": [
+            {
+              "title": "Ministerstwo Cyfryzacji",
+              "url": "https://www.gov.pl/web/cyfryzacja/wiadomosci"
+            }
+          ],
+          "tags": [
+            "Polityka"
+          ],
+          "ttsText": "Ministerstwo Cyfryzacji wprowadza od 23 sierpnia nowe wzory dokumentów, które zamykają długi praktyczny problem urzędów stanu cywilnego. Ministerstwo Cyfryzacji podaje, że nowe wzory odpisów skróconych i zupełnych aktów małżeństwa umożliwiają prawidłową transkrypcję zagranicznych aktów małżeństw jednopłciowych. Ten sam komunikat Ministerstwa Cyfryzacji wskazuje, że rozporządzenie weszło w życie 23 sierpnia 2026 i kończy wieloletnie problemy praktyczne z rejestracją takich aktów w Polsce. To administracyjny detal, ale z dużą wagą społeczną i prawną. Dla zainteresowanych rodzin to nie kosmetyka, tylko realna możliwość uporządkowania stanu cywilnego w urzędzie.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "sprawy-zagraniczne",
+      "title": "Sprawy zagraniczne",
+      "summary": "Najmocniejszy zagraniczny ciąg dnia wiedzie przez Ukrainę i Rosję, a obok niego stoi nowy sygnał z norweskiego cyberfrontu oraz dalej nierozwiązany spór o infrastrukturę.",
+      "articles": [
+        {
+          "id": "sprawy-zagraniczne-1-odesa-jency-i-donieck",
+          "section": "Sprawy zagraniczne",
+          "title": "Odesa, jeńcy i Donieck",
+          "lead": "Ukraina dostaje dziś kilka małych, ale ważnych sygnałów naraz: ostrzał, wymianę jeńców i wojskowy follow-up z frontu.",
+          "facts": [
+            "AP informuje o rosyjskim ataku na Odessę, w którym rannych zostały cztery osoby.",
+            "AP podaje, że Ukraina odebrała 10 swoich żołnierzy w najnowszej wymianie jeńców z Rosją."
+          ],
+          "analysis": "To nie jest jeden headline, tylko trzy równoległe warstwy wojny: front, humanitarna wymiana i stała presja na zaplecze.",
+          "whyItMatters": "Każdy z tych sygnałów pokazuje, że wojna nie zwalnia, tylko zmienia formę uderzeń.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://apnews.com/video/russian-strike-injures-four-in-odesa-e18b6780cfd34b94801eb49642f6136d"
+            },
+            {
+              "title": "AP",
+              "url": "https://apnews.com/video/ukraine-receives-10-soldiers-in-the-latest-prisoner-exchange-with-russia-3d3871c2675840a6a7a1c5cb090bb908"
+            }
+          ],
+          "tags": [
+            "Sprawy zagraniczne"
+          ],
+          "ttsText": "Ukraina dostaje dziś kilka małych, ale ważnych sygnałów naraz: ostrzał, wymianę jeńców i wojskowy follow-up z frontu. AP informuje o rosyjskim ataku na Odessę, w którym rannych zostały cztery osoby. AP podaje, że Ukraina odebrała 10 swoich żołnierzy w najnowszej wymianie jeńców z Rosją. To nie jest jeden headline, tylko trzy równoległe warstwy wojny: front, humanitarna wymiana i stała presja na zaplecze. Każdy z tych sygnałów pokazuje, że wojna nie zwalnia, tylko zmienia formę uderzeń.",
+          "priority": "High"
+        },
+        {
+          "id": "sprawy-zagraniczne-2-rosja-przejmuje-wiecej-odpowiedzialnosci-sia",
+          "section": "Sprawy zagraniczne",
+          "title": "Rosja przejmuje więcej odpowiedzialności siłą",
+          "lead": "Dekret Putina przenosi ciężar wojny z samego ataku na próbę administracyjnego dociskania właścicieli i operatorów infrastruktury.",
+          "facts": [
+            "AP opisuje dekret pozwalający państwu tymczasowo przejmować kontrolę nad krytyczną infrastrukturą uszkodzoną przez ataki dronowe.",
+            "Ten sam materiał AP pokazuje, że dekret ma dotyczyć m.in. energii, transportu, komunikacji i logistyki."
+          ],
+          "analysis": "To wygląda jak próba wymuszenia szybszych napraw i większej ochrony, ale też jak kolejny dowód, że rosyjska gospodarka wchodzi głębiej w tryb wojenny.",
+          "whyItMatters": "Dotyka to nie tylko Ukrainy, ale także firm, łańcuchów dostaw i bezpieczeństwa energetycznego po rosyjskiej stronie.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/russia-ukraine-war-putin-companies-drones-f2ef0ded42dfab093bd9b08a8157b931"
+            }
+          ],
+          "tags": [
+            "Sprawy zagraniczne"
+          ],
+          "ttsText": "Dekret Putina przenosi ciężar wojny z samego ataku na próbę administracyjnego dociskania właścicieli i operatorów infrastruktury. AP opisuje dekret pozwalający państwu tymczasowo przejmować kontrolę nad krytyczną infrastrukturą uszkodzoną przez ataki dronowe. Ten sam materiał AP pokazuje, że dekret ma dotyczyć m.in. energii, transportu, komunikacji i logistyki. To wygląda jak próba wymuszenia szybszych napraw i większej ochrony, ale też jak kolejny dowód, że rosyjska gospodarka wchodzi głębiej w tryb wojenny. Dotyka to nie tylko Ukrainy, ale także firm, łańcuchów dostaw i bezpieczeństwa energetycznego po rosyjskiej stronie.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "technologia",
+      "title": "Technologia",
+      "summary": "W technologii dzień jest mniej o nowym modelu czy gadżecie, a bardziej o platformach, cyberbezpieczeństwie i egzekwowaniu zasad gry.",
+      "articles": [
+        {
+          "id": "technologia-1-meta-dostaje-pytanie-o-oszukancze-reklamy",
+          "section": "Technologia",
+          "title": "Meta dostaje pytanie o oszukańcze reklamy",
+          "lead": "Ministerstwo Cyfryzacji odpowiada dziś nie teorią, tylko konkretną korespondencją z platformą.",
+          "facts": [
+            "Ministerstwo Cyfryzacji podaje, że 26 sierpnia wicepremier Krzysztof Gawkowski otrzymał odpowiedź od Meta po piśmie w sprawie oszukańczych reklam na Facebooku i Instagramie.",
+            "Ten sam komunikat Ministerstwa Cyfryzacji pokazuje, że temat reklam i ochrony użytkowników pozostaje aktywny po stronie rządu."
+          ],
+          "analysis": "To dobry przykład, jak polityka cyfrowa działa dziś przez wymuszenie odpowiedzi od platformy, nie przez abstrakcyjne hasła.",
+          "whyItMatters": "Fałszywe reklamy są problemem nie tylko technicznym, ale też konsumenckim i społecznym.",
+          "sources": [
+            {
+              "title": "Ministerstwo Cyfryzacji",
+              "url": "https://www.gov.pl/web/cyfryzacja/wiadomosci"
+            }
+          ],
+          "tags": [
+            "Technologia"
+          ],
+          "ttsText": "Ministerstwo Cyfryzacji odpowiada dziś nie teorią, tylko konkretną korespondencją z platformą. Ministerstwo Cyfryzacji podaje, że 26 sierpnia wicepremier Krzysztof Gawkowski otrzymał odpowiedź od Meta po piśmie w sprawie oszukańczych reklam na Facebooku i Instagramie. Ten sam komunikat Ministerstwa Cyfryzacji pokazuje, że temat reklam i ochrony użytkowników pozostaje aktywny po stronie rządu. To dobry przykład, jak polityka cyfrowa działa dziś przez wymuszenie odpowiedzi od platformy, nie przez abstrakcyjne hasła. Fałszywe reklamy są problemem nie tylko technicznym, ale też konsumenckim i społecznym.",
+          "priority": "High"
+        },
+        {
+          "id": "technologia-2-norwegia-widzi-cyberatak-z-rosyjskim-podpisem",
+          "section": "Technologia",
+          "title": "Norwegia widzi cyberatak z rosyjskim podpisem",
+          "lead": "Prorosyjska grupa hakerska przyznaje się do ataku na norweskie usługi cyfrowe, a więc cyber front nie jest już tylko dodatkiem do wojny informacyjnej.",
+          "facts": [
+            "AP podaje, że grupa hakerska przyznała się do cyberataku na norweskie publiczne usługi cyfrowe.",
+            "Ten sam materiał AP mówi o zakłóceniach trwających przez kilka dni."
+          ],
+          "analysis": "To klasyczny sygnał hybrydowy: atak ma wymiar techniczny, polityczny i propagandowy jednocześnie.",
+          "whyItMatters": "Pokazuje, że cyberbezpieczeństwo w Europie nadal trzeba czytać razem z bezpieczeństwem państwa, a nie osobno.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/norway-cyber-attack-public-services-pro-russia-hackers-fdb32290906168cd7f4a587f5288473a"
+            }
+          ],
+          "tags": [
+            "Technologia"
+          ],
+          "ttsText": "Prorosyjska grupa hakerska przyznaje się do ataku na norweskie usługi cyfrowe, a więc cyber front nie jest już tylko dodatkiem do wojny informacyjnej. AP podaje, że grupa hakerska przyznała się do cyberataku na norweskie publiczne usługi cyfrowe. Ten sam materiał AP mówi o zakłóceniach trwających przez kilka dni. To klasyczny sygnał hybrydowy: atak ma wymiar techniczny, polityczny i propagandowy jednocześnie. Pokazuje, że cyberbezpieczeństwo w Europie nadal trzeba czytać razem z bezpieczeństwem państwa, a nie osobno.",
+          "priority": "High"
+        },
+        {
+          "id": "technologia-3-ai-act-bez-nowego-zwrotu",
+          "section": "Technologia",
+          "title": "AI Act bez nowego zwrotu",
+          "lead": "W regulacji AI nie ma dziś nowej bomby informacyjnej, ale sama stabilność zasad jest już informacją.",
+          "facts": [
+            "Komisja Europejska nadal utrzymuje obowiązki przejrzystości dla dostawców i podmiotów wdrażających wybrane systemy AI.",
+            "Komisja Europejska nadal wiąże te obowiązki z art. 50 AI Act i z oznaczaniem treści generowanych lub manipulowanych."
+          ],
+          "analysis": "To nie jest już debata o tym, czy zasady wejdą, tylko o tym, jak firmy je wdrożą.",
+          "whyItMatters": "Dla redakcji, platform i twórców treści to realny obowiązek operacyjny, a nie tylko brukselski komunikat.",
+          "sources": [
+            {
+              "title": "Komisja Europejska",
+              "url": "https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-transparency-obligations"
+            }
+          ],
+          "tags": [
+            "Technologia"
+          ],
+          "ttsText": "W regulacji AI nie ma dziś nowej bomby informacyjnej, ale sama stabilność zasad jest już informacją. Komisja Europejska nadal utrzymuje obowiązki przejrzystości dla dostawców i podmiotów wdrażających wybrane systemy AI. Komisja Europejska nadal wiąże te obowiązki z art. 50 AI Act i z oznaczaniem treści generowanych lub manipulowanych. To nie jest już debata o tym, czy zasady wejdą, tylko o tym, jak firmy je wdrożą. Dla redakcji, platform i twórców treści to realny obowiązek operacyjny, a nie tylko brukselski komunikat.",
+          "priority": "High"
+        }
+      ]
+    }
+  ],
+  "audioArtifacts": [
+    {
+      "variant": "female-piper",
+      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-08-27-1016/audio/female-piper/podcast.mp3"
+    }
+  ]
+}
