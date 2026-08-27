@@ -1,8 +1,12 @@
 # Topic Index: tech-news
 
-Last updated: 2026-08-26
+Last updated: 2026-08-27
 
 ## Current Understanding
+
+Dzisiejszy run z 2026-08-27 przesuwa temat z samego modelowego rollout'u na dwa twarde fronty: bezpieczeństwo agentów oraz skalę compute. OpenAI publikuje nowy postmortem incydentu Hugging Face, a równocześnie dokłada webhook-triggered tasks i Admin plugin do ChatGPT Work, więc operacyjna automatyzacja i kontrola uprawnień zaczynają siedzieć w tym samym produkcie.
+
+Równolegle infrastruktura robi się jeszcze bardziej materialna: AWS i NVIDIA ogłaszają kolejne 2 mln GPU, Anthropic podpisuje ogromny kontrakt na compute z Nscale, a Google wchodzi do legal AI z Gemini Enterprise for Legal. To sygnał, że rynek coraz częściej wycenia nie tylko model, ale także dostęp do mocy, łańcuch dostaw i trust layer dla regulowanych workflowów.
 
 Dzisiejszy run z 2026-08-26 przesuwa temat z samego modelowego rollout'u na lifecycle modeli, desktopowe harnessy dla agentów i konsolidację warstwy danych. OpenAI potwierdza cutoff o3 w ChatGPT, ale równolegle publikuje twarde case studies z loveholidays i Asany, które pokazują mierzalny ROI z Codex i przesunięcie budowy software'u poza wąskie zespoły engineeringowe.
 
