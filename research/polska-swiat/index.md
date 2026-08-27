@@ -1,8 +1,10 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-08-26
+Last updated: 2026-08-27
 
 ## Current Understanding
+
+Po porannym runie 27 sierpnia główny obraz przesuwa się z samego deficytu Patriotów na szerszą odporność wojenną: Guardian opisuje nowe zadania Biłeckiego i Prokopenki przy donbaskim "fortress belt", a AP pokazuje rosyjski dekret pozwalający państwu czasowo przejmować uszkodzoną infrastrukturę krytyczną, jeśli właściciele nie zapewnią ochrony lub napraw. Równolegle Iran/Ormuz wraca jako systemowy problem energii i sankcji z Chinami jako ograniczeniem, Gaza testuje plan rozbrojenia Hamasu, Nepal i Tybet mierzą się z powodzią po kolapsie lodowcowym, a w Polsce leadem politycznym jest Zondacrypto/Ibiza/kryptoaktywa przy praktycznym tle CPN i dziennych cen maksymalnych paliw.
 
 Po wieczornym runie 26 sierpnia lead przesuwa się z wojny taryfowej i sankcyjnej na bardziej operacyjne następstwa: Ukraina nadal szuka interceptorów i dodatkowych zdolności obrony powietrznej, Rosja przedłuża zakaz eksportu diesla do września, a amerykańska presja na Iran zderza się z chińskim interesem w utrzymaniu handlu z Teheranem. Kanada nadal podnosi stawkę w sporze z USA, Niemcy domykają coraz twardszy przypadek sabotażu przy Leipzig/Halle, a w Polsce RCB daje praktyczny sygnał porannej mgły i suchej hydrologii bez nowego politycznego zwrotu.
 
@@ -701,6 +703,10 @@ konfliktowaniu Polaków i Ukraińców.
 
 ## Recent Reports
 
+- [2026-08-27](runs/2026-08-27.md)
+- [2026-08-26](runs/2026-08-26.md)
+- [2026-08-25](runs/2026-08-25.md)
+- [2026-08-24](runs/2026-08-24.md)
 - [2026-08-21](runs/2026-08-21.md)
 - [2026-08-20](runs/2026-08-20.md)
 - [2026-08-13-1934](runs/2026-08-13-1934.md)
