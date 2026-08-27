@@ -1,3 +1,11 @@
+# 2026-08-27 15:02
+
+- Watch whether prokuratura or TVN24 add detail to the Zondacrypto follow-up after the Ibiza article.
+- Watch whether the Romanowski hearing becomes a ruling or a new procedural update.
+- Watch whether police add cause, charge or route detail for the bus crash and Wola weapons case.
+- Watch whether IMGW expands, narrows or cancels the active heat alert.
+- Watch whether Nepal, Pakistan, Finance Canada, Treasury, Meta or Ukrainian sources add new numbers or measures.
+
 # 2026-08-26 06:03
 
 - Watch whether prokuratura albo TVN24 doprecyzują kolejne kroki w sprawie Zondacrypto.

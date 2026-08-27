@@ -2,7 +2,7 @@
 
 ## Current State
 
-Slot 2026-08-27 12:03 przesuwa feed na świeższe krajowe ruchy wokół Rozwoju Plus, Romanowskiego, wypadku busa i pościgu w Zielonce, a światowy rdzeń opiera na nowych atakach na Ukrainę, katastrofie w Nepalu, pożarze w Islamabadzie, wojnie handlowej USA-Kanada, sankcjach na Iran, ugodzie Mety i pożarze pod Barceloną.
+Slot 2026-08-27 15:02 przesuwa feed na Tymka, Zondacrypto, Romanowskiego, Wola i wypadek busa, a światowy rdzeń opiera na nowych atakach na Ukrainę, powodzi w Nepalu, pożarze w Islamabadzie, wojnie handlowej USA-Kanada, sankcjach na Iran i ugodzie Mety.
 
 ## Data Shape
 
