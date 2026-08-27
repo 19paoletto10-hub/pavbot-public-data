@@ -2,7 +2,7 @@
 
 ## Current State
 
-Slot 2026-08-26 18:01 przesuwa feed w stronę krajowych follow-upów wokół Zondacrypto, zapowiedzi zawiadomienia na Michała Moskala i HRE oraz nowych tematów światowych: Nepalu, Pakistanu, ugody Mety, presji na Iran i kolejnej rundy drogiej energii.
+Slot 2026-08-27 06:02 wzmacnia krajowy blok wokół Zondacrypto i HRE, utrzymuje alerty IMGW oraz przesuwa światowy rdzeń na Nepal, Pakistan, eskalację rosyjską, ugodę Mety i oficjalną cenę jubileuszowego Xboksa.
 
 ## Data Shape
 

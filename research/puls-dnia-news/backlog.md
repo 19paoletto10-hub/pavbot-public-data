@@ -51,6 +51,14 @@
 
 # Puls Dnia News Backlog
 
+# 2026-08-27 06:02
+
+- Watch whether prokuratura or TVN24 add formal detail to the Zondacrypto/Moskal track.
+- Watch whether IMGW upgrades, narrows or cancels the morning heat and storm alerts.
+- Watch whether Nepal, Pakistan or international aid channels publish a higher casualty count or rescue update.
+- Watch whether the Meta settlement gets court validation or a new implementation timeline.
+- Watch whether Microsoft publishes regional Xbox pricing or preorder availability changes.
+
 # 2026-08-26 18:01
 
 - Watch whether prokuratura or TVN24 add formal detail to the Michał Moskal/Zondacrypto track.
