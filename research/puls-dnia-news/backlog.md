@@ -51,6 +51,15 @@
 
 # Puls Dnia News Backlog
 
+# 2026-08-27 09:05
+
+- Watch whether prokuratura or TVN24 add formal detail to the Zondacrypto/Chodziński track.
+- Watch whether the Tymek transplant story gets a system-level reaction or new donor guidance.
+- Watch whether KAS, Ministerstwo Zdrowia or Poczta Polska answer the pulsoksymetry audit.
+- Watch whether IMGW narrows or expands the active weather alert block.
+- Watch whether Nepal, Pakistan or the US/UN agencies add a higher toll or rescue update.
+- Watch whether Meta, Microsoft or the EU publish extra implementation detail after the current tech/regulatory moves.
+
 # 2026-08-27 06:02
 
 - Watch whether prokuratura or TVN24 add formal detail to the Zondacrypto/Moskal track.
