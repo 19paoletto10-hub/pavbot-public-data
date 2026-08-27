@@ -59,13 +59,14 @@
 
 # Puls Dnia News Backlog
 
-# 2026-08-27 12:03
+# 2026-08-27 18:02
 
-- Watch whether Rozwój Plus, PiS or Michał Dworczyk add a clarifying statement after the PE delegation split.
-- Watch whether the Romanowski case gets a procedural or location update before the next slot.
-- Watch whether police or prosecutors give a cause, charge or route update for the bus crash and Zielonka pursuit.
-- Watch whether the Wola firearms case gets formal charges or motive detail.
-- Watch whether Ukraine, Nepal, Pakistan, Treasury, Canada or the Barcelona authorities publish new concrete counts or measures.
+- Watch whether prokuratura or TVN24 add zarzuty, zabezpieczenia majątkowe or money-flow detail in Zondacrypto.
+- Watch whether the court, obrona or Romanowski add a concrete procedural next step after the ENA ruling.
+- Watch whether BLIK publishes more detail on the hazard-domain block or the exact enforcement window.
+- Watch whether IMGW narrows or expands the active heat alert before the next slot.
+- Watch whether police or prokuratura give formal zarzuty or motive detail for the Wola weapons case.
+- Watch whether Ukraine, Nepal, Pakistan, Canada or Treasury publish new counts, sanctions or trade numbers.
 
 # 2026-08-27 09:05
 

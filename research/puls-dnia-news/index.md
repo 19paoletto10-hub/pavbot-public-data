@@ -2,7 +2,7 @@
 
 ## Current State
 
-Slot 2026-08-27 15:02 przesuwa feed na Tymka, Zondacrypto, Romanowskiego, Wola i wypadek busa, a światowy rdzeń opiera na nowych atakach na Ukrainę, powodzi w Nepalu, pożarze w Islamabadzie, wojnie handlowej USA-Kanada, sankcjach na Iran i ugodzie Mety.
+Slot 2026-08-27 18:02 przesuwa feed na zatrzymanie Piesiewicza i reakcję Żurka w sprawie Zondacrypto, decyzję ws. Romanowskiego, blokadę BLIK, wysokie magazyny gazu, nacisk na Metę i aktywne ostrzeżenia IMGW, a światowy rdzeń opiera na nowych atakach na Ukrainę, mobilizacji w Rosji, powodzi w Nepalu, pożarze w Islamabadzie, cłach Kanady i sankcjach na Iran.
 
 ## Data Shape
 
