@@ -1,8 +1,10 @@
 # Topic Index: llm-ai-jobs-wroclaw
 
-Last updated: 2026-08-26 15:41 CEST
+Last updated: 2026-08-27 15:42 CEST
 
 ## Current Understanding
+
+Runda z `2026-08-27 15:42 CEST` utrzymała temat w stanie materialnego board driftu zamiast nowego employer burst. `Just Join IT` zmienił wycenę `AI Transformation Lead` z `PLN/h` na `EUR/h` i dołożył świeży `Senior MLOps Engineer (Google Cloud)` z `Vertex AI`, `Gemini Enterprise Agent`, `RAG` i `MLOps`, a `Pracuj.pl` pokazał nowy tail wokół `Applied AI Engineer`, `Full Stack Engineer – AI Systems`, `AI Developer with .NET and Microsoft Agent Framework` oraz `Senior Engineer (Python, Cloud, AI/GenAI)`. `EPAM` nadal trzyma live tor AI-native, platformowy i security z hybrydą / remote w Polsce, więc najważniejszy sygnał dnia to rotacja i przeskalowanie boardów, nie zmiana po stronie canonical EPAM.
 
 Runda z `2026-08-26 15:41 CEST` przesunęła uwagę z zamkniętego TAURONa z powrotem na board refresh i live canonical pages. `Just Join IT` pokazuje dziś nowy, szeroki AI/ML Wrocław tail z `EMEA Cloud Platform & Infra Engineer – Remote (EMEA)`, `AI/ML Developer (Mid/Senior)`, `Senior ML/AI Engineer` i `Full Stack Engineer, AI systems`, `Sii` ma aktywne `AI Architect – GenAI & Cloud (f/m/x)`, a `EPAM` nadal utrzymuje równolegle live role AI-native, platformowe i security z Wrocławiem w zasięgu. `Capgemini` za to potwierdził, że przynajmniej jeden z widocznych wcześniej leadów jest już expired na canonical page, więc board mirror może jeszcze chwilowo pokazywać szerszy tail niż źródło pierwotne.
 

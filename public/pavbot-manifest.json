@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-08-27T13:12:09.045014+00:00",
+  "generatedAt": "2026-08-27T13:48:50.237762+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -398,6 +398,39 @@
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/pdfs/2026-08-27-polska-swiat.pdf",
       "sizeBytes": 110421,
       "date": "2026-08-27"
+    },
+    {
+      "id": "research/llm-ai-jobs-wroclaw/runs/2026-08-27-1542.md",
+      "type": "run",
+      "topic": "llm-ai-jobs-wroclaw",
+      "title": "Daily Research Report: llm-ai-jobs-wroclaw",
+      "path": "research/llm-ai-jobs-wroclaw/runs/2026-08-27-1542.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/runs/2026-08-27-1542.md",
+      "sizeBytes": 7671,
+      "date": "2026-08-27",
+      "time": "15:42"
+    },
+    {
+      "id": "research/llm-ai-jobs-wroclaw/pdfs/2026-08-27-1542-llm-ai-jobs-wroclaw.pdf",
+      "type": "pdf",
+      "topic": "llm-ai-jobs-wroclaw",
+      "title": "2026-08-27-1542-llm-ai-jobs-wroclaw.pdf",
+      "path": "research/llm-ai-jobs-wroclaw/pdfs/2026-08-27-1542-llm-ai-jobs-wroclaw.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/pdfs/2026-08-27-1542-llm-ai-jobs-wroclaw.pdf",
+      "sizeBytes": 77269,
+      "date": "2026-08-27",
+      "time": "15:42"
+    },
+    {
+      "id": "research/llm-ai-jobs-wroclaw/data/2026-08-27-1542-jobs.json",
+      "type": "jobsData",
+      "topic": "llm-ai-jobs-wroclaw",
+      "title": "Jobs data",
+      "path": "research/llm-ai-jobs-wroclaw/data/2026-08-27-1542-jobs.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/data/2026-08-27-1542-jobs.json",
+      "sizeBytes": 6701,
+      "date": "2026-08-27",
+      "time": "15:42"
     },
     {
       "id": "research/aktualne-wydarzenia-mobile/runs/2026-08-27-1016.md",
@@ -24123,7 +24156,7 @@
       "title": "Topic Index: llm-ai-jobs-wroclaw",
       "path": "research/llm-ai-jobs-wroclaw/index.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/index.md",
-      "sizeBytes": 138110
+      "sizeBytes": 138834
     },
     {
       "id": "research/llm-ai-jobs-wroclaw/backlog.md",
@@ -24132,7 +24165,7 @@
       "title": "Topic Backlog: llm-ai-jobs-wroclaw",
       "path": "research/llm-ai-jobs-wroclaw/backlog.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/backlog.md",
-      "sizeBytes": 23567
+      "sizeBytes": 24228
     }
   ]
 }
