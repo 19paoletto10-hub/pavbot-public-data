@@ -346,6 +346,7 @@ transparentność środowiskową AI.
 
 ## Review Notes
 
+- 2026-08-28: Google meteryzuje Gemini Notebook, Search, Flow i Transcribe; OpenAI wzmacnia APAC przez Tajlandię i nowy hire z Meta; Anthropic wygrywa spór z Pentagonem; a16z tworzy Machine Age Fund; HN/PH nadal premiują control surfaces.
 - 2026-08-20: Stripe/OpenRouter, OpenAI ZDR/Private Safety Processing/Teens/cyber pacing, Claude watermark bypasses, Google rival app stores, Etched i Linear razem przesuwają temat z model launches na routing, provenance i distribution.
 - 2026-08-04: publiczny framework review, eval-time incidents i aktywny Shai-Hulud ustawiają dzisiaj oś wokół kontroli, izolacji i provenance, podczas gdy GPT-5.6 oraz GPT-Live przesuwają produkt w stronę tańszego, ciągłego work/voice control.
 - 2026-08-04: deployment layer, governed vibe coding i AI-vs-AI security wyglądają na nową oś dnia; HN/PH nadal premiują control surfaces, a Apple/OpenAI oraz Airtable dodają hardware/IP i SaaS consolidation do obrazu rynku.

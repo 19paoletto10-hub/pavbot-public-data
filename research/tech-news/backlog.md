@@ -18,6 +18,7 @@
 | High | Track Hugging Face sale talks | A possible sale would reshape the AI developer infrastructure layer and could change neutrality expectations | Watch buyer identity, valuation confirmation and any product/roadmap statements | Open |
 | High | Track OpenRouter acquisition close | Stripe's deal could turn routing into a core AI infra layer and reset neutrality expectations | Watch close terms, integration details and whether token pricing changes | Open |
 | High | Track OpenAI APAC expansion | The Thailand accelerator and the Sandhya Devanathan hire show OpenAI localizing growth and regulatory engagement in APAC | Watch follow-on partnerships, startup outcomes and regional market rollout | Open |
+| High | Track Machine Age deployment | a16z's hardware fund matters only if it turns into real semis, memory, robotics and data-center bets | Watch first portfolio and deployment milestones | Open |
 | High | Track Instinct trust model | The new assistant is scaling quickly, but privacy permissions will decide whether users trust it with real life data | Watch app permissions, policy wording and beta retention | Open |
 | High | Track Astra cyber gating | OpenAI's threshold language suggests release timing may now depend on internal cyber risk gates | Watch the technical paper, monitoring changes and whether the guardrails spread to public products | Open |
 | High | Track Claude watermark bypasses | Public workaround tools can weaken provenance claims very quickly | Watch the detection API timeline, removal tools and platform responses | Open |
