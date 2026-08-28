@@ -1,8 +1,12 @@
 # Topic Index: tech-news
 
-Last updated: 2026-08-27
+Last updated: 2026-08-28
 
 ## Current Understanding
+
+Wieczorny run z 2026-08-28 przesuwa temat z samego modelowego rollout'u na metering, zadaniowe surface'y i regionalizację dystrybucji. Google robi z Gemini mniej abstrakcyjny, bardziej kontrolowany stack: Notebook dostaje limity zależne od zużycia, Search przejmuje booking travel, Flow dostaje kreatywne sterowanie wideo, a Transcribe staje się nowym backendem dla głosu. To razem wzmacnia wniosek, że rynek przesuwa się z samych modeli do bardziej zarządzanych workflowów.
+
+Równolegle OpenAI buduje APAC bliżej lokalnych ekosystemów przez tajski accelerator i nowy regionalny hire z Meta, Anthropic wygrywa spór o blacklistę Pentagonu, a a16z uruchamia Machine Age jako fundusz pod fizyczny buildout AI. Hacker News i Product Hunt nadal premiują agentowe control surfaces, benchmarki i narzędzia robocze, więc sygnał społecznościowy zostaje po tej samej stronie rynku.
 
 Dzisiejszy run z 2026-08-27 przesuwa temat z samego modelowego rollout'u na dwa twarde fronty: bezpieczeństwo agentów oraz skalę compute. OpenAI publikuje nowy postmortem incydentu Hugging Face, a równocześnie dokłada webhook-triggered tasks i Admin plugin do ChatGPT Work, więc operacyjna automatyzacja i kontrola uprawnień zaczynają siedzieć w tym samym produkcie.
 

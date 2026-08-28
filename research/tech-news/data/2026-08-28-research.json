@@ -1,0 +1,309 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-08-28",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Dzisiejszy run przesuwa temat z samego modelowego rollout'u na metering, zadaniowe surface'y i regionalizację dystrybucji. Google robi z Gemini mniej abstrakcyjny, bardziej kontrolowany stack: Notebook dostaje limity zależne od zużycia, Search przejmuje booking travel, Flow dostaje kreatywne sterowanie wideo, a Transcribe staje się nowym backendem dla głosu.",
+    "Równolegle OpenAI buduje APAC bliżej lokalnych ekosystemów przez tajski accelerator i nowy regionalny hire z Meta, Anthropic wygrywa spór o blacklistę Pentagonu, a a16z uruchamia Machine Age jako fundusz pod fizyczny buildout AI. Hacker News i Product Hunt nadal premiują agentowe control surfaces, benchmarki i narzędzia robocze, więc sygnał społecznościowy zostaje po tej samej stronie rynku."
+  ],
+  "summaryBullets": [
+    "Produkty: Google robi z Gemini kontrolowany stack zadań",
+    "AI: OpenAI buduje regionalny front w APAC",
+    "Regulacje: Anthropic wygrywa spór z Pentagonem"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-08-28-0-google-robi-z-gemini-kontrolowany-stack-zadan-1ac26572db",
+      "section": "Produkty",
+      "title": "Google robi z Gemini kontrolowany stack zadań",
+      "standfirst": "Google w kilka dni dodało flexible usage limits do Gemini Notebook, booking travel w Search AI Mode, creative controls do Flow i Gemini 3.5 Transcribe jako nowy backend dla głosu. Wspólny mianownik to przejście od „AI jako funkcji” do „AI jako kontrolowanego workflowu”.",
+      "whatHappened": "Google zaczęło łączyć limity, rezerwacje, edycję wideo i dyktowanie w jeden bardziej operacyjny stack produktów.",
+      "whyItMatters": "To sygnał, że Google sprzedaje AI nie jako pojedynczy model, tylko jako metered i zadaniową platformę.",
+      "deeperAnalysis": [
+        "Notebook nie zachowuje się już jak nieskończony notatnik. Limity odświeżane co pięć godzin i zależne od złożoności promptów, liczby źródeł oraz użytych funkcji wymuszają myślenie o budżecie compute i o tym, jak użytkownik rozkłada pracę w czasie.",
+        "Search i Flow pokazują ten sam wzorzec po innych stronach stacku. W AI Mode można monitorować ceny lotów, sprawdzać punkty i mile oraz przejść do rezerwacji hotelu, a Flow daje start/end frames, niższej jakości drafty i eksport do 1080p lub 4K. To już nie jest demo modelu, tylko produkt, który prowadzi użytkownika przez wykonanie zadania.",
+        "Transcribe domyka całą oś od strony głosu. 85+ języków, custom vocabulary, speaker attribution i word-level timestamps robią z voice input pełnoprawny interfejs roboczy dla agenta. Jeśli ten stack się przyjmie, największą przewagę będzie miał nie sam model, tylko zestaw zasad, limitów i integracji wokół niego."
+      ],
+      "contextPoints": [
+        "Co się stało: Notebook dostał planowe limity, Search booking i Flow creative controls, a Transcribe został nowym voice backendem.",
+        "Dlaczego ważne: Google zamienia AI w zarządzany, rozliczalny workflow.",
+        "Na co patrzeć dalej: rollout od 2 września i to, czy booking oraz Transcribe wyjdą szerzej poza obecne regiony."
+      ],
+      "sources": [
+        {
+          "title": "Google Notebook flexible limits",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/new-flexible-usage-limits/"
+        },
+        {
+          "title": "Gemini Notebook help",
+          "url": "https://support.google.com/gemininotebook/answer/16213268?hl=en"
+        },
+        {
+          "title": "Google Flow creative controls",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/new-creative-controls-google-flow/"
+        },
+        {
+          "title": "Google Search travel planning",
+          "url": "https://blog.google/intl/pt-br/produtos/3-novas-maneiras-de-planejar-e-reservar-viagens-na-busca/"
+        },
+        {
+          "title": "Gemini 3.5 Transcribe",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Google",
+        "Gemini",
+        "Notebook",
+        "Search",
+        "Flow",
+        "Transcribe"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-28-1-openai-buduje-regionalny-front-w-apac-a313d34a37",
+      "section": "AI",
+      "title": "OpenAI buduje regionalny front w APAC",
+      "standfirst": "OpenAI uruchomiło w Bangkoku ośmiotygodniowy accelerator z MHESI, NIA, Mahidol University i Techsauce, a równolegle ściąga do siebie Sandhyę Devanathan z Meta, by prowadziła wzrost i relacje regionalne w Azji Południowo-Wschodniej i Australii.",
+      "whatHappened": "OpenAI buduje lokalną warstwę wejścia na rynek w Tajlandii i wzmacnia kadrę odpowiedzialną za APAC.",
+      "whyItMatters": "To wyraźny sygnał, że dystrybucja i polityka regionalna stają się dla OpenAI równie ważne jak sam model.",
+      "deeperAnalysis": [
+        "Tajski accelerator nie jest jedynie marketingiem. Program obejmuje dziesięć startupów z obszaru health, wellness i education, daje kredyty API, mentoring i harmonogram pracy nad product design, evaluation, responsible AI, privacy, security, cost management, growth oraz fundraising. To jest próba przejścia od prototypu do wdrożenia z lokalnymi partnerami.",
+        "W tym samym czasie OpenAI ściąga Sandhyę Devanathan, która wcześniej odpowiadała w Meta za Indie i Azję Południowo-Wschodnią. Jej zakres obejmuje consumer growth, enterprise adoption, partnerships, regulatory engagement i operations, więc to nie jest zwykły hire sprzedażowy, tylko regionalna funkcja polityczno-operacyjna.",
+        "Jeżeli połączyć to z wcześniejszym otwarciem biur w Singapurze, Tokio, Seulu, Sydney i Delhi, widać, że OpenAI buduje w APAC pełny stack obecności: startupy, partnerstwa, regulacje i lokalne przywództwo. W praktyce wygrywanie rynku będzie tu zależeć nie tylko od modelu, ale od tego, czy firma potrafi wejść w lokalne instytucje bez utraty tempa."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI ogłosiło Thai accelerator i zatrudniło Sandhyę Devanathan.",
+        "Dlaczego ważne: APAC staje się osobnym frontem dystrybucji i governance.",
+        "Na co patrzeć dalej: demo day w listopadzie, pilotaże startupów i kolejne lokalne partnerstwa."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI Thailand accelerator",
+          "url": "https://openai.com/index/supporting-next-generation-ai-startups-thailand/"
+        },
+        {
+          "title": "TechCrunch on Devanathan joining OpenAI",
+          "url": "https://techcrunch.com/2026/08/28/meta-executive-leaves-for-openai-as-the-social-media-giant-faces-growing-scrutiny-in-india/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "APAC",
+        "Thailand",
+        "Meta",
+        "startupy",
+        "regulatory"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-28-2-anthropic-wygrywa-spor-z-pentagonem-9a58e37b95",
+      "section": "Regulacje",
+      "title": "Anthropic wygrywa spór z Pentagonem",
+      "standfirst": "Federalna sędzia uznała, że Pentagon bezprawnie oznaczył Anthropic jako ryzyko łańcucha dostaw i zrobił to w odwecie za publiczną krytykę firmy. Wyrok blokuje blacklistę i stawia twardą granicę dla politycznego nacisku na dostawców modeli.",
+      "whatHappened": "Anthropic wygrało sprawę o supply-chain-risk designation i doprowadziło do blokady działań Pentagonu.",
+      "whyItMatters": "To jeden z najmocniejszych publicznych precedensów pokazujących, że labs mogą wygrać z państwowym naciskiem, gdy record wygląda na odwetowy.",
+      "deeperAnalysis": [
+        "W 59-stronicowej opinii sędzia Rita Lin opisała działanie administracji jako retaliation i uznała, że nie ma ono solidnej podstawy prawnej. Dla rynku to ważne, bo oznacza, że samo powołanie się na national security nie wystarcza, jeśli dokumentacja wygląda jak kara za publiczne stanowisko firmy.",
+        "Sednem sporu było to, czy Anthropic może utrzymać swoje red lines wobec wojskowego użycia Claude przy jednoczesnym dostępie do kontraktów publicznych. Firma nie zgodziła się na nieograniczone użycie technologii do masowej inwigilacji albo autonomicznej broni, a Pentagon odpowiedział designationem, która miała odciąć firmę od współpracy.",
+        "Ten wyrok będzie obserwowany przez wszystkie frontier labs, bo wpływa na procurement, politykę eksportową i narrację o „zaufanych” modelach dla państwa. Nawet jeśli administracja złoży apelację, dziś rynek dostał sygnał, że granice prawne wokół AI procurement są realne, a nie tylko deklaratywne."
+      ],
+      "contextPoints": [
+        "Co się stało: Pentagon's blacklist was struck down.",
+        "Dlaczego ważne: due process i First Amendment ograniczają narrację o ryzyku w procurement AI.",
+        "Na co patrzeć dalej: apelacja administracji i to, jak resort obrony przepisze kolejne kontrakty."
+      ],
+      "sources": [
+        {
+          "title": "AP",
+          "url": "https://apnews.com/article/f15e3c30186385e73e72bee82d85b05c"
+        },
+        {
+          "title": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/985947/anthropic-supply-chain-risk-lawsuit-judge-ruling"
+        },
+        {
+          "title": "Guardian",
+          "url": "https://www.theguardian.com/technology/2026/aug/28/us-court-rules-pentagon-anthropic-ban-illegal-trump-claude-ai"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Anthropic",
+        "Pentagon",
+        "First Amendment",
+        "procurement",
+        "regulacje",
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-28-3-a16z-stawia-fundusz-na-fizyczny-buildout-ai-677b78849e",
+      "section": "Infrastruktura",
+      "title": "a16z stawia fundusz na fizyczny buildout AI",
+      "standfirst": "Andreessen Horowitz zebrało 1,1 mld USD do funduszu Machine Age, który ma inwestować w chipy, pamięć, networking, data centers i robotykę. To czytelny sygnał, że fizyczny buildout AI stał się osobną klasą inwestycyjną.",
+      "whatHappened": "a16z przechodzi z narracji software-first do funduszu skoncentrowanego na materialnej infrastrukturze AI.",
+      "whyItMatters": "Fundusz potwierdza, że memory, interconnect, power i robotics są dziś równie ważne jak modele.",
+      "deeperAnalysis": [
+        "Własny opis a16z mówi wprost o chęci „open the throttle”, czyli przyspieszenia fizycznego buildoutu AI. To wyjście poza klasyczny software VC i ruch w stronę rzeczy, których nie da się przeskoczyć samym kodem: chipów, pamięci, chłodzenia, sieci, energii i logistyki budowy.",
+        "To dobrze pasuje do szerszego rynku, w którym GPU financing, wieloletnie umowy compute i oczekiwania wobec data center zaczynają wyglądać jak oddzielna warstwa finansowa. Jeśli kapitał zaczyna być pakowany w dedykowany fundusz hardware'owy, to znaczy, że bottleneck fizyczny nie jest już tylko tezą, ale pełnoprawnym segmentem inwestycyjnym.",
+        "Najbliższy test to nie sam komunikat, tylko pierwsze portfolio. Jeśli Machine Age rzeczywiście zacznie zasilać semis, memory, robotics i data-center infra, to sygnał będzie mocny. Jeśli nie, pozostanie kolejną deklaracją o „przyszłości AI”, bez dowodu wykonania."
+      ],
+      "contextPoints": [
+        "Co się stało: fundusz został ogłoszony dziś z 1,1 mld USD.",
+        "Dlaczego ważne: hardware i infra AI dostały osobny budżet venture.",
+        "Na co patrzeć dalej: pierwsze portfolio i czy thesis przejdzie w realne wdrożenia."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/28/a16z-creates-a-1-1b-machine-age-fund-to-accelerate-the-physical-buildout-of-ai/"
+        },
+        {
+          "title": "WSJ",
+          "url": "https://www.wsj.com/finance/investing/andreessen-horowitz-hardware-fund-ai-supply-chain-887774c5"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "a16z",
+        "hardware",
+        "memory",
+        "data centers",
+        "robotics",
+        "AI infra"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-28-4-hn-i-product-hunt-premiuja-agentowe-narzedzia-827c084695",
+      "section": "Produkty",
+      "title": "HN i Product Hunt premiują agentowe narzędzia",
+      "standfirst": "Dzisiejszy Hacker News kręci się wokół Claude vocabulary, Terminal-Bench-Science, GLM-5.3 open-weight i energii dla data centers, a Product Hunt nagradza PageIndex, Caddi, Microduck, Gemini Omni 1.1 Flash, Firecrawl Developer Index, Almanac, SuperIntern i Wispr Flow. Wspólny wzór jest prosty: rynek premiuje narzędzia do kontroli, review i realnej pracy.",
+      "whatHappened": "Społeczność dalej nagradza produkty, które czynią AI bardziej obserwowalnym i użytecznym w workflowach.",
+      "whyItMatters": "To najlepszy publiczny sygnał, że popyt układa się wokół agentów, benchmarków i control surfaces, a nie czystego modelowego hype'u.",
+      "deeperAnalysis": [
+        "Hacker News dziś nie nagradza jedynie kolejnego modelowego ogłoszenia. W górze front page są rzeczy, które dają się uruchomić, porównać, kontrolować albo osadzić w istniejącym procesie: terminal-bench, open-weight models, język opisu modeli i polityka wokół energii dla data centers.",
+        "Product Hunt pokazuje ten sam wzorzec od strony produktu: agent coworker, firecrawl dla agentów, micro-robot, control deck dla Maca i AI, notetaking z dokumentów, dictation oraz workflow automation. To ważne, bo te launchy są bliżej użycia niż benchmarkowego szumu.",
+        "Dla naszego podcastu to dobry filtr. Jeśli coś trafia jednocześnie wysoko na HN i PH, zwykle chodzi o powierzchnię roboczą, którą da się wyjaśnić i pokazać, a nie o abstrakcyjne demo. To właśnie takie tematy najłatwiej przełożyć na sensowny polski segment newsowy."
+      ],
+      "contextPoints": [
+        "Co się stało: HN front page i PH leaderboard zgrupowały się wokół agentów i control surfaces.",
+        "Dlaczego ważne: to early demand signal dla workflowów zamiast chatbotów.",
+        "Na co patrzeć dalej: czy te launchy przełożą się na retention, przychody i kolejne iteracje produktu."
+      ],
+      "sources": [
+        {
+          "title": "Hacker News front page August 28, 2026",
+          "url": "https://news.ycombinator.com/front?day=2026-08-28"
+        },
+        {
+          "title": "Product Hunt leaderboard August 28, 2026",
+          "url": "https://www.producthunt.com/leaderboard/daily/2026/8/28"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Hacker News",
+        "Product Hunt",
+        "agents",
+        "open-weight",
+        "benchmarks",
+        "control surfaces"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Google robi z Gemini kontrolowany stack zadań",
+      "rationale": "Notebook, Search, Flow i Transcribe pokazują, że Google sprzedaje AI jako limitowany i wykonawczy workflow, a nie jedną funkcję.",
+      "sourcesLabel": "Google Blog; Google Help; Google Search"
+    },
+    {
+      "priority": "High",
+      "title": "OpenAI buduje regionalny front w APAC",
+      "rationale": "Tajlandzki accelerator i nowy hire z Meta pokazują, że OpenAI zaczyna wygrywać dystrybucję także lokalnym ekosystemem i polityką.",
+      "sourcesLabel": "OpenAI; TechCrunch"
+    },
+    {
+      "priority": "High",
+      "title": "Anthropic wygrywa spór z Pentagonem",
+      "rationale": "Wyrok przeciw blacklistcie to mocny precedens dla relacji AI firm z państwem i procurementem obronnym.",
+      "sourcesLabel": "AP; The Verge; Guardian"
+    },
+    {
+      "priority": "High",
+      "title": "a16z stawia fundusz na fizyczny buildout AI",
+      "rationale": "Fundusz Machine Age daje czytelny sygnał, że memory, chips, data centers i robotics są dziś osobną klasą inwestycyjną.",
+      "sourcesLabel": "TechCrunch; WSJ"
+    },
+    {
+      "priority": "Medium",
+      "title": "HN i Product Hunt premiują agentowe narzędzia",
+      "rationale": "Społeczność dalej nagradza kontrolę, benchmarki i workflowy, więc to najlepsze źródło świeżych tematów do podcastu.",
+      "sourcesLabel": "Hacker News; Product Hunt"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Google Blog",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/new-flexible-usage-limits/"
+    },
+    {
+      "title": "Google Help",
+      "url": "https://support.google.com/gemininotebook/answer/16213268?hl=en"
+    },
+    {
+      "title": "Google Flow",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/new-creative-controls-google-flow/"
+    },
+    {
+      "title": "Google Search",
+      "url": "https://blog.google/intl/pt-br/produtos/3-novas-maneiras-de-planejar-e-reservar-viagens-na-busca/"
+    },
+    {
+      "title": "Google Transcribe",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/"
+    },
+    {
+      "title": "OpenAI",
+      "url": "https://openai.com/index/supporting-next-generation-ai-startups-thailand/"
+    },
+    {
+      "title": "TechCrunch",
+      "url": "https://techcrunch.com/2026/08/28/meta-executive-leaves-for-openai-as-the-social-media-giant-faces-growing-scrutiny-in-india/"
+    },
+    {
+      "title": "AP",
+      "url": "https://apnews.com/article/f15e3c30186385e73e72bee82d85b05c"
+    },
+    {
+      "title": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/985947/anthropic-supply-chain-risk-lawsuit-judge-ruling"
+    },
+    {
+      "title": "Guardian",
+      "url": "https://www.theguardian.com/technology/2026/aug/28/us-court-rules-pentagon-anthropic-ban-illegal-trump-claude-ai"
+    },
+    {
+      "title": "TechCrunch",
+      "url": "https://techcrunch.com/2026/08/28/a16z-creates-a-1-1b-machine-age-fund-to-accelerate-the-physical-buildout-of-ai/"
+    },
+    {
+      "title": "WSJ",
+      "url": "https://www.wsj.com/finance/investing/andreessen-horowitz-hardware-fund-ai-supply-chain-887774c5"
+    },
+    {
+      "title": "Hacker News",
+      "url": "https://news.ycombinator.com/front?day=2026-08-28"
+    },
+    {
+      "title": "Product Hunt",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/8/28"
+    }
+  ]
+}
