@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-08-28",
+  "runTime": "21:27",
+  "executiveSummary": "Today is material because Just Join IT flipped AI Transformation Lead back to PLN/h and added a fresh Senior MLOps Engineer (Google Cloud) plus new Snowflake Cortex AI and AI&Data leads. Pracuj.pl added Capgemini's Senior AI Solutions Consultant (HR Transformation, Copilot Studio), while the canonical Comarch DevOps Engineer (AI-native Stack) page is live for Wrocław; EPAM's hybrid / remote AI-native and security pages remain stable.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "Senior MLOps Engineer (Google Cloud)",
+      "company": "Just Join IT",
+      "location": "Wrocław / remote",
+      "workMode": "Remote",
+      "compensation": "32.47 - 39.42 EUR/h",
+      "seniority": "Senior",
+      "fitSummary": "MLOps, ML Platform Engineering, Vertex AI, Gemini Enterprise Agent, RAG, Python i CI/CD.",
+      "whyInteresting": "Świeży, praktyczny lead na platformowe AI work z dobrym dopasowaniem do scope.",
+      "uncertainty": "Board card może jeszcze zmienić tytuł, deadline lub zakres.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "RAG",
+        "MLOps",
+        "Python"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "AI Transformation Lead",
+      "company": "Just Join IT",
+      "location": "Wrocław / hybrid",
+      "workMode": "Hybrid",
+      "compensation": "160 - 190 PLN/h",
+      "seniority": "Lead",
+      "fitSummary": "AI, LLM, Azure AI Foundry, Agentic AI, RAG, MCP i Codex.",
+      "whyInteresting": "Nadal jest to gęsty lead, ale publiczny board zmienił walutę z powrotem na PLN/h.",
+      "uncertainty": "Salary band może znowu się przestawić albo nie odzwierciedlać canonical page.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "Agentic AI",
+        "RAG",
+        "LLM",
+        "Azure"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "Senior AI Engineer (Snowflake Cortex AI)",
+      "company": "Just Join IT",
+      "location": "Wrocław / remote",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Senior",
+      "fitSummary": "Snowflake, Cortex Agents, Cortex Analyst, AI engineering, semantic modeling i GenAI.",
+      "whyInteresting": "Łączy data platform z produkcyjnym GenAI i wygląda na nowy, silny board lead.",
+      "uncertainty": "Title i zakres mogą się jeszcze doprecyzować.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "GenAI"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "DevOps Engineer (AI-native Stack)",
+      "company": "Comarch",
+      "location": "Wrocław",
+      "workMode": "Wrocław",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "AI-native platform, AIOps, multi-cloud, Kubernetes, GitLab CI, ArgoCD i observability.",
+      "whyInteresting": "To canonical employer page z wyraźnym platformowym AI scope dla Wrocławia.",
+      "uncertainty": "Publiczny opis może ewoluować, ale strona wygląda spójnie z topic scope.",
+      "sourceURLs": [
+        "https://kariera.comarch.pl/praca/devops-engineer-ai-native-stack/"
+      ],
+      "tags": []
+    },
+    {
+      "rank": 5,
+      "title": "Senior AI Solutions Consultant (HR Transformation, Copilot Studio)",
+      "company": "Capgemini Polska",
+      "location": "Wrocław / hybrydowo",
+      "workMode": "Hybrid",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Senior",
+      "fitSummary": "Copilot Studio, HR Transformation, AI consulting i solution delivery.",
+      "whyInteresting": "Nowy publiczny Wrocław lead na Pracuj.pl z praktycznym Copilot Studio angle.",
+      "uncertainty": "Consulting scope może być szerszy niż hands-on engineering.",
+      "sourceURLs": [
+        "https://www.pracuj.pl/praca/ai%3Bkw/wroclaw%3Bwp"
+      ],
+      "tags": []
+    }
+  ],
+  "changes": [
+    "The Just Join IT board shifted from a pure salary-currency drift to a broader board refresh: AI Transformation Lead flipped back to PLN/h, and Senior MLOps Engineer (Google Cloud) plus Senior AI Engineer (Snowflake Cortex AI) are new high-signal additions.",
+    "Pracuj.pl widened the Wrocław tail with Capgemini's Copilot Studio consulting role and a live Comarch AI-native stack page, which is a stronger canonical signal than the previous purely board-first tail.",
+    "EPAM did not materially change status, but the canonical hybrid / remote pages remain live and still anchor the topic's platform and security watchlist."
+  ],
+  "risks": [
+    "Board-first cards can change salary, title or status within a day, so the current compensation wording is not durable.",
+    "Some of today's new Pracuj.pl cards are consulting or AI-systems roles rather than pure LLM engineering, so fit needs manual screening.",
+    "The salary flip on AI Transformation Lead may still reflect a mirror update rather than an employer-side change, so the canonical page should be checked again next run."
+  ],
+  "recommendedActions": [
+    "Re-check Senior MLOps Engineer (Google Cloud) and AI Transformation Lead on the next run for title, salary and expiry drift.",
+    "Re-check the new Comarch and Capgemini pages for canonical stability and whether the Wrocław wording persists.",
+    "Keep GenAI Architect (AI&Data), Senior IT Business Analyst with AI - Freelance and the Svitla Snowflake Cortex AI role as secondary leads."
+  ],
+  "checkedSources": [
+    {
+      "title": "Just Join IT: Job offers AI/ML Wrocław",
+      "url": "https://justjoin.it/job-offers/wroclaw/ai",
+      "status": "checked"
+    },
+    {
+      "title": "Pracuj.pl: Praca ai, Wrocław",
+      "url": "https://www.pracuj.pl/praca/ai%3Bkw/wroclaw%3Bwp",
+      "status": "checked"
+    },
+    {
+      "title": "Comarch: DevOps Engineer (AI-native Stack)",
+      "url": "https://kariera.comarch.pl/praca/devops-engineer-ai-native-stack/",
+      "status": "checked"
+    },
+    {
+      "title": "EPAM Senior AI-Native Engineer",
+      "url": "https://careers.epam.com/en/vacancy/senior-ai-native-engineer-bltra6lba5g82vw17xu_en",
+      "status": "checked"
+    },
+    {
+      "title": "EPAM Senior AI & Agentic Systems Engineer (Java)",
+      "url": "https://careers.epam.com/en/vacancy/senior-ai-agentic-systems-engineer-java-blte35dpj1r8hefrppw_en",
+      "status": "checked"
+    },
+    {
+      "title": "EPAM Senior AI Platform Engineer",
+      "url": "https://careers.epam.com/en/vacancy/senior-ai-platform-engineer-bltwpb7wu3ynnxvq15i_en",
+      "status": "checked"
+    },
+    {
+      "title": "EPAM Senior SecOps Engineer",
+      "url": "https://careers.epam.com/en/vacancy/senior-secops-engineer-bltawunp0lz3mv32bt6_en",
+      "status": "checked"
+    }
+  ]
+}
