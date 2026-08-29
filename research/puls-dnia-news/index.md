@@ -2,7 +2,7 @@
 
 ## Current State
 
-Slot 2026-08-29 06:01 utrzymuje feed na alertach RCB i IMGW, komentarzu Tuska do Zondacrypto, dubajskim follow-upie Romanowskiego, budżecie 2027, blokadzie BLIK oraz regulacyjnych ruchach Google i Mety, a światowy rdzeń opiera na rosyjskich atakach na Ukrainę, nowej fali mobilizacji w Rosji, powodzi w Nepalu, kontrcłach Kanady i kampanii Treasury przeciw Iranowi.
+Slot 2026-08-29 09:02 utrzymuje alerty RCB i IMGW, ale mocno przesuwa feed na formalny areszt Piesiewicza, dubajski follow-up Romanowskiego, budżet 2027 po przekazaniu do RDS, blokadę BLIK, ruchy regulacyjne Google i Mety oraz świeży pakiet światowy: Wenezuelę, intensyfikację uderzeń Ukrainy, rosyjską mobilizację, śmierć króla Haralda V, powódź w Nepalu, kontrcła Kanady i sankcje USA wobec Iranu.
 
 ## Data Shape
 

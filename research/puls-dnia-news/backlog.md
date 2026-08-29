@@ -59,6 +59,15 @@
 
 # Puls Dnia News Backlog
 
+# 2026-08-29 09:02
+
+- Watch whether IMGW lub RCB skrócą, rozszerzą albo odwołają alert burzowy przed kolejnym slotem.
+- Watch whether prokuratura poda dokładny opis zarzutów i dalszy tryb w sprawie Piesiewicza.
+- Watch whether Romanowski dostanie kolejny formalny ruch procesowy albo reakcję obrony.
+- Watch whether Google and the European Commission publish more concrete rollout details on site reputation abuse and DMA timing.
+- Watch whether Meta, Canada, Treasury or State Department add implementation details that change the cards.
+- Watch whether Ukraine, Nepal or Norway publish updated official numbers or scheduling details before the next run.
+
 # 2026-08-29 06:01
 
 - Watch whether RCB i IMGW rozszerzą, skrócą albo odwołają alerty burzowe przed kolejnym slotem.

@@ -1,0 +1,722 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-08-29",
+  "runTime": "09:02",
+  "status": "Material update",
+  "headline": "Alerty, areszt Piesiewicza i nowe ruchy regulacyjne",
+  "summary": "Poranny slot wzmacnia alerty pogodowe, formalny areszt Piesiewicza, dubajski follow-up Romanowskiego, budżet 2027, regulacje Google i Mety oraz pakiet światowy: Wenezuela, Ukraina, Norwegia, Nepal, Kanada i Iran.",
+  "items": [
+    {
+      "id": "alerty-2026-08-29-0902",
+      "section": "Alerty",
+      "title": "RCB i IMGW utrzymują burzowy poranek",
+      "lead": "Ryzyko podtopień nadal jest aktywne.",
+      "whatHappened": "RCB i IMGW utrzymują ostrzeżenia przed intensywnym deszczem i burzami, a radar opadów pokazuje aktywne pasma nad częścią kraju.",
+      "keyFacts": [
+        "Alert obejmuje 28 i 29 sierpnia 2026 roku.",
+        "IMGW prognozuje burze, mocny deszcz i lokalne podtopienia.",
+        "TVN24 Meteo pokazuje ruch aktywnych komórek opadowych."
+      ],
+      "reactions": [
+        "Służby apelują o ostrożność przy wezbranych ciekach i zalanych drogach.",
+        "Meteorolodzy śledzą, czy strefa opadów przesunie się dalej na wschód."
+      ],
+      "whyItMatters": "To bezpośredni wpływ na bezpieczeństwo lokalne, transport i pracę służb.",
+      "context": "Po ciepłym finale tygodnia feed wraca do klasycznego alertu burzowego.",
+      "watchNext": [
+        "Czy IMGW skróci lub rozszerzy ostrzeżenia.",
+        "Czy pojawią się zgłoszenia o zalaniach lub przerwach w ruchu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Alert RCB dla trzech województw. Możliwe podtopienia",
+          "url": "https://tvn24.pl/polska/alert-rcb-28-29-08-intensywne-opady-deszczu-i-burze-mozliwe-podtopienia-st9210936"
+        },
+        {
+          "title": "TVN24 Meteo: Radar i mapa opadów w Polsce",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/radar-i-mapa-opadow-w-polsce-pogoda-i-burze-w-sobote-29-08-nadchodzi-ulewny-deszcz-tu-spadnie-go-najwiecej-st9211186"
+        },
+        {
+          "title": "IMGW: Synoptyczna prognoza pogody od 28.08.2026 do 30.08.2026 r.",
+          "url": "https://imgw.pl/synoptyczna-prognoza-pogody-od-28-08-2026-do-30-08-2026-r/"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "burze",
+        "RCB",
+        "IMGW"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "piesiewicz-2026-08-29-0902",
+      "section": "Polityka",
+      "title": "Piesiewicz trafia do trzymiesięcznego aresztu",
+      "lead": "Sprawa Zondacrypto wchodzi w formalny etap izolacji.",
+      "whatHappened": "Sąd zdecydował o trzymiesięcznym areszcie dla Radosława Piesiewicza. TVN24 podało, że po zakończeniu czynności został wyprowadzony przez policję tylnym wyjściem i przewieziony samochodem.",
+      "keyFacts": [
+        "Decyzja zapadła rano 29 sierpnia 2026 roku.",
+        "Informację potwierdziła rzeczniczka prokuratora generalnego.",
+        "Temat pozostaje związany ze sprawą Zondacrypto."
+      ],
+      "reactions": [
+        "Sprawa natychmiast podbija polityczny i sportowy komentarz.",
+        "TVN24 traktuje to jako wyraźny punkt zwrotny w śledztwie."
+      ],
+      "whyItMatters": "To przejście z medialnego skandalu do pełnej fazy izolacji procesowej.",
+      "context": "W poprzednim slocie mówiliśmy już o zatrzymaniu, teraz doszło do formalnego aresztu.",
+      "watchNext": [
+        "Czy prokuratura poda dokładny opis zarzutów.",
+        "Czy PKOl lub sam Piesiewicz wydadzą oficjalne stanowisko."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Jest areszt dla Radosława Piesiewicza",
+          "url": "https://tvn24.pl/polska/jest-areszt-dla-radoslawa-piesiewicza-st9211436"
+        },
+        {
+          "title": "TVN24: Areszt dla Piesiewicza, azyl Romanowskiego, weta",
+          "url": "https://tvn24.pl/polska/szesc-rzeczy-ktore-warto-w-sobote-29-sierpnia-najwazniejsze-informacje-st9211489"
+        }
+      ],
+      "tags": [
+        "Piesiewicz",
+        "Zondacrypto",
+        "areszt"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "romanowski-2026-08-29-0902",
+      "section": "Polityka",
+      "title": "Romanowski i dubajski trop",
+      "lead": "Nowy follow-up wzmacnia presję procesową.",
+      "whatHappened": "TVN24 ujawniło, że Marcin Romanowski szukał azylu w Dubaju, a sąd wcześniej nie uwzględnił wniosku obrony o uchylenie ENA.",
+      "keyFacts": [
+        "W kontaktach pośredniczył Bartosz Lewandowski.",
+        "Przemysław Kral miał pomóc w załatwieniu azylu.",
+        "Sąd utrzymał sprawę na torze ENA."
+      ],
+      "reactions": [
+        "Roman Polko ostro skomentował działania Romanowskiego w TVN24.",
+        "Wątek pozostaje politycznie wrażliwy i mocno komentowany."
+      ],
+      "whyItMatters": "To kolejny sygnał, że sprawa nie schodzi z toru procesowego.",
+      "context": "To rozwinięcie wcześniejszego wątku o miejscu pobytu i próbach zmiany statusu procesowego.",
+      "watchNext": [
+        "Czy obrona złoży kolejny środek zaskarżenia.",
+        "Czy sąd wyznaczy nowy termin lub pojawi się następny komunikat procesowy."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Jak Marcin Romanowski azylu u Krala szukał",
+          "url": "https://tvn24.pl/polska/przymyslaw-kral-mial-zalatwic-marcinowi-romanowskiemu-azyl-w-dubaju-st9209403"
+        },
+        {
+          "title": "TVN24: Jest decyzja sądu w sprawie ENA Marcina Romanowskiego",
+          "url": "https://tvn24.pl/polska/sprawa-marcina-romanowskiego-sad-nie-uwzglednil-wniosku-w-sprawie-ena-st9209010"
+        }
+      ],
+      "tags": [
+        "Romanowski",
+        "ENA",
+        "Dubaj",
+        "sąd"
+      ],
+      "priority": "3"
+    },
+    {
+      "id": "budzet-2027-2026-08-29-0902",
+      "section": "Gospodarka",
+      "title": "Projekt budżetu trafia do RDS",
+      "lead": "Deficyt i wydatki idą wyżej.",
+      "whatHappened": "Rada Ministrów przyjęła projekt budżetu na 2027 rok i przekazała go do Rady Dialogu Społecznego. TVN24 podało dochody około 695 mld zł, wydatki 977,6 mld zł i deficyt 282,6 mld zł.",
+      "keyFacts": [
+        "Budżet ma większy koszt obsługi długu.",
+        "Rząd akcentuje bezpieczeństwo, zdrowie i inwestycje.",
+        "Dokument jest już na etapie konsultacji społecznych."
+      ],
+      "reactions": [
+        "MF przedstawia projekt jako budżet bezpieczeństwa i rozwoju.",
+        "RDS dostaje materiał do stanowiska stron pracowników i pracodawców."
+      ],
+      "whyItMatters": "To ramy fiskalne na 2027 rok i punkt odniesienia dla podatków, wydatków i rynku.",
+      "context": "To jedna z najważniejszych krajowych decyzji ekonomicznych pod koniec sierpnia.",
+      "watchNext": [
+        "Czy partnerzy społeczni zgłoszą uwagi do projektu.",
+        "Czy szczegóły budżetu zmienią się po konsultacjach."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Projekt budżetu trafił do Rady Dialogu Społecznego",
+          "url": "https://tvn24.pl/biznes/z-kraju/ministerstwo-finansow-projekt-budzetu-na-2027-rok-trafil-do-rady-dialogu-spolecznego-st9211430"
+        },
+        {
+          "title": "gov.pl: Budżet bezpieczeństwa, rozwoju i optymizmu",
+          "url": "https://www.gov.pl/web/premier/budzet-bezpieczenstwa-rozwoju-i-optymizmu"
+        }
+      ],
+      "tags": [
+        "budżet",
+        "finanse publiczne",
+        "RDS"
+      ],
+      "priority": "4"
+    },
+    {
+      "id": "wola-2026-08-29-0902",
+      "section": "Bezpieczeństwo",
+      "title": "Wola: zarzut za nielegalną broń",
+      "lead": "Policja i ABW zabezpieczyły pistolety i amunicję.",
+      "whatHappened": "Po działaniach policji i ABW na Woli jeden z zatrzymanych obywateli Rosji usłyszał zarzut posiadania broni i amunicji bez wymaganego zezwolenia. Śledczy opisali pistolety Glock i Walther oraz dodatkową amunicję.",
+      "keyFacts": [
+        "Zatrzymano trzech obywateli Rosji czeczeńskiego pochodzenia.",
+        "Jeden z nich trafił do aresztu.",
+        "Sprawę prowadzi prokuratura rejonowa na Woli."
+      ],
+      "reactions": [
+        "KSP i ABW traktują sprawę jako standardowe śledztwo bezpieczeństwa publicznego.",
+        "Warszawski wątek security pozostaje aktywny."
+      ],
+      "whyItMatters": "To sygnał o nielegalnym uzbrojeniu w stolicy i o aktywności służb.",
+      "context": "Wcześniej była mowa o zatrzymaniach; teraz doszedł formalny zarzut i areszt.",
+      "watchNext": [
+        "Czy prokuratura poda motyw lub szerszy kontekst posiadania broni.",
+        "Czy pojawią się kolejne zarzuty wobec pozostałych zatrzymanych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Glock i Walther w mieszkaniu. Jest śledztwo prokuratury",
+          "url": "https://tvn24.pl/tvnwarszawa/wola/warszawa-rosjanie-i-bron-w-mieszkaniu-zarzuty-i-areszt-sledztwo-prokuratury-st9211069"
+        },
+        {
+          "title": "Komenda Stołeczna Policji",
+          "url": "https://ksp.policja.gov.pl/"
+        }
+      ],
+      "tags": [
+        "Wola",
+        "policja",
+        "broń",
+        "ABW"
+      ],
+      "priority": "5"
+    },
+    {
+      "id": "blik-2026-08-29-0902",
+      "section": "Gospodarka",
+      "title": "BLIK blokuje hazardowe transakcje",
+      "lead": "Zmiana wchodzi 1 września.",
+      "whatHappened": "BLIK ma od 1 września blokować transakcje związane z domenami hazardowymi działającymi niezgodnie z polskim prawem.",
+      "keyFacts": [
+        "Blokada obejmie płatności realizowane przez BLIK.",
+        "Mechanizm ma opierać się o listy domen ministra finansów.",
+        "To bezpośrednia zmiana dla użytkowników i dla nielegalnego hazardu online."
+      ],
+      "reactions": [
+        "Operator stawia na zgodność i ograniczenie nadużyć.",
+        "Dla części użytkowników oznacza to mniej opcji płatniczych w szarej strefie."
+      ],
+      "whyItMatters": "To realny ruch przeciw nielegalnemu hazardowi w internecie.",
+      "context": "Komunikat pojawił się obok innych regulacyjnych tematów w krajowym biznesie.",
+      "watchNext": [
+        "Czy PSP poda szczegółową listę wyjątków.",
+        "Czy ministerstwo finansów skomentuje skuteczność blokady."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Blik wprowadza blokadę. Tych transakcji nie zrobisz",
+          "url": "https://tvn24.pl/biznes/z-kraju/blik-wprowadza-blokade-tych-transakcji-nie-zrobisz-st9208646"
+        }
+      ],
+      "tags": [
+        "BLIK",
+        "hazard",
+        "płatności"
+      ],
+      "priority": "6"
+    },
+    {
+      "id": "google-2026-08-29-0902",
+      "section": "Technologia",
+      "title": "Google zmienia politykę spamu w Europie",
+      "lead": "UE dociska site reputation abuse.",
+      "whatHappened": "Google ogłosił zmianę polityki site reputation abuse w Europie, a TVN24 opisuje to jako koniec pasożytniczego SEO. Oficjalne materiały wskazują na wejście zmian 30 sierpnia.",
+      "keyFacts": [
+        "Search Central zaktualizował oficjalny wpis 28 sierpnia.",
+        "Komisja Europejska prowadzi równoległe działania DMA dotyczące Google.",
+        "Zmiana dotyczy jakości wyników wyszukiwania w EEA."
+      ],
+      "reactions": [
+        "Wydawcy dostają sygnał, że część praktyk będzie mniej tolerowana.",
+        "To ruch zgodności wobec nacisku regulacyjnego UE."
+      ],
+      "whyItMatters": "To może realnie zmienić widoczność treści i model dystrybucji ruchu w Europie.",
+      "context": "To jedna z najważniejszych regulacyjnych historii technologicznych tego poranka.",
+      "watchNext": [
+        "Czy Google poda dodatkowe szczegóły wdrożenia w EEA.",
+        "Czy Komisja Europejska zareaguje na praktyczne skutki zmiany."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Koniec z \"pasożytniczym SEO\". Google podporządkowuje się UE",
+          "url": "https://tvn24.pl/biznes/tech/google-zmienia-polityke-dotyczaca-spamu-od-30-sierpnia-spelnia-oczekiwania-unii-europejskiej-st9211360"
+        },
+        {
+          "title": "Google Search Central: Update to the Site Reputation Policy",
+          "url": "https://developers.google.com/search/blog/2026/08/update-site-reputation-policy"
+        },
+        {
+          "title": "European Commission: Sharing of Google Search data",
+          "url": "https://digital-markets-act.ec.europa.eu/developer-portal/data-access/alphabet-specification-proceedings-sharing-google-search-data_en"
+        }
+      ],
+      "tags": [
+        "Google",
+        "UE",
+        "SEO",
+        "DMA"
+      ],
+      "priority": "7"
+    },
+    {
+      "id": "meta-2026-08-29-0902",
+      "section": "Technologia",
+      "title": "Meta wdraża nowe limity dla nastolatków",
+      "lead": "Firma odpowiada na presję po ugodzie stanowej.",
+      "whatHappened": "Meta zawarła ugodę z prokuratorami generalnymi w USA i ma wdrożyć limity czasu, blokady nocne, mocniejsze kontrole rodzicielskie i inne zabezpieczenia dla nastolatków.",
+      "keyFacts": [
+        "Porozumienie obejmuje Facebook i Instagram.",
+        "California AG i AP opisują je jako znaczący zwrot regulacyjny.",
+        "Meta zaprasza TikTok i YouTube do podobnych standardów."
+      ],
+      "reactions": [
+        "Meta przedstawia to jako nowy standard bezpieczeństwa.",
+        "Krytycy mówią, że reformy są ważne, ale niewystarczające."
+      ],
+      "whyItMatters": "To może wpłynąć na to, jak platformy projektują doświadczenie młodszych użytkowników.",
+      "context": "To jeden z najgłośniejszych technologicznych follow-upów tego tygodnia.",
+      "watchNext": [
+        "Czy sąd zatwierdzi ugodę bez zmian.",
+        "Czy konkurenci Meta odpowiedzą własnymi regulacjami."
+      ],
+      "sources": [
+        {
+          "title": "Meta Newsroom: Our Agreement With Bipartisan Attorneys General",
+          "url": "https://about.fb.com/news/2026/08/agreement-with-state-attorneys-general-supporting-teens/"
+        },
+        {
+          "title": "California AG: Transformative settlement with Meta",
+          "url": "https://oag.ca.gov/news/press-releases/attorney-general-bonta-secures-transformative-17-billion-settlement-meta"
+        },
+        {
+          "title": "AP: Meta reaches landmark settlement with states",
+          "url": "https://apnews.com/article/97d342f2a33d835eda2356c5e1af9e37"
+        }
+      ],
+      "tags": [
+        "Meta",
+        "bezpieczeństwo dzieci",
+        "regulacje"
+      ],
+      "priority": "8"
+    },
+    {
+      "id": "venezuela-2026-08-29-0902",
+      "section": "Świat",
+      "title": "Trump ogłasza porozumienie o ropie z Wenezuelą",
+      "lead": "U.S. chce większej kontroli nad rezerwami.",
+      "whatHappened": "Donald Trump ogłosił porozumienie z Wenezuelą dotyczące kontroli nad częścią rezerw ropy. AP opisuje układ jako ogromny i politycznie kontrowersyjny.",
+      "keyFacts": [
+        "W grę ma wchodzić około 65 mld baryłek.",
+        "Układ ma przyciągnąć inwestycje i zwiększyć wpływy do Caracas.",
+        "Szczegóły własności i nadzoru nie są jeszcze w pełni jasne."
+      ],
+      "reactions": [
+        "Wenezuelska opozycja krytykuje układ jako wyzyskujący.",
+        "Rynek patrzy na możliwy wpływ na ceny paliw."
+      ],
+      "whyItMatters": "To może zmienić układ sił w energetyce i na rynku paliw w obu Amerykach.",
+      "context": "To jeden z najmocniejszych światowych tematów ekonomiczno-geopolitycznych tej rundy.",
+      "watchNext": [
+        "Czy pojawią się oficjalne szczegóły umowy.",
+        "Czy rynek paliw zareaguje na większy wolumen inwestycji."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Donald Trump ogłosił porozumienie z Wenezuelą",
+          "url": "https://tvn24.pl/swiat/donald-trump-oglosil-porozumienie-z-wenezuela-chodzi-o-kontrole-nad-czescia-rezerw-ropy-st9211501"
+        },
+        {
+          "title": "AP: Trump says US has entered deal with Venezuela",
+          "url": "https://apnews.com/article/eb0ed5a1e99602c21a7f690c3368020e"
+        }
+      ],
+      "tags": [
+        "Wenezuela",
+        "ropa",
+        "Trump"
+      ],
+      "priority": "9"
+    },
+    {
+      "id": "ukraine-2026-08-29-0902",
+      "section": "Świat",
+      "title": "Ukraina zwiększa uderzenia dalekiego zasięgu",
+      "lead": "Kijów chce mocniej naciskać na rosyjskie zaplecze.",
+      "whatHappened": "Ukraina ma potroić dzienne uderzenia dalekiego zasięgu, a rosyjskie ataki nadal niszczą budynki i infrastrukturę wokół Kijowa. To wzmacnia presję na rosyjskie zaplecze energetyczne i logistyczne.",
+      "keyFacts": [
+        "Guardian podaje cel 300 do 1000 dronów dziennie.",
+        "AP opisuje kolejną falę rosyjskich uderzeń na region kijowski.",
+        "Kampania uderza w rosyjskie paliwo i logistykę."
+      ],
+      "reactions": [
+        "Ukraińskie władze mówią o długofalowej presji na Rosję.",
+        "Na rosyjskiej stronie rośnie problem paliwowy."
+      ],
+      "whyItMatters": "To sygnał dalszej eskalacji i większego nacisku na rosyjską gospodarkę wojenną.",
+      "context": "To jedna z najcięższych wojennych historii tej rundy.",
+      "watchNext": [
+        "Czy Kijów poda kolejne liczby uderzeń.",
+        "Czy pojawią się nowe uszkodzenia infrastruktury energetycznej."
+      ],
+      "sources": [
+        {
+          "title": "The Guardian: Ukraine war briefing on tripled long-range strikes",
+          "url": "https://www.theguardian.com/world/2026/aug/29/ukraine-war-briefing-long-range-strikes-on-russia-tripled"
+        },
+        {
+          "title": "AP: Russian drone strikes batter Kyiv region",
+          "url": "https://apnews.com/article/e71dbed50bbdc710372f96deead36665"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Rosja",
+        "drony",
+        "wojna"
+      ],
+      "priority": "10"
+    },
+    {
+      "id": "rosja-mobilizacja-2026-08-29-0902",
+      "section": "Świat",
+      "title": "Rosja szykuje nową falę mobilizacji",
+      "lead": "Ukraiński wywiad mówi o planach 2026-2027.",
+      "whatHappened": "Oficjalne źródła Ukrainy podały, że Rosja przygotowuje nową falę mobilizacji z celem 300 tys. rekrutów w 2026 roku i kolejne 300 tys. w 2027 roku.",
+      "keyFacts": [
+        "Komunikat pochodzi z briefingów wywiadowczych.",
+        "Plan obejmuje dwa kolejne lata.",
+        "To sygnał długiego konfliktu i dalszych strat."
+      ],
+      "reactions": [
+        "Kijów ostrzega przed eskalacją.",
+        "Warto obserwować reakcje Moskwy i partnerów Ukrainy."
+      ],
+      "whyItMatters": "To sygnał, że konflikt może wejść w jeszcze dłuższą i bardziej kosztowną fazę.",
+      "context": "To osobny, wojenny follow-up obok bieżących ataków na Ukrainę.",
+      "watchNext": [
+        "Czy Moskwa potwierdzi lub zdementuje plan.",
+        "Czy partnerzy Ukrainy zareagują nowym pakietem wsparcia."
+      ],
+      "sources": [
+        {
+          "title": "President of Ukraine: All news",
+          "url": "https://www.president.gov.ua/en/news/all"
+        },
+        {
+          "title": "President of Ukraine: Russia is drawing up plans for an additional wave of mobilization",
+          "url": "https://www.president.gov.ua/en/news/pidgotovka-novoyi-hvili-mobilizaciyi-v-rosiyi-brif-vid-gur-m-106137"
+        }
+      ],
+      "tags": [
+        "Rosja",
+        "mobilizacja",
+        "Ukraina"
+      ],
+      "priority": "11"
+    },
+    {
+      "id": "norwegia-2026-08-29-0902",
+      "section": "Świat",
+      "title": "Norwegia żegna króla Haralda V",
+      "lead": "Państwo wchodzi w okres żałoby i sukcesji.",
+      "whatHappened": "Król Norwegii Harald V zmarł 28 sierpnia 2026 roku. Rząd ogłosił żałobę narodową i opisał przejście do nowego etapu monarchii.",
+      "keyFacts": [
+        "Harald V zmarł 28 sierpnia 2026 roku.",
+        "Rząd Norwegii poinformował o formalnym przejściu do nowego etapu.",
+        "Oficjalne komunikaty podkreślają wagę sukcesji i żałoby."
+      ],
+      "reactions": [
+        "Rząd mówi o końcu epoki.",
+        "Norweska rodzina królewska opublikowała komunikat o śmierci króla."
+      ],
+      "whyItMatters": "To ważna zmiana symboliczna i konstytucyjna w jednym z państw Europy Północnej.",
+      "context": "To świeży światowy nagłówek, który wszedł do porannego przeglądu TVN24.",
+      "watchNext": [
+        "Czy pojawią się szczegóły uroczystości pogrzebowych.",
+        "Czy rząd poda kolejne elementy procedury sukcesyjnej."
+      ],
+      "sources": [
+        {
+          "title": "Royal Court of Norway: update on the king's health",
+          "url": "https://www.royalcourt.no/press/press-releases/update-on-his-majesty-the-king-s-health"
+        },
+        {
+          "title": "Regjeringen: King Harald V has died - The Prime Minister's Speech",
+          "url": "https://www.regjeringen.no/en/whats-new/his-majesty-king-harald-v-has-died-the-prime-ministers-speech/id3171481/"
+        },
+        {
+          "title": "Regjeringen: A whole nation is in mourning",
+          "url": "https://www.regjeringen.no/en/whats-new/a-whole-nation-is-in-mourning/id3171441/"
+        }
+      ],
+      "tags": [
+        "Norwegia",
+        "monarchia",
+        "Harald V"
+      ],
+      "priority": "12"
+    },
+    {
+      "id": "nepal-2026-08-29-0902",
+      "section": "Świat",
+      "title": "Nepal nadal liczy ofiary po powodzi",
+      "lead": "Bilans i ryzyko pozostają ruchome.",
+      "whatHappened": "Nepal nadal mierzy się ze skutkami katastrofalnej powodzi. AP, ONZ i DHM Nepal ostrzegają, że liczba ofiar i zaginionych może jeszcze się zmienić, a zagrożenie wtórnym zalaniem pozostaje realne.",
+      "keyFacts": [
+        "Bilans ofiar i zaginionych jest nadal ruchomy.",
+        "UN ostrzega przed dalszym ryzykiem zalania.",
+        "DHM Nepal prowadzi monitoring hydrologiczny."
+      ],
+      "reactions": [
+        "Lokalne służby koncentrują się na ewakuacji i ocenie szkód.",
+        "Agencje pomocowe śledzą sytuację w dolinach i przy granicy z Chinami."
+      ],
+      "whyItMatters": "To wciąż aktywny kryzys humanitarny i hydrologiczny.",
+      "context": "Ten temat utrzymuje się w feedzie jako jedna z głównych katastrof naturalnych tygodnia.",
+      "watchNext": [
+        "Czy bilans ofiar ponownie wzrośnie.",
+        "Czy pojawią się nowe ostrzeżenia hydrologiczne."
+      ],
+      "sources": [
+        {
+          "title": "AP: Nepal flood follow-up",
+          "url": "https://apnews.com/article/1f3d0ccf432eed879020e18efcab3146"
+        },
+        {
+          "title": "UN Press: flood situation update",
+          "url": "https://press.un.org/en/2026/db260826.doc.htm"
+        },
+        {
+          "title": "DHM Nepal: flood monitoring",
+          "url": "https://www.dhm.gov.np/hydrology/floodMonitoring"
+        }
+      ],
+      "tags": [
+        "Nepal",
+        "powódź",
+        "klęska żywiołowa"
+      ],
+      "priority": "13"
+    },
+    {
+      "id": "kanada-2026-08-29-0902",
+      "section": "Gospodarka",
+      "title": "Kanada uruchamia kontrcła na USA",
+      "lead": "Ottawa odpowiada dollar for dollar.",
+      "whatHappened": "Finance Canada ogłosiło kontrcła i wsparcie dla firm oraz pracowników po nowych amerykańskich taryfach. Rząd podkreśla, że nowe stawki mają wejść 8 września i obejmą towary o wartości 27,6 mld dolarów.",
+      "keyFacts": [
+        "Nowe stawki mają wejść 8 września 2026 roku.",
+        "Kontrcła obejmą 27,6 mld dolarów importu z USA.",
+        "Wsparcie ma objąć firmy, pracowników i sektor produkcyjny."
+      ],
+      "reactions": [
+        "Ottawa podkreśla zasadę dopasowania taryf dollar for dollar.",
+        "Rynki śledzą wpływ na łańcuchy dostaw i ceny."
+      ],
+      "whyItMatters": "To ważny sygnał dla handlu północnoamerykańskiego i kosztów w przemyśle.",
+      "context": "To kolejny odcinek sporu handlowego między USA i Kanadą.",
+      "watchNext": [
+        "Czy Kanada poda finalną listę produktów objętych cłami.",
+        "Czy USA odpowiedzą kolejnym ruchem taryfowym."
+      ],
+      "sources": [
+        {
+          "title": "Finance Canada: Canada announces targeted countermeasures",
+          "url": "https://www.canada.ca/en/department-finance/news/2026/08/canada-announces-targeted-countermeasures-and-substantive-support-for-workers-and-businesses-in-response-to-us-tariffs.html"
+        },
+        {
+          "title": "Prime Minister of Canada: statement on trade negotiations",
+          "url": "https://www.pm.gc.ca/en/news/statements/2026/08/21/statement-prime-minister-carney-canada-us-trade-negotiations"
+        }
+      ],
+      "tags": [
+        "Kanada",
+        "cła",
+        "handel"
+      ],
+      "priority": "14"
+    },
+    {
+      "id": "iran-2026-08-29-0902",
+      "section": "Bezpieczeństwo",
+      "title": "USA dokręcają sankcje wokół Iranu",
+      "lead": "Treasury i State Department zwiększają presję.",
+      "whatHappened": "Treasury i State Department utrzymują Operation Economic Outcast, kierując sankcje przeciw sieciom finansowym, bankowym i petrochemicznym powiązanym z Iranem.",
+      "keyFacts": [
+        "Kampania ma odcinać źródła finansowania IRGC i aparatu państwa.",
+        "Cele obejmują banki w ZEA i pośredników produktów petrochemicznych.",
+        "To kolejny krok po wcześniejszych rundach sankcyjnych w sierpniu."
+      ],
+      "reactions": [
+        "Waszyngton opisuje to jako długofalową kampanię nacisku.",
+        "Teheran może odpowiedzieć ostrzejszą narracją lub obejściem sankcji."
+      ],
+      "whyItMatters": "To wpływa na przepływy ropy, finansów i sankcyjny koszt prowadzenia polityki Iranu.",
+      "context": "To jeden z najmocniejszych bezpieczeństwa-gospodarka follow-upów w tej rundzie.",
+      "watchNext": [
+        "Czy Treasury doda nowe podmioty do listy.",
+        "Czy State Department opublikuje kolejny fact sheet."
+      ],
+      "sources": [
+        {
+          "title": "Treasury: Operation Economic Outcast",
+          "url": "https://home.treasury.gov/news/press-releases/sb0613"
+        },
+        {
+          "title": "Treasury: Iran's Access to UAE Banks Targeted",
+          "url": "https://home.treasury.gov/news/press-releases/iran's-access-to-uae-banks-targeted-under-operation-economic-outcast/"
+        },
+        {
+          "title": "State Department: U.S. implements Operation Economic Outcast",
+          "url": "https://www.state.gov/releases/office-of-the-spokesperson/2026/08/united-states-implements-operation-economic-outcast-with-sanctions-targeting-irans-military-activities-and-procurements-and-petroleum-and-petrochemical-product-traders-fact-sheet"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "sankcje",
+        "Treasury"
+      ],
+      "priority": "15"
+    },
+    {
+      "id": "bbc-2026-08-29-0902",
+      "section": "Technologia",
+      "title": "BBC rozważa public service algorithm",
+      "lead": "Nowy model ma łączyć treści użytkowników z misją publiczną.",
+      "whatHappened": "Dyrektor generalny BBC opisał koncepcję cyfrowej platformy opartej na public service algorithm, która miałaby łączyć treści użytkowników z priorytetami publicznej misji.",
+      "keyFacts": [
+        "Pomysł nie jest jeszcze oficjalną polityką BBC.",
+        "Dotyczy konkurencji z platformami komercyjnymi.",
+        "W tle są problemy finansowe i presja na koszty."
+      ],
+      "reactions": [
+        "Pomysł wywołuje debatę o przyszłości publicznych mediów cyfrowych.",
+        "Komentatorzy traktują go jako próbę odpowiedzi na dominację platform społecznościowych."
+      ],
+      "whyItMatters": "To ważny sygnał dla rynku mediów, algorytmów rekomendacyjnych i jakości treści w sieci.",
+      "context": "To bardziej strategiczny niż news-breakerski temat, ale wciąż świeży i istotny dla technologii mediów.",
+      "watchNext": [
+        "Czy BBC przekształci koncepcję w oficjalny plan.",
+        "Czy pojawią się reakcje regulatorów lub nadawców publicznych."
+      ],
+      "sources": [
+        {
+          "title": "The Guardian: BBC chief proposes public service algorithm",
+          "url": "https://www.theguardian.com/media/2026/aug/27/bbc-chief-proposes-public-service-algorithm-youtube-style-user-generated-content"
+        },
+        {
+          "title": "BBC News",
+          "url": "https://www.bbc.com/news"
+        }
+      ],
+      "tags": [
+        "BBC",
+        "media",
+        "algorytm"
+      ],
+      "priority": "16"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 home",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24 Biznes i Tech",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "TVN24 Meteo",
+      "url": "https://tvn24.pl/tvnmeteo"
+    },
+    {
+      "title": "BBC News",
+      "url": "https://www.bbc.com/news"
+    },
+    {
+      "title": "CNN transcripts",
+      "url": "https://transcripts.cnn.com/date/2026-08-26"
+    },
+    {
+      "title": "RCB komunikaty",
+      "url": "https://gov.pl/web/rcb/komunikaty"
+    },
+    {
+      "title": "IMGW-PIB",
+      "url": "https://imgw.pl/"
+    },
+    {
+      "title": "gov.pl/premier",
+      "url": "https://www.gov.pl/web/premier/budzet-bezpieczenstwa-rozwoju-i-optymizmu"
+    },
+    {
+      "title": "Google Search Central",
+      "url": "https://developers.google.com/search/blog/2026/08/update-site-reputation-policy"
+    },
+    {
+      "title": "Meta Newsroom",
+      "url": "https://about.fb.com/news/2026/08/agreement-with-state-attorneys-general-supporting-teens/"
+    },
+    {
+      "title": "AP News",
+      "url": "https://apnews.com/"
+    },
+    {
+      "title": "Royal Court of Norway",
+      "url": "https://www.royalcourt.no/"
+    },
+    {
+      "title": "Regjeringen",
+      "url": "https://www.regjeringen.no/en/"
+    },
+    {
+      "title": "President of Ukraine",
+      "url": "https://www.president.gov.ua/en/news/all"
+    },
+    {
+      "title": "UN Press",
+      "url": "https://press.un.org/en/"
+    },
+    {
+      "title": "DHM Nepal",
+      "url": "https://www.dhm.gov.np/hydrology/floodMonitoring"
+    },
+    {
+      "title": "Finance Canada",
+      "url": "https://www.canada.ca/en/department-finance/news/2026/08/canada-announces-targeted-countermeasures-and-substantive-support-for-workers-and-businesses-in-response-to-us-tariffs.html"
+    },
+    {
+      "title": "Treasury",
+      "url": "https://home.treasury.gov/"
+    },
+    {
+      "title": "State Department",
+      "url": "https://www.state.gov/"
+    }
+  ]
+}
