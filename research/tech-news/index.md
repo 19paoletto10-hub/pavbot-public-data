@@ -4,6 +4,8 @@ Last updated: 2026-08-29
 
 ## Current Understanding
 
+Wieczorny run z 2026-08-29 dopisuje do porannego obrazu dwa nowe sygnały: Nvidia jeszcze mocniej przesuwa AI w stronę physical robotics dzięki Jetson Orin Nano 2, ale jednocześnie wstrzymuje część revenue-sharing deals z AI cloudami. Równolegle Meta Hatch i polityka Valon pokazują, że agentowe UX i wewnętrzna dyscyplina użycia AI stają się osobnymi decyzjami produktowymi i HR-owymi, a nie tylko pobocznym eksperymentem.
+
 Poranny run z 2026-08-29 przesuwa temat z samego modelowego rollout'u na regionalną komercjalizację, finansowanie compute i spillover kosztów AI. OpenAI łączy Brazylię, reklamy w Indiach i twardsze egzekwowanie umów po zmianie kontroli Cursor, Lambda zamyka 926 mln USD długu pod GPU, Anthropic pokazuje automatycznych researcherów i self-improving loop, a Google przypomina przez Androida, że boom AI zaczyna obciążać zwykłe aplikacje, nie tylko data center.
 
 Wieczorny run z 2026-08-28 przesuwa temat z samego modelowego rollout'u na metering, zadaniowe surface'y i regionalizację dystrybucji. Google robi z Gemini mniej abstrakcyjny, bardziej kontrolowany stack: Notebook dostaje limity zależne od zużycia, Search przejmuje booking travel, Flow dostaje kreatywne sterowanie wideo, a Transcribe staje się nowym backendem dla głosu. To razem wzmacnia wniosek, że rynek przesuwa się z samych modeli do bardziej zarządzanych workflowów.

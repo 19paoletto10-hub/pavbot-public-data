@@ -4,6 +4,9 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track Nvidia physical AI edge stack | Jetson Orin Nano 2 turns physical AI into a concrete edge product line, not just a strategy slide | Watch partner deployments, developer uptake and later Jetson roadmap | Open |
+| High | Track AI cloud financing retreat | Nvidia pausing revenue-sharing deals suggests AI infra financing and partner control are running into real friction | Watch whether the program restarts, changes terms or affects neocloud financing | Open |
+| Medium | Track corporate AI rationing policies | Valon's new-hire restriction may be an early sign that firms are actively limiting AI use to protect judgment and onboarding quality | Watch whether similar policies spread to other AI-native companies | Open |
 | High | Track AWS DuckDB integration | AWS is acquiring DuckLabs while promising open-source continuity, so the main question is whether DuckDB stays neutral or becomes a deeper AWS analytics surface | Watch roadmap, governance language and first AWS product integrations | Open |
 | High | Track Glean Tau adoption | Glean Tau adds a desktop harness plus aggressive cost claims, so the real test is whether enterprises adopt it outside the launch stage | Watch beta access, enterprise wins and independent benchmark checks | Open |
 | High | Track QueryStory trust layer | QueryStory is trying to productize review and ground-truth for AI analytics, which could become a useful pattern in regulated teams | Watch customer references, product scope and confidence-indicator behavior | Open |
