@@ -59,6 +59,14 @@
 
 # Puls Dnia News Backlog
 
+# 2026-08-29 15:03
+
+- Watch whether PKOl publishes any formal governance step after the prezydium statement.
+- Watch whether prokuratura or TVN24 add a further procedural update on Romanowski and the Dubaj follow-up.
+- Watch whether Ukrainian authorities revise the Bucza/Kijów casualty toll again.
+- Watch whether RCB or IMGW shorten, extend or cancel the storm alert before the next slot.
+- Watch whether Google, the European Commission or Meta publish a more concrete rollout note after today's regulatory moves.
+
 # 2026-08-29 09:02
 
 - Watch whether IMGW lub RCB skrócą, rozszerzą albo odwołają alert burzowy przed kolejnym slotem.
