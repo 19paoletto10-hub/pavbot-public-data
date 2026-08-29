@@ -1,8 +1,10 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-08-28
+Last updated: 2026-08-29
 
 ## Current Understanding
+
+Po runie 29 sierpnia lead przesuwa się na Ukrainę i Nepal. AP opisuje najkrwawszy w 2026 roku rosyjski atak dronowy pod Kijowem oraz równoległe ukraińskie zaostrzenie kampanii dalekiego zasięgu, a Nepal/Tybet wchodzi w etap masowych poszukiwań z prawie 3 tys. osób zaginionych. Iran utrwala twardą linię wewnętrzną po sześciu miesiącach wojny, Gaza pozostaje w niskointensywnej eskalacji, a krajowo obraz nie wyszedł poza utrzymany alert RCB i weekendowe ceny paliw.
 
 Po runie 28 sierpnia lead krajowy przesuwa się na budżet 2027, paliwa i
 alerty pogodowe, a politycznie Zondacrypto wraca jako wątek krypto-regulacyjny
@@ -716,6 +718,7 @@ konfliktowaniu Polaków i Ukraińców.
 
 ## Recent Reports
 
+- [2026-08-29](runs/2026-08-29.md)
 - [2026-08-27](runs/2026-08-27.md)
 - [2026-08-26](runs/2026-08-26.md)
 - [2026-08-25](runs/2026-08-25.md)
