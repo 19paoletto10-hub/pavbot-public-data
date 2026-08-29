@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-08-29",
+  "runTime": "15:41",
+  "executiveSummary": "Dzisiejsza runda jest materialna, bo Just Join IT zrobił szeroki board refresh: Senior MLOps Engineer stracił wcześniejsze opakowanie Google Cloud i publiczne widełki, a obok niego pojawił się nowy zestaw mocnych leadów wokół Databricks, AI security, AI platform, founding-engineer i agentic/full-stack work. Po stronie Pracuj.pl doszedł oficjalny Forward Deployed AI Engineer - ServiceNow oraz AI Salesforce Engineer, a Comarch i EPAM pozostały stabilnymi kanonicznymi punktami odniesienia.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "Senior MLOps Engineer",
+      "company": "Just Join IT",
+      "location": "Wrocław / remote",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Senior",
+      "fitSummary": "MLOps, Python, Docker, AWS, GCP, Vertex, SageMaker i Kubernetes.",
+      "whyInteresting": "To ten sam mocny profil platformowy co wczoraj, ale zniknęło wcześniejsze opakowanie Google Cloud i publiczne widełki, więc karta wymaga nowego monitoringu.",
+      "uncertainty": "Board może dalej zmieniać tytuł i prezentację wynagrodzenia bez zmiany realnego scope.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "MLOps",
+        "Python",
+        "AWS",
+        "GCP"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "Senior Machine Learning Engineer (Databricks)",
+      "company": "Just Join IT",
+      "location": "Wrocław / remote",
+      "workMode": "Remote",
+      "compensation": "160 - 210 PLN/h",
+      "seniority": "Senior",
+      "fitSummary": "Machine Learning, Databricks, MLflow i Python.",
+      "whyInteresting": "Nowy, czysty board lead z jawnie produkcyjnym stackiem i publiczną stawką.",
+      "uncertainty": "Mogą się jeszcze przesunąć tytuł, deadline albo lokalizacja mirrora.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "Python"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "Senior AI Security Engineer – Machine Learning & Infrastructure",
+      "company": "Just Join IT",
+      "location": "Wrocław / remote",
+      "workMode": "Remote",
+      "compensation": "30 000 - 50 000 PLN/month",
+      "seniority": "Senior",
+      "fitSummary": "AI security, Machine Learning Security, LLM, security testing i systems engineering.",
+      "whyInteresting": "Łączy AI infrastructure z security i ma publiczną pensję, więc jest mocnym sygnałem produkcyjnego delivery.",
+      "uncertainty": "Rola może być szersza niż sam LLM, bo opis mocno ciąży w stronę security architecture.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "LLM"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "AI Platform Engineer",
+      "company": "Just Join IT",
+      "location": "Wrocław / remote",
+      "workMode": "Remote",
+      "compensation": "300 000 - 600 000 PLN/year",
+      "seniority": "Nieokreślony",
+      "fitSummary": "LLM, RAG i Python.",
+      "whyInteresting": "Wysokosygnałowy platform lead z bardzo szerokim budżetem i wyraźnym profilem infrastrukturalnym.",
+      "uncertainty": "Nazwa jest dość ogólna, więc realny zakres może mocniej skręcać w platform engineering niż w model work.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "Python"
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "Principal AI Engineer",
+      "company": "Just Join IT",
+      "location": "Wrocław / remote",
+      "workMode": "Remote",
+      "compensation": "150 - 180 PLN/h",
+      "seniority": "Principal",
+      "fitSummary": "Machine Learning, AI, AWS, Azure, Python i TDD.",
+      "whyInteresting": "Seniority i publiczna stawka pokazują, że to jeden z mocniejszych obecnych leadów na boardzie.",
+      "uncertainty": "Tytuł jest szeroki, więc trzeba pilnować, czy nie jest to bardziej platform / delivery niż hands-on LLM.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "Python",
+        "AWS",
+        "Azure"
+      ]
+    },
+    {
+      "rank": 6,
+      "title": "Senior Machine Learning Founding Engineer",
+      "company": "Just Join IT",
+      "location": "Wrocław / remote",
+      "workMode": "Remote",
+      "compensation": "45 000 - 60 000 PLN/month",
+      "seniority": "Senior",
+      "fitSummary": "Python, PyTorch, JAX i Agentic AI.",
+      "whyInteresting": "Founding-engineer signal z dużą pensją i nowoczesnym stackiem modelowym.",
+      "uncertainty": "Startupowy kontekst może szybko zmienić zakres i priorytety.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "Agentic AI",
+        "Python"
+      ]
+    },
+    {
+      "rank": 7,
+      "title": "AI Engineering Lead (Python, GenAI & Agentic AI)",
+      "company": "Just Join IT",
+      "location": "Wrocław / remote",
+      "workMode": "Remote",
+      "compensation": "180 - 220 PLN/h",
+      "seniority": "Lead",
+      "fitSummary": "Python, SQL, NoSQL i agentic GenAI leadership.",
+      "whyInteresting": "Nowy lead z mocnym, praktycznym opisem AI engineering leadership i publiczną stawką godzinową.",
+      "uncertainty": "Rola może przesunąć się w stronę delivery / coordination bardziej niż hands-on coding.",
+      "sourceURLs": [
+        "https://www.pracuj.pl/praca/ai%3Bkw/wroclaw%3Bwp"
+      ],
+      "tags": [
+        "Agentic AI",
+        "GenAI",
+        "Python"
+      ]
+    },
+    {
+      "rank": 8,
+      "title": "Senior AI Full Stack Engineer (Python & Azure AI)",
+      "company": "Just Join IT",
+      "location": "Wrocław / remote",
+      "workMode": "Remote",
+      "compensation": "140 - 155 PLN/h",
+      "seniority": "Senior",
+      "fitSummary": "Python, AI, FastAPI i Flask.",
+      "whyInteresting": "To praktyczny, product-oriented lead z jawnie publicznym wynagrodzeniem i dobrą zgodnością ze scope.",
+      "uncertainty": "Może być bardziej full stack niż model / LLM, więc trzeba sprawdzać głębokość AI work.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "Python",
+        "Azure"
+      ]
+    }
+  ],
+  "changes": [
+    "Senior MLOps Engineer na Just Join IT nie jest już prezentowany jako Senior MLOps Engineer (Google Cloud) i nie ma publicznie pokazanej stawki, więc ten lead trzeba traktować jako świeżo przestawiony mirrór.",
+    "Board na Just Join IT dołożył nowy klaster wokół Databricks, AI security, AI platform, founding-engineer i agentic/full-stack work.",
+    "Pracuj.pl dodał oficjalny Forward Deployed AI Engineer - ServiceNow oraz AI Salesforce Engineer, a Comarch i EPAM pozostały stabilnymi kanonicznymi źródłami."
+  ],
+  "risks": [
+    "Board-first oferty potrafią zmienić tytuł, pensję lub status w ciągu jednego dnia, więc dzisiejsze widełki należy traktować jako chwilowe.",
+    "Część nowych ról jest szeroko opisana jako platform, consulting albo delivery, więc nie każda będzie czystym LLM engineering.",
+    "Forward Deployed AI Engineer - ServiceNow i AI Salesforce Engineer są dziś publiczne, ale bez jawnych widełek, więc ich jakość trzeba potwierdzić w kolejnych rundach."
+  ],
+  "recommendedActions": [
+    "Re-check Senior MLOps Engineer jutro pod kątem dalszego driftu tytułu i salary presentation.",
+    "Sprawdź ponownie Senior Machine Learning Engineer (Databricks), AI Platform Engineer, Senior AI Security Engineer i Principal AI Engineer, żeby zobaczyć, które z nich utrzymują się jako stabilne leady.",
+    "Obserwuj, czy Forward Deployed AI Engineer - ServiceNow i AI Salesforce Engineer dostaną kanoniczne strony pracodawcy albo publiczne widełki."
+  ],
+  "checkedSources": [
+    {
+      "title": "Just Join IT: Job offers AI/ML Wrocław",
+      "url": "https://justjoin.it/job-offers/wroclaw/ai",
+      "status": "checked"
+    },
+    {
+      "title": "Pracuj.pl: Praca ai, Wrocław",
+      "url": "https://www.pracuj.pl/praca/ai%3Bkw/wroclaw%3Bwp",
+      "status": "checked"
+    },
+    {
+      "title": "Comarch: DevOps Engineer (AI-native Stack)",
+      "url": "https://kariera.comarch.pl/praca/devops-engineer-ai-native-stack/",
+      "status": "checked"
+    },
+    {
+      "title": "EPAM: Senior AI Platform Engineer",
+      "url": "https://careers.epam.com/en/vacancy/senior-ai-platform-engineer-bltwpb7wu3ynnxvq15i_en",
+      "status": "checked"
+    },
+    {
+      "title": "EPAM: Senior SecOps Engineer",
+      "url": "https://careers.epam.com/en/vacancy/senior-secops-engineer-bltawunp0lz3mv32bt6_en",
+      "status": "checked"
+    },
+    {
+      "title": "EPAM: Senior AI & Agentic Systems Engineer (Java)",
+      "url": "https://careers.epam.com/en/vacancy/senior-ai-agentic-systems-engineer-java-blte35dpj1r8hefrppw_en",
+      "status": "checked"
+    }
+  ]
+}

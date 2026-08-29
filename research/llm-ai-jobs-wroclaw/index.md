@@ -1,8 +1,10 @@
 # Topic Index: llm-ai-jobs-wroclaw
 
-Last updated: 2026-08-28 21:27 CEST
+Last updated: 2026-08-29 15:41 CEST
 
 ## Current Understanding
+
+Runda z `2026-08-29 15:41 CEST` zrobiła szeroki board refresh na Just Join IT: `Senior MLOps Engineer` stracił wcześniejsze opakowanie `Google Cloud` i publiczne widełki, a obok niego pojawił się nowy zestaw mocnych leadów wokół `Databricks`, `AI security`, `AI platform`, `founding-engineer` i `agentic/full-stack` work. `Pracuj.pl` dorzucił oficjalny `Forward Deployed AI Engineer - ServiceNow` oraz `AI Salesforce Engineer`, a `Comarch` i `EPAM` pozostały stabilnymi kanonicznymi punktami odniesienia.
 
 Runda z `2026-08-28 21:27 CEST` wróciła do materialnego board burst z jednoczesnym salary flip-back na Just Join IT. `AI Transformation Lead` przestawił się z powrotem z `EUR/h` na `PLN/h`, `Senior MLOps Engineer (Google Cloud)` dołożył świeży lead z `Vertex AI`, `Gemini Enterprise Agent`, `RAG` i `MLOps`, a board dorzucił `Senior AI Engineer (Snowflake Cortex AI)`, `GenAI Architect (AI&Data)` i `Senior IT Business Analyst with AI - Freelance`. `Pracuj.pl` dodał też nowy canonical `Comarch DevOps Engineer (AI-native Stack)` oraz `Capgemini Senior AI Solutions Consultant (HR Transformation, Copilot Studio)`, więc dzisiejszy sygnał to miks salary driftu, nowych platformowych leadów i jednego mocniejszego canonical employer page.
 
@@ -115,6 +117,7 @@ konkretny platformowy, delivery lub toolingowy scope.
 
 ## Recent Reports
 
+- [2026-08-29 15:41 CEST](runs/2026-08-29-1541.md)
 - [2026-08-26 15:41 CEST](runs/2026-08-26-1541.md)
 - [2026-08-24 15:40 CEST](runs/2026-08-24-1540.md)
 - [2026-08-20 15:43 CEST](runs/2026-08-20-1543.md)
@@ -134,6 +137,16 @@ only when something meaningful changes.
 
 | Canonical key | Company | Title | Location / remote | First seen | Last seen | Status | Material changes | Source |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| justjoin-senior-mloops-engineer-google-cloud-wroclaw-remote | Just Join IT | Senior MLOps Engineer | Wrocław / remote | 2026-08-28-2127 | 2026-08-29-1541 | Open | Title simplified from `Senior MLOps Engineer (Google Cloud)`; public salary disappeared, but the stack still points at Vertex, GCP, SageMaker, Python and Kubernetes. | [Just Join IT](https://justjoin.it/job-offers/wroclaw/ai) |
+| justjoin-senior-machine-learning-engineer-databricks-wroclaw-remote | Spyrosoft | Senior Machine Learning Engineer (Databricks) | Wrocław / remote | 2026-08-29-1541 | 2026-08-29-1541 | Open | New board lead; Databricks, MLflow and Python with a public 160 - 210 PLN/h band. | [Just Join IT](https://justjoin.it/job-offers/wroclaw/ai) |
+| justjoin-senior-ai-security-engineer-machine-learning-infrastructure-wroclaw-remote | Entrada AI | Senior AI Security Engineer – Machine Learning & Infrastructure | Wrocław / remote | 2026-08-29-1541 | 2026-08-29-1541 | Open | New board lead; AI security, LLM, threat modeling, machine learning security and systems engineering with a public salary. | [Just Join IT](https://justjoin.it/job-offers/wroclaw/ai) |
+| justjoin-ai-platform-engineer-upvanta-wroclaw-remote | Upvanta sp. z o.o. | AI Platform Engineer | Wrocław / remote | 2026-08-29-1541 | 2026-08-29-1541 | Open | New board lead; LLM, RAG and Python with a very wide public 300 000 - 600 000 PLN/year band. | [Just Join IT](https://justjoin.it/job-offers/wroclaw/ai) |
+| justjoin-principal-ai-engineer-link-group-wroclaw-remote | Link Group | Principal AI Engineer | Wrocław / remote | 2026-08-29-1541 | 2026-08-29-1541 | Open | New board lead; ML, AI, AWS, Azure, Python and TDD with a public 150 - 180 PLN/h band. | [Just Join IT](https://justjoin.it/job-offers/wroclaw/ai) |
+| justjoin-senior-machine-learning-founding-engineer-datumo-wroclaw-remote | Datumo | Senior Machine Learning Founding Engineer | Wrocław / remote | 2026-08-29-1541 | 2026-08-29-1541 | Open | New board lead; Python, PyTorch, JAX and Agentic AI with a public 45 000 - 60 000 PLN/month band. | [Just Join IT](https://justjoin.it/job-offers/wroclaw/ai) |
+| justjoin-senior-ai-full-stack-engineer-python-azure-ai-yard-corporate-wroclaw-remote | Yard Corporate | Senior AI Full Stack Engineer (Python & Azure AI) | Wrocław / remote | 2026-08-29-1541 | 2026-08-29-1541 | Open | New board lead; Python, AI, FastAPI and Flask with a public 140 - 155 PLN/h band. | [Just Join IT](https://justjoin.it/job-offers/wroclaw/ai) |
+| pracuj-ai-engineering-lead-python-genai-agentic-ai-in4ge-wroclaw-remote | IN4GE sp. z o.o. | AI Engineering Lead (Python, GenAI & Agentic AI) | Cała Polska (praca zdalna) / Wrocław | 2026-08-29-1541 | 2026-08-29-1541 | Open | New public `Pracuj.pl` role; `180 - 220 zł netto (+ VAT) / godz.`; explicit Python, SQL, NoSQL and agentic GenAI leadership. | [Pracuj.pl](https://www.pracuj.pl/praca/ai%3Bkw/wroclaw%3Bwp) |
+| pracuj-forward-deployed-ai-engineer-servicenow-global-role | Atos Poland Global Services Sp. z o.o. | Forward Deployed AI Engineer - ServiceNow (global role) | Cała Polska (praca zdalna) / Bydgoszcz | 2026-08-29-1541 | 2026-08-29-1541 | Open | New official `Pracuj.pl` role; ServiceNow, forward deployment and remote/hybrid work with no public salary. | [Pracuj.pl](https://www.pracuj.pl/praca/ai%3Bkw/wroclaw%3Bwp) |
+| pracuj-sii-ai-salesforce-engineer-fmx | Sii Sp. z o.o. | AI Salesforce Engineer (f/m/x) | Cała Polska (praca zdalna) / 14 lokalizacji | 2026-08-29-1541 | 2026-08-29-1541 | Open | New official Sii role on the Pracuj page; Salesforce, AI and remote/hybrid employment with no public salary. | [Pracuj.pl](https://www.pracuj.pl/praca/ai%3Bkw/wroclaw%3Bwp) |
 | justjoin-senior-mloops-engineer-google-cloud-wroclaw-remote | Just Join IT | Senior MLOps Engineer (Google Cloud) | Wrocław / remote | 2026-08-28-2127 | 2026-08-28-2127 | Open | New board lead; Vertex AI, Gemini Enterprise Agent, RAG, Python and CI/CD with a public EUR/h band. | [Just Join IT](https://justjoin.it/job-offers/wroclaw/ai) |
 | justjoin-grid-dynamics-ai-transformation-lead-wroclaw-hybrid | Grid Dynamics | AI Transformation Lead | Wrocław / hybrid | 2026-08-27-1542 | 2026-08-28-2127 | Open | Mirror flipped back from EUR/h to PLN/h on the same Wrocław card. | [Just Join IT](https://justjoin.it/job-offers/wroclaw/ai) |
 | justjoin-senior-ai-engineer-snowflake-cortex-ai-wroclaw-remote | Svitla Systems | Senior AI Engineer (Snowflake Cortex AI) | Wrocław / remote | 2026-08-28-2127 | 2026-08-28-2127 | Open | New board lead; Snowflake, Cortex Agents, Cortex Analyst, semantic modeling and GenAI. | [Just Join IT](https://justjoin.it/job-offers/wroclaw/ai) |
