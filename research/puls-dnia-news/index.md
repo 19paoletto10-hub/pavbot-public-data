@@ -2,7 +2,7 @@
 
 ## Current State
 
-Slot 2026-08-29 15:03 przesuwa feed na mocny pakiet: PKOl reaguje po areszcie Piesiewicza, Romanowski wraca przez trop Dubaju, budżet 2027 ma już konkretne liczby, rośnie bilans ataku pod Kijowem, a alerty pogodowe nadal trwają. Do tego dochodzą policyjne follow-upy z Gdańska i Łęcznej oraz regulacyjne ruchy Google i Mety.
+Slot 2026-08-29 18:06 poszerza feed o mocniejszy pakiet techniczny i bezpieczeństwa danych: alerty burzowe nadal trwają, budżet 2027 ma już twarde liczby, Piesiewicz i Romanowski dostali nowe follow-upy, MyDr przeszedł w fazę publicznej analizy, a Ukraina i Nepal dalej aktualizują bilans szkód.
 
 ## Data Shape
 
@@ -26,4 +26,4 @@ The newest valid JSON is shown as paired cards under `Dzisiaj`. Tapping a card o
 - Prefer operational alerts, public safety, sanctions pressure, platform regulation and civil-protection stories over softer feature content.
 - Favor stories with concrete official or primary links when they are available alongside TVN24, BBC or CNN.
 - Current emphasis should stay on a strong Polish follow-up, public safety, platform regulation, economic pressure and fresh official reactions.
-- The current 15:03 slot adds a fresher Ukraine casualty update and new police material from Gdańsk and Łęczna, so keep those classes ready for the next carousel refresh.
+- The current 18:06 slot adds a fresher Ukraine casualty update, a public MyDr follow-up and another round of weather alerts, so keep those classes ready for the next carousel refresh.

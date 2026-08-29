@@ -1,0 +1,606 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-08-29",
+  "runTime": "18:06",
+  "status": "Material update",
+  "headline": "Burze, budżet i świeże follow-upy",
+  "summary": "Alerty pogodowe trwają, budżet 2027 ma już twarde liczby, a Piesiewicz, Romanowski, MyDr, Google, Meta, OpenAI, Ukraina i Nepal dostarczyły nowych faktów do wieczornego feedu.",
+  "items": [
+    {
+      "id": "alerty-burze-1806",
+      "section": "Alerty",
+      "title": "Burze i wzrosty wody",
+      "lead": "RCB i IMGW nadal trzymają ostrzeżenia.",
+      "whatHappened": "RCB utrzymuje alert z 28 sierpnia, a raport dobowy i mapa IMGW pokazują burze oraz ostrzeżenia hydrologiczne w kilku regionach kraju.",
+      "keyFacts": [
+        "Alert obejmuje intensywne opady deszczu i burze.",
+        "RCB wskazuje też gwałtowne wzrosty stanów wody i suszę hydrologiczną."
+      ],
+      "reactions": [
+        "Służby proszą o śledzenie komunikatów.",
+        "IMGW aktualizuje mapy ostrzeżeń w czasie rzeczywistym."
+      ],
+      "whyItMatters": "To nadal wpływa na bezpieczeństwo podróży, lokalne podtopienia i ryzyko interwencji służb.",
+      "context": "Slot 15:03 już pokazywał aktywny front pogodowy; wieczorem alert wciąż nie zszedł z radarów.",
+      "watchNext": [
+        "Sprawdź, czy RCB skróci lub odwoła alert.",
+        "Obserwuj, czy IMGW rozszerzy strefę burz."
+      ],
+      "sources": [
+        {
+          "title": "RCB komunikaty",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        },
+        {
+          "title": "RCB raport dobowy",
+          "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+        },
+        {
+          "title": "IMGW meteo",
+          "url": "https://meteo.imgw.pl/dyn/?osmet=true"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "RCB",
+        "IMGW",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "budzet-2027-1806",
+      "section": "Gospodarka",
+      "title": "Budżet 2027 przyjęty",
+      "lead": "Projekt stawia na bezpieczeństwo, zdrowie i inwestycje.",
+      "whatHappened": "Rząd przyjął projekt budżetu na 2027 rok. Oficjalne założenia mówią o priorytetach bezpieczeństwa, ochrony zdrowia i strategicznych inwestycji, a wydatki na obronność mają przekroczyć 4,5 procent PKB.",
+      "keyFacts": [
+        "Ministerstwo Finansów opisuje budżet jako odpowiedzialne połączenie bieżących potrzeb i rozwoju.",
+        "TVN24 podaje, że dochody mają wynieść 695 mld zł, a wydatki 977,6 mld zł.",
+        "Premier nazwał plan budżetowy \"napiętym, ale odpowiedzialnym\"."
+      ],
+      "reactions": [
+        "Rada Dialogu Społecznego ma się przyjrzeć projektowi.",
+        "Rynek będzie śledził, jak ten plan przełoży się na deficyt i koszty długu."
+      ],
+      "whyItMatters": "To ustawia ramy wydatków państwa, a więc także przestrzeń dla obronności, zdrowia i inwestycji publicznych.",
+      "context": "Wcześniejsze sloty już sugerowały, że budżet będzie napięty; teraz pojawiły się twarde liczby i oficjalne priorytety.",
+      "watchNext": [
+        "Śledź prace RDS i szczegóły sejmowe.",
+        "Sprawdź, czy resort poda bardziej szczegółowy rozkład wydatków."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Budżet 2027",
+          "url": "https://tvn24.pl/biznes/pieniadze/budzet-2027-tusk-wiecej-pieniedzy-na-zdrowie-bezpieczenstwo-i-inwestycje-st9209842"
+        },
+        {
+          "title": "Ministerstwo Finansów",
+          "url": "https://www.gov.pl/web/finanse/bezpieczenstwo-zdrowie-inwestycje--priorytety-ustawy-budzetowej-na-2027-rok"
+        }
+      ],
+      "tags": [
+        "budżet",
+        "deficyt",
+        "obronność",
+        "finanse"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "edziennik-weto-1806",
+      "section": "Polityka",
+      "title": "Weto dla eDziennika",
+      "lead": "Rząd krytykuje decyzję prezydenta.",
+      "whatHappened": "Prezydent zawetował ustawę, która miała umożliwić pilotaż państwowego eDziennika. Minister cyfryzacji Krzysztof Gawkowski ocenił decyzję jako cios w rodziców, uczniów i nauczycieli.",
+      "keyFacts": [
+        "Weto objęło też nowelizację prawa energetycznego i przepisy o programach ochrony powietrza.",
+        "Resort cyfryzacji twierdzi, że projekt miał dać bezpłatną publiczną alternatywę dla komercyjnych eDzienników."
+      ],
+      "reactions": [
+        "Ministerstwo Cyfryzacji broni pilotażu jako rozwiązania bez reklam i treści sponsorowanych.",
+        "Prezydent wskazał obawy o koszty i ochronę danych."
+      ],
+      "whyItMatters": "To spór o cyfryzację szkoły, ochronę danych i zakres państwowej alternatywy dla usług prywatnych.",
+      "context": "Weto wpisuje się w szerszy spór o zakres prezydenckich blokad i koszty publicznych usług cyfrowych.",
+      "watchNext": [
+        "Sprawdź, czy rząd zaproponuje wersję zastępczą.",
+        "Obserwuj, czy pojawi się nowa odpowiedź Pałacu Prezydenckiego."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 weto eDziennik",
+          "url": "https://tvn24.pl/biznes/z-kraju/weto-prezydenta-przedstawiciele-rzadu-krytykuja-decyzje-w-sprawie-edziennika-st9211107"
+        }
+      ],
+      "tags": [
+        "weto",
+        "szkoła",
+        "cyfryzacja",
+        "dane"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "piesiewicz-areszt-1806",
+      "section": "Polityka",
+      "title": "Piesiewicz w areszcie",
+      "lead": "Sąd zgodził się na trzymiesięczny areszt.",
+      "whatHappened": "Sąd przychylił się do wniosku prokuratury i zastosował trzymiesięczny areszt wobec Radosława Piesiewicza. TVN24 opisuje też reakcję ministra sportu Jakuba Rutnickiego oraz tło śledztwa Zondacrypto.",
+      "keyFacts": [
+        "Piesiewicz został doprowadzony do sądu po przesłuchaniu w prokuraturze.",
+        "W sprawie Zondacrypto prokuratura prowadzi postępowanie dotyczące oszustw znacznej wartości i prania brudnych pieniędzy."
+      ],
+      "reactions": [
+        "Minister sportu wezwał do działań naprawczych.",
+        "PKOl wcześniej zapewniał, że organizacja działa normalnie."
+      ],
+      "whyItMatters": "To już nie jest tylko medialny konflikt, lecz pełny wątek karny z potencjalnymi skutkami dla PKOl i jego otoczenia.",
+      "context": "Ten temat wracał już w poprzednich slotach, ale teraz ma twardy krok proceduralny i oficjalną reakcję resortu.",
+      "watchNext": [
+        "Sprawdź, czy prokuratura poda kolejne zarzuty lub uzasadnienie.",
+        "Obserwuj, czy PKOl opublikuje nowy komunikat organizacyjny."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Piesiewicz areszt",
+          "url": "https://tvn24.pl/polska/areszt-dla-radoslawa-piesiewicza-minister-sportu-jakub-rutnicki-zabral-glos-st9211530"
+        },
+        {
+          "title": "TVN24 sześć rzeczy",
+          "url": "https://tvn24.pl/polska/szesc-rzeczy-ktore-warto-w-sobote-29-sierpnia-najwazniejsze-informacje-st9211489"
+        }
+      ],
+      "tags": [
+        "PKOl",
+        "prokuratura",
+        "areszt",
+        "sport"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "romanowski-dubaj-1806",
+      "section": "Polityka",
+      "title": "Romanowski i Dubaj",
+      "lead": "TVN24 ujawnia trop azylu w ZEA.",
+      "whatHappened": "Według TVN24 Marcin Romanowski szukał azylu w Dubaju, a Przemysław Kral miał mu to załatwić. Pośredniczył w tym ówczesny adwokat obu, Bartosz Lewandowski, ale plan się nie powiódł.",
+      "keyFacts": [
+        "Romanowski jest poszukiwany listem gończym.",
+        "Emiratczycy mieli nie chcieć u siebie kontrowersyjnego polityka."
+      ],
+      "reactions": [
+        "Temat wraca jako kolejny proceduralny follow-up z zapleczem biznesowo-politycznym.",
+        "Wątki wokół Romanowskiego nadal żyją w mediach i mogą dostać następny ruch śledczy."
+      ],
+      "whyItMatters": "To utrzymuje sprawę Romanowskiego w obiegu publicznym i pokazuje, że trop zagraniczny nie wygasł.",
+      "context": "Slot 15:03 już miał ten wątek; teraz dochodzi pełniejszy opis próby uzyskania azylu i roli pośredników.",
+      "watchNext": [
+        "Sprawdź, czy pojawi się reakcja obrony lub prokuratury.",
+        "Obserwuj, czy TVN24 dołoży kolejne dokumenty lub daty."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Romanowski w Dubaju",
+          "url": "https://tvn24.pl/polska/przymyslaw-kral-mial-zalatwic-marcinowi-romanowskiemu-azyl-w-dubaju-st9209403"
+        }
+      ],
+      "tags": [
+        "Romanowski",
+        "Dubaj",
+        "azyl",
+        "śledztwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "gdansk-ukraincy-1806",
+      "section": "Bezpieczeństwo",
+      "title": "Gdańsk szuka sprawców",
+      "lead": "Policja publikuje wizerunki czterech osób.",
+      "whatHappened": "Gdańska policja opublikowała wizerunki czterech osób mogących mieć związek z pobiciem dwóch obywateli Ukrainy. Sprawa jest prowadzona operacyjnie i publicznie, z prośbą o pomoc w identyfikacji.",
+      "keyFacts": [
+        "Chodzi o pobicie dwóch obywateli Ukrainy.",
+        "Policja szuka osób widocznych na opublikowanych zdjęciach."
+      ],
+      "reactions": [
+        "Funkcjonariusze proszą o kontakt osoby, które rozpoznają podejrzanych.",
+        "Temat może dostać dalszy follow-up po identyfikacji lub zatrzymaniach."
+      ],
+      "whyItMatters": "To świeży materiał bezpieczeństwa publicznego i potencjalny sygnał o przemocy wobec cudzoziemców.",
+      "context": "W poprzednich slotach podobne sprawy często przechodziły z komunikatu policyjnego do zatrzymania lub aktu oskarżenia.",
+      "watchNext": [
+        "Sprawdź, czy policja poda nazwiska lub zatrzymania.",
+        "Obserwuj, czy prokuratura dołoży zarzuty."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Gdańsk",
+          "url": "https://tvn24.pl/trojmiasto/gdansk-policja-publikuje-wizerunki-czterech-osob-chodzi-o-pobicie-obywateli-ukrainy-st9211558"
+        }
+      ],
+      "tags": [
+        "policja",
+        "Gdańsk",
+        "Ukraina",
+        "przemoc"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "mydr-wyciek-1806",
+      "section": "Bezpieczeństwo",
+      "title": "MyDr i wyciek PESEL",
+      "lead": "Resort uruchomił serwis do sprawdzania wycieku.",
+      "whatHappened": "TVN24 opisuje publiczny serwis bezpiecznedane.gov.pl i nowy etap analizy po wycieku z MyDr. Według wiceministra dane są zabezpieczane przez policję i na razie nie krążą po sieci.",
+      "keyFacts": [
+        "Przedmiotem ataku miały być numery PESEL, recepty i notatki z wizyt lekarskich.",
+        "Resort twierdzi, że analiza rekordów może zająć jeszcze kilka dni."
+      ],
+      "reactions": [
+        "Wiceminister apeluje o zastrzeganie numeru PESEL.",
+        "MyDr prowadzi postępowanie wyjaśniające z udziałem zewnętrznych ekspertów."
+      ],
+      "whyItMatters": "To jeden z większych polskich incydentów danych medycznych i bezpośrednie ryzyko dla pacjentów.",
+      "context": "Wątek przeszedł z samego alarmu do publicznego procesu weryfikacji tego, co realnie wyciekło.",
+      "watchNext": [
+        "Sprawdź, kiedy serwis poda listę ujawnionych rekordów.",
+        "Obserwuj, czy policja lub NASK ujawnią szerszy zakres szkód."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 MyDr serwis",
+          "url": "https://tvn24.pl/biznes/tech/wyciek-danych-z-mydr-rzadowy-serwis-bezpiecznedane-gov-pl-juz-dziala-jak-sprawdzic-czy-wyciekl-pesel-st9211588"
+        },
+        {
+          "title": "TVN24 MyDr komentarz resortu",
+          "url": "https://tvn24.pl/biznes/z-kraju/cyberatak-na-mydr-dariusz-standerski-te-dane-nie-kraza-po-sieci-st9195667"
+        }
+      ],
+      "tags": [
+        "cyberbezpieczeństwo",
+        "MyDr",
+        "PESEL",
+        "zdrowie"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "cpn-paliwa-1806",
+      "section": "Gospodarka",
+      "title": "Końcówka programu CPN",
+      "lead": "TVN24 pokazuje ceny paliw na ostatni weekend wakacji.",
+      "whatHappened": "W artykule TVN24 o cenach paliw na 29-31 sierpnia redakcja podaje maksymalne stawki: Pb95 6,64 zł, Pb98 7,46 zł i ON 7,31 zł za litr. Niższy VAT w programie CPN obowiązuje tylko do 31 sierpnia.",
+      "keyFacts": [
+        "Program CPN kończy się wraz z końcem wakacji.",
+        "TVN24 wskazuje na możliwy koszt powrotu do wyższych cen po weekendzie."
+      ],
+      "reactions": [
+        "Kierowcy i analitycy paliwowi liczą, co stanie się po wygaśnięciu programu.",
+        "Rynek będzie reagował na ceny hurtowe i decyzje fiskalne."
+      ],
+      "whyItMatters": "To bezpośrednio wpływa na koszty transportu i nastroje konsumenckie.",
+      "context": "Wcześniejsze komentarze rządu opisywały to jako program, który miał obniżać koszty dla kierowców.",
+      "watchNext": [
+        "Sprawdź, czy po 31 sierpnia stacje zmienią cenniki.",
+        "Obserwuj kolejne komentarze resortu finansów i rynku."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 ceny paliw",
+          "url": "https://tvn24.pl/biznes/z-kraju/ceny-paliw-na-koniec-wakacji-tyle-kosztuja-benzyna-i-olej-napedowy-od-29-do-31-sierpnia-st9211534"
+        }
+      ],
+      "tags": [
+        "paliwo",
+        "CPN",
+        "inflacja",
+        "transport"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "google-site-reputation-1806",
+      "section": "Technologia",
+      "title": "Google zmienia spam policy",
+      "lead": "Nowa polityka ma uderzyć w pasożytnicze SEO.",
+      "whatHappened": "Google aktualizuje politykę site reputation abuse, a Komisja Europejska doprecyzowuje dostęp do danych Google Search w ramach DMA. TVN24 interpretuje to jako realny ruch przeciwko nadużyciom w wyszukiwarce.",
+      "keyFacts": [
+        "Google opublikowało update 28 sierpnia 2026.",
+        "KE rozwija wymianę danych wyszukiwarki z innymi podmiotami w ramach DMA."
+      ],
+      "reactions": [
+        "Wydawcy i branża SEO będą obserwować wdrożenie od 30 sierpnia.",
+        "To kolejny etap nacisku regulacyjnego na wyszukiwarkę."
+      ],
+      "whyItMatters": "Zmiana może wpłynąć na widoczność treści, monetyzację publikacji i praktyki SEO.",
+      "context": "To nie jest kosmetyczna korekta komunikatu, tylko ruch regulacyjny i produktowy w jednym momencie.",
+      "watchNext": [
+        "Sprawdź, czy Google poda dodatkowe wytyczne wdrożeniowe.",
+        "Obserwuj, czy KE opublikuje dalsze szczegóły konsultacji."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Google policy",
+          "url": "https://tvn24.pl/biznes/tech/google-zmienia-polityke-dotyczaca-spamu-od-30-sierpnia-spelnia-oczekiwania-unii-europejskiej-st9211360"
+        },
+        {
+          "title": "Google Search Central",
+          "url": "https://developers.google.com/search/blog/2026/08/update-site-reputation-policy"
+        },
+        {
+          "title": "Komisja Europejska DMA",
+          "url": "https://digital-markets-act.ec.europa.eu/developer-portal/data-access/alphabet-specification-proceedings-sharing-google-search-data_en"
+        }
+      ],
+      "tags": [
+        "Google",
+        "DMA",
+        "SEO",
+        "regulacje"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "meta-teen-protection-1806",
+      "section": "Technologia",
+      "title": "Meta wzmacnia ochronę nastolatków",
+      "lead": "Firma ogłosiła nowe zabezpieczenia po ugodzie z prokuratorami generalnymi.",
+      "whatHappened": "Meta poinformowała o porozumieniu z 51 prokuratorami generalnymi i opisała nowe działania wspierające rodziców oraz nastolatków. TVN24 równolegle pokazało, że w Polsce Gawkowski naciska na twardsze reakcje wobec platformy.",
+      "keyFacts": [
+        "Nowe działania mają dotyczyć bezpieczeństwa i wsparcia rodzin.",
+        "W TVN24 pojawia się też nacisk na odpowiedzialność platformy za fałszywe reklamy."
+      ],
+      "reactions": [
+        "Gawkowski powiedział, że Meta się ugina.",
+        "To wpisuje się w szerszą presję regulacyjną na platformy społecznościowe."
+      ],
+      "whyItMatters": "Zmiany mogą wpłynąć na polityki bezpieczeństwa dzieci i nastolatków w największych aplikacjach społecznościowych.",
+      "context": "Wcześniejsze sloty już sygnalizowały rosnącą presję na Mety; teraz pojawił się oficjalny komunikat o konkretnych krokach.",
+      "watchNext": [
+        "Sprawdź, kiedy Meta pokaże szczegóły wdrożenia.",
+        "Obserwuj, czy polskie ministerstwo poda kolejne kroki wobec platformy."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Meta",
+          "url": "https://tvn24.pl/biznes/tech/wicepremier-gawkowski-apeluje-o-pozew-zbiorowy-przeciwko-mecie-uwazaja-ze-sa-ponad-prawem-st9209919"
+        },
+        {
+          "title": "Meta Newsroom",
+          "url": "https://about.fb.com/news/2026/08/agreement-with-state-attorneys-general-supporting-teens/"
+        }
+      ],
+      "tags": [
+        "Meta",
+        "dzieci",
+        "platformy",
+        "bezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "openai-cursor-1806",
+      "section": "Technologia",
+      "title": "OpenAI kończy współpracę z Cursorem",
+      "lead": "OpenAI ucina współpracę z firmami powiązanymi z Muskiem.",
+      "whatHappened": "TVN24 podało, że OpenAI zdecydowało o zakończeniu współpracy z Cursorem, a decyzję osadzono w nieufności wobec firm Elona Muska. Sam Musk skomentował sprawę lekceważąco na X.",
+      "keyFacts": [
+        "Artykuł TVN24 mówi wprost o zakończeniu współpracy z Cursorem.",
+        "Musk miał odpowiedzieć, że nic go to nie obchodzi."
+      ],
+      "reactions": [
+        "To kolejny epizod w sporze OpenAI z otoczeniem Muska.",
+        "Rynek będzie patrzył, czy decyzja zmieni integracje narzędzi developerskich."
+      ],
+      "whyItMatters": "To sygnał, że napięcia wokół ekosystemu OpenAI wpływają już na partnerstwa produktowe.",
+      "context": "Wątek pojawia się w tym samym dniu co inne ruchy OpenAI związane z bezpieczeństwem i dezinformacją.",
+      "watchNext": [
+        "Sprawdź, czy Cursor lub OpenAI wydadzą własne oświadczenie.",
+        "Obserwuj, czy pojawią się dalsze ograniczenia integracyjne."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 OpenAI i Cursor",
+          "url": "https://tvn24.pl/biznes/tech/openai-nie-ufa-firmom-elona-muska-jest-decyzja-o-zakonczeniu-wspolpracy-z-cursorem-st9212190"
+        }
+      ],
+      "tags": [
+        "OpenAI",
+        "Cursor",
+        "Musk",
+        "AI"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "openai-prorosyjskie-1806",
+      "section": "Technologia",
+      "title": "OpenAI blokuje prorosyjskie konta",
+      "lead": "ChatGPT miał wspierać propagandowy fake instytut.",
+      "whatHappened": "OpenAI zablokowało konta powiązane z prorosyjską kampanią, w której używano fikcyjnego instytutu i treści generowanych przez ChatGPT. TVN24 opisuje to jako kolejną operację wpływu z elementem dezinformacji.",
+      "keyFacts": [
+        "OpenAI mówi o fikcyjnym think tanku i prorosyjskich kontach.",
+        "Sprawa dotyczy użycia narzędzi AI do promowania pozytywnego obrazu Rosji."
+      ],
+      "reactions": [
+        "To wzmacnia presję na platformy AI w obszarze bezpieczeństwa i moderacji.",
+        "Sprawa wpisuje się w szerszą debatę o nadużyciach generatywnej AI."
+      ],
+      "whyItMatters": "To jeden z czytelniejszych przykładów, jak narzędzia AI stają się narzędziem operacji wpływu.",
+      "context": "Ten sam feed dnia pokazuje też inne kroki OpenAI, więc temat bezpieczeństwa AI jest dziś wyjątkowo aktywny.",
+      "watchNext": [
+        "Sprawdź, czy OpenAI opublikuje techniczne szczegóły blokady.",
+        "Obserwuj, czy inne platformy AI skomentują podobne przypadki."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 prorosyjskie konta",
+          "url": "https://tvn24.pl/biznes/tech/prorosyjskie-konta-promowaly-fikcyjny-instytut-dzieki-chatgpt-openai-nalozylo-blokady-st9211177"
+        },
+        {
+          "title": "TVN24 Tech",
+          "url": "https://tvn24.pl/technologia"
+        }
+      ],
+      "tags": [
+        "OpenAI",
+        "dezinformacja",
+        "propaganda",
+        "AI"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "ukraina-kijow-1806",
+      "section": "Świat",
+      "title": "Ukraina po ataku pod Kijowem",
+      "lead": "Bilans wzrósł do 37 zabitych i 42 rannych.",
+      "whatHappened": "TVN24 podało, że po rosyjskim ataku na rejon buczański pod Kijowem zginęło co najmniej 37 osób, a 42 zostały ranne, w tym czworo dzieci. Lokalne władze i ukraińskie media opisują też dalsze prace ratunkowe i śledztwo.",
+      "keyFacts": [
+        "Wśród ofiar są cywile, w tym przewodniczący jednej z gmin.",
+        "Wcześniejszy poranny bilans był niższy i został później podniesiony."
+      ],
+      "reactions": [
+        "Zełenski wezwał do wyciągnięcia konsekwencji wobec winnych.",
+        "Ukraińskie służby nadal pracują przy usuwaniu skutków ostrzału i pożaru."
+      ],
+      "whyItMatters": "To jeden z najcięższych ataków tego roku i kolejny sygnał eskalacji wokół Kijowa.",
+      "context": "W ostatnich slotach bilans już rósł; teraz mamy oficjalnie potwierdzony, wyższy poziom strat.",
+      "watchNext": [
+        "Sprawdź, czy ukraińskie władze podniosą bilans jeszcze raz.",
+        "Obserwuj, czy pojawi się nowy komunikat prokuratury lub prezydenta."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Ukraina",
+          "url": "https://tvn24.pl/swiat/rosyjski-atak-pod-kijowem-nie-zyje-kilkadziesiat-osob-st9211700"
+        },
+        {
+          "title": "Ukrinform",
+          "url": "https://www.ukrinform.net/amp/rubric-ato/4158906-twoyearold-girl-dies-in-kyiv-after-russian-drone-strike.html"
+        },
+        {
+          "title": "President of Ukraine",
+          "url": "https://www.president.gov.ua/en/news/all"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Kijów",
+        "wojna",
+        "ofiary"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "nepal-powodz-1806",
+      "section": "Świat",
+      "title": "Nepal prosi o pomoc",
+      "lead": "Katastrofalna powódź nadal blokuje ratunek.",
+      "whatHappened": "Nepal poprosił o techniczną pomoc przy ratowaniu po katastrofalnej powodzi i osuwisku. Dziennikarskie podsumowania mówią o tysiącach zaginionych i setkach ofiar, a oficjalny monitoring DHM nadal pokazuje aktywne ostrzeżenia.",
+      "keyFacts": [
+        "Rescue teams mają dostać specjalistyczne wsparcie z zagranicy.",
+        "Oficjalny DHM nadal prowadzi monitoring powodziowy i ostrzeżenia hydrologiczne."
+      ],
+      "reactions": [
+        "Nepalskie władze apelują o ekspertów, sprzęt i wsparcie identyfikacji ofiar.",
+        "Sytuacja humanitarna pozostaje trudna, bo teren nadal utrudnia dojazd."
+      ],
+      "whyItMatters": "To jedna z największych katastrof pogodowych w regionie i temat, który szybko zmienia liczby oraz potrzeby humanitarne.",
+      "context": "Slot 15:03 już sygnalizował ten kryzys; teraz widać, że wciąż jest on otwarty operacyjnie i humanitarnie.",
+      "watchNext": [
+        "Sprawdź, czy Nepal poda nowy bilans ofiar i zaginionych.",
+        "Obserwuj, czy kolejne państwa dołożą ekipę ratunkową."
+      ],
+      "sources": [
+        {
+          "title": "AP Nepal flood update",
+          "url": "https://apnews.com/article/fde34c839b648f93f6aa011f044deb00"
+        },
+        {
+          "title": "TVN24 Nepal",
+          "url": "https://tvn24.pl/tvnmeteo/swiat/osuwisko-i-powodz-w-nepalu-rzad-odrzuca-czesc-pomocy-st9210081"
+        },
+        {
+          "title": "DHM Nepal",
+          "url": "https://www.dhm.gov.np/hydrology/floodMonitoring"
+        }
+      ],
+      "tags": [
+        "Nepal",
+        "powódź",
+        "osuwisko",
+        "humanitarne"
+      ],
+      "priority": "high"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24 Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "TVN24 Świat",
+      "url": "https://tvn24.pl/swiat"
+    },
+    {
+      "title": "TVN24 Meteo",
+      "url": "https://tvn24.pl/tvnmeteo/prognoza/gdzie-jest-burza-burze-w-polsce-29-08-mapa-i-radar-burz-na-zywo-st9211500"
+    },
+    {
+      "title": "BBC News",
+      "url": "https://www.bbc.com/news"
+    },
+    {
+      "title": "CNN",
+      "url": "https://www.cnn.com/"
+    },
+    {
+      "title": "RCB komunikaty",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    },
+    {
+      "title": "RCB raport dobowy",
+      "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+    },
+    {
+      "title": "IMGW meteo",
+      "url": "https://meteo.imgw.pl/dyn/?osmet=true"
+    },
+    {
+      "title": "Ministerstwo Finansów",
+      "url": "https://www.gov.pl/web/finanse/bezpieczenstwo-zdrowie-inwestycje--priorytety-ustawy-budzetowej-na-2027-rok"
+    },
+    {
+      "title": "Google Search Central",
+      "url": "https://developers.google.com/search/blog/2026/08/update-site-reputation-policy"
+    },
+    {
+      "title": "Komisja Europejska DMA",
+      "url": "https://digital-markets-act.ec.europa.eu/developer-portal/data-access/alphabet-specification-proceedings-sharing-google-search-data_en"
+    },
+    {
+      "title": "Meta Newsroom",
+      "url": "https://about.fb.com/news/2026/08/agreement-with-state-attorneys-general-supporting-teens/"
+    },
+    {
+      "title": "DHM Nepal",
+      "url": "https://www.dhm.gov.np/hydrology/floodMonitoring"
+    },
+    {
+      "title": "Ukrinform",
+      "url": "https://www.ukrinform.net/"
+    },
+    {
+      "title": "President of Ukraine",
+      "url": "https://www.president.gov.ua/en/news/all"
+    }
+  ]
+}
