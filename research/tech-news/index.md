@@ -1,8 +1,10 @@
 # Topic Index: tech-news
 
-Last updated: 2026-08-28
+Last updated: 2026-08-29
 
 ## Current Understanding
+
+Poranny run z 2026-08-29 przesuwa temat z samego modelowego rollout'u na regionalną komercjalizację, finansowanie compute i spillover kosztów AI. OpenAI łączy Brazylię, reklamy w Indiach i twardsze egzekwowanie umów po zmianie kontroli Cursor, Lambda zamyka 926 mln USD długu pod GPU, Anthropic pokazuje automatycznych researcherów i self-improving loop, a Google przypomina przez Androida, że boom AI zaczyna obciążać zwykłe aplikacje, nie tylko data center.
 
 Wieczorny run z 2026-08-28 przesuwa temat z samego modelowego rollout'u na metering, zadaniowe surface'y i regionalizację dystrybucji. Google robi z Gemini mniej abstrakcyjny, bardziej kontrolowany stack: Notebook dostaje limity zależne od zużycia, Search przejmuje booking travel, Flow dostaje kreatywne sterowanie wideo, a Transcribe staje się nowym backendem dla głosu. To razem wzmacnia wniosek, że rynek przesuwa się z samych modeli do bardziej zarządzanych workflowów.
 

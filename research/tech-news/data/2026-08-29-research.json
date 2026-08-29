@@ -1,0 +1,415 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-08-29",
+  "runTime": "08:05",
+  "status": "Material update",
+  "leadParagraphs": [
+    "Dzisiejszy run przesuwa temat z samych modeli na to, jak AI jest sprzedawane, zabezpieczane i osadzane w realnych produktach. OpenAI zamyka swój stack bardziej stanowczo niż wczoraj: komercyjne operacje w Brazylii, reklamy w Indiach, multi-account Google integration i szybkie odcięcie Cursor po przejęciu przez SpaceX pokazują, że dystrybucja, monetyzacja i kontrola partnerów stają się jedną historią produktu.",
+    "Równolegle infrastruktura robi się bardziej finansowa i bardziej fizyczna. Lambda zamienia GPU w zabezpieczony dług, Anthropic pokazuje, że AI może już prowadzić własne pętle badawcze i poprawiać alignment benchmarki, a open-weight stack wchodzi w fazę konsolidacji wokół kilku dużych platform. W tle Google przypomina, że koszt boomu AI trafia też do zwykłych aplikacji na Androidzie, a Plaud próbuje przenieść AI z telefonu do dedykowanych słuchawek."
+  ],
+  "summaryBullets": [
+    "Produkty: OpenAI globalizuje ChatGPT i mocniej zamyka ekosystem",
+    "Infrastruktura: Lambda zamienia GPU w instrument długu",
+    "AI: Anthropic pokazuje, jak AI może poprawiać samo siebie"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-08-29-0-openai-globalizuje-chatgpt-i-mocniej-zamyka-ekosystem-b437c894c8",
+      "section": "Produkty",
+      "title": "OpenAI globalizuje ChatGPT i mocniej zamyka ekosystem",
+      "standfirst": "OpenAI uruchamia komercyjne operacje w Brazylii, zaczyna pokazywać reklamy w ChatGPT Free i Go w Indiach, a w release notes dopuszcza wiele kont Google. Równolegle firma zapowiada wygaszenie umowy z Cursor po przejęciu przez SpaceX, co pokazuje bardziej lokalny, bardziej kontrolowany i bardziej monetyzowany ChatGPT.",
+      "whatHappened": "OpenAI poszerza dystrybucję i kontrolę partnerów na kilku rynkach naraz.",
+      "whyItMatters": "To oznacza, że ChatGPT staje się globalnym produktem regionalnie dostrajanym do monetyzacji, compliance i integracji z kontami użytkowników.",
+      "deeperAnalysis": [
+        "W Brazylii OpenAI nie tylko otwiera lokalny zespół w São Paulo, ale też pokazuje twarde liczby: kraj jest jednym z trzech największych rynków ChatGPT, a użytkownicy wysyłają około 215 milionów wiadomości dziennie. To nie jest już tylko market-entry story, ale sygnał, że firma traktuje lokalną obecność jako warunek wzrostu, a nie dodatek do produktu.",
+        "Indie dopełniają ten obraz od strony monetizacji. Reklamy w Free i Go trafiają do rynku, na którym OpenAI ma już ponad 100 milionów tygodniowych użytkowników, a ad manager ma wejść w kolejnych miesiącach. W tym samym czasie release notes uprościły korzystanie z konektorów przez możliwość łączenia wielu kont Google, więc produkt zaczyna lepiej scalać życie prywatne i zawodowe.",
+        "Najmocniejszym kontrapunktem jest Cursor. OpenAI mówi wprost, że po przejęciu przez SpaceX wygaśnie jego umowa na modele, bo firma nie ma wystarczającej pewności, że nowe warunki właścicielskie pozostają zgodne z wcześniejszymi zobowiązaniami. To pokazuje, że na rynku AI liczy się już nie tylko capability modelu, ale też prawo dostępu, change-of-control i to, kto ostatecznie kontroluje downstream workflow."
+      ],
+      "contextPoints": [
+        "Co się stało: Brazylia dostała commercial ops, Indie dostały ads, Cursor dostał termin wygaszenia umowy.",
+        "Dlaczego ważne: OpenAI zamienia globalny zasięg w konkretne regionalne produkty i warunki dostępu.",
+        "Na co patrzeć dalej: rollout ads managera w Indiach, kolejne lokalne zespoły i reakcję rynku na decyzję o Cursorze."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI Brazil",
+          "url": "https://openai.com/index/expanding-our-presence-in-brazil/"
+        },
+        {
+          "title": "TechCrunch India ads",
+          "url": "https://techcrunch.com/2026/08/27/openai-to-start-showing-ads-on-chatgpts-free-and-go-tiers-in-india/"
+        },
+        {
+          "title": "OpenAI release notes",
+          "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+        },
+        {
+          "title": "OpenAI Ads",
+          "url": "https://ads.openai.com/"
+        },
+        {
+          "title": "OpenAI Cursor decision",
+          "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "ChatGPT",
+        "Brazil",
+        "India",
+        "ads",
+        "Cursor"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-29-1-lambda-zamienia-gpu-w-instrument-dlugu-2b2c85dfdc",
+      "section": "Infrastruktura",
+      "title": "Lambda zamienia GPU w instrument długu",
+      "standfirst": "Lambda closed 926 million USD senior secured term loan B to fund GPU deployment for an investment-grade customer. Official release calls it the first broadly syndicated investment-grade-rated term loan B completed by a private neocloud, co pokazuje, że AI compute staje się aktywem finansowym, a nie tylko kosztem capex.",
+      "whatHappened": "Lambda finansuje GPU infrastructure poprzez zabezpieczony dług i przewidywalny cash flow.",
+      "whyItMatters": "Compute jest już sprzedawane jak asset class, a nie tylko jak chmurowa usługa albo koszt operacyjny.",
+      "deeperAnalysis": [
+        "Lambda nie mówi tylko o kolejnej rundzie finansowania. W oficjalnym komunikacie firma podkreśla, że to pierwszy szeroko syndykowany, investment-grade-rated term loan B w prywatnym neocloud. Dług jest zabezpieczony GPU servers i cash flows z tych aktywów, a termin spłaty jest dopasowany do życia sprzętu i kontraktów.",
+        "To ważne, bo zmienia logikę rynku. Zamiast pytać, ile kosztuje pojedynczy klaster, zaczynamy pytać, jak infrastruktura AI jest pakowana w finansowanie przypominające dojrzałe aktywa income-producing. Lambda robi tu kolejny krok po wcześniejszym kredycie 1 mld USD, a TechCrunch przypomina, że łączny dług związany z AI już przekracza setki miliardów dolarów.",
+        "Najbliższy test to wykonanie. Jeśli takie struktury będą działać bez problemów ze spłatą, rozliczaniem i utilization, neocloudy dostaną nowy, znacznie mocniejszy kanał wzrostu. Jeśli nie, rynek szybko wróci do pytań o to, czy infrastruktura AI była finansowana zbyt agresywnie względem realnego popytu."
+      ],
+      "contextPoints": [
+        "Co się stało: Lambda zamknęła 926 mln USD term loan B pod GPU deployment.",
+        "Dlaczego ważne: AI compute wygląda dziś jak finansowalny, zabezpieczony asset.",
+        "Na co patrzeć dalej: kolejne asset-backed GPU financings i reakcję banków oraz hyperscalerów."
+      ],
+      "sources": [
+        {
+          "title": "Lambda blog",
+          "url": "https://lambda.ai/blog/lambda-closes-926-million-senior-secured-term-loan-b-facility"
+        },
+        {
+          "title": "Business Wire",
+          "url": "https://www.businesswire.com/news/home/20260827954897/en/Lambda-Closes-926-Million-Senior-Secured-Term-Loan-B-Facility-Backing-GPU-Deployment-for-an-Investment-Grade-Customer"
+        },
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/28/neocloud-lambda-secures-1b-in-debt-to-buy-more-chips/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Lambda",
+        "NVIDIA",
+        "debt",
+        "compute",
+        "data center",
+        "Microsoft"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-29-2-anthropic-pokazuje-jak-ai-moze-poprawiac-samo-siebie-252f1eb0fb",
+      "section": "AI",
+      "title": "Anthropic pokazuje, jak AI może poprawiać samo siebie",
+      "standfirst": "Anthropic published When AI builds itself, arguing that automated researchers can improve alignment benchmarks and that Claude-written code is already near parity with human-written code. TechCrunch opisuje to jako pierwszy wyraźny podgląd tego, jak self-improving AI może wyglądać w praktyce.",
+      "whatHappened": "Anthropic publicznie pokazuje pętlę, w której AI tworzy eksperymenty, uruchamia je i selekcjonuje wyniki.",
+      "whyItMatters": "To przesuwa bottleneck z samego pisania kodu na review, wybór problemów i kontrolę nad compute.",
+      "deeperAnalysis": [
+        "Najciekawsze w tym materiale nie jest samo to, że model umie szybciej pisać kod. Ważniejsze jest to, że Anthropic opisuje system, który potrafi prowadzić badania w trybie iteracyjnym: przegląda literaturę, proponuje metodę, trenuje model, sprawdza wynik i zachowuje skuteczne podejścia. To już przypomina małe laboratorium, a nie tylko pojedynczego asystenta.",
+        "Równie mocny jest fragment o kodzie. Anthropic twierdzi, że Claude-written code jest dziś mniej więcej na parytecie z kodem ludzkim, a automatyczny reviewer miałby wykryć około jedną trzecią bugów z dawnych incydentów zanim trafiły do produkcji. To zmienia sposób myślenia o review: człowiek zaczyna być wąskim gardłem nie tylko w implementacji, ale też w zatwierdzaniu zmian.",
+        "W praktyce oznacza to, że AI research może coraz bardziej przypominać skalowalną linię produkcyjną. Jeśli ten trend się utrzyma, firmy takie jak Anthropic będą musiały inwestować równie mocno w monitoring, alignment i procesy kontroli, jak w same modele. Właśnie dlatego ten artykuł jest ważniejszy niż zwykła ciekawostka o „AI, które ulepsza AI”."
+      ],
+      "contextPoints": [
+        "Co się stało: Anthropic opisało automatycznych researcherów i lepsze review kodu.",
+        "Dlaczego ważne: model development zaczyna wyglądać jak częściowo automatyzowany research loop.",
+        "Na co patrzeć dalej: czy inni laby pokażą podobne benchmarki i czy ktoś zewnętrzny je zreplikuje."
+      ],
+      "sources": [
+        {
+          "title": "Anthropic",
+          "url": "https://www.anthropic.com/institute/recursive-self-improvement"
+        },
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/28/an-anthropic-researcher-just-gave-us-a-peek-at-self-improving-ai/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Anthropic",
+        "recursive self-improvement",
+        "alignment",
+        "code review",
+        "research",
+        "safety"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-29-3-open-weight-ai-wchodzi-w-konsolidacje-198969e9f7",
+      "section": "AI",
+      "title": "Open-weight AI wchodzi w konsolidację",
+      "standfirst": "TechCrunch pisze, że open-weight AI companies są dziś najgorętszym celem przejęć w Dolinie. W tle pojawiają się raportowane rozmowy o Hugging Face, przejęcie OpenRouter przez Stripe i umowa Nvidii z Poolside.",
+      "whatHappened": "Open-weight hubs i model builders są wciągani do większych platform i kapitałowych układów sił.",
+      "whyItMatters": "Neutralna warstwa dystrybucji modeli może szybko zamienić się w kolejną własnościową infrastrukturę.",
+      "deeperAnalysis": [
+        "Open-weight kiedyś oznaczało przede wszystkim społecznościowy sposób dystrybucji modeli. Dzisiaj staje się strategicznym aktywem. TechCrunch opisuje Hugging Face jako odpowiednik GitHuba dla ery AI i zwraca uwagę, że Nvidia, Stripe oraz inni gracze kupują właśnie ten fragment ekosystemu, w którym modele są publikowane, benchmarkowane i wdrażane.",
+        "Ta zmiana jest ważna, bo open-weight było dotąd jedną z niewielu względnie neutralnych warstw w łańcuchu AI. Jeśli główne hubs zostaną przejęte przez firmy sprzedające chipy, routing albo własne modele, to zniknie część instytucjonalnej neutralności, która dziś ułatwia konkurencję.",
+        "Hacker News potwierdza, że community signal idzie dokładnie w tę samą stronę: na front page widać GLM-5.3 open-weight, Terminal-Bench-Science i artykuły o otwartych modelach oraz benchmarkach. To nie dowód adopcji, ale mocny wskaźnik, że rynek nadal nagradza rzeczy, które da się uruchomić, porównać i przetestować."
+      ],
+      "contextPoints": [
+        "Co się stało: open-weight hubs i model builders są coraz częściej celem przejęć.",
+        "Dlaczego ważne: warstwa dystrybucji modeli może się skonsolidować wokół kilku właścicieli.",
+        "Na co patrzeć dalej: czy Nvidia potwierdzi Hugging Face, jak rozwinie się OpenRouter i czy pojawią się kolejne zakupy."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch open-weight",
+          "url": "https://techcrunch.com/2026/08/28/open-weight-ai-companies-are-the-valleys-hottest-acquisition-targets/"
+        },
+        {
+          "title": "TechCrunch Hugging Face",
+          "url": "https://techcrunch.com/2026/08/26/nvidia-closes-in-on-hugging-face-acquisition/"
+        },
+        {
+          "title": "Business Insider",
+          "url": "https://www.businessinsider.com/nvidia-has-been-in-talks-to-acquire-hugging-face-for-more-than-13-billion-2026-8"
+        },
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/front?day=2026-08-28"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "open-weight",
+        "Hugging Face",
+        "Nvidia",
+        "Stripe",
+        "OpenRouter",
+        "acquisition"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-29-4-android-odczuwa-pamieciowy-koszt-boomu-ai-1aed32d3d7",
+      "section": "Infrastruktura",
+      "title": "Android odczuwa pamięciowy koszt boomu AI",
+      "standfirst": "Google is making changes to Android app quality requirements because AI data-center demand is tightening device memory supply. Developers have until February 2027 to meet the new thresholds.",
+      "whatHappened": "Deficyt pamięci wywołany boomem AI przenosi się z data center na zwykłe aplikacje mobilne.",
+      "whyItMatters": "To jeden z pierwszych widocznych przykładów, że koszt AI zaczyna być widoczny dla devów i użytkowników końcowych, nie tylko dla hyperscalerów.",
+      "deeperAnalysis": [
+        "TechCrunch opisuje, że Google wprowadza nowe wymagania jakościowe dla aplikacji, bo branża mobilna mierzy się z istotnymi ograniczeniami podaży pamięci. Nowe progi dotyczą m.in. dynamic memory usage i bitmap usage, a celem jest ograniczenie slowdownów i crashy w aplikacjach.",
+        "To ważne, bo pokazuje spillover z rynku AI infrastruktury do zwykłych urządzeń. Jeśli data-center boom podbija ceny i dostępność RAM-u, to presja nie kończy się na chmurze. Trafia też do app developerów, którzy muszą optymalizować kod pod realnie rzadszy zasób.",
+        "Najbardziej praktyczny wniosek jest prosty: boom AI przestaje być abstrakcyjnym capexem w raportach Nvidii czy AWS. Coraz częściej jest to koszt, który końcowy użytkownik odczuwa w formie mniej płynnych aplikacji, ostrzejszych wymagań jakościowych i późniejszych dostaw sprzętu."
+      ],
+      "contextPoints": [
+        "Co się stało: Google podnosi wymagania jakościowe dla Android apps z powodu memory shortage.",
+        "Dlaczego ważne: AI data-center boom zaczyna wpływać na doświadczenie użytkownika końcowego.",
+        "Na co patrzeć dalej: reakcję deweloperów, OEM-ów i czy low-end devices dostaną najgorszy cios."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/27/ais-memory-crunch-is-coming-for-android-apps/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Android",
+        "memory",
+        "Google",
+        "data centers",
+        "chips",
+        "apps"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-29-5-plaud-robi-sluchawki-dla-agentow-b858c8a720",
+      "section": "Produkty",
+      "title": "Plaud robi słuchawki dla agentów",
+      "standfirst": "Plaud One earphones can record calls and use an eSIM-enabled case to talk to AI agents remotely. To kolejny sygnał, że consumer AI idzie w stronę dedykowanego hardware'u, a nie tylko aplikacji.",
+      "whatHappened": "Plaud zamienia note-taking w wyspecjalizowane urządzenie z always-connected case i workflowem dla agentów.",
+      "whyItMatters": "AI wychodzi z telefonu i ląduje w urządzeniu zaprojektowanym pod rozmowę, transkrypcję i follow-up.",
+      "deeperAnalysis": [
+        "Plaud nie jest pierwszą firmą, która próbuje wygrać rynek notetakerów. Ale jej ruch jest ciekawy, bo nie ogranicza się do kolejnego mikrofonu z apką. Plaud One ma słuchawki, etui do nagrywania rozmów w tle i eSIM, dzięki któremu użytkownik może wydawać polecenia agentowi bez korzystania z telefonu czy laptopa.",
+        "To dobrze pasuje do szerszego trendu na rynku consumer AI: hardware próbuje stać się interfejsem do działań, a nie tylko źródłem danych. Jeśli notatka, transkrypcja i follow-up są już w jednym urządzeniu, to AI zaczyna być elementem codziennego workflowu, a nie tylko osobną aplikacją na ekranie.",
+        "Warto też zauważyć, że Plaud wchodzi na rynek, gdzie software notetakers już funkcjonują jako dojrzała kategoria. To oznacza, że wyróżnik nie polega wyłącznie na transkrypcji, ale na tym, czy hardware naprawdę obniża tarcie i daje użytkownikowi nowy, wygodniejszy model interakcji."
+      ],
+      "contextPoints": [
+        "Co się stało: Plaud dodało eSIM-enabled case do słuchawek nagrywających i transkrybujących rozmowy.",
+        "Dlaczego ważne: consumer AI przechodzi do dedykowanego hardware'u z ciągłą łącznością.",
+        "Na co patrzeć dalej: czy użytkownicy uznają hardware za wygodniejszy niż same notetaker apps."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/27/plauds-new-earphones-come-with-an-esim-enabled-case-for-talking-to-ai-agents/"
+        },
+        {
+          "title": "Plaud",
+          "url": "https://www.plaud.ai/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Plaud",
+        "AI hardware",
+        "eSIM",
+        "notetakers",
+        "voice",
+        "agents"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-29-6-hn-i-product-hunt-premiuja-control-surfaces-8d778ce5c4",
+      "section": "Produkty",
+      "title": "HN i Product Hunt premiują control surfaces",
+      "standfirst": "Hacker News front page z 2026-08-28 i Product Hunt z 2026-08-29 nadal premiują control surfaces, open-weight modele i narzędzia do pracy. PH na dziś nie ma jeszcze postów, ale pokazuje wyraźny układ kategorii wokół AI notetakers, AI coding agents i workflow automation.",
+      "whatHappened": "Społeczność utrzymuje popyt na rzeczy, które da się uruchomić, porównać i osadzić w workflowie.",
+      "whyItMatters": "To najlepszy wczesny sygnał, że rynek nadal nagradza użyteczność i kontrolę, a nie sam modelowy szum.",
+      "deeperAnalysis": [
+        "Hacker News z 28 sierpnia nie wygląda jak front page z epoki ogólnych chatbotów. Dominują tam open-weight models, terminal benchmarks, argumenty o kontrolach i materiały o ryzykach infrastrukturalnych. To sygnał, że community nadal chce narzędzi, które da się zrozumieć, przetestować i kontrolować.",
+        "Product Hunt z kolei nie ma jeszcze postów na 29 sierpnia, ale jego kategorie i trending products mówią dużo o tym, co rynek uznaje za istotne: AI notetakers, AI coding agents, AI workflow automation oraz produkty typu Lovable, Wispr Flow, Vapi, Granola, Replit i n8n. To pokazuje, że launchy nadal krążą wokół pracy, a nie wyłącznie wokół demo.",
+        "W praktyce oznacza to, że z perspektywy podcastu i codziennego monitoringu warto śledzić narzędzia, które skracają drogę od modelu do działania. HN i PH są dobrym filtrem na to, co jeszcze jest tylko hype'em, a co zaczyna wyglądać jak prawdziwa powierzchnia robocza."
+      ],
+      "contextPoints": [
+        "Co się stało: HN i PH utrzymują zainteresowanie open-weight, benchmarkami i workflow tools.",
+        "Dlaczego ważne: to wczesny sygnał popytu na control surfaces zamiast czystych chatbotów.",
+        "Na co patrzeć dalej: czy te launchy utrzymają się na poziomie retencji i przychodów, a nie tylko jednego dnia buzz'u."
+      ],
+      "sources": [
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/front?day=2026-08-28"
+        },
+        {
+          "title": "Product Hunt",
+          "url": "https://www.producthunt.com/leaderboard/daily/2026/8/29"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Hacker News",
+        "Product Hunt",
+        "open-weight",
+        "agents",
+        "benchmarks",
+        "workflow"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "OpenAI globalizuje ChatGPT i mocniej zamyka ekosystem",
+      "rationale": "Brazylia, Indie i Cursor pokazują, że dystrybucja, reklamy i egzekwowanie umów stały się jedną historią produktu.",
+      "sourcesLabel": "OpenAI; TechCrunch"
+    },
+    {
+      "priority": "High",
+      "title": "Lambda zamienia GPU w instrument długu",
+      "rationale": "Term loan B pokazuje, że AI compute stał się aktywem finansowym, a nie tylko kosztem capex.",
+      "sourcesLabel": "Lambda; Business Wire; TechCrunch"
+    },
+    {
+      "priority": "High",
+      "title": "Anthropic pokazuje, jak AI może poprawiać samo siebie",
+      "rationale": "Recursive self-improvement i automatyczni researcherzy przenoszą AI z asysty do pętli badawczej.",
+      "sourcesLabel": "Anthropic; TechCrunch"
+    },
+    {
+      "priority": "High",
+      "title": "Open-weight AI wchodzi w konsolidację",
+      "rationale": "Hugging Face, OpenRouter i Poolside pokazują, że neutralna warstwa dystrybucji staje się celem przejęć.",
+      "sourcesLabel": "TechCrunch; Business Insider; Hacker News"
+    },
+    {
+      "priority": "Medium",
+      "title": "Android odczuwa pamięciowy koszt boomu AI",
+      "rationale": "Google zaczyna wprowadzać twarde wymagania jakościowe, bo pamięć urządzeń staje się zasobem deficytowym.",
+      "sourcesLabel": "TechCrunch"
+    },
+    {
+      "priority": "Medium",
+      "title": "Plaud robi słuchawki dla agentów",
+      "rationale": "eSIM-enabled case pokazuje, że consumer AI idzie w dedykowany hardware do rozmowy i notatek.",
+      "sourcesLabel": "TechCrunch; Plaud"
+    },
+    {
+      "priority": "Medium",
+      "title": "HN i Product Hunt premiują control surfaces",
+      "rationale": "Społeczność nadal nagradza benchmarki, open-weight i workflow tools zamiast czystego modelowego szumu.",
+      "sourcesLabel": "Hacker News; Product Hunt"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "OpenAI Brazil",
+      "url": "https://openai.com/index/expanding-our-presence-in-brazil/"
+    },
+    {
+      "title": "TechCrunch India ads",
+      "url": "https://techcrunch.com/2026/08/27/openai-to-start-showing-ads-on-chatgpts-free-and-go-tiers-in-india/"
+    },
+    {
+      "title": "OpenAI release notes",
+      "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+    },
+    {
+      "title": "OpenAI Ads",
+      "url": "https://ads.openai.com/"
+    },
+    {
+      "title": "OpenAI Cursor decision",
+      "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/"
+    },
+    {
+      "title": "Lambda blog",
+      "url": "https://lambda.ai/blog/lambda-closes-926-million-senior-secured-term-loan-b-facility"
+    },
+    {
+      "title": "Business Wire",
+      "url": "https://www.businesswire.com/news/home/20260827954897/en/Lambda-Closes-926-Million-Senior-Secured-Term-Loan-B-Facility-Backing-GPU-Deployment-for-an-Investment-Grade-Customer"
+    },
+    {
+      "title": "TechCrunch",
+      "url": "https://techcrunch.com/2026/08/28/neocloud-lambda-secures-1b-in-debt-to-buy-more-chips/"
+    },
+    {
+      "title": "Anthropic",
+      "url": "https://www.anthropic.com/institute/recursive-self-improvement"
+    },
+    {
+      "title": "TechCrunch",
+      "url": "https://techcrunch.com/2026/08/28/an-anthropic-researcher-just-gave-us-a-peek-at-self-improving-ai/"
+    },
+    {
+      "title": "TechCrunch open-weight",
+      "url": "https://techcrunch.com/2026/08/28/open-weight-ai-companies-are-the-valleys-hottest-acquisition-targets/"
+    },
+    {
+      "title": "TechCrunch Hugging Face",
+      "url": "https://techcrunch.com/2026/08/26/nvidia-closes-in-on-hugging-face-acquisition/"
+    },
+    {
+      "title": "Business Insider",
+      "url": "https://www.businessinsider.com/nvidia-has-been-in-talks-to-acquire-hugging-face-for-more-than-13-billion-2026-8"
+    },
+    {
+      "title": "Hacker News",
+      "url": "https://news.ycombinator.com/front?day=2026-08-28"
+    },
+    {
+      "title": "TechCrunch",
+      "url": "https://techcrunch.com/2026/08/27/ais-memory-crunch-is-coming-for-android-apps/"
+    },
+    {
+      "title": "TechCrunch",
+      "url": "https://techcrunch.com/2026/08/27/plauds-new-earphones-come-with-an-esim-enabled-case-for-talking-to-ai-agents/"
+    },
+    {
+      "title": "Plaud",
+      "url": "https://www.plaud.ai/"
+    },
+    {
+      "title": "Product Hunt",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/8/29"
+    }
+  ]
+}
