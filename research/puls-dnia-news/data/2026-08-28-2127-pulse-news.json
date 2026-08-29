@@ -1,0 +1,545 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-08-28",
+  "runTime": "21:27",
+  "status": "Material update",
+  "headline": "Burze, zarzuty i presja regulacyjna",
+  "summary": "Slot 21:27 przesuwa feed na alerty RCB i IMGW, formalne zarzuty w Zondacrypto, decyzję ws. Romanowskiego, sprawę broni na Woli, blokadę BLIK, presję wobec Mety oraz świeże follow-upy z Ukrainy, Rosji, Nepalu, Londynu, Kanady i Iranu.",
+  "items": [
+    {
+      "id": "alerty-rcb-imgw-2026-08-28-2127",
+      "section": "Alerty",
+      "title": "RCB i IMGW ostrzegają przed burzami",
+      "lead": "Wchodzi ryzyko podtopień i silnego deszczu.",
+      "whatHappened": "RCB wysłało alert dla trzech województw, a IMGW utrzymuje ostrzeżenia przed gwałtownymi burzami i intensywnym deszczem na końcówkę tygodnia.",
+      "keyFacts": [
+        "Alert obejmuje intensywne opady i burze.",
+        "W komunikatach pojawia się ryzyko lokalnych podtopień.",
+        "Prognoza IMGW wskazuje na dynamiczną zmianę pogody w weekend."
+      ],
+      "reactions": [
+        "Służby apelują o śledzenie komunikatów pogodowych i unikanie wezbranych rzek.",
+        "TVN24 Meteo pokazuje, że strefy opadów przesuwają się w czasie rzeczywistym."
+      ],
+      "whyItMatters": "To bezpośredni sygnał dla ruchu drogowego, służb i bezpieczeństwa lokalnego na start weekendu.",
+      "context": "Po wcześniejszych epizodach upału sytuacja przechodzi w typowy alert burzowy.",
+      "watchNext": [
+        "Czy IMGW rozszerzy lub skróci ostrzeżenia.",
+        "Czy RCB wyśle kolejne SMS-y do nowych powiatów."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Alert RCB dla trzech województw. Możliwe podtopienia",
+          "url": "https://tvn24.pl/polska/alert-rcb-28-29-08-intensywne-opady-deszczu-i-burze-mozliwe-podtopienia-st9210936"
+        },
+        {
+          "title": "TVN24 Meteo: Radar i mapa opadów w Polsce",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/radar-i-mapa-opadow-w-polsce-pogoda-i-burze-w-sobote-29-08-nadchodzi-ulewny-deszcz-tu-spadnie-go-najwiecej-st9211186"
+        },
+        {
+          "title": "IMGW: Synoptyczna prognoza pogody od 28.08.2026 do 30.08.2026 r.",
+          "url": "https://imgw.pl/synoptyczna-prognoza-pogody-od-28-08-2026-do-30-08-2026-r/"
+        },
+        {
+          "title": "RCB",
+          "url": "https://rcb.gov.pl/"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "burze",
+        "RCB"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "piesiewicz-zondacrypto-2026-08-28-2127",
+      "section": "Polityka",
+      "title": "Piesiewicz usłyszał zarzuty w sprawie Zondacrypto",
+      "lead": "Zatrzymanie przechodzi w formalną fazę karną.",
+      "whatHappened": "Radosław Piesiewicz został doprowadzony do prokuratury w Katowicach, usłyszał zarzuty w sprawie Zondacrypto i opuścił budynek dopiero po północy.",
+      "keyFacts": [
+        "Sprawę prowadzi śląski wydział prokuratury.",
+        "TVN24 opisuje ją jako formalny etap po wcześniejszych zatrzymaniach i ustaleniach.",
+        "Premier Donald Tusk publicznie odniósł się do sprawy w rządowych wydarzeniach."
+      ],
+      "reactions": [
+        "Rząd i prokuratura komunikują sprawę jako element walki z nielegalnym biznesem.",
+        "W otoczeniu politycznym temat pozostaje głośny i mocno komentowany."
+      ],
+      "whyItMatters": "To przejście z medialnego skandalu do formalnej fazy karnej w sprawie łączącej sport, kryptowaluty i politykę.",
+      "context": "Wcześniej feed opisywał głównie zatrzymanie i reakcje. Teraz pojawiły się zarzuty.",
+      "watchNext": [
+        "Czy prokuratura poda szczegółowy opis zarzutów.",
+        "Czy pojawią się nowe zabezpieczenia majątkowe lub kolejne nazwiska."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Radosław Piesiewicz opuścił prokuraturę",
+          "url": "https://tvn24.pl/polska/radoslaw-piesiewicz-opuscil-prokurature-st9209228"
+        },
+        {
+          "title": "TVN24: Radosław Piesiewicz i kryptoafera",
+          "url": "https://tvn24.pl/polska/radoslaw-piesiewicz-i-kryptoafera-co-wiemy-do-tej-pory-najwazniejsze-informacje-w-sprawie-st9209766"
+        },
+        {
+          "title": "gov.pl: Wydarzenia",
+          "url": "https://www.gov.pl/web/premier/wydarzenia"
+        }
+      ],
+      "tags": [
+        "Zondacrypto",
+        "PKOl",
+        "prokuratura"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "romanowski-ena-2026-08-28-2127",
+      "section": "Polityka",
+      "title": "Romanowski przegrywa ws. ENA",
+      "lead": "Sąd utrzymuje europejski nakaz aresztowania.",
+      "whatHappened": "Sąd nie uwzględnił wniosku obrony Marcina Romanowskiego o uchylenie ENA, a TVN24 podało też, że polityk szukał możliwości uzyskania azylu w Dubaju.",
+      "keyFacts": [
+        "Wniosek obrony został oddalony.",
+        "Sprawa pozostaje na torze ENA i kolejnych wniosków proceduralnych.",
+        "W tle są kontakty przez Przemysława Krala i Bartosza Lewandowskiego."
+      ],
+      "reactions": [
+        "Obrona próbuje nadal przesuwać sprawę proceduralnie.",
+        "Wątek pozostaje politycznie wrażliwy i wysoko komentowany."
+      ],
+      "whyItMatters": "To utrzymuje presję procesową i zamyka kolejną próbę zablokowania europejskiego nakazu.",
+      "context": "To kolejny etap w ciągnącym się sporze o miejsce pobytu i status procesowy Romanowskiego.",
+      "watchNext": [
+        "Czy obrona złoży następny wniosek lub zażalenie.",
+        "Czy sąd wyznaczy kolejne terminy bez dodatkowych komplikacji."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Jest decyzja sądu w sprawie ENA Marcina Romanowskiego",
+          "url": "https://tvn24.pl/polska/sprawa-marcina-romanowskiego-sad-nie-uwzglednil-wniosku-w-sprawie-ena-st9209010"
+        },
+        {
+          "title": "TVN24: Jak Marcin Romanowski azylu u Krala szukał",
+          "url": "https://tvn24.pl/polska/przymyslaw-kral-mial-zalatwic-marcinowi-romanowskiemu-azyl-w-dubaju-st9209403"
+        }
+      ],
+      "tags": [
+        "Romanowski",
+        "ENA",
+        "sąd"
+      ],
+      "priority": "3"
+    },
+    {
+      "id": "wola-bron-2026-08-28-2127",
+      "section": "Bezpieczeństwo",
+      "title": "Wola: broń, amunicja i zarzuty",
+      "lead": "Sprawa ma już formalny wymiar karny.",
+      "whatHappened": "Po działaniach policji i ABW na Woli jeden z zatrzymanych obywateli Rosji usłyszał zarzut nielegalnego posiadania broni i amunicji. W mieszkaniu znaleziono m.in. pistolety Glock i Walther.",
+      "keyFacts": [
+        "Zatrzymano trzech obywateli Rosji czeczeńskiego pochodzenia.",
+        "42-latek trafił do aresztu.",
+        "Postępowanie prowadzi prokuratura rejonowa na Woli."
+      ],
+      "reactions": [
+        "KSP i ABW traktują sprawę jako standardowe śledztwo bezpieczeństwa publicznego.",
+        "Warszawski wątek security pozostaje aktywny."
+      ],
+      "whyItMatters": "To potencjalnie ważny sygnał o nielegalnym uzbrojeniu w stolicy i o aktywności służb.",
+      "context": "Wcześniej była mowa o zatrzymaniach; teraz doszedł formalny zarzut i areszt.",
+      "watchNext": [
+        "Czy prokuratura poda motyw lub szerszy kontekst posiadania broni.",
+        "Czy pojawią się kolejne zarzuty wobec pozostałych zatrzymanych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Warszawa. Rosjanie i broń w mieszkaniu",
+          "url": "https://tvn24.pl/tvnwarszawa/wola/warszawa-rosjanie-i-bron-w-mieszkaniu-zarzuty-i-areszt-sledztwo-prokuratury-st9211069"
+        },
+        {
+          "title": "Komenda Stołeczna Policji",
+          "url": "https://ksp.policja.gov.pl/"
+        }
+      ],
+      "tags": [
+        "Wola",
+        "policja",
+        "broń"
+      ],
+      "priority": "4"
+    },
+    {
+      "id": "blik-hazard-2026-08-28-2127",
+      "section": "Gospodarka",
+      "title": "BLIK blokuje hazardowe płatności",
+      "lead": "Zmiana wchodzi 1 września.",
+      "whatHappened": "Polski Standard Płatności ogłosił, że BLIK będzie blokować transakcje powiązane z domenami hazardowymi działającymi niezgodnie z polskim prawem.",
+      "keyFacts": [
+        "Blokada ma ruszyć 1 września 2026 roku.",
+        "Ma obejmować transakcje krajowe i zagraniczne.",
+        "Operator porównuje domeny z rejestrem ministra finansów."
+      ],
+      "reactions": [
+        "PSP przedstawia to jako narzędzie ograniczania ryzyka i zgodności.",
+        "To bezpośredni wpływ na ruch płatniczy w internecie."
+      ],
+      "whyItMatters": "To realna zmiana dla użytkowników BLIK i dla nielegalnego hazardu online.",
+      "context": "To jeden z najmocniejszych krajowych wątków regulacyjnych w tym slocie.",
+      "watchNext": [
+        "Czy PSP poda dokładną listę wyjątków i ograniczeń.",
+        "Czy ministerstwo finansów skomentuje skalę blokad."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: BLIK wprowadza blokadę. Tych transakcji nie zrobisz",
+          "url": "https://tvn24.pl/biznes/z-kraju/blik-wprowadza-blokade-tych-transakcji-nie-zrobisz-st9208646"
+        }
+      ],
+      "tags": [
+        "BLIK",
+        "hazard",
+        "płatności"
+      ],
+      "priority": "5"
+    },
+    {
+      "id": "meta-teen-safety-2026-08-28-2127",
+      "section": "Technologia",
+      "title": "Meta zgadza się na nowe limity dla nastolatków",
+      "lead": "Firma odpowiada na presję po pozwach stanowych.",
+      "whatHappened": "Meta ogłosiła porozumienie z ponadpartyjną grupą prokuratorów generalnych w USA. Pakiet obejmuje limity czasu dla nastolatków, nocną blokadę, wyciszanie powiadomień w czasie lekcji i nowe kontrole rodzicielskie.",
+      "keyFacts": [
+        "Porozumienie ma obowiązywać uczestniczące stany i terytoria po zatwierdzeniu przez sędziego.",
+        "Meta chce, by podobne standardy przyjęły też TikTok i YouTube.",
+        "Rozwiązanie ma obowiązywać przez lata i obejmować Facebook oraz Instagram."
+      ],
+      "reactions": [
+        "Meta przedstawia to jako nowy branżowy standard bezpieczeństwa.",
+        "Krytycy pytają, czy bez mocniejszej weryfikacji wieku to wystarczy."
+      ],
+      "whyItMatters": "To jeden z najgłośniejszych testów, jak daleko platformy społecznościowe muszą iść w ochronie nieletnich.",
+      "context": "To ważny sygnał dla całego rynku social mediów i regulacji cyfrowych.",
+      "watchNext": [
+        "Czy TikTok i YouTube odniosą się do apelu Mety.",
+        "Czy pojawią się kolejne pozwy lub reakcje regulatorów."
+      ],
+      "sources": [
+        {
+          "title": "Meta Newsroom: Our Agreement With Bipartisan Attorneys General",
+          "url": "https://about.fb.com/news/2026/08/agreement-with-state-attorneys-general-supporting-teens/"
+        },
+        {
+          "title": "AP: Meta reaches landmark settlement with states in trial over teen social media addiction",
+          "url": "https://apnews.com/article/97d342f2a33d835eda2356c5e1af9e37"
+        }
+      ],
+      "tags": [
+        "Meta",
+        "social media",
+        "safety"
+      ],
+      "priority": "6"
+    },
+    {
+      "id": "ukraine-attack-2026-08-28-2127",
+      "section": "Świat",
+      "title": "Rosja znów uderza w Ukrainę",
+      "lead": "Nocny atak objął drony i rakiety.",
+      "whatHappened": "AP podała, że rosyjski atak nocny uderzył w cele cywilne i infrastrukturalne na Ukrainie. Ukraińskie źródła i TVN24 opisują przechwycenia dużej liczby dronów i rakiet oraz szkody w kilku regionach.",
+      "keyFacts": [
+        "AP mówi o jednym zabitym i dalszych zniszczeniach.",
+        "Ukraińska obrona przechwyciła część pocisków i dronów.",
+        "Ataki objęły także obiekty energetyczne i logistyczne."
+      ],
+      "reactions": [
+        "Ukraina utrzymuje komunikaty o obronie powietrznej i szkodach.",
+        "Europejscy partnerzy dalej rozważają wsparcie finansowe i wojskowe."
+      ],
+      "whyItMatters": "To utrzymuje wysoki poziom ryzyka militarnego i energetycznego w regionie.",
+      "context": "To jeden z najcięższych światowych follow-upów tego slotu.",
+      "watchNext": [
+        "Czy pojawią się nowe bilanse ofiar i szkód.",
+        "Czy Ukraina poda szczegóły kolejnych przechwyceń i kontrataków."
+      ],
+      "sources": [
+        {
+          "title": "AP: Russian drone strikes on Ukraine's Kyiv region",
+          "url": "https://apnews.com/article/e71dbed50bbdc710372f96deead36665"
+        },
+        {
+          "title": "TVN24: Fala ataków na ukraińskie miasta",
+          "url": "https://tvn24.pl/swiat/fala-atakow-na-ukrainskie-miasta-wsrod-rannych-sa-dzieci-st9208116"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Rosja",
+        "wojna"
+      ],
+      "priority": "7"
+    },
+    {
+      "id": "ukraine-mobilization-2026-08-28-2127",
+      "section": "Świat",
+      "title": "Ukraina ostrzega przed nową mobilizacją Rosji",
+      "lead": "Moskwa ma plan na 2026 i 2027 rok.",
+      "whatHappened": "Kancelaria prezydenta Ukrainy opublikowała komunikat, że Rosja przygotowuje kolejną falę mobilizacji, zakładając 300 tys. rekrutów w tym roku i kolejne 300 tys. w następnym.",
+      "keyFacts": [
+        "Komunikat oparto na briefingu ukraińskiego wywiadu.",
+        "Wskazuje on na plan 2026-2027.",
+        "To sygnał dalszej długiej wojny, a nie deeskalacji."
+      ],
+      "reactions": [
+        "Kijów używa tej tezy do uzasadniania dalszej presji na sojuszników.",
+        "Rosja oficjalnie nie potwierdza takiej skali planów."
+      ],
+      "whyItMatters": "To ważny wskaźnik, że wojna może wejść w kolejną fazę presji kadrowej i militarnej.",
+      "context": "Wiąże się to bezpośrednio z atakiem na Ukrainę i szerszym europejskim bezpieczeństwem.",
+      "watchNext": [
+        "Czy pojawią się niezależne potwierdzenia lub przecieki z Moskwy.",
+        "Czy sojusznicy Ukrainy zareagują na sygnał o nowej mobilizacji."
+      ],
+      "sources": [
+        {
+          "title": "President of Ukraine: Preparation for a New Wave of Mobilization in Russia",
+          "url": "https://www.president.gov.ua/en/news/pidgotovka-novoyi-hvili-mobilizaciyi-v-rosiyi-brif-vid-gur-m-106137"
+        },
+        {
+          "title": "President of Ukraine: All news",
+          "url": "https://www.president.gov.ua/en/news/all"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Rosja",
+        "mobilizacja"
+      ],
+      "priority": "8"
+    },
+    {
+      "id": "nepal-flood-2026-08-28-2127",
+      "section": "Świat",
+      "title": "Nepal: ryzyko drugiej fali powodzi",
+      "lead": "Ratownicy wrócili, ale zagrożenie trwa.",
+      "whatHappened": "Po katastrofalnych powodzi i osuwiskach na granicy Nepalu i Tybetu ratownicy wznowili działania, ale przelewające się jezioro i ryzyko kolejnej fali utrzymują stan alarmowy.",
+      "keyFacts": [
+        "AP opisuje nadal bardzo wysoki bilans ofiar i zaginionych.",
+        "DHM Nepal nadal monitoruje sytuację hydrologiczną.",
+        "Zagrożenie wtórną falą wody ogranicza tempo akcji ratunkowej."
+      ],
+      "reactions": [
+        "Władze ostrzegają przed ponownym wezbraniem i osunięciami.",
+        "Służby muszą balansować między ewakuacją a ryzykiem kolejnych strat."
+      ],
+      "whyItMatters": "To nadal jedna z najpoważniejszych katastrof naturalnych w regionie i ważny globalny alert klimatyczny.",
+      "context": "To temat, który utrzymuje się w światowych serwisach już kolejny slot.",
+      "watchNext": [
+        "Czy bilans ofiar wzrośnie.",
+        "Czy jezioro przeleje się ponownie lub rząd Nepalu poprosi o dodatkową pomoc."
+      ],
+      "sources": [
+        {
+          "title": "AP: Rescuers retrieve flood survivors caked in mud as death toll in Nepal-China border disaster climbs",
+          "url": "https://apnews.com/article/ae9973b5fd2b1dc6d54c3e88b1b55bdc"
+        },
+        {
+          "title": "DHM Nepal: Flood Monitoring",
+          "url": "https://www.dhm.gov.np/hydrology/floodMonitoring"
+        }
+      ],
+      "tags": [
+        "Nepal",
+        "powódź",
+        "katastrofa"
+      ],
+      "priority": "9"
+    },
+    {
+      "id": "london-fire-2026-08-28-2127",
+      "section": "Świat",
+      "title": "Pożar w Neasden paraliżuje północny Londyn",
+      "lead": "Metro i okolica działają z ograniczeniami.",
+      "whatHappened": "W zakładzie przetwarzania odpadów w Neasden wybuchł duży pożar. London Fire Brigade podała, że na miejscu działa około 125 strażaków i 20 wozów, a ruch metra i kolei został zakłócony.",
+      "keyFacts": [
+        "Pożar objął dużą halę przemysłową.",
+        "Mieszkańcom zalecono zamknięcie drzwi i okien.",
+        "Akcja ma potrwać do końca dnia."
+      ],
+      "reactions": [
+        "LFB traktuje zdarzenie jako długotrwałą akcję z dużą liczbą zgłoszeń.",
+        "W TVN24 pojawił się też wątek ewakuacji pobliskiego magazynu Amazon."
+      ],
+      "whyItMatters": "To realne bezpieczeństwo miejskie i transportowe dla Londynu oraz dobry przykład szybkiego, oficjalnego follow-upu.",
+      "context": "BBC było źródłem detekcji dla tego typu wydarzeń w szerokim world-cycle.",
+      "watchNext": [
+        "Czy służby podadzą przyczynę pożaru.",
+        "Czy transport publiczny wróci do normalnego rytmu jeszcze dziś."
+      ],
+      "sources": [
+        {
+          "title": "London Fire Brigade: Waste facility fire - Neasden",
+          "url": "https://www.london-fire.gov.uk/incidents/2026/august/fire-neasden/"
+        },
+        {
+          "title": "TVN24: Pożar zakładu przetwarzania odpadów w Londynie",
+          "url": "https://tvn24.pl/swiat/wielka-brytania-londyn-pozar-zakladu-przetwarzania-odpadow-na-polnocy-miasta-st9211056"
+        }
+      ],
+      "tags": [
+        "Londyn",
+        "pożar",
+        "transport"
+      ],
+      "priority": "10"
+    },
+    {
+      "id": "canada-tariffs-2026-08-28-2127",
+      "section": "Gospodarka",
+      "title": "Kanada odpowiada na cła USA",
+      "lead": "Od 8 września wchodzą odwetowe taryfy.",
+      "whatHappened": "Kanada ogłosiła counter-tariffs na wybrane produkty z USA, reagując na amerykańskie taryfy i utrzymując twardszą linię w sporze handlowym.",
+      "keyFacts": [
+        "Stawki mają wynosić 15, 25 i 50 procent zależnie od produktu.",
+        "Pakiet obejmuje towary za 27,6 mld dolarów.",
+        "Lista dotyczy m.in. stali, nabiału, sprzętu i elektroniki."
+      ],
+      "reactions": [
+        "Ottawa pokazuje, że nie zamierza odpuszczać w negocjacjach z Waszyngtonem.",
+        "Rynek dostaje sygnał, że konflikt handlowy może się przeciągnąć."
+      ],
+      "whyItMatters": "To może przełożyć się na ceny, łańcuchy dostaw i szerszy klimat gospodarczy w Ameryce Północnej.",
+      "context": "To ważny ekonomiczny follow-up po wcześniejszych sygnałach o napięciu USA-Kanada.",
+      "watchNext": [
+        "Czy USA odpowiedzą kolejną rundą taryf.",
+        "Czy Kanada opublikuje dokładniejszą listę produktów."
+      ],
+      "sources": [
+        {
+          "title": "Finance Canada: Canada announces targeted countermeasures",
+          "url": "https://www.canada.ca/en/employment-social-development/news/2026/08/canada-announces-targeted-countermeasures-and-substantive-support-for-workers-and-businesses-in-response-to-us-tariffs.html"
+        },
+        {
+          "title": "PM Canada: Prime Minister Carney delivers remarks",
+          "url": "https://www.pm.gc.ca/en/news/speeches/2026/08/22/prime-minister-carney-delivers-remarks-canada-us-trade-negotiations"
+        }
+      ],
+      "tags": [
+        "Kanada",
+        "cła",
+        "handel"
+      ],
+      "priority": "11"
+    },
+    {
+      "id": "iran-sanctions-2026-08-28-2127",
+      "section": "Świat",
+      "title": "USA rozkręcają presję sankcyjną na Iran",
+      "lead": "Treasury i State Department zwiększają nacisk.",
+      "whatHappened": "Amerykańskie Treasury prowadzi Operation Economic Outcast przeciw Iranowi i jego sieciom finansowym, a State Department publikuje kolejne materiały sankcyjne dotyczące finansowania, transportu i petrochemii.",
+      "keyFacts": [
+        "Oficjalna komunikacja mówi o uderzeniu w finansowe lifelines Iranu.",
+        "Pakiet obejmuje też osoby i firmy wspierające obejście sankcji.",
+        "Presja ma wymiar gospodarczy, a nie tylko militarny."
+      ],
+      "reactions": [
+        "Waszyngton przedstawia kampanię jako długofalową i skoordynowaną.",
+        "Iran nadal próbuje utrzymać handel mimo nacisku sankcyjnego."
+      ],
+      "whyItMatters": "To jeden z najważniejszych geopolitycznych sygnałów dnia, z potencjalnym wpływem na ropę, handel i bezpieczeństwo regionalne.",
+      "context": "To uzupełnia szerszy wątek napięć wokół cieśniny Ormuz i rynku energii.",
+      "watchNext": [
+        "Czy Treasury poda kolejne listy podmiotów.",
+        "Czy Iran lub partnerzy handlowi odpowiedzą oficjalnie."
+      ],
+      "sources": [
+        {
+          "title": "Treasury: Treasury Launches Unprecedented Campaign Against Iranian Regime on Economic D-Day",
+          "url": "https://home.treasury.gov/news/press-releases/sb0613"
+        },
+        {
+          "title": "State Department: Operation Economic Outcast fact sheet",
+          "url": "https://www.state.gov/releases/office-of-the-spokesperson/2026/08/United-States-Implements-Operation-Economic-Outcast-with-Sanctions-Targeting-Irans-Military-Activities-and-Procurements-and-Petroleum-and-Petrochemical-Product-Traders-fact-sheet"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "sankcje",
+        "energia"
+      ],
+      "priority": "12"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24 Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "TVN24 Meteo",
+      "url": "https://tvn24.pl/tvnmeteo"
+    },
+    {
+      "title": "BBC News",
+      "url": "https://www.bbc.com/news"
+    },
+    {
+      "title": "CNN 5 Things",
+      "url": "https://podcasts.apple.com/us/podcast/cnn-5-things/id1436719991"
+    },
+    {
+      "title": "RCB",
+      "url": "https://rcb.gov.pl/"
+    },
+    {
+      "title": "IMGW-PIB",
+      "url": "https://imgw.pl/"
+    },
+    {
+      "title": "KSP",
+      "url": "https://ksp.policja.gov.pl/"
+    },
+    {
+      "title": "gov.pl/premier",
+      "url": "https://www.gov.pl/web/premier/wydarzenia"
+    },
+    {
+      "title": "AP News",
+      "url": "https://apnews.com/"
+    },
+    {
+      "title": "President of Ukraine",
+      "url": "https://www.president.gov.ua/en/news/all"
+    },
+    {
+      "title": "DHM Nepal",
+      "url": "https://www.dhm.gov.np/hydrology/floodMonitoring"
+    },
+    {
+      "title": "London Fire Brigade",
+      "url": "https://www.london-fire.gov.uk/incidents/"
+    },
+    {
+      "title": "Finance Canada",
+      "url": "https://www.canada.ca/en/employment-social-development/news/2026/08/canada-announces-targeted-countermeasures-and-substantive-support-for-workers-and-businesses-in-response-to-us-tariffs.html"
+    },
+    {
+      "title": "Treasury",
+      "url": "https://home.treasury.gov/news/press-releases/sb0613"
+    },
+    {
+      "title": "State Department",
+      "url": "https://www.state.gov/releases/office-of-the-spokesperson/2026/08/United-States-Implements-Operation-Economic-Outcast-with-Sanctions-Targeting-Irans-Military-Activities-and-Procurements-and-Petroleum-and-Petrochemical-Product-Traders-fact-sheet"
+    },
+    {
+      "title": "Meta Newsroom",
+      "url": "https://about.fb.com/news/2026/08/agreement-with-state-attorneys-general-supporting-teens/"
+    }
+  ]
+}

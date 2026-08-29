@@ -59,6 +59,13 @@
 
 # Puls Dnia News Backlog
 
+# 2026-08-29 06:01
+
+- Watch whether RCB i IMGW rozszerzą, skrócą albo odwołają alerty burzowe przed kolejnym slotem.
+- Watch whether prokuratura poda szczegóły zarzutów i nowych wątków w Zondacrypto oraz Romanowskim.
+- Watch whether Google, Meta, Kanada or Treasury opublikują dodatkowe szczegóły wdrożeniowe.
+- Watch whether Nepal podniesie bilans ofiar, zaginionych albo ostrzeżenie o wtórnym zalaniu.
+
 # 2026-08-27 18:02
 
 - Watch whether prokuratura or TVN24 add zarzuty, zabezpieczenia majątkowe or money-flow detail in Zondacrypto.

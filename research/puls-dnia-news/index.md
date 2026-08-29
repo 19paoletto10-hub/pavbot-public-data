@@ -2,7 +2,7 @@
 
 ## Current State
 
-Slot 2026-08-27 18:02 przesuwa feed na zatrzymanie Piesiewicza i reakcję Żurka w sprawie Zondacrypto, decyzję ws. Romanowskiego, blokadę BLIK, wysokie magazyny gazu, nacisk na Metę i aktywne ostrzeżenia IMGW, a światowy rdzeń opiera na nowych atakach na Ukrainę, mobilizacji w Rosji, powodzi w Nepalu, pożarze w Islamabadzie, cłach Kanady i sankcjach na Iran.
+Slot 2026-08-29 06:01 utrzymuje feed na alertach RCB i IMGW, komentarzu Tuska do Zondacrypto, dubajskim follow-upie Romanowskiego, budżecie 2027, blokadzie BLIK oraz regulacyjnych ruchach Google i Mety, a światowy rdzeń opiera na rosyjskich atakach na Ukrainę, nowej fali mobilizacji w Rosji, powodzi w Nepalu, kontrcłach Kanady i kampanii Treasury przeciw Iranowi.
 
 ## Data Shape
 
