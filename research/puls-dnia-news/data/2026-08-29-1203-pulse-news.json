@@ -1,0 +1,549 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-08-29",
+  "runTime": "12:03",
+  "status": "Material update",
+  "headline": "Burze, MyDr i Google napędzają południowy slot",
+  "summary": "Południe przyniosło dziś materialny update: alerty pogodowe, areszt Piesiewicza, dubajski ślad Romanowskiego, budżet 2027, MyDr, Google, Meta oraz świeże karty ze świata z CIA, Islandią, Zełenskim i Nepalem.",
+  "items": [
+    {
+      "id": "alerty-2026-08-29-1203",
+      "section": "Alerty",
+      "title": "RCB i IMGW utrzymują burzowy poranek",
+      "lead": "Ryzyko podtopień nadal jest aktywne.",
+      "whatHappened": "Rano TVN24 Meteo pokazało aktywne pasma opadów, a komunikat RCB nadal ostrzega przed intensywnym deszczem i burzami.",
+      "keyFacts": [
+        "Alert dotyczy 28 i 29 sierpnia 2026.",
+        "RCB nadal ostrzega przed możliwymi podtopieniami.",
+        "Radar opadów pokazuje aktywne komórki deszczowe."
+      ],
+      "reactions": [
+        "Służby apelują o ostrożność przy wezbranych rzekach.",
+        "Meteorolodzy śledzą przesuwanie się strefy opadów."
+      ],
+      "whyItMatters": "To bezpośrednio wpływa na bezpieczeństwo lokalne, transport i pracę służb.",
+      "context": "To nadal jeden z głównych tematów poranka w kraju, mimo że feed coraz mocniej przechodzi w politykę i tech.",
+      "watchNext": [
+        "Czy IMGW skróci lub rozszerzy ostrzeżenia.",
+        "Czy pojawią się nowe zgłoszenia o zalaniach lub utrudnieniach w ruchu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Meteo: Radar i mapa opadów w Polsce",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/radar-i-mapa-opadow-w-polsce-pogoda-i-burze-w-sobote-29-08-nadchodzi-ulewny-deszcz-tu-spadnie-go-najwiecej-st9211186"
+        },
+        {
+          "title": "RCB: Komunikaty",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "burze",
+        "RCB",
+        "IMGW"
+      ],
+      "priority": "1"
+    },
+    {
+      "id": "polityka-2026-08-29-1203-piesiewicz",
+      "section": "Polityka",
+      "title": "Areszt Piesiewicza uruchomił reakcję ministra sportu",
+      "lead": "PKOl dostał polityczny i procesowy cios.",
+      "whatHappened": "Po decyzji o trzymiesięcznym areszcie dla Radosława Piesiewicza minister sportu Jakub Rutnicki wezwał zarząd PKOl do natychmiastowych działań naprawczych.",
+      "keyFacts": [
+        "Areszt ma trwać trzy miesiące.",
+        "Rutnicki mówi o odbudowie zaufania do PKOl.",
+        "Sprawa nadal ma mocny wymiar medialny i polityczny."
+      ],
+      "reactions": [
+        "Minister żąda szybkiej reakcji środowiska sportowego.",
+        "Komentarze wokół PKOl pozostają bardzo ostre."
+      ],
+      "whyItMatters": "To może zmienić układ sił w polskim sporcie i utrzymać aferę na szczycie agendy informacyjnej.",
+      "context": "To kolejny etap sprawy, która od tygodni łączy sport, biznes i politykę.",
+      "watchNext": [
+        "Czy PKOl zareaguje kadrowo lub organizacyjnie.",
+        "Czy prokuratura poda kolejne formalne szczegóły sprawy."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Minister sportu o areszcie dla Radosława Piesiewicza",
+          "url": "https://tvn24.pl/polska/areszt-dla-radoslawa-piesiewicza-minister-sportu-jakub-rutnicki-zabral-glos-st9211530"
+        },
+        {
+          "title": "TVN24: Posiedzenie trwało całą noc. Jest decyzja w sprawie Piesiewicza",
+          "url": "https://tvn24.pl/polska/szesc-rzeczy-ktore-warto-w-sobote-29-sierpnia-najwazniejsze-informacje-st9211489"
+        }
+      ],
+      "tags": [
+        "Piesiewicz",
+        "PKOl",
+        "areszt",
+        "sport"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "polityka-2026-08-29-1203-romanowski",
+      "section": "Polityka",
+      "title": "Dubajski wątek Romanowskiego wraca",
+      "lead": "TVN24 doprecyzowało ślad azylowy.",
+      "whatHappened": "Nowe ustalenia opisują działania Przemysława Krala wokół prób załatwienia Marcinowi Romanowskiemu azylu w Dubaju.",
+      "keyFacts": [
+        "Wątek dotyczy pośrednictwa w kontaktach.",
+        "Sprawa nie ma jeszcze nowego rozstrzygnięcia sądowego.",
+        "To kolejny etap medialnego śledztwa."
+      ],
+      "reactions": [
+        "Wątek wywołuje komentarze polityczne.",
+        "Obrona została zmuszona do reakcji na nowe ustalenia."
+      ],
+      "whyItMatters": "To utrzymuje presję wokół Romanowskiego i pokazuje, że sprawa ma także zagraniczny wymiar operacyjny.",
+      "context": "To rozwinięcie wcześniejszych doniesień o wniosku i procedurze ENA.",
+      "watchNext": [
+        "Czy pojawi się nowy ruch procesowy.",
+        "Czy Romanowski lub jego pełnomocnicy odniosą się do nowych ustaleń."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Powiązania Przemysława Krala z Marcinem Romanowskim",
+          "url": "https://tvn24.pl/polska/powiazania-przemyslawa-krala-z-marcinem-romanowski-hennig-kloska-golym-okiem-widac-uklad-st9209841"
+        }
+      ],
+      "tags": [
+        "Romanowski",
+        "Dubaj",
+        "azyl",
+        "śledztwo"
+      ],
+      "priority": "3"
+    },
+    {
+      "id": "gospodarka-2026-08-29-1203-budget",
+      "section": "Gospodarka",
+      "title": "Budżet 2027 idzie z wysokim deficytem",
+      "lead": "Rząd utrzymuje szeroki pakiet wydatków.",
+      "whatHappened": "Projekt budżetu na 2027 rok został przyjęty i trafił do RDS. Wydatki mają zbliżyć się do biliona złotych, a deficyt wynieść 282,6 mld zł.",
+      "keyFacts": [
+        "Dochody: 695,0 mld zł.",
+        "Wydatki: 977,6 mld zł.",
+        "Deficyt: nie więcej niż 282,6 mld zł."
+      ],
+      "reactions": [
+        "Premier mówi o budżecie optymizmu i energii.",
+        "RDS ma teraz ocenić projekt."
+      ],
+      "whyItMatters": "To jeden z największych dokumentów fiskalnych sezonu i ważny sygnał dla rynku, samorządów i usług publicznych.",
+      "context": "W projekcie widać priorytet obronności, zdrowia i inwestycji infrastrukturalnych.",
+      "watchNext": [
+        "Czy RDS zgłosi formalne zastrzeżenia.",
+        "Czy resorty podadzą więcej szczegółów o cięciach i przesunięciach."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Budżet 2027. W górę deficyt, wydatki i podatki",
+          "url": "https://tvn24.pl/biznes/pieniadze/budzet-2027-tusk-wiecej-pieniedzy-na-zdrowie-bezpieczenstwo-i-inwestycje-st9209842"
+        },
+        {
+          "title": "gov.pl: Priorytety ustawy budżetowej na 2027 rok",
+          "url": "https://www.gov.pl/web/finanse/bezpieczenstwo-zdrowie-inwestycje--priorytety-ustawy-budzetowej-na-2027-rok"
+        },
+        {
+          "title": "gov.pl: Wydarzenia KPRM",
+          "url": "https://www.gov.pl/web/premier/wydarzenia"
+        }
+      ],
+      "tags": [
+        "budżet",
+        "deficyt",
+        "finanse",
+        "RDS"
+      ],
+      "priority": "4"
+    },
+    {
+      "id": "bezpieczenstwo-2026-08-29-1203-mydr",
+      "section": "Bezpieczeństwo",
+      "title": "MyDr trafia do rządowego serwisu",
+      "lead": "Można już sprawdzić PESEL po wycieku.",
+      "whatHappened": "Dane z sierpniowego wycieku w MyDr zostały dodane do bezpiecznedane.gov.pl, a użytkownicy mogą sprawdzić, czy ich PESEL znalazł się w incydencie.",
+      "keyFacts": [
+        "Portal działa publicznie.",
+        "Sprawdzenie obejmuje też numery telefonów, e-mail i loginy.",
+        "Skala incydentu nadal jest doprecyzowywana."
+      ],
+      "reactions": [
+        "UODO kontroluje spółkę MyDr.",
+        "Wiceminister mówi, że dane nie krążą po sieci."
+      ],
+      "whyItMatters": "To realny problem prywatności i bezpieczeństwa tożsamości milionów osób.",
+      "context": "To kolejny etap po potwierdzeniu wycieku i wcześniejszych komunikatach o zabezpieczaniu danych.",
+      "watchNext": [
+        "Czy UODO poda wyniki kontroli.",
+        "Czy rząd rozszerzy komunikację ostrzegawczą o kolejne zalecenia."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Wyciek z MyDr. Rządowy serwis działa i można sprawdzić PESEL",
+          "url": "https://tvn24.pl/biznes/tech/wyciek-danych-z-mydr-rzadowy-serwis-bezpiecznedane-gov-pl-juz-dziala-jak-sprawdzic-czy-wyciekl-pesel-st9211588"
+        },
+        {
+          "title": "TVN24: Wiceminister o wycieku z MyDr",
+          "url": "https://tvn24.pl/biznes/z-kraju/cyberatak-na-mydr-dariusz-standerski-te-dane-nie-kraza-po-sieci-st9195667"
+        },
+        {
+          "title": "UODO: Strona główna",
+          "url": "https://uodo.gov.pl/"
+        }
+      ],
+      "tags": [
+        "MyDr",
+        "PESEL",
+        "cyberbezpieczeństwo",
+        "UODO"
+      ],
+      "priority": "5"
+    },
+    {
+      "id": "technologia-2026-08-29-1203-google",
+      "section": "Technologia",
+      "title": "Google zmienia politykę spamową w Europie",
+      "lead": "Site reputation abuse dostaje twardsze reguły.",
+      "whatHappened": "TVN24 opisuje zmianę polityki Google od 30 sierpnia w Europie, a europejskie instytucje naciskają na ograniczenie praktyk typu site reputation abuse.",
+      "keyFacts": [
+        "Nowe zasady startują 30 sierpnia.",
+        "Zmiana dotyczy Europy.",
+        "To odpowiedź na presję regulatorów UE."
+      ],
+      "reactions": [
+        "Wydawcy i SEO obserwują wpływ na ruch.",
+        "Sprawa pozostaje w obszarze sporu z regulatorami."
+      ],
+      "whyItMatters": "To może zmienić widoczność treści w wyszukiwarce i układ sił między platformami a wydawcami.",
+      "context": "Wątek był już śledzony wcześniej, ale teraz dostał nowe, wdrożeniowe ramy i datę wejścia w życie.",
+      "watchNext": [
+        "Czy Google poda dodatkowe wyjaśnienia po 30 sierpnia.",
+        "Czy wydawcy lub regulatorzy zgłoszą pierwsze efekty zmian."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Google podporządkowuje się UE",
+          "url": "https://tvn24.pl/biznes/tech/google-zmienia-polityke-dotyczaca-spamu-od-30-sierpnia-spelnia-oczekiwania-unii-europejskiej-st9211360"
+        },
+        {
+          "title": "Google Search Central: Update site reputation policy",
+          "url": "https://developers.google.com/search/blog/2026/08/update-site-reputation-policy"
+        },
+        {
+          "title": "European Commission: Alphabet specification proceedings",
+          "url": "https://digital-markets-act.ec.europa.eu/developer-portal/data-access/alphabet-specification-proceedings-sharing-google-search-data_en"
+        }
+      ],
+      "tags": [
+        "Google",
+        "UE",
+        "SEO",
+        "regulacje"
+      ],
+      "priority": "6"
+    },
+    {
+      "id": "technologia-2026-08-29-1203-meta",
+      "section": "Technologia",
+      "title": "Meta utrzymuje ugodę i limity dla nastolatków",
+      "lead": "Firma ma wdrożyć mocniejsze zabezpieczenia.",
+      "whatHappened": "TVN24 opisuje kolejną falę zmian wokół Mety po ugodzie z prokuratorami generalnymi i zapowiadanych ograniczeniach czasu, nocnych blokadach oraz ochronie nastolatków.",
+      "keyFacts": [
+        "Ugoda dotyczy ochrony nastolatków.",
+        "Zmiany obejmują limity czasu i blokady nocne.",
+        "Sprawa pozostaje pod presją regulatorów."
+      ],
+      "reactions": [
+        "Gawkowski komentuje, że Meta się ugina.",
+        "Regulatorzy traktują ugodę jako punkt odniesienia."
+      ],
+      "whyItMatters": "To może przełożyć się na nowe standardy bezpieczeństwa w największych aplikacjach społecznościowych.",
+      "context": "W tle są wcześniejsze pozwy, presja stanów USA i obawy o zdrowie psychiczne nastolatków.",
+      "watchNext": [
+        "Czy Meta opublikuje plan wdrożenia zmian.",
+        "Czy pojawią się kolejne reakcje regulatorów lub stanów USA."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Wielka ugoda właściciela Facebooka. Co się zmieni",
+          "url": "https://tvn24.pl/biznes/tech/wielka-ugoda-wlasciciela-facebooka-co-sie-zmieni-st9208252"
+        },
+        {
+          "title": "TVN24: Gawkowski: Meta się ugina",
+          "url": "https://tvn24.pl/biznes/tech/wicepremier-gawkowski-apeluje-o-pozew-zbiorowy-przeciwko-mecie-uwazaja-ze-sa-ponad-prawem-st9209919"
+        },
+        {
+          "title": "Meta Newsroom: Agreement with state attorneys general supporting teens",
+          "url": "https://about.fb.com/news/2026/08/agreement-with-state-attorneys-general-supporting-teens/"
+        }
+      ],
+      "tags": [
+        "Meta",
+        "Facebook",
+        "nastolatki",
+        "regulacje"
+      ],
+      "priority": "7"
+    },
+    {
+      "id": "gospodarka-2026-08-29-1203-paliwa",
+      "section": "Gospodarka",
+      "title": "Ostatnie dni wakacyjnego CPN-u",
+      "lead": "Kierowcy patrzą na ceny przed weekendem.",
+      "whatHappened": "TVN24 publikuje analizę cen paliw na koniec wakacji i zwraca uwagę, że kończy się okres ulgowego tankowania przed początkiem września.",
+      "keyFacts": [
+        "Stawki paliw są nadal ważnym tematem końcówki wakacji.",
+        "Na rynek wpływa wygasanie okresowych ulg.",
+        "Kierowcy i analitycy czekają na nowe poziomy cen."
+      ],
+      "reactions": [
+        "Stacje i kierowcy reagują na możliwą zmianę popytu.",
+        "Rynek paliw obserwuje koniec wakacyjnego sezonu."
+      ],
+      "whyItMatters": "To bezpośrednio dotyka kosztów transportu, logistyki i codziennych wydatków kierowców.",
+      "context": "Temat jest sezonowy, ale końcówka wakacji zwykle przynosi wyraźne ruchy cenowe.",
+      "watchNext": [
+        "Czy kolejne publikacje potwierdzą zmianę stawek.",
+        "Czy pojawią się reakcje sieci stacji lub analityków paliwowych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Ostatnie dni \"CPN-u\"",
+          "url": "https://tvn24.pl/biznes/z-kraju/ceny-paliw-na-koniec-wakacji-tyle-kosztuja-benzyna-i-olej-napedowy-st9211534"
+        },
+        {
+          "title": "TVN24: Ceny paliw w ostatni weekend wakacji",
+          "url": "https://tvn24.pl/biznes/moto/ceny-paliw-w-ostatni-weekend-wakacji-ile-zaplacimy-za-benzyne-95-i-98-oraz-za-olej-napedowy-st9210390"
+        }
+      ],
+      "tags": [
+        "paliwa",
+        "CPN",
+        "ceny",
+        "transport"
+      ],
+      "priority": "8"
+    },
+    {
+      "id": "swiat-2026-08-29-1203-cia",
+      "section": "Świat",
+      "title": "Wizyta szefa CIA w Moskwie podbija napięcie",
+      "lead": "To czytane jest jako sygnał dla Rosji.",
+      "whatHappened": "TVN24 i komentarze z programu Horyzont opisują wizytę szefa CIA w Moskwie jako możliwy sygnał nacisku na Rosję, także w kontekście NATO i Iranu.",
+      "keyFacts": [
+        "Wątek łączy się z presją na Rosję.",
+        "W tle pojawia się również Iran.",
+        "MON pozostaje w kontakcie z amerykańskimi służbami."
+      ],
+      "reactions": [
+        "Komentatorzy widzą w tym presję polityczną.",
+        "Moskwa i zachód czytają ruch jako sygnał strategiczny."
+      ],
+      "whyItMatters": "To może wpływać na odbiór sygnałów bezpieczeństwa w NATO i na sposób nacisku na Rosję oraz Iran.",
+      "context": "Temat wrócił dziś na front TVN24 jako jedno z głównych okienek światowych.",
+      "watchNext": [
+        "Czy pojawi się oficjalny follow-up z USA lub Moskwy.",
+        "Czy komentarze wojskowe doprecyzują, co było celem wizyty."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Horyzont: Po co szef CIA leciał do Moskwy?",
+          "url": "https://tvn24.pl/plus/programy/horyzont/po-co-szef-cia-lecial-do-moskwy-komentuje-zbigniew-pisarski-vc9211464"
+        },
+        {
+          "title": "TVN24: Wizyta szefa CIA w Moskwie. Groźba czy przykrywka?",
+          "url": "https://tvn24.pl/plus/programy/rozmowy-na-szczycie/po-co-szef-cia-polecial-do-moskwy-marcin-wrona-i-jacek-stawiski-komentuja-vc9211384"
+        },
+        {
+          "title": "TVN24: Wizyta szefa CIA w Moskwie \"wywołuje niepokój\"",
+          "url": "https://tvn24.pl/swiat/komentarze-po-locie-szefa-cia-johna-ratcliffe-a-do-rosji-ta-wizyta-wywoluje-niepokoj-st9207126"
+        }
+      ],
+      "tags": [
+        "CIA",
+        "Moskwa",
+        "NATO",
+        "Iran"
+      ],
+      "priority": "9"
+    },
+    {
+      "id": "swiat-2026-08-29-1203-islandia",
+      "section": "Świat",
+      "title": "Islandia głosuje pod presją dezinformacji",
+      "lead": "AI podbiła referendum i spór o Rosję.",
+      "whatHappened": "TVN24 opisuje, że przed referendum na Islandii dominowała dezinformacja, a sztuczna inteligencja wzmacniała narracje wokół rosyjskiej ingerencji.",
+      "keyFacts": [
+        "Temat stał się numerem jeden na wyspie.",
+        "AI pomogła roznieść fałszywe lub manipulacyjne treści.",
+        "Debata wywołuje także podziały rodzinne."
+      ],
+      "reactions": [
+        "Dyskusja publiczna stała się ostrzejsza.",
+        "Islandczycy reagują na próby wpływu przed głosowaniem."
+      ],
+      "whyItMatters": "To pokazuje, jak szybko AI i dezinformacja mogą zatruć debatę o polityce zagranicznej i UE.",
+      "context": "To wątek z pogranicza polityki, cyber i technologii wpływu.",
+      "watchNext": [
+        "Czy po referendum pojawią się twarde dane o źródłach kampanii.",
+        "Czy islandzkie władze zareagują na ślady ingerencji."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Przed referendum na Islandii dominowała dezinformacja",
+          "url": "https://tvn24.pl/swiat/islandia-bali-sie-ingerencji-rosji-przed-referendum-namieszala-sztuczna-inteligencja-st9211522"
+        },
+        {
+          "title": "TVN24: Referendum na Islandii. Kto zostanie na lodzie?",
+          "url": "https://tvn24.pl/plus/podcasty/szczyt-europy/islandia-i-unia-europejska-wroci-do-rozmow-o-czlonkostwie-referendum-2026-vc9211698"
+        }
+      ],
+      "tags": [
+        "Islandia",
+        "referendum",
+        "dezinformacja",
+        "AI"
+      ],
+      "priority": "10"
+    },
+    {
+      "id": "swiat-2026-08-29-1203-ukraina",
+      "section": "Świat",
+      "title": "Zełenski mówi o spotkaniach w Moskwie",
+      "lead": "USA przekazały Kijowowi nowe informacje.",
+      "whatHappened": "Prezydent Wołodymyr Zełenski przekazał, że USA poinformowały Ukrainę o kilku spotkaniach w Moskwie; wątek łączy się z ostatnią wizytą szefa CIA.",
+      "keyFacts": [
+        "Informacja dotyczy kilku spotkań w Moskwie.",
+        "Kijów dostał ją od USA.",
+        "Wątek pojawia się 17 godzin po publikacji TVN24."
+      ],
+      "reactions": [
+        "Kijów śledzi rosyjskie ruchy.",
+        "Komentatorzy wiążą to z presją na Kreml."
+      ],
+      "whyItMatters": "To sygnał, że amerykańskie i ukraińskie kanały wymieniają teraz więcej informacji o Rosji i ewentualnej eskalacji.",
+      "context": "To wspiera szerszy obraz napięć wokół bezpieczeństwa regionalnego i NATO.",
+      "watchNext": [
+        "Czy pojawi się oficjalny komentarz USA.",
+        "Czy Rosja odpowie nowym komunikatem lub przeciekiem."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Wołodymyr Zełenski przekazał informacje o spotkaniach w Moskwie",
+          "url": "https://tvn24.pl/swiat/wolodymyr-zelenski-usa-przekazaly-nam-informacje-o-kilku-spotkaniach-w-moskwie-st9211224"
+        },
+        {
+          "title": "TVN24: Rosjanie komentują wizytę szefa CIA",
+          "url": "https://tvn24.pl/swiat/rosja-wizyta-szefa-cia-johna-ratcliffe-a-w-moskwie-emocje-i-komentarze-rosjan-st9208217"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Zełenski",
+        "Moskwa",
+        "CIA"
+      ],
+      "priority": "11"
+    },
+    {
+      "id": "swiat-2026-08-29-1203-nepal",
+      "section": "Świat",
+      "title": "Nepal nadal zmienia zasady dla ratowników",
+      "lead": "Powódź i osuwiska wciąż blokują pomoc.",
+      "whatHappened": "Po katastrofie w Nepalu TVN24 podało, że część ratowników zostanie wpuszczona, a wcześniejsze materiały pokazują skalę zniszczeń oraz ryzyko kolejnych jezior zaporowych.",
+      "keyFacts": [
+        "Decyzje o dostępie ratowników zmieniają się wraz z sytuacją.",
+        "Skala zniszczeń pozostaje bardzo duża.",
+        "Nadal istnieje ryzyko kolejnej katastrofy hydrologicznej."
+      ],
+      "reactions": [
+        "Mieszkańcy dalej szukają zaginionych.",
+        "Pomoc międzynarodowa pozostaje w gotowości."
+      ],
+      "whyItMatters": "To nadal jedna z najpoważniejszych katastrof pogodowych w regionie i temat z potencjałem na dalszy wzrost bilansu ofiar.",
+      "context": "Wątek łączy osuwiska, powodzie i trudny dostęp ratowników do odciętych terenów.",
+      "watchNext": [
+        "Czy Nepal poda nowe liczby ofiar i zaginionych.",
+        "Czy rząd lub służby ratownicze zmienią zasady dla ekip pomocowych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Nepal. To stąd mogła zejść śmiercionośna lawina",
+          "url": "https://tvn24.pl/tvnmeteo/swiat/nepal-to-stad-mogla-zejsc-smiercionosna-lodowo-skalna-lawina-st9207837"
+        },
+        {
+          "title": "TVN24: Powódź w Nepalu. Nowe jezioro grozi kolejną katastrofą",
+          "url": "https://tvn24.pl/tvnmeteo/swiat/powodz-w-nepalu-nowe-jezioro-grozi-kolejna-katastrofa-st9208421"
+        },
+        {
+          "title": "DHM Nepal: Flood monitoring",
+          "url": "https://www.dhm.gov.np/hydrology/floodMonitoring"
+        }
+      ],
+      "tags": [
+        "Nepal",
+        "powódź",
+        "osuwisko",
+        "ratownicy"
+      ],
+      "priority": "12"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24 Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "TVN24 Meteo",
+      "url": "https://tvn24.pl/tvnmeteo"
+    },
+    {
+      "title": "Rządowe Centrum Bezpieczeństwa",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    },
+    {
+      "title": "Ministerstwo Finansów",
+      "url": "https://www.gov.pl/web/finanse/bezpieczenstwo-zdrowie-inwestycje--priorytety-ustawy-budzetowej-na-2027-rok"
+    },
+    {
+      "title": "Kancelaria Prezesa Rady Ministrów",
+      "url": "https://www.gov.pl/web/premier/wydarzenia"
+    },
+    {
+      "title": "Google Search Central",
+      "url": "https://developers.google.com/search/blog/2026/08/update-site-reputation-policy"
+    },
+    {
+      "title": "European Commission",
+      "url": "https://digital-markets-act.ec.europa.eu/developer-portal/data-access/alphabet-specification-proceedings-sharing-google-search-data_en"
+    },
+    {
+      "title": "Meta Newsroom",
+      "url": "https://about.fb.com/news/2026/08/agreement-with-state-attorneys-general-supporting-teens/"
+    },
+    {
+      "title": "UODO",
+      "url": "https://uodo.gov.pl/"
+    },
+    {
+      "title": "President of Ukraine",
+      "url": "https://www.president.gov.ua/en/news/all"
+    },
+    {
+      "title": "DHM Nepal",
+      "url": "https://www.dhm.gov.np/hydrology/floodMonitoring"
+    }
+  ]
+}
