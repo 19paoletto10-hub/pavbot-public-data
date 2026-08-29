@@ -1,0 +1,503 @@
+{
+  "schemaVersion": 1,
+  "topic": "polska-swiat",
+  "runDate": "2026-08-28",
+  "runTime": "21:24",
+  "status": "Material update",
+  "leadParagraphs": [
+    "Dzisiejszy obraz ma dwa krajowe leady. Pierwszy to budżet 2027: rząd przyjął wstępny projekt z wydatkami 977,6 mld zł, deficytem 282,6 mld zł, obroną na poziomie 4,51% PKB oraz dużym wzrostem pieniędzy na zdrowie. Drugi to Zondacrypto, gdzie sprawa Radosława Piesiewicza przeszła do fazy wniosku o areszt, a Sejm zapowiada wrześniowe głosowanie nad prezydenckim wetem do ustawy o rynku kryptoaktywów.",
+    "W bloku bezpieczeństwa Ukraina ma drugi dzień szerokich ataków dronowych na okolice Kijowa i ostrzeżenia z Chersonia przed zimowymi przerwami w prądzie, a jednocześnie uderza w rosyjską rafinerię w Jarosławiu. NATO opublikowało readout po spotkaniu Rutte-Colby: USA briefowały sojuszników o przeglądzie sił w Europie, a Rutte powtórzył ramę \"NATO 3.0\" i większej odpowiedzialności Europy oraz Kanady.",
+    "Światowo najmocniej zmieniły się Iran, Ormuz oraz Nepal. AP i komunikaty USA pokazują sześć miesięcy wojny z Iranem jako długi kryzys żeglugowy i finansowy, z tysiącami marynarzy uwięzionych w Zatoce Perskiej oraz nową presją FinCEN/OFAC na kanały bankowe. W Nepalu i Tybecie bilans powodzi lodowcowej rośnie bardzo szybko, a AP i Guardian opisują setki ofiar, prawie dwa tysiące zaginionych w Nepalu i ryzyko kolejnej fali z nowo utworzonego jeziora."
+  ],
+  "summaryBullets": [
+    "Gospodarka: Budżet 2027: wysoki deficyt i priorytet obrony",
+    "Polityka: Zondacrypto: sprawa Piesiewicza przechodzi do sądu i Sejmu",
+    "Bezpieczeństwo: Ukraina: Rosja naciska dronami, Chersoń szykuje się na zimę"
+  ],
+  "articles": [
+    {
+      "id": "polska-swiat-2026-08-28-0-budzet-2027-wysoki-deficyt-i-priorytet-obrony-a4f28b1561",
+      "section": "Gospodarka",
+      "title": "Budżet 2027: wysoki deficyt i priorytet obrony",
+      "standfirst": "Rada Ministrów przyjęła wstępny projekt budżetu 2027 z dochodami 695 mld zł, wydatkami 977,6 mld zł i deficytem 282,6 mld zł. KPRM podaje też 198,1 mld zł na obronę, czyli 4,51% PKB, oraz 274,1 mld zł na zdrowie.",
+      "whatHappened": "Rząd przyjął wstępny projekt budżetu 2027 i wysłał go do dalszych konsultacji.",
+      "whyItMatters": "Ten dokument wyznacza jesienny spór o bezpieczeństwo, podatki, zdrowie, deficyt i relację rządu z prezydentem oraz TK.",
+      "deeperAnalysis": [
+        "Projekt jest politycznie mocny, bo łączy deklarację bezpieczeństwa z bardzo dużym deficytem. Obrona ma dostać ponad 198 mld zł, a zdrowie ponad 274 mld zł, więc rząd będzie argumentował, że wysoki poziom wydatków wynika z priorytetów państwa, nie tylko z bieżącej konsumpcji.",
+        "Drugim elementem jest pakiet podatkowy. KPRM pokazuje zmiany w PIT dla klasy średniej, podwyższony CIT dla największych firm, większą daninę solidarnościową przy bardzo wysokich dochodach i obniżenie limitu ryczałtu. To tworzy konflikt z biznesem i potencjalnie z Pałacem Prezydenckim.",
+        "Osobny ciężar ma wątek Trybunału Konstytucyjnego. Jeśli projekt budżetu nie wpisuje dochodów i wydatków TK, spór o legalność i funkcjonowanie tej instytucji przestaje być tylko ustrojowy, a staje się także budżetowy."
+      ],
+      "contextPoints": [
+        "Co się stało: Rząd przyjął wstępny projekt budżetu 2027.",
+        "Dlaczego ważne: Decyzja łączy wydatki obronne, zdrowotne i podatkowe z dużym deficytem.",
+        "Na co patrzeć dalej: opinie Rady Dialogu Społecznego, Rady Fiskalnej, stanowisko prezydenta i reakcję TK."
+      ],
+      "sources": [
+        {
+          "title": "KPRM projekt budżetu",
+          "url": "https://www.gov.pl/web/premier/projekt-ustawy-budzetowej-na-rok-20225"
+        },
+        {
+          "title": "KPRM komunikat premiera",
+          "url": "https://www.gov.pl/web/premier/premier-to-budzet-narodowego-optymizmu-i-energii-a-nie-marazmu-i-pesymizmu"
+        },
+        {
+          "title": "Onet/PAP o TK",
+          "url": "https://wiadomosci.onet.pl/kraj/rzad-postawil-na-opcje-atomowa-nie-bedzie-finansowal-trybunalu-konstytucyjnego/lv8j6mr"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Polska",
+        "budżet",
+        "obronność",
+        "zdrowie",
+        "podatki"
+      ]
+    },
+    {
+      "id": "polska-swiat-2026-08-28-1-zondacrypto-sprawa-piesiewicza-przechodzi-do-sadu-i-sejmu-5dd00fb42f",
+      "section": "Polityka",
+      "title": "Zondacrypto: sprawa Piesiewicza przechodzi do sądu i Sejmu",
+      "standfirst": "Prokuratura chce trzymiesięcznego aresztu dla Radosława Piesiewicza, a Sejm ma we wrześniu głosować nad wetem do ustawy o rynku kryptoaktywów. PiS zapowiada komisję śledczą, więc temat łączy postępowanie karne z legislacją.",
+      "whatHappened": "Wątek Zondacrypto dostał jednocześnie etap procesowy i parlamentarny.",
+      "whyItMatters": "Sprawa dotyka ochrony klientów rynku krypto, przejrzystości procesu legislacyjnego i politycznej odpowiedzialności za nadzór nad finansami cyfrowymi.",
+      "deeperAnalysis": [
+        "Najważniejsza zmiana polega na przejściu od medialnych ustaleń i politycznych komentarzy do działań formalnych. Wniosek o areszt nie przesądza winy, ale oznacza, że sąd musi ocenić argumenty prokuratury i warunki stosowania środka zapobiegawczego.",
+        "Równolegle wraca ustawa o rynku kryptoaktywów. Według RMF24 Sejm ma głosować nad wetem w dniach 2-4 września, a wymagany próg 3/5 głosów czyni sprawę testem sejmowej arytmetyki. W tle pozostają klienci Zondacrypto, doniesienia o problemach z wypłatami oraz pytania o wcześniejszy nadzór.",
+        "Dla materiału w aplikacji warto prowadzić ten temat w trzech warstwach: prokuratura i sąd, sejmowe głosowanie oraz polityczny spór o komisję śledczą. Mieszanie tych warstw zwiększa ryzyko nadinterpretacji."
+      ],
+      "contextPoints": [
+        "Co się stało: Prokuratura zawnioskowała o areszt dla Piesiewicza, a Sejm przygotowuje głosowanie nad wetem.",
+        "Dlaczego ważne: Stawką jest wiarygodność regulacji kryptoaktywów i odpowiedzialność instytucji.",
+        "Na co patrzeć dalej: decyzja sądu, formalny harmonogram Sejmu, stanowisko PKOl i ewentualny wniosek komisji śledczej."
+      ],
+      "sources": [
+        {
+          "title": "Onet",
+          "url": "https://wiadomosci.onet.pl/kraj/jest-wniosek-o-areszt-dla-radoslawa-piesiewicza/n2jm2c5"
+        },
+        {
+          "title": "Polsat News",
+          "url": "https://www.polsatnews.pl/wiadomosc/2026-08-28/afera-zondarcypto-nowy-komunikat-prokuratury-ws-piesiewicza/"
+        },
+        {
+          "title": "RMF24",
+          "url": "https://www.rmf24.pl/fakty/polityka/news-prezydent-kontra-sejm-wkrotce-glosowanie-nad-wetem-nawrockie,nIdn,1015565"
+        },
+        {
+          "title": "Onet komisja śledcza",
+          "url": "https://wiadomosci.onet.pl/kraj/pis-chce-komisji-sledczej-w-sprawie-zondacrypto-zapowiada-wniosek/fjcb2hz"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Polska",
+        "Zondacrypto",
+        "PKOl",
+        "kryptoaktywa",
+        "Sejm"
+      ]
+    },
+    {
+      "id": "polska-swiat-2026-08-28-2-ukraina-rosja-naciska-dronami-cherson-szykuje-sie-na-zime-30e17bb9c8",
+      "section": "Bezpieczeństwo",
+      "title": "Ukraina: Rosja naciska dronami, Chersoń szykuje się na zimę",
+      "standfirst": "AP podaje, że Rosja wystrzeliła 164 drony przeciw Ukrainie, a władze Chersonia ostrzegają mieszkańców przed ryzykiem długotrwałych zimowych przerw w dostawach. Guardian opisuje bardzo długą falę ataków oraz ukraińskie przechwycenia pocisków i dronów.",
+      "whatHappened": "Rosja utrzymuje wielodniową presję powietrzną, a Ukraina odpowiada uderzeniami w rosyjskie zaplecze rafineryjne.",
+      "whyItMatters": "To przesuwa akcent z jednorazowych ataków na długą próbę wyczerpywania obrony powietrznej, logistyki i odporności cywilnej.",
+      "deeperAnalysis": [
+        "AP opisuje użycie szybkich dronów odrzutowych jako narzędzia przeciążania obrony powietrznej i ludności. To istotne, bo ataki nie muszą niszczyć wyłącznie celów wojskowych, aby osiągać efekt strategiczny: wystarczy wymuszać alarmy, zużycie amunicji i ciągłą presję psychiczną.",
+        "Chersoń jest tu osobnym sygnałem. Lokalne władze zachęcają część mieszkańców do przenosin w bezpieczniejsze regiony, bo zimą mogą pojawić się dłuższe przerwy w prądzie, ogrzewaniu i wodzie. To wprowadza temat odporności miejskiej przed zimą, czyli wcześniejszą wersję kryzysu, który może nasilić się w kolejnych miesiącach.",
+        "Ukraińskie uderzenie w rafinerię w Jarosławiu pokazuje drugą stronę tej samej wojny infrastrukturalnej. Kijów próbuje zwiększać koszt rosyjskiej kampanii przez ataki na paliwa i logistykę, a Rosja testuje ukraińską obronę przez masowe fale dronów."
+      ],
+      "contextPoints": [
+        "Co się stało: Rosja kontynuowała nocne ataki dronowe, a Ukraina zgłosiła uderzenie w rafinerię.",
+        "Dlaczego ważne: Obie strony coraz mocniej celują w infrastrukturę, zapasy i odporność zimową.",
+        "Na co patrzeć dalej: komunikaty ukraińskiej obrony powietrznej, bilanse ofiar, reakcje partnerów NATO i dostawy systemów obrony."
+      ],
+      "sources": [
+        {
+          "title": "AP Ukraina",
+          "url": "https://apnews.com/article/russia-ukraine-war-attacks-economy-kherson-e71dbed50bbdc710372f96deead36665"
+        },
+        {
+          "title": "Guardian briefing",
+          "url": "https://www.theguardian.com/world/2026/aug/28/ukraine-war-briefing-missiles-shot-down-during-long-russian-attack-wave"
+        },
+        {
+          "title": "Guardian o rosyjskich stratach",
+          "url": "https://www.theguardian.com/world/2026/aug/28/russia-losing-6000-more-troops-than-it-can-recruit-each-month-in-ukraine-says-west"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Ukraina",
+        "Rosja",
+        "Kijów",
+        "Chersoń",
+        "NATO"
+      ]
+    },
+    {
+      "id": "polska-swiat-2026-08-28-3-iran-i-ormuz-wojna-przechodzi-w-presje-finansowa-05393a01b1",
+      "section": "Świat",
+      "title": "Iran i Ormuz: wojna przechodzi w presję finansową",
+      "standfirst": "Po sześciu miesiącach wojny z Iranem AP opisuje Ormuz jako ograniczony szlak, a tysiące marynarzy pozostają na statkach w Zatoce Perskiej. FinCEN i OFAC uruchomiły nowe kroki przeciw kanałom finansowym powiązanym z Iranem.",
+      "whatHappened": "USA łączą presję na żeglugę, sankcje i bankowość, zamiast opierać się wyłącznie na uderzeniach wojskowych.",
+      "whyItMatters": "Ormuz wpływa na ceny energii, transport i politykę sankcji, a działania wobec banków mogą uderzyć w podmioty spoza samego Iranu.",
+      "deeperAnalysis": [
+        "AP pokazuje, że wojna z Iranem nie ma prostego punktu zakończenia. Część irańskiej infrastruktury wojskowej została uszkodzona, ale konflikt trwa przez blokadę, ograniczony ruch statków i presję ekonomiczną. To może być bardziej długotrwałe niż klasyczna kampania powietrzna.",
+        "FinCEN uderza w Banque Misr UAE poprzez narzędzie przeciwdziałania praniu pieniędzy, a OFAC dopisuje do listy sankcyjnej osobę powiązaną z Bank Melli oraz firmę z Hongkongu. To sygnał, że administracja USA szuka punktów nacisku w regionalnych i azjatyckich kanałach finansowych.",
+        "W praktyce temat trzeba śledzić przez kilka wskaźników jednocześnie: liczbę statków przechodzących przez Ormuz, reakcję Egiptu i Chin, ceny ropy oraz to, czy propozycja FinCEN po okresie komentarzy stanie się obowiązującą regułą."
+      ],
+      "contextPoints": [
+        "Co się stało: USA zapowiedziały nowe działania finansowe wobec podmiotów powiązanych z Iranem.",
+        "Dlaczego ważne: Sankcje i blokada mogą mieć wpływ na handel, energię i relacje USA z partnerami regionalnymi.",
+        "Na co patrzeć dalej: finalizację reguły FinCEN, nowe wpisy OFAC, ruch przez Ormuz i odpowiedź Chin oraz Egiptu."
+      ],
+      "sources": [
+        {
+          "title": "AP sześć miesięcy wojny",
+          "url": "https://apnews.com/article/trump-iran-war-six-months-anniversary-israel-3c4d33b09fdbe19928781c678aa025c9"
+        },
+        {
+          "title": "AP Banque Misr UAE",
+          "url": "https://apnews.com/article/iran-war-economic-isolation-sanctions-trump-bessent-ae1c438ff169effa0c63a56a93ca23ae"
+        },
+        {
+          "title": "FinCEN",
+          "url": "https://www.fincen.gov/news/news-releases/fincen-proposes-rule-would-revoke-banque-misr-uaes-correspondent-banking-access"
+        },
+        {
+          "title": "OFAC",
+          "url": "https://ofac.treasury.gov/recent-actions/20260828"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Iran",
+        "USA",
+        "Ormuz",
+        "sankcje",
+        "banki"
+      ]
+    },
+    {
+      "id": "polska-swiat-2026-08-28-4-nepal-i-tybet-powodz-lodowcowa-ma-coraz-ciezszy-bilans-9e00ffe217",
+      "section": "Świat",
+      "title": "Nepal i Tybet: powódź lodowcowa ma coraz cięższy bilans",
+      "standfirst": "AP podał 579 zgonów i 1924 zaginionych w Nepalu po powodzi na granicy z Chinami, a Guardian live później wskazywał jeszcze wyższe liczby. Nowe jezioro po kolapsie lodowcowym utrzymuje ryzyko kolejnej fali.",
+      "whatHappened": "Akcja ratunkowa trwa, bilans ofiar rośnie, a służby obserwują zagrożenie z nowo utworzonego jeziora.",
+      "whyItMatters": "To duża katastrofa humanitarna i ostrzeżenie o ryzyku nagłych powodzi w ocieplających się Himalajach.",
+      "deeperAnalysis": [
+        "Ten wątek bardzo szybko zmienił skalę. Poprzedni raport mówił o setkach zaginionych, a dzisiejsze aktualizacje AP i Guardiana pokazują już katastrofę z wieloma setkami potwierdzonych ofiar i prawie dwoma tysiącami osób zaginionych w Nepalu.",
+        "AP zwraca uwagę na nowo utworzone jezioro powstałe po zablokowaniu rzeki. Nawet jeśli druga fala nie powtórzy skali pierwszego uderzenia, sama konieczność ewakuacji i alarmu utrudnia akcję ratunkową oraz dostęp do odciętych terenów.",
+        "Wątek ma również wymiar międzynarodowy. Wśród zaginionych są cudzoziemcy, część terenów jest dostępna tylko z powietrza, a organizacje humanitarne mówią o dziesiątkach tysięcy osób potrzebujących pomocy, w tym o tysiącach dzieci."
+      ],
+      "contextPoints": [
+        "Co się stało: Powódź po kolapsie lodowcowym zniszczyła obszary po obu stronach granicy Nepal-Chiny.",
+        "Dlaczego ważne: Skala ofiar, zaginionych i potrzeb humanitarnych rośnie z każdą aktualizacją.",
+        "Na co patrzeć dalej: najnowszy bilans, los cudzoziemców, poziom jeziora i dostęp ekip ratunkowych."
+      ],
+      "sources": [
+        {
+          "title": "AP latest",
+          "url": "https://apnews.com/article/1f3d0ccf432eed879020e18efcab3146"
+        },
+        {
+          "title": "AP nowe jezioro",
+          "url": "https://apnews.com/article/nepal-lake-china-flood-tibet-climate-5086eb25e29b23019632f7817739f807"
+        },
+        {
+          "title": "AP UNICEF",
+          "url": "https://apnews.com/article/nepal-floods-survivors-aid-children-4501770e98a8d4974ae410430179b985"
+        },
+        {
+          "title": "Guardian live",
+          "url": "https://www.theguardian.com/world/live/2026/aug/28/nepal-tibet-flash-floods-hundreds-dead-missing-day-three-live-updates"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Nepal",
+        "Tybet",
+        "powódź",
+        "klimat",
+        "pomoc"
+      ]
+    },
+    {
+      "id": "polska-swiat-2026-08-28-5-nato-3-0-usa-pokazuja-sojusznikom-przeglad-sil-w-europie-6ab62a09a0",
+      "section": "Bezpieczeństwo",
+      "title": "NATO 3.0: USA pokazują sojusznikom przegląd sił w Europie",
+      "standfirst": "NATO opublikowało readout po spotkaniu Marka Ruttego z Elbridge'em Colbym oraz posiedzeniu Rady Północnoatlantyckiej. Tematem były odstraszanie, obrona i przegląd amerykańskiej obecności wojskowej w Europie.",
+      "whatHappened": "Wczorajszy punkt kalendarza NATO został domknięty publicznym komunikatem i stenogramem.",
+      "whyItMatters": "To pokazuje, że większe europejskie wydatki obronne są łączone z pytaniem o przyszły układ sił USA na kontynencie.",
+      "deeperAnalysis": [
+        "Rutte używa ramy \"NATO 3.0\", czyli sojuszu, w którym Europa i Kanada mają brać większą część ciężaru. W praktyce chodzi o pieniądze, produkcję, gotowość wojskową i wiarygodność odstraszania na wschodniej flance.",
+        "Obecność Colby'ego i briefing o przeglądzie sił USA w Europie są istotne, bo mogą zapowiadać zmianę rozmieszczenia lub warunków amerykańskiego wsparcia. Publiczny komunikat nie daje szczegółów operacyjnych, ale potwierdza, że sojusznicy byli briefowani na forum NAC.",
+        "Dla Polski ten temat jest bezpośredni. Każda korekta amerykańskiej obecności w Europie będzie wpływać na planowanie MON, inwestycje NATO i argumenty wokół krajowych wydatków obronnych."
+      ],
+      "contextPoints": [
+        "Co się stało: NATO opublikowało komunikat i stenogram po spotkaniu Rutte-Colby.",
+        "Dlaczego ważne: Przegląd sił USA w Europie może zmienić kalkulację bezpieczeństwa regionu.",
+        "Na co patrzeć dalej: kolejne komunikaty NATO, Pentagonu, MON oraz reakcje państw wschodniej flanki."
+      ],
+      "sources": [
+        {
+          "title": "NATO readout",
+          "url": "https://www.nato.int/en/news-and-events/articles/news/2026/08/27/secretary-general-welcomes-united-states-under-secretary-of-war-for-policy-to-nato-headquarters"
+        },
+        {
+          "title": "NATO remarks",
+          "url": "https://www.nato.int/en/news-and-events/events/transcripts/2026/08/27/remarks-by-nato-secretary-general-mark-rutte-with-us-under-secretary-of-war-for-policy-elbridge-colby"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "NATO",
+        "USA",
+        "Europa",
+        "obronność",
+        "Ukraina"
+      ]
+    },
+    {
+      "id": "polska-swiat-2026-08-28-6-rcb-i-paliwa-praktyczne-alerty-przed-weekendem-8addb0d41e",
+      "section": "Polska",
+      "title": "RCB i paliwa: praktyczne alerty przed weekendem",
+      "standfirst": "RCB wysłało alert o intensywnych opadach i burzach na noc 28/29 sierpnia dla Dolnego Śląska, Wielkopolski i części Lubuskiego. Ministerstwo Energii podało jednocześnie ceny maksymalne paliw na 28 sierpnia oraz weekend 29-31 sierpnia.",
+      "whatHappened": "Krajowy blok operacyjny łączy ostrzeżenia pogodowe, suszę hydrologiczną i końcówkę programu CPN.",
+      "whyItMatters": "To są informacje użytkowe: dotyczą podróży, ryzyka podtopień, cen tankowania oraz końca sierpniowego mechanizmu cenowego.",
+      "deeperAnalysis": [
+        "Alert RCB jest konkretny terytorialnie i czasowo. Obejmuje noc 28/29 sierpnia i ostrzega przed intensywnymi opadami oraz burzami, z ryzykiem podtopień w części zachodniej Polski. Jednocześnie raport dobowy RCB utrzymuje suszę hydrologiczną w całym kraju, co pokazuje nierówny profil ryzyka wodnego.",
+        "Paliwa mają równie praktyczny wymiar. Ministerstwo Energii podało osobne limity na piątek i na weekend, a program \"CPN\" formalnie działa tylko do 31 sierpnia. To oznacza, że poniedziałkowy follow-up powinien sprawdzić, czy program jest wygaszany, przedłużany albo zastępowany innym mechanizmem.",
+        "W aplikacji ten blok warto traktować jako krótki briefing operacyjny, nie jako główną analizę polityczną. Najważniejsze są daty, województwa, ceny i kolejny punkt decyzyjny."
+      ],
+      "contextPoints": [
+        "Co się stało: RCB opublikowało nocny alert, a Ministerstwo Energii weekendowe limity cen paliw.",
+        "Dlaczego ważne: To wpływa na bezpieczeństwo podróży i codzienne koszty.",
+        "Na co patrzeć dalej: szkody po burzach, poniedziałkowe ceny paliw i decyzję o dalszym losie CPN."
+      ],
+      "sources": [
+        {
+          "title": "Alert RCB",
+          "url": "https://www.gov.pl/web/rcb/alert-rcb---intensywne-opady-deszczu-i-burze-2808"
+        },
+        {
+          "title": "Raport dobowy RCB",
+          "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+        },
+        {
+          "title": "ME 28 sierpnia",
+          "url": "https://www.gov.pl/web/energia/maksymalna-cena-detaliczna-paliw-obowiazujaca-28-sierpnia-2026-r"
+        },
+        {
+          "title": "ME 29-31 sierpnia",
+          "url": "https://www.gov.pl/web/energia/maksymalna-cena-detaliczna-paliw-obowiazujaca-w-dniach-29-31-sierpnia-2026-r"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Polska",
+        "RCB",
+        "paliwa",
+        "pogoda",
+        "CPN"
+      ]
+    },
+    {
+      "id": "polska-swiat-2026-08-28-7-freedom-edge-cwiczenia-usa-korei-poludniowej-i-japonii-63ff449d15",
+      "section": "Świat",
+      "title": "Freedom Edge: ćwiczenia USA, Korei Południowej i Japonii",
+      "standfirst": "AP podaje, że USA, Korea Południowa i Japonia przeprowadzą pięciodniowe ćwiczenia Freedom Edge od 7 września w rejonie Jeju. Korea Północna grozi odpowiedzią po niedawnej salwie około 10 rakiet krótkiego zasięgu.",
+      "whatHappened": "Trójstronne ćwiczenia wracają jako odpowiedź na północnokoreańskie ryzyko nuklearne i rakietowe.",
+      "whyItMatters": "To pokazuje, że presja wojskowa nie ogranicza się do Europy i Bliskiego Wschodu, lecz równolegle rośnie na Indo-Pacyfiku.",
+      "deeperAnalysis": [
+        "Ćwiczenia Freedom Edge obejmują trzy państwa i mają charakter defensywny, ale w praktyce są też sygnałem politycznym do Pjongjangu. AP podaje, że tłem jest północnokoreańska odmowa powrotu do dyplomacji, jeśli nie zostanie porzucony postulat denuklearyzacji.",
+        "Istotny jest także kontekst skróconych manewrów USA-Korea Południowa. Trump polecił znaczącą redukcję wcześniejszych ćwiczeń, ale trójstronny format z Japonią nadal zostaje utrzymany, co może być próbą równoważenia deeskalacyjnych gestów i odstraszania.",
+        "Ten temat jest niższym priorytetem dla polskiego odcinka niż budżet, Ukraina czy Iran, ale dobrze domyka mapę ryzyk strategicznych: Europa, Zatoka Perska i Indo-Pacyfik działają jednocześnie."
+      ],
+      "contextPoints": [
+        "Co się stało: USA, Korea Południowa i Japonia zapowiedziały ćwiczenia Freedom Edge.",
+        "Dlaczego ważne: Ćwiczenia wpływają na napięcie z Koreą Północną i na amerykańskie priorytety strategiczne.",
+        "Na co patrzeć dalej: reakcja Pjongjangu, ewentualne kolejne starty rakiet oraz komunikaty Waszyngtonu, Seulu i Tokio."
+      ],
+      "sources": [
+        {
+          "title": "AP",
+          "url": "https://apnews.com/article/north-korea-us-south-drill-japan-trump-kim-a953d60690bf861f134e36a021bdbd70"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "USA",
+        "Korea Południowa",
+        "Japonia",
+        "Korea Północna",
+        "bezpieczeństwo"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Budżet 2027: obrona, zdrowie i deficyt",
+      "rationale": "Rządowy projekt ustawia najważniejszą krajową debatę jesieni: rekordowe wydatki, 4,51% PKB na obronę, więcej pieniędzy na zdrowie, zmiany podatkowe i spór o TK.",
+      "sourcesLabel": "KPRM, Onet/PAP"
+    },
+    {
+      "priority": "High",
+      "title": "Zondacrypto: Piesiewicz, areszt i wrześniowe weto",
+      "rationale": "Sprawa przeszła z ujawnień medialnych do procesowego i parlamentarnego testu, a rynek kryptoaktywów staje się polem konfliktu rządu, prezydenta, opozycji i prokuratury.",
+      "sourcesLabel": "Onet, Polsat News, RMF24"
+    },
+    {
+      "priority": "High",
+      "title": "Ukraina: druga doba ataków i zimowy Chersoń",
+      "rationale": "AP pokazuje, że Rosja próbuje wyczerpywać obronę powietrzną i ludność cywilną, a Chersoń już mówi o możliwych długich przerwach w dostawach zimą.",
+      "sourcesLabel": "AP, Guardian"
+    },
+    {
+      "priority": "High",
+      "title": "Iran i Ormuz po sześciu miesiącach wojny",
+      "rationale": "Tysiące marynarzy pozostają na statkach, ruch przez cieśninę jest ograniczony, a USA przenoszą presję na banki, sankcje i kanały finansowe.",
+      "sourcesLabel": "AP, FinCEN, OFAC"
+    },
+    {
+      "priority": "High",
+      "title": "Nepal-Tybet: powódź lodowcowa i niestabilny bilans",
+      "rationale": "Liczba ofiar i zaginionych rośnie, a nowe jezioro utrzymuje ryzyko kolejnej fali, więc temat ma wymiar humanitarny, klimatyczny i międzynarodowy.",
+      "sourcesLabel": "AP, Guardian"
+    },
+    {
+      "priority": "Medium",
+      "title": "NATO 3.0 i przegląd sił USA w Europie",
+      "rationale": "Spotkanie Rutte-Colby domknęło wczorajszy follow-up i pokazuje, że spór o ciężar obrony w Europie wchodzi w fazę przeglądu amerykańskiej obecności.",
+      "sourcesLabel": "NATO"
+    },
+    {
+      "priority": "Medium",
+      "title": "RCB: burze na zachodzie, susza w całym kraju",
+      "rationale": "To praktyczny blok dla odbiorcy: nocne ulewy i możliwe podtopienia w części kraju idą równolegle z utrzymaną suszą hydrologiczną.",
+      "sourcesLabel": "RCB"
+    },
+    {
+      "priority": "Medium",
+      "title": "Freedom Edge po północnokoreańskich rakietach",
+      "rationale": "USA, Korea Południowa i Japonia zapowiadają wspólne ćwiczenia po skróceniu manewrów USA-Korea i po nowej salwie północnokoreańskich rakiet.",
+      "sourcesLabel": "AP"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "AP: Russian drone barrage targets Kyiv region for second day as attacks widen",
+      "url": "https://apnews.com/article/russia-ukraine-war-attacks-economy-kherson-e71dbed50bbdc710372f96deead36665"
+    },
+    {
+      "title": "Guardian: Ukraine war briefing, 28 August",
+      "url": "https://www.theguardian.com/world/2026/aug/28/ukraine-war-briefing-missiles-shot-down-during-long-russian-attack-wave"
+    },
+    {
+      "title": "Guardian: Russia losing more troops than it can recruit each month",
+      "url": "https://www.theguardian.com/world/2026/aug/28/russia-losing-6000-more-troops-than-it-can-recruit-each-month-in-ukraine-says-west"
+    },
+    {
+      "title": "KPRM: projekt ustawy budżetowej na rok 2027",
+      "url": "https://www.gov.pl/web/premier/projekt-ustawy-budzetowej-na-rok-20225"
+    },
+    {
+      "title": "KPRM: Premier o budżecie 2027",
+      "url": "https://www.gov.pl/web/premier/premier-to-budzet-narodowego-optymizmu-i-energii-a-nie-marazmu-i-pesymizmu"
+    },
+    {
+      "title": "Onet: rząd nie planuje finansowania TK w budżecie 2027",
+      "url": "https://wiadomosci.onet.pl/kraj/rzad-postawil-na-opcje-atomowa-nie-bedzie-finansowal-trybunalu-konstytucyjnego/lv8j6mr"
+    },
+    {
+      "title": "Onet: prokuratura chce aresztu dla Radosława Piesiewicza",
+      "url": "https://wiadomosci.onet.pl/kraj/jest-wniosek-o-areszt-dla-radoslawa-piesiewicza/n2jm2c5"
+    },
+    {
+      "title": "Polsat News: komunikat prokuratury w sprawie Piesiewicza",
+      "url": "https://www.polsatnews.pl/wiadomosc/2026-08-28/afera-zondarcypto-nowy-komunikat-prokuratury-ws-piesiewicza/"
+    },
+    {
+      "title": "RMF24: Sejm ma głosować nad wetem prezydenta do ustawy o kryptoaktywach",
+      "url": "https://www.rmf24.pl/fakty/polityka/news-prezydent-kontra-sejm-wkrotce-glosowanie-nad-wetem-nawrockie,nIdn,1015565"
+    },
+    {
+      "title": "Onet: PiS zapowiada komisję śledczą w sprawie Zondacrypto",
+      "url": "https://wiadomosci.onet.pl/kraj/pis-chce-komisji-sledczej-w-sprawie-zondacrypto-zapowiada-wniosek/fjcb2hz"
+    },
+    {
+      "title": "Onet: Donald Tusk o Rosji i kontakcie z CIA",
+      "url": "https://wiadomosci.onet.pl/kraj/donald-tusk-zapytany-o-rosje-musimy-byc-przygotowani-na-rozne-rzeczy/lf00mz9"
+    },
+    {
+      "title": "AP: Middle East developments, 28 August",
+      "url": "https://apnews.com/article/middle-east-iran-israel-august-28-2026-6c8334dbec806f41666ff75e728768b8"
+    },
+    {
+      "title": "AP: sześć miesięcy wojny USA-Izrael-Iran",
+      "url": "https://apnews.com/article/trump-iran-war-six-months-anniversary-israel-3c4d33b09fdbe19928781c678aa025c9"
+    },
+    {
+      "title": "AP: USA celują w Banque Misr UAE w ramach presji na Iran",
+      "url": "https://apnews.com/article/iran-war-economic-isolation-sanctions-trump-bessent-ae1c438ff169effa0c63a56a93ca23ae"
+    },
+    {
+      "title": "FinCEN: proposed rule on Banque Misr UAE",
+      "url": "https://www.fincen.gov/news/news-releases/fincen-proposes-rule-would-revoke-banque-misr-uaes-correspondent-banking-access"
+    },
+    {
+      "title": "OFAC: Iran-related and Counter Terrorism Designations, 28 August",
+      "url": "https://ofac.treasury.gov/recent-actions/20260828"
+    },
+    {
+      "title": "AP: USA, Korea Południowa i Japonia zapowiadają ćwiczenia Freedom Edge",
+      "url": "https://apnews.com/article/north-korea-us-south-drill-japan-trump-kim-a953d60690bf861f134e36a021bdbd70"
+    },
+    {
+      "title": "NATO: Rutte welcomes Elbridge Colby at NATO Headquarters",
+      "url": "https://www.nato.int/en/news-and-events/articles/news/2026/08/27/secretary-general-welcomes-united-states-under-secretary-of-war-for-policy-to-nato-headquarters"
+    },
+    {
+      "title": "NATO: remarks by Mark Rutte with Elbridge Colby",
+      "url": "https://www.nato.int/en/news-and-events/events/transcripts/2026/08/27/remarks-by-nato-secretary-general-mark-rutte-with-us-under-secretary-of-war-for-policy-elbridge-colby"
+    },
+    {
+      "title": "AP: latest on Nepal-China border flash flood",
+      "url": "https://apnews.com/article/1f3d0ccf432eed879020e18efcab3146"
+    },
+    {
+      "title": "AP: new lake raises fear of another Nepal-China border flood",
+      "url": "https://apnews.com/article/nepal-lake-china-flood-tibet-climate-5086eb25e29b23019632f7817739f807"
+    },
+    {
+      "title": "AP: UNICEF says 17,000 children need aid after Nepal floods",
+      "url": "https://apnews.com/article/nepal-floods-survivors-aid-children-4501770e98a8d4974ae410430179b985"
+    },
+    {
+      "title": "Guardian live: Nepal-Tibet flash flood updates",
+      "url": "https://www.theguardian.com/world/live/2026/aug/28/nepal-tibet-flash-floods-hundreds-dead-missing-day-three-live-updates"
+    },
+    {
+      "title": "RCB: Alert RCB - intensywne opady deszczu i burze",
+      "url": "https://www.gov.pl/web/rcb/alert-rcb---intensywne-opady-deszczu-i-burze-2808"
+    },
+    {
+      "title": "RCB: raport dobowy",
+      "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+    },
+    {
+      "title": "Ministerstwo Energii: maksymalna cena detaliczna paliw 28 sierpnia",
+      "url": "https://www.gov.pl/web/energia/maksymalna-cena-detaliczna-paliw-obowiazujaca-28-sierpnia-2026-r"
+    },
+    {
+      "title": "Ministerstwo Energii: maksymalna cena detaliczna paliw 29-31 sierpnia",
+      "url": "https://www.gov.pl/web/energia/maksymalna-cena-detaliczna-paliw-obowiazujaca-w-dniach-29-31-sierpnia-2026-r"
+    }
+  ]
+}

@@ -1,8 +1,19 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-08-27
+Last updated: 2026-08-28
 
 ## Current Understanding
+
+Po runie 28 sierpnia lead krajowy przesuwa się na budżet 2027, paliwa i
+alerty pogodowe, a politycznie Zondacrypto wraca jako wątek krypto-regulacyjny
+w komunikacji KPRM. Rząd przyjął wstępny projekt budżetu z deficytem
+282,6 mld zł, wydatkami obronnymi 4,51% PKB, dużym wzrostem zdrowia oraz
+nowym sporem o brak finansowania TK. W sprawie Zondacrypto prokuratura
+wnioskuje o areszt dla Radosława Piesiewicza, Sejm ma głosować 2-4 września
+nad wetem do ustawy o kryptoaktywach, a PiS zapowiada komisję śledczą. Światowo
+najmocniej idą Ukraina, Nepal/Tybet i Bliski Wschód: drugi dzień rosyjskich
+ataków dronowych pod Kijowem, gwałtownie rosnący bilans powodzi himalajskiej,
+pięć ofiar w Gazie i nowe amerykańskie sankcje bankowe wobec Iranu.
 
 Po wieczornym runie 27 sierpnia lead przesuwa się z porannego układu frontu i sankcji na twardszy zestaw konsekwencji: Rosja nocą uderza w dziewięć ukraińskich miast, Senat USA przyjmuje pakiet sankcji przeciw Moskwie 86-11 po apelu Zełenskiego, a w Ormuzie pojawia się kolejny incydent z tankowcem i szersza regionalna próba deeskalacji. W Polsce wątek Zondacrypto przechodzi z samej Ibizy do fazy procesowej, bo Piesiewicz trafia do prokuratury, a estoński sąd ogłasza upadłość operatora BB Trade Estonia OÜ.
 
