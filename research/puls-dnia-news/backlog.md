@@ -1,5 +1,14 @@
 # Puls Dnia News Backlog
 
+# 2026-09-07 00:02
+
+- Watch whether prokuratura adds zarzuty or a second procedural move in Zondacrypto.
+- Watch whether Straż Graniczna, sąd or resorty explain the Pytel zakaz opuszczania kraju.
+- Watch whether IMGW or RCB tighten or cancel the current weather warnings.
+- Watch whether EES produces real queue reports or further operational adjustments.
+- Watch whether Kyiv, Moscow or the White House publish a more concrete next step after the envoys' talks.
+- Watch whether Google, Amazon or OpenAI issue formal responses that change the feed.
+
 # 2026-08-29 18:06
 
 - Watch whether RCB or IMGW shorten, extend or cancel the storm alert before the next slot.
