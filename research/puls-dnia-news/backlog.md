@@ -1,6 +1,6 @@
 # Puls Dnia News Backlog
 
-# 2026-09-07 00:02
+# 2026-09-06 00:02
 
 - Watch whether prokuratura adds zarzuty or a second procedural move in Zondacrypto.
 - Watch whether Straż Graniczna, sąd or resorty explain the Pytel zakaz opuszczania kraju.

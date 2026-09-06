@@ -2,7 +2,7 @@
 
 ## Current State
 
-Slot 2026-09-07 00:02 przesuwa feed w stronę mocnego pakietu krajowego i międzynarodowego: Zondacrypto dostało kolejne zatrzymanie, gen. Pytel został zdjęty z lotniska, EES wchodzi w pełne funkcjonowanie, IMGW ostrzega przed upałem i burzami, a za granicą dominują AfD, rozmowy USA-Rosja-Ukraina oraz nowe ruchy regulatorów wobec Google i Amazona.
+Slot 2026-09-06 00:02 przesuwa feed w stronę mocnego pakietu krajowego i międzynarodowego: Zondacrypto dostało kolejne zatrzymanie, gen. Pytel został zdjęty z lotniska, EES wchodzi w pełne funkcjonowanie, IMGW ostrzega przed upałem i burzami, a za granicą dominują AfD, rozmowy USA-Rosja-Ukraina oraz nowe ruchy regulatorów wobec Google i Amazona.
 
 ## Data Shape
 
