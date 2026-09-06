@@ -1,8 +1,10 @@
 # Topic Index: llm-ai-jobs-wroclaw
 
-Last updated: 2026-08-29 15:41 CEST
+Last updated: 2026-09-06 23:58 CEST
 
 ## Current Understanding
+
+Runda z `2026-09-06 23:58 CEST` jest materialna, bo Just Join IT nadal pokazuje szeroki board AI/ML dla Wrocławia z 134 ofertami i dołożył świeży tail wokół `AI Agent Middle/Senior Developer`, `Senior AI Platform Engineer` oraz `Senior AI Engineer (LLMs, Python)`. `Pracuj.pl` odświeżył board o role z evaluation, agentic systems i AI automation, `Comarch` potwierdził żywy canonical `DevOps Engineer (AI-native Stack)` oraz `Full-stack Developer (Agentic AI)`, a `EPAM` dodał `Senior AI-Native Engineer`, `Senior AI & Agentic Systems Engineer (Java)` i `Senior .NET Engineer with AI` z Wrocławiem w zasięgu hybrydy.
 
 Runda z `2026-08-29 15:41 CEST` zrobiła szeroki board refresh na Just Join IT: `Senior MLOps Engineer` stracił wcześniejsze opakowanie `Google Cloud` i publiczne widełki, a obok niego pojawił się nowy zestaw mocnych leadów wokół `Databricks`, `AI security`, `AI platform`, `founding-engineer` i `agentic/full-stack` work. `Pracuj.pl` dorzucił oficjalny `Forward Deployed AI Engineer - ServiceNow` oraz `AI Salesforce Engineer`, a `Comarch` i `EPAM` pozostały stabilnymi kanonicznymi punktami odniesienia.
 
