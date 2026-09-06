@@ -4,6 +4,10 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track GPT-6 Astra Copilot rollout | OpenAI launched Astra and GitHub is already shipping it in Copilot, so the main risk is adoption and admin-policy friction | Watch rollout breadth, usage-based billing impact and review approval behavior | Open |
+| High | Track Astra cyber gating | Astra is now live, so the question is whether the critical cyber threshold and monitoring alter enterprise uptake and later model stages | Watch whether safeguards expand to public products or future releases | Open |
+| Medium | Track Android helper adoption | Google is turning Gemini into a practical helper for everyday phone tasks, so adoption and retention are the key unknowns | Watch rollout breadth, accessibility feedback and user retention | Open |
+| Medium | Track Sonos AI platform adoption | Sonos 27 makes AI control and agent connectors a first-class audio-platform feature | Watch 27mcp, headphone linking and user uptake | Open |
 | High | Track Nvidia physical AI edge stack | Jetson Orin Nano 2 turns physical AI into a concrete edge product line, not just a strategy slide | Watch partner deployments, developer uptake and later Jetson roadmap | Open |
 | High | Track AI cloud financing retreat | Nvidia pausing revenue-sharing deals suggests AI infra financing and partner control are running into real friction | Watch whether the program restarts, changes terms or affects neocloud financing | Open |
 | Medium | Track corporate AI rationing policies | Valon's new-hire restriction may be an early sign that firms are actively limiting AI use to protect judgment and onboarding quality | Watch whether similar policies spread to other AI-native companies | Open |
@@ -24,7 +28,6 @@
 | High | Track OpenAI regional commercialization | Brazil local ops, India ads and Cursor change-of-control enforcement show OpenAI turning regional presence into a full monetization and partner-control story | Watch Brazil rollout, India ad expansion, partner-policy changes and any new regional launches | Open |
 | High | Track Machine Age deployment | a16z's hardware fund matters only if it turns into real semis, memory, robotics and data-center bets | Watch first portfolio and deployment milestones | Open |
 | High | Track Instinct trust model | The new assistant is scaling quickly, but privacy permissions will decide whether users trust it with real life data | Watch app permissions, policy wording and beta retention | Open |
-| High | Track Astra cyber gating | OpenAI's threshold language suggests release timing may now depend on internal cyber risk gates | Watch the technical paper, monitoring changes and whether the guardrails spread to public products | Open |
 | High | Track Claude watermark bypasses | Public workaround tools can weaken provenance claims very quickly | Watch the detection API timeline, removal tools and platform responses | Open |
 | High | Track Android rival store rollout | Google is being forced to lower friction around third-party app stores | Watch rollout consistency, additional store launches and legal follow-through | Open |
 | Medium | Track Android memory spillover | Google's Android quality changes are an early sign of AI-driven memory scarcity reaching consumer apps | Watch deadline details, developer response and whether other platforms copy the requirements | Open |

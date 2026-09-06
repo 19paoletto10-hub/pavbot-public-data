@@ -1,14 +1,14 @@
 # Topic Index: tech-news
 
-Last updated: 2026-08-29
+Last updated: 2026-09-07
 
 ## Current Understanding
 
-Wieczorny run z 2026-08-29 dopisuje do porannego obrazu dwa nowe sygnały: Nvidia jeszcze mocniej przesuwa AI w stronę physical robotics dzięki Jetson Orin Nano 2, ale jednocześnie wstrzymuje część revenue-sharing deals z AI cloudami. Równolegle Meta Hatch i polityka Valon pokazują, że agentowe UX i wewnętrzna dyscyplina użycia AI stają się osobnymi decyzjami produktowymi i HR-owymi, a nie tylko pobocznym eksperymentem.
+Dzisiejszy run z 2026-09-07 przesuwa temat z samego modelowego rollout'u na pełną produkcję i dystrybucję. OpenAI już nie tylko opisuje cybergating GPT-6 Astra, ale realnie go wypuszcza, GitHub wpina model do Copilota, Google robi z Geminiego codzienny helper na Androidzie, a Sonos i Meta pokazują, że AI wchodzi też do domowego audio i infrastruktury sprzętowej.
 
-Poranny run z 2026-08-29 przesuwa temat z samego modelowego rollout'u na regionalną komercjalizację, finansowanie compute i spillover kosztów AI. OpenAI łączy Brazylię, reklamy w Indiach i twardsze egzekwowanie umów po zmianie kontroli Cursor, Lambda zamyka 926 mln USD długu pod GPU, Anthropic pokazuje automatycznych researcherów i self-improving loop, a Google przypomina przez Androida, że boom AI zaczyna obciążać zwykłe aplikacje, nie tylko data center.
+Najważniejsza zmiana względem poprzedniego stanu to przejście od „czy model przejdzie safety gate” do „jak szybko trafi do produktowych workflowów”. Copilot, Android i Sonos wskazują na tę samą oś: mniej czatu, więcej operacyjnych helperów, których użycie jest osadzone w istniejących interfejsach.
 
-Wieczorny run z 2026-08-28 przesuwa temat z samego modelowego rollout'u na metering, zadaniowe surface'y i regionalizację dystrybucji. Google robi z Gemini mniej abstrakcyjny, bardziej kontrolowany stack: Notebook dostaje limity zależne od zużycia, Search przejmuje booking travel, Flow dostaje kreatywne sterowanie wideo, a Transcribe staje się nowym backendem dla głosu. To razem wzmacnia wniosek, że rynek przesuwa się z samych modeli do bardziej zarządzanych workflowów.
+Community signal dalej wspiera ten kierunek, ale robi się bardziej krytyczny. Product Hunt premiuje AI Toolbox, Tadata i narzędzia agentowe, a Hacker News coraz częściej pyta o koszt AI coding, harness engineering i utrzymanie jakości. To sugeruje, że rynek wchodzi w fazę selekcji: wygrywają control surfaces, review i praktyczny workflow, nie sam modelowy hype.
 
 Równolegle OpenAI buduje APAC bliżej lokalnych ekosystemów przez tajski accelerator i nowy regionalny hire z Meta, Anthropic wygrywa spór o blacklistę Pentagonu, a a16z uruchamia Machine Age jako fundusz pod fizyczny buildout AI. Hacker News i Product Hunt nadal premiują agentowe control surfaces, benchmarki i narzędzia robocze, więc sygnał społecznościowy zostaje po tej samej stronie rynku.
 
