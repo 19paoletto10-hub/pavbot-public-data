@@ -1,8 +1,10 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-08-29
+Last updated: 2026-09-07
 
 ## Current Understanding
+
+Po runie 7 września lead przesuwa się na amerykańsko-ukraiński kanał dyplomatyczny po wizytach Witkoffa i Kushnera w Moskwie oraz Kijowie, bez przełomu, ale z nadal otwartym tematem obrony powietrznej i zimowego wsparcia. Równolegle Iran podnosi stawkę wokół Ormuzu, Polska dostaje kolejny proceduralny blok wokół Zondacrypto i gen. Pytla, a Europa reaguje na wynik AfD w Saksonii-Anhalt i na praktyczne komunikaty RCB.
 
 Po runie 29 sierpnia lead przesuwa się na Ukrainę i Nepal. AP opisuje najkrwawszy w 2026 roku rosyjski atak dronowy pod Kijowem oraz równoległe ukraińskie zaostrzenie kampanii dalekiego zasięgu, a Nepal/Tybet wchodzi w etap masowych poszukiwań z prawie 3 tys. osób zaginionych. Iran utrwala twardą linię wewnętrzną po sześciu miesiącach wojny, Gaza pozostaje w niskointensywnej eskalacji, a krajowo obraz nie wyszedł poza utrzymany alert RCB i weekendowe ceny paliw.
 
