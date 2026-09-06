@@ -1,0 +1,336 @@
+{
+  "schemaVersion": 1,
+  "topic": "aktualne-wydarzenia-mobile",
+  "runDate": "2026-09-06",
+  "runTime": "23:58",
+  "status": "Material update",
+  "headline": "Rozmowy wysłanników USA w Kijowie były określane jako zachęcające, lecz nie przyniosły przełomu w sprawie zakończenia wojny.",
+  "leadParagraphs": [
+    "Rozmowy wysłanników USA w Kijowie były określane jako zachęcające, lecz nie przyniosły przełomu w sprawie zakończenia wojny.",
+    "Iran zapowiedział strefę wyłączenia w rejonie Ormuzu dzień po amerykańskich uderzeniach w trzy irańskie tankowce; ryzyko dla żeglugi i energii wyraźnie wzrosło.",
+    "W Polsce odbywały się przedterminowe wybory burmistrza Sobótki; KPRM nie opublikowała w weekend nowej decyzji ponad komunikaty z 4 września."
+  ],
+  "checkedSources": [
+    {
+      "title": "PKW",
+      "url": "https://wybory.gov.pl/wojtburmistrz_2024_2029/pl"
+    },
+    {
+      "title": "KPRM",
+      "url": "https://www.gov.pl/web/premier"
+    },
+    {
+      "title": "Ministerstwo Finansów",
+      "url": "https://www.gov.pl/web/finanse/mozliwe-krotkotrwale-niedogodnosci-podczas-korzystania-z-systemu-cru-jsfp-5-6092026"
+    },
+    {
+      "title": "AP: rozmowy w Kijowie",
+      "url": "https://apnews.com/article/44bba3b57b480560d9f48dba7d28534e"
+    },
+    {
+      "title": "AP: zapowiedź Iranu",
+      "url": "https://apnews.com/article/a52beec77dc90af3d040d0553837ad20"
+    },
+    {
+      "title": "Reuters: Gaza",
+      "url": "https://www.marketscreener.com/news/israeli-strike-kills-two-people-in-gaza-medics-say-ce785bdbdd88fe21"
+    },
+    {
+      "title": "Komisja Europejska",
+      "url": "https://germany.representation.ec.europa.eu/nachrichten-und-veranstaltungen/pressemitteilungen/kommissionsprasidentin-von-der-leyen-trifft-nato-generalsekretar-rutte-2026-09-02_de"
+    },
+    {
+      "title": "NATO",
+      "url": "https://www.nato.int/en/news-and-events/events/media-advisories/2026/09/01/nato-secretary-general-to-meet-the-president-of-the-european-commission"
+    },
+    {
+      "title": "OpenAI: GPT‑6 Astra",
+      "url": "https://openai.com/index/gpt-6-astra/"
+    },
+    {
+      "title": "OpenAI: bezpieczeństwo Astry",
+      "url": "https://openai.com/index/safety-overview-gpt-6-astra/"
+    }
+  ],
+  "sections": [
+    {
+      "id": "ogolne",
+      "title": "Ogólne",
+      "summary": "Niedziela łączy trzy różne skale ryzyka: lokalne głosowanie w Polsce, dyplomację bez rozstrzygnięcia w Ukrainie oraz eskalację przy jednym z najważniejszych szlaków energetycznych świata.",
+      "articles": [
+        {
+          "id": "ogolne-1-ormuz-wchodzi-w-ostrzejsza-faze",
+          "section": "Ogólne",
+          "title": "Ormuz wchodzi w ostrzejszą fazę",
+          "lead": "Irańska zapowiedź strefy wyłączenia podnosi stawkę dzień po amerykańskich uderzeniach w tankowce.",
+          "facts": [
+            "AP informuje, że Teheran chce objąć ograniczeniami jednostki próbujące przejść przez cieśninę.",
+            "AP opisała wcześniejsze uderzenie USA w trzy tankowce mające wspierać finansowanie Korpusu Strażników Rewolucji."
+          ],
+          "analysis": "Jeszcze nie wiadomo, czy zapowiedź stanie się realną blokadą, ale sama niepewność zwiększa koszt i ryzyko transportu.",
+          "whyItMatters": "Ormuz jest wąskim gardłem światowego rynku energii, więc lokalna eskalacja szybko staje się problemem globalnym.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/a52beec77dc90af3d040d0553837ad20"
+            },
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/4972c370161bccbaf67f8de131095158"
+            }
+          ],
+          "tags": [
+            "Ogólne"
+          ],
+          "ttsText": "Irańska zapowiedź strefy wyłączenia podnosi stawkę dzień po amerykańskich uderzeniach w tankowce. AP informuje, że Teheran chce objąć ograniczeniami jednostki próbujące przejść przez cieśninę. AP opisała wcześniejsze uderzenie USA w trzy tankowce mające wspierać finansowanie Korpusu Strażników Rewolucji. Jeszcze nie wiadomo, czy zapowiedź stanie się realną blokadą, ale sama niepewność zwiększa koszt i ryzyko transportu. Ormuz jest wąskim gardłem światowego rynku energii, więc lokalna eskalacja szybko staje się problemem globalnym.",
+          "priority": "High"
+        },
+        {
+          "id": "ogolne-2-dyplomacja-przyjezdza-do-kijowa-bez-przeomu",
+          "section": "Ogólne",
+          "title": "Dyplomacja przyjeżdża do Kijowa bez przełomu",
+          "lead": "Pierwsza oficjalna wizyta Witkoffa i Kushnera w Ukrainie utrzymała kanał rozmów, ale nie dała porozumienia.",
+          "facts": [
+            "AP opisuje rozmowy w Kijowie jako zachęcające.",
+            "Ten sam materiał AP zaznacza brak przełomu w zakończeniu pełnoskalowej inwazji."
+          ],
+          "analysis": "Spotkanie ma znaczenie procesowe, ale jego wynik jest słabszy niż tempo rosyjskich ataków i oczekiwania wobec nowej inicjatywy USA.",
+          "whyItMatters": "Bez konkretów o zawieszeniu ognia Ukraina nadal planuje obronę w warunkach pełnej wojny.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/44bba3b57b480560d9f48dba7d28534e"
+            }
+          ],
+          "tags": [
+            "Ogólne"
+          ],
+          "ttsText": "Pierwsza oficjalna wizyta Witkoffa i Kushnera w Ukrainie utrzymała kanał rozmów, ale nie dała porozumienia. AP opisuje rozmowy w Kijowie jako zachęcające. Ten sam materiał AP zaznacza brak przełomu w zakończeniu pełnoskalowej inwazji. Spotkanie ma znaczenie procesowe, ale jego wynik jest słabszy niż tempo rosyjskich ataków i oczekiwania wobec nowej inicjatywy USA. Bez konkretów o zawieszeniu ognia Ukraina nadal planuje obronę w warunkach pełnej wojny.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "polska",
+      "title": "Polska",
+      "summary": "Krajowy dzień nie przyniósł dużej decyzji centralnej, ale dał konkretny test demokracji lokalnej i zakończenie zapowiedzianych prac przy usługach cyfrowych państwa.",
+      "articles": [
+        {
+          "id": "polska-1-sobotka-wybiera-burmistrza-przed-terminem",
+          "section": "Polska",
+          "title": "Sobótka wybiera burmistrza przed terminem",
+          "lead": "Mieszkańcy miasta i gminy Sobótka głosowali w niedzielę w przedterminowych wyborach burmistrza.",
+          "facts": [
+            "PKW wskazuje 6 września 2026 jako datę głosowania.",
+            "Ta sama strona PKW klasyfikuje wybory jako przedterminowe w powiecie wrocławskim."
+          ],
+          "analysis": "To wydarzenie lokalne, lecz wynik będzie konkretnym sygnałem politycznym dla Dolnego Śląska.",
+          "whyItMatters": "Samorząd bezpośrednio decyduje o usługach, inwestycjach i odporności lokalnej, które w codziennym życiu bywają ważniejsze od krajowych sporów.",
+          "sources": [
+            {
+              "title": "PKW",
+              "url": "https://wybory.gov.pl/wojtburmistrz_2024_2029/pl"
+            }
+          ],
+          "tags": [
+            "Polska"
+          ],
+          "ttsText": "Mieszkańcy miasta i gminy Sobótka głosowali w niedzielę w przedterminowych wyborach burmistrza. PKW wskazuje 6 września 2026 jako datę głosowania. Ta sama strona PKW klasyfikuje wybory jako przedterminowe w powiecie wrocławskim. To wydarzenie lokalne, lecz wynik będzie konkretnym sygnałem politycznym dla Dolnego Śląska. Samorząd bezpośrednio decyduje o usługach, inwestycjach i odporności lokalnej, które w codziennym życiu bywają ważniejsze od krajowych sporów.",
+          "priority": "High"
+        },
+        {
+          "id": "polska-2-usugi-zaufania-po-nocnym-serwisie",
+          "section": "Polska",
+          "title": "Usługi zaufania po nocnym serwisie",
+          "lead": "Profil zaufany i podpis elektroniczny mogły być krótko niedostępne podczas zapowiedzianych prac technicznych.",
+          "facts": [
+            "Ministerstwo Finansów wyznaczyło okno prac od soboty 20:00 do niedzieli 7:00.",
+            "Komunikat obejmował profil zaufany, węzeł krajowy i usługi podpisu dokumentów."
+          ],
+          "analysis": "To planowane utrzymanie, nie incydent, ale pokazuje zależność administracji od wspólnej warstwy cyfrowej.",
+          "whyItMatters": "Nawet krótka niedostępność może blokować sprawy urzędowe i firmowe, dlatego przejrzysta komunikacja serwisowa jest częścią jakości państwa.",
+          "sources": [
+            {
+              "title": "Ministerstwo Finansów",
+              "url": "https://www.gov.pl/web/finanse/mozliwe-krotkotrwale-niedogodnosci-podczas-korzystania-z-systemu-cru-jsfp-5-6092026"
+            }
+          ],
+          "tags": [
+            "Polska"
+          ],
+          "ttsText": "Profil zaufany i podpis elektroniczny mogły być krótko niedostępne podczas zapowiedzianych prac technicznych. Ministerstwo Finansów wyznaczyło okno prac od soboty 20:00 do niedzieli 7:00. Komunikat obejmował profil zaufany, węzeł krajowy i usługi podpisu dokumentów. To planowane utrzymanie, nie incydent, ale pokazuje zależność administracji od wspólnej warstwy cyfrowej. Nawet krótka niedostępność może blokować sprawy urzędowe i firmowe, dlatego przejrzysta komunikacja serwisowa jest częścią jakości państwa.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "polityka",
+      "title": "Polityka",
+      "summary": "Niedziela zamroziła rytm polityki centralnej, podczas gdy proces wyborczy był widoczny głównie na poziomie lokalnym.",
+      "articles": [
+        {
+          "id": "polityka-1-kprm-bez-nowej-weekendowej-decyzji",
+          "section": "Polityka",
+          "title": "KPRM bez nowej weekendowej decyzji",
+          "lead": "Publiczny kanał kancelarii zatrzymuje się na komunikacie z 4 września.",
+          "facts": [
+            "KPRM wskazuje materiał z 4 września jako najnowszą aktualność.",
+            "Na stronie pozostają także projekty ustaw z posiedzenia Rady Ministrów 2 września, bez nowego niedzielnego pakietu."
+          ],
+          "analysis": "Brak komunikatu nie oznacza braku pracy rządu, ale ogranicza podstawy do tworzenia nowej narracji o decyzjach centrum.",
+          "whyItMatters": "Rozróżnienie między faktem a politycznym oczekiwaniem chroni brief przed produkowaniem pozornego przełomu.",
+          "sources": [
+            {
+              "title": "KPRM",
+              "url": "https://www.gov.pl/web/premier"
+            }
+          ],
+          "tags": [
+            "Polityka"
+          ],
+          "ttsText": "Publiczny kanał kancelarii zatrzymuje się na komunikacie z 4 września. KPRM wskazuje materiał z 4 września jako najnowszą aktualność. Na stronie pozostają także projekty ustaw z posiedzenia Rady Ministrów 2 września, bez nowego niedzielnego pakietu. Brak komunikatu nie oznacza braku pracy rządu, ale ogranicza podstawy do tworzenia nowej narracji o decyzjach centrum. Rozróżnienie między faktem a politycznym oczekiwaniem chroni brief przed produkowaniem pozornego przełomu.",
+          "priority": "High"
+        },
+        {
+          "id": "polityka-2-lokalna-urna-zamiast-centralnej-konferencji",
+          "section": "Polityka",
+          "title": "Lokalna urna zamiast centralnej konferencji",
+          "lead": "Najbardziej sprawdzalnym wydarzeniem politycznym dnia w Polsce było głosowanie w Sobótce.",
+          "facts": [
+            "PKW prowadzi oficjalny serwis dla wyborów w toku kadencji 2024–2029.",
+            "Kalendarz PKW wymienia kolejne głosowania 13 i 27 września, w tym przedterminowe wybory prezydenta Krakowa."
+          ],
+          "analysis": "Kalendarz pokazuje serię lokalnych procesów, które mogą tworzyć polityczne sygnały przed większymi testami.",
+          "whyItMatters": "Wyniki lokalne bywają pierwszym pomiarem mobilizacji i nastrojów poza sondażami ogólnopolskimi.",
+          "sources": [
+            {
+              "title": "PKW",
+              "url": "https://wybory.gov.pl/wojtburmistrz_2024_2029/pl"
+            }
+          ],
+          "tags": [
+            "Polityka"
+          ],
+          "ttsText": "Najbardziej sprawdzalnym wydarzeniem politycznym dnia w Polsce było głosowanie w Sobótce. PKW prowadzi oficjalny serwis dla wyborów w toku kadencji 2024–2029. Kalendarz PKW wymienia kolejne głosowania 13 i 27 września, w tym przedterminowe wybory prezydenta Krakowa. Kalendarz pokazuje serię lokalnych procesów, które mogą tworzyć polityczne sygnały przed większymi testami. Wyniki lokalne bywają pierwszym pomiarem mobilizacji i nastrojów poza sondażami ogólnopolskimi.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "sprawy-zagraniczne",
+      "title": "Sprawy zagraniczne",
+      "summary": "Dyplomacja nie nadąża za bezpieczeństwem: rozmowy o Ukrainie trwają, lecz Bliski Wschód dokłada nowe działania wojskowe i ryzyko dla cywilów oraz handlu.",
+      "articles": [
+        {
+          "id": "sprawy-zagraniczne-1-iran-zapowiada-strefe-przy-ciesninie",
+          "section": "Sprawy zagraniczne",
+          "title": "Iran zapowiada strefę przy cieśninie",
+          "lead": "Teheran chce identyfikować i ograniczać statki zmierzające przez Ormuz, ale nie podał jeszcze szczegółów.",
+          "facts": [
+            "AP cytuje szefa irańskiej Najwyższej Rady Bezpieczeństwa Narodowego zapowiadającego ogłoszenie strefy w najbliższych dniach lub tygodniach.",
+            "AP opisuje równoległy spór: USA odrzuciły irańskie twierdzenie o trafieniu amerykańskiej jednostki bezzałogowej."
+          ],
+          "analysis": "Sprzeczne komunikaty utrudniają ocenę incydentów, a zapowiedź strefy może być zarówno narzędziem nacisku, jak i przygotowaniem realnej kontroli szlaku.",
+          "whyItMatters": "Błąd identyfikacji lub próba egzekwowania niejasnych zasad może szybko wywołać kolejną wymianę ognia.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/a52beec77dc90af3d040d0553837ad20"
+            },
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/b4f64c7492d8c5b9ff71794cc152186d"
+            }
+          ],
+          "tags": [
+            "Sprawy zagraniczne"
+          ],
+          "ttsText": "Teheran chce identyfikować i ograniczać statki zmierzające przez Ormuz, ale nie podał jeszcze szczegółów. AP cytuje szefa irańskiej Najwyższej Rady Bezpieczeństwa Narodowego zapowiadającego ogłoszenie strefy w najbliższych dniach lub tygodniach. AP opisuje równoległy spór: USA odrzuciły irańskie twierdzenie o trafieniu amerykańskiej jednostki bezzałogowej. Sprzeczne komunikaty utrudniają ocenę incydentów, a zapowiedź strefy może być zarówno narzędziem nacisku, jak i przygotowaniem realnej kontroli szlaku. Błąd identyfikacji lub próba egzekwowania niejasnych zasad może szybko wywołać kolejną wymianę ognia.",
+          "priority": "High"
+        },
+        {
+          "id": "sprawy-zagraniczne-2-gaza-kolejne-ofiary-mimo-ograniczenia-duzych-walk",
+          "section": "Sprawy zagraniczne",
+          "title": "Gaza: kolejne ofiary mimo ograniczenia dużych walk",
+          "lead": "Uderzenie w samochód w zachodniej Gazie zabiło dwie osoby, w tym dziecko.",
+          "facts": [
+            "Reuters podaje także sześciu rannych według władz szpitala Al‑Shifa.",
+            "Depesza zaznacza, że izraelskie wojsko nie przedstawiło natychmiast komentarza."
+          ],
+          "analysis": "Ograniczenie skali walk nie oznacza bezpieczeństwa ludności cywilnej ani pełnego wykonania szerszego planu pokojowego.",
+          "whyItMatters": "Każde nowe uderzenie podważa zaufanie potrzebne do rozbrojenia Hamasu, wycofania wojsk i trwałego porozumienia.",
+          "sources": [
+            {
+              "title": "Reuters",
+              "url": "https://www.marketscreener.com/news/israeli-strike-kills-two-people-in-gaza-medics-say-ce785bdbdd88fe21"
+            }
+          ],
+          "tags": [
+            "Sprawy zagraniczne"
+          ],
+          "ttsText": "Uderzenie w samochód w zachodniej Gazie zabiło dwie osoby, w tym dziecko. Reuters podaje także sześciu rannych według władz szpitala Al‑Shifa. Depesza zaznacza, że izraelskie wojsko nie przedstawiło natychmiast komentarza. Ograniczenie skali walk nie oznacza bezpieczeństwa ludności cywilnej ani pełnego wykonania szerszego planu pokojowego. Każde nowe uderzenie podważa zaufanie potrzebne do rozbrojenia Hamasu, wycofania wojsk i trwałego porozumienia.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "technologia",
+      "title": "Technologia",
+      "summary": "Najważniejszy technologiczny temat tygodnia jest jednocześnie produktem i testem zarządzania ryzykiem, bo nowe możliwości modelu obejmują zaawansowane działania cybernetyczne.",
+      "articles": [
+        {
+          "id": "technologia-1-gpt6-astra-zaczyna-wdrazanie",
+          "section": "Technologia",
+          "title": "GPT‑6 Astra zaczyna wdrażanie",
+          "lead": "OpenAI udostępnia nowy model najpierw wybranym organizacjom, a następnie płatnym użytkownikom i deweloperom.",
+          "facts": [
+            "OpenAI zapowiada dostęp w ChatGPT Plus, Pro, Business i Enterprise oraz przez API, Azure i AWS Bedrock.",
+            "Producent podaje cenę API: dziesięć dolarów za milion tokenów wejściowych i pięćdziesiąt dolarów za milion wyjściowych."
+          ],
+          "analysis": "Szeroki kanał dystrybucji może szybko przełożyć przewagę modelową na praktykę firm, ale dostęp administracyjny i koszty nadal będą filtrem.",
+          "whyItMatters": "Nowy model może zmienić tempo pracy programistycznej i analitycznej szybciej niż organizacje zdążą zaktualizować procedury kontroli.",
+          "sources": [
+            {
+              "title": "OpenAI",
+              "url": "https://openai.com/index/gpt-6-astra/"
+            }
+          ],
+          "tags": [
+            "Technologia"
+          ],
+          "ttsText": "OpenAI udostępnia nowy model najpierw wybranym organizacjom, a następnie płatnym użytkownikom i deweloperom. OpenAI zapowiada dostęp w ChatGPT Plus, Pro, Business i Enterprise oraz przez API, Azure i AWS Bedrock. Producent podaje cenę API: dziesięć dolarów za milion tokenów wejściowych i pięćdziesiąt dolarów za milion wyjściowych. Szeroki kanał dystrybucji może szybko przełożyć przewagę modelową na praktykę firm, ale dostęp administracyjny i koszty nadal będą filtrem. Nowy model może zmienić tempo pracy programistycznej i analitycznej szybciej niż organizacje zdążą zaktualizować procedury kontroli.",
+          "priority": "High"
+        },
+        {
+          "id": "technologia-2-astra-przekracza-prog-krytycznych-zdolnosci-cyber",
+          "section": "Technologia",
+          "title": "Astra przekracza próg krytycznych zdolności cyber",
+          "lead": "Producent klasyfikuje model jako pierwszy w swojej historii na poziomie „Critical” w cyberbezpieczeństwie.",
+          "facts": [
+            "OpenAI twierdzi, że model potrafi z odpowiednimi narzędziami znajdować nieznane luki i rozwijać sposoby ich wykorzystania bez prowadzenia człowieka krok po kroku.",
+            "Firma opisuje dodatkową izolację, szyfrowanie checkpointów, monitoring trajektorii i blokującą ocenę alignmentu przed użyciem wewnętrznym."
+          ],
+          "analysis": "To nie jest już wyłącznie kwestia filtrowania odpowiedzi; bezpieczeństwo obejmuje cały łańcuch dostępu, narzędzia, monitoring i infrastrukturę modelu.",
+          "whyItMatters": "Korzyści dla obrony i testów bezpieczeństwa rosną równolegle z potencjalnym kosztem nadużycia lub błędu kontroli.",
+          "sources": [
+            {
+              "title": "OpenAI",
+              "url": "https://openai.com/index/safety-overview-gpt-6-astra/"
+            }
+          ],
+          "tags": [
+            "Technologia"
+          ],
+          "ttsText": "Producent klasyfikuje model jako pierwszy w swojej historii na poziomie „Critical” w cyberbezpieczeństwie. OpenAI twierdzi, że model potrafi z odpowiednimi narzędziami znajdować nieznane luki i rozwijać sposoby ich wykorzystania bez prowadzenia człowieka krok po kroku. Firma opisuje dodatkową izolację, szyfrowanie checkpointów, monitoring trajektorii i blokującą ocenę alignmentu przed użyciem wewnętrznym. To nie jest już wyłącznie kwestia filtrowania odpowiedzi; bezpieczeństwo obejmuje cały łańcuch dostępu, narzędzia, monitoring i infrastrukturę modelu. Korzyści dla obrony i testów bezpieczeństwa rosną równolegle z potencjalnym kosztem nadużycia lub błędu kontroli.",
+          "priority": "High"
+        }
+      ]
+    }
+  ],
+  "audioArtifacts": [
+    {
+      "variant": "female-piper",
+      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-09-06-2358/audio/female-piper/podcast.mp3"
+    }
+  ]
+}
