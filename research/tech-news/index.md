@@ -8,6 +8,8 @@ Dzisiejszy run z 2026-09-07 przesuwa temat z samego modelowego rollout'u na peł
 
 Najważniejsza zmiana względem poprzedniego stanu to przejście od „czy model przejdzie safety gate” do „jak szybko trafi do produktowych workflowów”. Copilot, Android i Sonos wskazują na tę samą oś: mniej czatu, więcej operacyjnych helperów, których użycie jest osadzone w istniejących interfejsach.
 
+Wcześniejszy run z 2026-09-06 dołożył do tego warstwę bezpieczeństwa i governance: OpenAI formalnie związało GPT-6 Astra z progiem cyber-critical i disclosure po incydencie z niemiecką wiki, Perplexity, NVIDIA i Microsoft pchają hybrydowy oraz lokalny compute bliżej urządzenia, a Google Photos w Gemini Spark i szkolne moratoria AI pokazują, że AI coraz częściej działa już w prywatnych danych i instytucjach publicznych. Suno z Mary J Blige dopisało do tego jeszcze temat zgody, podobizny i brand safety.
+
 Community signal dalej wspiera ten kierunek, ale robi się bardziej krytyczny. Product Hunt premiuje AI Toolbox, Tadata i narzędzia agentowe, a Hacker News coraz częściej pyta o koszt AI coding, harness engineering i utrzymanie jakości. To sugeruje, że rynek wchodzi w fazę selekcji: wygrywają control surfaces, review i praktyczny workflow, nie sam modelowy hype.
 
 Równolegle OpenAI buduje APAC bliżej lokalnych ekosystemów przez tajski accelerator i nowy regionalny hire z Meta, Anthropic wygrywa spór o blacklistę Pentagonu, a a16z uruchamia Machine Age jako fundusz pod fizyczny buildout AI. Hacker News i Product Hunt nadal premiują agentowe control surfaces, benchmarki i narzędzia robocze, więc sygnał społecznościowy zostaje po tej samej stronie rynku.
