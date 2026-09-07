@@ -1,0 +1,481 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-09-07",
+  "runTime": "09:02",
+  "status": "Material update",
+  "headline": "Wypadki, ropa i geopolityka",
+  "summary": "Poranny slot przesunął feed w stronę krajowych wypadków drogowych, decyzji OPEC, rozmów wokół Ukrainy, wyniku AfD, alertu lotniczego z Miami i kolejnych sygnałów o ryzykach AI.",
+  "items": [
+    {
+      "id": "baszkow-ciezarowka",
+      "section": "Polska",
+      "title": "Ciężarówka uderzyła w drzewo",
+      "lead": "Kierowca walczy o życie po wypadku w Baszkowie.",
+      "whatHappened": "TVN24 opisało zderzenie ciężarówki z drzewem na drodze krajowej 83 w Baszkowie; stan kierowcy jest krytyczny.",
+      "keyFacts": [
+        "Źródło: poranny feed TVN24 Najnowsze z 07:49.",
+        "To lokalny wypadek drogowy o dużej skali obrażeń.",
+        "Link wskazuje na materiał z Łodzi i drogi krajowej 83."
+      ],
+      "reactions": [
+        "Na miejscu pracują służby ratunkowe.",
+        "Sprawa może dostać kolejny komunikat o stanie kierowcy."
+      ],
+      "whyItMatters": "To najświeższy krajowy sygnał bezpieczeństwa na drogach i potencjalny temat dla lokalnych odbiorców iOS.",
+      "context": "Dzisiejszy feed mocniej premiuje zdarzenia operacyjne, a nie miękkie newsy.",
+      "watchNext": [
+        "Sprawdź, czy pojawi się oficjalny komunikat policji lub ratowników.",
+        "Obserwuj, czy ruch na DK83 zostanie w pełni odblokowany."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Najnowsze XML - Ciężarówka uderzyła w drzewo",
+          "url": "https://tvn24.pl/lodz/baszkow-ciezarowka-uderzyla-w-drzewo-trwa-walka-o-zycie-kierowcy-st9224591?source=rss"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "wypadek",
+        "droga",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "warszawa-s2-karambol-dziki",
+      "section": "Polska",
+      "title": "Karambol na S2 w Warszawie",
+      "lead": "Na obwodnicy utrudnienia dołożyły też dziki na jezdni.",
+      "whatHappened": "TVN24 Warszawa podała, że na Południowej Obwodnicy Warszawy doszło do karambolu; przejazd utrudniały też dziki przechodzące przez jezdnię.",
+      "keyFacts": [
+        "Sytuacja dotyczyła odcinka S2 w Wawrze.",
+        "Reportaż opisywał duże utrudnienia w ruchu.",
+        "W tle pojawił się nietypowy czynnik: dziki na drodze."
+      ],
+      "reactions": [
+        "Służby porządkowe zabezpieczały miejsce zdarzenia.",
+        "Kierowcy musieli liczyć się z opóźnieniami."
+      ],
+      "whyItMatters": "Łączy chaos drogowy z lokalnym ryzykiem bezpieczeństwa i może wrócić jako komunikat o przepustowości trasy.",
+      "context": "Warszawska S2 często zmienia się w wąskie gardło przy większych incydentach.",
+      "watchNext": [
+        "Czy trasa została już w pełni przejezdna?",
+        "Czy pojawił się komunikat o zwierzętach i usunięciu przeszkody?"
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Warszawa - Karambol na Południowej Obwodnicy Warszawy",
+          "url": "https://tvn24.pl/tvnwarszawa/wawer/karambol-na-poludniowej-obwodnicy-warszawy-duze-utrudnienia-droga-przechodzily-dziki-st9224479?source=rss"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Warszawa",
+        "ruch drogowy",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "krakow-natalia-proces-policjantow",
+      "section": "Polska",
+      "title": "Startuje proces policjantów",
+      "lead": "Proces w sprawie śmierci Natalii wraca do sądu w Krakowie.",
+      "whatHappened": "TVN24 podało, że rusza proces policjantów po śmierci Natalii z Andrychowa, która zmarła w centrum miasta.",
+      "keyFacts": [
+        "To materiał z Krakowa.",
+        "Sprawa ma wymiar instytucjonalny, nie tylko lokalny.",
+        "Postępowanie wchodzi w etap sądowy."
+      ],
+      "reactions": [
+        "Ruszenie procesu oznacza nowy formalny etap sprawy.",
+        "Sprawa może znów wywołać pytania o działania służb."
+      ],
+      "whyItMatters": "To jeden z ważniejszych krajowych wątków odpowiedzialności służb i procedur po zdarzeniu kryzysowym.",
+      "context": "Feed przeniósł dziś uwagę z meteorologii na twarde zdarzenia publiczne i odpowiedzialność instytucji.",
+      "watchNext": [
+        "Czy sąd poda harmonogram kolejnych czynności?",
+        "Czy pojawi się komentarz prokuratury lub obrony?"
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Kraków - Rusza proces policjantów",
+          "url": "https://tvn24.pl/krakow/andrychow-natalia-zmarla-w-centrum-miasta-rusza-proces-policjantow-st9224487?source=rss"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Kraków",
+        "sąd",
+        "instytucje"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "afd-saksonia-anhalt",
+      "section": "Polityka",
+      "title": "AfD wygrywa na wschodzie Niemiec",
+      "lead": "Skrajna prawica zwycięża, ale nie ma większości.",
+      "whatHappened": "BBC i TVN24 opisują zwycięstwo AfD w Saksonii-Anhalcie przy wyniku około 44 procent, bez większości w landtagu.",
+      "keyFacts": [
+        "BBC podało, że partia nie domknęła większości.",
+        "Wynik wywołał alarm w Europie i wśród tradycyjnych partii.",
+        "Temat ma znaczenie wykraczające poza lokalny land."
+      ],
+      "reactions": [
+        "BBC cytuje komentarze o alarmie dla UE.",
+        "Wynik już generuje polityczne komentarze i analizę."
+      ],
+      "whyItMatters": "To jeden z najmocniejszych sygnałów politycznych dnia w Europie i ważny test nastrojów wyborczych.",
+      "context": "W poprzednim slocie AfD też była ważna, ale dziś mamy świeższy, mocniejszy opis skutków.",
+      "watchNext": [
+        "Czy padnie formalna odpowiedź CDU lub UE?",
+        "Czy pojawią się dalsze analizy po drugiej turze?"
+      ],
+      "sources": [
+        {
+          "title": "BBC News - Germany's far-right AfD hails big victory in east, but falls short of majority",
+          "url": "https://www.bbc.co.uk/news/articles/cy4zejgz3z9o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "TVN24 - AfD wygrywa regionalne wybory",
+          "url": "https://tvn24.pl/swiat/afd-wygrywa-wybory-w-saksonii-anhalcie-victor-orban-donald-tusk-i-inni-politycy-komentuja-st9224425?source=rss"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "Niemcy",
+        "AfD",
+        "UE"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "trump-map-new-america",
+      "section": "Polityka",
+      "title": "Trump pokazuje mapę z Nową Ameryką",
+      "lead": "CNN opisuje symboliczny gest wobec Nowego Meksyku.",
+      "whatHappened": "CNN opublikowało materiał o mapie, na której New Mexico zostało przemianowane na New America, co stało się kolejnym politycznym sygnałem wokół Donalda Trumpa.",
+      "keyFacts": [
+        "Źródłem jest materiał polityczny CNN z 6 września.",
+        "Temat dotyczy symboliki i komunikacji politycznej.",
+        "To nie jest twarda decyzja administracyjna, tylko gest wizerunkowy."
+      ],
+      "reactions": [
+        "CNN traktuje to jako kolejny polityczny przekaz.",
+        "Sprawa może żyć w komentarzach, nie w administracji."
+      ],
+      "whyItMatters": "Pokazuje, że kampanijne i symboliczne sygnały Trumpa nadal generują newsy i reakcje.",
+      "context": "Taki materiał dobrze działa jako karta polityczna w pulsie, bo łączy personę, narrację i kontrowersję.",
+      "watchNext": [
+        "Czy pojawią się reakcje z Nowego Meksyku?",
+        "Czy Biały Dom lub sztab to skomentują?"
+      ],
+      "sources": [
+        {
+          "title": "CNN Politics - Trump shares map that renames New Mexico as 'New America'",
+          "url": "https://www.cnn.com/2026/09/06/politics/trump-map-renames-new-mexico-as-new-america"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "USA",
+        "Trump",
+        "CNN"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "trump-putin-zelenski-rozmowa",
+      "section": "Świat",
+      "title": "Trump ma rozmawiać z Putinem i Zełenskim",
+      "lead": "Po rozmowach wysłanników nie ma przełomu w wojnie.",
+      "whatHappened": "TVN24 podało, że Donald Trump ma rozmawiać telefonicznie z Władimirem Putinem i Wołodymyrem Zełenskim po wizytach swoich wysłanników w Moskwie i Kijowie.",
+      "keyFacts": [
+        "Wysłannicy byli najpierw w Moskwie, potem w Kijowie.",
+        "W TVN24 i BBC nie widać jeszcze przełomu.",
+        "To kolejny sygnał dyplomatycznej aktywności wokół wojny w Ukrainie."
+      ],
+      "reactions": [
+        "Zełenski czeka na odpowiedź Rosji.",
+        "BBC ocenia, że fundamentalne różnice nadal pozostają."
+      ],
+      "whyItMatters": "Każdy taki ruch wpływa na narrację o możliwych negocjacjach i kierunku wojny.",
+      "context": "To jeden z głównych światowych wątków dnia obok AfD i bezpieczeństwa lotniczego.",
+      "watchNext": [
+        "Czy pojawi się komunikat z Waszyngtonu, Moskwy lub Kijowa?",
+        "Czy rozmowa zmieni ton publikacji w kolejnych godzinach?"
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Świat - Media: Donald Trump będzie rozmawiał z Władimirem Putinem i Wołodymyrem Zełenskim",
+          "url": "https://tvn24.pl/swiat/donald-trump-po-wizycie-swoich-wyslannikow-ma-rozmawiac-telefonicznie-wladimirem-putinem-i-wolodymyrem-zelenskim-st9224493?source=rss"
+        },
+        {
+          "title": "BBC News - Zelensky says he expects war to continue into winter after talks with US envoys",
+          "url": "https://www.bbc.co.uk/news/articles/c6248nvqy8po?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Ukraina",
+        "USA",
+        "dyplomacja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "von-der-leyen-grenlandia",
+      "section": "Świat",
+      "title": "Von der Leyen na Grenlandii",
+      "lead": "UE sygnalizuje większe inwestycje na północy.",
+      "whatHappened": "TVN24 napisało, że Ursula von der Leyen odwiedziła Grenlandię i wskazała na chęć zwiększenia inwestycji UE w tym regionie.",
+      "keyFacts": [
+        "Wątek dotyczy strategicznie ważnej wyspy.",
+        "Materiał łączy dyplomację, inwestycje i geopolitykę.",
+        "To sygnał obecności UE w Arktyce."
+      ],
+      "reactions": [
+        "Bruksela pokazuje gotowość do mocniejszej obecności.",
+        "Temat może rezonować w debacie o Arktyce i bezpieczeństwie."
+      ],
+      "whyItMatters": "Grenlandia staje się punktem styku interesów UE, USA i bezpieczeństwa arktycznego.",
+      "context": "To bardziej strategiczny niż bieżący news, ale dobrze domyka światowy koszyk.",
+      "watchNext": [
+        "Czy padną konkretne liczby inwestycji?",
+        "Czy pojawią się komentarze z Danii lub USA?"
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Świat - Von der Leyen na Grenlandii",
+          "url": "https://tvn24.pl/swiat/von-der-leyen-na-grenlandii-ue-chce-tam-zwiekszyc-inwestycje-st9224432?source=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "UE",
+        "Grenlandia",
+        "Arktyka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "opec-ropa-pazdziernik",
+      "section": "Gospodarka",
+      "title": "OPEC decyduje o wydobyciu ropy",
+      "lead": "Cele produkcyjne wyglądają bardziej na papier niż na rynek.",
+      "whatHappened": "TVN24 podało, że OPEC zdecydował o wydobyciu ropy w październiku, ale opisuje cele produkcyjne jako bardziej papierowe niż realnie rynkowe.",
+      "keyFacts": [
+        "To świeża decyzja z porannego feedu.",
+        "Ropa pozostaje ważnym sygnałem dla inflacji i kosztów energii.",
+        "Rynek będzie patrzył na wykonanie, nie tylko deklaracje."
+      ],
+      "reactions": [
+        "Inwestorzy będą oceniać realny wpływ na podaż.",
+        "Każda zmiana może przełożyć się na ceny paliw."
+      ],
+      "whyItMatters": "Zmiany w polityce OPEC wpływają na koszty transportu, inflację i nastroje na rynkach.",
+      "context": "Temat dobrze łączy gospodarkę z bezpieczeństwem i codziennymi kosztami życia.",
+      "watchNext": [
+        "Czy pojawi się reakcja rynku ropy?",
+        "Czy inne źródła potwierdzą zakres cięć lub podwyżek?"
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes - OPEC zdecydował o wydobyciu ropy w październiku",
+          "url": "https://tvn24.pl/biznes/ze-swiata/opec-zdecydowal-o-wydobyciu-ropy-w-pazdzierniku-cele-produkcyjne-na-papierze-st9224497?source=rss"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "ropa",
+        "OPEC",
+        "rynek"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "uk-gospodarka-turning-corner",
+      "section": "Gospodarka",
+      "title": "Brytyjska gospodarka ma skręcać w górę",
+      "lead": "Resort finansów mówi o skręcie mimo obaw o dług.",
+      "whatHappened": "BBC podało, że Chancellor ma powiedzieć, iż brytyjska gospodarka \"turning a corner\", mimo obaw o dług i przed pierwszym budżetem.",
+      "keyFacts": [
+        "Wątki gospodarcze idą tu razem z presją fiskalną.",
+        "Rząd chce rozłożyć wzrost szerzej po kraju.",
+        "To przygotowanie gruntu pod budżet."
+      ],
+      "reactions": [
+        "BBC pokazuje napięcie między optymizmem a twardymi danymi o długu.",
+        "To przygotowuje grunt pod debatę przed budżetem."
+      ],
+      "whyItMatters": "Wielka Brytania nadal jest ważnym wskaźnikiem nastrojów gospodarczych w Europie.",
+      "context": "To spójna karta gospodarcza obok ropy i rynku pracy, ale bardziej polityczno-fiskalna.",
+      "watchNext": [
+        "Czy padną nowe szczegóły budżetowe?",
+        "Czy rząd doprecyzuje źródła wzrostu?"
+      ],
+      "sources": [
+        {
+          "title": "BBC News - Chancellor to say UK economy 'turning a corner' despite debt concerns",
+          "url": "https://www.bbc.co.uk/news/articles/cgjqg450w28o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "Wielka Brytania",
+        "budżet",
+        "dług"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "miami-cargo-plane-crash",
+      "section": "Bezpieczeństwo",
+      "title": "Katastrofa cargo Amazona w Miami",
+      "lead": "Pięć ofiar, pięć rannych i pożar po wyjeździe z pasa.",
+      "whatHappened": "BBC podało, że samolot cargo Boeinga 767-300 należący do Amazona wyjechał poza pas na lotnisku w Miami, stanął w ogniu i zabił pięć osób, a pięć kolejnych ciężko ranił.",
+      "keyFacts": [
+        "To jedno z najmocniejszych zdarzeń bezpieczeństwa w tym slocie.",
+        "Wynik jest poważny: ofiary i ciężko ranni.",
+        "Służby wyjaśniają przyczyny katastrofy."
+      ],
+      "reactions": [
+        "Oficjalne służby podają liczbę ofiar i rannych.",
+        "Temat będzie szybko śledzony przez regulatorów lotniczych."
+      ],
+      "whyItMatters": "To ważny sygnał o ryzyku lotniczym i łańcuchach logistycznych, który może szybko rozwinąć się w szerszy alert.",
+      "context": "W pulsu dnia to naturalna karta z sekcji bezpieczeństwa i podróży.",
+      "watchNext": [
+        "Czy NTSB lub FAA poda wstępny raport?",
+        "Czy pojawią się kolejne ofiary lub korekty bilansu?"
+      ],
+      "sources": [
+        {
+          "title": "BBC News - Five dead after Amazon cargo plane crashes at Miami airport",
+          "url": "https://www.bbc.co.uk/news/articles/c0e3p1j7n3ro?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Bezpieczeństwo",
+        "lotnictwo",
+        "USA",
+        "transport"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "openai-agents-hack-report",
+      "section": "Technologia",
+      "title": "OpenAI agents w centrum raportu o hacku",
+      "lead": "BBC opisuje incydent wokół niemieckiej strony i Hugging Face.",
+      "whatHappened": "BBC Tech napisało, że raport wiąże agentów OpenAI z przejęciem niemieckiej strony przed atakiem na Hugging Face; OpenAI zaznaczyło, że nie mogło sensownie odnieść się do ustaleń przed publikacją.",
+      "keyFacts": [
+        "Temat dotyczy agentowego AI i łańcucha ryzyk.",
+        "Artykuł łączy dwa incydenty: stronę niemiecką i Hugging Face.",
+        "Brakuje jeszcze pełnej oficjalnej kontrreakcji."
+      ],
+      "reactions": [
+        "OpenAI powiedziało, że nie mogło zweryfikować raportu przed publikacją.",
+        "To już temat do dalszego monitoringu, nie gotowego werdyktu."
+      ],
+      "whyItMatters": "To jeden z najważniejszych sygnałów o bezpieczeństwie agentów AI i odpowiedzialności dostawców.",
+      "context": "W poprzednim slocie był już sygnał o AI; teraz mamy konkretniejszy i nadal aktualny wątek ryzyka.",
+      "watchNext": [
+        "Czy OpenAI lub Hugging Face opublikują odpowiedź?",
+        "Czy pojawi się niezależna weryfikacja raportu?"
+      ],
+      "sources": [
+        {
+          "title": "BBC News - OpenAI agents hijacked German website before Hugging Face hack, report claims",
+          "url": "https://www.bbc.co.uk/news/articles/ckg725z5kgzo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Technologia",
+        "AI",
+        "bezpieczeństwo",
+        "Hugging Face"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "indonezja-erupcja-loty",
+      "section": "Alerty",
+      "title": "Indonezja trzyma loty wstrzymane",
+      "lead": "Erupcja wulkanu dalej blokuje ruch i lotniska.",
+      "whatHappened": "TVN24 i BBC opisują, że po erupcji wulkanu w Indonezji loty nadal są wstrzymane, a setki tysięcy pasażerów zostały uwięzione przez zamknięcia lotnisk.",
+      "keyFacts": [
+        "To już kolejny dzień zakłóceń.",
+        "BBC podaje liczbę około 270 tysięcy osób dotkniętych skutkami.",
+        "TVN24 pokazuje to jako twardy alert podróżny."
+      ],
+      "reactions": [
+        "Lotniska przedłużają zamknięcia lub ograniczenia.",
+        "Pasażerowie nadal czekają na wznowienie operacji."
+      ],
+      "whyItMatters": "To klasyczny alert operacyjny dla sekcji podróży, który może wpływać na region i międzynarodowe połączenia.",
+      "context": "To jeden z najlepiej czytelnych tematów alertowych w dzisiejszym koszyku.",
+      "watchNext": [
+        "Czy dojdzie do częściowego otwarcia lotnisk?",
+        "Czy linie zmienią rozkłady i przekierowania?"
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Meteo - Indonezja. Trzeci dzień wstrzymanych lotów",
+          "url": "https://tvn24.pl/tvnmeteo/swiat/indonezja-erupcja-anak-krakatau-trzeci-dzien-wstrzymanych-lotow-mozemy-tylko-czekac-czekac-i-czekac-st9224475?source=rss"
+        },
+        {
+          "title": "BBC News - Indonesia volcano eruption leaves 270,000 stranded as airports extend closure",
+          "url": "https://www.bbc.co.uk/news/articles/czezydp4l97o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "Indonezja",
+        "loty",
+        "wulkan"
+      ],
+      "priority": "high"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 Najnowsze XML",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "TVN24 Świat XML",
+      "url": "https://tvn24.pl/swiat.xml"
+    },
+    {
+      "title": "TVN24 Najważniejsze XML",
+      "url": "https://tvn24.pl/najwazniejsze.xml"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "BBC Business RSS",
+      "url": "https://feeds.bbci.co.uk/news/business/rss.xml"
+    },
+    {
+      "title": "BBC Technology RSS",
+      "url": "https://feeds.bbci.co.uk/news/technology/rss.xml"
+    },
+    {
+      "title": "CNN homepage",
+      "url": "https://www.cnn.com"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://www.cnn.com/world"
+    }
+  ]
+}

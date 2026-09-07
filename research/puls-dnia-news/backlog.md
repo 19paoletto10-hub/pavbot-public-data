@@ -1,5 +1,14 @@
 # Puls Dnia News Backlog
 
+# 2026-09-07 09:02
+
+- Watch whether the Baszków crash gets a more formal police or rescue update.
+- Watch whether the Warsaw S2 pileup gets a traffic or road-closure follow-up.
+- Watch whether the Trump-Putin-Zelensky call produces a concrete public statement.
+- Watch whether OPEC or markets react to the latest oil-production decision.
+- Watch whether Indonesia airport closures are extended again or partially reopened.
+- Watch whether OpenAI or another official source answers the BBC tech report.
+
 # 2026-09-07 06:02
 
 - Watch whether IMGW or RCB tighten, shorten or cancel the current weather warnings.
