@@ -1,5 +1,14 @@
 # Puls Dnia News Backlog
 
+# 2026-09-07 21:01
+
+- Watch whether Kraków confirms an appeal or final re-count on the candidate signatures.
+- Watch whether the Black Hawk case gets a fast court decision on dobrowolne poddanie się karze.
+- Watch whether IMGW, HDOT or local services tighten the wind and rain alerts before the next slot.
+- Watch whether Hawaii, Indonesia or Japan changes alert levels before the next slot.
+- Watch whether Reuters or OpenAI issues a clearer response to the agent-incident reporting.
+- Watch whether VW or Canada adds another concrete data point before the next economic refresh.
+
 # 2026-09-07 18:04
 
 - Watch whether the Katowice court turns the Zondacrypto motion into temporary arrest.
