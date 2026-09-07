@@ -1,5 +1,11 @@
 ## Źródła użyte w scenariuszu
 
+- [Axios: U.S. exploring Russia-Ukraine winter de-escalation steps](https://www.axios.com/2026/09/07/zelensky-ukraine-russia-war-witkoff-kushner-putin-trump)
+- [AP: Germany fights Gaza genocide claims at the top UN court](https://apnews.com/article/1cac60bd1e9f7be1b32523dbb060f6dd)
+- [AP: Israeli airstrikes on Lebanese village kill 12](https://apnews.com/article/691deb2ccb571ec83c552efb794568cd)
+- [AP: Houthis accuse Saudi Arabia of a strike on a prison](https://apnews.com/article/e6d1e1d84c943d2fb1ce186a1e5bd3f8)
+- [ITU: Advancing Standardization for Secure Agentic AI](https://www.itu.int/en/ITU-T/Workshops-and-Seminars/2026/0907/Pages/ws-pm.aspx)
+
 - [RCB: Raport dobowy](https://www.gov.pl/web/rcb/raport-dobowy3)
 - [Dowództwo Operacyjne RSZ](https://www.wojsko-polskie.pl/dorsz/)
 - [Anadolu: Poland introduces air traffic restrictions along eastern border to strengthen defense](https://www.aa.com.tr/en/europe/poland-introduces-air-traffic-restrictions-along-eastern-border-to-strengthen-defense/4046947)

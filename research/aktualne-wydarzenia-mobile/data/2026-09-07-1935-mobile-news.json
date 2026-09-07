@@ -2,13 +2,13 @@
   "schemaVersion": 1,
   "topic": "aktualne-wydarzenia-mobile",
   "runDate": "2026-09-07",
-  "runTime": "10:19",
+  "runTime": "19:35",
   "status": "Material update",
   "headline": "Polska dziś przechodzi z trybu alertu do trybu wdrożenia: RCB nadal trzyma suszę hydrologiczną, a DORSZ publikuje już termin ograniczeń ruchu lotniczego przy wschodniej granicy.",
   "leadParagraphs": [
     "Polska dziś przechodzi z trybu alertu do trybu wdrożenia: RCB nadal trzyma suszę hydrologiczną, a DORSZ publikuje już termin ograniczeń ruchu lotniczego przy wschodniej granicy.",
     "W edukacji smartfony przestają być tylko sporem, a zaczynają być procedurą, bo MEN i OSE opisują praktyczne zasady obowiązujące od 1 września.",
-    "Zagranica nie daje prostego nagłówka: Ukraina kończy kolejny dzień rozmów bez przełomu, ICJ otwiera hearings w sprawie Niemiec, a na Bliskim Wschodzie i w Hormuzie napięcie nadal nie odpuszcza."
+    "Wieczorem pojawiły się konkrety: USA badają zimowe kroki deeskalacyjne dla Ukrainy, Niemcy formalnie odrzucają zarzuty Nikaragui przed ICJ, a bilans uderzenia w Libanie wzrósł do 12 zabitych."
   ],
   "checkedSources": [
     {
@@ -70,6 +70,26 @@
     {
       "title": "Digdir: Tjenestenektangrep mot Digdir sine løsninger",
       "url": "https://samarbeid.digdir.no/felleslosninger/tjenestenektangrep-mot-digdir-sine-losninger/3837"
+    },
+    {
+      "title": "AP: Germany fights Gaza genocide claims at the top UN court",
+      "url": "https://apnews.com/article/1cac60bd1e9f7be1b32523dbb060f6dd"
+    },
+    {
+      "title": "AP: Israeli airstrikes on Lebanese village kill 12",
+      "url": "https://apnews.com/article/691deb2ccb571ec83c552efb794568cd"
+    },
+    {
+      "title": "AP: Houthis accuse Saudi Arabia of a strike on a prison",
+      "url": "https://apnews.com/article/e6d1e1d84c943d2fb1ce186a1e5bd3f8"
+    },
+    {
+      "title": "Axios: U.S. exploring Russia-Ukraine winter de-escalation steps",
+      "url": "https://www.axios.com/2026/09/07/zelensky-ukraine-russia-war-witkoff-kushner-putin-trump"
+    },
+    {
+      "title": "ITU: Advancing Standardization for Secure Agentic AI",
+      "url": "https://www.itu.int/en/ITU-T/Workshops-and-Seminars/2026/0907/Pages/ws-pm.aspx"
     }
   ],
   "sections": [
@@ -251,7 +271,30 @@
       "summary": "Zagranica dziś nie daje jednej osi, tylko trzy równoległe: Ukraina, Bliski Wschód i prawo międzynarodowe. Każda z nich jest wystarczająco ciężka, by samodzielnie wypełnić briefing.",
       "articles": [
         {
-          "id": "sprawy-zagraniczne-1-rozmowy-u-s-ukraina-bez-przeomu",
+          "id": "sprawy-zagraniczne-1-usa-badaja-zimowa-sciezke-deeskalacji-woko-ukrainy",
+          "section": "Sprawy zagraniczne",
+          "title": "USA badają zimową ścieżkę deeskalacji wokół Ukrainy",
+          "lead": "Po porannym braku przełomu pojawił się konkretniejszy opis kierunku dalszych rozmów.",
+          "facts": [
+            "Axios cytuje Zełenskiego, według którego USA sprawdzają możliwe zimowe kroki deeskalacyjne Rosji i Ukrainy.",
+            "Rozważana ścieżka ma służyć wznowieniu negocjacji nad szerszym porozumieniem, ale nie jest jeszcze uzgodnionym planem."
+          ],
+          "analysis": "To ostrożny sygnał, że brak przełomu nie oznacza zamknięcia kanału. Słowo klucz brzmi jednak „badają”, a nie „uzgodnili”.",
+          "whyItMatters": "Zima zwiększa presję na ukraińską energetykę i obronę powietrzną, więc nawet ograniczona deeskalacja miałaby wymiar humanitarny i strategiczny.",
+          "sources": [
+            {
+              "title": "Axios",
+              "url": "https://www.axios.com/2026/09/07/zelensky-ukraine-russia-war-witkoff-kushner-putin-trump"
+            }
+          ],
+          "tags": [
+            "Sprawy zagraniczne"
+          ],
+          "ttsText": "Po porannym braku przełomu pojawił się konkretniejszy opis kierunku dalszych rozmów. Axios cytuje Zełenskiego, według którego USA sprawdzają możliwe zimowe kroki deeskalacyjne Rosji i Ukrainy. Rozważana ścieżka ma służyć wznowieniu negocjacji nad szerszym porozumieniem, ale nie jest jeszcze uzgodnionym planem. To ostrożny sygnał, że brak przełomu nie oznacza zamknięcia kanału. Słowo klucz brzmi jednak „badają”, a nie „uzgodnili”. Zima zwiększa presję na ukraińską energetykę i obronę powietrzną, więc nawet ograniczona deeskalacja miałaby wymiar humanitarny i strategiczny.",
+          "priority": "High"
+        },
+        {
+          "id": "sprawy-zagraniczne-2-rozmowy-u-s-ukraina-bez-przeomu",
           "section": "Sprawy zagraniczne",
           "title": "Rozmowy U.S.-Ukraina bez przełomu",
           "lead": "Kolejna runda dyplomacji kończy się bez efektu, ale z dalszymi rozmowami na stole.",
@@ -275,7 +318,7 @@
           "priority": "High"
         },
         {
-          "id": "sprawy-zagraniczne-2-haga-otwiera-hearings-w-sprawie-niemiec-i-gazy",
+          "id": "sprawy-zagraniczne-3-haga-otwiera-hearings-w-sprawie-niemiec-i-gazy",
           "section": "Sprawy zagraniczne",
           "title": "Haga otwiera hearings w sprawie Niemiec i Gazy",
           "lead": "Międzynarodowy Trybunał Sprawiedliwości zaczyna publiczne hearings w sprawie, która łączy niemiecką pomoc wojskową, Gazę i obowiązki państw wobec Palestyny.",
@@ -299,7 +342,7 @@
           "priority": "High"
         },
         {
-          "id": "sprawy-zagraniczne-3-hormuz-gaza-i-liban-pozostaja-w-napieciu",
+          "id": "sprawy-zagraniczne-4-hormuz-gaza-i-liban-pozostaja-w-napieciu",
           "section": "Sprawy zagraniczne",
           "title": "Hormuz, Gaza i Liban pozostają w napięciu",
           "lead": "Bliski Wschód dalej nie schodzi z trybu wysokiego napięcia.",
@@ -330,7 +373,30 @@
       "summary": "W technologii dziś nie ma nowego wielkiego przełomu. Są za to dwa znane tematy, które nadal żyją w trybie regulatora i incydentu.",
       "articles": [
         {
-          "id": "technologia-1-brak-materialnej-zmiany-google-i-android-nadal-pod-lupa-komisji",
+          "id": "technologia-1-itu-porzadkuje-bezpieczenstwo-agentowej-ai",
+          "section": "Technologia",
+          "title": "ITU porządkuje bezpieczeństwo agentowej AI",
+          "lead": "Międzynarodowa debata przesuwa się od zachwytu nad agentami do standardów ich bezpiecznego działania.",
+          "facts": [
+            "ITU zorganizowała 7 września w Chongqing warsztat poświęcony standaryzacji bezpiecznej agentowej AI.",
+            "Agenda obejmuje zarządzanie ryzykiem, ramy bezpieczeństwa, wiarygodne metody ewaluacji i luki standaryzacyjne."
+          ],
+          "analysis": "To nie jest nowa regulacja, lecz ważny etap budowania wspólnego języka dla systemów, które wykonują coraz więcej działań samodzielnie.",
+          "whyItMatters": "Standardy mogą zdecydować, jakie testy i zabezpieczenia staną się minimum dla przyszłych agentów AI.",
+          "sources": [
+            {
+              "title": "ITU",
+              "url": "https://www.itu.int/en/ITU-T/Workshops-and-Seminars/2026/0907/Pages/ws-pm.aspx"
+            }
+          ],
+          "tags": [
+            "Technologia"
+          ],
+          "ttsText": "Międzynarodowa debata przesuwa się od zachwytu nad agentami do standardów ich bezpiecznego działania. ITU zorganizowała 7 września w Chongqing warsztat poświęcony standaryzacji bezpiecznej agentowej AI. Agenda obejmuje zarządzanie ryzykiem, ramy bezpieczeństwa, wiarygodne metody ewaluacji i luki standaryzacyjne. To nie jest nowa regulacja, lecz ważny etap budowania wspólnego języka dla systemów, które wykonują coraz więcej działań samodzielnie. Standardy mogą zdecydować, jakie testy i zabezpieczenia staną się minimum dla przyszłych agentów AI.",
+          "priority": "High"
+        },
+        {
+          "id": "technologia-2-brak-materialnej-zmiany-google-i-android-nadal-pod-lupa-komisji",
           "section": "Technologia",
           "title": "Brak materialnej zmiany: Google i Android nadal pod lupą Komisji",
           "lead": "Bruksela nie wydała dziś nowego wyroku, ale konsultacje wobec Google nadal trwają.",
@@ -354,7 +420,7 @@
           "priority": "High"
         },
         {
-          "id": "technologia-2-brak-materialnej-zmiany-norweski-cyberatak-nadal-jest-w-obserwacji",
+          "id": "technologia-3-brak-materialnej-zmiany-norweski-cyberatak-nadal-jest-w-obserwacji",
           "section": "Technologia",
           "title": "Brak materialnej zmiany: norweski cyberatak nadal jest w obserwacji",
           "lead": "W Norwegii nie ma dziś nowego przełomu, ale temat cyberataku nadal nie zniknął z radaru.",
@@ -387,11 +453,7 @@
   "audioArtifacts": [
     {
       "variant": "female-piper",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-09-07-1019/audio/female-piper/podcast.mp3"
-    },
-    {
-      "variant": "male-xtts",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-09-07-1019/audio/male-xtts/podcast.mp3"
+      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-09-07-1935/audio/female-piper/podcast.mp3"
     }
   ]
 }
