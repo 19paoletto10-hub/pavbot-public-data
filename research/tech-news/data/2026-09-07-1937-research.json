@@ -1,0 +1,372 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-09-07",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Poranny obraz dnia był produktowy, ale wieczorny run przesuwa ciężar wyraźnie w stronę safety, prawa i fizycznych ograniczeń AI. OpenAI publikuje An Alien Mind i Research acceleration, a jednocześnie mówi o automatycznym research intern i celu zbudowania automated AI researcher do marca 2028. To jest już nie tylko historia o modelu, ale o tempie samonapędzającego się rozwoju.",
+    "Równolegle rośnie liczba twardych hamulców. USA i Chiny szykują osobne rozmowy o AI safety, kolejni wydawcy pozywają OpenAI i Microsoft, szkoły w Nowym Jorku i Los Angeles ograniczają student-facing generative AI, a memory shortage i data-center politics pokazują, że koszt compute zaczyna wychodzić poza serwerownie. Community signal nadal premiuje agentowe workflowy, ale coraz mocniej miesza entuzjazm z pytaniem o koszt, review i zaufanie."
+  ],
+  "summaryBullets": [
+    "AI: OpenAI publicznie przyspiesza rozmowę o RSI",
+    "Regulacje: USA i Chiny szykują AI safety talks",
+    "Regulacje: Gazety pozywają OpenAI i Microsoft"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-09-07-1937-0-openai-publicznie-przyspiesza-rozmowe-o-rsi-6a474ca087",
+      "section": "AI",
+      "title": "OpenAI publicznie przyspiesza rozmowę o RSI",
+      "standfirst": "OpenAI opublikowało An Alien Mind i Research acceleration, mówiąc o recursive self-improvement, automatycznym research intern i celu zbudowania automated AI researcher do marca 2028.",
+      "whatHappened": "OpenAI w tym samym dniu publikuje dwa teksty, które stawiają safety, monitorowanie i tempo rozwoju obok samego produktu.",
+      "whyItMatters": "To przesuwa debatę z pytania „co model potrafi” na pytanie „jak szybko system zaczyna napędzać własny postęp”.",
+      "deeperAnalysis": [
+        "W Research acceleration OpenAI mówi, że coding agents już zmieniają codzienną pracę researcherów. Ludzie piszą więcej kodu, uruchamiają więcej eksperymentów i powierzają agentom coraz bardziej złożone zadania, a firma twierdzi, że osiągnęła już własny cel automated research intern.",
+        "To ważne, bo ten tekst nie jest tylko o wydajności zespołu. OpenAI traktuje go jako publiczny snapshot drogi do systemu, który ma pomagać w samym rozwoju kolejnych modeli. Jeśli taki loop się utrzyma, tempo zmian zacznie zależeć nie tylko od ludzi i kapitału, ale też od jakości samego modelowego workflowu.",
+        "An Alien Mind jest bardziej ostrzegawczy. Pachocki pisze o machine intelligence, która staje się coraz trudniejsza do zrozumienia i coraz bardziej zdolna do recursive self-improvement. W tym ujęciu problemem nie jest pojedynczy model, tylko to, że kolejne iteracje mogą zacząć same przyspieszać własny rozwój.",
+        "Dla podcastu to mocny sygnał, bo OpenAI nie sprzedaje dziś wyłącznie capability. Sprzedaje też narrację o tym, jak społeczeństwo ma myśleć o tempie, ryzyku i granicach dalszego scale-upu. To już jest temat o governance, a nie tylko o benchmarkach."
+      ],
+      "contextPoints": [
+        "Coding agents są już częścią codziennej pracy researcherów OpenAI.",
+        "Firma mówi, że osiągnęła automated research intern i celuje w automated AI researcher do marca 2028.",
+        "Publiczny ton przesuwa się od product launch do jawnego pacingu rozwoju."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI: An Alien Mind",
+          "url": "https://openai.com/index/an-alien-mind/"
+        },
+        {
+          "title": "OpenAI: Research acceleration",
+          "url": "https://openai.com/index/research-acceleration-view-inside-openai/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "AI safety",
+        "RSI",
+        "research automation"
+      ]
+    },
+    {
+      "id": "tech-news-2026-09-07-1937-1-usa-i-chiny-szykuja-ai-safety-talks-309fa6919b",
+      "section": "Regulacje",
+      "title": "USA i Chiny szykują AI safety talks",
+      "standfirst": "Reuters raportuje, że USA i Chiny przygotowują pierwsze bilateralne rozmowy wyłącznie o AI safety, tentatywnie w połowie września.",
+      "whatHappened": "Dwa największe mocarstwa technologiczne rozważają osobny kanał rozmów o ryzykach modeli, cyberatakach i threat intelligence.",
+      "whyItMatters": "To jeden z niewielu sygnałów, że AI safety może wejść na poziom formalnej dyplomacji, a nie tylko branżowych oświadczeń.",
+      "deeperAnalysis": [
+        "Według Reutersa agenda rozmów ma obejmować monitoring AI-driven cyberattacks, self-regulation w laboratoriach i wymianę threat intelligence. To jest istotne, bo cyber pozostaje jednym z najbardziej namacalnych punktów styku między frontier AI a polityką państw.",
+        "Równocześnie tekst jest ostrożny: White House nie potwierdził jeszcze terminu, a same rozmowy są przedstawione jako tentative. W praktyce oznacza to, że temat jest ważny nie dlatego, że już jest zamknięty, tylko dlatego, że wraca do realnego bilateralnego stołu.",
+        "Jeśli taki format się utrzyma, może stać się wzorem dla kolejnych rozmów o modelach, export controls i bezpieczeństwie infrastruktury AI. To ważne także dlatego, że rynek coraz częściej widzi AI nie jako lokalną innowację produktową, ale jako element strategii bezpieczeństwa narodowego.",
+        "Na dziś to jeszcze sygnał, nie rozstrzygnięcie. Ale sam fakt, że media piszą o osobnych AI safety talks między USA i Chinami, pokazuje jak bardzo zmieniła się waga tego tematu w ciągu ostatnich miesięcy."
+      ],
+      "contextPoints": [
+        "Rozmowy są tentatywne i nie mają jeszcze publicznego potwierdzenia White House.",
+        "Cyberattack monitoring jest centralnym punktem agendy.",
+        "Potencjalny format może stać się wzorem dla przyszłej AI diplomacy."
+      ],
+      "sources": [
+        {
+          "title": "Reuters via Marketscreener",
+          "url": "https://hk.marketscreener.com/news/us-china-gear-up-for-mid-september-ai-safety-talks-ce785bdbd98ff225"
+        },
+        {
+          "title": "Indian Express",
+          "url": "https://indianexpress.com/article/technology/tech-news-technology/us-china-gear-up-for-mid-september-ai-safety-talks-10866462/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Reuters",
+        "USA",
+        "Chiny",
+        "AI safety",
+        "cyber"
+      ]
+    },
+    {
+      "id": "tech-news-2026-09-07-1937-2-gazety-pozywaja-openai-i-microsoft-0ba46da3a2",
+      "section": "Regulacje",
+      "title": "Gazety pozywają OpenAI i Microsoft",
+      "standfirst": "Seattle Times i Newsday pozywają OpenAI oraz Microsoft, twierdząc że ich treści były używane bez zgody do trenowania modeli i generowania odpowiedzi.",
+      "whatHappened": "Kolejni wydawcy dokładają sprawę sądową do szerokiego sporu o training data i outputy modeli.",
+      "whyItMatters": "To kolejny front presji na sposób, w jaki AI korzysta z treści dziennikarskich i komercyjnych.",
+      "deeperAnalysis": [
+        "The Verge opisuje, że powodowie chcą m.in. zniszczenia skopiowanych treści, zestawów danych i modeli zawierających ich materiał. W ich narracji problemem jest nie tylko sam trening, ale też to, że chatboty mogą reprodukować lub parafrazować treści w sposób konkurujący z ruchem na stronach.",
+        "Microsoft jest stroną pozwu, bo Copilot korzysta z technologii OpenAI. To ważne, bo sprawa nie dotyczy już wyłącznie jednego laboratorium frontier, tylko całego łańcucha dystrybucji: modeli, integracji produktowych i narzędzi enterprise.",
+        "To nie jest odosobniony przypadek. Spór o copyright wobec AI już obejmuje The New York Times, innych wydawców i kolejne grupy mediów. Każdy taki pozew zwiększa presję na licencje, retrievery, filtrację outputów i bardziej precyzyjne rozdzielenie między public content a chronione treści.",
+        "Dla rynku najważniejsze jest to, że kwestia danych treningowych nie znika wraz z nowymi modelami. Wraca przy każdej większej premierze, bo to właśnie tam krzyżują się produkt, prawo i ekonomia mediów."
+      ],
+      "contextPoints": [
+        "Pozew dotyczy zarówno OpenAI, jak i Microsoftu.",
+        "Główny spór dotyczy treningu, reprodukcji treści i utraty trafficu.",
+        "To kolejny element długiego łańcucha pozwów przeciw frontier AI."
+      ],
+      "sources": [
+        {
+          "title": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/990932/seattle-times-newsday-lawsuit-openai-microsoft"
+        },
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/05/seattle-times-and-newsday-are-the-latest-publications-to-sue-openai-and-microsoft/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "Microsoft",
+        "copyright",
+        "publishers"
+      ]
+    },
+    {
+      "id": "tech-news-2026-09-07-1937-3-szkoly-hamuja-generatywna-ai-50cc2610f3",
+      "section": "Regulacje",
+      "title": "Szkoły hamują generatywną AI",
+      "standfirst": "NYC Public Schools opublikowały politykę, która w roku szkolnym 2026-27 wprowadza moratorium na student-facing generative AI w klasach 2K-8.",
+      "whatHappened": "Duże districty szkolne zaczynają formalnie ograniczać generatywną AI na poziomie klasowym.",
+      "whyItMatters": "Classroom AI staje się sprawą polityki publicznej, a nie tylko narzędziem edtech.",
+      "deeperAnalysis": [
+        "Oficjalna polityka NYCPS mówi, że młodsi uczniowie dostają ostrzejsze limity, a w high school generative AI będzie dopuszczane tylko do wybranych, zatwierdzonych zastosowań. To nie jest kosmetyczna zmiana, tylko pełny zwrot do ostrożnego, rozwojowo dobranego podejścia.",
+        "Axios dodaje, że Los Angeles Unified wprowadza podobny moratorium na AI na szkolnych urządzeniach. Razem tworzy to obraz rosnącego oporu wobec zbyt szybkiego wprowadzania modeli do podstawowej edukacji.",
+        "To istotne dla całego rynku, bo szkoły są jednym z najwcześniejszych miejsc testowania masowego AI use case'u. Jeśli nawet największe districty idą w stronę ograniczeń, producenci muszą liczyć się z mocniejszym naciskiem na guardrails, teacher control i age-aware defaults.",
+        "Ten wątek jest też dobry podcastowo, bo łatwo pokazać go bez technicznego żargonu: jeśli dzieci nie mogą używać AI bez ograniczeń, to znaczy, że produkt nadal nie jest społecznie „rozwiązany”."
+      ],
+      "contextPoints": [
+        "NYCPS wprowadza moratorium dla 2K-8 i ograniczenia dla high school.",
+        "LAUSD dokłada własne ograniczenia na szkolnych urządzeniach.",
+        "Spór dotyczy zarówno edukacji, jak i screen time oraz rozwoju poznawczego."
+      ],
+      "sources": [
+        {
+          "title": "NYCPS AI policy",
+          "url": "https://www.schools.nyc.gov/about-us/policies/guidance-on-artificial-intelligence"
+        },
+        {
+          "title": "Axios",
+          "url": "https://www.axios.com/2026/09/07/ai-schools-backlash-bans-new-york-los-angeles"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "edukacja",
+        "AI",
+        "NYC",
+        "LAUSD",
+        "policy"
+      ]
+    },
+    {
+      "id": "tech-news-2026-09-07-1937-4-pamiec-zaczyna-drozec-przez-ai-6c7efa9a38",
+      "section": "Infrastruktura",
+      "title": "Pamięć zaczyna drożeć przez AI",
+      "standfirst": "The Verge pisze, że memory shortage w DRAM i HBM zaczyna podbijać ceny elektroniki użytkowej, a generative AI przesuwa popyt z rynku konsumenckiego do AI infra.",
+      "whatHappened": "Niedobór pamięci zaczyna być widoczny także dla zwykłych urządzeń, nie tylko dla data center.",
+      "whyItMatters": "To pokazuje, że koszt AI nie kończy się na modelu ani w chmurze, tylko wraca do cen sprzętu dla konsumentów.",
+      "deeperAnalysis": [
+        "The Verge cytuje Micron, które mówi wprost, że sama technologia nie wystarczy już do nadążania za popytem. W praktyce oznacza to, że producenci muszą budować więcej wafer capacity i większe fabryki, a taki wzrost podaży nie przychodzi szybko.",
+        "Artykuł podkreśla też koncentrację rynku pamięci: kilka firm kontroluje większość podaży, więc AI nie tylko podbija popyt, ale też wypycha zasoby z rynku konsumenckiego w stronę najbardziej dochodowych zastosowań. To może wpływać na ceny telefonów, laptopów i innych urządzeń jeszcze długo po samym boomie modeli.",
+        "W kontekście tech-news to ważne, bo łączy się z szerszą narracją o compute, nie tylko o software. AI jest już elementem kosztu łańcucha dostaw, a nie jedynie aplikacją na końcu.",
+        "To także dobry most do dalszych tematów o capexie, energii i supply chain, bo pamięć staje się dziś równie strategiczna jak GPU."
+      ],
+      "contextPoints": [
+        "AI pcha popyt na HBM i DRAM szybciej niż rośnie podaż.",
+        "Koncentracja rynku sprawia, że kilka firm decyduje o cenach i dostępności.",
+        "Konsumenckie ceny elektroniki zaczynają odczuwać presję z rynku AI infra."
+      ],
+      "sources": [
+        {
+          "title": "The Verge",
+          "url": "https://www.theverge.com/tech/988225/ram-shortage-supply-chain-micron-apple-iphone"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "memory",
+        "HBM",
+        "Apple",
+        "supply chain",
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-09-07-1937-5-data-centers-staja-sie-polityka-d8ed226490",
+      "section": "Infrastruktura",
+      "title": "Data centers stają się polityką",
+      "standfirst": "WSJ opisuje, że spór o data centers staje się polityczny, a Silicon Valley i administracja Trumpa próbują przedstawić opór wobec AI infra jako efekt zewnętrznych wpływów.",
+      "whatHappened": "Debata o AI compute wychodzi z warstwy technicznej i wchodzi w lokalną politykę, energię oraz wodę.",
+      "whyItMatters": "Bez społecznej zgody i stabilnego zasilania AI infra zaczyna trafiać na twarde limity wdrożenia.",
+      "deeperAnalysis": [
+        "WSJ pokazuje, że odpowiedź na opór wobec data centers coraz częściej brzmi nie „jak lepiej budować”, tylko „kto stoi za protestami”. To od razu podnosi temperaturę debaty i przesuwa ją z lokalnego planowania na wojny narracyjne.",
+        "W praktyce spór dotyczy jednak bardzo konkretnych rzeczy: zużycia energii, zużycia wody, lokalnych stawek i tego, kto ponosi koszt rozbudowy infrastruktury. To już nie jest abstrakcyjny problem chmury, tylko kwestia społeczna i fiskalna.",
+        "To ważne, bo bardzo dobrze łączy się z innymi dzisiejszymi sygnałami: memory shortage, rosnącym capexem i szkolnymi ograniczeniami. Cały stack AI zaczyna być widoczny jako system kosztów, a nie tylko system możliwości.",
+        "Jeśli opór wobec data centers będzie rósł, firmy będą musiały mocniej uzasadniać swoje inwestycje publicznie, a nie tylko finansowo."
+      ],
+      "contextPoints": [
+        "Spór dotyczy energii, wody i kosztów lokalnych.",
+        "Narracja polityczna zaczyna zastępować czysto techniczny język.",
+        "Publiczny opór wobec AI infra może wpływać na permitting i timing inwestycji."
+      ],
+      "sources": [
+        {
+          "title": "WSJ",
+          "url": "https://www.wsj.com/tech/ai/upset-about-data-centers-big-tech-and-trump-think-youre-a-socialist-dupe-1bb0ee55"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "data centers",
+        "power",
+        "politics",
+        "AI infrastructure"
+      ]
+    },
+    {
+      "id": "tech-news-2026-09-07-1937-6-hn-i-product-hunt-nadal-premiuja-agentowe-workflowy-6ada081f00",
+      "section": "Produkty",
+      "title": "HN i Product Hunt nadal premiują agentowe workflowy",
+      "standfirst": "Product Hunt na 2026-09-07 premiuje PR Lens, Tucky, Scriptly i Routines by Databox, a Hacker News dyskutuje o kosztach AI coding i jakości harnessów.",
+      "whatHappened": "Społeczność nadal sygnalizuje popyt na narzędzia wokół workflow i review, ale z większą ostrożnością wobec kosztu.",
+      "whyItMatters": "To czytelny sygnał, że rynek nagradza control surfaces i użyteczność, a nie sam modelowy hype.",
+      "deeperAnalysis": [
+        "Na Product Hunt widać dziś wyraźnie, że uwagę przyciągają narzędzia do czytania kodu, notatek przy krawędzi ekranu, voice-driven creation i scheduled analysis. To nie są abstrakcyjne chatboty, tylko konkretne powierzchnie pracy.",
+        "Hacker News dokłada sceptyczny kontrapunkt. Dyskusja o tym, ile naprawdę kosztuje AI coding, pokazuje że praktycy coraz częściej rozmawiają o jakości, review discipline i kosztach poznawczych, a nie tylko o benchmarkach.",
+        "To razem daje obraz rynku, na którym wygrywają produkty z jasnym kontekstem użycia i zaufaniem. Agent bez kontroli nadal budzi entuzjazm, ale już nie wystarcza do jednoznacznego zwycięstwa.",
+        "Krótko: użytkownicy nadal chcą agentów, ale chcą też wiedzieć, ile to kosztuje i kto odpowiada za wynik."
+      ],
+      "contextPoints": [
+        "Product Hunt ma dziś launchy zorientowane na review, notes, voice i scheduled analysis.",
+        "HN przenosi rozmowę z model hype'u na koszt i jakość pracy.",
+        "Control surfaces są dziś ważniejsze niż samo demo capability."
+      ],
+      "sources": [
+        {
+          "title": "Product Hunt",
+          "url": "https://www.producthunt.com/leaderboard/daily/2026/9/7"
+        },
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=47194847"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Hacker News",
+        "Product Hunt",
+        "agents",
+        "workflow automation",
+        "review"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "OpenAI mówi o „alien mind” i szybszym researchu",
+      "rationale": "OpenAI sam ustawia dziś narrację o RSI i automated research intern, więc temat łączy safety z tempem rozwoju",
+      "sourcesLabel": "OpenAI"
+    },
+    {
+      "priority": "High",
+      "title": "USA i Chiny testują kanał AI safety",
+      "rationale": "Jeśli bilateralne rozmowy ruszą, AI safety dostanie rzadki kanał dyplomatyczny z cyberem w centrum",
+      "sourcesLabel": "Reuters / Indian Express"
+    },
+    {
+      "priority": "High",
+      "title": "Gazety pozywają OpenAI i Microsoft",
+      "rationale": "Seattle Times i Newsday dołączają do coraz szerszego sporu o training data, outputy i ekonomię publikacji",
+      "sourcesLabel": "The Verge / TechCrunch"
+    },
+    {
+      "priority": "High",
+      "title": "Szkoły hamują generatywną AI",
+      "rationale": "NYCPS i LAUSD pokazują, że classroom AI staje się tematem polityki publicznej, a nie tylko edtechu",
+      "sourcesLabel": "NYCPS / Axios"
+    },
+    {
+      "priority": "Medium",
+      "title": "Pamięć zaczyna drożeć przez AI",
+      "rationale": "Memory shortage podnosi ceny sprzętu i pokazuje, że AI pcha koszty także poza data center",
+      "sourcesLabel": "The Verge"
+    },
+    {
+      "priority": "Medium",
+      "title": "Data centers stają się polityką",
+      "rationale": "Opór wobec data centers przestaje być niszowy i zaczyna wchodzić do głównej debaty o energii i lokalnych kosztach",
+      "sourcesLabel": "WSJ"
+    },
+    {
+      "priority": "Medium",
+      "title": "HN i Product Hunt nadal kochają agentów",
+      "rationale": "Społeczność wciąż premiuje workflowy i review, ale coraz bardziej pyta o koszt i kontrolę jakości",
+      "sourcesLabel": "Hacker News / Product Hunt"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "OpenAI: An Alien Mind",
+      "url": "https://openai.com/index/an-alien-mind/"
+    },
+    {
+      "title": "OpenAI: Research acceleration",
+      "url": "https://openai.com/index/research-acceleration-view-inside-openai/"
+    },
+    {
+      "title": "OpenAI release notes",
+      "url": "https://openai.com/products/release-notes/"
+    },
+    {
+      "title": "OpenAI system card",
+      "url": "https://deploymentsafety.openai.com/gpt-6-astra"
+    },
+    {
+      "title": "Indian Express",
+      "url": "https://indianexpress.com/article/technology/tech-news-technology/us-china-gear-up-for-mid-september-ai-safety-talks-10866462/"
+    },
+    {
+      "title": "Reuters via Marketscreener",
+      "url": "https://hk.marketscreener.com/news/us-china-gear-up-for-mid-september-ai-safety-talks-ce785bdbd98ff225"
+    },
+    {
+      "title": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/990932/seattle-times-newsday-lawsuit-openai-microsoft"
+    },
+    {
+      "title": "TechCrunch",
+      "url": "https://techcrunch.com/2026/09/05/seattle-times-and-newsday-are-the-latest-publications-to-sue-openai-and-microsoft/"
+    },
+    {
+      "title": "NYCPS AI policy",
+      "url": "https://www.schools.nyc.gov/about-us/policies/guidance-on-artificial-intelligence"
+    },
+    {
+      "title": "Axios",
+      "url": "https://www.axios.com/2026/09/07/ai-schools-backlash-bans-new-york-los-angeles"
+    },
+    {
+      "title": "The Verge",
+      "url": "https://www.theverge.com/tech/988225/ram-shortage-supply-chain-micron-apple-iphone"
+    },
+    {
+      "title": "WSJ",
+      "url": "https://www.wsj.com/tech/ai/upset-about-data-centers-big-tech-and-trump-think-youre-a-socialist-dupe-1bb0ee55"
+    },
+    {
+      "title": "Product Hunt",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/9/7"
+    },
+    {
+      "title": "Hacker News",
+      "url": "https://news.ycombinator.com/item?id=47194847"
+    },
+    {
+      "title": "NYC mayor announcement",
+      "url": "https://www.nyc.gov/mayors-office/news/2026/09/mayor-mamdani-and-chancellor-samuels-put-students-first-with-nat"
+    }
+  ]
+}

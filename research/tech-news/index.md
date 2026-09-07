@@ -4,13 +4,13 @@ Last updated: 2026-09-07
 
 ## Current Understanding
 
-Dzisiejszy run z 2026-09-07 przesuwa temat z rollout'u modeli na debatę o tempie rozwoju i o tym, czy research zaczyna się sam napędzać. OpenAI publikuje `An Alien Mind` i `Research acceleration`, wprost mówiąc o coding agents, automated research intern i celu automatycznego AI researcher do marca 2028.
+Dzisiejszy run z 2026-09-07 zaczynał się od rollout'u modeli, ale wieczorem przesunął się w stronę safety, prawa i fizycznych ograniczeń AI. OpenAI publikuje `An Alien Mind` i `Research acceleration`, wprost mówiąc o coding agents, automated research intern i celu automatycznego AI researcher do marca 2028, a jednocześnie rosną sygnały o oporze społecznym, kosztach pamięci i polityce data centers.
 
 Równolegle GitHub zamienia Copilota w bardziej kontrolowaną platformę enterprise. Gemini 3.8 Flash wchodzi do Copilota obok innych planów, a reopening signups i usage-based billing pokazują, że model mix, koszt i administracyjna kontrola stają się równie ważne jak sama jakość modelu.
 
-Po stronie ryzyk i regulacji rośnie gęstość sygnałów. Reuters opisuje przygotowania USA i Chin do osobnych rozmów o AI safety, NHTSA sprawdza Cybercaba, Seattle Times i Newsday pozywają OpenAI oraz Microsoft, a Mount Shasta przypomina, że consumer AI advice nadal bywa zbyt pewne siebie w zadaniach wysokiej odpowiedzialności.
+Po stronie ryzyk i regulacji rośnie gęstość sygnałów. Reuters opisuje przygotowania USA i Chin do osobnych rozmów o AI safety, NHTSA sprawdza Cybercaba, Seattle Times i Newsday pozywają OpenAI oraz Microsoft, NYCPS i LAUSD ograniczają generatywną AI w szkołach, a Mount Shasta przypomina, że consumer AI advice nadal bywa zbyt pewne siebie w zadaniach wysokiej odpowiedzialności.
 
-Community signal pozostaje spójny z tym samym przesunięciem. Hacker News promuje OpenAI research/safety i Astra, a Product Hunt na 2026-09-07 nie ma jeszcze nowych launchy, ale nadal kręci się wokół AI agents, workflow automation i code review tools. To sugeruje, że rynek coraz mocniej premiuje control surfaces, trust i praktyczne workflowy zamiast samego model hype'u.
+Community signal pozostaje spójny z tym samym przesunięciem. Hacker News promuje OpenAI research/safety i Astra, a Product Hunt na 2026-09-07 nadal kręci się wokół AI agents, workflow automation i code review tools. To sugeruje, że rynek coraz mocniej premiuje control surfaces, trust i praktyczne workflowy zamiast samego model hype'u, choć wieczorem rozmowa staje się bardziej kosztowa i sceptyczna.
 
 Równolegle OpenAI buduje APAC bliżej lokalnych ekosystemów przez tajski accelerator i nowy regionalny hire z Meta, Anthropic wygrywa spór o blacklistę Pentagonu, a a16z uruchamia Machine Age jako fundusz pod fizyczny buildout AI. Hacker News i Product Hunt nadal premiują agentowe control surfaces, benchmarki i narzędzia robocze, więc sygnał społecznościowy zostaje po tej samej stronie rynku.
 
