@@ -1,5 +1,14 @@
 # Puls Dnia News Backlog
 
+# 2026-09-07 18:04
+
+- Watch whether the Katowice court turns the Zondacrypto motion into temporary arrest.
+- Watch whether the Wrocław hospital case gets a fuller prokuratura or hospital statement.
+- Watch whether the granatnik case gets the first substantive testimony or another procedural date.
+- Watch whether Hawaii, Indonesia or Japan changes alert levels before the next slot.
+- Watch whether Reuters or OpenAI issues a clearer response to the agent-incident reporting.
+- Watch whether VW or Canada adds another concrete data point before the next economic refresh.
+
 # 2026-09-07 15:03
 
 - Watch whether Roman Ż. gets a detention motion, plea detail or a fuller prokuratura statement.

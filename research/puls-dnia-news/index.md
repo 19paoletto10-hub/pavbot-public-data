@@ -2,7 +2,7 @@
 
 ## Current State
 
-Slot 2026-09-07 15:03 dorzuca do porannego zestawu nowy krajowy wątek szpitalny z Wrocławia, utrzymuje sprawy Zondacrypto i granatnika w trybie proceduralnym, a po stronie świata wzmacnia miks polityki, AI i alertów: AfD, izraelski ostrzał w Libanie, zwrot Volkswagena ku obronności, odwetowe cła Kanady, ostrzeżenie OpenAI, incydent z agentami oraz ciężkie ostrzeżenia pogodowe na Hawajach, w Indonezji i Japonii. Nadal dominuje operacyjny, bezpieczeństwowy charakter pulsu.
+Slot 2026-09-07 18:04 doprecyzowuje krajowe procedury wokół Zondacrypto i granatnika, utrzymuje Wrocław jako świeży alert szpitalny, a po stronie świata wzmacnia miks polityki, bezpieczeństwa, gospodarki i AI: AfD, Liban, Volkswagen, Kanada, oficjalne ostrzeżenie OpenAI, incydent z agentami oraz alerty pogodowe na Hawajach, w Indonezji i Japonii. Nadal dominuje operacyjny, bezpieczeństwowy charakter pulsu.
 
 ## Data Shape
 
@@ -26,4 +26,4 @@ The newest valid JSON is shown as paired cards under `Dzisiaj`. Tapping a card o
 - Prefer operational alerts, public safety, travel disruption, platform risk and civil-protection stories over softer feature content.
 - Favor stories with concrete official or primary links when they are available alongside TVN24, BBC or CNN.
 - Current emphasis should stay on criminal proceedings, public safety, volcanic and hurricane alerts, EU/US trade friction, AI safety and industrial defense conversion.
-- Keep Zondacrypto, granatnik, Wrocław hospital, Indonesia-air-closure, Hawaii-hurricane, Japan-rain and OpenAI-agents cards ready for the next carousel refresh.
+- Keep Zondacrypto, granatnik, Wrocław hospital, Indonesia-air-closure, Hawaii-hurricane, Japan-rain, OpenAI-agents and VW-defense cards ready for the next carousel refresh.
