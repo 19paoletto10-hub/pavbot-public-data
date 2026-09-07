@@ -2,7 +2,7 @@
 
 ## Current State
 
-Slot 2026-09-07 09:02 przesuwa feed z porannych alertów pogodowych w stronę krajowych wypadków drogowych, procesów i ruchu na drogach, a za granicą wzmacnia miks wokół AfD, Ukrainy, ropy, brytyjskiej gospodarki, Indonezji i ryzyk technologicznych. Nadal widać twardy, operacyjny charakter pulsu: transport, bezpieczeństwo, polityka i makroekonomia dominują nad lżejszymi tematami.
+Slot 2026-09-07 12:06 przesuwa feed z porannych zdarzeń drogowych w stronę spraw kryminalnych i sądowych w Polsce oraz twardych alertów świata: lawiny w Rosji, eksplozji w Meksyku, zakłóceń lotniczych w Indonezji, huraganu Lowell na Hawajach, sygnałów Trumpa wobec Ukrainy i symbolicznej polityki w USA. Nadal dominuje operacyjny, bezpieczeństwowy charakter pulsu.
 
 ## Data Shape
 
@@ -25,5 +25,5 @@ The newest valid JSON is shown as paired cards under `Dzisiaj`. Tapping a card o
 - Keep at least two `Polska` or `Polityka` items and at least two `Świat` items to protect the home feed balance.
 - Prefer operational alerts, public safety, travel disruption, platform risk and civil-protection stories over softer feature content.
 - Favor stories with concrete official or primary links when they are available alongside TVN24, BBC or CNN.
-- Current emphasis should stay on transport incidents, Ukraine, napięciach politycznych w Europie, gospodarce UK, ropie, Indonezji i ryzykach AI.
-- Keep road-disruption, Ukraine-response, oil, Indonesia-air-closure and technology-risk cards ready for the next carousel refresh.
+- Current emphasis should stay on criminal proceedings, public safety, volcanic and hurricane alerts, Ukraine signaling, symbol politics in the US, trade frictions and AI listing risk.
+- Keep Gdańsk safety, Zondacrypto, granatnik, Indonesia-air-closure, Hawaii-hurricane and Anthropic cards ready for the next carousel refresh.

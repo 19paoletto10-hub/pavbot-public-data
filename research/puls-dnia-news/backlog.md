@@ -1,5 +1,14 @@
 # Puls Dnia News Backlog
 
+# 2026-09-07 12:06
+
+- Watch whether the Gdańsk police add a formal motive, weapon type or custody update.
+- Watch whether Roman Ż. gets charges, detention motion or a broader prokuratura statement.
+- Watch whether the granatnik trial produces the first substantive testimony or procedural disclosure.
+- Watch whether the Trump/Ukraine call becomes a concrete public statement instead of a signal.
+- Watch whether Indonesia or Hawaii issues new transport or civil-protection changes.
+- Watch whether Anthropic or its banks confirm a firmer IPO timeline or financing close.
+
 # 2026-09-07 09:02
 
 - Watch whether the Baszków crash gets a more formal police or rescue update.

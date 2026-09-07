@@ -1,0 +1,485 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-09-07",
+  "runTime": "12:06",
+  "status": "Material update",
+  "headline": "Gdańsk, prokuratura i nowe alerty świata",
+  "summary": "Nowy slot przyniósł świeże sprawy kryminalne i sądowe w Polsce oraz twardszy pakiet światowych alertów: lawina w Rosji, Meksyk, Indonezja, Hawaje, Trump, Kanada i Anthropic.",
+  "items": [
+    {
+      "id": "gdansk-strzal-zabianka",
+      "section": "Bezpieczeństwo",
+      "title": "Strzał na Żabiance",
+      "lead": "Kobieta została ranna, a policja zatrzymała podejrzanego.",
+      "whatHappened": "TVN24 podało, że przy gdańskiej Żabiance padł strzał, gdy kobiety schodziły z peronu; jedna z nich została ranna, a policja zatrzymała podejrzanego.",
+      "keyFacts": [
+        "Zdarzenie dotyczyło gdańskiej Żabianki.",
+        "Jedna kobieta została ranna.",
+        "Policja zatrzymała podejrzanego."
+      ],
+      "reactions": [
+        "Służby prowadzą dalsze czynności na miejscu i w sprawie podejrzanego.",
+        "To natychmiast podnosi temat bezpieczeństwa w przestrzeni publicznej."
+      ],
+      "whyItMatters": "To świeży sygnał przemocy w miejscu publicznym i potencjalnie najważniejszy lokalny alert bezpieczeństwa w tej rundzie.",
+      "context": "Trójmiasto znów dostarcza twardy, operacyjny news zamiast miękkiego tła.",
+      "watchNext": [
+        "Czy policja poda motyw lub rodzaj użytej broni?",
+        "Czy pojawi się oficjalny komunikat o stanie rannej kobiety?"
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Trójmiasto - Kobieta postrzelona na Żabiance",
+          "url": "https://tvn24.pl/trojmiasto/gdansk-kobieta-postrzelona-na-zabiance-policja-zatrzymala-podejrzanego-st9224640"
+        }
+      ],
+      "tags": [
+        "Gdańsk",
+        "bezpieczeństwo",
+        "policja",
+        "strzał"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "zondacrypto-roman-prokuratura",
+      "section": "Polska",
+      "title": "Roman Ż. znów w prokuraturze",
+      "lead": "Sprawa Zondacrypto wraca do Katowic po kolejnym zatrzymaniu.",
+      "whatHappened": "TVN24 podało, że Roman Ż. został ponownie doprowadzony do prokuratury w Katowicach w związku ze sprawą Zondacrypto.",
+      "keyFacts": [
+        "To kolejny etap śledztwa po zatrzymaniu.",
+        "Prokuratura wiąże sprawę z obawą ucieczki.",
+        "Zabezpieczono dokumentację i wartościowe przedmioty."
+      ],
+      "reactions": [
+        "Postępowanie idzie dalej formalnym torem.",
+        "Możliwe są kolejne decyzje śledczych w krótkim terminie."
+      ],
+      "whyItMatters": "To ważny krajowy wątek finansowo-śledczy z potencjałem na kolejne oficjalne ruchy i medialny ciężar.",
+      "context": "W porannym slocie temat był już obecny, ale teraz ma bardziej konkretny etap proceduralny.",
+      "watchNext": [
+        "Czy prokuratura poda zarzuty lub wniosek o areszt?",
+        "Czy pojawi się dalszy opis zabezpieczonych materiałów?"
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Katowice - Afera Zondacrypto. Roman Ż. drugi raz w prokuraturze",
+          "url": "https://tvn24.pl/katowice/afera-zondacrypto-roman-z-drugi-raz-w-prokuraturze-st9224636"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Katowice",
+        "prokuratura",
+        "Zondacrypto"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "granatnik-proces-szymczyk",
+      "section": "Polska",
+      "title": "Ruszył proces po wybuchu granatnika",
+      "lead": "Jarosław Szymczyk stanął przed sądem po wielokrotnych odroczeniach.",
+      "whatHappened": "TVN24 podało, że w Warszawie ruszył proces byłego szefa policji Jarosława Szymczyka w sprawie wybuchu granatnika w Komendzie Głównej Policji; rozprawa toczy się za zamkniętymi drzwiami.",
+      "keyFacts": [
+        "Akt oskarżenia był już wcześniej w sądzie.",
+        "Początek procesu był wielokrotnie przekładany.",
+        "Rozprawa odbywa się bez publiczności."
+      ],
+      "reactions": [
+        "To nowy formalny etap jednej z bardziej znanych spraw dotyczących kierownictwa policji.",
+        "Proces może wrócić do debaty publicznej o odpowiedzialności służb."
+      ],
+      "whyItMatters": "To ważna sprawa instytucjonalna, która łączy policję, sąd i ocenę odpowiedzialności na wysokim szczeblu.",
+      "context": "Feed po raz kolejny przesuwa uwagę z transportu na wymiar sprawiedliwości i służby.",
+      "watchNext": [
+        "Czy sąd ujawni harmonogram kolejnych czynności?",
+        "Czy strony procesu podadzą pierwsze komentarze po zamkniętej rozprawie?"
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Warszawa - Wybuch granatnika w komendzie. Były szef policji na ławie oskarżonych",
+          "url": "https://tvn24.pl/tvnwarszawa/mokotow/warszawa-wybuch-granatnika-w-komendzie-glownej-byly-szef-policji-na-lawie-oskarzonych-st9224626"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Warszawa",
+        "sąd",
+        "policja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "rosja-lawina-kaukaz",
+      "section": "Świat",
+      "title": "Lawina w Rosji zabiła 11 osób",
+      "lead": "Na Kaukazie trwała trudna akcja ratunkowa.",
+      "whatHappened": "TVN24 podało, że lawina zeszła na alpinistów na Kaukazie i zginęło co najmniej 11 osób.",
+      "keyFacts": [
+        "Zdarzenie dotyczy Kaukazu w Rosji.",
+        "Ofiar jest co najmniej 11.",
+        "Akcję ratunkową utrudniały warunki terenowe."
+      ],
+      "reactions": [
+        "Służby ratunkowe prowadziły intensywne poszukiwania.",
+        "Sprawa może dostać dalsze komunikaty o stanie zaginionych."
+      ],
+      "whyItMatters": "To poważny światowy alert bezpieczeństwa i przypomnienie, jak szybko zmieniają się warunki w wysokich górach.",
+      "context": "Obok katastrof lotniczych i pogodowych to jeden z najcięższych newsów w światowym koszyku.",
+      "watchNext": [
+        "Czy pojawi się pełniejszy bilans ofiar lub zaginionych?",
+        "Czy służby podadzą informacje o dalszej akcji ratunkowej?"
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Meteo Świat - Rosja. Lawina porwała wspinaczy",
+          "url": "https://tvn24.pl/tvnmeteo/swiat/rosja-lawina-porwala-wspinaczy-nie-zyje-11-osob-st9224634"
+        },
+        {
+          "title": "ABC News Australia - 11 killed in avalanche in Russia, fears remain for six missing",
+          "url": "https://www.abc.net.au/news/2026-09-07/climbers-killed-in-avalanche-on-russian-peak/107125874"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Rosja",
+        "lawina",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "meksyk-fajerwerki-festiwal",
+      "section": "Świat",
+      "title": "Fajerwerki zabiły 10 osób w Meksyku",
+      "lead": "Eksplozja podczas uroczystości parafialnych była tragiczna.",
+      "whatHappened": "TVN24 podało, że w Meksyku co najmniej 10 osób zginęło, a ponad 60 zostało rannych po eksplozji fajerwerków podczas festiwalu religijnego.",
+      "keyFacts": [
+        "Zdarzenie wydarzyło się podczas uroczystości parafialnych.",
+        "Ofiar śmiertelnych jest co najmniej 10.",
+        "Rannych jest ponad 60."
+      ],
+      "reactions": [
+        "Świadkowie mówili o panice na miejscu.",
+        "To kolejny przykład ryzyka przy masowych wydarzeniach z pirotechniką."
+      ],
+      "whyItMatters": "To duży alert bezpieczeństwa publicznego i temat dla służb odpowiedzialnych za imprezy masowe.",
+      "context": "W światowej części pulsu obok katastrofy w Rosji pojawia się drugi ciężki wątek o masowym zdarzeniu.",
+      "watchNext": [
+        "Czy lokalne władze podadzą przyczynę eksplozji?",
+        "Czy bilans rannych jeszcze wzrośnie?"
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Świat - Meksyk. Wybuch fajerwerków na festiwalu religijnym",
+          "url": "https://tvn24.pl/swiat/meksyk-wybuch-fajerwerkow-na-festiwalu-religijnym-nie-zyje-dziesiec-osob-st9224550"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Meksyk",
+        "fajerwerki",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "indonezja-anak-krakatau-loty",
+      "section": "Świat",
+      "title": "Indonezja nadal ogranicza loty",
+      "lead": "Anak Krakatau wciąż rozbija ruch lotniczy i plan dnia.",
+      "whatHappened": "TVN24 podało, że drugi dzień po erupcji Anak Krakatau w Indonezji nadal utrzymywane są zakłócenia w ruchu lotniczym, a służby monitorują sytuację wokół popiołu i możliwych kolejnych emisji.",
+      "keyFacts": [
+        "To już drugi dzień ograniczeń.",
+        "Zakłócenia dotyczą lotów i infrastruktury lotniskowej.",
+        "Ryzyko wynika przede wszystkim z popiołu wulkanicznego."
+      ],
+      "reactions": [
+        "Pasażerowie czekają na wznowienie połączeń.",
+        "Władze utrzymują ostrożny tryb działania."
+      ],
+      "whyItMatters": "To poważny alert lotniczy z bezpośrednim wpływem na transport i bezpieczeństwo w regionie.",
+      "context": "To kontynuacja wątku z poprzednich slotów, ale dziś ma już bardziej dojrzały, operacyjny charakter.",
+      "watchNext": [
+        "Czy kolejne lotniska zostaną otwarte?",
+        "Czy pojawią się nowe dane o skali strat dla pasażerów i linii lotniczych?"
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Meteo Świat - Indonezja. Drugi dzień wstrzymanych lotów",
+          "url": "https://tvn24.pl/tvnmeteo/swiat/indonezja-erupcja-anak-krakatau-drugi-dzien-wstrzymanych-lotow-mozemy-tylko-czekac-czekac-i-czekac-st9224475"
+        },
+        {
+          "title": "AP News - Indonesia keeps several airports closed though volcanic eruption is easing",
+          "url": "https://apnews.com/article/e32f06ee8ad761ab78d2d3abc38f83d4"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Indonezja",
+        "wulkan",
+        "lotnictwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "trump-putin-zelenski-rozmowy",
+      "section": "Polityka",
+      "title": "Trump wraca do rozmów o Ukrainie",
+      "lead": "Po misji wysłanników znów padają zapowiedzi rozmów telefonicznych.",
+      "whatHappened": "TVN24 podało, że Donald Trump ma rozmawiać telefonicznie z Władimirem Putinem i Wołodymyrem Zełenskim po wizytach swoich wysłanników w Moskwie i Kijowie; dotychczas nie widać przełomu.",
+      "keyFacts": [
+        "Wysłannicy byli najpierw w Moskwie, potem w Kijowie.",
+        "Nie ogłoszono konkretnego przełomu negocjacyjnego.",
+        "Temat pozostaje jednym z głównych wątków geopolitycznych dnia."
+      ],
+      "reactions": [
+        "Strony nadal komunikują gotowość do rozmów.",
+        "Nadal brakuje twardego komunikatu o wyniku misji."
+      ],
+      "whyItMatters": "Każdy sygnał z tej osi wpływa na oczekiwania wobec wojny, dyplomacji i możliwego rozejmu.",
+      "context": "To jeden z najbardziej śledzonych politycznych wątków w bieżącym news flow.",
+      "watchNext": [
+        "Czy Biały Dom lub Kreml podadzą wspólne oświadczenie?",
+        "Czy rozmowa zmieni ton kolejnych depesz o Ukrainie?"
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Świat - Donald Trump będzie rozmawiał z Władimirem Putinem i Wołodymyrem Zełenskim",
+          "url": "https://tvn24.pl/swiat/donald-trump-po-wizycie-swoich-wyslannikow-ma-rozmawiac-telefonicznie-wladimirem-putinem-i-wolodymyrem-zelenskim-st9224493"
+        },
+        {
+          "title": "The Guardian - Ukraine war briefing: US envoys leave Kyiv without breakthrough on ending war",
+          "url": "https://www.theguardian.com/world/2026/sep/07/ukraine-war-briefing-us-envoys-leave-kyiv-no-breakthrough"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "Ukraina",
+        "USA",
+        "dyplomacja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "trump-new-mexico-new-america",
+      "section": "Polityka",
+      "title": "Trump chce Nowej Ameryki",
+      "lead": "CNN opisuje kolejny symboliczny gest wobec mapy USA.",
+      "whatHappened": "CNN podało, że Donald Trump zasugerował przemianowanie New Mexico na New America, co wywołało natychmiastowe reakcje polityczne.",
+      "keyFacts": [
+        "To polityczny i wizerunkowy gest, nie decyzja administracyjna.",
+        "Sprawa dotyczy symboliki i komunikacji kampanijnej.",
+        "Lokalni politycy już publicznie to krytykowali."
+      ],
+      "reactions": [
+        "Materiał wywołał szybkie komentarze w USA.",
+        "To kolejny przykład, jak Trump wrzuca do obiegu mocny, medialny symbol."
+      ],
+      "whyItMatters": "Takie gesty napędzają polityczną narrację i potrafią dominować cykl newsowy mimo braku realnej zmiany prawa.",
+      "context": "To dobra karta polityczna dla pulsu, bo łączy personę Trumpa, symbol i natychmiastową reakcję.",
+      "watchNext": [
+        "Czy pojawi się odpowiedź władz Nowego Meksyku?",
+        "Czy Biały Dom lub sztab precyzują, czy to tylko symboliczny przekaz?"
+      ],
+      "sources": [
+        {
+          "title": "CNN Politics - Trump shares map that renames New Mexico as 'New America'",
+          "url": "https://www.cnn.com/2026/09/06/politics/trump-map-renames-new-mexico-as-new-america"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "USA",
+        "Trump",
+        "CNN"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "chiny-mapa-morze-poludniowochinskie",
+      "section": "Świat",
+      "title": "Chiny pokazują mapę dna Morza Południowochińskiego",
+      "lead": "Pekin twierdzi, że ma pierwszą tak dokładną mapę tego akwenu.",
+      "whatHappened": "TVN24 podało, że Chiny twierdzą, iż stworzyły pierwszą dokładną mapę dna Morza Południowochińskiego.",
+      "keyFacts": [
+        "To obszar o globalnym znaczeniu geopolitycznym.",
+        "Chiny przedstawiają projekt jako przełom techniczny.",
+        "Mapa ma znaczenie także strategiczne."
+      ],
+      "reactions": [
+        "Temat może wzmacniać napięcia wokół Morza Południowochińskiego.",
+        "To wątek, który może wracać w debacie o wpływach Pekinu."
+      ],
+      "whyItMatters": "To połączenie technologii, geografii i geopolityki w jednym ruchu informacyjnym.",
+      "context": "W świecie obok katastrof i polityki nadal widać temat rywalizacji strategicznej.",
+      "watchNext": [
+        "Czy pojawią się reakcje państw regionu?",
+        "Czy Chiny opublikują więcej danych technicznych o projekcie?"
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Świat - Prawdziwa mapa skarbów. Chiny twierdzą, że ją stworzyły",
+          "url": "https://tvn24.pl/swiat/morze-poludniowochinskie-dokladna-mapa-ktora-maja-miec-tylko-chiny-st9213881"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Chiny",
+        "Morze Południowochińskie",
+        "geopolityka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "kanada-cla-odwetowe",
+      "section": "Gospodarka",
+      "title": "Kanada utrzymuje kurs na cła odwetowe",
+      "lead": "Ottawa wchodzi w spór handlowy z USA mimo obaw obywateli.",
+      "whatHappened": "TVN24 podało, że cła odwetowe Kanady na import wielu towarów z USA wejdą w życie we wtorek, a większość Kanadyjczyków ma co do tego mieszane odczucia, choć decyzję popiera duża część społeczeństwa.",
+      "keyFacts": [
+        "Cła mają objąć szeroki zakres towarów.",
+        "To reakcja na działania handlowe USA.",
+        "W tle jest narastający spór gospodarczy między sąsiadami."
+      ],
+      "reactions": [
+        "Kanadyjczycy obawiają się skutków cenowych, ale poparcie dla decyzji jest wysokie.",
+        "Rynki będą śledzić, czy konflikt się rozszerzy."
+      ],
+      "whyItMatters": "Cła mogą uderzyć w łańcuchy dostaw, ceny detaliczne i nastroje na rynku północnoamerykańskim.",
+      "context": "To gospodarczy wątek dnia obok ropy i debiutu Anthropic, ale ma bardziej bezpośredni wymiar polityczny.",
+      "watchNext": [
+        "Czy Ottawa poda kolejne szczegóły pakietu?",
+        "Czy USA odpowiedzą nową rundą działań handlowych?"
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes - Kanada wprowadzi cła odwetowe",
+          "url": "https://tvn24.pl/biznes/ze-swiata/kanada-wprowadzi-cla-odwetowe-jaka-opinie-maja-kanadyjczycy-nowy-sondaz-st9224474"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "Kanada",
+        "USA",
+        "cła"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "anthropic-ipo-kredyt",
+      "section": "Technologia",
+      "title": "Anthropic szykuje IPO",
+      "lead": "Spółka domyka kredyt i przygotowuje wejście na giełdę.",
+      "whatHappened": "TVN24 podało, że Anthropic przygotowuje pierwszą ofertę publiczną i zamierza sfinalizować odnawialną linię kredytową o wartości 15 miliardów dolarów, zanim przejdzie do kolejnych kroków.",
+      "keyFacts": [
+        "To jeden z największych tegorocznych wątków technologicznych.",
+        "Spółka rozmawia z bankami przed kolejnym etapem IPO.",
+        "Proces może przebiec szybciej niż zwykle."
+      ],
+      "reactions": [
+        "Rynek AI znów dostaje sygnał o skali kapitałowej gry.",
+        "Inwestorzy będą porównywać Anthropic z innymi dużymi debiutami technologicznymi."
+      ],
+      "whyItMatters": "To ważny sygnał o wycenie i apetytach kapitałowych w sektorze AI.",
+      "context": "W pulsu technologia jest dziś wtórna wobec bezpieczeństwa, ale Anthropic ma wystarczającą wagę, by trafić do głównego feedu.",
+      "watchNext": [
+        "Czy spółka poda oficjalny termin prospektu?",
+        "Czy banki potwierdzą tempo zamknięcia finansowania?"
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes Tech - Anthropic przygotowuje debiut. Nastąpi jednak opóźnienie",
+          "url": "https://tvn24.pl/biznes/tech/przygotowania-anthropic-do-pierwszej-oferty-publicznej-mozliwy-debiut-przed-wyborami-do-kongresu-st9223762"
+        },
+        {
+          "title": "El País - Anthropic acelera en su salida a Bolsa para superar a SpaceX",
+          "url": "https://elpais.com/economia/2026-09-07/anthropic-acelera-en-su-salida-a-bolsa-para-superar-a-spacex.html"
+        }
+      ],
+      "tags": [
+        "Technologia",
+        "AI",
+        "Anthropic",
+        "IPO"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "hawaje-lowell-stan-wyjatkowy",
+      "section": "Alerty",
+      "title": "Hawaje pod stanem wyjątkowym",
+      "lead": "Huragan Lowell zbliża się z ryzykiem fal i podtopień.",
+      "whatHappened": "TVN24 podało, że na Hawajach ogłoszono stan wyjątkowy przed huraganem Lowell; meteorolodzy ostrzegają przed silnym wiatrem, niebezpiecznymi falami i podtopieniami.",
+      "keyFacts": [
+        "To oficjalny alert kryzysowy dla archipelagu.",
+        "Największe ryzyko dotyczy fal i lokalnych podtopień.",
+        "Służby przygotowują się na pogorszenie warunków."
+      ],
+      "reactions": [
+        "Mieszkańcy i turyści muszą liczyć się z ograniczeniami.",
+        "Alert może się zmieniać wraz z trajektorią huraganu."
+      ],
+      "whyItMatters": "To jeden z najmocniejszych bieżących alertów pogodowych i może wpłynąć na transport oraz bezpieczeństwo publiczne.",
+      "context": "Po Indonezji to drugi duży wątek ostrzegawczy w świecie lotnictwa i pogody.",
+      "watchNext": [
+        "Czy stan wyjątkowy zostanie rozszerzony lub skrócony?",
+        "Czy pojawią się komunikaty o ewakuacjach lub odwołanych lotach?"
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Meteo Świat - Stan wyjątkowy na Hawajach",
+          "url": "https://tvn24.pl/tvnmeteo/swiat/huragan-lowell-stan-wyjatkowy-na-hawajach-przygotowujemy-sie-zanim-warunki-sie-pogorsza-st9224592"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "Hawaje",
+        "huragan",
+        "pogoda"
+      ],
+      "priority": "high"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 Najnowsze XML",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "TVN24 Świat XML",
+      "url": "https://tvn24.pl/swiat.xml"
+    },
+    {
+      "title": "TVN24 Najważniejsze XML",
+      "url": "https://tvn24.pl/najwazniejsze.xml"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "BBC Business RSS",
+      "url": "https://feeds.bbci.co.uk/news/business/rss.xml"
+    },
+    {
+      "title": "BBC Technology RSS",
+      "url": "https://feeds.bbci.co.uk/news/technology/rss.xml"
+    },
+    {
+      "title": "CNN homepage",
+      "url": "https://www.cnn.com"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://www.cnn.com/world"
+    }
+  ]
+}
