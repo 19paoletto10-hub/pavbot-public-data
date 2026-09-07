@@ -2,50 +2,56 @@
 
 ## Intro
 
-Dziś sześć tematów: Ukraina i rozmowy amerykańskich wysłanników w Kijowie, Bliski Wschód z Hormuzem, Gazą i Zachodnim Brzegiem, historyczny wynik AfD w Saksonii-Anhalt, polski trop sabotażu przy fabryce dronów, kolejna odsłona sporu o kryptoaktywa oraz początek roku szkolnego i coraz trudniejsza integracja Ukraińców w Polsce.
+Dziś sześć tematów, które pokazują, jak polityka, wojna i administracja wchodzą w codzienność. Zaczniemy od Kijowa i amerykańskich wysłanników, potem przeniesiemy się do Ormuzu, gdzie Iran znów podnosi stawkę dla żeglugi. Dalej będzie Niemcy i historyczny wynik AfD, potem Polska: Zondacrypto, stary zakaz wobec generała Piotra Pytla oraz komunikaty RCB. To nie jest dzień wielkich deklaracji, tylko dzień, w którym widać, jak działają państwa, kiedy napięcie trwa dłużej niż jeden newsowy cykl.
 
 ## 1. Ukraina
 
-- AP: Witkoff i Kushner w Kijowie po rozmowie z Putinem.
-- Brak przełomu, ale powrót kanału dyplomatycznego.
-- Zełenski: Patrioty i bezpieczeństwo terytorialne muszą wejść do pakietu zimowego.
-- W tle ciągłe bombardowanie Kijowa, także w dzień.
-- Dlaczego to ważne dla Polski: wojna i obrona powietrzna nadal ustawiają bezpieczeństwo całej wschodniej flanki.
+- AP: Steve Witkoff i Jared Kushner byli w niedzielę, 6 września, w Kijowie po wcześniejszej rozmowie z Władimirem Putinem.
+- Rozmowy były zachęcające, ale przełomu nie ma.
+- Zełenski podkreśla znaczenie Patriotów, obrony powietrznej i wsparcia energetycznego przed zimą.
+- Dla Polski to bezpośrednio ważne, bo wojna nadal ustawia bezpieczeństwo całej wschodniej flanki.
+- To jeszcze nie jest gotowy pokój, tylko sondowanie warunków przez Amerykanów.
 
-## 2. Bliski Wschód
+## 2. Ormuz
 
-- AP: Iran zaprzecza, że trafił amerykański bezzałogowiec w Hormuzie; Teheran mówi o strefie wykluczenia.
-- Jednocześnie Gaza liczy kolejne ofiary, a w Zachodnim Brzegu WFP tnie pomoc żywnościową o połowę.
-- Huckabee nazywa przemoc osadników aktem terroru.
-- Dlaczego to ważne: energia, żegluga i pomoc humanitarna nadal są pod presją.
+- AP: Iran planuje ogłosić strefę wykluczenia poza Cieśniną Ormuz.
+- W tym samym materiale Amerykanie zaprzeczają irańskim twierdzeniom o trafieniu bezzałogowej jednostki USA.
+- Blokada morska już przekierowała 92 statki handlowe i unieruchomiła trzy.
+- Dlaczego to ważne: ryzyko dla żeglugi i rynku energii rośnie nawet wtedy, gdy nie padają kolejne strzały.
+- Presja zaczyna działać wcześniej niż formalne zamknięcie cieśniny.
 
 ## 3. Niemcy
 
-- AP: AfD wygrywa w Saksonii-Anhalt z wynikiem około 44 procent.
-- CDU spada do około 18 procent, a większość rządowa nadal nie jest oczywista.
-- Dlaczego to ważne: to test dla niemieckiego centrum i sygnał dla całej UE.
+- AP: AfD zdobyła około 44 procent głosów w Saksonii-Anhalt.
+- CDU spadła do około 17 procent, a większość absolutna nadal nie jest pewna.
+- To test dla tak zwanego firewallu i dla niemieckiego centrum politycznego.
+- Dlaczego to ważne: wynik może wpłynąć na debatę o migracji, Ukrainie i bezpieczeństwie w całej Unii.
+- AfD nie musi jeszcze rządzić sama, żeby przesuwać niemiecką debatę.
 
-## 4. Polska - bezpieczeństwo
+## 4. Polska - krypto
 
-- Reuters: pożar w zakładzie WB Electronics w Skarżysku-Kamiennej wygląda na sabotaż.
-- Śledztwo dotyczy też możliwego udziału obcych służb, a szkody szacuje się na co najmniej 15 milionów złotych.
-- TVN24: policja zwiększa patrole przy fabrykach produkujących na potrzeby armii.
-- Dlaczego to ważne: to klasyczny ślad wojny hybrydowej na polskim gruncie.
+- Interia i WP: służby zatrzymały Romana Ż. w sprawie Zondacrypto.
+- Prokuratura mówi o uzasadnionej obawie ucieczki, a na miejscu doszło do przeszukania.
+- W tle pozostaje weto prezydenta do ustawy o rynku kryptoaktywów.
+- Dlaczego to ważne: to już formalne postępowanie i nadal niezamknięta luka regulacyjna.
+- Każdy nowy ruch śledczy natychmiast staje się polityczny.
 
-## 5. Polska - krypto
+## 5. Polska - Pytel
 
-- TVN24: Sejm znów nie zdołał odrzucić prezydenckiego weta do ustawy o rynku kryptoaktywów.
-- Wynik głosowania: 241 za, 198 przeciw, 3 wstrzymujące się.
-- W tle Zondacrypto, areszt dla trzech podejrzanych i kolejne polityczne oskarżenia.
-- Dlaczego to ważne: spór dotyczy nie tylko rynku, ale też wiarygodności nadzoru i zaplecza politycznego.
+- Interia: Straż Graniczna nie pozwoliła generałowi Piotrowi Pytlowi wylecieć z Pyrzowic.
+- W systemie nadal widniał aktywny zakaz opuszczania kraju.
+- SG podkreśla, że nie doszło do zatrzymania i że wpis był stary, związany ze śledztwem umorzonym w 2024 roku.
+- Dlaczego to ważne: stary wpis w bazie może realnie zablokować człowieka i pokazać słabość obiegu danych państwa.
+- To przykład problemu z aktualnością danych, nie z nową oceną ryzyka.
 
-## 6. Polska - szkoła i integracja
+## 6. RCB
 
-- TVN24: nowy rok szkolny startuje dla 4,8 miliona uczniów i 715 tysięcy nauczycieli, z nową podstawą programową i zmianami w szkołach podstawowych.
-- PAP: od 1 września uczniowie z Ukrainy przechodzą na zwykłe zasady kształcenia cudzoziemców, z dodatkowymi godzinami polskiego i pomocą nauczyciela.
-- AP: shelter w Krakowie walczy o przetrwanie, bo spada finansowanie i rośnie niechęć wobec Ukraińców.
-- Dlaczego to ważne: Polska przechodzi z fazy nagłej pomocy do trudniejszej, długiej integracji.
+- RCB: 5 września uruchomiono alert o zagrożeniu z powietrza związanym z sytuacją nad Ukrainą, ale wysyłkę przerwano, gdy zagrożenie ustało.
+- Część odbiorców mogła dostać alarm i jego odwołanie, a część tylko komunikat o ustaniu zagrożenia.
+- Osobno, 6 września, wysłano alert o planowanych zrzutach szczepionek dla lisów w Podlaskiem na dni 7-9 września.
+- Dlaczego to ważne: komunikaty ostrzegawcze zmieniają się w czasie rzeczywistym i trzeba je czytać dosłownie.
+- Drobny komunikat sanitarny ma ten sam wymóg: czytać go dokładnie, nie tylko pobieżnie.
 
 ## Zakończenie
 
-Mamy dziś wspólny mianownik: wojna nadal wychodzi poza front i wchodzi w dyplomację, bezpieczeństwo, szkoły i politykę wewnętrzną. W następnym kroku trzeba sprawdzić, czy rozmowy w Kijowie dadzą coś więcej niż tylko kolejne deklaracje, i czy krajowe śledztwa oraz spór o kryptoaktywa ruszą dalej.
+Wspólny mianownik jest dziś prosty: dyplomacja się porusza, ale systemy państwa pozostają pod dużą presją. W Kijowie chodzi o zimowe wsparcie i obronę powietrzną. W Ormuzie o bezpieczeństwo żeglugi i koszt energii. W Niemczech o granice politycznego centrum. W Polsce o to, czy instytucje, od prokuratury po RCB, działają równo z rzeczywistością. Wrócimy jutro i sprawdzimy, czy za tymi sygnałami pójdą konkretne decyzje.
