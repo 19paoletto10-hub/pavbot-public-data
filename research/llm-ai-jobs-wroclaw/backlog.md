@@ -4,7 +4,7 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
-| High | Monitor September 6 board refresh | Just Join IT, Pracuj.pl, Comarch and EPAM all surfaced fresh agentic / platform / evaluation leads in today's crawl. | Re-check those exact cards next run for expiry, salary drift and canonical-page emergence. | Open |
+| High | Monitor September 7 board refresh | Just Join IT and Pracuj.pl both expanded again today, with fresh agentic / platform / evaluation tails and a bigger Wrocław board surface. | Re-check those exact cards next run for expiry, salary drift and canonical-page emergence. | Open |
 | Medium | Track Comarch AI-native family | Comarch's canonical `DevOps Engineer (AI-native Stack)` remains live, and the seniors page now exposes `Full-stack Developer (Agentic AI)` while `.NET Developer (Agentic AI)` is already inactive. | Re-check whether the AI-native family stays public and whether the Wrocław wording remains stable. | Open |
 | Medium | Track EPAM AI-native additions | EPAM added `Senior AI-Native Engineer`, `Senior AI & Agentic Systems Engineer (Java)` and `Senior .NET Engineer with AI`, all with Wrocław-hybrid wording. | Re-check whether those roles remain live and whether board mirrors align with the canonical pages. | Open |
 | High | Monitor August 29 board refresh | Just Join IT added or reshaped a new cluster around Databricks, AI security, AI platform, founding-engineer and agentic/full-stack work, while `Senior MLOps Engineer` lost the earlier `Google Cloud` framing and public salary. | Re-check those exact cards next run for expiry, salary drift and whether canonical employer pages appear. | Open |
