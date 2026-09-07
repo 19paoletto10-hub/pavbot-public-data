@@ -1,5 +1,13 @@
 # Puls Dnia News Backlog
 
+# 2026-09-07 06:02
+
+- Watch whether IMGW or RCB tighten, shorten or cancel the current weather warnings.
+- Watch whether prokuratura adds a formal next move in Zondacrypto.
+- Watch whether the Indonezja disruption gets a wider aviation follow-up or route changes.
+- Watch whether Kyiv, Moscow or the White House publish a more concrete next step after the envoys' talks.
+- Watch whether OpenAI, Hugging Face or another official source responds to the BBC tech report.
+
 # 2026-09-06 00:02
 
 - Watch whether prokuratura adds zarzuty or a second procedural move in Zondacrypto.
