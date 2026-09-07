@@ -2,7 +2,7 @@
 
 ## Current State
 
-Slot 2026-09-07 12:06 przesuwa feed z porannych zdarzeń drogowych w stronę spraw kryminalnych i sądowych w Polsce oraz twardych alertów świata: lawiny w Rosji, eksplozji w Meksyku, zakłóceń lotniczych w Indonezji, huraganu Lowell na Hawajach, sygnałów Trumpa wobec Ukrainy i symbolicznej polityki w USA. Nadal dominuje operacyjny, bezpieczeństwowy charakter pulsu.
+Slot 2026-09-07 15:03 dorzuca do porannego zestawu nowy krajowy wątek szpitalny z Wrocławia, utrzymuje sprawy Zondacrypto i granatnika w trybie proceduralnym, a po stronie świata wzmacnia miks polityki, AI i alertów: AfD, izraelski ostrzał w Libanie, zwrot Volkswagena ku obronności, odwetowe cła Kanady, ostrzeżenie OpenAI, incydent z agentami oraz ciężkie ostrzeżenia pogodowe na Hawajach, w Indonezji i Japonii. Nadal dominuje operacyjny, bezpieczeństwowy charakter pulsu.
 
 ## Data Shape
 
@@ -25,5 +25,5 @@ The newest valid JSON is shown as paired cards under `Dzisiaj`. Tapping a card o
 - Keep at least two `Polska` or `Polityka` items and at least two `Świat` items to protect the home feed balance.
 - Prefer operational alerts, public safety, travel disruption, platform risk and civil-protection stories over softer feature content.
 - Favor stories with concrete official or primary links when they are available alongside TVN24, BBC or CNN.
-- Current emphasis should stay on criminal proceedings, public safety, volcanic and hurricane alerts, Ukraine signaling, symbol politics in the US, trade frictions and AI listing risk.
-- Keep Gdańsk safety, Zondacrypto, granatnik, Indonesia-air-closure, Hawaii-hurricane and Anthropic cards ready for the next carousel refresh.
+- Current emphasis should stay on criminal proceedings, public safety, volcanic and hurricane alerts, EU/US trade friction, AI safety and industrial defense conversion.
+- Keep Zondacrypto, granatnik, Wrocław hospital, Indonesia-air-closure, Hawaii-hurricane, Japan-rain and OpenAI-agents cards ready for the next carousel refresh.

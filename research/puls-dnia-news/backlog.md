@@ -1,5 +1,14 @@
 # Puls Dnia News Backlog
 
+# 2026-09-07 15:03
+
+- Watch whether Roman Ż. gets a detention motion, plea detail or a fuller prokuratura statement.
+- Watch whether the Wrocław hospital case gets more detail from prokuratura or the `Uwaga!` report.
+- Watch whether the granatnik trial produces the first substantive testimony or another schedule note.
+- Watch whether Hawaii, Indonesia or Japan changes alert levels before the next slot.
+- Watch whether Reuters, BBC or OpenAI adds a tighter follow-up on the agent incident.
+- Watch whether VW, Canada or the EU add concrete follow-through on the industrial and trade stories.
+
 # 2026-09-07 12:06
 
 - Watch whether the Gdańsk police add a formal motive, weapon type or custody update.
