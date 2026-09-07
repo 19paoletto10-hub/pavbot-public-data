@@ -4,12 +4,12 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
-| High | Track GPT-6 Astra Copilot rollout | OpenAI launched Astra and GitHub is already shipping it in Copilot, so the main risk is adoption and admin-policy friction | Watch rollout breadth, usage-based billing impact and review approval behavior | Open |
-| High | Track Astra cyber gating | Astra is now live, so the question is whether the critical cyber threshold and monitoring alter enterprise uptake and later model stages | Watch whether safeguards expand to public products or future releases | Open |
-| High | Track OpenAI incident disclosure framework | OpenAI's wiki incident turns disclosure into a product and governance surface, not just a postmortem detail | Watch whether OpenAI publishes the framework and whether rivals mirror it | Open |
-| High | Track hybrid/local compute adoption | Perplexity, NVIDIA and Microsoft are pushing AI work onto Macs, local networks and workstation-class devices | Watch rollout breadth, hardware floors and enterprise uptake | Open |
-| Medium | Track Gemini Photos workflow rollout | Google Photos in Gemini Spark makes personal media an agent surface, not just storage | Watch rollout breadth, permission defaults and user adoption | Open |
-| High | Track U.S. school AI moratoria | NYCPS and LAUSD are tightening student-facing GenAI rules and could trigger copycats | Watch other districts, enforcement details and vendor response | Open |
+| High | Track OpenAI research automation | OpenAI now publicly frames coding agents, automated research intern and a March 2028 AI researcher target, so the question is whether the pacing story changes roadmap and safety messaging | Watch follow-up commentary, external validation and any changes to release cadence | Open |
+| High | Track Copilot Gemini 3.8 billing | GitHub is shipping Gemini 3.8 Flash in Copilot while reopening Business and Enterprise signups, so enterprise adoption now depends on model mix, cost and admin controls | Watch rollout breadth, billing pass-through and policy changes | Open |
+| High | Track US-China AI safety talks | Tentative bilateral AI safety talks would create a rare diplomatic channel for cyber and model-risk coordination | Watch confirmation, agenda detail and follow-on coverage | Open |
+| High | Track Cybercab NHTSA probe | NHTSA's Audit Query turns Tesla's Cybercab self-certification into a concrete regulatory watchpoint | Watch the audit outcome, Tesla response and any FMVSS implications | Open |
+| High | Track publisher lawsuit fallout | The Seattle Times and Newsday suit adds another front in the training-data and output licensing fight | Watch complaint detail, discovery scope and settlement signals | Open |
+| Medium | Track consumer AI advice risk | Mount Shasta shows how AI trip planning can fail in high-stakes outdoor safety work | Watch similar incidents and whether vendors add stronger guardrails | Open |
 | Medium | Track AI music endorsement safeguards | Suno's Mary J Blige episode shows consent and likeness control are now a real product risk | Watch label policies, consent flows and campaign disclosure norms | Open |
 | Medium | Track Android helper adoption | Google is turning Gemini into a practical helper for everyday phone tasks, so adoption and retention are the key unknowns | Watch rollout breadth, accessibility feedback and user retention | Open |
 | Medium | Track Sonos AI platform adoption | Sonos 27 makes AI control and agent connectors a first-class audio-platform feature | Watch 27mcp, headphone linking and user uptake | Open |

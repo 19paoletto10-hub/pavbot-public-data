@@ -1,0 +1,380 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-09-07",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Dzisiejszy poranny run przesuwa tech-news z samego rollout'u modeli w stronę jawnej debaty o tempo rozwoju, governance i billing. OpenAI publikuje An Alien Mind oraz Research acceleration, mówiąc wprost o recursive self-improvement, automatycznym research intern i celu automatycznego AI researcher do marca 2028. GitHub równolegle rozbudowuje Copilota o Gemini 3.8 Flash i porządkuje billing dla Business/Enterprise, więc walka o domyślny model i koszt użycia staje się równie ważna jak sama jakość modelu.",
+    "Drugą osią są sygnały regulacyjne i prawne. Reuters opisuje przygotowania USA i Chin do wrześniowych rozmów o AI safety, NHTSA otwiera audit query wobec Cybercaba Tesli, a Seattle Times i Newsday pozywają OpenAI oraz Microsoft. Na poziomie konsumenckim Mount Shasta przypomina, że AI advice wciąż bywa zbyt pewny siebie w wysokostawkowych decyzjach. Community signal na HN kręci się wokół tych samych tematów, a Product Hunt dla 2026-09-07 nie ma jeszcze postów, choć kategorie nadal są zdominowane przez AI agents i workflow automation."
+  ],
+  "summaryBullets": [
+    "AI: OpenAI publicznie przyspiesza rozmowę o RSI",
+    "Produkty: GitHub zamienia Copilota w wielomodelowy produkt z billingiem",
+    "Regulacje: USA i Chiny szykują AI safety talks"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-09-07-0800-0-openai-publicznie-przyspiesza-rozmowe-o-rsi-d09cc0c96d",
+      "section": "AI",
+      "title": "OpenAI publicznie przyspiesza rozmowę o RSI",
+      "standfirst": "OpenAI opublikowało An Alien Mind i Research acceleration, mówiąc o recursive self-improvement, automatycznym research intern i celu automatycznego AI researcher do marca 2028.",
+      "whatHappened": "OpenAI w tym samym dniu publikuje dwa teksty, które stawiają safety, monitorowanie i tempo rozwoju obok samego produktu.",
+      "whyItMatters": "To przesuwa debatę z pytania „co model potrafi” na pytanie „jak szybko system zaczyna napędzać własny postęp”.",
+      "deeperAnalysis": [
+        "W Research acceleration OpenAI mówi, że coding agents już zmieniają codzienną pracę researcherów. Ludzie piszą więcej kodu, uruchamiają więcej eksperymentów i powierzają agentom coraz bardziej złożone zadania, a firma twierdzi, że osiągnęła już własny cel automated research intern.",
+        "To ważne, bo ten tekst nie jest tylko o wydajności zespołu. OpenAI traktuje go jako publiczny snapshot drogi do systemu, który ma pomagać w samym rozwoju kolejnych modeli. Jeśli taki loop się utrzyma, tempo zmian zacznie zależeć nie tylko od ludzi i kapitału, ale też od jakości samego modelowego workflowu.",
+        "An Alien Mind jest bardziej ostrzegawczy. Pachocki pisze o machine intelligence, która staje się coraz trudniejsza do zrozumienia i coraz bardziej zdolna do recursive self-improvement. W tym ujęciu problemem nie jest pojedynczy model, tylko to, że kolejne iteracje mogą zacząć same przyspieszać własny rozwój.",
+        "Dla podcastu to mocny sygnał, bo OpenAI nie sprzedaje dziś wyłącznie capability. Sprzedaje też narrację o tym, jak społeczeństwo ma myśleć o tempie, ryzyku i granicach dalszego scale-upu. To już jest temat o governance, a nie tylko o benchmarkach."
+      ],
+      "contextPoints": [
+        "Coding agents są już częścią codziennej pracy researcherów OpenAI.",
+        "Firma mówi, że osiągnęła automated research intern i celuje w automated AI researcher do marca 2028.",
+        "Publiczny ton przesuwa się od product launch do jawnego pacingu rozwoju."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI: An Alien Mind",
+          "url": "https://openai.com/index/an-alien-mind/"
+        },
+        {
+          "title": "OpenAI: Research acceleration",
+          "url": "https://openai.com/index/research-acceleration-view-inside-openai/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "RSI",
+        "safety",
+        "research",
+        "agents"
+      ]
+    },
+    {
+      "id": "tech-news-2026-09-07-0800-1-github-zamienia-copilota-w-wielomodelowy-produkt-z-billingiem-6e86bc2a29",
+      "section": "Produkty",
+      "title": "GitHub zamienia Copilota w wielomodelowy produkt z billingiem",
+      "standfirst": "GitHub 3 września dodał Gemini 3.8 Flash do Copilota, z dostępnością dla Pro, Pro+, Max, Business i Enterprise oraz z usage-based billing do 31 grudnia 2026 r.",
+      "whatHappened": "Copilot staje się wielomodelową platformą z coraz mocniejszym modelem policy i bardziej precyzyjnym billingiem.",
+      "whyItMatters": "Enterprise adoption zaczyna zależeć nie tylko od jakości modelu, ale też od domyślnych zasad, kosztu i kontroli administracyjnej.",
+      "deeperAnalysis": [
+        "GitHub mówi, że Gemini 3.8 Flash dobrze wypadł w testach na terminal-based coding tasks i że jest dostępny w wielu powierzchniach pracy: VS Code, Visual Studio, Copilot CLI, cloud agent, app, JetBrains, Xcode i Eclipse. To nie jest pojedynczy feature, tylko kolejny model do wpięcia w istniejące workflowy programistów.",
+        "Równolegle pojawia się billing story. Model jest rozliczany w usage-based billing, a GitHub 3 września zaczyna też ponownie otwierać Copilot Business i Enterprise signups. W praktyce oznacza to, że administratorzy będą coraz mocniej decydować, jaki model jest domyślny, kto może z niego korzystać i jak szybko zaczyna się naliczać koszt.",
+        "To dobrze pokazuje, jak zmienia się rynek developer tools. Najmocniejszy model przestaje wystarczać jako produktowa odpowiedź. Liczy się cały pakiet: model mix, polityka organizacyjna, dostępność planów i to, jak gładko użytkownik przechodzi z testu do produkcji.",
+        "W tym sensie GitHub buduje Copilota bardziej jak zarządzaną platformę niż jak pojedynczego asystenta. To ma znaczenie także dla konkurentów, bo enterprise kupuje dziś nie tylko inteligencję, ale też przewidywalność kosztu i kontroli."
+      ],
+      "contextPoints": [
+        "Gemini 3.8 Flash jest dostępny w planach od Pro do Enterprise.",
+        "GitHub rozciąga rollout na IDE, CLI i cloud agent.",
+        "Business/Enterprise signups wracają z bardziej rygorystycznym account vetting i upfront charge."
+      ],
+      "sources": [
+        {
+          "title": "GitHub: Gemini 3.8 Flash is now available in GitHub Copilot",
+          "url": "https://github.blog/changelog/2026-09-03-gemini-3-8-flash-is-now-available-in-github-copilot/"
+        },
+        {
+          "title": "GitHub: Reopening Copilot Business and Enterprise signups",
+          "url": "https://github.blog/changelog/2026-09-03-reopening-copilot-business-and-enterprise-signups/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "GitHub",
+        "Copilot",
+        "Gemini",
+        "billing",
+        "developer tools"
+      ]
+    },
+    {
+      "id": "tech-news-2026-09-07-0800-2-usa-i-chiny-szykuja-ai-safety-talks-bac3952092",
+      "section": "Regulacje",
+      "title": "USA i Chiny szykują AI safety talks",
+      "standfirst": "Reuters raportuje, że USA i Chiny przygotowują pierwsze bilateralne rozmowy wyłącznie o AI safety, tentatywnie w połowie września.",
+      "whatHappened": "Dwa największe mocarstwa technologiczne rozważają osobny kanał rozmów o ryzykach modeli, cyberatakach i threat intelligence.",
+      "whyItMatters": "To jeden z niewielu sygnałów, że AI safety może wejść na poziom formalnej dyplomacji, a nie tylko branżowych oświadczeń.",
+      "deeperAnalysis": [
+        "Według Reutersa agenda rozmów ma obejmować monitoring AI-driven cyberattacks, self-regulation w laboratoriach i wymianę threat intelligence. To jest istotne, bo cyber pozostaje jednym z najbardziej namacalnych punktów styku między frontier AI a polityką państw.",
+        "Równocześnie tekst jest ostrożny: White House nie potwierdził jeszcze terminu, a same rozmowy są przedstawione jako tentative. W praktyce oznacza to, że temat jest ważny nie dlatego, że już jest zamknięty, tylko dlatego, że wraca do realnego bilateralnego stołu.",
+        "Jeśli taki format się utrzyma, może stać się wzorem dla kolejnych rozmów o modelach, export controls i bezpieczeństwie infrastruktury AI. To ważne także dlatego, że rynek coraz częściej widzi AI nie jako lokalną innowację produktową, ale jako element strategii bezpieczeństwa narodowego.",
+        "Na dziś to jeszcze sygnał, nie rozstrzygnięcie. Ale sam fakt, że media piszą o osobnych AI safety talks między USA i Chinami, pokazuje jak bardzo zmieniła się waga tego tematu w ciągu ostatnich miesięcy."
+      ],
+      "contextPoints": [
+        "Rozmowy są tentatywne i nie mają jeszcze publicznego potwierdzenia White House.",
+        "Cyberattack monitoring jest centralnym punktem agendy.",
+        "Potencjalny format może stać się wzorem dla przyszłej AI diplomacy."
+      ],
+      "sources": [
+        {
+          "title": "Reuters via Marketscreener",
+          "url": "https://hk.marketscreener.com/news/us-china-gear-up-for-mid-september-ai-safety-talks-ce785bdbd98ff225"
+        },
+        {
+          "title": "Indian Express",
+          "url": "https://indianexpress.com/article/technology/tech-news-technology/us-china-gear-up-for-mid-september-ai-safety-talks-10866462/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Reuters",
+        "USA",
+        "Chiny",
+        "AI safety",
+        "cyber",
+        "diplomacy"
+      ]
+    },
+    {
+      "id": "tech-news-2026-09-07-0800-3-cybercab-wpada-pod-audit-nhtsa-c7da6f86da",
+      "section": "Regulacje",
+      "title": "Cybercab wpada pod audit NHTSA",
+      "standfirst": "NHTSA 4 września otworzyła Audit Query wobec Tesli, aby sprawdzić self-certification Cybercaba po komercyjnym deploymentcie w Austin.",
+      "whatHappened": "Tesla wprowadziła driverless Cybercab do ruchu, a federalny regulator wszczął formalny przegląd certyfikacji.",
+      "whyItMatters": "Autonomiczne auta przechodzą z demo do regulowanej rzeczywistości, a brak klasycznych kontrolek od razu staje się problemem compliance.",
+      "deeperAnalysis": [
+        "NHTSA pisze wprost, że zbada podstawy techniczne i proces, na którym Tesla oparła swoją deklarację zgodności z FMVSS. Szczególnie ważne jest pytanie, czy firma uznała niektóre standardy za nieistotne dla pojazdu całkowicie pozbawionego kierownicy i pedałów.",
+        "Równocześnie Tesla Support pokazuje, że Cybercab nie jest już czystą futurystyczną makietą. Strona FAQ mówi o limited areas of Austin, o możliwości zamówienia ride oraz o zainteresowaniu fleet i commercial purchase. To sprawia, że probe NHTSA dotyczy realnego produktu, a nie tylko prezentacji.",
+        "W szerszym ujęciu ten case pokazuje napięcie między szybkim rolloutem a starymi standardami bezpieczeństwa. Tesla próbuje iść ścieżką self-certification, podczas gdy regulator przypomina, że istniejące normy nadal obowiązują, dopóki nie zostaną formalnie zmienione.",
+        "Jeśli sprawa się przeciągnie, Cybercab może stać się testem nie tylko dla Tesli, ale też dla całej kategorii driverless rides. To ważny sygnał dla rynku, bo pokazuje, że komercjalizacja autonomy zaczyna być równie mocno prawnym i proceduralnym problemem jak technicznym."
+      ],
+      "contextPoints": [
+        "NHTSA prowadzi Audit Query zamiast jedynie nieformalnego zapytania.",
+        "Tesla już sprzedaje i promuje limited ride access oraz fleet interest.",
+        "Spór dotyczy pojazdu bez standardowych kontrolek, więc kwestia FMVSS jest centralna."
+      ],
+      "sources": [
+        {
+          "title": "NHTSA",
+          "url": "https://www.nhtsa.gov/press-releases/investigation-tesla-cybercab-self-certification"
+        },
+        {
+          "title": "Tesla Support",
+          "url": "https://www.tesla.com/support/robotaxi/cybercab"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Tesla",
+        "Cybercab",
+        "NHTSA",
+        "robotaxi",
+        "AV"
+      ]
+    },
+    {
+      "id": "tech-news-2026-09-07-0800-4-gazety-pozywaja-openai-i-microsoft-519813c13b",
+      "section": "Regulacje",
+      "title": "Gazety pozywają OpenAI i Microsoft",
+      "standfirst": "Seattle Times i Newsday pozywają OpenAI oraz Microsoft, twierdząc że ich treści były używane bez zgody do trenowania modeli i generowania odpowiedzi.",
+      "whatHappened": "Kolejni wydawcy dokładają sprawę sądową do szerokiego sporu o training data i outputy modeli.",
+      "whyItMatters": "To kolejny front presji na sposób, w jaki AI korzysta z treści dziennikarskich i komercyjnych.",
+      "deeperAnalysis": [
+        "The Verge opisuje, że powodowie chcą m.in. zniszczenia skopiowanych treści, zestawów danych i modeli zawierających ich materiał. W ich narracji problemem jest nie tylko sam trening, ale też to, że chatboty mogą reprodukować lub parafrazować treści w sposób konkurujący z ruchem na stronach.",
+        "Microsoft jest stroną pozwu, bo Copilot korzysta z technologii OpenAI. To ważne, bo sprawa nie dotyczy już wyłącznie jednego laboratorium frontier, tylko całego łańcucha dystrybucji: modeli, integracji produktowych i narzędzi enterprise.",
+        "To nie jest odosobniony przypadek. Spór o copyright wobec AI już obejmuje New York Times, innych wydawców i kolejne grupy mediów. Każdy taki pozew zwiększa presję na licencje, retrievery, filtrację outputów i bardziej precyzyjne rozdzielenie między public content a chronione treści.",
+        "Dla rynku najważniejsze jest to, że kwestia danych treningowych nie znika wraz z nowymi modelami. Wraca przy każdej większej premierze, bo to właśnie tam krzyżują się produkt, prawo i ekonomia mediów."
+      ],
+      "contextPoints": [
+        "Pozew dotyczy zarówno OpenAI, jak i Microsoftu.",
+        "Główny spór dotyczy treningu, reprodukcji treści i utraty trafficu.",
+        "To kolejny element długiego łańcucha pozwów przeciw frontier AI."
+      ],
+      "sources": [
+        {
+          "title": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/990932/seattle-times-newsday-lawsuit-openai-microsoft"
+        },
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/05/seattle-times-and-newsday-are-the-latest-publications-to-sue-openai-and-microsoft/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "Microsoft",
+        "copyright",
+        "publishers",
+        "Copilot"
+      ]
+    },
+    {
+      "id": "tech-news-2026-09-07-0800-5-gemini-jako-zly-doradca-w-gorach-c6cd5d5733",
+      "section": "AI",
+      "title": "Gemini jako zły doradca w górach",
+      "standfirst": "ABC News opisuje rescue trzech hikerów z Mount Shasta po tym, jak polegali na Gemini przy planowaniu trasy i ekwipunku.",
+      "whatHappened": "AI advice doprowadziło do złego przygotowania i realnej akcji ratunkowej w górach.",
+      "whyItMatters": "To prosty przykład, że consumer AI wciąż nie nadaje się do samodzielnego podejmowania wysokostawkowych decyzji.",
+      "deeperAnalysis": [
+        "Według ABC News grupa planowała ośmiogodzinną wspinaczkę, ale dotarła na szczyt dopiero wieczorem i zaczęła schodzić po zmroku. W efekcie jeden z uczestników doznał urazu kolana, a cała trójka spędziła noc w trudnym terenie, zanim dotarli do nich rangersi.",
+        "Najmocniejszy fragment tej historii nie dotyczy samego błędu modelu, tylko sposobu użycia. Sheriff wprost powiedział, że nie należy polegać wyłącznie na AI przy planowaniu takiej wyprawy, a lokalna wiedza i kontakt z ranger station są ważniejsze niż płynna odpowiedź chatbota.",
+        "To ważne dla naszego tematu, bo consumer AI coraz częściej sprzedaje się jako asystent decyzji, nie tylko generator tekstu. Im bardziej modele wychodzą poza czat, tym częściej trzeba patrzeć na to, czy działają w zadaniach, gdzie lokalny kontekst i bezpieczeństwo są kluczowe.",
+        "Mount Shasta jest więc nie tylko ciekawostką. To konkretna ilustracja granicy, której nie widać w demo: model może zabrzmieć pewnie, a mimo to dać fatalny praktyczny wynik."
+      ],
+      "contextPoints": [
+        "Hikers otrzymali od Gemini zbyt mało konserwatywne wskazówki co do food i water.",
+        "Wyprawa przeciągnęła się do nocy i zakończyła rescue.",
+        "Lokalny sheriff wprost ostrzegł przed poleganiem wyłącznie na AI."
+      ],
+      "sources": [
+        {
+          "title": "ABC News",
+          "url": "https://abcnews.com/US/3-hikers-ai-plan-trip-rescued-after-becoming/story?id=136176177"
+        },
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/05/hikers-rescued-after-using-google-gemini-for-planning/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Google",
+        "Gemini",
+        "consumer AI",
+        "safety",
+        "outdoors"
+      ]
+    },
+    {
+      "id": "tech-news-2026-09-07-0800-6-hn-i-product-hunt-nadal-premiuja-agentowe-workflowy-7faa91ac24",
+      "section": "Produkty",
+      "title": "HN i Product Hunt nadal premiują agentowe workflowy",
+      "standfirst": "Hacker News front page z 2026-09-06 UTC promuje An Alien Mind, Research acceleration: The view inside OpenAI i GPT-6 Astra on robot arms, a Product Hunt dla 2026-09-07 pokazuje No posts for this date.",
+      "whatHappened": "Społeczność nadal sygnalizuje popyt na safety, review i agentowe narzędzia, ale PH na dziś nie pokazuje świeżych launchy.",
+      "whyItMatters": "To czytelny sygnał, że rynek nadal nagradza workflowy i kontrolę, a nie sam szum modelowy.",
+      "deeperAnalysis": [
+        "Na Hacker News widać dziś wyraźnie, że najgłośniejsze tematy krążą wokół OpenAI safety/research i praktycznego użycia modeli. Wśród wysokich pozycji są zarówno An Alien Mind, jak i Research acceleration, a także GPT-6 Astra on robot arms, więc dyskusja nie zatrzymała się na samej premierze modelu.",
+        "Product Hunt z kolei dla 2026-09-07 pokazuje No posts for this date, ale jego kategorie i trending products nadal krążą wokół Vibe Coding Tools, AI Coding Agents, AI Workflow Automation, AI Dictation Apps oraz Code Review Tools. To znaczy, że nawet przy pustym daily launch board community nadal widzi AI przez pryzmat narzędzi do pracy.",
+        "Z perspektywy podcastu to użyteczny filtr. HN jest dziś bardziej safety/research-heavy niż typowy model hype, a PH potwierdza, że najbardziej nośne pozostają produkty, które da się osadzić w procesie, ocenić i kontrolować.",
+        "Krótko: popyt nie zniknął, ale przesunął się z abstrakcyjnego „wow” w stronę workflowów, agentów i odpowiedzialnego użycia."
+      ],
+      "contextPoints": [
+        "HN front page jest dziś zdominowany przez OpenAI safety i research.",
+        "Product Hunt na 2026-09-07 nie ma jeszcze postów, ale utrzymuje agentowe kategorie.",
+        "Najmocniejsze sygnały społecznościowe dotyczą kontroli, review i task completion."
+      ],
+      "sources": [
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/front"
+        },
+        {
+          "title": "Product Hunt",
+          "url": "https://www.producthunt.com/leaderboard/daily/2026/9/7"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Hacker News",
+        "Product Hunt",
+        "agents",
+        "workflow",
+        "community"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "OpenAI publicznie przyspiesza rozmowę o RSI",
+      "rationale": "Nowe teksty z 6 września nie tylko opisują safety, ale też mówią o automated research intern i March 2028, więc temat wykracza poza zwykły launch modelu.",
+      "sourcesLabel": "OpenAI"
+    },
+    {
+      "priority": "High",
+      "title": "GitHub zamienia Copilota w wielomodelowy produkt z billingiem",
+      "rationale": "Gemini 3.8 Flash, Astra i nowe zasady sign-up / billing pokazują, że platforma developer tools walczy już o domyślny model i politykę kosztu.",
+      "sourcesLabel": "GitHub"
+    },
+    {
+      "priority": "High",
+      "title": "USA i Chiny szykują AI safety talks",
+      "rationale": "Jeśli bilateralne rozmowy dojdą do skutku, AI safety dostanie rzadki kanał dyplomatyczny z cyber jako pierwszym wspólnym problemem.",
+      "sourcesLabel": "Reuters / Indian Express"
+    },
+    {
+      "priority": "High",
+      "title": "Cybercab wpada pod audit NHTSA",
+      "rationale": "Tesla przenosi robotaxi z demo do regulowanej rzeczywistości, a self-certification bez klasycznych kontroli może stać się dużym testem dla rynku AV.",
+      "sourcesLabel": "NHTSA / Tesla"
+    },
+    {
+      "priority": "High",
+      "title": "OpenAI i Microsoft mają kolejny pozew gazet",
+      "rationale": "Seattle Times i Newsday dokładają presję na training data, outputs i Copilota, więc spór o copyright staje się coraz szerszy.",
+      "sourcesLabel": "The Verge / TechCrunch"
+    },
+    {
+      "priority": "Medium",
+      "title": "Gemini jako zły doradca w górach",
+      "rationale": "Mount Shasta daje prosty, zrozumiały przykład, że AI advice w wysokim ryzyku wymaga dalszej weryfikacji i lepszych guardrails.",
+      "sourcesLabel": "ABC News / TechCrunch"
+    },
+    {
+      "priority": "Medium",
+      "title": "HN i Product Hunt nadal premiują agentowe workflowy",
+      "rationale": "HN dziś promuje OpenAI safety/research, a PH nie ma jeszcze postów na 2026-09-07, więc community sygnalizuje mniej hype'u, więcej kontroli i agentów.",
+      "sourcesLabel": "Hacker News / Product Hunt"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "OpenAI: An Alien Mind",
+      "url": "https://openai.com/index/an-alien-mind/"
+    },
+    {
+      "title": "OpenAI: Research acceleration",
+      "url": "https://openai.com/index/research-acceleration-view-inside-openai/"
+    },
+    {
+      "title": "GitHub: Gemini 3.8 Flash in Copilot",
+      "url": "https://github.blog/changelog/2026-09-03-gemini-3-8-flash-is-now-available-in-github-copilot/"
+    },
+    {
+      "title": "GitHub: Reopening Copilot Business and Enterprise signups",
+      "url": "https://github.blog/changelog/2026-09-03-reopening-copilot-business-and-enterprise-signups/"
+    },
+    {
+      "title": "Reuters via Marketscreener",
+      "url": "https://hk.marketscreener.com/news/us-china-gear-up-for-mid-september-ai-safety-talks-ce785bdbd98ff225"
+    },
+    {
+      "title": "Indian Express",
+      "url": "https://indianexpress.com/article/technology/tech-news-technology/us-china-gear-up-for-mid-september-ai-safety-talks-10866462/"
+    },
+    {
+      "title": "NHTSA",
+      "url": "https://www.nhtsa.gov/press-releases/investigation-tesla-cybercab-self-certification"
+    },
+    {
+      "title": "Tesla Support",
+      "url": "https://www.tesla.com/support/robotaxi/cybercab"
+    },
+    {
+      "title": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/990932/seattle-times-newsday-lawsuit-openai-microsoft"
+    },
+    {
+      "title": "TechCrunch",
+      "url": "https://techcrunch.com/2026/09/05/seattle-times-and-newsday-are-the-latest-publications-to-sue-openai-and-microsoft/"
+    },
+    {
+      "title": "ABC News",
+      "url": "https://abcnews.com/US/3-hikers-ai-plan-trip-rescued-after-becoming/story?id=136176177"
+    },
+    {
+      "title": "TechCrunch",
+      "url": "https://techcrunch.com/2026/09/05/hikers-rescued-after-using-google-gemini-for-planning/"
+    },
+    {
+      "title": "Hacker News",
+      "url": "https://news.ycombinator.com/front"
+    },
+    {
+      "title": "Product Hunt",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/9/7"
+    }
+  ]
+}
