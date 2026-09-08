@@ -1,5 +1,16 @@
 # Puls Dnia News Backlog
 
+# 2026-09-08 12:01
+
+- Watch whether Roman Ż. gets formal charges or a broader prokuratura statement in Zondacrypto.
+- Watch whether the PKOl prezydium turns the pressure into a formal decision on leadership.
+- Watch whether Canada, Bombardier or the White House add a clearer response to the tariff escalation.
+- Watch whether Ukraine names a successor after the prosecutor general resignation or adds more corruption details.
+- Watch whether the UK publishes the exact scope of the West Bank sanctions.
+- Watch whether Indonesia keeps airports open or tightens restrictions again after the ash disruption.
+- Watch whether Meta responds to the Instagram ransom claims or issues a clearer anti-scam notice.
+- Watch whether Mistral publishes official financing details or a new product roadmap.
+
 # 2026-09-08 09:02
 
 - Watch whether the Sejm financing reform becomes a formal draft or only a trial balloon.

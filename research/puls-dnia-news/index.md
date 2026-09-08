@@ -2,7 +2,7 @@
 
 ## Current State
 
-Slot 2026-09-08 09:02 przesuwa ciężar na reformę finansowania posłów, płacę minimalną, nocny atak na Kijów i polską reakcję lotniczą, a także kanadyjskie cła, Bombardiera, Indonezję, OpenAI, Instagram, ceny paliw w USA i skok sprzedaży nowych mieszkań. W tle pozostają alerty pogodowe i geopolityczne z Nepalu oraz Zachodniego Brzegu.
+Slot 2026-09-08 12:01 przesuwa ciężar na Zondacrypto, PKOl, obowiązujące cła Kanady, groźbę wobec Bombardiera, kolejny rosyjski nalot na Kijów, dymisję prokuratora generalnego Ukrainy, Zachodni Brzeg, Indonezję, rekordowe finansowanie Mistral AI oraz platformowe ryzyka na Instagramie. W tle pozostają ceny ropy, brazylijski eksport surowca i techniczny spór o kierunek europejskiej AI.
 
 ## Data Shape
 
@@ -25,5 +25,5 @@ The newest valid JSON is shown as paired cards under `Dzisiaj`. Tapping a card o
 - Keep at least two `Polska` or `Polityka` items and at least two `Świat` items to protect the home feed balance.
 - Prefer operational alerts, public safety, travel disruption, platform risk and civil-protection stories over softer feature content.
 - Favor stories with concrete official or primary links when they are available alongside TVN24, BBC or CNN.
-- Current emphasis should stay on Sejm finance, płaca minimalna, Kijów, kanadyjskie cła, Bombardier, AI safety, Instagram platform risk, indonezyjskie alerty i ceny mieszkań.
-- Keep Sejm, płaca minimalna, Kijów, Kanada, Bombardier, Indonezja, OpenAI, Instagram, ceny paliw i mieszkania ready for the next carousel refresh.
+- Current emphasis should stay on Zondacrypto, PKOl, Kanada, Bombardier, Kijów, Ukraina, Zachodni Brzeg, Indonezja, Mistral, Instagram and global energy prices.
+- Keep the current trade, safety and technology balance ready for the next carousel refresh.
