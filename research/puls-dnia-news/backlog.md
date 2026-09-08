@@ -1,5 +1,14 @@
 # Puls Dnia News Backlog
 
+# 2026-09-08 06:02
+
+- Watch whether Kraków publishes a formal final list of exclusions or any appeal text.
+- Watch whether Domański and Pełczyńska-Nałęcz turn the school-meals dispute into a broader coalition fight.
+- Watch whether Canada's counter-tariffs and the Bombardier threat get a formal corporate or government response.
+- Watch whether Hawaii, Japan or Indonesia changes alert levels before the next slot.
+- Watch whether OpenAI, ESA or Reuters adds a clearer follow-up on the incident and the model-evaluation response.
+- Watch whether Kyiv's air-defense reaction leads to another Polish or NATO statement.
+
 # 2026-09-07 21:01
 
 - Watch whether Kraków confirms an appeal or final re-count on the candidate signatures.

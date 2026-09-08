@@ -2,7 +2,7 @@
 
 ## Current State
 
-Slot 2026-09-07 21:01 przesuwa ciężar z porannego pakietu prokuratorsko-sądowego na krajową politykę i pogodę: Tusk ostrzy spór o AfD, Kraków weryfikuje podpisy kandydatów, a Black Hawk i wichury trzymają część krajowych alertów. W tle pozostają wojna dyplomatyczna wokół Ukrainy, VW, Kanada, OpenAI, Spectrum oraz wysokie alerty z Hawajów, Indonezji i Japonii.
+Slot 2026-09-08 06:02 przesuwa ciężar z wieczornego pakietu AfD, Krakowa i Black Hawka na Domańskiego, krakowskie wyłączenie kandydata Konfederacji, ceny paliw, koszty klimatu oraz świeże alerty wokół Kijowa, Hawajów, Japonii i Indonezji. W tle pozostają Bombardier, kanadyjskie cła, OpenAI i lokalne szkody po wichurze.
 
 ## Data Shape
 
@@ -25,5 +25,5 @@ The newest valid JSON is shown as paired cards under `Dzisiaj`. Tapping a card o
 - Keep at least two `Polska` or `Polityka` items and at least two `Świat` items to protect the home feed balance.
 - Prefer operational alerts, public safety, travel disruption, platform risk and civil-protection stories over softer feature content.
 - Favor stories with concrete official or primary links when they are available alongside TVN24, BBC or CNN.
-- Current emphasis should stay on political friction around AfD, court and election procedure in Kraków, weather and wind damage, EU/US trade friction, AI safety, industrial defense conversion and tropical alerts.
-- Keep Tusk-AfD, Kraków signatures, Black Hawk, wind damage, IMGW forecast, OpenAI-agents, Spectrum, VW-defense, Canada-tariffs, Hawaii-hurricane, Indonesia-air-closure and Japan-rain cards ready for the next carousel refresh.
+- Current emphasis should stay on Domański, Kraków, prices of fuel and climate costs, EU/US trade friction, AI safety and tropical alerts.
+- Keep Domański, Kraków, mStłuczka, paliwa, klimat, Bombardiera, kanadyjskie cła, Hawaje, Japonię, Indonezję, OpenAI and wind-damage cards ready for the next carousel refresh.
