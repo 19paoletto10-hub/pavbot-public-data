@@ -4,6 +4,8 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Monitor September 8 board contraction | Just Join IT contracted from 185 to 130 offers, `AI Transformation Lead` dropped off the current surface, and the visible tail is now more MLOps/security/platform-heavy. | Re-check the current Just Join IT board next run for further rotation, expiry and salary drift. | Open |
+| Medium | Validate HIBERUS and KYOTU stability | These are the clearest current Wrocław / remote leads from Pracuj.pl, but both still need another crawl for expiry and canonical-page emergence. | Re-check whether `AI Process Engineer / AI Scientist (AI Platform Engineering)` and `AI/ML Engineer` stay public and keep their current wording. | Open |
 | High | Monitor September 7 board refresh | Just Join IT and Pracuj.pl both expanded again today, with fresh agentic / platform / evaluation tails and a bigger Wrocław board surface. | Re-check those exact cards next run for expiry, salary drift and canonical-page emergence. | Open |
 | Medium | Track Comarch AI-native family | Comarch's canonical `DevOps Engineer (AI-native Stack)` remains live, and the seniors page now exposes `Full-stack Developer (Agentic AI)` while `.NET Developer (Agentic AI)` is already inactive. | Re-check whether the AI-native family stays public and whether the Wrocław wording remains stable. | Open |
 | Medium | Track EPAM AI-native additions | EPAM added `Senior AI-Native Engineer`, `Senior AI & Agentic Systems Engineer (Java)` and `Senior .NET Engineer with AI`, all with Wrocław-hybrid wording. | Re-check whether those roles remain live and whether board mirrors align with the canonical pages. | Open |

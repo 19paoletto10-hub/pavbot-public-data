@@ -4,6 +4,8 @@ Last updated: 2026-09-07 15:43 CEST
 
 ## Current Understanding
 
+Runda z `2026-09-08 15:45 CEST` jest materialna, bo Just Join IT skurczył board z `185` do `130` ofert AI/ML dla Wrocławia, a `AI Transformation Lead` nie jest już widoczny na aktualnej powierzchni. Widoczny tail przesunął się bardziej w stronę MLOps, security i platform work, z `Senior MLOps Engineer (Google Cloud)`, `Senior AI Security Engineer – Machine Learning & Infrastructure`, `AI Process Engineer / AI Scientist`, `AI and Systems Integrations Lead`, `Senior Agentic Automation Engineer` i `Senior Copilot Developer` jako najciekawszymi sygnałami. `Pracuj.pl` nadal daje dwa czytelne, bieżące leady z Wrocławia / remote: `HIBERUS AI Process Engineer / AI Scientist (AI Platform Engineering)` oraz `KYOTU AI/ML Engineer`, a `Comarch` i `EPAM` pozostają stabilnymi kanonicznymi anchorami.
+
 Runda z `2026-09-07 15:43 CEST` jest materialna, bo Just Join IT pokazuje już `185` ofert AI/ML dla Wrocławia i dalej przesuwa board w stronę agentic, Copilot, LLMOps i platform engineering. `Pracuj.pl` też urósł do `185` ofert i wystawia świeży tail wokół `Hiberus`, `KYOTU`, `Talentica`, `EPAM` i `Rossmann`, a `Comarch` oraz `EPAM` nadal dostarczają kanoniczne strony z czytelnym Wrocławiem w zasięgu.
 
 Runda z `2026-09-06 23:58 CEST` była materialna, bo Just Join IT nadal pokazywał szeroki board AI/ML dla Wrocławia z 134 ofertami i dołożył świeży tail wokół `AI Agent Middle/Senior Developer`, `Senior AI Platform Engineer` oraz `Senior AI Engineer (LLMs, Python)`. `Pracuj.pl` odświeżył board o role z evaluation, agentic systems i AI automation, `Comarch` potwierdził żywy canonical `DevOps Engineer (AI-native Stack)` oraz `Full-stack Developer (Agentic AI)`, a `EPAM` dodał `Senior AI-Native Engineer`, `Senior AI & Agentic Systems Engineer (Java)` i `Senior .NET Engineer with AI` z Wrocławiem w zasięgu hybrydy.
@@ -525,6 +527,7 @@ only when something meaningful changes.
 
 ## Review Notes
 
+- 2026-09-08: Just Join IT board contracted from 185 to 130 offers, `AI Transformation Lead` dropped off the current surface, and the clearest current Wrocław leads are HIBERUS and KYOTU.
 - 2026-08-04: Today's sweep added a new DataArt LLM orchestration role, a live deepsense.ai Senior Machine Learning Engineer (LLMs) card, and two Spyrosoft signals (Azure delivery and Lead AI Consultant); public salary now spans CHF, PLN and board-only snapshots in the same cluster.
 - 2026-08-07: current board added a broader agentic-platform / consulting burst around Addepto, Itransition, EPAM, cloudatus, Accenture and Team Up; keep duplicate suppression tight because several roles now appear first as board mirrors.
 - 2026-08-26: Just Join IT refreshed the Wrocław AI board with new Axabee, Integral Solutions and Centrum Respo leads; Sii returned as an active GenAI/cloud employer lead and EPAM kept live AI-native, platform and security roles in scope.

@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-09-08",
+  "runTime": "15:45",
+  "executiveSummary": "Dzisiejsza runda jest materialna. Just Join IT skurczył się z 185 do 130 ofert AI/ML dla Wrocławia, a AI Transformation Lead nie jest już widoczny na aktualnym boardzie. Widoczny tail przesunął się bardziej w stronę MLOps, security i platform work, z Senior MLOps Engineer (Google Cloud), Senior AI Security Engineer – Machine Learning & Infrastructure, AI Process Engineer / AI Scientist, AI and Systems Integrations Lead, Senior Agentic Automation Engineer i Senior Copilot Developer jako najciekawszymi sygnałami.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "AI Process Engineer / AI Scientist (AI Platform Engineering)",
+      "company": "HIBERUS POLAND SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ",
+      "location": "Wrocław, Stare Miasto / remote",
+      "workMode": "Remote",
+      "compensation": "20 160 - 28 560 zł netto (+ VAT) / mies.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Platform engineering, AI process work i delivery wokół AI operations, LLM, AI Agents, RAG, LangGraph, Python, AWS, Vector Databases, MLOps, Kubernetes i Docker.",
+      "whyInteresting": "To świeży board lead z czytelną stawką i wyraźnym AI platform scope.",
+      "uncertainty": "Board-first listing; canonical employer page was not confirmed in this run.",
+      "sourceURLs": [
+        "https://www.pracuj.pl/praca/ai-process-engineer-ai-scientist-ai-platform-engineering-wroclaw-plac-teatralny-1%2Coferta%2C1005024687"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "MLOps",
+        "Python",
+        "AWS"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "AI/ML Engineer",
+      "company": "KYOTU Technology sp. z o.o.",
+      "location": "Wrocław",
+      "workMode": "Wrocław",
+      "compensation": "140 - 180 PLN/h plus VAT",
+      "seniority": "Nieokreślony",
+      "fitSummary": "AI/ML role z bardziej wąskim zakresem niż wcześniejsze LLM listingi, ale nadal z czytelnym sygnałem ML.",
+      "whyInteresting": "To nowy lub przearanżowany publiczny lead z jasną stawką godzinową.",
+      "uncertainty": "Board-first i nadal wymaga kolejnego crawl'a dla stability i canonical detail.",
+      "sourceURLs": [
+        "https://www.pracuj.pl/praca/ai-ml-engineer-wroclaw%2Coferta%2C1005064168"
+      ],
+      "tags": [
+        "LLM"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "Senior MLOps Engineer (Google Cloud)",
+      "company": "Spyrosoft",
+      "location": "Wrocław",
+      "workMode": "Wrocław",
+      "compensation": "140 - 170 PLN/h",
+      "seniority": "Senior",
+      "fitSummary": "MLOps, Google Cloud i infrastruktura dla produkcyjnych systemów AI.",
+      "whyInteresting": "Ten lead wrócił do boardu i zachowuje najbardziej stabilny sygnał platformowy na Just Join IT.",
+      "uncertainty": "Board-first salary i tytuł mogą dalej driftować między rundami.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/spyrosoft-senior-mlops-engineer-google-cloud--wroclaw-ai"
+      ],
+      "tags": [
+        "MLOps"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "Senior AI and Systems Integrations Lead",
+      "company": "EPAM Systems",
+      "location": "Wrocław / hybrid",
+      "workMode": "Hybrid",
+      "compensation": "17 633 - 24 686,20 PLN/month",
+      "seniority": "Senior",
+      "fitSummary": "Analytical thinking, business analysis, AI i programming z naciskiem na integracje systemowe.",
+      "whyInteresting": "To nowy board lead z istotnym sygnałem AI i publicznym salary band.",
+      "uncertainty": "Board mirror only in this run; canonical page was not separately confirmed.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": []
+    },
+    {
+      "rank": 5,
+      "title": "Senior Agentic Automation Engineer",
+      "company": "EPAM Systems",
+      "location": "Wrocław / remote",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Senior",
+      "fitSummary": "Multi-agent systems, RAG, vector stores, embeddings, semantic search i Python.",
+      "whyInteresting": "To jeden z najczystszych sygnałów agentic system work na aktualnym boardzie.",
+      "uncertainty": "Salary is undisclosed and the board wording can drift quickly.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "Agentic AI",
+        "RAG",
+        "Python"
+      ]
+    }
+  ],
+  "changes": [
+    "Just Join IT nie tylko zmienił zestaw widocznych kart, ale też skurczył board z 185 do 130 ofert, a AI Transformation Lead wypadł z aktualnej powierzchni.",
+    "Senior MLOps Engineer (Google Cloud) wrócił do publicznego PLN/h, więc w tej rodzinie dalej widać drift sposobu prezentacji wynagrodzenia.",
+    "Pracuj.pl dostarcza dziś dwa wyraźniejsze, bieżące leady z Wrocławia / remote, zamiast szerokiego tailu z poprzedniej rundy.",
+    "Comarch i EPAM pozostały stabilnymi kanonicznymi punktami odniesienia."
+  ],
+  "risks": [
+    "Board-first role titles i widełki mogą dalej zmieniać się z dnia na dzień, więc dzisiejszy snapshot trzeba traktować jako krótkotrwały.",
+    "Część Pracuj.pl leadów nadal jest szersza niż czysty LLM engineering, więc fit wymaga ręcznej selekcji.",
+    "Pracuj.pl potrafi pokazywać mieszankę aktywnych, wygasłych i poza-scope kart w jednym widoku, więc źródła trzeba czytać ostrożnie."
+  ],
+  "recommendedActions": [
+    "Re-check Senior MLOps Engineer (Google Cloud) i aktualny tail Just Join IT na następnym runie pod kątem dalszego driftu tytułu i salary.",
+    "Re-check HIBERUS AI Process Engineer / AI Scientist oraz KYOTU AI/ML Engineer pod kątem expiry, location wording i canonical page emergence.",
+    "Keep Comarch i EPAM na krótkiej liście recurring sources, bo nadal dają najbardziej stabilny sygnał."
+  ],
+  "checkedSources": [
+    {
+      "title": "Just Join IT: Job offers AI/ML Wrocław",
+      "url": "https://justjoin.it/job-offers/wroclaw/ai",
+      "status": "checked"
+    },
+    {
+      "title": "Just Join IT: Senior MLOps Engineer (Google Cloud)",
+      "url": "https://justjoin.it/job-offer/spyrosoft-senior-mlops-engineer-google-cloud--wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Pracuj.pl: AI Process Engineer / AI Scientist (AI Platform Engineering)",
+      "url": "https://www.pracuj.pl/praca/ai-process-engineer-ai-scientist-ai-platform-engineering-wroclaw-plac-teatralny-1%2Coferta%2C1005024687",
+      "status": "checked"
+    },
+    {
+      "title": "Pracuj.pl: AI/ML Engineer, KYOTU Technology",
+      "url": "https://www.pracuj.pl/praca/ai-ml-engineer-wroclaw%2Coferta%2C1005064168",
+      "status": "checked"
+    },
+    {
+      "title": "Comarch: DevOps Engineer (AI-native Stack)",
+      "url": "https://kariera.comarch.pl/praca/devops-engineer-ai-native-stack/",
+      "status": "checked"
+    },
+    {
+      "title": "Comarch: Full-stack Developer (Agentic AI)",
+      "url": "https://kariera.comarch.pl/praca/full-stack-developer-agentic-ai/",
+      "status": "checked"
+    },
+    {
+      "title": "EPAM: Senior AI-Native Engineer",
+      "url": "https://careers.epam.com/en/vacancy/senior-ai-native-engineer-bltra6lba5g82vw17xu_en",
+      "status": "checked"
+    },
+    {
+      "title": "EPAM: Senior AI and Agentic Systems Engineer (Java)",
+      "url": "https://careers.epam.com/en/vacancy/senior-ai-agentic-systems-engineer-java-blte35dpj1r8hefrppw_en",
+      "status": "checked"
+    }
+  ]
+}
