@@ -1,8 +1,10 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-09-07
+Last updated: 2026-09-08
 
 ## Current Understanding
+
+Po wieczornym runie 8 września polski wątek krypto przeszedł od utrzymanego weta do drugiego projektu prezydenckiego, a Rada Ministrów przyjęła projekty dotyczące sprawniejszego kończenia części postępowań karnych i pomocy de minimis. Głównym blokiem bezpieczeństwa pozostaje Ukraina: Wielka Brytania uruchamia 100 mln funtów przez PURL na zimową obronę powietrzną, podczas gdy dymisja prokuratora generalnego po działaniach antykorupcyjnych dokłada kryzys instytucjonalny do wznowionych ataków. Globalna presja gospodarcza rośnie przez nowe sankcje USA na irańskie lotnictwo i wejście w życie kanadyjskich ceł odwetowych.
 
 Po wieczornym runie 7 września lead przesuwa się na trzy bloki: AfD w Saksonii-Anhalt pcha Niemcy ku scenariuszowi pierwszego skrajnie prawicowego rządu landowego, Rosja odpowiada Berlinowi zamknięciem konsulatu po sporze wokół Leipzig/Halle, a Bliski Wschód dokłada jednocześnie Liban, Jemen i Ormuz oraz rekordowe ceny paliw w USA. Wysłańcy Trumpa nadal rozmawiają z Ukrainą bez przełomu, a Polska pozostaje w trybie proceduralnym na kryptoaktywach i RCB bez nowego materialnego zwrotu.
 
@@ -720,6 +722,9 @@ konfliktowaniu Polaków i Ukraińców.
 
 ## Recent Reports
 
+- [2026-09-08-1933](runs/2026-09-08-1933.md)
+- [2026-09-07-1933](runs/2026-09-07-1933.md)
+- [2026-09-07](runs/2026-09-07.md)
 - [2026-08-29](runs/2026-08-29.md)
 - [2026-08-27](runs/2026-08-27.md)
 - [2026-08-26](runs/2026-08-26.md)
