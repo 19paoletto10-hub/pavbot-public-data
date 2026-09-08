@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-09-08",
+  "runTime": "21:02",
+  "status": "Material update",
+  "headline": "Nowe śledztwa, alerty podróżne i eskalacja sankcji",
+  "summary": "Slot 21:02 dodaje nowe krajowe wątki prawne, zakłócenia lotnicze, sankcje wobec irańskich linii, najwyższy alert powodziowy w Japonii, odpowiedź Izraela na sankcje Zachodniego Brzegu oraz nowe skutki ceł i naruszeń prywatności.",
+  "checkedSources": [
+    {"title":"TVN24 Najnowsze XML","url":"https://tvn24.pl/najnowsze.xml"},
+    {"title":"BBC News RSS","url":"https://feeds.bbci.co.uk/news/rss.xml"},
+    {"title":"BBC World RSS","url":"https://feeds.bbci.co.uk/news/world/rss.xml"},
+    {"title":"BBC Business RSS","url":"https://feeds.bbci.co.uk/news/business/rss.xml"},
+    {"title":"BBC Technology RSS","url":"https://feeds.bbci.co.uk/news/technology/rss.xml"},
+    {"title":"CNN homepage","url":"https://www.cnn.com"},
+    {"title":"CNN World","url":"https://www.cnn.com/world"},
+    {"title":"CNN Business","url":"https://www.cnn.com/business"},
+    {"title":"CNN Technology","url":"https://www.cnn.com/business/tech"}
+  ],
+  "items": [
+    {
+      "id":"przylebska-zawiadomienie-hfpc","section":"Polityka","title":"Zawiadomienie w sprawie Julii Przyłębskiej","lead":"Minister sprawiedliwości zapowiada poważne potraktowanie sprawy składów TK.",
+      "whatHappened":"Helsińska Fundacja Praw Człowieka złożyła zawiadomienie dotyczące możliwego manipulowania składami orzekającymi przez byłą prezes TK Julię Przyłębską. Waldemar Żurek powiedział, że prokuratura podejdzie do śledztwa bardzo poważnie.",
+      "keyFacts":["Sprawa dotyczy sposobu wyznaczania składów orzekających Trybunału Konstytucyjnego."],"reactions":["Żurek określił opisywaną praktykę jako sprawę o potencjalnie karnym charakterze."],"whyItMatters":"Dotyczy niezależności sądu konstytucyjnego i prawidłowości jego orzeczeń.","context":"Zawiadomienie rozpoczyna etap weryfikacji, nie przesądza winy.","watchNext":["Czy prokuratura formalnie wszcznie śledztwo i poda jego zakres?"],"sources":[{"title":"TVN24 — zawiadomienie w sprawie Julii Przyłębskiej","url":"https://tvn24.pl/polska/zawiadomienie-do-prokuratury-w-sprawie-julii-przylebskiej-waldemar-zurek-to-jest-kryminal-st9227708"}],"tags":["TK","Julia Przyłębska","prokuratura"],"priority":"high"
+    },
+    {
+      "id":"ziobro-nowe-sledztwo","section":"Polityka","title":"Nowe śledztwo wokół Zbigniewa Ziobry","lead":"Prokuratura bada możliwą pomoc w unikaniu odpowiedzialności karnej.",
+      "whatHappened":"Rzecznik rządu Adam Szłapka poinformował, że prokuratura sprawdza, czy Tomasz Sakiewicz i Adam Bielan pomagali Zbigniewowi Ziobrze uniknąć odpowiedzialności karnej.",
+      "keyFacts":["To nowy wątek śledczy, w którym pojawiają się nazwiska dwóch publicznie rozpoznawalnych osób."],"reactions":["Posłowie KO omawiali sprawę na briefingu prasowym."],"whyItMatters":"Może poszerzyć polityczny i procesowy wymiar spraw dotyczących byłego ministra sprawiedliwości.","context":"Samo prowadzenie sprawdzeń nie oznacza postawienia zarzutów.","watchNext":["Czy prokuratura poda podstawę, zakres i status postępowania?"],"sources":[{"title":"TVN24 — nowe śledztwo w sprawie Zbigniewa Ziobry","url":"https://tvn24.pl/polska/nowe-sledztwo-w-sprawie-zbigniewa-ziobry-padly-nazwiska-tomasza-sakiewicza-i-adama-bielana-st9227474"}],"tags":["Zbigniew Ziobro","prokuratura","polityka"],"priority":"high"
+    },
+    {
+      "id":"krakow-osiem-kandydatow","section":"Polska","title":"Osiem osób powalczy o prezydenturę Krakowa","lead":"Komisja zamknęła listę po odrzuceniu części zgłoszeń.",
+      "whatHappened":"Miejska Komisja Wyborcza zarejestrowała osiem osób w przedterminowych wyborach na prezydenta Krakowa. Kilku kandydatom odmówiono rejestracji z powodu niewystarczającej liczby ważnych podpisów.",
+      "keyFacts":["Lista kandydatów jest konkretnym domknięciem wcześniejszego sporu o podpisy."],"reactions":["Odrzucenie kandydata Konfederacji wywołało wewnętrzną dyskusję o odpowiedzialności politycznej."],"whyItMatters":"Kraków wchodzi w właściwą fazę kampanii z ustalonym gronem kandydatów.","context":"Wcześniejsze sloty śledziły niepewność wokół rejestracji list.","watchNext":["Czy pojawią się odwołania od odmowy rejestracji?"],"sources":[{"title":"TVN24 — lista kandydatów w Krakowie","url":"https://tvn24.pl/wybory-w-krakowie-2026/przedterminowe-wybory-na-prezydenta-krakowa-lista-kandydatow-st9227587"}],"tags":["Kraków","wybory","samorząd"],"priority":"medium"
+    },
+    {
+      "id":"piotr-niemczyk-areszt","section":"Polska","title":"Piotr Niemczyk trafił do aresztu","lead":"Działacz opozycji w PRL odmówił wykonania kary ograniczenia wolności.",
+      "whatHappened":"Służba Więzienna potwierdziła, że Piotr Niemczyk od wtorku przebywa w warszawskiej placówce penitencjarnej. Według relacji odmówił wykonania zasądzonej kary.",
+      "keyFacts":["Informację o osadzeniu potwierdziła rzeczniczka Dyrektora Generalnego Służby Więziennej."],"reactions":["Sprawa może wywołać debatę o wykonaniu kary wobec dawnego działacza opozycji."],"whyItMatters":"To krajowy temat łączący egzekucję orzeczeń z historycznym statusem skazanego.","context":"Materiał dotyczy wykonania istniejącej kary, a nie nowego zarzutu.","watchNext":["Czy sąd albo obrona poinformują o dalszym trybie wykonania kary?"],"sources":[{"title":"TVN24 — Piotr Niemczyk w areszcie","url":"https://tvn24.pl/polska/piotr-niemczyk-w-areszcie-odmowil-wykonania-kary-st9227640"}],"tags":["Piotr Niemczyk","areszt","Polska"],"priority":"medium"
+    },
+    {
+      "id":"uk-irlandia-awaria-lotniska","section":"Alerty","title":"Awaria sparaliżowała brytyjskie lotniska","lead":"Problemy kontroli ruchu uderzyły też w połączenia z Dublinem.",
+      "whatHappened":"Problemy techniczne operatora kontroli ruchu lotniczego zakłóciły odloty z Heathrow, Gatwick, Manchesteru i Stansted oraz wpłynęły na Dublin. Według Flightradar24 w Wielkiej Brytanii odwołano 625 lotów.",
+      "keyFacts":["Zakłócenia objęły największe porty i mają bezpośredni wpływ na pasażerów."],"reactions":["Lotniska i przewoźnicy zalecają sprawdzanie statusu rejsu przed podróżą."],"whyItMatters":"To duże, bieżące zakłócenie europejskiego transportu lotniczego.","context":"Skala odwołań może powodować wtórne opóźnienia także po usunięciu awarii.","watchNext":["Kiedy kontrola ruchu przywróci pełną przepustowość?"],"sources":[{"title":"BBC — Heathrow and Gatwick hit by air traffic control problems","url":"https://www.bbc.co.uk/news/articles/ce8x3dp1zpxo"},{"title":"TVN24 — awaria na lotniskach w Wielkiej Brytanii i Irlandii","url":"https://tvn24.pl/biznes/ze-swiata/zaklocenia-na-lotniskach-w-wielkiej-brytanii-i-irlandii-awaria-na-lotniskach-heathrow-gatwick-manchester-i-stansted-problemy-z-kontrola-ruchu-st9227488"}],"tags":["lotniska","Wielka Brytania","Dublin"],"priority":"high"
+    },
+    {
+      "id":"usa-sankcje-iranskie-linie","section":"Świat","title":"USA sankcjonują wszystkie irańskie linie lotnicze","lead":"Ograniczenia obejmują też wspierające podmioty w czterech państwach.",
+      "whatHappened":"Administracja USA ogłosiła sankcje wobec wszystkich irańskich linii lotniczych oraz podmiotów wspierających je w ZEA, Omanie, Turcji i Malezji.",
+      "keyFacts":["Pakiet rozszerza presję poza same irańskie przedsiębiorstwa."],"reactions":["Przewoźnicy i porty w regionie będą musiały ocenić ekspozycję na amerykańskie restrykcje."],"whyItMatters":"Sankcje mogą ograniczyć połączenia, leasing, ubezpieczenia i obsługę irańskiego lotnictwa.","context":"Decyzja wpisuje się w szerszą eskalację USA–Iran.","watchNext":["Czy państwa i firmy objęte pośrednio ograniczeniami ogłoszą odpowiedź?"],"sources":[{"title":"TVN24 — sankcje USA wobec irańskich linii","url":"https://tvn24.pl/biznes/ze-swiata/sankcje-usa-na-wszystkie-iranskie-linie-lotnicze-obejma-tez-firmy-z-innych-krajow-st9227616"}],"tags":["Iran","USA","sankcje","lotnictwo"],"priority":"high"
+    },
+    {
+      "id":"izrael-zamyka-konsulat-uk","section":"Świat","title":"Izrael zamknie brytyjski konsulat w Jerozolimie","lead":"To odpowiedź na sankcje dotyczące osiedli na Zachodnim Brzegu.",
+      "whatHappened":"Izraelski minister spraw zagranicznych Gideon Saar ogłosił zamknięcie brytyjskiego konsulatu we Wschodniej Jerozolimie. Jest to odpowiedź na działania Wielkiej Brytanii i partnerów wobec izraelskich osiedli.",
+      "keyFacts":["Brytyjskie sankcje i zakaz importu przeszły w bezpośredni spór dyplomatyczny."],"reactions":["Izrael ostro odrzucił oskarżenia Londynu dotyczące działań osadników."],"whyItMatters":"Zamknięcie placówki podnosi koszt dyplomatyczny sporu i może utrudnić kontakty z Palestyńczykami.","context":"To materialna aktualizacja karty o sankcjach z poprzedniego slotu.","watchNext":["Jak Londyn odpowie i jaki będzie harmonogram zamknięcia konsulatu?"],"sources":[{"title":"BBC — UK sanctions prompt Israeli response","url":"https://www.bbc.co.uk/news/articles/c4g7zen0vveo"},{"title":"TVN24 — Izrael zamknie brytyjski konsulat","url":"https://tvn24.pl/biznes/ze-swiata/izrael-oglasza-zamkniecie-brytyjskiego-konsulatu-to-reakcja-na-zapowiedz-z-londynu-st9227521"}],"tags":["Izrael","Wielka Brytania","Zachodni Brzeg"],"priority":"high"
+    },
+    {
+      "id":"putin-trump-telefon","section":"Świat","title":"Putin i Trump rozmawiali o Ukrainie i Europie","lead":"Kreml podał szczegóły rozmowy po wizytach wysłanników USA.",
+      "whatHappened":"Doradca Kremla Jurij Uszakow poinformował o telefonicznej rozmowie Władimira Putina z Donaldem Trumpem. Przywódcy mieli omawiać wyniki rozmów amerykańskich wysłanników w Moskwie i Kijowie.",
+      "keyFacts":["Publiczny opis rozmowy pochodzi na razie ze strony rosyjskiej."],"reactions":["Szczegóły wymagają potwierdzenia przez Biały Dom lub uczestników rozmów."],"whyItMatters":"Bezpośredni kontakt może sygnalizować kolejny etap dyplomacji wokół wojny.","context":"Rozmowa następuje po nowym rosyjskim ataku na Kijów.","watchNext":["Czy Biały Dom potwierdzi rozmowę i ogłosi konkretny kolejny krok?"],"sources":[{"title":"TVN24 — rozmowa Władimira Putina z Donaldem Trumpem","url":"https://tvn24.pl/swiat/wladimir-putin-rozmawial-z-donaldem-trumpem-padly-slowa-o-europie-st9227507"}],"tags":["Ukraina","Rosja","USA","dyplomacja"],"priority":"high"
+    },
+    {
+      "id":"japonia-najwyzszy-alert-powodziowy","section":"Alerty","title":"Najwyższy alert powodziowy w środkowej Japonii","lead":"Nawalne deszcze powodują powodzie błyskawiczne i ryzyko osuwisk.",
+      "whatHappened":"W środkowej Japonii wydano najwyższy stopień ostrzeżenia przed powodzią. Intensywne opady powodują lokalne podtopienia i zwiększają zagrożenie osuwiskami.",
+      "keyFacts":["Meteorolodzy apelują do mieszkańców o zachowanie szczególnej ostrożności."],"reactions":["Służby koncentrują się na bezpieczeństwie mieszkańców w najbardziej zagrożonych rejonach."],"whyItMatters":"Najwyższy poziom ostrzeżenia oznacza bezpośrednie zagrożenie dla ludzi i infrastruktury.","context":"Alert zastępuje wygasający lokalny komunikat drogowy z poprzedniego slotu.","watchNext":["Czy zostaną zarządzone ewakuacje lub ograniczenia transportowe?"],"sources":[{"title":"TVN24 Meteo — najwyższy alert powodziowy w Japonii","url":"https://tvn24.pl/tvnmeteo/swiat/ulewy-w-japonii-obserwujemy-opady-deszczu-jakich-ludzie-nigdy-wczesniej-nie-doswiadczyli-st9227530"}],"tags":["Japonia","powódź","osuwiska","alert"],"priority":"high"
+    },
+    {
+      "id":"grindr-ugoda-dane","section":"Technologia","title":"Grindr zapłaci 26 mln funtów za sprawę danych","lead":"Ugoda dotyczy udostępniania reklamodawcom wyjątkowo wrażliwych informacji.",
+      "whatHappened":"Brytyjski sąd zatwierdził zobowiązanie Grindr do wypłaty łącznie 26 mln funtów tysiącom osób. Pozew dotyczył udostępniania danych, w tym informacji o statusie HIV, podmiotom reklamowym.",
+      "keyFacts":["Sprawa obejmuje szczególne kategorie danych osobowych użytkowników."],"reactions":["Ugoda zwiększa presję na platformy, by ograniczały przepływ danych do ekosystemu reklamowego."],"whyItMatters":"Pokazuje finansowy koszt niewłaściwego obchodzenia się z najbardziej wrażliwymi danymi.","context":"BBC i TVN24 zgodnie opisują skalę brytyjskiej ugody.","watchNext":["Jakie zmiany techniczne i polityki prywatności wdroży Grindr?"],"sources":[{"title":"BBC — Grindr to pay £26m to settle claims","url":"https://www.bbc.co.uk/news/articles/cn8e63qdqwzo"},{"title":"TVN24 — Grindr zapłaci miliony funtów","url":"https://tvn24.pl/biznes/tech/grindr-zaplaci-26-milionow-funtow-chodzi-o-udostepnianie-wrazliwych-danych-st9227546"}],"tags":["Grindr","prywatność","dane osobowe"],"priority":"medium"
+    },
+    {
+      "id":"mydr-pacjenci-powiadomienia","section":"Bezpieczeństwo","title":"Pacjenci dostają alerty po naruszeniu danych MyDr","lead":"Powiadomienia ostrzegają przed kredytami i próbami oszustwa.",
+      "whatHappened":"Pacjenci placówek medycznych otrzymują SMS-y o naruszeniu danych w systemach powiązanych z MyDr. Komunikaty kierują do instrukcji zabezpieczenia się po ataku hakerskim.",
+      "keyFacts":["Dane medyczne i identyfikacyjne mogą zwiększać ryzyko wyłudzeń."],"reactions":["Poszkodowanym zaleca się ostrożność wobec kontaktów i prób zaciągania zobowiązań."],"whyItMatters":"Skutki incydentu przechodzą z etapu technicznego do bezpośrednich działań ochronnych pacjentów.","context":"To rozwinięcie wcześniejszych informacji o ataku na MyDr.","watchNext":["Czy MyDr lub UODO podadzą pełny zakres danych i liczbę poszkodowanych?"],"sources":[{"title":"TVN24 — pacjenci ostrzegani po naruszeniu danych","url":"https://tvn24.pl/biznes/tech/wyciek-danych-pacjentow-ostrzegaja-przed-kredytami-i-oszustwami-st9227309"}],"tags":["MyDr","cyberbezpieczeństwo","pacjenci"],"priority":"high"
+    },
+    {
+      "id":"sapporo-produkcja-kanada-usa","section":"Gospodarka","title":"Sapporo przenosi część produkcji z Kanady do USA","lead":"Pięćdziesięcioprocentowe cło zmienia miejsce warzenia piwa bezalkoholowego.",
+      "whatHappened":"Japoński producent Sapporo zapowiedział przeniesienie części produkcji piwa bezalkoholowego z Kanady do Stanów Zjednoczonych po wejściu 50-procentowej taryfy.",
+      "keyFacts":["To konkretny skutek operacyjny eskalacji taryfowej USA–Kanada."],"reactions":["Firma dostosowuje łańcuch dostaw, by ograniczyć koszt ceł."],"whyItMatters":"Pokazuje, że wojna handlowa zaczyna zmieniać realne decyzje przemysłowe.","context":"Poprzedni slot odnotował wejście kanadyjskich ceł odwetowych; teraz widać reakcję firmy.","watchNext":["Czy inni producenci przeniosą produkcję lub podniosą ceny?"],"sources":[{"title":"BBC — Sapporo to move some production to US after tariff","url":"https://www.bbc.co.uk/news/articles/c87ve09pgqzo"}],"tags":["Sapporo","Kanada","USA","cła"],"priority":"medium"
+    }
+  ]
+}

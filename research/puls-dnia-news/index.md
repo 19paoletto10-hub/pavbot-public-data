@@ -2,7 +2,7 @@
 
 ## Current State
 
-Slot 2026-09-08 18:03 dodaje aresztowy kryzys PKOl, reformę finansowania posłów, wejście ceł Kanady w życie, brytyjskie sankcje wobec osad na Zachodnim Brzegu, kolejny rosyjski nalot na Kijów, dymisję prokuratora generalnego Ukrainy, wznowienie lotów w Indonezji, rekordowe finansowanie Mistrala oraz nową falę ryzyk na Instagramie i Meta. W tle pozostają lokalne alerty drogowe i punktowe incydenty bezpieczeństwa.
+Slot 2026-09-08 21:02 przesuwa feed ku nowym krajowym wątkom prawnym wokół Julii Przyłębskiej i Zbigniewa Ziobry, domkniętej liście kandydatów w Krakowie, dużym zakłóceniom brytyjskiego lotnictwa, sankcjom na wszystkie irańskie linie, odpowiedzi Izraela na działania Londynu, rozmowie Trump–Putin i najwyższemu alertowi powodziowemu w Japonii. Technologia i gospodarka obejmują naruszenie MyDr, ugodę Grindr oraz przenoszenie produkcji Sapporo wskutek ceł.
 
 ## Data Shape
 
@@ -25,5 +25,5 @@ The newest valid JSON is shown as paired cards under `Dzisiaj`. Tapping a card o
 - Keep at least two `Polska` or `Polityka` items and at least two `Świat` items to protect the home feed balance.
 - Prefer operational alerts, public safety, travel disruption, platform risk and civil-protection stories over softer feature content.
 - Favor stories with concrete official or primary links when they are available alongside TVN24, BBC or CNN.
-- Current emphasis should stay on PKOl, Sejm, Kanada, Bombardier, Zachodni Brzeg, Kijów, Ukraina, Indonezja, Mistral, Instagram and local alerts.
+- Current emphasis should stay on krajowych postępowaniach prawnych, Krakowie, brytyjskich lotniskach, Iranie, Zachodnim Brzegu, Ukrainie, Japonii, MyDr, Grindr and industrial effects of tariffs.
 - Keep the current trade, safety and technology balance ready for the next carousel refresh.

@@ -1,5 +1,17 @@
 # Puls Dnia News Backlog
 
+# 2026-09-08 21:02
+
+- Watch whether prokuratura formally opens or details the Przyłębska and Ziobro proceedings.
+- Watch whether rejected Kraków candidates appeal registration decisions.
+- Watch when UK and Irish airports restore full capacity after air traffic control failures.
+- Watch whether US sanctions produce immediate route cancellations or responses from Iran and supporting entities.
+- Watch how the UK responds to Israel's decision to close its East Jerusalem consulate.
+- Watch whether the White House confirms the Putin call and announces a concrete Ukraine step.
+- Watch whether Japan orders evacuations or expands transport restrictions.
+- Watch whether MyDr or UODO publishes the affected data scope and victim count.
+- Watch for further production shifts or price moves caused by US–Canada tariffs.
+
 # 2026-09-08 18:03
 
 - Watch whether PKOl formalizes the replacement of Radosław Piesiewicz or sets a board vote.
