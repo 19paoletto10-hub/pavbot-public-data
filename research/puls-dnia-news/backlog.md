@@ -1,5 +1,15 @@
 # Puls Dnia News Backlog
 
+# 2026-09-08 09:02
+
+- Watch whether the Sejm financing reform becomes a formal draft or only a trial balloon.
+- Watch whether the minimum wage calculation triggers an employer or ministry response.
+- Watch whether Poland issues another official statement after the overnight Ukraine attack and RCB alerts.
+- Watch whether Canada, Bombardier or the US Treasury add a clearer response once the counter-tariffs bite.
+- Watch whether Indonesia extends or eases the current flight and school disruptions.
+- Watch whether OpenAI or Meta responds to the BBC coverage of AI risk and Instagram ransom scams.
+- Watch whether housing sales data gets a follow-up from developers, banks or economists.
+
 # 2026-09-08 06:02
 
 - Watch whether Kraków publishes a formal final list of exclusions or any appeal text.

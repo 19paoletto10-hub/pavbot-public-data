@@ -2,7 +2,7 @@
 
 ## Current State
 
-Slot 2026-09-08 06:02 przesuwa ciężar z wieczornego pakietu AfD, Krakowa i Black Hawka na Domańskiego, krakowskie wyłączenie kandydata Konfederacji, ceny paliw, koszty klimatu oraz świeże alerty wokół Kijowa, Hawajów, Japonii i Indonezji. W tle pozostają Bombardier, kanadyjskie cła, OpenAI i lokalne szkody po wichurze.
+Slot 2026-09-08 09:02 przesuwa ciężar na reformę finansowania posłów, płacę minimalną, nocny atak na Kijów i polską reakcję lotniczą, a także kanadyjskie cła, Bombardiera, Indonezję, OpenAI, Instagram, ceny paliw w USA i skok sprzedaży nowych mieszkań. W tle pozostają alerty pogodowe i geopolityczne z Nepalu oraz Zachodniego Brzegu.
 
 ## Data Shape
 
@@ -25,5 +25,5 @@ The newest valid JSON is shown as paired cards under `Dzisiaj`. Tapping a card o
 - Keep at least two `Polska` or `Polityka` items and at least two `Świat` items to protect the home feed balance.
 - Prefer operational alerts, public safety, travel disruption, platform risk and civil-protection stories over softer feature content.
 - Favor stories with concrete official or primary links when they are available alongside TVN24, BBC or CNN.
-- Current emphasis should stay on Domański, Kraków, prices of fuel and climate costs, EU/US trade friction, AI safety and tropical alerts.
-- Keep Domański, Kraków, mStłuczka, paliwa, klimat, Bombardiera, kanadyjskie cła, Hawaje, Japonię, Indonezję, OpenAI and wind-damage cards ready for the next carousel refresh.
+- Current emphasis should stay on Sejm finance, płaca minimalna, Kijów, kanadyjskie cła, Bombardier, AI safety, Instagram platform risk, indonezyjskie alerty i ceny mieszkań.
+- Keep Sejm, płaca minimalna, Kijów, Kanada, Bombardier, Indonezja, OpenAI, Instagram, ceny paliw i mieszkania ready for the next carousel refresh.
