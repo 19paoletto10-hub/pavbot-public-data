@@ -1,0 +1,521 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-09-08",
+  "runTime": "18:03",
+  "status": "Material update",
+  "headline": "PKOl, Kanada i Zachodni Brzeg prowadzą slot 18:03",
+  "summary": "Slot 18:03 dodaje aresztowy kryzys PKOl, reformę finansowania posłów, wejście ceł Kanady w życie, brytyjskie sankcje wobec osad na Zachodnim Brzegu, świeży atak na Kijów, rezygnację prokuratora generalnego Ukrainy, wznowienie lotów w Indonezji, finansowanie Mistrala i nowe ryzyka platformowe Meta/Instagram.",
+  "checkedSources": [
+    {
+      "title": "TVN24 Najnowsze XML",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "TVN24 Polska",
+      "url": "https://tvn24.pl/polska"
+    },
+    {
+      "title": "TVN24 Świat",
+      "url": "https://tvn24.pl/swiat"
+    },
+    {
+      "title": "TVN24 TVN Meteo",
+      "url": "https://tvn24.pl/tvnmeteo"
+    },
+    {
+      "title": "TVN24 Biznes/Tech",
+      "url": "https://tvn24.pl/biznes/tech"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "BBC Business RSS",
+      "url": "https://feeds.bbci.co.uk/news/business/rss.xml"
+    },
+    {
+      "title": "BBC Technology RSS",
+      "url": "https://feeds.bbci.co.uk/news/technology/rss.xml"
+    },
+    {
+      "title": "CNN homepage",
+      "url": "https://www.cnn.com"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://www.cnn.com/world"
+    },
+    {
+      "title": "CNN Business",
+      "url": "https://www.cnn.com/business"
+    },
+    {
+      "title": "CNN Technology",
+      "url": "https://www.cnn.com/business/tech"
+    },
+    {
+      "title": "Canada.ca counter tariffs",
+      "url": "https://www.canada.ca/en/department-finance/news/2026/08/list-of-products-from-the-united-states-subject-to-counter-tariffs-effective-september-8-2026.html"
+    },
+    {
+      "title": "UK gov West Bank statement",
+      "url": "https://www.gov.uk/government/news/joint-foreign-ministers-statement-on-the-two-state-solution"
+    },
+    {
+      "title": "Mistral funding announcement",
+      "url": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/"
+    },
+    {
+      "title": "GDDKiA road info",
+      "url": "https://drogi.gddkia.gov.pl/informacje-drogowe/komunikaty/12"
+    }
+  ],
+  "items": [
+    {
+      "id": "pkol-areszt-i-zastepstwo",
+      "section": "Polityka",
+      "title": "PKOl w aresztowym kryzysie i pytaniu o zastępstwo",
+      "lead": "Po areszcie Piesiewicza głównym tematem jest formalne przejęcie sterów.",
+      "whatHappened": "TVN24 podał, że prezes PKOl Radosław Piesiewicz jest w areszcie, a redakcja opisuje też temat jego zastępstwa. To przenosi sprawę z samej presji politycznej do realnego problemu zarządzania instytucją.",
+      "keyFacts": [
+        "Materiał TVN24 pojawił się w bieżącym slocie 8 września 2026.",
+        "Sprawa dotyczy PKOl, czyli instytucji o dużym znaczeniu publicznym.",
+        "Wątek łączy kryzys organizacyjny z wcześniejszym śledztwem wokół Zondacrypto."
+      ],
+      "reactions": [
+        "To zwiększa szansę na szybki ruch formalny wewnątrz organizacji.",
+        "Presja polityczna może teraz przejść w decyzję kadrową albo statutową."
+      ],
+      "whyItMatters": "PKOl jest instytucją o wysokiej widoczności, więc kryzys zarządczy ma szerokie skutki reputacyjne.",
+      "context": "To aktualny follow-up po weekendowych ruchach wokół Piesiewicza i śledztwa Zondacrypto.",
+      "watchNext": [
+        "Czy pojawi się termin formalnego odwołania?",
+        "Czy PKOl wskaże pełniącego obowiązki prezesa?"
+      ],
+      "sources": [
+        {
+          "title": "TVN24 - Prezes PKOl w areszcie. Wiadomo, kto go zastępuje",
+          "url": "https://tvn24.pl/polska/prezes-pkol-w-areszcie-wiadomo-kto-go-zastepuje-st9214484"
+        },
+        {
+          "title": "TVN24 - Piotr Borys o Radosławie Piesiewiczu i PKOl",
+          "url": "https://tvn24.pl/polska/piotr-borys-o-radoslawie-piesiewiczu-andrzeju-krasnickim-i-pkol-st9226253"
+        }
+      ],
+      "tags": [
+        "PKOl",
+        "Radosław Piesiewicz",
+        "Polityka",
+        "sport"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "sejm-reforma-finansowania-poslow",
+      "section": "Polityka",
+      "title": "Sejm szykuje reformę finansowania posłów",
+      "lead": "Kancelaria Sejmu pracuje nad zmianą systemu finansowania działalności parlamentarnej.",
+      "whatHappened": "TVN24 opisał, że Kancelaria Sejmu rozpoczęła prace nad reformą finansowania działalności posłanek i posłów. To temat techniczny, ale z potencjalnym politycznym efektem ubocznym: nowym sporem o koszty i wynagrodzenia.",
+      "keyFacts": [
+        "Materiał TVN24 jest z bieżącego dnia i trafił do porannego obiegu newsowego.",
+        "Wątek dotyczy samego modelu finansowania pracy parlamentarnej.",
+        "Sprawa może łatwo wyjść poza technikę budżetową i wejść w debatę polityczną."
+      ],
+      "reactions": [
+        "To może wywołać reakcję klubów parlamentarnych.",
+        "Temat jest podatny na szybkie upolitycznienie, jeśli pojawią się konkretne stawki."
+      ],
+      "whyItMatters": "Zmiana finansowania parlamentu wpływa na koszty publiczne i na debatę o standardach pracy posłów.",
+      "context": "To świeży krajowy wątek, który dobrze uzupełnia feed obok PKOl i lokalnych incydentów.",
+      "watchNext": [
+        "Czy pojawi się projekt lub przeciek konkretnych zmian?",
+        "Czy kluby sejmowe zareagują publicznie?"
+      ],
+      "sources": [
+        {
+          "title": "TVN24 - W Sejmie szykują reformę finansowania posłów",
+          "url": "https://tvn24.pl/polska/w-sejmie-szykuja-reforme-finansowania-poslow-nieoficjalnie-mowia-ze-zarabiaja-za-malo-st9226010"
+        }
+      ],
+      "tags": [
+        "Sejm",
+        "finanse",
+        "Polityka",
+        "Polska"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "tarnobrzeg-pilot-linia-wysokiego-napiecia",
+      "section": "Polska",
+      "title": "Pilot po zerwaniu linii w Tarnobrzegu przesłuchany jako świadek",
+      "lead": "Sprawa zakończyła się przesłuchaniem, bez postawienia zarzutów.",
+      "whatHappened": "TVN24 Rzeszów podał, że pilot, który zerwał linię wysokiego napięcia w Tarnobrzegu, został przesłuchany w prokuraturze jako świadek i nie usłyszał dotąd zarzutów. To lokalny, ale czytelny incydent bezpieczeństwa.",
+      "keyFacts": [
+        "Materiał jest bardzo świeży i pojawił się w bieżącym slocie.",
+        "Mężczyzna miał zeznać, że nie zauważył zniszczeń.",
+        "Sprawa dotyczy zdarzenia mogącego wpływać na bezpieczeństwo infrastruktury."
+      ],
+      "reactions": [
+        "To może skończyć się bez eskalacji, ale nadal wymaga wyjaśnień proceduralnych.",
+        "Jeśli pojawią się kolejne ustalenia, temat może wrócić jako większy incydent lotniczo-techniczny."
+      ],
+      "whyItMatters": "Nawet lokalne zdarzenia z infrastrukturą krytyczną mogą mieć znaczenie dla bezpieczeństwa i odpowiedzialności.",
+      "context": "To świeży, lokalny temat z jasnym komponentem bezpieczeństwa.",
+      "watchNext": [
+        "Czy prokuratura zmieni status sprawy?",
+        "Czy pojawi się techniczne wyjaśnienie szkody?"
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Rzeszów - Pilot, który zerwał linię wysokiego napięcia w Tarnobrzegu, nie usłyszał zarzutów",
+          "url": "https://tvn24.pl/rzeszow/tarnobrzeg-przesluchali-pilota-ktory-zerwal-linie-wysokiego-napiecia-nie-uslyszal-zarzutow-st9227393"
+        }
+      ],
+      "tags": [
+        "Tarnobrzeg",
+        "lotnictwo",
+        "bezpieczeństwo",
+        "Polska"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "a4-utrudnienie-opolskie",
+      "section": "Alerty",
+      "title": "A4 w Opolskiem z utrudnieniem do wieczora",
+      "lead": "Na autostradzie trwa zajęcie pasa awaryjnego.",
+      "whatHappened": "GDDKiA informuje o utrudnieniu na A4 na odcinku Brzeg - Opole Zachód w kierunku Katowic. Problem ma zostać usunięty późnym popołudniem, ale do tego czasu kierowcy muszą liczyć się ze zwężeniem.",
+      "keyFacts": [
+        "Komunikat jest z 8 września 2026.",
+        "Odcinek dotyczy województwa opolskiego.",
+        "Utrudnienie wiąże się z pracami przy urządzeniach odwadniających."
+      ],
+      "reactions": [
+        "To wpływa na płynność ruchu w popołudniowym szczycie.",
+        "Kierowcy jadący w stronę Katowic powinni uwzględnić rezerwę czasową."
+      ],
+      "whyItMatters": "Krótkie, konkretne utrudnienia drogowe są najpraktyczniejszym typem alertu dla szybkiego feedu.",
+      "context": "To bieżący alert infrastrukturalny, który dobrze domyka sekcję ostrzegawczą.",
+      "watchNext": [
+        "Czy GDDKiA zamknie komunikat przed wieczorem?",
+        "Czy ruch na tym odcinku wróci do normy bez dodatkowych objazdów?"
+      ],
+      "sources": [
+        {
+          "title": "GDDKiA - Utrudnienie na drodze A4 - 210.0 km na odc. 12.8 km",
+          "url": "https://drogi.gddkia.gov.pl/informacje-drogowe/komunikaty/12"
+        }
+      ],
+      "tags": [
+        "A4",
+        "drogi",
+        "alert",
+        "Polska"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "kanada-cla-odwetowe",
+      "section": "Gospodarka",
+      "title": "Kanada uruchomiła cła odwetowe wobec USA",
+      "lead": "Ottawa wdraża taryfy na amerykańskie towary od 8 września.",
+      "whatHappened": "Canada.ca potwierdza, że od 8 września obowiązują kanadyjskie cła odwetowe wobec wybranych towarów z USA. To przejście sporu handlowego z etapu zapowiedzi do etapu realnych kosztów dla eksportu i łańcuchów dostaw.",
+      "keyFacts": [
+        "Rząd Kanady opublikował oficjalną listę produktów objętych taryfami.",
+        "Stawki obejmują 15, 25 i 50 procent, zależnie od kategorii towaru.",
+        "To odpowiedź na wcześniejsze amerykańskie cła i szeroką eskalację sporu handlowego."
+      ],
+      "reactions": [
+        "Rynek będzie teraz sprawdzał, czy pojawi się kanał negocjacyjny.",
+        "Firmy po obu stronach granicy mogą zacząć przeliczać koszty i ceny."
+      ],
+      "whyItMatters": "To realna zmiana warunków handlu między dwiema dużymi gospodarkami.",
+      "context": "To jeden z najważniejszych gospodarczych tematów dnia.",
+      "watchNext": [
+        "Czy Ottawa lub Waszyngton zasygnalizują rozmowy?",
+        "Czy pojawią się reakcje branż dotkniętych taryfami?"
+      ],
+      "sources": [
+        {
+          "title": "Canada.ca - List of products from the United States subject to counter-tariffs effective September 8, 2026",
+          "url": "https://www.canada.ca/en/department-finance/news/2026/08/list-of-products-from-the-united-states-subject-to-counter-tariffs-effective-september-8-2026.html"
+        },
+        {
+          "title": "TVN24 - Kanada nowy etap wojny handlowej z USA. Ottawa wprowadza cła odwetowe",
+          "url": "https://tvn24.pl/biznes/ze-swiata/kanada-nowy-etap-wojny-handlowej-z-usa-ottawa-wprowadza-cla-odwetowe-st9226062"
+        }
+      ],
+      "tags": [
+        "Kanada",
+        "USA",
+        "cła",
+        "handel"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "bombardier-grozba-trumpa",
+      "section": "Gospodarka",
+      "title": "Trump grozi Bombardierowi blokadą sprzedaży w USA",
+      "lead": "Nacisk taryfowy rozlewa się na kanadyjskiego producenta lotniczego.",
+      "whatHappened": "AP podała, że Donald Trump zagroził zakazem sprzedaży samolotów Bombardiera w USA, jeśli producent nie przeniesie części działalności do Stanów. To dokłada kolejny poziom presji do już aktywowanego sporu celnego z Kanadą.",
+      "keyFacts": [
+        "To reakcja na dalszą eskalację sporu handlowego USA-Kanada.",
+        "Bombardier ma szeroką obecność i łańcuch dostaw w Stanach Zjednoczonych.",
+        "Komunikat wywołał natychmiastową uwagę mediów gospodarczych i rynkowych."
+      ],
+      "reactions": [
+        "Ryzyko dla firm lotniczych rośnie razem z napięciem taryfowym.",
+        "Temat może szybko przejść w reakcję polityczną albo rynkową."
+      ],
+      "whyItMatters": "To sygnał, że spór handlowy zaczyna uderzać w konkretne, wysokowartościowe branże.",
+      "context": "To konsekwencja tego samego konfliktu, który uruchomił kanadyjskie cła odwetowe.",
+      "watchNext": [
+        "Czy Bombardier odpowie oficjalnym oświadczeniem?",
+        "Czy administracja USA doprecyzuje groźbę prawnie lub handlowo?"
+      ],
+      "sources": [
+        {
+          "title": "AP - Trump threatens Canadian jetmaker Bombardier, which has an extensive US footprint",
+          "url": "https://apnews.com/article/e65b6eeaaa7ffbd06a67a57fb474b2e9"
+        },
+        {
+          "title": "MarketWatch - Bombardier's stock drops as the U.S.-Canada trade war intensifies",
+          "url": "https://www.marketwatch.com/story/bombardiers-stock-drops-as-the-u-s-canada-trade-war-intensifies-heres-what-trump-may-target-next-b389065e"
+        }
+      ],
+      "tags": [
+        "Bombardier",
+        "USA",
+        "Kanada",
+        "gospodarka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "zachodni-brzeg-sankcje-uk",
+      "section": "Świat",
+      "title": "UK nakłada sankcje na osady w Zachodnim Brzegu",
+      "lead": "Londyn łączy ban importowy z sankcjami wobec podmiotów wspierających osady.",
+      "whatHappened": "Brytyjskie MSZ ogłosiło zakaz importu towarów i części usług powiązanych z osiedlami na okupowanym Zachodnim Brzegu oraz sankcje wobec podmiotów związanych z ich rozbudową. W oficjalnym komunikacie rząd łączy ten ruch z ochroną rozwiązania dwupaństwowego.",
+      "keyFacts": [
+        "Komunikat jest z 8 września 2026.",
+        "To jeden z najostrzejszych ruchów Londynu wobec osadnictwa na Zachodnim Brzegu.",
+        "Rząd brytyjski przedstawia decyzję jako obronę realnej perspektywy dwóch państw."
+      ],
+      "reactions": [
+        "Decyzja prawdopodobnie wywoła mocną odpowiedź Izraela.",
+        "Temat wpisuje się w szerszą falę zachodnich reakcji na eskalację wokół Zachodniego Brzegu."
+      ],
+      "whyItMatters": "To nowy, formalny ruch sankcyjny w jednym z najważniejszych punktów zapalnych Bliskiego Wschodu.",
+      "context": "Wątek jest świeży i został dołożony do feedu jako nowa karta geopolityczna.",
+      "watchNext": [
+        "Czy Izrael odpowie dyplomatycznie lub handlowo?",
+        "Czy kolejne państwa dołączą do podobnych kroków?"
+      ],
+      "sources": [
+        {
+          "title": "gov.uk - Joint Foreign Ministers' Statement on the Two-State Solution",
+          "url": "https://www.gov.uk/government/news/joint-foreign-ministers-statement-on-the-two-state-solution"
+        },
+        {
+          "title": "AP - UK government bans goods from Israeli settlements and accuses settlers of 'ethnic cleansing'",
+          "url": "https://apnews.com/article/b4d7354221bfe0c48e4bfce7a3b7624b"
+        }
+      ],
+      "tags": [
+        "Zachodni Brzeg",
+        "Wielka Brytania",
+        "Bliski Wschód",
+        "sankcje"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "kyiv-zmasowany-atak-rosyjski",
+      "section": "Świat",
+      "title": "Kijów znów pod zmasowanym rosyjskim atakiem",
+      "lead": "Nowy nalot przyniósł ofiary i rannych.",
+      "whatHappened": "TVN24 i FT/AP opisują kolejny zmasowany rosyjski atak na Kijów po krótkiej przerwie związanej z rozmowami amerykańskich emisariuszy. Według relacji zginęły co najmniej dwie lub trzy osoby, a kilka kolejnych zostało rannych.",
+      "keyFacts": [
+        "Atak nastąpił po okresie względnego spokoju związanym z rozmowami pokojowymi.",
+        "Relacje mediów podają ofiary śmiertelne i rannych.",
+        "To kolejny sygnał, że rosyjskie naloty pozostają natychmiastowym czynnikiem ryzyka."
+      ],
+      "reactions": [
+        "Ukraina dalej naciska na wsparcie obrony powietrznej.",
+        "Nalot osłabia nadzieje na szybki dyplomatyczny przełom."
+      ],
+      "whyItMatters": "Kijów pozostaje jednym z najważniejszych punktów bezpieczeństwa w Europie.",
+      "context": "To świeże potwierdzenie, że wojna pozostaje w fazie aktywnej eskalacji.",
+      "watchNext": [
+        "Czy Ukraina opublikuje pełniejszy bilans strat?",
+        "Czy po ataku pojawi się nowa reakcja USA lub UE?"
+      ],
+      "sources": [
+        {
+          "title": "TVN24 - Przerażający atak Rosji na Ukrainę. Są zabici i ranni",
+          "url": "https://tvn24.pl/swiat/wojna-w-ukrainie-przerazajacy-atak-na-kijow-sa-zabici-i-ranni-st9226116"
+        },
+        {
+          "title": "FT - Russia launches missile strikes against Kyiv as pause in raids ends",
+          "url": "https://www.ft.com/content/0815cd34-bf4c-4771-8bf5-710eff286763"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Kijów",
+        "wojna",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "ukraina-prokurator-generalny-rezygnacja",
+      "section": "Świat",
+      "title": "Prokurator generalny Ukrainy rezygnuje w środku afery",
+      "lead": "W Kijowie narasta polityczny chaos wokół korupcyjnego śledztwa.",
+      "whatHappened": "Guardian podał, że prokurator generalny Ukrainy złożył rezygnację w tle śledztwa korupcyjnego związanego z call center i praniem pieniędzy. Dymisja dokłada się do presji na administrację Zełenskiego.",
+      "keyFacts": [
+        "Rezygnacja jest opisywana jako element szerszego kryzysu politycznego w Kijowie.",
+        "Sprawa wiąże się z zarzutami dotyczącymi prania pieniędzy.",
+        "W tle pozostaje ciągła wojna i presja na aparat państwa."
+      ],
+      "reactions": [
+        "To może wywołać kolejne dymisje lub przetasowania personalne.",
+        "Sprawa zwiększa presję na wiarygodność antykorupcyjną rządu."
+      ],
+      "whyItMatters": "Słabnąca stabilność instytucjonalna utrudnia Ukrainie prowadzenie wojny i utrzymanie zaufania partnerów.",
+      "context": "To świeży, polityczny follow-up do nocnego ataku na Kijów.",
+      "watchNext": [
+        "Czy Kijów ogłosi następcę prokuratora generalnego?",
+        "Czy śledztwo korupcyjne rozszerzy się na kolejne osoby?"
+      ],
+      "sources": [
+        {
+          "title": "Guardian - Ukraine war briefing: New political turmoil in Kyiv as prosecutor general resigns",
+          "url": "https://www.theguardian.com/world/2026/sep/08/ukraine-war-briefing-new-political-turmoil-in-kyiv-as-prosecutor-general-resigns"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Kijów",
+        "korupcja",
+        "polityka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "indonezja-loty-po-erozji",
+      "section": "Świat",
+      "title": "Indonezja przywraca loty po erupcji i popiele",
+      "lead": "Po dwudniowej przerwie lotniska wracają do pracy.",
+      "whatHappened": "AP podała, że loty do i z Dżakarty wznowiono po dwudniowym zamknięciu spowodowanym popiołem z erupcji wulkanu. Część procedur bezpieczeństwa nadal obowiązuje, ale operacje wracają do normy.",
+      "keyFacts": [
+        "Komunikat dotyczy stolicy Indonezji i okolicznych lotnisk.",
+        "Przerwa była wywołana popiołem wulkanicznym.",
+        "Po wznowieniu nadal obowiązują wybrane środki ostrożności."
+      ],
+      "reactions": [
+        "To ulgowy sygnał dla pasażerów i przewoźników.",
+        "Sytuacja nadal wymaga monitoringu, bo region jest podatny na kolejne zakłócenia."
+      ],
+      "whyItMatters": "Zakłócenia lotnicze w dużym hubie szybko rozlewają się na region i łańcuchy podróży.",
+      "context": "To świeże zamknięcie i częściowe otwarcie jednego z najważniejszych węzłów lotniczych w Azji Południowo-Wschodniej.",
+      "watchNext": [
+        "Czy władze utrzymają obecny poziom ostrożności?",
+        "Czy pojawią się kolejne anulacje lub opóźnienia?"
+      ],
+      "sources": [
+        {
+          "title": "AP - Flights to and from Indonesia's capital resume after volcanic eruption forced a 2-day closure",
+          "url": "https://apnews.com/article/311bf9e4c81e4b5ff0c55a0406e7edd3"
+        }
+      ],
+      "tags": [
+        "Indonezja",
+        "loty",
+        "wulkan",
+        "transport"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "mistral-finansowanie-rekordowe",
+      "section": "Technologia",
+      "title": "Mistral domyka rekordową rundę 3 mld euro",
+      "lead": "Francuski lider AI pozyskał największe finansowanie w historii europejskiego techu.",
+      "whatHappened": "Mistral oficjalnie ogłosił rundę Series D na 3 miliardy euro przy wycenie powyżej 21 miliardów euro. To wzmacnia europejski wątek suwerenności AI i presję na konkurencję z USA i Chinami.",
+      "keyFacts": [
+        "Spółka sama opublikowała komunikat z 8 września 2026.",
+        "To największa rundy kapitałowa w historii europejskiej firmy technologicznej.",
+        "Samsung Electronics prowadził rundę, a dołączyły też inne duże fundusze."
+      ],
+      "reactions": [
+        "To wzmacnia pozycję Mistrala jako europejskiego lidera AI.",
+        "Na rynku będzie teraz liczyć się nie tylko skala finansowania, ale i tempo wdrożeń."
+      ],
+      "whyItMatters": "To jeden z najważniejszych sygnałów inwestycyjnych w europejskiej AI w tym roku.",
+      "context": "To już twarde potwierdzenie wcześniejszych doniesień o rekordowej rundzie.",
+      "watchNext": [
+        "Czy Mistral poda więcej o roadmapie produktowej?",
+        "Czy konkurenci w Europie odpowiedzą podobnym ruchem kapitałowym?"
+      ],
+      "sources": [
+        {
+          "title": "Mistral - Making sovereign, open-weight AI the technology frontier",
+          "url": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/"
+        }
+      ],
+      "tags": [
+        "Mistral",
+        "AI",
+        "finansowanie",
+        "technologia"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "meta-instagram-ai-csam",
+      "section": "Technologia",
+      "title": "Meta nie wyłapała setek szkodliwych reklam AI na Instagramie",
+      "lead": "WIRED opisuje serię reklam z treściami CSAM i „nudify”.",
+      "whatHappened": "WIRED opisuje ponad 350 reklam wideo z materiałami CSAM na Facebooku, Instagramie i Threads, które przeszły przez systemy Meta. Część wykorzystała zdjęcia prawdziwych dzieci, a regulatorzy zaczęli zapowiadać analizę sprawy.",
+      "keyFacts": [
+        "Artykuł WIRED jest opublikowany 8 września 2026.",
+        "Opis dotyczy reklam, które omijały narzędzia moderacyjne Meta.",
+        "Wątek obejmuje Facebook, Instagram i Threads, a nie tylko jedną platformę."
+      ],
+      "reactions": [
+        "To prawdopodobnie przyspieszy presję regulatorów i mediów.",
+        "Meta będzie musiała wyjaśnić, czemu jej filtracja nie zatrzymała skali problemu."
+      ],
+      "whyItMatters": "To mocny sygnał o słabości moderacji treści szkodliwych na dużej platformie społecznościowej.",
+      "context": "To świeży materiał o ryzykach platformowych i bezpieczeństwie użytkowników w ekosystemie Meta.",
+      "watchNext": [
+        "Czy Meta opublikuje własne wyjaśnienie?",
+        "Czy regulatorzy w USA, UK lub UE otworzą formalne działania?"
+      ],
+      "sources": [
+        {
+          "title": "WIRED - Meta Failed to Catch Hundreds of AI Child Abuse Ads. Some Included Images of Real Kids",
+          "url": "https://www.wired.com/story/meta-failed-to-catch-hundreds-of-ai-child-abuse-ads-some-included-images-of-real-kids/"
+        }
+      ],
+      "tags": [
+        "Meta",
+        "Instagram",
+        "AI",
+        "bezpieczeństwo platform"
+      ],
+      "priority": "high"
+    }
+  ]
+}

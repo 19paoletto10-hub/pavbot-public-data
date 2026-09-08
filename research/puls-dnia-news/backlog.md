@@ -1,5 +1,16 @@
 # Puls Dnia News Backlog
 
+# 2026-09-08 18:03
+
+- Watch whether PKOl formalizes the replacement of Radosław Piesiewicz or sets a board vote.
+- Watch whether the prokuratura adds more detail in the Zondacrypto track or expands the list of suspects.
+- Watch whether Canada, the US or Bombardier issue a clearer official response to the tariff escalation.
+- Watch whether the UK or Israel clarify the implementation timeline for the West Bank sanctions.
+- Watch whether Ukraine names a successor to the prosecutor general after the resignation.
+- Watch whether Meta responds to the WIRED findings or whether regulators open formal proceedings.
+- Watch whether Indonesia tightens or eases aviation restrictions again after the ash disruption.
+- Watch whether the A4 work zone clears before the evening commute.
+
 # 2026-09-08 12:01
 
 - Watch whether Roman Ż. gets formal charges or a broader prokuratura statement in Zondacrypto.
