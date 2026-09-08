@@ -4,6 +4,10 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track Mistral sovereign AI scale-up | Mistral's €3B Series D and Samsung-led syndicate make Europe's open-weight stack a live capital and infrastructure story | Watch enterprise expansion, compute deployment and follow-on investor commentary | Open |
+| High | Track Gemini 3.8 Flash/Cyber rollout | Google is using cost/perf plus a defended cyber lane to redefine its model strategy | Watch Fairwind access, CodeMender adoption and pricing/usage signals | Open |
+| High | Track WeatherNext 3 and agentic video adoption | Google is productizing weather and video analysis into platform surfaces with clear cost savings | Watch Search/Maps/Cloud integration, external adoption and developer use cases | Open |
+| High | Track Apple memory pressure | Apple's 9 September event sits in a market where AI-driven memory demand is pushing up DRAM/HBM costs and affecting consumer hardware pricing | Watch event announcements, pricing commentary and component supply updates | Open |
 | High | Track OpenAI research automation | OpenAI now publicly frames coding agents, automated research intern and a March 2028 AI researcher target, reinforced by An Alien Mind and its pacing language, so the question is whether roadmap and safety messaging keep tightening | Watch follow-up commentary, external validation and any changes to release cadence | Open |
 | High | Track Copilot Gemini 3.8 billing | GitHub is shipping Gemini 3.8 Flash in Copilot while reopening Business and Enterprise signups, so enterprise adoption now depends on model mix, cost and admin controls | Watch rollout breadth, billing pass-through and policy changes | Open |
 | High | Track US-China AI safety talks | Tentative bilateral AI safety talks would create a rare diplomatic channel for cyber and model-risk coordination, and today's coverage makes the agenda more concrete | Watch confirmation, agenda detail and follow-on coverage | Open |

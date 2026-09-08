@@ -1,0 +1,314 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-09-08",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Dzisiejszy obraz przesuwa się od samej narracji o nowych modelach do wyraźnej kombinacji: sovereign AI, defensywnego cybera, tańszych agentic workflows i infrastruktury, która już podnosi ceny pamięci oraz elektroniki użytkowej. Najmocniejszy nowy sygnał to Mistral, które zamyka rekordową rundę €3 mld, ale równie ważne są Google Gemini 3.8 Flash/Cyber oraz WeatherNext 3, bo pokazują, że rynek premiuje dziś nie tylko capability, lecz także kontrolę, koszt i dystrybucję.",
+    "Po stronie sprzętu i rynku komponentów widać, że AI coraz mocniej wyciąga koszty poza data center. The Verge opisuje strukturalny memory squeeze, a MarketWatch pokazuje, że sam launch GPT-6 Astra podtrzymał zainteresowanie pamięcią. Community signal z Hacker News i Product Hunt pozostaje spójny: builderzy nadal jadą na agentach, weryfikacji i narzędziach do kontroli kosztu, a nie na ogólnym chatbotowym szumie."
+  ],
+  "summaryBullets": [
+    "AI: Mistral: rekordowa runda i europejska suwerenność AI",
+    "Cyber: Gemini 3.8 Flash i Flash Cyber: cena, agenty i defensywny cyber",
+    "Produkty: Google robi z AI usługę: WeatherNext 3 i agentic video"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-09-08-0-mistral-rekordowa-runda-i-europejska-suwerennosc-ai-d540bfd6fc",
+      "section": "AI",
+      "title": "Mistral: rekordowa runda i europejska suwerenność AI",
+      "standfirst": "Mistral ogłosił rundę Series D o wartości €3 mld przy wycenie ponad €21 mld, prowadzoną przez Samsung Electronics.",
+      "whatHappened": "Firma chce użyć kapitału do zwiększenia mocy obliczeniowej, przyspieszenia rozwoju produktów i ekspansji komercyjnej.",
+      "whyItMatters": "To najmocniejszy dotąd sygnał, że europejski open-weight AI stack staje się kategorią kapitałową, a nie tylko polityczną narracją.",
+      "deeperAnalysis": [
+        "Mistral nie sprzedaje już wyłącznie modeli. W komunikacie spółka podkreśla pełny stack: open-weight models, compute, produkty i kontrolę nad infrastrukturą. To dokładnie odpowiada na pytanie, które coraz częściej zadają europejskie firmy i rządy: jak korzystać z AI bez oddawania całego łańcucha zależności jednemu dostawcy spoza Europy.",
+        "Samsung jako lead inwestor jest tu równie ważny jak sama kwota. Taki układ łączy AI z przemysłem półprzewodnikowym i pokazuje, że sovereign AI zaczyna być czytane nie tylko jako temat regulacyjny, ale też jako strategiczne partnerstwo między modelami, chipami i enterprise deployments.",
+        "Mistral twierdzi, że działa już w 20 krajach i obsługuje 125+ klientów enterprise. To sugeruje, że następny test nie dotyczy już tylko prestiżu rundy, ale tego, czy spółka potrafi przekuć kontrolę nad stackiem w trwały udział w rynku."
+      ],
+      "contextPoints": [
+        "Mistral pozycjonuje się jako alternatywa dla amerykańskich i chińskich platform frontier AI.",
+        "Open-weight plus EU-hosted compute to dziś jego główny argument sprzedażowy.",
+        "Runda ma znaczenie także dla europejskiej polityki technologicznej i przemysłowej."
+      ],
+      "sources": [
+        {
+          "title": "Mistral",
+          "url": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/"
+        },
+        {
+          "title": "FT",
+          "url": "https://www.ft.com/content/adbf5262-c4d5-4312-a9b8-4d3cf30c9e00"
+        },
+        {
+          "title": "WSJ",
+          "url": "https://www.wsj.com/tech/ai/mistral-ai-exceeds-24-billion-valuation-after-samsung-led-investment-round-ea377b82"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Mistral",
+        "sovereign AI",
+        "open-weight",
+        "Europe",
+        "funding",
+        "compute"
+      ]
+    },
+    {
+      "id": "tech-news-2026-09-08-1-gemini-3-8-flash-i-flash-cyber-cena-agenty-i-defensywny-cyber-d6b4e8c910",
+      "section": "Cyber",
+      "title": "Gemini 3.8 Flash i Flash Cyber: cena, agenty i defensywny cyber",
+      "standfirst": "Google wypuścił Gemini 3.8 Flash i Gemini 3.8 Flash Cyber; zwykły Flash ma lepsze wyniki w agentic tasks i codingu przy tej samej startowej cenie, a Flash Cyber trafia do trusted defenders przez Fairwind.",
+      "whatHappened": "Google jednocześnie podnosi ambicję modeli ogólnych i wydziela osobny kanał dla cyberobrony.",
+      "whyItMatters": "To przesuwa rywalizację frontier AI z samego \"większego modelu\" na koszt, kontrolę i dystrybucję do uprzywilejowanych użytkowników.",
+      "deeperAnalysis": [
+        "Google podkreśla, że 3.8 Flash jest trzecią premierą Flash w sześć tygodni. W praktyce oznacza to szybkie iteracje, w których rozstrzygają już nie tylko benchmarki, ale też to, jak dużo tokenów i jakich narzędzi model zużyje w realnych workflowach.",
+        "Flash Cyber to jeszcze mocniejszy sygnał. Google łączy go z Fairwind i CodeMenderem, czyli z kanałem dla trusted defenders, a nie z szerokim rynkiem. W benchmarkach widać nie tylko wykrywanie podatności, ale też patching, co jest ważne, bo cyber dla AI przesuwa się z detekcji w stronę naprawy.",
+        "Firma pokazuje też, że model jest używany wewnętrznie przez Chrome Security i Cloud Vulnerability Research. To sprawia, że 3.8 Flash Cyber wygląda bardziej jak produkt operacyjny niż demonstracja marketingowa."
+      ],
+      "contextPoints": [
+        "3.8 Flash ma tę samą cenę startową co 3.7 Flash.",
+        "Google pokazuje poprawę na DeepSWE, HLE-Verified, CyberGym i CWE-Bench.",
+        "CodeMender i Fairwind sugerują, że cyber będzie osobnym, kontrolowanym produktem."
+      ],
+      "sources": [
+        {
+          "title": "Google DeepMind",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
+        },
+        {
+          "title": "Fairwind / CodeMender",
+          "url": "https://blog.google/innovation-and-ai/technology/safety-security/fairwind-program/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Google",
+        "Gemini",
+        "agentic workflows",
+        "cyber",
+        "CodeMender",
+        "Fairwind"
+      ]
+    },
+    {
+      "id": "tech-news-2026-09-08-2-google-robi-z-ai-usluge-weathernext-3-i-agentic-video-a411f238d0",
+      "section": "Produkty",
+      "title": "Google robi z AI usługę: WeatherNext 3 i agentic video",
+      "standfirst": "WeatherNext 3 dodaje real-time satellite data, hourly refreshes i clean-energy variables, a agentic video understanding obniża koszt analizy wideo nawet o 66%.",
+      "whatHappened": "Google zaczyna traktować AI jako warstwę infrastruktury dla prognoz, map, video analytics i enterprise workflows.",
+      "whyItMatters": "To pokazuje, że najcenniejsze wdrożenia AI mogą dziś siedzieć w taniej, wyspecjalizowanej automatyzacji, a nie w ogólnym czacie.",
+      "deeperAnalysis": [
+        "WeatherNext 3 jest tu ważniejsze niż kolejna demo-prezentacja. Model trafia jednocześnie do Search, Gemini, Maps, Google Maps Platform i Cloud, więc Google sprzedaje prognozowanie pogody jako platformową usługę danych, a nie odrębny model badawczy.",
+        "To samo widać w agentic video understanding. Google zmniejsza liczbę tokenów i koszty dla długich nagrań, bo model dynamicznie skanuje tylko potrzebne segmenty. To ma bezpośrednie znaczenie dla monitoringu, analityki treści i workflowów, w których godziny materiału szybko zabijają ekonomię statycznego przetwarzania.",
+        "Wspólny mianownik jest prosty: Google przesuwa AI z eksperymentu do produktu infrastrukturalnego. Nie sprzedaje tylko jakości modelu, ale możliwość uzyskania konkretnej przewagi kosztowej w pogodzie, wideo i enterprise data flows."
+      ],
+      "contextPoints": [
+        "WeatherNext 3 wchodzi do Search, Gemini, Maps, Google Maps Platform i Cloud.",
+        "Agentic video understanding działa na Gemini 3.7 Flash, 3.6 Flash i 3.5 Flash-Lite.",
+        "Google podaje spadek tokenów do 88% i kosztów do 66%."
+      ],
+      "sources": [
+        {
+          "title": "WeatherNext 3",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/"
+        },
+        {
+          "title": "Agentic video understanding",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Google",
+        "WeatherNext",
+        "video analytics",
+        "Cloud",
+        "Maps",
+        "Gemini"
+      ]
+    },
+    {
+      "id": "tech-news-2026-09-08-3-apple-i-pamiec-event-9-wrzesnia-w-cieniu-drozszych-komponentow-4dcd5ff322",
+      "section": "Infrastruktura",
+      "title": "Apple i pamięć: event 9 września w cieniu droższych komponentów",
+      "standfirst": "Apple opublikowało stronę specjalnego eventu na 9 września, a The Verge pokazuje, że AI napędza cenowy squeeze w DRAM/HBM.",
+      "whatHappened": "Nadchodzący cykl iPhone'ów wchodzi w moment, w którym pamięć staje się jednym z najdroższych i najbardziej strategicznych komponentów.",
+      "whyItMatters": "To bezpośredni dowód, że AI przenosi koszty z chmury do konsumenckiego hardware'u i może zmieniać premiowanie produktów.",
+      "deeperAnalysis": [
+        "Apple sama nie potwierdza nowych modeli, ale oficjalny event page na 9 września już buduje oczekiwania. Równolegle The Verge opisuje, że pamięć staje się strukturalnym bottleneckiem: AI customers z HBM dostają priorytet, bo producenci wolą długie kontrakty z wyższą marżą niż zmienny popyt konsumencki.",
+        "To ważne dla rynku, bo nie chodzi już tylko o \"więcej GPU\". Gdy DRAM do smartfonów rośnie kilkukrotnie, a nowe fabryki potrzebują lat, firmy takie jak Apple muszą albo podnosić ceny, albo ciąć konfiguracje, albo obie rzeczy naraz. MarketWatch dodaje dodatkowo, że launch GPT-6 Astra podtrzymał zainteresowanie sektorem pamięci, więc modelowy rollout ma dziś realny echo w rynku komponentów.",
+        "W praktyce to jeden z najlepszych przykładów, że AI już zmienia fizyczną ekonomię sprzętu konsumenckiego. Jeśli trend się utrzyma, jesienny sezon Apple będzie mniej o samych funkcjach, a bardziej o tym, ile pamięci i jaki poziom ceny rynek jeszcze zaakceptuje."
+      ],
+      "contextPoints": [
+        "Apple zapowiedziało event na 9 września.",
+        "The Verge podaje, że 3 producentów kontroluje ok. 90% rynku pamięci.",
+        "Counterpoint szacuje, że 16 GB DRAM w smartfonie wzrosło z ok. $42 do ok. $181 w rok."
+      ],
+      "sources": [
+        {
+          "title": "Apple Events",
+          "url": "https://www.apple.com/ae/apple-events/"
+        },
+        {
+          "title": "The Verge",
+          "url": "https://www.theverge.com/tech/988225/ram-shortage-supply-chain-micron-apple-iphone"
+        },
+        {
+          "title": "MarketWatch",
+          "url": "https://www.marketwatch.com/story/why-the-launch-of-openais-latest-astra-model-reignited-the-memory-chip-trade-809e2edb"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Apple",
+        "memory chips",
+        "HBM",
+        "iPhone",
+        "supply chain",
+        "Astra"
+      ]
+    },
+    {
+      "id": "tech-news-2026-09-08-4-hn-i-product-hunt-nadal-kreca-sie-wokol-agentow-i-kosztu-abbdd6f8da",
+      "section": "Produkty",
+      "title": "HN i Product Hunt nadal kręcą się wokół agentów i kosztu",
+      "standfirst": "Hacker News promuje dziś test/verification, mobile agents, security i WeatherNext 3, a Product Hunt wrześniowy leaderboard nadal kręci się wokół coding agents, routing tools i compute pricing.",
+      "whatHappened": "Builderzy nadal launchują i komentują przede wszystkim agent tools, review surfaces i compute visibility.",
+      "whyItMatters": "To najlepszy bieżący sygnał, że popyt przesunął się z \"kolejnego chatbota\" na narzędzia, które da się zmierzyć, skontrolować i policzyć.",
+      "deeperAnalysis": [
+        "Daily page Product Hunt dla 8 września nie ma jeszcze launchy, ale miesięczny ranking i kategoria AI Agents pokazują bardzo konkretny układ: coding agents, OpenRouter-style tool routing, compute price indexes, AI toolboxy i workflow products. To jest dużo bliżej infrastruktury pracy niż konsumenckiej nowości.",
+        "Hacker News wzmacnia ten sam obraz. Na froncie są tematy o security everywhere, test/verification, mobile agents i WeatherNext 3, czyli o tym, jak działać, weryfikować i ograniczać ryzyko. To już nie jest szum o modelach; to rozmowa o kontrolowalności.",
+        "Jeśli połączyć to z Google i Mistral, obraz rynku jest spójny: najlepsze produkty to dziś te, które dają przewagę w kosztach, kontroli i wdrożeniu, a nie tylko obiecują większy benchmark."
+      ],
+      "contextPoints": [
+        "PH monthly ranking prowadzą Kilo Code for JetBrains, Monid i GPT-6 Astra.",
+        "AI Agents category was updated Sep 8.",
+        "HN front page includes agent verification, mobile agents and security threads."
+      ],
+      "sources": [
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/"
+        },
+        {
+          "title": "Product Hunt monthly leaderboard",
+          "url": "https://www.producthunt.com/leaderboard/monthly/2026/9"
+        },
+        {
+          "title": "Product Hunt AI Agents",
+          "url": "https://www.producthunt.com/categories/ai-agents"
+        },
+        {
+          "title": "Product Hunt daily Sep 8",
+          "url": "https://www.producthunt.com/leaderboard/daily/2026/9/8"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Hacker News",
+        "Product Hunt",
+        "agents",
+        "verification",
+        "tooling"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Mistral domyka rekordową rundę",
+      "rationale": "Europejski sovereign AI wchodzi na poziom kapitału i infrastruktury, a Samsung sygnalizuje szerszą grę o stack i compute",
+      "sourcesLabel": "Mistral, FT, WSJ"
+    },
+    {
+      "priority": "High",
+      "title": "Gemini 3.8 Flash i Flash Cyber",
+      "rationale": "Google ustawia rynek wokół kosztu, agentów i defensywnego cybera zamiast samego rozmiaru modelu",
+      "sourcesLabel": "Google DeepMind, Fairwind"
+    },
+    {
+      "priority": "High",
+      "title": "Google robi z AI usługę",
+      "rationale": "WeatherNext 3 i agentic video understanding pokazują, że wartość przesuwa się do wyspecjalizowanych powierzchni w Search, Maps, Cloud i video analytics",
+      "sourcesLabel": "Google DeepMind, WeatherNext 3"
+    },
+    {
+      "priority": "High",
+      "title": "Apple i pamięć drożeją przez AI",
+      "rationale": "Event Apple zderza się z rosnącymi kosztami DRAM/HBM i z tym, że AI już zmienia ceny hardware'u",
+      "sourcesLabel": "Apple, The Verge, MarketWatch"
+    },
+    {
+      "priority": "High",
+      "title": "OpenAI Astra podbija pamięć",
+      "rationale": "Launch GPT-6 Astra podtrzymał zainteresowanie memory chips, więc modelowy rollout ma dziś bezpośredni efekt na półprzewodniki",
+      "sourcesLabel": "MarketWatch, The Verge"
+    },
+    {
+      "priority": "Medium",
+      "title": "HN i Product Hunt dalej kochają agentów",
+      "rationale": "Builderzy nadal premiują verification, routing i control surfaces, więc to dobry sygnał o realnym popycie na narzędzia",
+      "sourcesLabel": "Hacker News, Product Hunt"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Mistral",
+      "url": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/"
+    },
+    {
+      "title": "FT",
+      "url": "https://www.ft.com/content/adbf5262-c4d5-4312-a9b8-4d3cf30c9e00"
+    },
+    {
+      "title": "WSJ",
+      "url": "https://www.wsj.com/tech/ai/mistral-ai-exceeds-24-billion-valuation-after-samsung-led-investment-round-ea377b82"
+    },
+    {
+      "title": "Google DeepMind",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
+    },
+    {
+      "title": "Fairwind",
+      "url": "https://blog.google/innovation-and-ai/technology/safety-security/fairwind-program/"
+    },
+    {
+      "title": "WeatherNext 3",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/"
+    },
+    {
+      "title": "Agentic video understanding",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/"
+    },
+    {
+      "title": "Apple Events",
+      "url": "https://www.apple.com/ae/apple-events/"
+    },
+    {
+      "title": "The Verge",
+      "url": "https://www.theverge.com/tech/988225/ram-shortage-supply-chain-micron-apple-iphone"
+    },
+    {
+      "title": "MarketWatch",
+      "url": "https://www.marketwatch.com/story/why-the-launch-of-openais-latest-astra-model-reignited-the-memory-chip-trade-809e2edb"
+    },
+    {
+      "title": "Hacker News",
+      "url": "https://news.ycombinator.com/"
+    },
+    {
+      "title": "Product Hunt monthly",
+      "url": "https://www.producthunt.com/leaderboard/monthly/2026/9"
+    },
+    {
+      "title": "Product Hunt AI Agents",
+      "url": "https://www.producthunt.com/categories/ai-agents"
+    },
+    {
+      "title": "Product Hunt daily",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/9/8"
+    }
+  ]
+}

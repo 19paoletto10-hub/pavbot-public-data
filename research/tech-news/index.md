@@ -1,8 +1,14 @@
 # Topic Index: tech-news
 
-Last updated: 2026-09-07
+Last updated: 2026-09-08
 
 ## Current Understanding
+
+Dzisiejszy run z 2026-09-08 przesuwa środek ciężkości z samej narracji o nowych modelach do sovereign AI, cost/perf i infrastrukturalnego squeeze'u pamięci. Mistral domyka rekordowe €3 mld, Google wypuszcza Gemini 3.8 Flash/Cyber oraz WeatherNext 3, a Apple i rynek komponentów pokazują, że AI już przenosi koszty do consumer hardware'u.
+
+Google w tym układzie wygląda jak firma, która nie tylko ściga frontier models, ale też zamienia je w wyspecjalizowane usługi: cyber z Fairwind/CodeMender, pogoda z WeatherNext 3, wideo z agentic video understanding i tańsze agentic workflows z Gemini 3.8 Flash. To przesuwa rywalizację z samego "większy model" na kontrolę, koszt i dystrybucję.
+
+Community signal z Hacker News i Product Hunt dalej mówi to samo: najwięcej uwagi zbierają agentowe workflowy, verification, review i compute visibility. Rynek builderów nagradza dziś narzędzia, które da się zmierzyć i kontrolować, a nie tylko kolejną warstwę chatbota.
 
 Dzisiejszy run z 2026-09-07 zaczynał się od rollout'u modeli, ale wieczorem przesunął się w stronę safety, prawa i fizycznych ograniczeń AI. OpenAI publikuje `An Alien Mind` i `Research acceleration`, wprost mówiąc o coding agents, automated research intern i celu automatycznego AI researcher do marca 2028, a jednocześnie rosną sygnały o oporze społecznym, kosztach pamięci i polityce data centers.
 
