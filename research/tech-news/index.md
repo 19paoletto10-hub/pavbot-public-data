@@ -4,6 +4,10 @@ Last updated: 2026-09-08
 
 ## Current Understanding
 
+Wieczorny run z 2026-09-08 dodaje operacyjny wymiar do porannej osi modeli i pamięci. GTIG pokazuje, że przeciwnicy przechodzą od promptowania do agentic workflows i potrafią zbudować masową kampanię credential harvesting w mniej niż sześć godzin, a WeWorm łączy mobilny zero-click z automatyczną propagacją przez kontakty WeChat.
+
+Jednocześnie memory squeeze dostaje odpowiedź po stronie produkcji: Samsung chce wprowadzić High NA EUV do masowej produkcji DRAM do 2028 roku i wraz z ASML rozwija 12-calowe fotomaski. Governance też schodzi głębiej w infrastrukturę — EGE obejmuje ochroną neuro-derived inferences, a Wielka Brytania zaczyna projektować rolę AI w czystym systemie energetycznym.
+
 Dzisiejszy run z 2026-09-08 przesuwa środek ciężkości z samej narracji o nowych modelach do sovereign AI, cost/perf i infrastrukturalnego squeeze'u pamięci. Mistral domyka rekordowe €3 mld, Google wypuszcza Gemini 3.8 Flash/Cyber oraz WeatherNext 3, a Apple i rynek komponentów pokazują, że AI już przenosi koszty do consumer hardware'u.
 
 Google w tym układzie wygląda jak firma, która nie tylko ściga frontier models, ale też zamienia je w wyspecjalizowane usługi: cyber z Fairwind/CodeMender, pogoda z WeatherNext 3, wideo z agentic video understanding i tańsze agentic workflows z Gemini 3.8 Flash. To przesuwa rywalizację z samego "większy model" na kontrolę, koszt i dystrybucję.

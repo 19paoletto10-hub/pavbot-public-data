@@ -4,6 +4,10 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track agentic threat operations | GTIG observed an agent-enabled credential harvesting campaign built and executed in under six hours, plus attempts to deceive coding assistants and LLM scanners | Watch follow-up TTPs, indicators and defensive controls for agent trust boundaries | Open |
+| High | Track WeWorm disclosure and patching | The WeChat zero-click demo turns a mobile exploit into cross-platform automated propagation | Watch Tencent advisory, CVE, patched versions and evidence of in-the-wild exploitation | Open |
+| High | Track High NA EUV for DRAM | Samsung plans High NA EUV DRAM HVM by 2028 and is joining the 12-inch photomask transition | Watch ASML delivery milestones, mask standards, yields and memory-supply impact | Open |
+| Medium | Track EU Neuro-AI governance | EGE wants protections for neurodata-derived inferences and an EU regulatory fitness check | Watch Commission follow-up, Brain Foundation Model policy and rights guidance | Open |
 | High | Track Mistral sovereign AI scale-up | Mistral's €3B Series D and Samsung-led syndicate make Europe's open-weight stack a live capital and infrastructure story | Watch enterprise expansion, compute deployment and follow-on investor commentary | Open |
 | High | Track Gemini 3.8 Flash/Cyber rollout | Google is using cost/perf plus a defended cyber lane to redefine its model strategy | Watch Fairwind access, CodeMender adoption and pricing/usage signals | Open |
 | High | Track WeatherNext 3 and agentic video adoption | Google is productizing weather and video analysis into platform surfaces with clear cost savings | Watch Search/Maps/Cloud integration, external adoption and developer use cases | Open |

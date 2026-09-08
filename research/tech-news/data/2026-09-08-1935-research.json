@@ -1,0 +1,254 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-09-08",
+  "runTime": "19:35",
+  "status": "Material update",
+  "leadParagraphs": [
+    "Wieczorny update przesuwa akcent z porannych premier modeli na ich skutki operacyjne: przeciwnicy używają już agentów do skracania cyklu ataku, mobilny zero-click może zostać zamieniony w samoreplikującego się worma, a producenci półprzewodników przebudowują litografię pod pamięć dla ery AI. Najważniejszy nowy fakt pochodzi od GTIG: w II kwartale 2026 grupa przestępcza przeszła od przejęcia zasobu chmurowego do masowego credential harvestingu z agentem w mniej niż sześć godzin.",
+    "Drugą osią jest governance infrastruktury, nie pojedynczego modelu. EGE proponuje objęcie ochroną także wniosków wyprowadzanych z neurodanych, a Wielka Brytania otwiera konsultację o wykorzystaniu AI w energetyce. Community signal pozostaje agentowy, lecz wieczorem bezpieczeństwo, prywatność i open-source tooling są mocniejsze niż kolejny chatbot."
+  ],
+  "summaryBullets": [
+    "Cyber: Agentic cyber: od promptu do kampanii w sześć godzin",
+    "Cyber: WeWorm: mobilny zero-click zamieniony w samoreplikujący atak",
+    "Infrastruktura: Samsung i ASML przebudowują litografię pod DRAM ery AI"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-09-08-1935-0-agentic-cyber-od-promptu-do-kampanii-w-szesc-godzin-5be4075478",
+      "section": "Cyber",
+      "title": "Agentic cyber: od promptu do kampanii w sześć godzin",
+      "standfirst": "Google Threat Intelligence Group obserwuje przejście przeciwników z promptowania do autonomicznych workflowów. W jednym przypadku agent-enabled credential harvesting powstał w mniej niż sześć godzin od przejęcia zasobu chmurowego.",
+      "whatHappened": "Atakujący używają agentów do planowania, budowy i wykonania kampanii oraz próbują oszukiwać asystentów codingowych i skanery LLM.",
+      "whyItMatters": "Automatyzacja zmniejsza czas obrońców na reakcję i sprawia, że narzędzia AI stają się częścią atakowanej powierzchni supply chain.",
+      "deeperAnalysis": [
+        "Najważniejsza zmiana nie polega na tym, że przestępcy pytają model o kod. GTIG opisuje workflow, w którym człowiek coraz rzadziej zatrzymuje wykonanie: agent przechodzi od rozpoznania do budowy narzędzi i masowej operacji, redukując opóźnienia między fazami ataku.",
+        "Druga część raportu dotyczy zaufania do narzędzi developerskich. UNC6780 próbował manipulować asystentami codingowymi i skanerami bezpieczeństwa opartymi na LLM w ramach kompromitacji open-source. To oznacza, że organizacje muszą traktować kontekst przekazywany agentowi jak dane potencjalnie wrogie.",
+        "Defensywny wniosek to potrzeba krótszych pętli detekcji, izolacji poświadczeń i niezależnej weryfikacji rezultatów agenta. Samo dodanie kolejnego modelu do SOC nie wystarczy, jeżeli system ufa repozytorium, issue albo logom bez kontroli pochodzenia."
+      ],
+      "contextPoints": [
+        "Co się stało: GTIG udokumentował agent-enabled kampanię credential harvesting zbudowaną w mniej niż sześć godzin.",
+        "Dlaczego ważne: Human-in-the-loop latency po stronie atakującego przestaje chronić obrońców.",
+        "Na co patrzeć dalej: Konkretne TTP, wskaźniki kompromitacji i nowe guardraile dla coding assistants."
+      ],
+      "sources": [
+        {
+          "title": "Google Cloud GTIG",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "GTIG",
+        "agentic AI",
+        "cyber",
+        "cloud",
+        "supply chain"
+      ]
+    },
+    {
+      "id": "tech-news-2026-09-08-1935-1-weworm-mobilny-zero-click-zamieniony-w-samoreplikujacy-atak-c77c795898",
+      "section": "Cyber",
+      "title": "WeWorm: mobilny zero-click zamieniony w samoreplikujący atak",
+      "standfirst": "Calif Research pokazał exploit, który przez przychodzące połączenie WeChat może przejąć konto bez kliknięcia i zadzwonić do następnych kontaktów. Tencent miał potwierdzić RCE i naprawić błąd przed publikacją.",
+      "whatHappened": "Badacze połączyli mobilny zero-click z automatycznym rozprzestrzenianiem przez graf kontaktów WeChat.",
+      "whyItMatters": "Połączenie zdalnego wykonania kodu, miliardowej platformy i automatyzacji tworzy ryzyko propagacji szybszej niż ręczna reakcja użytkowników.",
+      "deeperAnalysis": [
+        "WeWorm nie jest tylko kolejnym exploitem aplikacji komunikacyjnej. Kluczowa jest logika propagacji: przejęte konto samo inicjuje kolejne połączenia, dzięki czemu naturalny graf zaufania użytkownika staje się kanałem dystrybucji ataku na obu głównych systemach mobilnych.",
+        "Badanie pokazuje też zmianę ekonomii offensive security. Autorzy mówią o użyciu AI przy budowie demonstracji, ale realnym mnożnikiem jest automatyzacja całego łańcucha od triggera do kolejnego celu. To kierunek spójny z raportem GTIG, choć oba źródła opisują inne klasy incydentów.",
+        "Ponieważ publiczne szczegóły pochodzą głównie od zespołu badawczego, dalsza ocena wymaga advisory od Tencent, identyfikatorów CVE i precyzyjnej listy bezpiecznych wersji aplikacji. Do tego czasu najważniejszym faktem jest potwierdzenie naprawy przed ujawnieniem, a nie spekulacja o aktywnym wykorzystaniu."
+      ],
+      "contextPoints": [
+        "Co się stało: Zero-click w obsłudze połączeń został użyty do demonstracji worma na iOS i Androidzie.",
+        "Dlaczego ważne: Graf kontaktów aplikacji może automatycznie skalować kompromitację.",
+        "Na co patrzeć dalej: Oficjalne advisory Tencent, CVE, wersje poprawki i dowody ewentualnego wykorzystania in-the-wild."
+      ],
+      "sources": [
+        {
+          "title": "Calif Research",
+          "url": "https://calif.io/research/weworm"
+        },
+        {
+          "title": "Techmeme / relacja NYT",
+          "url": "https://www.techmeme.com/river?trk=public_post_main-feed-card-text"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "WeChat",
+        "zero-click",
+        "iOS",
+        "Android",
+        "worm"
+      ]
+    },
+    {
+      "id": "tech-news-2026-09-08-1935-2-samsung-i-asml-przebudowuja-litografie-pod-dram-ery-ai-494f6eb96a",
+      "section": "Infrastruktura",
+      "title": "Samsung i ASML przebudowują litografię pod DRAM ery AI",
+      "standfirst": "Samsung planuje użyć High NA EUV w masowej produkcji zaawansowanego DRAM do 2028 roku. Firma dołącza też do inicjatywy przejścia na 12-calowe fotomaski.",
+      "whatHappened": "Samsung i ASML rozszerzyły współpracę nad High NA EUV oraz infrastrukturą masek dla kolejnych procesów pamięci i logiki.",
+      "whyItMatters": "Dzisiejszy memory squeeze wymusza nie tylko nowe fabryki, ale też zmianę podstawowych narzędzi i standardów produkcji.",
+      "deeperAnalysis": [
+        "High NA EUV zwiększa aperturę optyczną i pozwala odwzorowywać mniejsze struktury, ale wymaga zmian w całym otoczeniu procesu. Samsung łączy zapowiedź bezpośrednio z DRAM, co jest istotne w momencie, gdy HBM i pamięć dla akceleratorów AI konkurują o moce produkcyjne z rynkiem konsumenckim.",
+        "Przejście z 6- na 12-calowe fotomaski ma usunąć ograniczenia stitchingu, podnieść produktywność fabów i w dłuższym okresie obniżyć koszt chipów. Nie jest to jednak szybka odpowiedź na bieżące niedobory: standardy, maski, sprzęt inspekcyjny i yield muszą dojrzeć razem.",
+        "Zapowiedź wzmacnia poranny wniosek o fizycznych ograniczeniach AI. Modelowe premiery tworzą popyt, lecz trwała podaż zależy od wieloletnich zmian w litografii, pamięci i łańcuchu dostaw."
+      ],
+      "contextPoints": [
+        "Co się stało: Samsung chce wprowadzić High NA EUV do produkcji DRAM w 2028 roku.",
+        "Dlaczego ważne: Pamięć staje się strategicznym bottleneckiem całego stacku AI.",
+        "Na co patrzeć dalej: Harmonogram dostaw ASML, standard 12-calowych masek, yield i pierwsze wdrożenia HVM."
+      ],
+      "sources": [
+        {
+          "title": "Samsung Semiconductor",
+          "url": "https://news.samsungsemiconductor.com/global/samsung-electronics-and-asml-expand-strategic-collaboration-for-next-generation-semiconductor-manufacturing/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Samsung",
+        "ASML",
+        "High NA EUV",
+        "DRAM",
+        "fotomaski"
+      ]
+    },
+    {
+      "id": "tech-news-2026-09-08-1935-3-neuro-ai-potrzebuje-governance-calej-infrastruktury-f92dc9fcce",
+      "section": "Regulacje",
+      "title": "Neuro-AI potrzebuje governance całej infrastruktury",
+      "standfirst": "Europejska Grupa ds. Etyki proponuje chronić neurodane i wyprowadzane z nich wnioski oraz ocenić adekwatność unijnego prawa dla infrastruktury Neuro-AI.",
+      "whatHappened": "EGE opublikowała pięć rekomendacji obejmujących prawa, odpowiedzialny rozwój Brain Foundation Models i publiczną zdolność governance.",
+      "whyItMatters": "Model może tworzyć wrażliwe inferencje nawet wtedy, gdy surowe sygnały mózgowe nie są bezpośrednio ujawniane.",
+      "deeperAnalysis": [
+        "Podejście infrastrukturalne odchodzi od pytania, czy pojedynczne urządzenie jest bezpieczne. EGE patrzy na cały łańcuch: zbieranie neurodanych, ich łączenie, ponowne użycie, trenowanie modeli i wdrażanie inferencji w kontekstach o realnych konsekwencjach dla człowieka.",
+        "To szczególnie ważne dla Brain Foundation Models, które mogą agregować dane z wielu badań i urządzeń. Korzyści naukowe oraz rehabilitacyjne są duże, lecz centralizacja tworzy nowe punkty kontroli i ryzyko wtórnego użycia informacji, których osoba nie przekazała wprost.",
+        "Rekomendacja nie jest nowym prawem. Jest jednak wczesnym sygnałem, że kolejnym etapem europejskiej polityki AI może być ochrona inferencji i public-interest infrastructure, a nie tylko zgody na przetwarzanie surowych danych."
+      ],
+      "contextPoints": [
+        "Co się stało: EGE wezwała do pięciu działań dla Neuro-AI, w tym regulatory fitness check.",
+        "Dlaczego ważne: Wrażliwe informacje mogą powstawać na etapie inferencji, poza pierwotnym zbiorem danych.",
+        "Na co patrzeć dalej: Reakcja Komisji, zakres przeglądu prawa i zasady dla Brain Foundation Models."
+      ],
+      "sources": [
+        {
+          "title": "Komisja Europejska",
+          "url": "https://research-and-innovation.ec.europa.eu/news/all-research-and-innovation-news/experts-call-new-approach-neuro-ai-governance-2026-09-08_en?prefLang=pl"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Neuro-AI",
+        "neurodane",
+        "EGE",
+        "Komisja Europejska",
+        "governance"
+      ]
+    },
+    {
+      "id": "tech-news-2026-09-08-1935-4-wielka-brytania-pyta-jak-ai-ma-sterowac-czysta-energia-4877537f68",
+      "section": "Infrastruktura",
+      "title": "Wielka Brytania pyta, jak AI ma sterować czystą energią",
+      "standfirst": "Brytyjski rząd otworzył do 6 listopada konsultację o roli AI w czystym systemie energetycznym. Zaproszenie obejmuje branżę, regulatorów, badaczy i organizacje konsumenckie.",
+      "whatHappened": "Administracja zbiera dowody i przykłady, aby określić priorytety przyszłej polityki AI dla energetyki.",
+      "whyItMatters": "AI może optymalizować sieć i popyt, ale samo zwiększa obciążenie energetyczne oraz zależność od danych i infrastruktury krytycznej.",
+      "deeperAnalysis": [
+        "Konsultacja jest etapem projektowania polityki, nie gotowym programem. Jej znaczenie polega na tym, że rząd traktuje AI jednocześnie jako narzędzie transformacji energetycznej i technologię wymagającą dowodów na bezpieczeństwo, wartość oraz skutki dla konsumentów.",
+        "W energetyce jakość prognoz i automatyzacji przekłada się na fizyczne decyzje: bilansowanie, magazyny, planowanie przyłączeń i zarządzanie popytem. Błędy mają więc inny ciężar niż halucynacja w czacie, a wdrożenia potrzebują audytu, fallbacków i jasnej odpowiedzialności operatora.",
+        "To również druga strona boomu data center. System energetyczny ma używać AI do większej efektywności, a zarazem obsłużyć rosnące zapotrzebowanie compute. Wynik konsultacji pokaże, czy oba cele zostaną spięte w jednym planie."
+      ],
+      "contextPoints": [
+        "Co się stało: Rząd zbiera uwagi do 6 listopada 2026 roku.",
+        "Dlaczego ważne: AI w infrastrukturze krytycznej wymaga mierzalnej wartości i operacyjnych zabezpieczeń.",
+        "Na co patrzeć dalej: Priorytety po konsultacji, projekty pilotażowe i zasady dostępu do danych energetycznych."
+      ],
+      "sources": [
+        {
+          "title": "GOV.UK",
+          "url": "https://www.gov.uk/government/calls-for-evidence/vision-for-an-ai-enabled-clean-energy-system/vision-for-an-ai-enabled-clean-energy-system-html"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "energia",
+        "Wielka Brytania",
+        "AI",
+        "grid",
+        "konsultacje"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Cyberprzestępcy przechodzą na agentów",
+      "rationale": "GTIG pokazuje, że agenty potrafią skompresować pełny cykl kampanii do godzin",
+      "sourcesLabel": "Google Cloud GTIG"
+    },
+    {
+      "priority": "High",
+      "title": "WeWorm: zero-click, który sam dzwoni dalej",
+      "rationale": "Mobilny exploit staje się samoreplikującą kampanią o skali platformy komunikacyjnej",
+      "sourcesLabel": "Calif Research, NYT/Techmeme"
+    },
+    {
+      "priority": "High",
+      "title": "High NA EUV trafia do pamięci AI",
+      "rationale": "Samsung i ASML przebudowują proces DRAM oraz fotomaski pod kolejne generacje pamięci",
+      "sourcesLabel": "Samsung Semiconductor"
+    },
+    {
+      "priority": "Medium",
+      "title": "UE chce chronić wnioski z neurodanych",
+      "rationale": "Neuro-AI wymusza governance całej infrastruktury, nie tylko pojedynczych urządzeń",
+      "sourcesLabel": "Komisja Europejska, EGE"
+    },
+    {
+      "priority": "Medium",
+      "title": "AI ma wejść do systemu energetycznego",
+      "rationale": "Brytyjska konsultacja pokaże, gdzie sektor widzi korzyści, ryzyka i bariery wdrożenia",
+      "sourcesLabel": "GOV.UK"
+    },
+    {
+      "priority": "Medium",
+      "title": "Community signal skręca w security i open source",
+      "rationale": "HN i PH nadal premiują agent tools, ale prywatność, kontrola i otwarte narzędzia rosną w rankingu",
+      "sourcesLabel": "Hacker News, Product Hunt"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Google Cloud",
+      "url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai"
+    },
+    {
+      "title": "Calif Research",
+      "url": "https://calif.io/research/weworm"
+    },
+    {
+      "title": "Techmeme/NYT",
+      "url": "https://www.techmeme.com/river?trk=public_post_main-feed-card-text"
+    },
+    {
+      "title": "Samsung Semiconductor",
+      "url": "https://news.samsungsemiconductor.com/global/samsung-electronics-and-asml-expand-strategic-collaboration-for-next-generation-semiconductor-manufacturing/"
+    },
+    {
+      "title": "Komisja Europejska",
+      "url": "https://research-and-innovation.ec.europa.eu/news/all-research-and-innovation-news/experts-call-new-approach-neuro-ai-governance-2026-09-08_en?prefLang=pl"
+    },
+    {
+      "title": "GOV.UK",
+      "url": "https://www.gov.uk/government/calls-for-evidence/vision-for-an-ai-enabled-clean-energy-system/vision-for-an-ai-enabled-clean-energy-system-html"
+    },
+    {
+      "title": "Hacker News",
+      "url": "https://news.ycombinator.com/"
+    },
+    {
+      "title": "Product Hunt",
+      "url": "https://www.producthunt.com/leaderboard/monthly/2026/9"
+    }
+  ]
+}
