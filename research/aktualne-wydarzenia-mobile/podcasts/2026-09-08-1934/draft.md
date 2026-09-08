@@ -1,4 +1,4 @@
-# Aktualne wydarzenia mobile, 8 września 2026
+# Aktualne wydarzenia mobile, wieczór 8 września 2026
 
 Dzień dobry. To poranne wydanie ma dziś wyraźny kształt. Polska dostaje nowe sygnały z bezpieczeństwa i pogody, edukacja wraca do twardych danych z PISA, Ukraina znów ma jednocześnie presję wojenną i polityczną, a Bliski Wschód dokłada kolejną porcję napięcia. Technologia też nie śpi, tylko jak zwykle robi to w swoim tempie, czyli wolniej niż ktoś by chciał.
 
@@ -35,4 +35,3 @@ Bruksela z kolei nie robi dziś nowego zwrotu wobec Google. Komisja Europejska n
 Norweski cyberatak też nie daje dziś nowego przełomu. Publiczny status Digdir nie pokazuje nowego incydentu, więc poprzedni DDoS wygląda raczej na wygaszony niż rozwijający się. W takich sprawach dobra wiadomość bywa nudna. I dobrze. W cyberbezpieczeństwie nuda jest często najlepszym wynikiem.
 
 Na koniec najkrótsze podsumowanie dnia: Polska ma dziś twarde alerty i twardą strefę lotniczą, edukacja dostaje dane z PISA, Ukraina dostaje presję z zewnątrz i od środka, Bliski Wschód nie schodzi z czerwonego poziomu, a technologia pokazuje, że spór o sieci, dane i bezpieczeństwo jest już częścią globalnej polityki.
-
