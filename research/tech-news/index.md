@@ -1,8 +1,10 @@
 # Topic Index: tech-news
 
-Last updated: 2026-09-08
+Last updated: 2026-09-11
 
 ## Current Understanding
+
+Run z 2026-09-11 dodaje mocny dowód na przejście od asystenta do orkiestratora cyberoperacji. Raport Anthropic opisuje AI wspierające rekonesans, phishing, eksfiltrację i iteracyjne omijanie detekcji; to rozszerza wczorajszy wątek kontroli agentów. Równolegle NVIDIA pozycjonuje inference, robotykę i agentic cybersecurity jako jeden stos, a HN sygnalizuje popyt na Agents API i lokalny compute. Są to jednak w większości komunikaty dostawców lub sygnały społecznościowe, więc wymagają niezależnych wyników wdrożeń.
 
 Wieczorny run z 2026-09-08 dodaje operacyjny wymiar do porannej osi modeli i pamięci. GTIG pokazuje, że przeciwnicy przechodzą od promptowania do agentic workflows i potrafią zbudować masową kampanię credential harvesting w mniej niż sześć godzin, a WeWorm łączy mobilny zero-click z automatyczną propagacją przez kontakty WeChat.
 

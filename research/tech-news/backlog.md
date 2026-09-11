@@ -517,3 +517,6 @@
 | 2026-06-20 | Review first three tech research reports | Reports for 2026-06-17, 2026-06-18 and 2026-06-19 have review notes and provided enough source quality to continue the daily workflow |
 | 2026-06-21 | Recheck Product Hunt timing | Homepage was useful on 2026-06-19, 2026-06-20 and 2026-06-21; use homepage/current sections instead of the weak daily archive path |
 | 2026-07-11 | Track SK Hynix U.S. listing | ADRs debuted up about 13%; keep the memory-supercycle follow-through in the separate bottleneck watch item |
+| High | Track AI-orchestrated cyber campaigns | Anthropic's September report documents multi-stage agentic attacks and detection evasion | Watch independent incident analysis, vendor mitigations and IAM/EDR controls | Open |
+| High | Track Agents API control surfaces | Developer interest is shifting toward execution, permissions and observability | Watch official docs, evals, rate limits and production adoption | Open |
+| Medium | Track NVIDIA full-stack AI claims | Inference, robotics and agentic security are being sold as one platform | Watch customer deployments, benchmarks and power efficiency | Open |

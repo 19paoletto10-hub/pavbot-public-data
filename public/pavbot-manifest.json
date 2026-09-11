@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-09-11T16:03:17.084232+00:00",
+  "generatedAt": "2026-09-11T17:35:46.689228+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -138,6 +138,36 @@
   ],
   "artifacts": [
     {
+      "id": "research/tech-news/runs/2026-09-11.md",
+      "type": "run",
+      "topic": "tech-news",
+      "title": "Raport technologiczny: agent jako nowa powierzchnia ryzyka",
+      "path": "research/tech-news/runs/2026-09-11.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/runs/2026-09-11.md",
+      "sizeBytes": 8721,
+      "date": "2026-09-11"
+    },
+    {
+      "id": "research/tech-news/data/2026-09-11-research.json",
+      "type": "researchData",
+      "topic": "tech-news",
+      "title": "Research data",
+      "path": "research/tech-news/data/2026-09-11-research.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/data/2026-09-11-research.json",
+      "sizeBytes": 8129,
+      "date": "2026-09-11"
+    },
+    {
+      "id": "research/tech-news/pdfs/2026-09-11-tech-news.pdf",
+      "type": "pdf",
+      "topic": "tech-news",
+      "title": "2026-09-11-tech-news.pdf",
+      "path": "research/tech-news/pdfs/2026-09-11-tech-news.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/pdfs/2026-09-11-tech-news.pdf",
+      "sizeBytes": 77817,
+      "date": "2026-09-11"
+    },
+    {
       "id": "research/puls-dnia-news/runs/2026-09-11-1801.md",
       "type": "run",
       "topic": "puls-dnia-news",
@@ -261,6 +291,46 @@
       "sizeBytes": 7077,
       "date": "2026-09-11",
       "time": "15:42"
+    },
+    {
+      "id": "research/tech-news/runs/2026-09-10.md",
+      "type": "run",
+      "topic": "tech-news",
+      "title": "Raport technologiczny: autonomia wymaga kontroli",
+      "path": "research/tech-news/runs/2026-09-10.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/runs/2026-09-10.md",
+      "sizeBytes": 15010,
+      "date": "2026-09-10"
+    },
+    {
+      "id": "research/tech-news/data/2026-09-10-research.json",
+      "type": "researchData",
+      "topic": "tech-news",
+      "title": "Research data",
+      "path": "research/tech-news/data/2026-09-10-research.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/data/2026-09-10-research.json",
+      "sizeBytes": 16237,
+      "date": "2026-09-10"
+    },
+    {
+      "id": "research/tech-news/podcasts/2026-09-10/draft.md",
+      "type": "podcastDraft",
+      "topic": "tech-news",
+      "title": "Pavbot Tech — 10 września 2026",
+      "path": "research/tech-news/podcasts/2026-09-10/draft.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-09-10/draft.md",
+      "sizeBytes": 9357,
+      "date": "2026-09-10"
+    },
+    {
+      "id": "research/tech-news/pdfs/2026-09-10-tech-news.pdf",
+      "type": "pdf",
+      "topic": "tech-news",
+      "title": "2026-09-10-tech-news.pdf",
+      "path": "research/tech-news/pdfs/2026-09-10-tech-news.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/pdfs/2026-09-10-tech-news.pdf",
+      "sizeBytes": 85839,
+      "date": "2026-09-10"
     },
     {
       "id": "research/puls-dnia-news/runs/2026-09-10-1932.md",
@@ -25859,7 +25929,7 @@
       "title": "Topic Index: tech-news",
       "path": "research/tech-news/index.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/index.md",
-      "sizeBytes": 91255
+      "sizeBytes": 91793
     },
     {
       "id": "research/tech-news/backlog.md",
@@ -25868,7 +25938,7 @@
       "title": "Topic Backlog: tech-news",
       "path": "research/tech-news/backlog.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/backlog.md",
-      "sizeBytes": 96488
+      "sizeBytes": 97103
     },
     {
       "id": "research/reddit-radar/index.md",
