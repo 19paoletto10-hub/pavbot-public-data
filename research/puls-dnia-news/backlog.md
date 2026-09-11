@@ -171,3 +171,9 @@
 - Dostawy energii, żegluga i kolejne notowania.
 - Projekt finansowania i stanowisko Kongresu.
 - Treść ustawy i decyzje poszczególnych regionów.
+
+# 2026-09-11 21:01
+
+- Sprawdzić, czy MON, MSWiA, Straż Graniczna lub NATO opublikują pierwotny komunikat o prowokacjach.
+- Zweryfikować nocne alerty IMGW i RCB.
+- Monitorować nowe notowania Brent i informacje o żegludze przez cieśniny.
