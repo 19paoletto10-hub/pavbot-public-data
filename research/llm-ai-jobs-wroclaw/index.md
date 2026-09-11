@@ -1,8 +1,12 @@
 # Topic Index: llm-ai-jobs-wroclaw
 
-Last updated: 2026-09-07 15:43 CEST
+Last updated: 2026-09-11 15:42 CEST
 
 ## Current Understanding
+
+Runda `2026-09-10-1933`: jedna nowa oferta Connectis AI Enablement Engineer (Wrocław, hybryda około raz w tygodniu; MCP, CLI, ewaluacja LLM). Różnice waluty między listą a kartą nie są uznawane za zmianę płacy. HIBERUS wskazuje termin 11 września.
+
+Runda `2026-09-11-1542`: pięć nowych kart: Axabee AI Engineer with Python, ITLT AI Engineer / Senior AI Engineer, DataArt Senior AI Platform Engineer with LangGrap, airSlate Senior Software Engineer - Agentic AI oraz B2Bnetwork Administrator Platformy AI (Junior). Najpilniejszy termin to Axabee 12 września; HIBERUS wymaga kontroli po 11 września.
 
 Runda z `2026-09-08 15:45 CEST` jest materialna, bo Just Join IT skurczył board z `185` do `130` ofert AI/ML dla Wrocławia, a `AI Transformation Lead` nie jest już widoczny na aktualnej powierzchni. Widoczny tail przesunął się bardziej w stronę MLOps, security i platform work, z `Senior MLOps Engineer (Google Cloud)`, `Senior AI Security Engineer – Machine Learning & Infrastructure`, `AI Process Engineer / AI Scientist`, `AI and Systems Integrations Lead`, `Senior Agentic Automation Engineer` i `Senior Copilot Developer` jako najciekawszymi sygnałami. `Pracuj.pl` nadal daje dwa czytelne, bieżące leady z Wrocławia / remote: `HIBERUS AI Process Engineer / AI Scientist (AI Platform Engineering)` oraz `KYOTU AI/ML Engineer`, a `Comarch` i `EPAM` pozostają stabilnymi kanonicznymi anchorami.
 
@@ -123,6 +127,10 @@ konkretny platformowy, delivery lub toolingowy scope.
 
 ## Recent Reports
 
+- [2026-09-11 15:42 - Material update](runs/2026-09-11-1542.md): pięć nowych ról AI/LLM.
+
+- [2026-09-10 19:33 - Material update](runs/2026-09-10-1933.md): Connectis, jedna nowa rola.
+
 - [2026-08-29 15:41 CEST](runs/2026-08-29-1541.md)
 - [2026-08-26 15:41 CEST](runs/2026-08-26-1541.md)
 - [2026-08-24 15:40 CEST](runs/2026-08-24-1540.md)
@@ -143,6 +151,12 @@ only when something meaningful changes.
 
 | Canonical key | Company | Title | Location / remote | First seen | Last seen | Status | Material changes | Source |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| https://justjoin.it/job-offer/axabee-ai-engineer-with-python-wroclaw-python | Axabee | AI Engineer with Python | Wrocław / hybrid or remote | 2026-09-11-1542 | 2026-09-11-1542 | Open | New card; LLM, LangChain, LangGraph, Google ADK and agentic systems; deadline 12 Sep. | [Just Join IT](https://justjoin.it/job-offer/axabee-ai-engineer-with-python-wroclaw-python) |
+| https://justjoin.it/job-offer/itlt-ai-engineer-senior-ai-engineer-wroclaw-python | ITLT | AI Engineer / Senior AI Engineer | Wrocław / mostly remote | 2026-09-11-1542 | 2026-09-11-1542 | Open | New card; MCP, fine-tuning, LoRA/QLoRA, vLLM/Ollama/TGI, MLOps and observability. | [Just Join IT](https://justjoin.it/job-offer/itlt-ai-engineer-senior-ai-engineer-wroclaw-python) |
+| https://justjoin.it/job-offer/dataart-senior-ai-platform-engineer-with-langgrap-wroclaw-admin?promo=lal | DataArt | Senior AI Platform Engineer with LangGrap | Wrocław / remote or hybrid | 2026-09-11-1542 | 2026-09-11-1542 | Open | New card; LangGraph, Strands Agents, AWS Bedrock and AgentCore; public salary. | [Just Join IT](https://justjoin.it/job-offer/dataart-senior-ai-platform-engineer-with-langgrap-wroclaw-admin?promo=lal) |
+| https://justjoin.it/job-offer/airslate-senior-software-engineer---agentic-ai-wroclaw-ai | airSlate | Senior Software Engineer - Agentic AI | Wrocław | 2026-09-11-1542 | 2026-09-11-1542 | Open | New product role; agentic AI; deadline 20 Sep. | [Just Join IT](https://justjoin.it/job-offer/airslate-senior-software-engineer---agentic-ai-wroclaw-ai) |
+| https://justjoin.it/job-offer/b2bnetwork-administrator-platformy-ai-junior--wroclaw-ai | B2Bnetwork | Administrator Platformy AI (Junior) | Wrocław | 2026-09-11-1542 | 2026-09-11-1542 | Open | New junior inference/platform role; Docker, Kubernetes, Helm, ArgoCD and vLLM; deadline 29 Sep. | [Just Join IT](https://justjoin.it/job-offer/b2bnetwork-administrator-platformy-ai-junior--wroclaw-ai) |
+| https://justjoin.it/job-offer/connectis-ai-enablement-engineer-wroclaw-ai | Connectis | AI Enablement Engineer | Wrocław / hybrid | 2026-09-10-1933 | 2026-09-10-1933 | Open | Pierwsze potwierdzenie: MCP, CLI, ewaluacja LLM; około 1 dzień w biurze tygodniowo; 190-210 PLN/h na liście, karta przelicza na USD. | [Just Join IT](https://justjoin.it/job-offer/connectis-ai-enablement-engineer-wroclaw-ai) |
 | justjoin-epam-ai-and-systems-integrations-lead-wroclaw-hybrid | EPAM Systems | AI and Systems Integrations Lead | Wrocław / hybrid | 2026-09-07-1543 | 2026-09-07-1543 | Open | New board lead; analytical thinking, business analysis, AI and programming. | [Just Join IT](https://justjoin.it/job-offers/wroclaw/ai) |
 | justjoin-epam-senior-agentic-automation-engineer-wroclaw-remote | EPAM Systems | Senior Agentic Automation Engineer | Wrocław / remote | 2026-09-07-1543 | 2026-09-07-1543 | Open | New board lead; multi-agent systems, RAG, vector stores, embeddings, semantic search, OpenTelemetry and Python. | [Just Join IT](https://justjoin.it/job-offers/wroclaw/ai) |
 | justjoin-rossmann-ai-ml-developer-wroclaw-hybrid | Rossmann | AI/ML Developer (Mid/Senior) | Wrocław / hybrid | 2026-09-07-1543 | 2026-09-07-1543 | Open | New board lead; Python, ML, LLMs, OpenAI, RAG, PyTorch and REST APIs with a public monthly band. | [Just Join IT](https://justjoin.it/job-offers/wroclaw/ai) |

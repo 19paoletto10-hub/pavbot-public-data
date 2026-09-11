@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-09-11",
+  "runTime": "15:42",
+  "executiveSummary": "Pięć nowych, wysokosygnałowych kart rozszerza dzisiejszy obraz rynku: od agentic AI i LangGraph, przez MCP/fine-tuning/inference, po juniorową administrację platformą uruchamiającą modele LLM. Najpilniejszy termin dotyczy Axabee (12 września); HIBERUS wymaga sprawdzenia statusu po deklarowanym terminie 11 września.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "AI Engineer with Python",
+      "company": "Axabee",
+      "location": "Wrocław / hybrydowo albo 100% zdalnie; biura Wrocław i Opole.",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Python, LLM, LangChain, LangGraph, Google ADK, AI i systemy agentowe.",
+      "whyInteresting": "Bardzo praktyczna rola przy budowie rozwiązań agentowych, z krótkim terminem aplikacji.",
+      "uncertainty": "Karta wskazuje „1 dzień pozostał”, więc status może szybko się zmienić; brak publicznej stawki.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/axabee-ai-engineer-with-python-wroclaw-python"
+      ],
+      "tags": [
+        "LLM",
+        "Python"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "AI Engineer / Senior AI Engineer",
+      "company": "ITLT",
+      "location": "Wrocław i inne miasta / duża swoboda pracy zdalnej.",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek; B2B lub UoP.",
+      "seniority": "Senior",
+      "fitSummary": "MCP, fine-tuning open source, LoRA/QLoRA, Hugging Face, PyTorch, vLLM/Ollama/TGI, MLOps i observability.",
+      "whyInteresting": "Najpełniejszy w tej rundzie przekrój od dostrajania modeli po inferencję i operacjonalizację.",
+      "uncertainty": "ITLT opisuje projekty partnerów, bez ujawnienia klienta końcowego.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/itlt-ai-engineer-senior-ai-engineer-wroclaw-python"
+      ],
+      "tags": [
+        "LLM",
+        "MLOps"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "Senior AI Platform Engineer with LangGrap",
+      "company": "DataArt",
+      "location": "Wrocław / biuro, zdalnie lub hybrydowo.",
+      "workMode": "Remote",
+      "compensation": "5 375,04–6 718,80 USD netto/mies. B2B albo 4 031,28–5 375,04 USD brutto/mies. UoP według karty.",
+      "seniority": "Senior",
+      "fitSummary": "LangGraph, Strands Agents, AWS Bedrock, Bedrock AgentCore Runtime i Python.",
+      "whyInteresting": "Mocna rola platformowa z konkretnym stosem agentowym i infrastrukturą chmurową.",
+      "uncertainty": "Tytuł karty zawiera „LangGrap”; nie oceniano, czy to literówka w źródle.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/dataart-senior-ai-platform-engineer-with-langgrap-wroclaw-admin?promo=lal"
+      ],
+      "tags": [
+        "Python",
+        "AWS"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "Senior Software Engineer - Agentic AI",
+      "company": "airSlate",
+      "location": "Wrocław, ul. Curie-Skłodowskiej 12.",
+      "workMode": "Wrocław",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Senior",
+      "fitSummary": "Agentic AI w produkcie SaaS i automatyzacji obiegów dokumentów.",
+      "whyInteresting": "Bezpośrednia rola produktowa w agentic AI, a nie wyłącznie konsulting lub staffing.",
+      "uncertainty": "Publiczna karta nie pokazuje pełnego stosu technicznego ani modelu pracy.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/airslate-senior-software-engineer---agentic-ai-wroclaw-ai"
+      ],
+      "tags": [
+        "Agentic AI"
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "Administrator Platformy AI (Junior)",
+      "company": "B2Bnetwork",
+      "location": "Wrocław; tryb pracy niepotwierdzony w karcie.",
+      "workMode": "Wrocław",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Junior",
+      "fitSummary": "Uruchamianie i utrzymanie modeli LLM; Docker, Kubernetes, Helm, ArgoCD, vLLM, Linux.",
+      "whyInteresting": "Rzadki juniorki entry point do infrastruktury inference i platform AI.",
+      "uncertainty": "Zakres jest bardziej operatorsko-DevOpsowy niż model-buildingowy; brak informacji o remote policy.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/b2bnetwork-administrator-platformy-ai-junior--wroclaw-ai"
+      ],
+      "tags": [
+        "LLM"
+      ]
+    }
+  ],
+  "changes": [
+    "Dodano pięć nowych URL-i do Seen Opportunities; wszystkie są publiczne i nie występowały w poprzednim indeksie.",
+    "Just Join IT pokazuje 131 ofert AI/ML dla Wrocławia, wobec 133 w poprzedniej rundzie; to rotacja interfejsu, nie miara rynku.",
+    "Axabee ma termin 12 września; HIBERUS wymaga ponownego sprawdzenia po terminie 11 września."
+  ],
+  "risks": [
+    "Oferty pochodzą głównie z publicznego boardu; przy części brak kanonicznej strony pracodawcy.",
+    "Widełki DataArt są wyświetlone w USD, a brak niezależnego potwierdzenia jednostki walutowej.",
+    "Publiczna karta z terminem nie gwarantuje, że proces przyjmuje zgłoszenia do końca dnia."
+  ],
+  "recommendedActions": [
+    "Jeśli Axabee jest interesujące, aplikować lub zweryfikować status przed 12 września.",
+    "W kolejnej rundzie potwierdzić, czy HIBERUS 1005024687 zniknął po terminie oraz czy Axabee nadal jest otwarte.",
+    "Szukać kanonicznych stron DataArt, ITLT, B2Bnetwork i airSlate oraz potwierdzić remote policy i wynagrodzenie."
+  ],
+  "checkedSources": [
+    {
+      "title": "Just Join IT – AI/ML Wrocław",
+      "url": "https://justjoin.it/job-offers/wroclaw/ai",
+      "status": "checked"
+    },
+    {
+      "title": "Axabee – AI Engineer with Python",
+      "url": "https://justjoin.it/job-offer/axabee-ai-engineer-with-python-wroclaw-python",
+      "status": "checked"
+    },
+    {
+      "title": "ITLT – AI Engineer / Senior AI Engineer",
+      "url": "https://justjoin.it/job-offer/itlt-ai-engineer-senior-ai-engineer-wroclaw-python",
+      "status": "checked"
+    },
+    {
+      "title": "DataArt – Senior AI Platform Engineer with LangGrap",
+      "url": "https://justjoin.it/job-offer/dataart-senior-ai-platform-engineer-with-langgrap-wroclaw-admin?promo=lal",
+      "status": "checked"
+    },
+    {
+      "title": "B2Bnetwork – Administrator Platformy AI (Junior)",
+      "url": "https://justjoin.it/job-offer/b2bnetwork-administrator-platformy-ai-junior--wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "airSlate – Senior Software Engineer - Agentic AI",
+      "url": "https://justjoin.it/job-offer/airslate-senior-software-engineer---agentic-ai-wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "HIBERUS – AI Process Engineer / AI Scientist",
+      "url": "https://www.pracuj.pl/praca/ai-process-engineer-ai-scientist-ai-platform-engineering-wroclaw-plac-teatralny-1,oferta,1005024687",
+      "status": "checked"
+    }
+  ]
+}

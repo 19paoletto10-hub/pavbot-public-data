@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-09-10",
+  "runTime": "19:33",
+  "executiveSummary": "Jedna nowa pozycja względem indeksu: Connectis AI Enablement Engineer. Najmocniejszy sygnał to praktyczna budowa integracji MCP i ewaluacji LLM. Znanych ról nie powielam. HIBERUS warto sprawdzić przed terminem 11 września.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "AI Enablement Engineer",
+      "company": "Connectis",
+      "location": "Wrocław / hybrydowo, orientacyjnie raz w tygodniu na miejscu.",
+      "workMode": "Hybrid",
+      "compensation": "190-210 PLN/h na liście Just Join IT; karta pokazuje 51,20-56,59 USD netto/h B2B. Walutę rozliczenia trzeba potwierdzić.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Integracje MCP, narzędzia CLI, ewaluacja modeli i harnessy testowe; TypeScript i/lub Python.",
+      "whyInteresting": "Nowa w indeksie rola łącząca budowę narzędzi dla programistów z testowaniem LLM. Interpretacja: dobre dopasowanie do AI developer tooling.",
+      "uncertainty": "Connectis jest nazwanym dostawcą projektu, klient końcowy pozostaje anonimowy. Część obowiązków to mentoring. Nie znaleziono kanonicznej strony tej rekrutacji poza boardem; podobna oferta warszawska ma inny projekt.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/connectis-ai-enablement-engineer-wroclaw-ai",
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "LLM",
+        "Python"
+      ]
+    }
+  ],
+  "changes": [
+    "Dodano Connectis; brak tego tytułu i URL w Seen Opportunities. Nowa w monitoringu nie oznacza potwierdzonej daty otwarcia rekrutacji.",
+    "Lista Just Join IT pokazuje 133 oferty wobec 130 zapisanych 8 września. To obserwacja interfejsu, nie miara wzrostu rynku ani dowód zamknięcia innych rekrutacji.",
+    "HIBERUS wskazuje termin 11 września, remote z całej Polski i niezmienione 20 160-28 560 PLN netto + VAT miesięcznie. Bliskość terminu nie jest sama w sobie nową ofertą.",
+    "SQUAD, Spyrosoft, Comarch i EPAM pozostają poza shortlistą: nie potwierdzono materialnej zmiany względem znanych ról."
+  ],
+  "risks": [
+    "Waluta wyświetlana przez board różni się między listą i kartą. Nie traktuję automatycznego przeliczenia jako zmiany wynagrodzenia.",
+    "Publiczna karta z przyciskiem aplikacji nie gwarantuje, że rekruter nadal zbiera zgłoszenia. Badanie obejmuje wymienione źródła, nie cały rynek.",
+    "Wyszukiwanie strony Connectis zwróciło też warszawską rolę u klienta ubezpieczeniowego; nie scalono jej z projektem wrocławskim."
+  ],
+  "recommendedActions": [
+    "Przy zainteresowaniu Connectis potwierdzić walutę B2B, udział pracy programistycznej oraz docelowego klienta.",
+    "Sprawdzić HIBERUS przed 11 września; w kolejnej rundzie zweryfikować status po terminie.",
+    "W kolejnej rundzie szukać strony pracodawcy dla wrocławskiego projektu Connectis; zachować osobny klucz od Warszawy."
+  ],
+  "checkedSources": [
+    {
+      "title": "Just Join IT - AI/ML Wrocław",
+      "url": "https://justjoin.it/job-offers/wroclaw/ai",
+      "status": "checked"
+    },
+    {
+      "title": "Connectis - AI Enablement Engineer",
+      "url": "https://justjoin.it/job-offer/connectis-ai-enablement-engineer-wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "SQUAD - Applied Scientist LLM",
+      "url": "https://justjoin.it/job-offer/squad-applied-scientist-llm--wroclaw-ai",
+      "status": "checked-no-material-change"
+    },
+    {
+      "title": "Spyrosoft - Forward Deployed Engineer",
+      "url": "https://justjoin.it/job-offer/spyrosoft-forward-deployed-engineer-openai--warszawa-ai",
+      "status": "checked"
+    },
+    {
+      "title": "HIBERUS - AI Platform Engineering",
+      "url": "https://www.pracuj.pl/praca/ai-process-engineer-ai-scientist-ai-platform-engineering-wroclaw-plac-teatralny-1,oferta,1005024687",
+      "status": "checked"
+    },
+    {
+      "title": "Comarch - Full-stack Developer Agentic AI",
+      "url": "https://kariera.comarch.pl/praca/full-stack-developer-agentic-ai/",
+      "status": "checked"
+    },
+    {
+      "title": "EPAM - Senior AI-Native Engineer",
+      "url": "https://careers.epam.com/en/vacancy/senior-ai-native-engineer-bltra6lba5g82vw17xu_en",
+      "status": "checked"
+    }
+  ]
+}

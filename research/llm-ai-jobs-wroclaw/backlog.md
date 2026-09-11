@@ -139,3 +139,13 @@
 | 2026-08-25 | Close TAURON Wrocław burst watch | All three TAURON Wrocław pages now resolve as expired, so the former live cluster is no longer active. |
 | 2026-06-19 | Identify recurring Wroclaw employers | Added Holisticon and deepsense.ai to `index.md` watchlist after first relevant official openings. |
 | 2026-06-21 | Re-check KYOTU hiring signal | Public Pracuj.pl page now shows the listing as expired and confirms the employer ended collecting applications. |
+
+## Follow-up 2026-09-10 19:33
+
+- Connectis Wrocław: potwierdzić stronę kanoniczną, walutę kontraktu i udział developmentu; nie scalać z Warszawą.
+- HIBERUS 1005024687: zweryfikować status po terminie 11 września.
+
+## Follow-up 2026-09-11 15:42
+
+- Axabee AI Engineer with Python: sprawdzić status po terminie 12 września.
+- Nowe karty ITLT, DataArt, airSlate i B2Bnetwork: znaleźć kanoniczne strony i potwierdzić remote policy oraz widełki.
