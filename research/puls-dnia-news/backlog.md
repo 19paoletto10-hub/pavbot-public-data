@@ -1,5 +1,14 @@
 # Puls Dnia News Backlog
 
+# 2026-09-11 06:01
+
+- Potwierdzić zakres cyberataku i fałszywej depeszy w komunikacie resortu lub służb.
+- Sprawdzić bieżące alerty IMGW, RCB i bilans interwencji po ulewach.
+- Zweryfikować aktualny stan konfliktu USA–Iran oraz wpływ na ropę.
+- Sprawdzić oficjalny bilans ofiar powodzi w Nepalu.
+- Uzupełnić metodologie sondażu AfD i prognozy miejsc pracy.
+- Poszukać pierwotnego komunikatu o bezpieczeństwie agentów AI.
+
 # 2026-09-08 21:02
 
 - Watch whether prokuratura formally opens or details the Przyłębska and Ziobro proceedings.
@@ -139,3 +148,18 @@
 - Watch whether Google and the European Commission publish more concrete rollout details on site reputation abuse and DMA timing.
 - Watch whether Meta, Canada, Treasury or State Department add implementation details that change the cards.
 - Watch whether Ukraine, Nepal or Norway publish updated official numbers or scheduling details before the next run.
+
+# 2026-09-10 19:32
+
+- Komunikat po sekcji i dalsze czynności procesowe.
+- Czy kandydat odwoła się do PKW.
+- Oficjalny porządek komisji i wynik głosowań.
+- Komunikat uczelni o dalszym zarządzaniu.
+- Aktualizacje służb ratunkowych i władz obwodu.
+- Dostęp inspektorów i formalne komunikaty MAEA.
+- Dane o zadłużeniu i wynikach firm inwestujących w AI.
+- Aktualny rozkład ZTM przed podróżą.
+- Wyniki dochodzenia i stan rannych.
+- Dostawy energii, żegluga i kolejne notowania.
+- Projekt finansowania i stanowisko Kongresu.
+- Treść ustawy i decyzje poszczególnych regionów.

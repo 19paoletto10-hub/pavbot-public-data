@@ -2,28 +2,14 @@
 
 ## Current State
 
-Slot 2026-09-08 21:02 przesuwa feed ku nowym krajowym wątkom prawnym wokół Julii Przyłębskiej i Zbigniewa Ziobry, domkniętej liście kandydatów w Krakowie, dużym zakłóceniom brytyjskiego lotnictwa, sankcjom na wszystkie irańskie linie, odpowiedzi Izraela na działania Londynu, rozmowie Trump–Putin i najwyższemu alertowi powodziowemu w Japonii. Technologia i gospodarka obejmują naruszenie MyDr, ugodę Grindr oraz przenoszenie produkcji Sapporo wskutek ceł.
+2026-09-11 06:01 CEST: Poranny przegląd wskazuje ulewy i burze w Polsce, cyberatak z fałszywą depeszą, ruchy wokół PiS oraz trwające napięcia USA–Iran z konsekwencjami energetycznymi. Dodatkowo Nepal, AfD, bezpieczeństwo agentów AI i rynek pracy.
 
-## Data Shape
+12 kart, wszystkie siedem sekcji, 5 kart Polska/Polityka i 2 Świat.
 
-The native iOS feed expects:
+Źródła i rozdzielenie faktów od interpretacji: [raport](runs/2026-09-11-0601.md).
 
-- one digest headline and summary;
-- at least 12 news items;
-- an even number of items;
-- sections such as `Polska`, `Świat`, `Polityka`, `Bezpieczeństwo`, `Gospodarka`, `Technologia`, `Alerty`;
-- source links for every item;
-- analysis fields: `whatHappened`, `keyFacts`, `reactions`, `whyItMatters`, `context`, `watchNext`.
+2026-09-10 19:32 CEST: Śledztwo po katastrofie kolejowej, decyzja wyborcza w Krakowie, atak na Pawłohrad i presja na ceny energii. Ponadto prace parlamentarne, Iran, finansowanie AI oraz zmiany transportowe.
 
-## iOS Surface
+12 kart, wszystkie siedem sekcji, 4 karty Polska/Polityka i 3 Świat.
 
-The newest valid JSON is shown as paired cards under `Dzisiaj`. Tapping a card opens a detail view with facts, reactions, context, why it matters, watch-next items and sources.
-
-## Editorial Notes
-
-- Keep at least 12 items and an even count so the app renders exact card pairs.
-- Keep at least two `Polska` or `Polityka` items and at least two `Świat` items to protect the home feed balance.
-- Prefer operational alerts, public safety, travel disruption, platform risk and civil-protection stories over softer feature content.
-- Favor stories with concrete official or primary links when they are available alongside TVN24, BBC or CNN.
-- Current emphasis should stay on krajowych postępowaniach prawnych, Krakowie, brytyjskich lotniskach, Iranie, Zachodnim Brzegu, Ukrainie, Japonii, MyDr, Grindr and industrial effects of tariffs.
-- Keep the current trade, safety and technology balance ready for the next carousel refresh.
+Źródła i rozdzielenie faktów od interpretacji: [raport](runs/2026-09-10-1932.md).

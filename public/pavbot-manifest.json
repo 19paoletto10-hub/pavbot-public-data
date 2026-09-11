@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-09-08T19:09:12.621421+00:00",
+  "generatedAt": "2026-09-11T04:04:08.667213+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -137,6 +137,52 @@
     }
   ],
   "artifacts": [
+    {
+      "id": "research/puls-dnia-news/runs/2026-09-11-0601.md",
+      "type": "run",
+      "topic": "puls-dnia-news",
+      "title": "Puls Dnia — 11 września 2026, 06:01 CEST",
+      "path": "research/puls-dnia-news/runs/2026-09-11-0601.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/runs/2026-09-11-0601.md",
+      "sizeBytes": 5272,
+      "date": "2026-09-11",
+      "time": "06:01"
+    },
+    {
+      "id": "research/puls-dnia-news/data/2026-09-11-0601-pulse-news.json",
+      "type": "pulseNewsData",
+      "topic": "puls-dnia-news",
+      "title": "Pulse news data",
+      "path": "research/puls-dnia-news/data/2026-09-11-0601-pulse-news.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/data/2026-09-11-0601-pulse-news.json",
+      "sizeBytes": 13642,
+      "date": "2026-09-11",
+      "time": "06:01",
+      "itemCount": 12
+    },
+    {
+      "id": "research/puls-dnia-news/runs/2026-09-10-1932.md",
+      "type": "run",
+      "topic": "puls-dnia-news",
+      "title": "Puls Dnia — 10 września 2026, 19:32 CEST",
+      "path": "research/puls-dnia-news/runs/2026-09-10-1932.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/runs/2026-09-10-1932.md",
+      "sizeBytes": 10939,
+      "date": "2026-09-10",
+      "time": "19:32"
+    },
+    {
+      "id": "research/puls-dnia-news/data/2026-09-10-1932-pulse-news.json",
+      "type": "pulseNewsData",
+      "topic": "puls-dnia-news",
+      "title": "Pulse news data",
+      "path": "research/puls-dnia-news/data/2026-09-10-1932-pulse-news.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/data/2026-09-10-1932-pulse-news.json",
+      "sizeBytes": 15941,
+      "date": "2026-09-10",
+      "time": "19:32",
+      "itemCount": 12
+    },
     {
       "id": "research/tech-news/runs/2026-09-08.md",
       "type": "run",
@@ -25723,7 +25769,7 @@
       "title": "Puls Dnia News Index",
       "path": "research/puls-dnia-news/index.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/index.md",
-      "sizeBytes": 1836
+      "sizeBytes": 827
     },
     {
       "id": "research/puls-dnia-news/backlog.md",
@@ -25732,7 +25778,7 @@
       "title": "Puls Dnia News Backlog",
       "path": "research/puls-dnia-news/backlog.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/backlog.md",
-      "sizeBytes": 9300
+      "sizeBytes": 10335
     },
     {
       "id": "research/polska-swiat/topic.md",
