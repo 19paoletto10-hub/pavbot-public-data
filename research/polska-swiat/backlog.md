@@ -186,6 +186,8 @@
 
 ## Review Notes
 
+- 2026-09-11: Wieczorny research dodał ocenę Tuska o możliwym nasileniu rosyjskich prowokacji przy granicach Ukrainy, częściowe udrożnienie Ormuzu, rekordowy import paliw do Rosji i szczyt BRICS. Przed podcastem ponownie sprawdzić konkretne incydenty graniczne, UKMTO/IMO, ceny ropy oraz komunikat BRICS; nie przedstawiać oceny ryzyka jako potwierdzonego planu Rosji.
+
 - 2026-09-07: Evening research added the AfD landslide, Russia-Germany consular retaliation, the Liban/Jemen/Hormuz escalation and the U.S. fuel-price record. Podcast should now lead Germany/Europe and the Middle East, with Poland staying procedural on kryptoaktywa.
 - 2026-08-27: Morning research created a material update. Strongest sources were Guardian/AP for Ukraine and the Russian infrastructure decree, AP for Iran/Hormuz, Gaza, Nepal/Tibet and U.S. visas, TVN24/Interia/Onet for Zondacrypto/Ibiza, and Ministerstwo Energii plus TVN24/BI for CPN. Podcast should lead Ukraine, Iran/Hormuz and Gaza, then use Nepal/Tibet and Zondacrypto as major blocks; NATO requires an afternoon recheck after the scheduled 13:00 CEST remarks.
 - 2026-08-27: Evening research created a second material update. Strongest sources were AP for the mass strike on Ukraine, the Senate sanctions vote and the Ormuz tanker incident; TVN24 for Piesiewicz and the Zondacrypto bankruptcy; NATO for the scheduled Rutte-Colby event; and RCB for unchanged practical domestic conditions. Podcast should now open with Ukraine + Senate sanctions, then Ormuz, then the Piesiewicz/Zondacrypto legal block.

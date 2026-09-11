@@ -1,8 +1,17 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-09-08
+Last updated: 2026-09-11
 
 ## Current Understanding
+
+Wieczorem 11 września lead przesuwa się na bezpieczeństwo wschodniej flanki:
+Donald Tusk ocenia w AP, że incydenty przy granicach Ukrainy z Polską i
+Mołdawią mogą zapowiadać nasilenie rosyjskich prowokacji wobec europejskich
+przejść granicznych. To ocena ryzyka, nie potwierdzenie nowego ataku. Globalnie
+Ormuz jest częściowo udrażniany, ale kryzys energetyczny trwa; Ukraina uderza
+coraz mocniej w rosyjskie rafinerie, a szczyt BRICS w New Delhi testuje
+dyplomację Indii, Rosji i Iranu. MSWiA utrzymuje narrację długofalowej
+odporności państwa, a RCB stopnie alarmowe do 30 listopada.
 
 Po wieczornym runie 8 września polski wątek krypto przeszedł od utrzymanego weta do drugiego projektu prezydenckiego, a Rada Ministrów przyjęła projekty dotyczące sprawniejszego kończenia części postępowań karnych i pomocy de minimis. Głównym blokiem bezpieczeństwa pozostaje Ukraina: Wielka Brytania uruchamia 100 mln funtów przez PURL na zimową obronę powietrzną, podczas gdy dymisja prokuratora generalnego po działaniach antykorupcyjnych dokłada kryzys instytucjonalny do wznowionych ataków. Globalna presja gospodarcza rośnie przez nowe sankcje USA na irańskie lotnictwo i wejście w życie kanadyjskich ceł odwetowych.
 
