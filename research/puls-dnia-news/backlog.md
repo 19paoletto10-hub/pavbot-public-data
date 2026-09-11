@@ -1,5 +1,13 @@
 # Puls Dnia News Backlog
 
+# 2026-09-11 12:01
+
+- Sprawdzić nowe ostrzeżenia IMGW i RCB oraz bilans interwencji po opadach.
+- Potwierdzić zakres cyberataku i fałszywej depeszy w komunikacie resortu lub służb.
+- Zweryfikować aktualny bilans konfliktu USA–Iran i wpływ na ropę.
+- Sprawdzić oficjalny bilans ofiar powodzi w Nepalu.
+- Uzupełnić metodologie sondażu AfD i potwierdzenie incydentu bezpieczeństwa agentów AI.
+
 # 2026-09-11 06:01
 
 - Potwierdzić zakres cyberataku i fałszywej depeszy w komunikacie resortu lub służb.

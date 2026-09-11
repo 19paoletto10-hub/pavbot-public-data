@@ -2,6 +2,10 @@
 
 ## Current State
 
+2026-09-11 12:01 CEST: Południowy przegląd potwierdza dynamiczną pogodę w prognozie IMGW i utrzymujące się wątki bezpieczeństwa, polityki, konfliktu USA–Iran, Nepalu, AfD oraz bezpieczeństwa agentów AI. 12 kart, wszystkie siedem sekcji, 5 kart Polska/Polityka i 3 Świat.
+
+Źródła i rozdzielenie faktów od interpretacji: [raport](runs/2026-09-11-1201.md).
+
 2026-09-11 06:01 CEST: Poranny przegląd wskazuje ulewy i burze w Polsce, cyberatak z fałszywą depeszą, ruchy wokół PiS oraz trwające napięcia USA–Iran z konsekwencjami energetycznymi. Dodatkowo Nepal, AfD, bezpieczeństwo agentów AI i rynek pracy.
 
 12 kart, wszystkie siedem sekcji, 5 kart Polska/Polityka i 2 Świat.

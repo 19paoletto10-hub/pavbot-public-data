@@ -1,0 +1,421 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-09-11",
+  "runTime": "12:01",
+  "status": "Material update",
+  "headline": "Pogoda i bezpieczeństwo pozostają głównymi tematami południowego przeglądu",
+  "summary": "IMGW potwierdza dynamiczną pogodę; równolegle monitorowane są wątki bezpieczeństwa, polityki, konfliktów i AI.",
+  "items": [
+    {
+      "id": "20260911-1201-01",
+      "section": "Alerty",
+      "title": "Dynamiczna pogoda w Polsce",
+      "lead": "IMGW zapowiada zmienną aurę i opady.",
+      "whatHappened": "Prognoza IMGW na 7–13 września wskazuje na zmienną pogodę z okresowymi opadami i ociepleniami.",
+      "keyFacts": [
+        "Prognoza obejmuje 11 września i kolejne dni",
+        "Szczegóły zależą od regionu"
+      ],
+      "reactions": [
+        "Służby i kierowcy powinni śledzić ostrzeżenia lokalne."
+      ],
+      "whyItMatters": "Opady mogą powodować utrudnienia i podtopienia.",
+      "context": "To oficjalna prognoza, nie potwierdzenie konkretnej szkody.",
+      "watchNext": [
+        "IMGW i RCB: nowe lub odwołane alerty."
+      ],
+      "sources": [
+        {
+          "title": "IMGW aktualności",
+          "url": "https://imgw.pl/en/aktualnosci/"
+        },
+        {
+          "title": "IMGW prognoza synoptyczna",
+          "url": "https://modele.imgw.pl/cmm/?page_id=19032"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "IMGW",
+        "alert"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "20260911-1201-02",
+      "section": "Polska",
+      "title": "Skutki ulew i interwencje",
+      "lead": "Po ulewach służby obsługują lokalne podtopienia.",
+      "whatHappened": "TVN24 opisuje interwencje strażaków, podtopione miejsca i ryzyko kolejnych burz.",
+      "keyFacts": [
+        "Relacja medialna nie zawiera pełnego bilansu ogólnopolskiego",
+        "Ryzyko jest lokalne i zmienne"
+      ],
+      "reactions": [
+        "Władze lokalne mogą wydawać komunikaty operacyjne."
+      ],
+      "whyItMatters": "Podtopienia wpływają na ruch i bezpieczeństwo mieszkańców.",
+      "context": "Oficjalne ostrzeżenia IMGW są ważniejsze niż pojedynczy opis medialny.",
+      "watchNext": [
+        "Bilans interwencji i komunikaty samorządów."
+      ],
+      "sources": [
+        {
+          "title": "Źródło 1",
+          "url": "https://tvn24.pl/"
+        },
+        {
+          "title": "Źródło 2",
+          "url": "https://imgw.pl/en/aktualnosci/"
+        }
+      ],
+      "tags": [
+        "ulewy",
+        "służby",
+        "Polska"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "20260911-1201-03",
+      "section": "Bezpieczeństwo",
+      "title": "Cyberatak i fałszywa depesza",
+      "lead": "Sprawa wymaga technicznego komunikatu służb.",
+      "whatHappened": "TVN24 informuje o cyberataku na ministerstwo i wezwaniu ambasadora w związku z fałszywą depeszą.",
+      "keyFacts": [
+        "Brak pełnego publicznego opisu technicznego",
+        "Sprawca i skala nie są potwierdzone"
+      ],
+      "reactions": [
+        "Postępowanie wyjaśniające może przynieść nowe dane."
+      ],
+      "whyItMatters": "Fałszywe komunikaty mogą wpływać na bezpieczeństwo i zaufanie publiczne.",
+      "context": "Medialny opis nie przesądza atrybucji ataku.",
+      "watchNext": [
+        "Komunikat resortu lub służb."
+      ],
+      "sources": [
+        {
+          "title": "Źródło 1",
+          "url": "https://tvn24.pl/najnowsze/s-2026"
+        }
+      ],
+      "tags": [
+        "cyberbezpieczeństwo",
+        "dezinformacja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "20260911-1201-04",
+      "section": "Polityka",
+      "title": "Ruchy wokół PiS",
+      "lead": "TVN24 opisuje przejścia i układ wokół Morawieckiego.",
+      "whatHappened": "Materiał TVN24 wskazuje osoby, które poszły z Mateuszem Morawieckim, oraz przejście posła PiS.",
+      "keyFacts": [
+        "To opis ruchów politycznych",
+        "Nie potwierdza formalnej zmiany władz partii"
+      ],
+      "reactions": [
+        "Znaczenie zależy od kolejnych decyzji klubu i partii."
+      ],
+      "whyItMatters": "Zmiany mogą wpływać na arytmetykę parlamentarną.",
+      "context": "Relacja medialna wymaga konfrontacji z komunikatami klubów.",
+      "watchNext": [
+        "Oficjalne oświadczenia partii i klubów."
+      ],
+      "sources": [
+        {
+          "title": "Źródło 1",
+          "url": "https://tvn24.pl/"
+        }
+      ],
+      "tags": [
+        "polityka",
+        "PiS"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "20260911-1201-05",
+      "section": "Polska",
+      "title": "Oświadczenia majątkowe polityków",
+      "lead": "TVN24 analizuje dokumenty majątkowe polityków.",
+      "whatHappened": "TVN24 opublikował materiały o oświadczeniach Jarosława Kaczyńskiego i Donalda Tuska.",
+      "keyFacts": [
+        "Podstawą są oświadczenia majątkowe",
+        "Komentarz nie zastępuje analizy dokumentów"
+      ],
+      "reactions": [
+        "Temat może wywołać dalsze pytania o przejrzystość."
+      ],
+      "whyItMatters": "Dokumenty dotyczą kontroli życia publicznego.",
+      "context": "Warto oddzielić dane z dokumentu od ocen politycznych.",
+      "watchNext": [
+        "Ewentualne sprostowania i pełne dokumenty."
+      ],
+      "sources": [
+        {
+          "title": "Źródło 1",
+          "url": "https://tvn24.pl/polska/s-2026"
+        }
+      ],
+      "tags": [
+        "polityka",
+        "przejrzystość"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "20260911-1201-06",
+      "section": "Bezpieczeństwo",
+      "title": "Atak nożem w Warszawie",
+      "lead": "Podejrzany zgłosił się z adwokatem.",
+      "whatHappened": "TVN24 informuje o zgłoszeniu się podejrzanego na komendę i przedstawieniu zarzutów.",
+      "keyFacts": [
+        "Postępowanie jest na etapie procesowym",
+        "Wina nie jest przesądzona przed wyrokiem"
+      ],
+      "reactions": [
+        "Dalsze decyzje należą do prokuratury i sądu."
+      ],
+      "whyItMatters": "Sprawa dotyczy bezpieczeństwa mieszkańców i pracy wymiaru sprawiedliwości.",
+      "context": "Należy używać języka procesowego, nie kategorycznego.",
+      "watchNext": [
+        "Decyzja sądu i komunikat prokuratury."
+      ],
+      "sources": [
+        {
+          "title": "Źródło 1",
+          "url": "https://tvn24.pl/najnowsze/s-2026"
+        }
+      ],
+      "tags": [
+        "Warszawa",
+        "policja"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "20260911-1201-07",
+      "section": "Alerty",
+      "title": "Sytuacja przy wschodniej granicy",
+      "lead": "RCB monitoruje skutki rosyjskiego ataku na Ukrainę.",
+      "whatHappened": "RCB informowało o ataku na Ukrainę i operowaniu polskiego lotnictwa w przestrzeni RP.",
+      "keyFacts": [
+        "Komunikat dotyczył monitorowania sytuacji",
+        "Nie oznacza automatycznie zagrożenia na całym terytorium Polski"
+      ],
+      "reactions": [
+        "Mieszkańcy objętych obszarów powinni śledzić oficjalne alerty."
+      ],
+      "whyItMatters": "Incydenty przy granicy mogą wpływać na gotowość służb.",
+      "context": "Ważna jest data i dokładny zakres komunikatu.",
+      "watchNext": [
+        "Nowe komunikaty RCB, MON i władz lokalnych."
+      ],
+      "sources": [
+        {
+          "title": "Źródło 1",
+          "url": "https://pap-mediaroom.pl/polityka-i-spoleczenstwo/rcb-rosyjski-atak-powietrzny-na-terenie-ukrainy-sytuacja-jest-monitorowana"
+        }
+      ],
+      "tags": [
+        "RCB",
+        "Ukraina",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "20260911-1201-08",
+      "section": "Świat",
+      "title": "Napięcia USA–Iran",
+      "lead": "CNN sygnalizuje dalszą eskalację konfliktu.",
+      "whatHappened": "Transkrypcje CNN opisywały wymianę ataków, uderzenia w tankowce i groźby kolejnych działań.",
+      "keyFacts": [
+        "Materiał wymaga potwierdzenia najnowszym komunikatem rządowym",
+        "Bilans i zakres działań mogą się zmienić"
+      ],
+      "reactions": [
+        "Rynki i partnerzy regionalni obserwują rozwój sytuacji."
+      ],
+      "whyItMatters": "Eskalacja wpływa na bezpieczeństwo i energię.",
+      "context": "CNN jest tu źródłem wykrywania, częściowo ograniczonym dostępowo.",
+      "watchNext": [
+        "Komunikaty USA, Iranu i operatorów transportu."
+      ],
+      "sources": [
+        {
+          "title": "Źródło 1",
+          "url": "https://transcripts.cnn.com/"
+        },
+        {
+          "title": "Źródło 2",
+          "url": "https://transcripts.cnn.com/show/cnr/date/2026-09-09/segment/19"
+        }
+      ],
+      "tags": [
+        "USA",
+        "Iran",
+        "geopolityka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "20260911-1201-09",
+      "section": "Gospodarka",
+      "title": "Ropa i ceny energii",
+      "lead": "Napięcia geopolityczne zwiększają zmienność rynku.",
+      "whatHappened": "CNN wiązał wzrost cen ropy z konfliktem na Bliskim Wschodzie.",
+      "keyFacts": [
+        "Notowania są zmienne",
+        "Pojedynczy poziom nie stanowi prognozy"
+      ],
+      "reactions": [
+        "Firmy i konsumenci mogą odczuć presję kosztową z opóźnieniem."
+      ],
+      "whyItMatters": "Ropa wpływa na paliwa, transport i inflację.",
+      "context": "Potrzebne są bieżące dane rynkowe i komunikaty producentów.",
+      "watchNext": [
+        "Notowania, decyzje producentów i zakłócenia żeglugi."
+      ],
+      "sources": [
+        {
+          "title": "Źródło 1",
+          "url": "https://transcripts.cnn.com/"
+        }
+      ],
+      "tags": [
+        "ropa",
+        "energia",
+        "gospodarka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "20260911-1201-10",
+      "section": "Świat",
+      "title": "Nepal po powodziach",
+      "lead": "Akcja ratunkowa trwa, a bilans jest niepewny.",
+      "whatHappened": "CNN relacjonował ofiary, osoby zaginione i akcje ratunkowe po powodziach w Nepalu.",
+      "keyFacts": [
+        "Bilans może się zmieniać",
+        "Brakuje bieżącego potwierdzenia władz w tym przeglądzie"
+      ],
+      "reactions": [
+        "Służby koncentrują się na ewakuacji i poszukiwaniach."
+      ],
+      "whyItMatters": "Katastrofa ma skutki humanitarne i infrastrukturalne.",
+      "context": "Nie podajemy liczby ofiar bez aktualnego źródła pierwotnego.",
+      "watchNext": [
+        "Komunikaty władz Nepalu i ONZ."
+      ],
+      "sources": [
+        {
+          "title": "Źródło 1",
+          "url": "https://transcripts.cnn.com/show/ow/date/2026-09-09/segment/02"
+        }
+      ],
+      "tags": [
+        "Nepal",
+        "powódź",
+        "świat"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "20260911-1201-11",
+      "section": "Świat",
+      "title": "AfD w sondażach",
+      "lead": "AfD prowadzi w jednym z landów według sondażu.",
+      "whatHappened": "TVN24 wskazuje na prowadzenie AfD w sondażach w jednym z niemieckich krajów związkowych.",
+      "keyFacts": [
+        "Sondaż nie jest wynikiem wyborów",
+        "Znaczenie zależy od metodologii i terminu"
+      ],
+      "reactions": [
+        "Wynik może wpływać na debatę o koalicjach."
+      ],
+      "whyItMatters": "Niemiecka polityka ma znaczenie dla UE i Polski.",
+      "context": "Brak pełnej metodologii w dostępnym materiale ogranicza interpretację.",
+      "watchNext": [
+        "Publikacja metodologii i kolejne badania."
+      ],
+      "sources": [
+        {
+          "title": "Źródło 1",
+          "url": "https://tvn24.pl/swiat/s-2026"
+        }
+      ],
+      "tags": [
+        "Niemcy",
+        "AfD",
+        "wybory"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "20260911-1201-12",
+      "section": "Technologia",
+      "title": "Bezpieczeństwo agentów AI",
+      "lead": "Doniesienia o incydencie wymagają pierwotnego potwierdzenia.",
+      "whatHappened": "CNN sygnalizował incydent dotyczący przejęcia agentów OpenAI i szerszy wyścig regulacyjny AI.",
+      "keyFacts": [
+        "Brak pełnego bieżącego komunikatu pierwotnego",
+        "Nie przesądzono mechanizmu ani odpowiedzialności"
+      ],
+      "reactions": [
+        "Temat może zwiększać presję na testy i zabezpieczenia agentów."
+      ],
+      "whyItMatters": "Agenci AI mogą wykonywać działania o realnych skutkach.",
+      "context": "To karta monitorująca, a nie potwierdzenie incydentu.",
+      "watchNext": [
+        "Stanowiska OpenAI, regulatorów i niezależnych badaczy."
+      ],
+      "sources": [
+        {
+          "title": "Źródło 1",
+          "url": "https://transcripts.cnn.com/"
+        },
+        {
+          "title": "Źródło 2",
+          "url": "https://www.bbc.com/news"
+        }
+      ],
+      "tags": [
+        "AI",
+        "cyberbezpieczeństwo",
+        "technologia"
+      ],
+      "priority": "medium"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Źródło 1",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "Źródło 2",
+      "url": "https://www.bbc.com/news"
+    },
+    {
+      "title": "Źródło 3",
+      "url": "https://transcripts.cnn.com/"
+    },
+    {
+      "title": "Źródło 4",
+      "url": "https://imgw.pl/en/aktualnosci/"
+    },
+    {
+      "title": "Źródło 5",
+      "url": "https://modele.imgw.pl/cmm/?page_id=19032"
+    },
+    {
+      "title": "Źródło 6",
+      "url": "https://pap-mediaroom.pl/polityka-i-spoleczenstwo/rcb-rosyjski-atak-powietrzny-na-terenie-ukrainy-sytuacja-jest-monitorowana"
+    }
+  ]
+}
