@@ -2,6 +2,17 @@
 
 Last updated: 2026-09-11
 
+## Update 2026-09-12
+
+Wieczorem 12 września kryzys energetyczno-żeglugowy rozszerzył się poza
+częściowo udrażniany Ormuz: AP opisała atak na saudyjski rurociąg East-West
+oraz postępy Huti przy Bab al-Mandab. Równolegle Rosja zabiła co najmniej
+osiem osób w Ukrainie, a Putin ostrzegł Europę przed wysłaniem wojsk. W Polsce
+SAFE przeszedł do konkretu: Agencja Uzbrojenia i Mesko podpisały pierwszą umowę
+wykonawczą do kontraktu na Pioruny. To nowe fakty wymagające dalszego śledzenia,
+nie dowód pełnego zamknięcia tras ani potwierdzenie odpowiedzialności Iranu za
+atak na rurociąg.
+
 ## Current Understanding
 
 Wieczorem 11 września lead przesuwa się na bezpieczeństwo wschodniej flanki:

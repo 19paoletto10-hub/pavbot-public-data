@@ -415,3 +415,9 @@
 | 2026-06-20 | Review first three Polska/świat reports | Three scheduled reports were produced on 2026-06-18, 2026-06-19 and 2026-06-20. Source quality is acceptable when official institutions remain primary and dynamic news pages are treated as secondary signals. |
 | 2026-07-08 | Verify post-Ankara outcomes | Final NATO declaration is published and the immediate outcome check is complete; follow-up now moved into PAC-3 and Patriot implementation items. |
 | 2026-07-10 | Resolve repo verifier iOS signing mismatch | `scripts/verify-research-workspace.sh` passed during the 2026-07-10 morning research run, so the old blocker is no longer active. |
+# Follow-up 2026-09-12
+
+- [ ] High: Monitor Ormuz, Bab al-Mandab and East-West pipeline using UKMTO, IMO, Aramco and Gulf-state updates; separate confirmed incidents from attribution claims.
+- [ ] High: Track Ukraine civilian casualties, winter air-defence deliveries and European troop/guarantee debate after Putin's warning.
+- [ ] High: Follow Piorun SAFE execution: delivery schedule, production capacity, financing and export milestones.
+- [ ] Medium: Track whether the BRICS declaration produces concrete diplomatic or energy measures beyond general language.
