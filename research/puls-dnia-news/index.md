@@ -2,6 +2,10 @@
 
 ## Current State
 
+2026-09-12 18:09 CEST: Potwierdzono materialną eskalację ryzyka energetycznego po ataku na saudyjski rurociąg; Irak potwierdził pochodzenie ataku z własnego terytorium. Dodano 12 kart, wszystkie siedem sekcji, z naciskiem na energię, Morze Czerwone i Ukrainę.
+
+Źródła i rozdzielenie faktów od interpretacji: [raport](runs/2026-09-12-1809.md).
+
 2026-09-11 21:01 CEST: Slot nie przyniósł materialnej zmiany względem 18:01. Utrzymano 12 kart obserwacyjnych, wszystkie siedem sekcji, z jawnym oznaczeniem braku nowego potwierdzenia.
 
 Źródła i ograniczenia: [raport](runs/2026-09-11-2101.md).

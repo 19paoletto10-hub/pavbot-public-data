@@ -1,0 +1,425 @@
+{
+  "schemaVersion": 1,
+  "runDate": "2026-09-12",
+  "runTime": "18:09",
+  "status": "Material change",
+  "headline": "Atak na saudyjski rurociąg podnosi ryzyko energetyczne",
+  "summary": "Nowa eskalacja na Bliskim Wschodzie wpływa na ropę i szlaki handlowe; w Polsce utrzymują się alerty bezpieczeństwa i pogody.",
+  "items": [
+    {
+      "id": "pl-alerty",
+      "section": "Alerty",
+      "title": "Stopnie alarmowe pozostają aktywne",
+      "lead": "BRAVO, CHARLIE i BRAVO-CRP obowiązują do końca listopada.",
+      "whatHappened": "RCB podało przedłużenie stopni alarmowych od 1 września do 30 listopada 2026 r.",
+      "keyFacts": [
+        "BRAVO w całym kraju",
+        "CHARLIE na wybranych liniach kolejowych",
+        "BRAVO-CRP w cyberprzestrzeni"
+      ],
+      "reactions": [
+        "Brak nowej decyzji w tym slocie."
+      ],
+      "whyItMatters": "To tło dla bezpieczeństwa publicznego i cyberodporności.",
+      "context": "Decyzja została ogłoszona 26 sierpnia.",
+      "watchNext": [
+        "Nowe komunikaty RCB, MON i służb."
+      ],
+      "sources": [
+        {
+          "title": "Źródło",
+          "url": "https://www.gov.pl/web/rcb/przedluzenie-obowiazywania-stopni-alarmowych-do-30-listopada-2026-r"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-pogoda",
+      "section": "Alerty",
+      "title": "IMGW ostrzega przed opadami i wiatrem",
+      "lead": "Warunki pogodowe pozostają tematem operacyjnym dla regionów.",
+      "whatHappened": "TVN24 wskazuje na ostrzeżenia IMGW dotyczące intensywnych opadów i silnego wiatru.",
+      "keyFacts": [
+        "Ostrzeżenia są regionalne",
+        "Zakres i czas obowiązywania mogą się zmieniać"
+      ],
+      "reactions": [
+        "Brak jednego ogólnokrajowego bilansu."
+      ],
+      "whyItMatters": "Możliwe utrudnienia w transporcie i lokalne podtopienia.",
+      "context": "To kontynuacja monitoringu pogodowego z poprzednich slotów.",
+      "watchNext": [
+        "Bieżąca mapa ostrzeżeń IMGW i komunikaty RCB."
+      ],
+      "sources": [
+        {
+          "title": "Źródło",
+          "url": "https://tvn24.pl/"
+        },
+        {
+          "title": "Źródło",
+          "url": "https://modele.imgw.pl/cmm/?page_id=19032"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "pogoda"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "pl-kolej",
+      "section": "Polska",
+      "title": "Śledztwo po katastrofie kolejowej",
+      "lead": "Po zderzeniu pociągu z ciężarówką trwa analiza przyczyn.",
+      "whatHappened": "TVN24 opisał wypadek w Sokolnikach Suchych, w którym zginęła jedna osoba, a pociąg się wykoleił.",
+      "keyFacts": [
+        "Zderzenie na przejeździe kolejowym",
+        "Ruch został wstrzymany",
+        "Sprawę badają służby i komisja kolejowa"
+      ],
+      "reactions": [
+        "Minister infrastruktury zapowiada zaostrzenie kar według relacji TVN24."
+      ],
+      "whyItMatters": "Wypadek wpływa na debatę o bezpieczeństwie przejazdów.",
+      "context": "Zdarzenie miało miejsce 9 września.",
+      "watchNext": [
+        "Ustalenia prokuratury i komisji kolejowej."
+      ],
+      "sources": [
+        {
+          "title": "Źródło",
+          "url": "https://tvn24.pl/tvnwarszawa/okolice/wykolejenie-pociagu-po-zderzeniu-z-ciezarowka-na-mazowszu-co-wiadomo-o-zdarzeniu-w-sokolnikach-suchych-st9228776"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "kolej"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "pl-usa",
+      "section": "Bezpieczeństwo",
+      "title": "Polska i USA wzmacniają finansowanie obronności",
+      "lead": "Podpisano kolejną umowę Foreign Military Financing.",
+      "whatHappened": "TVN24 podał, że umowa pożyczki na amerykański sprzęt opiewa na 4 mld dolarów.",
+      "keyFacts": [
+        "To szósta umowa w programie FMF",
+        "Strony wskazują na znaczenie sojusznicze"
+      ],
+      "reactions": [
+        "Amerykański podsekretarz stanu określił bezpieczeństwo obu kontynentów jako priorytet."
+      ],
+      "whyItMatters": "Zwiększa zdolności zakupowe i wiąże modernizację z relacją USA–Polska.",
+      "context": "Umowę podpisano 9 września.",
+      "watchNext": [
+        "Harmonogram zakupów i realizacja finansowania."
+      ],
+      "sources": [
+        {
+          "title": "Źródło",
+          "url": "https://tvn24.pl/polska/polska-i-usa-podpisaly-kolejna-umowe-podsekretarz-stanu-usa-thomas-dinanno-bezpieczenstwo-obu-kontynentow-jest-naszym-priorytetem-st9229508"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "USA",
+        "obrona"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "world-pipeline",
+      "section": "Świat",
+      "title": "Atak zamknął saudyjski rurociąg",
+      "lead": "Nowa awaria infrastruktury zwiększa presję na rynek energii.",
+      "whatHappened": "Arabia Saudyjska zamknęła kluczowy rurociąg po ataku dronowym; CNN i AP opisały pożary oraz skutki dla eksportu.",
+      "keyFacts": [
+        "Rurociąg East-West został wyłączony",
+        "Atak miał rozpocząć się z terytorium Iraku",
+        "Odpowiedzialność pozostaje przedmiotem sporu"
+      ],
+      "reactions": [
+        "Trump zasugerował odpowiedzialność Iranu; oskarżenia nie są tu traktowane jako rozstrzygające."
+      ],
+      "whyItMatters": "Może ograniczyć alternatywne trasy dla saudyjskiej ropy.",
+      "context": "Wydarzenie wpisuje się w szerszą wojnę USA–Iran i presję na szlaki morskie.",
+      "watchNext": [
+        "Pełny bilans szkód, wznowienie przepływu i reakcje producentów."
+      ],
+      "sources": [
+        {
+          "title": "Źródło",
+          "url": "https://arabic.cnn.com/middle-east/video/2026/09/12/v201632-energy-expert-warns-gas-and-diesel-prices-could-rise-more-by-end-of-the-year"
+        },
+        {
+          "title": "Źródło",
+          "url": "https://apnews.com/article/324485fad65647d4a897d5bfdcb7849c"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "ropa",
+        "Bliski Wschód"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-iraq",
+      "section": "Bezpieczeństwo",
+      "title": "Irak bada atak na infrastrukturę Arabii Saudyjskiej",
+      "lead": "Bagdad potwierdził, że atak rozpoczął się z terytorium Iraku.",
+      "whatHappened": "Władze Iraku zapowiedziały dochodzenie i działania wobec urzędników po ataku na rurociąg.",
+      "keyFacts": [
+        "Milicje wspierane przez Iran zaprzeczają udziałowi",
+        "Zamknięto dwa przejścia graniczne z Iranem"
+      ],
+      "reactions": [
+        "Trwa spór o odpowiedzialność i możliwą koordynację grup zbrojnych."
+      ],
+      "whyItMatters": "Incydent zwiększa ryzyko regionalnego rozszerzenia konfliktu.",
+      "context": "Informacje pochodzą z relacji AP z 12 września.",
+      "watchNext": [
+        "Wyniki irackiego śledztwa i komunikaty USA/Saudi."
+      ],
+      "sources": [
+        {
+          "title": "Źródło",
+          "url": "https://apnews.com/article/c1359273dd970b969e823356e5ead377"
+        }
+      ],
+      "tags": [
+        "Irak",
+        "Arabia Saudyjska",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-redsea",
+      "section": "Gospodarka",
+      "title": "Morze Czerwone pozostaje pod presją",
+      "lead": "Działania Huti zwiększają ryzyko dla transportu i cen.",
+      "whatHappened": "AP podała, że Huti przejęli strategiczną wyspę i port przy wejściu do Morza Czerwonego.",
+      "keyFacts": [
+        "Region jest ważny dla globalnego handlu",
+        "Równolegle ucierpiała saudyjska infrastruktura naftowa"
+      ],
+      "reactions": [
+        "Rosną obawy o przekierowania statków i ubezpieczenia."
+      ],
+      "whyItMatters": "Zakłócenia mogą przełożyć się na fracht, paliwa i terminy dostaw.",
+      "context": "To kolejny front w konflikcie związanym z Iranem.",
+      "watchNext": [
+        "Decyzje armatorów i reakcje marynarek wojennych."
+      ],
+      "sources": [
+        {
+          "title": "Źródło",
+          "url": "https://apnews.com/article/025d052a14d9481258d51009a76d0bd6"
+        }
+      ],
+      "tags": [
+        "Morze Czerwone",
+        "handel",
+        "ropa"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-ukraine",
+      "section": "Świat",
+      "title": "Rosyjskie ataki zabiły osiem osób w Ukrainie",
+      "lead": "AP relacjonuje nowy bilans ofiar i ostrzeżenie Putina.",
+      "whatHappened": "Według władz lokalnych cytowanych przez AP rosyjskie uderzenia zabiły osiem osób i raniły dziesiątki.",
+      "keyFacts": [
+        "Ataki dotknęły Ukrainę",
+        "Putin ostrzegł Europę przed wysłaniem wojsk"
+      ],
+      "reactions": [
+        "Kwestia europejskiej obecności wojskowej pozostaje sporna."
+      ],
+      "whyItMatters": "Łączy bieżące działania bojowe z ryzykiem eskalacji między Rosją i Europą.",
+      "context": "Informacja datowana na 12 września.",
+      "watchNext": [
+        "Nocny bilans ukraińskich władz i stanowiska państw europejskich."
+      ],
+      "sources": [
+        {
+          "title": "Źródło",
+          "url": "https://apnews.com/article/839f5b0fc5217afc4cb34e15b01b6eff"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Rosja",
+        "wojna"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-lebanon",
+      "section": "Polityka",
+      "title": "Rozmowy Izrael–Liban przesunięte",
+      "lead": "Kolejna runda rozmów ma odbyć się dopiero w październiku.",
+      "whatHappened": "CNN Arabic i źródła cytowane przez media podały opóźnienie rozmów izraelsko-libańskich.",
+      "keyFacts": [
+        "Rozmowy są prowadzone przy pośrednictwie USA",
+        "Prezydent Libanu odwiedził południe kraju"
+      ],
+      "reactions": [
+        "Wzrastają obawy przed kolejnymi izraelskimi atakami."
+      ],
+      "whyItMatters": "Opóźnienie utrudnia stabilizację na kolejnym odcinku regionalnego konfliktu.",
+      "context": "Strony wcześniej prowadziły rozmowy w Waszyngtonie.",
+      "watchNext": [
+        "Potwierdzenie daty i zakresu rozmów przez strony."
+      ],
+      "sources": [
+        {
+          "title": "Źródło",
+          "url": "https://arabic.cnn.com/archive/2026/09/12"
+        },
+        {
+          "title": "Źródło",
+          "url": "https://apnews.com/article/867b9fc371b7944264f8647f319520de"
+        }
+      ],
+      "tags": [
+        "Izrael",
+        "Liban",
+        "dyplomacja"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "economy-oil",
+      "section": "Gospodarka",
+      "title": "Ryzyko wzrostu cen ropy i paliw",
+      "lead": "Rurociąg i szlaki morskie tworzą wspólną presję cenową.",
+      "whatHappened": "CNN ostrzega przed wzrostem cen gazu i diesla po ataku na infrastrukturę saudyjską.",
+      "keyFacts": [
+        "Zamknięto ważny rurociąg",
+        "Ryzyko dotyczy także żeglugi",
+        "Skala wpływu cenowego nie jest jeszcze znana"
+      ],
+      "reactions": [
+        "Rynek oczekuje informacji o naprawie i dostawach."
+      ],
+      "whyItMatters": "Europa może odczuć wzrost kosztów transportu i energii.",
+      "context": "To ocena ryzyka, a nie potwierdzony nowy poziom cen w Polsce.",
+      "watchNext": [
+        "Brent, diesel, fracht i komunikaty rafinerii."
+      ],
+      "sources": [
+        {
+          "title": "Źródło",
+          "url": "https://arabic.cnn.com/middle-east/video/2026/09/12/v201632-energy-expert-warns-gas-and-diesel-prices-could-rise-more-by-end-of-the-year"
+        }
+      ],
+      "tags": [
+        "ropa",
+        "paliwa",
+        "gospodarka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "tech-ai",
+      "section": "Technologia",
+      "title": "Brak nowego potwierdzonego incydentu agentów AI",
+      "lead": "Temat pozostaje obserwacyjny bez pierwotnego potwierdzenia.",
+      "whatHappened": "W bieżącym przeglądzie nie znaleziono nowego oficjalnego komunikatu o incydencie bezpieczeństwa agentów AI.",
+      "keyFacts": [
+        "Nie dodano nowych szczegółów",
+        "Wcześniejsze doniesienia wymagają dalszej weryfikacji"
+      ],
+      "reactions": [
+        "Brak wiarygodnej reakcji instytucjonalnej."
+      ],
+      "whyItMatters": "Zapobiega przedstawianiu niepotwierdzonego wątku jako nowego wydarzenia.",
+      "context": "Karta zachowuje ciągłość monitoringu technologicznego.",
+      "watchNext": [
+        "Komunikaty producentów, regulatorów i laboratoriów."
+      ],
+      "sources": [
+        {
+          "title": "Źródło",
+          "url": "https://www.bbc.com/news"
+        },
+        {
+          "title": "Źródło",
+          "url": "https://www.cnn.com/"
+        }
+      ],
+      "tags": [
+        "AI",
+        "bezpieczeństwo"
+      ],
+      "priority": "low"
+    },
+    {
+      "id": "pol-politics",
+      "section": "Polityka",
+      "title": "Bezpieczeństwo pozostaje osią debaty w Polsce",
+      "lead": "Wątki obronności i odporności państwa nadal dominują przekaz.",
+      "whatHappened": "TVN24 relacjonuje nacisk rządu na granice, sojusze i wydatki obronne.",
+      "keyFacts": [
+        "Debata łączy politykę zagraniczną i obronność",
+        "Nie odnotowano dziś nowej decyzji ustrojowej"
+      ],
+      "reactions": [
+        "Spór polityczny trwa, ale bez nowego rozstrzygnięcia w tym raporcie."
+      ],
+      "whyItMatters": "Wpływa na priorytety budżetowe i komunikację kryzysową.",
+      "context": "To karta kontekstowa, nie nowe wydarzenie.",
+      "watchNext": [
+        "Komunikaty rządu i opozycji dotyczące finansowania obrony."
+      ],
+      "sources": [
+        {
+          "title": "Źródło",
+          "url": "https://tvn24.pl/trojmiasto/tusk-nie-mozemy-pozwolic-aby-zdrada-i-glupota-oslabialy-nasze-bezpieczenstwo-st9191010"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "polityka",
+        "obrona"
+      ],
+      "priority": "low"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Źródło",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "Źródło",
+      "url": "https://www.bbc.com/news"
+    },
+    {
+      "title": "Źródło",
+      "url": "https://www.cnn.com/"
+    },
+    {
+      "title": "Źródło",
+      "url": "https://arabic.cnn.com/archive/2026/09/12"
+    },
+    {
+      "title": "Źródło",
+      "url": "https://www.gov.pl/web/rcb"
+    },
+    {
+      "title": "Źródło",
+      "url": "https://apnews.com/article/324485fad65647d4a897d5bfdcb7849c"
+    }
+  ],
+  "topic": "puls-dnia-news"
+}
