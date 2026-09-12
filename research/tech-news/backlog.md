@@ -520,3 +520,6 @@
 | High | Track AI-orchestrated cyber campaigns | Anthropic's September report documents multi-stage agentic attacks and detection evasion | Watch independent incident analysis, vendor mitigations and IAM/EDR controls | Open |
 | High | Track Agents API control surfaces | Developer interest is shifting toward execution, permissions and observability | Watch official docs, evals, rate limits and production adoption | Open |
 | Medium | Track NVIDIA full-stack AI claims | Inference, robotics and agentic security are being sold as one platform | Watch customer deployments, benchmarks and power efficiency | Open |
+| High | Track agent incident reporting standards | Anthropic cases and the OpenAI wiki incident make disclosure and auditability concrete governance issues | Watch independent incident reports, company disclosure norms and congressional follow-up | Open |
+| High | Track AI-for-science quality metrics | Fields medalists challenge benchmark-first evaluation of AI mathematics | Watch Mathathon outcome, review practices and reproducibility of AI-generated proofs | Open |
+| Medium | Track AI infrastructure scale claims | Habitat shows storage and reliability are strategic surfaces for mass-market AI | Watch independent reliability data, costs and architecture follow-ups | Open |

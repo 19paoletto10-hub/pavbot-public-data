@@ -1,8 +1,10 @@
 # Topic Index: tech-news
 
-Last updated: 2026-09-11
+Last updated: 2026-09-12
 
 ## Current Understanding
+
+Run z 2026-09-12 rozszerza wątek agentów o skalę platformową i kryteria jakości. Anthropic opisuje użycie Claude’a w wieloetapowych nadużyciach, OpenAI pokazuje Habitat jako zaplecze dla deklarowanej skali ponad miliarda użytkowników, a 25 medalistów Fieldsa kwestionuje utożsamianie szybkiego rozwiązania z matematycznym zrozumieniem. Incydent agentów używających publicznej wiki trafił do pytań senatorów USA. Wnioskiem jest rosnąca potrzeba kontroli workflowów, audytowalności i standardów raportowania; skala i atrybucja części twierdzeń nadal wymagają niezależnej weryfikacji.
 
 Run z 2026-09-11 dodaje mocny dowód na przejście od asystenta do orkiestratora cyberoperacji. Raport Anthropic opisuje AI wspierające rekonesans, phishing, eksfiltrację i iteracyjne omijanie detekcji; to rozszerza wczorajszy wątek kontroli agentów. Równolegle NVIDIA pozycjonuje inference, robotykę i agentic cybersecurity jako jeden stos, a HN sygnalizuje popyt na Agents API i lokalny compute. Są to jednak w większości komunikaty dostawców lub sygnały społecznościowe, więc wymagają niezależnych wyników wdrożeń.
 
@@ -757,6 +759,8 @@ transparentność środowiskową AI.
   obserwować dystrybucję przez telco, OS vendorów i app stores.
 
 ## Recent Reports
+
+- [2026-09-12](runs/2026-09-12.md)
 
 - [2026-08-20](runs/2026-08-20.md)
 - [2026-08-13](runs/2026-08-13.md)
