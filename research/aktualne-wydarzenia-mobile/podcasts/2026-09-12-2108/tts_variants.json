@@ -1,0 +1,16 @@
+{
+  "stamp": "2026-09-12-2108",
+  "variants": [
+    {
+      "id": "female-piper",
+      "status": "ok",
+      "path": "audio/female-piper/podcast.mp3",
+      "output_file": "research/aktualne-wydarzenia-mobile/podcasts/2026-09-12-2108/audio/female-piper/podcast.mp3"
+    },
+    {
+      "id": "male-xtts",
+      "status": "failed",
+      "error": "XTTS-v2 CPU-only inference exceeded the unattended runtime budget; no MP3 was created."
+    }
+  ]
+}
