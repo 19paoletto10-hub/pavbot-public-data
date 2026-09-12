@@ -1,5 +1,12 @@
 # Puls Dnia News Backlog
 
+# 2026-09-12 21:09
+
+- Zweryfikować pełny bilans szkód i odpowiedzialność za atak na saudyjski rurociąg.
+- Monitorować Brent, żeglugę przez Hormuz i Bab al-Mandab oraz ceny diesla.
+- Sprawdzić kolejny bilans ofiar rosyjskich ataków w Ukrainie.
+- Sprawdzić nowe alerty IMGW i RCB przed kolejnym slotem.
+
 # 2026-09-12 18:09
 
 - Zweryfikować pełny bilans szkód i odpowiedzialność za atak na saudyjski rurociąg.
