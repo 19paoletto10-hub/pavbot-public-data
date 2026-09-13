@@ -2,6 +2,12 @@
 
 ## Current State
 
+2026-09-13 15:01 CEST: Slot nie przyniósł materialnej zmiany względem 12:30. Incydent w Kielcach, komunikat NIO, ryzyka energetyczne i bezpieczeństwo AI pozostają w monitoringu; utrzymano 12 kart.
+
+Źródła i rozdzielenie faktów od interpretacji: [raport](runs/2026-09-13-1501.md).
+
+## Current State
+
 2026-09-13 12:30 CEST: Południowy przegląd potwierdził utrzymujący się incydent na targach obronnych w Kielcach oraz nowy oficjalny komunikat NIO o zmianie dojazdu 13 września. Wątki saudyjskiego rurociągu, rozmów Izrael–Liban i bezpieczeństwa AI pozostają w monitoringu bez nowego rozstrzygnięcia.
 
 Źródła i rozdzielenie faktów od interpretacji: [raport](runs/2026-09-13-1230.md).

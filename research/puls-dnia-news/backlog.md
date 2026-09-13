@@ -1,5 +1,12 @@
 # Puls Dnia News Backlog
 
+# 2026-09-13 15:01
+
+- Sprawdzić komunikat policji, PSP lub sanepidu o substancji i bilansie incydentu w Kielcach.
+- Potwierdzić zakończenie czasowej organizacji ruchu przy NIO.
+- Monitorować wznowienie pracy rurociągu East–West, żeglugę i ceny ropy.
+- Sprawdzić nowy termin rozmów Izrael–Liban oraz reakcje na apel Anthropic.
+
 # 2026-09-13 12:30
 
 - Sprawdzić komunikat policji, PSP lub sanepidu o substancji i bilansie incydentu w Kielcach.
