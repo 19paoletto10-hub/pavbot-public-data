@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-09-13",
+  "runTime": "17:40",
+  "executiveSummary": "Runda jest materialna: pojawiły się dwie mocne role platformowo-infrastrukturalne, a aktywny tail przesunął się w stronę produkcyjnych systemów LLM, retrieval, agentów i AI intelligence platforms. AURA łączy Wrocław z budową produkcyjnych systemów AI/LLM, w tym agentów, retrieval, ewaluacji i obserwowalności. ITDS wzmacnia lokalny klaster AI infrastructure z LLM i retrieval systems. Równocześnie poprzednie terminy Axabee i HIBERUS wymagają oznaczenia jako niepotwierdzone lub zamknięte, bo nie są już widoczne w bieżącym przeglądzie.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "AURA — Senior Software Engineer, AI Intelligence Platform",
+      "company": "Nieznana firma",
+      "location": "Wrocław, Warszawa, Kraków, Gdańsk i Katowice; karta wskazuje także #LI-Remote, ale pełna polityka pracy zdalnej wymaga potwierdzenia.",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Senior",
+      "fitSummary": "Produkcyjne systemy AI/LLM, agenci, retrieval pipelines, ewaluacja, LLM observability, security/privacy oraz AWS/IaC.",
+      "whyInteresting": "Rzadkie połączenie hands-on software engineering, jakości i obserwowalności LLM oraz platformy AI, z Wrocławiem wymienionym jako lokalizacją.",
+      "uncertainty": "Publiczna karta nie podaje widełek ani jednoznacznego modelu hybrydowego dla Wrocławia.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/aura-senior-software-engineer-ai-intelligence-platform-wroclaw-ai"
+      ],
+      "tags": [
+        "LLM",
+        "AWS"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "ITDS — Senior AI Infrastructure Engineer – LLM & Retrieval Systems",
+      "company": "Nieznana firma",
+      "location": "Wrocław; model pracy i szczegóły lokalizacji wymagają odczytania pełnego opisu aplikacyjnego.",
+      "workMode": "Wrocław",
+      "compensation": "Brak publicznych widełek w aktualnym wyniku.",
+      "seniority": "Senior",
+      "fitSummary": "Infrastruktura AI, systemy LLM, retrieval, model serving, vector databases i operacjonalizacja.",
+      "whyInteresting": "Bezpośrednio trafia w priorytet tematu — produkcyjna warstwa retrieval/inference zamiast ogólnej roli data.",
+      "uncertainty": "Karta jest boardowym źródłem; brak potwierdzonej kanonicznej strony pracodawcy i pełnej informacji o remote policy.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/itds-senior-ai-infrastructure-engineer---llm-retrieval-systems-wroclaw-devops"
+      ],
+      "tags": [
+        "LLM"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "SQUAD — Applied Scientist (LLM) — utrzymana aktywna oferta",
+      "company": "Nieznana firma",
+      "location": "Wrocław + inna lokalizacja; hybrydowo.",
+      "workMode": "Hybrid",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Fine-tuning, synthetic datasets, quantization/model compression, edge inference, RAG, multi-agent systems oraz safety/alignment.",
+      "whyInteresting": "To nadal jeden z najbardziej badawczo-produkcyjnych profili w lokalnym boardzie.",
+      "uncertainty": "Nie odnotowano nowej zmiany; oferta jest pokazana jako potwierdzony kontekst, nie nowy URL.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/squad-applied-scientist-llm--wroclaw-ai"
+      ],
+      "tags": [
+        "RAG",
+        "LLM"
+      ]
+    }
+  ],
+  "changes": [
+    "Dodano dwa nowe lub nowo potwierdzone w bieżącym tailu URL-e: AURA oraz ITDS Senior AI Infrastructure Engineer.",
+    "Just Join IT nadal pokazuje 131 ofert AI/ML dla Wrocławia; liczba jest sygnałem powierzchni boardu, nie miarą całego rynku.",
+    "Axabee AI Engineer with Python nie pojawia się już w bieżącej liście, mimo wcześniejszego terminu 12 września; status należy traktować jako niepotwierdzony/zamknięty.",
+    "HIBERUS z terminem 11 września nie został potwierdzony w bieżącym przeglądzie; wymaga zamknięcia obserwacji, chyba że pracodawca opublikuje nową kartę."
+  ],
+  "risks": [
+    "Większość nowych sygnałów pochodzi z publicznego boardu; kanoniczne strony AURA i ITDS nie zostały potwierdzone w tej rundzie.",
+    "#LI-Remote przy AURA nie przesądza, czy praca zdalna jest dostępna z Polski ani jak często trzeba pojawiać się w biurze.",
+    "Brak publicznych widełek dla obu nowych ról."
+  ],
+  "recommendedActions": [
+    "Priorytetowo sprawdzić AURA i ITDS, zwłaszcza wymagania dotyczące lokalizacji, modelu pracy i zakresu ownershipu platformy.",
+    "Usunąć Axabee i HIBERUS z aktywnego watchlistu, jeśli kolejne sprawdzenie nie pokaże nowych kanonicznych kart.",
+    "W kolejnej rundzie szukać kanonicznych stron AURA/ITDS oraz monitorować, czy AURA utrzyma termin 29 września, a ITDS 4 października."
+  ],
+  "checkedSources": [
+    {
+      "title": "Just Join IT – AI/ML Wrocław",
+      "url": "https://justjoin.it/job-offers/wroclaw/ai",
+      "status": "checked"
+    },
+    {
+      "title": "AURA – Senior Software Engineer, AI Intelligence Platform",
+      "url": "https://justjoin.it/job-offer/aura-senior-software-engineer-ai-intelligence-platform-wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "ITDS – Senior AI Infrastructure Engineer – LLM & Retrieval Systems",
+      "url": "https://justjoin.it/job-offer/itds-senior-ai-infrastructure-engineer---llm-retrieval-systems-wroclaw-devops",
+      "status": "checked"
+    },
+    {
+      "title": "SQUAD – Applied Scientist (LLM)",
+      "url": "https://justjoin.it/job-offer/squad-applied-scientist-llm--wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Pracuj.pl – machine learning engineer, Wrocław",
+      "url": "https://www.pracuj.pl/praca/machine%20learning%20engineer%3Bkw/wroclaw%3Bwp",
+      "status": "checked"
+    }
+  ]
+}

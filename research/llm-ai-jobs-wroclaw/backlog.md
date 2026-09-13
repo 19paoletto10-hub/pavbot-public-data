@@ -149,3 +149,8 @@
 
 - Axabee AI Engineer with Python: sprawdzić status po terminie 12 września.
 - Nowe karty ITLT, DataArt, airSlate i B2Bnetwork: znaleźć kanoniczne strony i potwierdzić remote policy oraz widełki.
+
+## Follow-up 2026-09-13 17:40
+
+- AURA i ITDS Senior AI Infrastructure Engineer: znaleźć kanoniczne strony, potwierdzić model pracy z Polski oraz widełki.
+- Axabee i HIBERUS: sprawdzić jeszcze raz w następnej rundzie; jeśli nie wrócą na publiczne źródła, zamknąć aktywną obserwację po terminach aplikowania.

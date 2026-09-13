@@ -1,8 +1,10 @@
 # Topic Index: llm-ai-jobs-wroclaw
 
-Last updated: 2026-09-11 15:42 CEST
+Last updated: 2026-09-13 17:40 CEST
 
 ## Current Understanding
+
+Runda `2026-09-13-1740`: AURA dodała senioralną rolę Senior Software Engineer, AI Intelligence Platform z Wrocławiem, agentami, retrieval, ewaluacją i LLM observability. ITDS pokazał nową kartę Senior AI Infrastructure Engineer – LLM & Retrieval Systems z Wrocławiem. Axabee po terminie 12 września i HIBERUS po terminie 11 września nie są już potwierdzone w bieżącym tailu i wymagają zamknięcia obserwacji.
 
 Runda `2026-09-10-1933`: jedna nowa oferta Connectis AI Enablement Engineer (Wrocław, hybryda około raz w tygodniu; MCP, CLI, ewaluacja LLM). Różnice waluty między listą a kartą nie są uznawane za zmianę płacy. HIBERUS wskazuje termin 11 września.
 
@@ -127,6 +129,8 @@ konkretny platformowy, delivery lub toolingowy scope.
 
 ## Recent Reports
 
+- [2026-09-13 17:40 - Material update](runs/2026-09-13-1740.md): AURA i ITDS, plus kontrola Axabee/HIBERUS.
+
 - [2026-09-11 15:42 - Material update](runs/2026-09-11-1542.md): pięć nowych ról AI/LLM.
 
 - [2026-09-10 19:33 - Material update](runs/2026-09-10-1933.md): Connectis, jedna nowa rola.
@@ -151,6 +155,8 @@ only when something meaningful changes.
 
 | Canonical key | Company | Title | Location / remote | First seen | Last seen | Status | Material changes | Source |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| https://justjoin.it/job-offer/aura-senior-software-engineer-ai-intelligence-platform-wroclaw-ai | AURA | Senior Software Engineer, AI Intelligence Platform | Wrocław + inne miasta / remote policy niepotwierdzona | 2026-09-13-1740 | 2026-09-13-1740 | Open | Nowa karta; produkcyjne AI/LLM, agenci, retrieval, ewaluacja, observability i AWS/IaC; termin 29 Sep. | [Just Join IT](https://justjoin.it/job-offer/aura-senior-software-engineer-ai-intelligence-platform-wroclaw-ai) |
+| https://justjoin.it/job-offer/itds-senior-ai-infrastructure-engineer---llm-retrieval-systems-wroclaw-devops | ITDS | Senior AI Infrastructure Engineer – LLM & Retrieval Systems | Wrocław / model pracy niepotwierdzony | 2026-09-13-1740 | 2026-09-13-1740 | Open | Nowa karta; infrastruktura AI, LLM, retrieval i systemy produkcyjne; termin 4 Oct. | [Just Join IT](https://justjoin.it/job-offer/itds-senior-ai-infrastructure-engineer---llm-retrieval-systems-wroclaw-devops) |
 | https://justjoin.it/job-offer/axabee-ai-engineer-with-python-wroclaw-python | Axabee | AI Engineer with Python | Wrocław / hybrid or remote | 2026-09-11-1542 | 2026-09-11-1542 | Open | New card; LLM, LangChain, LangGraph, Google ADK and agentic systems; deadline 12 Sep. | [Just Join IT](https://justjoin.it/job-offer/axabee-ai-engineer-with-python-wroclaw-python) |
 | https://justjoin.it/job-offer/itlt-ai-engineer-senior-ai-engineer-wroclaw-python | ITLT | AI Engineer / Senior AI Engineer | Wrocław / mostly remote | 2026-09-11-1542 | 2026-09-11-1542 | Open | New card; MCP, fine-tuning, LoRA/QLoRA, vLLM/Ollama/TGI, MLOps and observability. | [Just Join IT](https://justjoin.it/job-offer/itlt-ai-engineer-senior-ai-engineer-wroclaw-python) |
 | https://justjoin.it/job-offer/dataart-senior-ai-platform-engineer-with-langgrap-wroclaw-admin?promo=lal | DataArt | Senior AI Platform Engineer with LangGrap | Wrocław / remote or hybrid | 2026-09-11-1542 | 2026-09-11-1542 | Open | New card; LangGraph, Strands Agents, AWS Bedrock and AgentCore; public salary. | [Just Join IT](https://justjoin.it/job-offer/dataart-senior-ai-platform-engineer-with-langgrap-wroclaw-admin?promo=lal) |
