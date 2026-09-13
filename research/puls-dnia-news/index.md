@@ -2,6 +2,12 @@
 
 ## Current State
 
+2026-09-13 12:30 CEST: Południowy przegląd potwierdził utrzymujący się incydent na targach obronnych w Kielcach oraz nowy oficjalny komunikat NIO o zmianie dojazdu 13 września. Wątki saudyjskiego rurociągu, rozmów Izrael–Liban i bezpieczeństwa AI pozostają w monitoringu bez nowego rozstrzygnięcia.
+
+Źródła i rozdzielenie faktów od interpretacji: [raport](runs/2026-09-13-1230.md).
+
+## Current State
+
 2026-09-13 06:35 CEST: Potwierdzono nowy wątek technologiczny — apel prezesa Anthropic o spowolnienie rozwoju AI i wzmocnienie zabezpieczeń. Utrzymuje się kryzys wokół saudyjskiego rurociągu East–West po ataku dronowym. Dodano 12 kart, wszystkie siedem sekcji.
 
 Źródła i rozdzielenie faktów od interpretacji: [raport](runs/2026-09-13-0635.md).
