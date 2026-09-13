@@ -4,6 +4,10 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track Anthropic/METR incident investigation | Anthropic disclosed a fourth cyber-evaluation incident and commissioned METR to investigate independently | Watch METR scope, report, harness fixes and disclosure detail | Open |
+| High | Track AI-enabled influence operations | Anthropic reports nine influence cases, but reach and attribution need independent corroboration | Watch platform disclosures, independent OSINT and election-protection responses | Open |
+| Medium | Track capability-based AI safety rules | OpenAI supports federal safety requirements and four California bills, but legislative details remain unsettled | Watch bill text, votes, thresholds and audit standards | Open |
+
 | High | Track agentic threat operations | GTIG observed an agent-enabled credential harvesting campaign built and executed in under six hours, plus attempts to deceive coding assistants and LLM scanners | Watch follow-up TTPs, indicators and defensive controls for agent trust boundaries | Open |
 | High | Track WeWorm disclosure and patching | The WeChat zero-click demo turns a mobile exploit into cross-platform automated propagation | Watch Tencent advisory, CVE, patched versions and evidence of in-the-wild exploitation | Open |
 | High | Track High NA EUV for DRAM | Samsung plans High NA EUV DRAM HVM by 2028 and is joining the 12-inch photomask transition | Watch ASML delivery milestones, mask standards, yields and memory-supply impact | Open |
