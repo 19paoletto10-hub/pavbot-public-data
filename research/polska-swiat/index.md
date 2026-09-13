@@ -2,6 +2,10 @@
 
 Last updated: 2026-09-13
 
+## Update 2026-09-13 wieczór
+
+Wieczorny run dodaje amerykański apel o zatrzymanie ukraińskich ataków na rosyjskie paliwa, śmiertelny incydent w Ormuzie oraz eskalację Huti przy Bab al-Mandab. Incydent przy polskiej granicy pozostaje bez potwierdzonego naruszenia RP, ale jego skutki proceduralne były realne. Wynik wyborów w Szwecji pozostaje do aktualizacji po danych oficjalnych.
+
 ## Update 2026-09-13
 
 Poranny run 13 września przesuwa lead na bezpośredni wpływ rosyjskiej salwy

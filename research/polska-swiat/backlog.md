@@ -430,3 +430,8 @@
 - [ ] High: Track Ukraine civilian casualties, winter air-defence deliveries and European troop/guarantee debate after Putin's warning.
 - [ ] High: Follow Piorun SAFE execution: delivery schedule, production capacity, financing and export milestones.
 - [ ] Medium: Track whether the BRICS declaration produces concrete diplomatic or energy measures beyond general language.
+# Follow-up 2026-09-13 wieczór
+
+- [ ] Po publikacji danych Valmyndigheten uzupełnić wynik wyborów w Szwecji i układ koalicyjny.
+- [ ] Zweryfikować dalszy status żeglugi w Ormuzie oraz odpowiedzialność za trafienie statku.
+- [ ] Sprawdzić, czy polskie służby publikują nowe informacje o incydentach przy zachodniej granicy Ukrainy.
