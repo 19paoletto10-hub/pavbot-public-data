@@ -4,6 +4,13 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track Russian drones near Polish border and RCB/DORSZ follow-up | The 13 September salvo triggered Polish alerts, sirens, border disruption and confirmed strikes on the Ukrainian side within meters or a few kilometers of Poland | Recheck RCB, DORSZ, Straż Graniczna, MSWiA/MON and local authorities before audio/push for alert cancellations, border reopening and any airspace/security update | Open |
+| High | Track Ukraine 13 September winter strike package | Guardian reports nine killed, dozens wounded and a near-500-drone/missile attack that deepens winter infrastructure risk | Watch Ukrainian authorities, Guardian/AP, NATO/PURL donors and Polish border/security messages for casualty, infrastructure and air-defense updates | Open |
+| High | Track Strait of Hormuz ship strike | AP reports an Iranian commercial ship was hit near Hormuz, killing one person and wounding others, while UKMTO recorded a separate projectile strike during transit | Watch AP, UKMTO, IMO, ship operator, Iran, Gulf states and U.S. channels for attribution, traffic impact and escalation | Open |
+| High | Track Saudi-Houthi pipeline and Bab al-Mandab pressure | AP and Guardian show Saudi Arabia facing pressure across southern attacks, Bab al-Mandab and the East-West pipeline, not only Hormuz | Watch AP, Guardian, Aramco, Houthi statements, UKMTO, oil prices and Orlen/Polish fuel context for operational and price effects | Open |
+| Medium | Track Sweden Riksdag election and coalition math | AP and RP describe a close bloc race in which Sweden Democrats could enter government if the right wins | Watch Swedish election authority, AP/RP, party statements and NATO/Ukraine-policy reactions after exit polls and seat allocation | Open |
+| Medium | Track Sikorski Kyiv refinery and memory-politics remarks | RP/PAP records Polish diplomacy linking support for pressure on Russian refineries with negotiations and a sharp UPA memory line | Watch MSZ, Ukrainian reactions, refinery-strike follow-ups and exhumation/memory-policy statements | Open |
+| Medium | Track Philippines ferry fire investigation | AP reports 76 dead and 13 missing after the ferry fire | Watch AP and Philippine authorities for final toll, cause, operator accountability and safety response | Open |
 | High | Track second presidential cryptoasset bill | The 8 September initiative replaces the static veto impasse with a new legislative route, but no compromise has yet been enacted | Watch Sejm print publication, committee calendar, government and KNF positions, and compare the text with the vetoed bill | Open |
 | High | Track Ukraine winter air-defense package and delivery gap | The UK committed GBP 100m through PURL while partners publicly described a need for 300 Patriot missiles, 500 air-to-air interceptors and USD 2bn for drones | Watch GOV.UK, NATO/PURL, AP, Ukrainian channels and donor announcements for quantities and delivery dates before winter | Open |
 | High | Track Ukraine prosecutor-general succession and anti-corruption case | Ruslan Kravchenko resigned after NABU/SAPO actions; he denies wrongdoing and the investigation remains unresolved | Watch Verkhovna Rada, NABU, SAPO and presidential statements for acceptance, successor and evidentiary updates | Open |
@@ -185,6 +192,8 @@
 | Medium | Track Bangkok fire accountability | AP raised death toll to 32 and families are seeking compensation while exits/cause remain under investigation | Watch AP and Thai authorities for investigation, compensation and critical patient updates | Open |
 
 ## Review Notes
+
+- 2026-09-13: Poranny research dodał polski wymiar operacyjny rosyjskiej salwy: alerty RCB dla Lubelskiego i Podkarpackiego, syreny w sześciu powiatach Lubelszczyzny, czasowo wstrzymane odprawy oraz uderzenia dronów po ukraińskiej stronie bardzo blisko granicy. Przed podcastem lub pushem live koniecznie sprawdzić, czy alerty/odprawy nie zostały ponownie zaktualizowane oraz czy AP/UKMTO/IMO nie podały nowej informacji o sprawcy, ruchu statków lub skutkach cenowych Ormuzu.
 
 - 2026-09-11: Wieczorny research dodał ocenę Tuska o możliwym nasileniu rosyjskich prowokacji przy granicach Ukrainy, częściowe udrożnienie Ormuzu, rekordowy import paliw do Rosji i szczyt BRICS. Przed podcastem ponownie sprawdzić konkretne incydenty graniczne, UKMTO/IMO, ceny ropy oraz komunikat BRICS; nie przedstawiać oceny ryzyka jako potwierdzonego planu Rosji.
 

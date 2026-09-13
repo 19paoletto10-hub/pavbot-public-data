@@ -1,6 +1,18 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-09-11
+Last updated: 2026-09-13
+
+## Update 2026-09-13
+
+Poranny run 13 września przesuwa lead na bezpośredni wpływ rosyjskiej salwy
+na Polskę: alerty RCB, syreny w sześciu powiatach Lubelszczyzny, czasowe
+wstrzymanie odpraw i uderzenia rosyjskich dronów po ukraińskiej stronie bardzo
+blisko granicy, w tym około 800 metrów od Dorohuska-Jagodzina oraz około 2 km
+od granicy przy pociągu Kijów-Warszawa. Ukraina pozostaje w zimowym reżimie
+obrony powietrznej i infrastruktury, a globalnie Ormuz staje się ostrzejszym
+incydentem morskim po trafieniu statku handlowego z jedną ofiarą śmiertelną.
+Równolegle presja Huti na Arabię Saudyjską i Bab al-Mandab utrzymuje drugi
+front ryzyka dla energii.
 
 ## Update 2026-09-12
 
