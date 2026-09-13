@@ -1,0 +1,330 @@
+{
+  "schemaVersion": 1,
+  "topic": "aktualne-wydarzenia-mobile",
+  "runDate": "2026-09-13",
+  "runTime": "10:18",
+  "status": "Material update",
+  "headline": "Poranek przynosi dalsze umiędzynarodowienie kryzysu wokół Iranu: ataki dotykają szlaków przez Zatokę i infrastrukturę naftową, a BRICS próbuje utrzymać wspólny język dyplomatyczny mimo rozbieżności członków. Wojna Rosji przeciw Ukrainie pozostaje aktywna, a ostrzeżenia Kremla zwiększają koszt polityczny europejskiego wsparcia. W technologii najważniejszy jest przejście od ogólnych debat do egzekwowania i upraszczania reguł AI.",
+  "leadParagraphs": [
+    "Poranek przynosi dalsze umiędzynarodowienie kryzysu wokół Iranu: ataki dotykają szlaków przez Zatokę i infrastrukturę naftową, a BRICS próbuje utrzymać wspólny język dyplomatyczny mimo rozbieżności członków. Wojna Rosji przeciw Ukrainie pozostaje aktywna, a ostrzeżenia Kremla zwiększają koszt polityczny europejskiego wsparcia. W technologii najważniejszy jest przejście od ogólnych debat do egzekwowania i upraszczania reguł AI."
+  ],
+  "checkedSources": [
+    {
+      "title": "AP — Ormuz",
+      "url": "https://apnews.com/article/27d276de911a983cdb1b81101ee56083"
+    },
+    {
+      "title": "AP — BRICS",
+      "url": "https://apnews.com/article/72e4329da3bc30ab7b231b2d11aae375"
+    },
+    {
+      "title": "AP — Ukraina",
+      "url": "https://apnews.com/article/839f5b0fc5217afc4cb34e15b01b6eff"
+    },
+    {
+      "title": "AP — rurociąg",
+      "url": "https://apnews.com/article/324485fad65647d4a897d5bfdcb7849c"
+    },
+    {
+      "title": "NIST",
+      "url": "https://www.nist.gov/artificial-intelligence/ai-standards"
+    },
+    {
+      "title": "Komisja Europejska",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+    },
+    {
+      "title": "KPRM",
+      "url": "https://www.gov.pl/web/premier/wydarzenia"
+    },
+    {
+      "title": "RCB",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    }
+  ],
+  "sections": [
+    {
+      "id": "ogolne",
+      "title": "Ogólne",
+      "summary": "Światowy poranek łączy presję na szlaki transportowe, kruchą dyplomację i rosnącą wagę odporności technologicznej.",
+      "articles": [
+        {
+          "id": "ogolne-1-ormuz-znow-podnosi-temperature",
+          "section": "Ogólne",
+          "title": "Ormuz znów podnosi temperaturę",
+          "lead": "Doniesienia o uderzeniu na statek dokładają nowy punkt ryzyka do kryzysu w Zatoce.",
+          "facts": [
+            "Irańskie media podały o jednej ofierze. AP",
+            "Równolegle przywrócono ruch graniczny po atakach dronów. AP"
+          ],
+          "analysis": "To informacja wstępna, ale wpisuje się w serię zakłóceń transportu.",
+          "whyItMatters": "Ormuz jest wąskim gardłem dla energii i żeglugi.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/27d276de911a983cdb1b81101ee56083"
+            }
+          ],
+          "tags": [
+            "Ogólne"
+          ],
+          "ttsText": "Doniesienia o uderzeniu na statek dokładają nowy punkt ryzyka do kryzysu w Zatoce. Irańskie media podały o jednej ofierze. AP Równolegle przywrócono ruch graniczny po atakach dronów. AP To informacja wstępna, ale wpisuje się w serię zakłóceń transportu. Ormuz jest wąskim gardłem dla energii i żeglugi.",
+          "priority": "High"
+        },
+        {
+          "id": "ogolne-2-brics-szuka-wspolnego-jezyka",
+          "section": "Ogólne",
+          "title": "BRICS szuka wspólnego języka",
+          "lead": "Szczyt próbuje ograniczyć skutki geopolitycznych napięć dla gospodarki.",
+          "facts": [
+            "Modi ostrzegł przed zakłóceniami łańcuchów dostaw. AP",
+            "Deklaracja powstała mimo rozbieżności między członkami. AP"
+          ],
+          "analysis": "Forum wzmacnia komunikację, lecz nie tworzy jednolitego mechanizmu bezpieczeństwa.",
+          "whyItMatters": "Decyzje grupy wpływają na handel, energię i sankcje.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/72e4329da3bc30ab7b231b2d11aae375"
+            }
+          ],
+          "tags": [
+            "Ogólne"
+          ],
+          "ttsText": "Szczyt próbuje ograniczyć skutki geopolitycznych napięć dla gospodarki. Modi ostrzegł przed zakłóceniami łańcuchów dostaw. AP Deklaracja powstała mimo rozbieżności między członkami. AP Forum wzmacnia komunikację, lecz nie tworzy jednolitego mechanizmu bezpieczeństwa. Decyzje grupy wpływają na handel, energię i sankcje.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "polska",
+      "title": "Polska",
+      "summary": "W porannym przeglądzie nie pojawił się nowy komunikat krajowy o wadze większej niż utrzymane już osie bezpieczeństwa.",
+      "articles": [
+        {
+          "id": "polska-1-co-sprawdzono-bez-przeomu-rcb",
+          "section": "Polska",
+          "title": "Co sprawdzono bez przełomu: RCB",
+          "lead": "Bieżące komunikaty RCB pozostają punktem kontrolnym dla bezpieczeństwa cywilnego.",
+          "facts": [
+            "Sprawdzono stronę komunikatów RCB. RCB",
+            "Nie znaleziono nowego komunikatu zmieniającego obraz strategiczny."
+          ],
+          "analysis": "Brak nowej publikacji nie oznacza braku ryzyka.",
+          "whyItMatters": "Oddziela potwierdzone alerty od medialnych sygnałów.",
+          "sources": [
+            {
+              "title": "RCB",
+              "url": "https://www.gov.pl/web/rcb/komunikaty"
+            }
+          ],
+          "tags": [
+            "Polska"
+          ],
+          "ttsText": "Bieżące komunikaty RCB pozostają punktem kontrolnym dla bezpieczeństwa cywilnego. Sprawdzono stronę komunikatów RCB. RCB Nie znaleziono nowego komunikatu zmieniającego obraz strategiczny. Brak nowej publikacji nie oznacza braku ryzyka. Oddziela potwierdzone alerty od medialnych sygnałów.",
+          "priority": "High"
+        },
+        {
+          "id": "polska-2-co-sprawdzono-bez-przeomu-kprm",
+          "section": "Polska",
+          "title": "Co sprawdzono bez przełomu: KPRM",
+          "lead": "Strona KPRM nie dostarczyła rano nowego krajowego faktu do podniesienia ponad wczorajszy pakiet obronny.",
+          "facts": [
+            "Sprawdzono bieżące wydarzenia KPRM. KPRM",
+            "Wczorajsze informacje o Piorunach i satelitach pozostają kontekstem."
+          ],
+          "analysis": "Najlepszym następnym krokiem jest weryfikacja wykonania zapowiedzi.",
+          "whyItMatters": "Pozwala nie powielać deklaracji bez nowego etapu realizacji.",
+          "sources": [
+            {
+              "title": "KPRM",
+              "url": "https://www.gov.pl/web/premier/wydarzenia"
+            }
+          ],
+          "tags": [
+            "Polska"
+          ],
+          "ttsText": "Strona KPRM nie dostarczyła rano nowego krajowego faktu do podniesienia ponad wczorajszy pakiet obronny. Sprawdzono bieżące wydarzenia KPRM. KPRM Wczorajsze informacje o Piorunach i satelitach pozostają kontekstem. Najlepszym następnym krokiem jest weryfikacja wykonania zapowiedzi. Pozwala nie powielać deklaracji bez nowego etapu realizacji.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "polityka",
+      "title": "Polityka",
+      "summary": "Polityczny ciężar dnia przesuwa się na relacje między wielkimi blokami i granice europejskiego zaangażowania.",
+      "articles": [
+        {
+          "id": "polityka-1-putin-ostrzega-europe",
+          "section": "Polityka",
+          "title": "Putin ostrzega Europę",
+          "lead": "Kreml wiąże ewentualne wysłanie wojsk europejskich z bezpośrednim konfliktem.",
+          "facts": [
+            "Putin wypowiedział ostrzeżenie podczas szczytu BRICS. AP",
+            "AP podała także ośmiu zabitych w rosyjskich uderzeniach."
+          ],
+          "analysis": "Komunikat ma jednocześnie wymiar odstraszania i presji informacyjnej.",
+          "whyItMatters": "Wpływa na debatę o przyszłym wsparciu Ukrainy.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/839f5b0fc5217afc4cb34e15b01b6eff"
+            }
+          ],
+          "tags": [
+            "Polityka"
+          ],
+          "ttsText": "Kreml wiąże ewentualne wysłanie wojsk europejskich z bezpośrednim konfliktem. Putin wypowiedział ostrzeżenie podczas szczytu BRICS. AP AP podała także ośmiu zabitych w rosyjskich uderzeniach. Komunikat ma jednocześnie wymiar odstraszania i presji informacyjnej. Wpływa na debatę o przyszłym wsparciu Ukrainy.",
+          "priority": "High"
+        },
+        {
+          "id": "polityka-2-sankcje-pozostaja-osia-sporu",
+          "section": "Polityka",
+          "title": "Sankcje pozostają osią sporu",
+          "lead": "BRICS nadal kwestionuje sankcje niewynikające z decyzji ONZ.",
+          "facts": [
+            "Wcześniejsza deklaracja grupy potępiła jednostronne sankcje. AP",
+            "Tegoroczny szczyt łączy ten spór z kryzysem regionalnym. AP"
+          ],
+          "analysis": "To przede wszystkim sygnał normatywny, nie wspólna polityka wykonawcza.",
+          "whyItMatters": "Utrudnia budowanie jednolitej presji gospodarczej.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/5393274f87a16461b195d13f324e747a"
+            },
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/72e4329da3bc30ab7b231b2d11aae375"
+            }
+          ],
+          "tags": [
+            "Polityka"
+          ],
+          "ttsText": "BRICS nadal kwestionuje sankcje niewynikające z decyzji ONZ. Wcześniejsza deklaracja grupy potępiła jednostronne sankcje. AP Tegoroczny szczyt łączy ten spór z kryzysem regionalnym. AP To przede wszystkim sygnał normatywny, nie wspólna polityka wykonawcza. Utrudnia budowanie jednolitej presji gospodarczej.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "sprawy-zagraniczne",
+      "title": "Sprawy zagraniczne",
+      "summary": "Największa dynamika pozostaje na styku wojny, energii i bezpieczeństwa morskiego.",
+      "articles": [
+        {
+          "id": "sprawy-zagraniczne-1-saudyjska-infrastruktura-nadal-zagrozona",
+          "section": "Sprawy zagraniczne",
+          "title": "Saudyjska infrastruktura nadal zagrożona",
+          "lead": "Zamknięcie rurociągu East–West pokazuje, że presja dotyczy także dróg lądowych.",
+          "facts": [
+            "Irak potwierdził, że ataki pochodziły z jego terytorium. AP",
+            "Rurociąg został zamknięty po atakach dronów. AP"
+          ],
+          "analysis": "Zagrożenie morskie i lądowe może wzajemnie zwiększać koszty transportu.",
+          "whyItMatters": "Ryzyko dotyczy cen energii, frachtu i ubezpieczeń.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/324485fad65647d4a897d5bfdcb7849c"
+            },
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/025d052a14d9481258d51009a76d0bd6"
+            }
+          ],
+          "tags": [
+            "Sprawy zagraniczne"
+          ],
+          "ttsText": "Zamknięcie rurociągu East–West pokazuje, że presja dotyczy także dróg lądowych. Irak potwierdził, że ataki pochodziły z jego terytorium. AP Rurociąg został zamknięty po atakach dronów. AP Zagrożenie morskie i lądowe może wzajemnie zwiększać koszty transportu. Ryzyko dotyczy cen energii, frachtu i ubezpieczeń.",
+          "priority": "High"
+        },
+        {
+          "id": "sprawy-zagraniczne-2-ukraina-pozostaje-aktywnym-frontem",
+          "section": "Sprawy zagraniczne",
+          "title": "Ukraina pozostaje aktywnym frontem",
+          "lead": "Uderzenia i groźby polityczne rozwijają się równolegle.",
+          "facts": [
+            "AP podała o ośmiu zabitych w rosyjskich atakach. AP",
+            "Europejska obecność wojskowa stała się przedmiotem ostrego ostrzeżenia Kremla."
+          ],
+          "analysis": "Presja militarna i komunikacyjna wzajemnie się wzmacniają.",
+          "whyItMatters": "Każdy nowy incydent wpływa na kalkulację wsparcia dla Ukrainy.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/839f5b0fc5217afc4cb34e15b01b6eff"
+            }
+          ],
+          "tags": [
+            "Sprawy zagraniczne"
+          ],
+          "ttsText": "Uderzenia i groźby polityczne rozwijają się równolegle. AP podała o ośmiu zabitych w rosyjskich atakach. AP Europejska obecność wojskowa stała się przedmiotem ostrego ostrzeżenia Kremla. Presja militarna i komunikacyjna wzajemnie się wzmacniają. Każdy nowy incydent wpływa na kalkulację wsparcia dla Ukrainy.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "technologia",
+      "title": "Technologia",
+      "summary": "Technologiczny blok dnia dotyczy przede wszystkim reguł, dokumentacji i odpowiedzialności.",
+      "articles": [
+        {
+          "id": "technologia-1-nist-zbiera-uwagi-o-dokumentacji-ai",
+          "section": "Technologia",
+          "title": "NIST zbiera uwagi o dokumentacji AI",
+          "lead": "Amerykański urząd prowadzi konsultacje nad publicznymi opisami systemów AI.",
+          "facts": [
+            "NIST opublikował projekt „Zero Draft”. NIST",
+            "Uwagi można zgłaszać do 16 września 2026."
+          ],
+          "analysis": "Dokumentacja staje się elementem infrastruktury zaufania, nie dodatkiem marketingowym.",
+          "whyItMatters": "Ułatwia ocenę ryzyk przez użytkowników i regulatorów.",
+          "sources": [
+            {
+              "title": "NIST",
+              "url": "https://www.nist.gov/artificial-intelligence/ai-standards"
+            }
+          ],
+          "tags": [
+            "Technologia"
+          ],
+          "ttsText": "Amerykański urząd prowadzi konsultacje nad publicznymi opisami systemów AI. NIST opublikował projekt „Zero Draft”. NIST Uwagi można zgłaszać do 16 września 2026. Dokumentacja staje się elementem infrastruktury zaufania, nie dodatkiem marketingowym. Ułatwia ocenę ryzyk przez użytkowników i regulatorów.",
+          "priority": "High"
+        },
+        {
+          "id": "technologia-2-ai-act-wchodzi-w-faze-egzekwowania",
+          "section": "Technologia",
+          "title": "AI Act wchodzi w fazę egzekwowania",
+          "lead": "Unia Europejska przesuwa uwagę z uchwalania zasad na ich praktyczne stosowanie.",
+          "facts": [
+            "Większość głównych reguł zaczęła obowiązywać w sierpniu 2026. Komisja Europejska",
+            "Część wymogów ma odroczone terminy po zmianach Digital Omnibus. EUR-Lex"
+          ],
+          "analysis": "Okres przejściowy będzie wymagał rozdzielenia obowiązków według rodzaju systemu.",
+          "whyItMatters": "Firmy i administracja muszą łączyć rozwój AI z dowodami zgodności.",
+          "sources": [
+            {
+              "title": "Komisja Europejska",
+              "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+            },
+            {
+              "title": "EUR-Lex",
+              "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R1744"
+            }
+          ],
+          "tags": [
+            "Technologia"
+          ],
+          "ttsText": "Unia Europejska przesuwa uwagę z uchwalania zasad na ich praktyczne stosowanie. Większość głównych reguł zaczęła obowiązywać w sierpniu 2026. Komisja Europejska Część wymogów ma odroczone terminy po zmianach Digital Omnibus. EUR-Lex Okres przejściowy będzie wymagał rozdzielenia obowiązków według rodzaju systemu. Firmy i administracja muszą łączyć rozwój AI z dowodami zgodności.",
+          "priority": "High"
+        }
+      ]
+    }
+  ],
+  "audioArtifacts": [
+    {
+      "variant": "female-piper",
+      "path": "podcasts/2026-09-13-1018/audio/female-piper/podcast.mp3"
+    }
+  ]
+}
