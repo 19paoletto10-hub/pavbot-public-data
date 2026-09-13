@@ -2,6 +2,12 @@
 
 ## Current State
 
+2026-09-13 06:35 CEST: Potwierdzono nowy wątek technologiczny — apel prezesa Anthropic o spowolnienie rozwoju AI i wzmocnienie zabezpieczeń. Utrzymuje się kryzys wokół saudyjskiego rurociągu East–West po ataku dronowym. Dodano 12 kart, wszystkie siedem sekcji.
+
+Źródła i rozdzielenie faktów od interpretacji: [raport](runs/2026-09-13-0635.md).
+
+## Current State
+
 2026-09-12 21:09 CEST: Slot nie przyniósł materialnej zmiany względem 18:09. Utrzymano 12 kart obserwacyjnych, wszystkie siedem sekcji, z jawnym oznaczeniem ograniczeń dostępu do części stron BBC/CNN.
 
 Źródła i rozdzielenie faktów od interpretacji: [raport](runs/2026-09-12-2109.md).
