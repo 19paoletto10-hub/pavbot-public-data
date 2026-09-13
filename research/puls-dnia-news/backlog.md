@@ -1,5 +1,12 @@
 # Puls Dnia News Backlog
 
+# 2026-09-13 18:34
+
+- Zweryfikować regiony i czas obowiązywania ostrzeżeń IMGW oraz ewentualne komunikaty RCB.
+- Sprawdzić, czy USA, Iran lub państwa regionu potwierdzą deklarowaną datę zakończenia wojny.
+- Potwierdzić bilans incydentu w Kielcach i zakończenie organizacji ruchu przy NIO.
+- Monitorować Brent, żeglugę, rurociąg East–West oraz reakcje regulatorów AI.
+
 # 2026-09-13 15:01
 
 - Sprawdzić komunikat policji, PSP lub sanepidu o substancji i bilansie incydentu w Kielcach.
