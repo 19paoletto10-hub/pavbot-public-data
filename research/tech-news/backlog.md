@@ -4,6 +4,7 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track frontier AI pacing commitments | Public calls for slower development now span major labs, but there is no shared enforcement mechanism | Watch independent-evaluator commitments, concrete thresholds and any U.S. legislative text | Open |
 | High | Track Anthropic/METR incident investigation | Anthropic disclosed a fourth cyber-evaluation incident and commissioned METR to investigate independently | Watch METR scope, report, harness fixes and disclosure detail | Open |
 | High | Track AI-enabled influence operations | Anthropic reports nine influence cases, but reach and attribution need independent corroboration | Watch platform disclosures, independent OSINT and election-protection responses | Open |
 | Medium | Track capability-based AI safety rules | OpenAI supports federal safety requirements and four California bills, but legislative details remain unsettled | Watch bill text, votes, thresholds and audit standards | Open |

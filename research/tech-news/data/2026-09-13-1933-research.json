@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-09-13",
+  "runTime": "19:33",
+  "status": "Material update",
+  "leadParagraphs": [
+    "Najważniejsza wieczorna zmiana to przejście od ostrzeżeń pojedynczych firm do jawnej, międzyfirmowej debaty o tempie rozwoju modeli. Dario Amodei wezwał do „pacing the frontier”, Sam Altman publicznie poparł potrzebę spowolnienia frontieru, a Elon Musk również poparł apel. W USA temat natychmiast wszedł w spór o rolę Kongresu. Nie oznacza to moratorium ani uzgodnionego planu wdrożeniowego.",
+    "• Anthropic proponuje niezależnych obserwatorów, wspólne standardy i międzynarodową koordynację.",
+    "• OpenAI deklaruje poparcie dla tempa rozwoju podporządkowanego bezpieczeństwu, ale nie ogłasza zatrzymania prac.",
+    "• Speaker Izby Mike Johnson mówi o możliwym działaniu Kongresu tylko przy gotowym rozwiązaniu.",
+    "• Wczorajsze incydenty alignmentu i cybermisuse nadają apelom konkretny, operacyjny kontekst."
+  ],
+  "summaryBullets": [
+    "AI: Czy frontier AI właśnie próbuje zwolnić?",
+    "Regulacje: Kongres USA pod presją debaty o AI safety"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-09-13-1933-0-czy-frontier-ai-wlasnie-probuje-zwolnic-b0234b1dfc",
+      "section": "AI",
+      "title": "Czy frontier AI właśnie próbuje zwolnić?",
+      "standfirst": "Liderzy Anthropic, OpenAI i xAI publicznie poparli potrzebę wolniejszego tempa rozwoju najbardziej zaawansowanych modeli.",
+      "whatHappened": "Apel o „pacing the frontier” przeszedł z eseju jednej firmy do szerszej debaty branżowej.",
+      "whyItMatters": "Tempo rozwoju staje się osobnym parametrem zarządzania ryzykiem, obok jakości modelu i kosztu.",
+      "deeperAnalysis": [
+        "Amodei proponuje trzy elementy: niezależnych obserwatorów wewnątrz laboratoriów, wspólne standardy między państwami demokratycznymi oraz szersze porozumienia międzynarodowe. To próba przełożenia ogólnego ostrzeżenia na instytucje i procesy, które można audytować.",
+        "Publiczne poparcie Altmana i Muska zwiększa wagę komunikatu, ale nie tworzy automatycznie wspólnej polityki. Nie ma jeszcze uzgodnionych progów, terminów ani sposobu sprawdzenia, czy „spowolnienie” oznacza mniej treningu, wolniejsze wdrożenia czy tylko więcej testów.",
+        "W kontekście ujawnionych incydentów agentowych najbardziej praktyczna interpretacja dotyczy czasu na ewaluacje, izolację narzędzi i niezależną kontrolę. AP Axios"
+      ],
+      "contextPoints": [
+        "Co się stało: Kilku liderów poparło potrzebę wolniejszego tempa frontier AI.",
+        "Dlaczego ważne: Safety zaczyna być przedstawiane jako warunek tempa, nie tylko funkcja produktu.",
+        "Na co patrzeć dalej: Konkretne zasady niezależnych ewaluatorów i mierzalne zobowiązania."
+      ],
+      "sources": [
+        {
+          "title": "AP — Anthropic CEO calls for slower AI development",
+          "url": "https://apnews.com/article/d59552edcb27892d8ee4d98a48397706"
+        },
+        {
+          "title": "Axios — AI’s most powerful CEOs hit the brakes",
+          "url": "https://www.axios.com/2026/09/13/ai-labs-regulation-safety"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Anthropic",
+        "OpenAI",
+        "bezpieczeństwo"
+      ]
+    },
+    {
+      "id": "tech-news-2026-09-13-1933-1-kongres-usa-pod-presja-debaty-o-ai-safety-79e75f8248",
+      "section": "Regulacje",
+      "title": "Kongres USA pod presją debaty o AI safety",
+      "standfirst": "Mike Johnson sygnalizuje, że Kongres może wrócić do ustawy o zabezpieczeniach AI, jeśli pojawi się wykonalny kompromis.",
+      "whatHappened": "Publiczne apele laboratoriów zwiększyły presję na polityków, ale nie przyniosły jeszcze projektu prawa.",
+      "whyItMatters": "Ewentualne wymogi mogą zmienić proces wdrażania, audytów i raportowania modeli.",
+      "deeperAnalysis": [
+        "Wypowiedź Johnsona pokazuje, że polityczny problem nie sprowadza się do zgody co do ryzyka. Spór dotyczy także tego, kto ma prowadzić regulację, jak zdefiniować wystarczające zabezpieczenia i czy prawo powinno być federalne czy stanowe.",
+        "Stanowisko OpenAI z 9 września jest konkretniejsze niż sama debata: firma popiera capability-based federalne wymogi oraz niezależne oceny. Nadal jest to jednak propozycja dostawcy, a nie obowiązujący standard.",
+        "Dla zespołów budujących agentów rozsądnym przygotowaniem są logi, kontrola egressu, wersjonowanie ewaluacji i ścieżka eskalacji. Axios OpenAI"
+      ],
+      "contextPoints": [
+        "Co się stało: Kongres ponownie znalazł się w centrum debaty o AI safety.",
+        "Dlaczego ważne: Regulacja może stać się elementem operacyjnego release process.",
+        "Na co patrzeć dalej: Treść projektów ustaw, progi capability-based i niezależność audytorów."
+      ],
+      "sources": [
+        {
+          "title": "Axios — Johnson calls for AI solutions",
+          "url": "https://www.axios.com/2026/09/13/ai-safety-congress-law-mike-johnson"
+        },
+        {
+          "title": "OpenAI — The AI policy window is open",
+          "url": "https://openai.com/index/ai-policy-window/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "USA",
+        "regulacje",
+        "AI safety"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Czy laboratoria AI naprawdę zwolnią?",
+      "rationale": "Deklaracje liderów nie są jeszcze wspólnym planem",
+      "sourcesLabel": "AP, Axios"
+    },
+    {
+      "priority": "High",
+      "title": "Dostęp to nie zgoda",
+      "rationale": "Incydenty pokazują konkretną lukę w kontroli agentów",
+      "sourcesLabel": "Anthropic"
+    },
+    {
+      "priority": "Medium",
+      "title": "AI safety wchodzi do Kongresu",
+      "rationale": "Politycy szukają wykonalnego modelu regulacji",
+      "sourcesLabel": "Axios, OpenAI"
+    },
+    {
+      "priority": "Medium",
+      "title": "Niezależny obserwator w laboratorium",
+      "rationale": "Audyt może stać się częścią procesu rozwoju",
+      "sourcesLabel": "AP, Anthropic"
+    },
+    {
+      "priority": "Medium",
+      "title": "Tempo jako parametr bezpieczeństwa",
+      "rationale": "„Pacing” rozszerza rozmowę poza benchmarki",
+      "sourcesLabel": "Axios"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "AP",
+      "url": "https://apnews.com/article/d59552edcb27892d8ee4d98a48397706"
+    },
+    {
+      "title": "Axios",
+      "url": "https://www.axios.com/2026/09/13/ai-labs-regulation-safety"
+    },
+    {
+      "title": "Axios",
+      "url": "https://www.axios.com/2026/09/13/ai-safety-congress-law-mike-johnson"
+    },
+    {
+      "title": "OpenAI",
+      "url": "https://openai.com/index/ai-policy-window/"
+    }
+  ]
+}

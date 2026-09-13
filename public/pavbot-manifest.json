@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-09-13T13:42:22.597364+00:00",
+  "generatedAt": "2026-09-13T19:40:00.747781+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -148,6 +148,17 @@
       "date": "2026-09-13"
     },
     {
+      "id": "research/tech-news/runs/2026-09-13-1933.md",
+      "type": "run",
+      "topic": "tech-news",
+      "title": "Raport technologiczny: liderzy AI mówią o spowolnieniu frontieru",
+      "path": "research/tech-news/runs/2026-09-13-1933.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/runs/2026-09-13-1933.md",
+      "sizeBytes": 7753,
+      "date": "2026-09-13",
+      "time": "19:33"
+    },
+    {
       "id": "research/tech-news/data/2026-09-13-research.json",
       "type": "researchData",
       "topic": "tech-news",
@@ -156,6 +167,17 @@
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/data/2026-09-13-research.json",
       "sizeBytes": 9634,
       "date": "2026-09-13"
+    },
+    {
+      "id": "research/tech-news/data/2026-09-13-1933-research.json",
+      "type": "researchData",
+      "topic": "tech-news",
+      "title": "Research data",
+      "path": "research/tech-news/data/2026-09-13-1933-research.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/data/2026-09-13-1933-research.json",
+      "sizeBytes": 6929,
+      "date": "2026-09-13",
+      "time": "19:33"
     },
     {
       "id": "research/tech-news/podcasts/2026-09-13/sources.md",
@@ -266,6 +288,17 @@
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/pdfs/2026-09-13-tech-news.pdf",
       "sizeBytes": 79132,
       "date": "2026-09-13"
+    },
+    {
+      "id": "research/tech-news/pdfs/2026-09-13-1933-tech-news.pdf",
+      "type": "pdf",
+      "topic": "tech-news",
+      "title": "2026-09-13-1933-tech-news.pdf",
+      "path": "research/tech-news/pdfs/2026-09-13-1933-tech-news.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/pdfs/2026-09-13-1933-tech-news.pdf",
+      "sizeBytes": 77360,
+      "date": "2026-09-13",
+      "time": "19:33"
     },
     {
       "id": "research/puls-dnia-news/runs/2026-09-13-1501.md",
@@ -26448,7 +26481,7 @@
       "title": "Topic Index: tech-news",
       "path": "research/tech-news/index.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/index.md",
-      "sizeBytes": 93143
+      "sizeBytes": 93626
     },
     {
       "id": "research/tech-news/backlog.md",
@@ -26457,7 +26490,7 @@
       "title": "Topic Backlog: tech-news",
       "path": "research/tech-news/backlog.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/backlog.md",
-      "sizeBytes": 98489
+      "sizeBytes": 98741
     },
     {
       "id": "research/reddit-radar/index.md",
