@@ -1,5 +1,12 @@
 # Puls Dnia News Backlog
 
+# 2026-09-14 07:23
+
+- Zweryfikować regiony i czas obowiązywania alertów RCB/IMGW.
+- Monitorować wznowienie pracy saudyjskiego rurociągu oraz Brent i diesel.
+- Sprawdzić oficjalne reakcje USA, Iranu i Arabii Saudyjskiej.
+- Obserwować, czy apel Anthropic/OpenAI przełoży się na regulacje lub decyzje inwestycyjne.
+
 # 2026-09-13 18:34
 
 - Zweryfikować regiony i czas obowiązywania ostrzeżeń IMGW oraz ewentualne komunikaty RCB.

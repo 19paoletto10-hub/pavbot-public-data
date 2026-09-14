@@ -2,6 +2,12 @@
 
 ## Current State
 
+2026-09-14 07:23 CEST: Poranny przegląd potwierdził materialny rozwój wątku bezpieczeństwa AI — apel Anthropic o spowolnienie prac i poparcie Sama Altmana — oraz reakcję rynku na zamknięcie saudyjskiego rurociągu. Polska pozostaje w monitoringu alertów pogodowych, infrastruktury i bezpieczeństwa informacyjnego.
+
+Źródła i rozdzielenie faktów od interpretacji: [raport](runs/2026-09-14-0723.md).
+
+## Current State
+
 2026-09-13 18:34 CEST: Wieczorny przegląd potwierdził nowe ostrzeżenia IMGW o intensywnych opadach i silnym wietrze oraz deklarację Trumpa dotyczącą daty zakończenia wojny z Iranem. Kielce, NIO, rurociąg East–West, rozmowy Izrael–Liban i bezpieczeństwo AI pozostają w monitoringu.
 
 Źródła i rozdzielenie faktów od interpretacji: [raport](runs/2026-09-13-1834.md).
