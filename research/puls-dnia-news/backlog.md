@@ -1,5 +1,12 @@
 # Puls Dnia News Backlog
 
+# 2026-09-14 21:02
+
+- Potwierdzić bilans i lokalizację incydentu kolejowego oraz reakcję Ukrainy, Polski i NATO.
+- Monitorować rurociąg East–West, Brent, diesel i żeglugę przez Morze Czerwone.
+- Sprawdzić bieżące alerty IMGW/RCB oraz komunikaty służb.
+- Obserwować praktyczne zastosowanie obowiązków raportowania z art. 14 CRA.
+
 # 2026-09-14 18:01
 
 - Potwierdzić bilans i lokalizację incydentu kolejowego oraz reakcję Ukrainy, Polski i NATO.
