@@ -8,7 +8,7 @@
   return torch.load(f, map_location=map_location, **kwargs)
  > Using model: xtts
  > Text splitted to sentences.
-['Dzień dobry.', 'To poranny Pavbot.', 'Na Morzu Czerwonym pojawił się nowy punkt zapalny.', 'Według Associated Press Huti przejęli dwie strategiczne wyspy.', 'Wcześniej kryzys wokół Iranu objął także cieśninę Ormuz.', 'Mówiąc krótko: mapa szlaków handlowych robi się coraz mniej relaksująca.', 'Drugi ważny temat to Arktyka.', 'Europejscy przywódcy spotykają się w fińskim Rovaniemi, by rozmawiać o nowych szlakach, zasobach i bezpieczeństwie.', 'Topnienie lodu otwiera drogę statkom, ale niestety nie zamyka drzwi geopolityce.', 'AP wskazuje na rosyjską rozbudowę wojskową i rosnącą konkurencję w regionie.', 'W Ukrainie wojna pozostaje aktywna.', 'Donald Trump wezwał Kijów do ograniczenia ataków na rosyjskie paliwa, powołując się na globalny niedobór diesla.', 'AP odnotowała też rosyjskie drony nad Odessą i pożar przy przejściu granicznym z Polską.', 'W Polsce poranny przegląd komunikatów Rządowego Centrum Bezpieczeństwa i Kancelarii Premiera nie przyniósł nowego krajowego przełomu.', 'Wczorajsze osie obronne pozostają ważne, ale dziś nie dokładamy do nich niepotwierdzonych szczegółów.', 'Na koniec technologia.', 'NIST przyjmuje uwagi do szesnastego września do projektu dokumentacji publicznej systemów AI.', 'Unia Europejska jest już w fazie egzekwowania AI Act.', 'Dla firm oznacza to mniej prezentacji, a więcej dokumentów, testów i dowodów zgodności.', 'To wszystko w porannym wydaniu.', 'Źródła i pełny brief znajdziesz w aplikacji Pavbot.']
+['Dzień dobry, choć jest wieczór — wiadomości, jak zwykle, nie czekały na dogodną porę.', 'Najważniejszy sygnał z gospodarki i bezpieczeństwa energetycznego: uszkodzony saudyjski rurociąg East–West ma pozostać w większości wyłączony przez tygodnie.', 'To trasa, która pozwalała omijać ograniczenia w Zatoce Perskiej.', 'W tym samym czasie Huti przejęli kolejne strategiczne wyspy na Morzu Czerwonym.', 'Dwa wąskie gardła naraz to bardzo nieprzyjemny sposób na lekcję geografii — szczególnie dla armatorów, ubezpieczycieli i kierowców.', 'Wojna w Ukrainie pozostaje bezpośrednio związana z bezpieczeństwem Polski.', 'Po rosyjskich atakach dronowych w pobliżu polskiej granicy sekretarz generalny NATO Mark Rutte zapowiedział dalsze wsparcie dla Ukrainy.', 'Szczegóły każdego incydentu trzeba nadal oddzielać od ocen intencji, ale polityczny sygnał sojuszu jest jasny: wschodnia flanka pozostaje priorytetem.', 'Drugi europejski temat to Arktyka.', 'W Rovaniemi przywódcy rozmawiają o nowych szlakach żeglugowych, zasobach i rosyjskiej rozbudowie wojskowej.', 'Topnienie lodu otwiera drogę dla statków, ale niestety nie otwiera automatycznie drogi do spokoju.', 'W Polsce wieczorny przegląd RCB i KPRM nie przyniósł nowego krajowego komunikatu o wadze zmieniającej obraz dnia.', 'To informacja o wyniku sprawdzenia, nie gwarancja, że ryzyka zniknęły.', 'W technologii NIST przyjmuje uwagi do szesnastego września do dokumentacji standardów sztucznej inteligencji.', 'Komisja Europejska opisuje z kolei praktyczne egzekwowanie AI Act.', 'Krótko mówiąc: epoka „zaufaj nam, to działa” ustępuje epoce „pokaż dokumentację”.', 'Na dziś najważniejsze są trzy rzeczy: stan saudyjskiego rurociągu, reakcje NATO na wydarzenia przy polskiej granicy oraz rozwój sytuacji na Morzu Czerwonym i w Ormuzie.', 'To był wieczorny Pavbot.', 'Źródła i szczegóły znajdziesz w briefie.']
 Traceback (most recent call last):
   File "/Users/promaczek/Documents/CODEX-Pavbot/.agents/scripts/podcast/render_xtts.py", line 105, in <module>
     main()
@@ -68,18 +68,18 @@ Traceback (most recent call last):
   File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
     return forward_call(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 390, in forward
-    attn_outputs = self.attn(
-                   ^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 427, in forward
+    feed_forward_hidden_states = self.mlp(hidden_states)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^
   File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
     return self._call_impl(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
     return forward_call(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 312, in forward
-    query, key, value = self.c_attn(hidden_states).split(self.split_size, dim=2)
-                        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 354, in forward
+    hidden_states = self.c_fc(hidden_states)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
   File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
     return self._call_impl(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
