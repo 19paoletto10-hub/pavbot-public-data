@@ -1,6 +1,19 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-09-13
+Last updated: 2026-09-14
+
+## Update 2026-09-14
+
+Poranny run 14 września przesuwa lead z samego weekendowego incydentu przy
+polskiej granicy na reakcję państwa: po rosyjskich atakach blisko RP premier
+zwołał naradę, a ministrowie komunikują pełną gotowość służb i wzmocniony tryb
+działania. Równolegle AP opisuje ukraińskie ataki na rosyjskie rafinerie jako
+realną presję na rosyjskie dostawy paliwa, co wzmacnia znaczenie apelu Donalda
+Trumpa o zatrzymanie ataków na rosyjski diesel. Szwecja przeszła z fazy
+głosowania do ciasnego liczenia mandatów, więc wynik trzeba opierać na AP i
+Valmyndigheten bez przedwczesnego ogłaszania stabilnej koalicji. Ormuz i
+Bab al-Mandab pozostają aktywnym ryzykiem, ale bez porannego przełomu ponad
+stan z 13 września.
 
 ## Update 2026-09-13 wieczór
 

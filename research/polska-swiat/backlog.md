@@ -4,6 +4,10 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track Poland readiness after border-adjacent Russian strikes | The 14 September run moves the story from weekend alerts to a government/services readiness posture after attacks near the Polish border | Recheck RCB, DORSZ, MON, MSWiA, Straż Graniczna, KPRM and border-crossing status before podcast and push notifications | Open |
+| High | Track Ukraine refinery-strike diplomacy and fuel shortages | AP now frames Ukrainian refinery attacks as a material pressure point on Russian military and civilian fuel supply while Trump publicly urges Kyiv to stop diesel-related strikes | Watch AP, Guardian, White House, Kyiv, Russian fuel limits, diesel prices and further refinery outages | Open |
+| Medium | Track Sweden preliminary mandate count and coalition talks | Sweden has moved from voting to close mandate arithmetic, with AP and Valmyndigheten needing priority over early political claims | Watch Valmyndigheten, AP, party concessions, coalition talks and NATO/Ukraine policy signals | Open |
+| Medium | Track North Korea border live-fire drills | AP reports North Korea announced live-fire drills near the South Korean border as a show of force after Seoul's military actions | Watch AP, South Korea's military, Japan, U.S. Indo-Pacific Command and DPRK statements for launches, alerts or de-escalation | Open |
 | High | Track Russian drones near Polish border and RCB/DORSZ follow-up | The 13 September salvo triggered Polish alerts, sirens, border disruption and confirmed strikes on the Ukrainian side within meters or a few kilometers of Poland | Recheck RCB, DORSZ, Straż Graniczna, MSWiA/MON and local authorities before audio/push for alert cancellations, border reopening and any airspace/security update | Open |
 | High | Track Ukraine 13 September winter strike package | Guardian reports nine killed, dozens wounded and a near-500-drone/missile attack that deepens winter infrastructure risk | Watch Ukrainian authorities, Guardian/AP, NATO/PURL donors and Polish border/security messages for casualty, infrastructure and air-defense updates | Open |
 | High | Track Strait of Hormuz ship strike | AP reports an Iranian commercial ship was hit near Hormuz, killing one person and wounding others, while UKMTO recorded a separate projectile strike during transit | Watch AP, UKMTO, IMO, ship operator, Iran, Gulf states and U.S. channels for attribution, traffic impact and escalation | Open |
@@ -192,6 +196,8 @@
 | Medium | Track Bangkok fire accountability | AP raised death toll to 32 and families are seeking compensation while exits/cause remain under investigation | Watch AP and Thai authorities for investigation, compensation and critical patient updates | Open |
 
 ## Review Notes
+
+- 2026-09-14: Poranny research dodał reakcję rządu i służb po rosyjskich atakach przy granicy, osobny blok o ukraińskich uderzeniach w rosyjskie rafinerie oraz powyborcze liczenie mandatów w Szwecji. Przed podcastem ponownie sprawdzić RCB/DORSZ/MON/MSWiA, AP/Guardian w sprawie rafinerii i paliw, Valmyndigheten dla mandatów oraz ewentualne nowe komunikaty UKMTO/IMO.
 
 - 2026-09-13: Poranny research dodał polski wymiar operacyjny rosyjskiej salwy: alerty RCB dla Lubelskiego i Podkarpackiego, syreny w sześciu powiatach Lubelszczyzny, czasowo wstrzymane odprawy oraz uderzenia dronów po ukraińskiej stronie bardzo blisko granicy. Przed podcastem lub pushem live koniecznie sprawdzić, czy alerty/odprawy nie zostały ponownie zaktualizowane oraz czy AP/UKMTO/IMO nie podały nowej informacji o sprawcy, ruchu statków lub skutkach cenowych Ormuzu.
 
