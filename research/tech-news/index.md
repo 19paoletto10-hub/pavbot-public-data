@@ -4,6 +4,14 @@ Last updated: 2026-09-14
 
 ## Current Understanding
 
+Run z 2026-09-14 dodaje wdrożeniowy dowód przejścia agentów do systemów
+produkcyjnych: Perplexity deklaruje użycie GPT-6 Astra do komunikacji, zmian w
+oprogramowaniu i monitorowania produkcji przy rzadszej kontroli człowieka.
+Anthropic równolegle rozdziela ogólnodostępny Fable 5.1 od ograniczonego
+trusted access dla Mythos 5.1 i obniża koszt pracy agentowej przez cache reads.
+NVIDIA chce połączyć compute z platformą Hugging Face; formalna deklaracja
+otwartości nie rozstrzyga jeszcze wpływu na neutralność ekosystemu.
+
 Run z 2026-09-14 łączy wczorajszy problem autoryzacji z nową warstwą platformową. OpenAI wprowadza Agents API, a dyskusja deweloperów skupia się na sandboxach oraz przenośności runtime'u. Microsoft opisuje ten sam kierunek językiem governance: tożsamość agenta, uprawnienia narzędzi i monitoring działań. Wniosek operacyjny jest prosty: model nie może być jedyną jednostką kontroli; potrzebne są uprawnienia i telemetria przypisane do każdego zadania.
 
 Anthropic rozszerza pole bezpieczeństwa AI poza cyber i bio, publikując ewaluacje targetingu, geolokalizacji i symulowanego sterowania dronem. Wyniki są ograniczone przez syntetyczne dane oraz symulacje, lecz pokazują rosnącą potrzebę ewaluacji danych lokalizacyjnych i narzędzi o fizycznym skutku. Równolegle opis OpenAI dotyczący storage'u dla ponad miliarda użytkowników wskazuje, że retencja, izolacja tenantów i niezawodność danych są strategicznym elementem agentowych produktów.
@@ -767,6 +775,8 @@ transparentność środowiskową AI.
   obserwować dystrybucję przez telco, OS vendorów i app stores.
 
 ## Recent Reports
+
+- [2026-09-14-1933](runs/2026-09-14-1933.md)
 
 - [2026-09-12](runs/2026-09-12.md)
 

@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-09-14",
+  "runTime": "19:33",
+  "status": "Material update",
+  "leadParagraphs": [
+    "Najważniejsza nowa informacja dnia to wdrożeniowy dowód przejścia od demonstracji agentów do pracy na systemach produkcyjnych: Perplexity deklaruje, że GPT-6 Astra może pisać komunikację, zmieniać oprogramowanie i monitorować produkcję przy rzadszej kontroli człowieka. W połączeniu z premierą Claude Fable 5.1 oraz konsolidacją Hugging Face przez NVIDIA wzmacnia to obraz rynku, w którym kluczowe stają się zaufanie, koszty, uprawnienia i dostęp do runtime’u.",
+    "• Perplexity opisuje użycie Astra w pełnych testach end-to-end i monitoringu produkcji.",
+    "• Anthropic rozdziela model o wysokich możliwościach od warstwy safeguardów i ograniczonego dostępu do Mythos 5.1.",
+    "• NVIDIA chce połączyć otwartą platformę modeli z własną infrastrukturą, deklarując brak wymogu używania wyłącznie jej compute.",
+    "• Największa niewiadoma pozostaje operacyjna: deklaracje dostawców nie zastępują niezależnych danych o błędach, kosztach i incydentach."
+  ],
+  "summaryBullets": [
+    "AI: Perplexity powierza Astrze systemy end-to-end",
+    "AI: Claude Fable 5.1 obniża koszt pracy agentowej",
+    "Infrastruktura: NVIDIA chce kontrolować warstwę otwartych modeli"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-09-14-1933-0-perplexity-powierza-astrze-systemy-end-to-end-794bd14f3e",
+      "section": "AI",
+      "title": "Perplexity powierza Astrze systemy end-to-end",
+      "standfirst": "Perplexity opisuje użycie GPT-6 Astra do komunikacji, zmian w oprogramowaniu i monitorowania produkcji.",
+      "whatHappened": "Klient OpenAI deklaruje, że Astra wykonuje pełne workflowy z rzadszą kontrolą człowieka.",
+      "whyItMatters": "Największa zmiana produktowa dotyczy poziomu zaufania i odpowiedzialności, nie tylko jakości odpowiedzi.",
+      "deeperAnalysis": [
+        "Przykład Perplexity pokazuje, że agent staje się warstwą operacyjną między człowiekiem a systemem produkcyjnym. Model ma generować testy, symulować odpowiedzi usług i sprawdzać zachowanie aplikacji od początku do końca, co zwiększa wartość automatyzacji, ale także zakres możliwych skutków błędu.",
+        "OpenAI opisuje ten przypadek jako dowód poprawy w computer use i pracy wieloetapowej. To nadal materiał referencyjny firmy, więc nie znamy wskaźników rollbacków, fałszywych alarmów ani kosztu nadzoru. W praktyce „rzadziej sprawdzać” powinno oznaczać lepszą telemetrykę i automatyczne bramki, a nie zniknięcie odpowiedzialności.",
+        "Na dalszy rozwój warto patrzeć przez trzy metryki: ile działań wymaga eskalacji, jak szybko system wykrywa regresję i czy każdą zmianę można przypisać konkretnej sesji oraz uprawnieniu. OpenAI"
+      ],
+      "contextPoints": [
+        "Co się stało: Perplexity rozszerza użycie Astra na systemy end-to-end.",
+        "Dlaczego ważne: Agent otrzymuje wpływ na komunikację, kod i monitoring produkcji.",
+        "Na co patrzeć dalej: Niezależne dane o błędach, rollbackach i kontroli dostępu."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI — Perplexity trusts GPT-6 Astra",
+          "url": "https://openai.com/index/perplexity-improving-accuracy-with-astra/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "Perplexity",
+        "agenci"
+      ]
+    },
+    {
+      "id": "tech-news-2026-09-14-1933-1-claude-fable-5-1-obniza-koszt-pracy-agentowej-5dfb2bc490",
+      "section": "AI",
+      "title": "Claude Fable 5.1 obniża koszt pracy agentowej",
+      "standfirst": "Anthropic łączy wzrost możliwości Fable 5.1 z obniżką kosztu cache reads i osobnym, ograniczonym dostępem do Mythos 5.1.",
+      "whatHappened": "Ten sam model bazowy dostał różne warstwy zabezpieczeń i ścieżki dostępu.",
+      "whyItMatters": "Rywalizacja modeli przesuwa się w stronę kosztu, polityki dostępu i kontroli ryzyka.",
+      "deeperAnalysis": [
+        "Anthropic rozdziela capability od deployment policy: Fable 5.1 jest dostępny szeroko z zabezpieczeniami, a Mythos 5.1 trafia do zweryfikowanych organizacji. To czytelniejszy model zarządzania niż traktowanie „jednego modelu” jako identycznego produktu w każdym środowisku.",
+        "Obniżka cache reads ma znaczenie szczególnie dla agentów, które wielokrotnie przenoszą długi kontekst i używają narzędzi. Cena tokena przestaje być wystarczającą metryką; trzeba liczyć całkowity koszt sesji, liczbę wywołań narzędzi i koszt kontroli safeguardów.",
+        "Benchmarki Anthropic pokazują poprawę, lecz firma sama zaznacza wpływ harnessu i interwencji zabezpieczeń. Dla kupujących ważniejsze od pojedynczego wyniku będzie porównanie kosztu osiągnięcia konkretnego rezultatu w ich własnych workflowach. Anthropic"
+      ],
+      "contextPoints": [
+        "Co się stało: Premiera Fable 5.1 i Mythos 5.1 rozdzieliła dostęp ogólny od trusted access.",
+        "Dlaczego ważne: Koszt i safeguards są częścią architektury produktu.",
+        "Na co patrzeć dalej: Rzeczywisty koszt sesji i niezależne testy agentowe."
+      ],
+      "sources": [
+        {
+          "title": "Anthropic — Claude Fable 5.1 and Mythos 5.1",
+          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Anthropic",
+        "Claude",
+        "koszty"
+      ]
+    },
+    {
+      "id": "tech-news-2026-09-14-1933-2-nvidia-chce-kontrolowac-warstwe-otwartych-modeli-d90e5947e3",
+      "section": "Infrastruktura",
+      "title": "NVIDIA chce kontrolować warstwę otwartych modeli",
+      "standfirst": "NVIDIA uzgodniła przejęcie Hugging Face za 12,93 mld USD, deklarując zachowanie otwartej platformy.",
+      "whatHappened": "Dostawca compute kupuje centralną platformę dystrybucji modeli, danych i aplikacji AI.",
+      "whyItMatters": "Integracja może przyspieszyć wdrożenia, ale zwiększa znaczenie neutralności i koncentracji infrastruktury.",
+      "deeperAnalysis": [
+        "Hugging Face jest jednocześnie katalogiem modeli, repozytorium, miejscem eksperymentów i kanałem dystrybucji. Połączenie z NVIDIA może skrócić drogę od modelu do zoptymalizowanego inference, szczególnie gdy rośnie znaczenie kosztu uruchomienia, a nie tylko jakości modelu.",
+        "NVIDIA deklaruje, że użytkownicy nadal wybiorą własne modele, frameworki, chmury i dostawców inference. To ważna obietnica, lecz jej wiarygodność będzie zależeć od praktyk cenowych, API, priorytetów optymalizacji i tego, czy konkurencyjny sprzęt pozostanie równie dobrze wspierany.",
+        "Dla rynku open source kluczowe będzie zachowanie przenośności artefaktów: wag, datasetów, benchmarków i narzędzi. Sama formalna otwartość platformy nie gwarantuje neutralności ekosystemu. NVIDIA"
+      ],
+      "contextPoints": [
+        "Co się stało: NVIDIA ogłosiła przejęcie Hugging Face.",
+        "Dlaczego ważne: Compute i dystrybucja modeli trafiają pod wspólną kontrolę strategiczną.",
+        "Na co patrzeć dalej: Warunki transakcji, neutralność API i wsparcie dla konkurencyjnego hardware’u."
+      ],
+      "sources": [
+        {
+          "title": "NVIDIA — NVIDIA to Acquire Hugging Face",
+          "url": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "NVIDIA",
+        "Hugging Face",
+        "open source"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Czy agent może pilnować produkcji?",
+      "rationale": "Perplexity pokazuje przejście do workflowów end-to-end",
+      "sourcesLabel": "OpenAI"
+    },
+    {
+      "priority": "High",
+      "title": "Tańszy agent, większa odpowiedzialność",
+      "rationale": "Koszt sesji i safeguardy stają się parametrem produktu",
+      "sourcesLabel": "Anthropic"
+    },
+    {
+      "priority": "High",
+      "title": "NVIDIA kupuje mapę otwartego AI",
+      "rationale": "Integracja compute z dystrybucją modeli zmienia układ sił",
+      "sourcesLabel": "NVIDIA"
+    },
+    {
+      "priority": "Medium",
+      "title": "Model to nie deployment policy",
+      "rationale": "Fable i Mythos pokazują różne poziomy dostępu do tej samej bazy",
+      "sourcesLabel": "Anthropic"
+    },
+    {
+      "priority": "Medium",
+      "title": "Rzadszy nadzór nie znaczy mniej kontroli",
+      "rationale": "Potrzebne są telemetryka, rollbacki i uprawnienia",
+      "sourcesLabel": "OpenAI, Anthropic"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "OpenAI",
+      "url": "https://openai.com/index/perplexity-improving-accuracy-with-astra/"
+    },
+    {
+      "title": "Anthropic",
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+    },
+    {
+      "title": "NVIDIA",
+      "url": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/"
+    },
+    {
+      "title": "OpenAI — GPT-6 Astra safety overview",
+      "url": "https://openai.com/index/safety-overview-gpt-6-astra/"
+    }
+  ]
+}

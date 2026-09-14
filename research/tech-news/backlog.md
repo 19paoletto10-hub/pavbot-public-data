@@ -519,6 +519,12 @@
 
 ## Done
 
+## Open
+
+| High | Verify production-agent claims | Perplexity reports Astra operating across communication, code and monitoring | Watch independent reliability, rollback and approval metrics | Open |
+| Medium | Track Hugging Face acquisition | NVIDIA promises an open, multi-provider platform after purchase | Watch transaction terms, API neutrality and non-NVIDIA hardware support | Open |
+| Medium | Compare agent session economics | Fable 5.1 changes cache-read economics for long contexts | Reproduce total-cost comparisons on representative workflows | Open |
+
 | Date | Item | Outcome |
 | --- | --- | --- |
 | 2026-06-18 | Add PDF brief output | Generated `pdfs/2026-06-18-tech-news.pdf` and updated the research automation prompt to create PDFs in future runs |
