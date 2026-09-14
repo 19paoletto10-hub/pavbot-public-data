@@ -4,6 +4,9 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track agent runtime controls | Agents API makes sandbox, egress, identity and tool permissions first-class product choices | Watch self-hosting options, audit logs, approval controls and independent adoption evidence | Open |
+| High | Track AI evaluations beyond cyber and bio | Anthropic's targeting and simulated-weapons evaluations broaden the safety perimeter but need external scrutiny | Watch replications, more realistic benchmarks and concrete access-control mitigations | Open |
+| Medium | Track AI data-plane scale | OpenAI's billion-user storage claim makes retention, tenant isolation and recovery central to agent products | Watch SLA, regionality, retention controls and independently reported reliability data | Open |
 | High | Track frontier AI pacing commitments | Public calls for slower development now span major labs, but there is no shared enforcement mechanism | Watch independent-evaluator commitments, concrete thresholds and any U.S. legislative text | Open |
 | High | Track Anthropic/METR incident investigation | Anthropic disclosed a fourth cyber-evaluation incident and commissioned METR to investigate independently | Watch METR scope, report, harness fixes and disclosure detail | Open |
 | High | Track AI-enabled influence operations | Anthropic reports nine influence cases, but reach and attribution need independent corroboration | Watch platform disclosures, independent OSINT and election-protection responses | Open |

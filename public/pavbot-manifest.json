@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-09-14T05:49:32.262170+00:00",
+  "generatedAt": "2026-09-14T06:41:04.542350+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -137,6 +137,36 @@
     }
   ],
   "artifacts": [
+    {
+      "id": "research/tech-news/runs/2026-09-14.md",
+      "type": "run",
+      "topic": "tech-news",
+      "title": "Raport technologiczny: agenci stają się platformą, a safety wychodzi poza cyber",
+      "path": "research/tech-news/runs/2026-09-14.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/runs/2026-09-14.md",
+      "sizeBytes": 11751,
+      "date": "2026-09-14"
+    },
+    {
+      "id": "research/tech-news/data/2026-09-14-research.json",
+      "type": "researchData",
+      "topic": "tech-news",
+      "title": "Research data",
+      "path": "research/tech-news/data/2026-09-14-research.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/data/2026-09-14-research.json",
+      "sizeBytes": 11782,
+      "date": "2026-09-14"
+    },
+    {
+      "id": "research/tech-news/pdfs/2026-09-14-tech-news.pdf",
+      "type": "pdf",
+      "topic": "tech-news",
+      "title": "2026-09-14-tech-news.pdf",
+      "path": "research/tech-news/pdfs/2026-09-14-tech-news.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/pdfs/2026-09-14-tech-news.pdf",
+      "sizeBytes": 81669,
+      "date": "2026-09-14"
+    },
     {
       "id": "research/puls-dnia-news/runs/2026-09-14-0723.md",
       "type": "run",
@@ -26583,7 +26613,7 @@
       "title": "Topic Index: tech-news",
       "path": "research/tech-news/index.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/index.md",
-      "sizeBytes": 93626
+      "sizeBytes": 94606
     },
     {
       "id": "research/tech-news/backlog.md",
@@ -26592,7 +26622,7 @@
       "title": "Topic Backlog: tech-news",
       "path": "research/tech-news/backlog.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/backlog.md",
-      "sizeBytes": 98741
+      "sizeBytes": 99484
     },
     {
       "id": "research/reddit-radar/index.md",

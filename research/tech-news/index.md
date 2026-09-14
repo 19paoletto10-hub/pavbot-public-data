@@ -1,8 +1,12 @@
 # Topic Index: tech-news
 
-Last updated: 2026-09-13
+Last updated: 2026-09-14
 
 ## Current Understanding
+
+Run z 2026-09-14 łączy wczorajszy problem autoryzacji z nową warstwą platformową. OpenAI wprowadza Agents API, a dyskusja deweloperów skupia się na sandboxach oraz przenośności runtime'u. Microsoft opisuje ten sam kierunek językiem governance: tożsamość agenta, uprawnienia narzędzi i monitoring działań. Wniosek operacyjny jest prosty: model nie może być jedyną jednostką kontroli; potrzebne są uprawnienia i telemetria przypisane do każdego zadania.
+
+Anthropic rozszerza pole bezpieczeństwa AI poza cyber i bio, publikując ewaluacje targetingu, geolokalizacji i symulowanego sterowania dronem. Wyniki są ograniczone przez syntetyczne dane oraz symulacje, lecz pokazują rosnącą potrzebę ewaluacji danych lokalizacyjnych i narzędzi o fizycznym skutku. Równolegle opis OpenAI dotyczący storage'u dla ponad miliarda użytkowników wskazuje, że retencja, izolacja tenantów i niezawodność danych są strategicznym elementem agentowych produktów.
 
 Wieczorny run z 2026-09-13 dodaje strategiczny i polityczny wymiar do porannego wątku kontroli agentów. Dario Amodei wezwał do wolniejszego tempa rozwoju frontier AI, Sam Altman i Elon Musk publicznie poparli potrzebę „pacing the frontier”, a temat wszedł do debaty Kongresu USA. To nadal deklaracje bez wspólnego harmonogramu, moratorium ani mechanizmu weryfikacji; warto śledzić, czy pojawią się niezależni obserwatorzy, mierzalne progi i konkretne projekty ustaw.
 
