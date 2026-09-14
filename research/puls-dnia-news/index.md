@@ -2,6 +2,12 @@
 
 ## Current State
 
+2026-09-14 09:07 CEST: Nowy przegląd potwierdził incydent rosyjskiego drona trafiającego w pociąg przy granicy Ukrainy z Polską, nasilenie walk w Jemenie oraz oficjalną ocenę czterech incydentów cyberbezpieczeństwa Anthropic. UODO potwierdza stosowanie art. 14 CRA od 11 września; ryzyko energetyczne pozostaje podwyższone.
+
+Źródła i rozdzielenie faktów od interpretacji: [raport](runs/2026-09-14-0907.md).
+
+## Current State
+
 2026-09-14 07:23 CEST: Poranny przegląd potwierdził materialny rozwój wątku bezpieczeństwa AI — apel Anthropic o spowolnienie prac i poparcie Sama Altmana — oraz reakcję rynku na zamknięcie saudyjskiego rurociągu. Polska pozostaje w monitoringu alertów pogodowych, infrastruktury i bezpieczeństwa informacyjnego.
 
 Źródła i rozdzielenie faktów od interpretacji: [raport](runs/2026-09-14-0723.md).

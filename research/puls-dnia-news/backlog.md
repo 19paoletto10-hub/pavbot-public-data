@@ -1,5 +1,12 @@
 # Puls Dnia News Backlog
 
+# 2026-09-14 09:07
+
+- Potwierdzić bilans i lokalizację incydentu kolejowego oraz reakcję Ukrainy, Polski i NATO.
+- Monitorować wznowienie pracy saudyjskiego rurociągu, Brent, diesel i żeglugę przez Morze Czerwone.
+- Sprawdzić bieżące alerty IMGW/RCB oraz ewentualne komunikaty służb.
+- Obserwować pierwsze praktyczne zastosowania obowiązków raportowania z art. 14 CRA.
+
 # 2026-09-14 07:23
 
 - Zweryfikować regiony i czas obowiązywania alertów RCB/IMGW.
