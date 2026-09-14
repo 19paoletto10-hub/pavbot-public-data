@@ -4,6 +4,8 @@ Last updated: 2026-09-14
 
 ## Update 2026-09-14
 
+Wieczorny przebieg dodaje materialną zmianę na Bliskim Wschodzie: Huti przejęli dwie wyspy Hanish przy Bab al-Mandab, a naprawa saudyjskiego rurociągu East-West może potrwać 3–5 tygodni. Polska pozostaje w podwyższonej gotowości po atakach przy granicy, bez potwierdzonego naruszenia RP. W Szwecji opozycja prowadzi wstępnie 176–173, lecz dalsze liczenie może zmienić arytmetykę.
+
 Poranny run 14 września przesuwa lead z samego weekendowego incydentu przy
 polskiej granicy na reakcję państwa: po rosyjskich atakach blisko RP premier
 zwołał naradę, a ministrowie komunikują pełną gotowość służb i wzmocniony tryb
