@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-09-14",
+  "runTime": "15:41",
+  "executiveSummary": "Runda jest materialna: pojawiła się nowa karta Link Group dla Python Developer AI, a znana rodzina CDQ została zaktualizowana do senioralnego tytułu z konkretnymi widełkami i zakresem MCP/RAG/Ollama. Board Just Join IT nadal pokazuje 131 ofert AI/ML dla Wrocławia; to sygnał powierzchni boardu, nie miara całego rynku. SQUAD Applied Scientist (LLM) pozostaje aktywnym punktem odniesienia.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "CDQ — Senior Software Developer (AI)",
+      "company": "Nieznana firma",
+      "location": "Rysia 1a, Wrocław; karta dopuszcza także pracę zdalną.",
+      "workMode": "Remote",
+      "compensation": "5 294,42–6 853,18 USD netto/mies. B2B albo 4 300,03–5 912,55 USD brutto/mies. UoP według karty.",
+      "seniority": "Senior",
+      "fitSummary": "AI-driven applications, vector search, MCP, RAG, Ollama oraz AI/ML; Java jest głównym językiem.",
+      "whyInteresting": "praktyczna rola backendowa na styku enterprise data, wyszukiwania semantycznego i lokalnego/toolingowego użycia modeli.",
+      "uncertainty": "karta boardowa; nie potwierdzono osobnej kanonicznej strony ani stabilności waluty.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/cdq-senior-software-developer-ai--wroclaw-java?promo=lal"
+      ],
+      "tags": [
+        "RAG"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "Link Group — Python Developer AI",
+      "company": "Nieznana firma",
+      "location": "Wrocław i wiele miast; model pracy nie jest jednoznacznie opisany.",
+      "workMode": "Wrocław",
+      "compensation": "29,66–37,75 USD netto/godz. B2B.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Python, AI, LLM, Claude, GitHub i budowa rozwiązań wspieranych przez modele.",
+      "whyInteresting": "świeży hands-on sygnał dla osób łączących Python development z integracją narzędzi LLM.",
+      "uncertainty": "oferta staffingowa; klient końcowy, pełny zakres developmentu i remote policy wymagają potwierdzenia.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/link-group-python-developer-ai-wroclaw-python"
+      ],
+      "tags": [
+        "LLM",
+        "Python"
+      ]
+    }
+  ],
+  "changes": [
+    "Dodano Link Group — Python Developer AI jako nową kartę w monitoringu.",
+    "CDQ przeszedł z wcześniej znanego Software Developer (AI) do karty Senior Software Developer (AI) z publicznymi widełkami; uznaję to za materialną zmianę tytułu/seniority i danych płacowych.",
+    "AURA i ITDS z poprzedniej rundy nie zostały ponownie potwierdzone; brak podstaw do oznaczenia ich jako zamknięte.",
+    "Nie powtórzono niezmienionych ofert Talentica, SQUAD ani innych znanych kart."
+  ],
+  "risks": [
+    "Nowe sygnały pochodzą z boardu, więc kanoniczność, klient końcowy i model pracy wymagają dalszego sprawdzenia.",
+    "Waluty na Just Join IT mogą być prezentowane w przeliczeniu; nie traktuję ich jako porównywalnych bez potwierdzenia.",
+    "Publiczna obecność karty nie gwarantuje faktycznego przyjmowania zgłoszeń."
+  ],
+  "recommendedActions": [
+    "Przy zainteresowaniu CDQ potwierdzić seniority, model pracy i walutę wynagrodzenia.",
+    "Przy zainteresowaniu Link Group ustalić klienta końcowego, udział pracy z kodem oraz politykę remote.",
+    "W następnej rundzie ponownie sprawdzić AURA i ITDS oraz poszukać kanonicznych stron."
+  ],
+  "checkedSources": [
+    {
+      "title": "Just Join IT – AI/ML Wrocław",
+      "url": "https://justjoin.it/job-offers/wroclaw/ai",
+      "status": "checked"
+    },
+    {
+      "title": "CDQ – Senior Software Developer (AI)",
+      "url": "https://justjoin.it/job-offer/cdq-senior-software-developer-ai--wroclaw-java?promo=lal",
+      "status": "checked"
+    },
+    {
+      "title": "Link Group – Python Developer AI",
+      "url": "https://justjoin.it/job-offer/link-group-python-developer-ai-wroclaw-python",
+      "status": "checked"
+    },
+    {
+      "title": "Pracuj.pl – machine learning engineer, Wrocław",
+      "url": "https://www.pracuj.pl/praca/machine%20learning%20engineer%3Bkw/wroclaw%3Bwp",
+      "status": "checked"
+    },
+    {
+      "title": "SQUAD – Applied Scientist (LLM)",
+      "url": "https://justjoin.it/job-offer/squad-applied-scientist-llm--wroclaw-ai",
+      "status": "checked"
+    }
+  ]
+}

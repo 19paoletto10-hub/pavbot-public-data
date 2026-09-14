@@ -1,10 +1,10 @@
 # Topic Index: llm-ai-jobs-wroclaw
 
-Last updated: 2026-09-13 17:40 CEST
+Last updated: 2026-09-14 15:41 CEST
 
 ## Current Understanding
 
-Runda `2026-09-13-1740`: AURA dodała senioralną rolę Senior Software Engineer, AI Intelligence Platform z Wrocławiem, agentami, retrieval, ewaluacją i LLM observability. ITDS pokazał nową kartę Senior AI Infrastructure Engineer – LLM & Retrieval Systems z Wrocławiem. Axabee po terminie 12 września i HIBERUS po terminie 11 września nie są już potwierdzone w bieżącym tailu i wymagają zamknięcia obserwacji.
+Runda `2026-09-14-1541`: dodano Link Group Python Developer AI, a CDQ zaktualizował znaną rodzinę do Senior Software Developer (AI) z widełkami oraz zakresem MCP/RAG/Ollama. AURA i ITDS z poprzedniej rundy nie zostały ponownie potwierdzone, ale nie ma jeszcze twardego sygnału zamknięcia.
 
 Runda `2026-09-10-1933`: jedna nowa oferta Connectis AI Enablement Engineer (Wrocław, hybryda około raz w tygodniu; MCP, CLI, ewaluacja LLM). Różnice waluty między listą a kartą nie są uznawane za zmianę płacy. HIBERUS wskazuje termin 11 września.
 

@@ -1,5 +1,11 @@
 # Topic Backlog: llm-ai-jobs-wroclaw
 
+## Follow-up 2026-09-14 15:41
+
+- CDQ Senior Software Developer (AI): potwierdzić zmianę seniority, walutę widełek i model pracy na stronie pracodawcy.
+- Link Group Python Developer AI: ustalić klienta końcowego, zakres LLM oraz remote policy.
+- AURA i ITDS: ponowić kontrolę statusu i poszukać kanonicznych stron.
+
 ## Active
 
 | Priority | Item | Reason | Next Step | Status |
