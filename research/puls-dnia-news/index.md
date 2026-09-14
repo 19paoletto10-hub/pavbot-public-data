@@ -2,6 +2,12 @@
 
 ## Current State
 
+2026-09-14 12:28 CEST: Slot nie przyniósł materialnej zmiany względem 09:07. Utrzymano 12 kart obserwacyjnych; incydent kolejowy, energia, Jemen, CRA, Anthropic i alerty pozostają w monitoringu.
+
+Źródła i ograniczenia: [raport](runs/2026-09-14-1228.md).
+
+## Current State
+
 2026-09-14 09:07 CEST: Nowy przegląd potwierdził incydent rosyjskiego drona trafiającego w pociąg przy granicy Ukrainy z Polską, nasilenie walk w Jemenie oraz oficjalną ocenę czterech incydentów cyberbezpieczeństwa Anthropic. UODO potwierdza stosowanie art. 14 CRA od 11 września; ryzyko energetyczne pozostaje podwyższone.
 
 Źródła i rozdzielenie faktów od interpretacji: [raport](runs/2026-09-14-0907.md).
