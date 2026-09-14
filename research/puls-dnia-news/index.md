@@ -2,6 +2,14 @@
 
 ## Current State
 
+2026-09-14 18:01 CEST: Slot nie przyniósł materialnej zmiany względem 15:00.
+Utrzymano 12 kart obserwacyjnych; bezpieczeństwo Polski, energia, Jemen, CRA,
+Anthropic i alerty pozostają w monitoringu.
+
+Źródła i ograniczenia: [raport](runs/2026-09-14-1801.md).
+
+## Current State
+
 2026-09-14 15:00 CEST: Slot nie przyniósł materialnej zmiany względem 12:28.
 Utrzymano 12 kart obserwacyjnych; bezpieczeństwo Polski, energia, Jemen, CRA,
 Anthropic i alerty pozostają w monitoringu.
