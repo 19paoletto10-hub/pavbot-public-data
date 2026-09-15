@@ -2,6 +2,16 @@
 
 ## Current State
 
+2026-09-15 15:02 CEST: Slot nie przyniósł materialnej zmiany względem 12:02.
+Utrzymano 12 kart w siedmiu sekcjach; bezpieczeństwo Polski, energia, Jemen,
+CRA, Anthropic i alerty pozostają w monitoringu. BBC i CNN były częściowo
+ograniczone przez robots.txt, a znaleziony komunikat RCB z 15 września dotyczył
+2025 r. i nie został uznany za bieżący fakt.
+
+Źródła i ograniczenia: [raport](runs/2026-09-15-1502.md).
+
+## Current State
+
 2026-09-15 12:02 CEST: Slot nie przyniósł materialnej zmiany względem 09:01.
 Utrzymano 12 kart obserwacyjnych w siedmiu sekcjach; bezpieczeństwo Polski,
 energia, Jemen, CRA, Anthropic i alerty pozostają w monitoringu.
