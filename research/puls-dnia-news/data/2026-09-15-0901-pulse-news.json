@@ -1,0 +1,392 @@
+{
+  "schemaVersion": 1,
+  "runDate": "2026-09-15",
+  "runTime": "09:01",
+  "status": "No material change",
+  "headline": "Brak materialnej zmiany w przeglądzie Puls Dnia",
+  "summary": "Utrzymano monitoring bezpieczeństwa Polski, energii, Jemenu, AI i alertów; nie znaleziono nowego wiarygodnego rozstrzygnięcia.",
+  "items": [
+    {
+      "id": "pol-security-border",
+      "section": "Bezpieczeństwo",
+      "title": "Incydent kolejowy przy granicy",
+      "lead": "Brak nowego potwierdzonego bilansu.",
+      "whatHappened": "Względem poprzedniego przeglądu 09:01 nie pojawiło się wiarygodne nowe rozstrzygnięcie dotyczące drona i pociągu.",
+      "keyFacts": [
+        "Brak nowego bilansu"
+      ],
+      "reactions": [
+        "Czekamy na komunikaty służb."
+      ],
+      "whyItMatters": "Wątek dotyczy bezpieczeństwa regionu.",
+      "context": "Poprzedni run opierał się na depeszy AP.",
+      "watchNext": [
+        "Reakcje Ukrainy, Polski i NATO."
+      ],
+      "sources": [
+        {
+          "title": "Source",
+          "url": "https://apnews.com/article/43e00d1e6f069230f4f2e58520349264"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Ukraina"
+      ],
+      "priority": "5"
+    },
+    {
+      "id": "pol-security-alert",
+      "section": "Polska",
+      "title": "Stopnie alarmowe bez zmiany",
+      "lead": "Obowiązujące alerty pozostają w mocy.",
+      "whatHappened": "Nie znaleziono nowego komunikatu zmieniającego krajowe stopnie alarmowe.",
+      "keyFacts": [
+        "BRAVO i BRAVO-CRP do 30 listopada"
+      ],
+      "reactions": [
+        "Brak nowej reakcji."
+      ],
+      "whyItMatters": "Wpływa na czujność instytucji.",
+      "context": "Status wynika z wcześniejszego komunikatu gov.pl.",
+      "watchNext": [
+        "MON, MSWiA i RCB."
+      ],
+      "sources": [
+        {
+          "title": "Source",
+          "url": "https://www.gov.pl/web/dolnoslaski-uw/stopnie-alarmowe-przedluzone-do-30-listopada-2026-r"
+        }
+      ],
+      "tags": [
+        "alert",
+        "bezpieczeństwo"
+      ],
+      "priority": "4"
+    },
+    {
+      "id": "pol-alerts",
+      "section": "Alerty",
+      "title": "Brak nowego komunikatu RCB",
+      "lead": "Lista RCB nie pokazuje nowej zmiany.",
+      "whatHappened": "W południowym sprawdzeniu nie znaleziono nowego ogólnokrajowego komunikatu.",
+      "keyFacts": [
+        "Monitoring regionalny trwa"
+      ],
+      "reactions": [
+        "Brak."
+      ],
+      "whyItMatters": "Alerty mogą być lokalne i dynamiczne.",
+      "context": "Strona RCB jest aktualizowana regionalnie.",
+      "watchNext": [
+        "IMGW i RCB."
+      ],
+      "sources": [
+        {
+          "title": "Source",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "RCB"
+      ],
+      "priority": "3"
+    },
+    {
+      "id": "pol-politics",
+      "section": "Polityka",
+      "title": "Brak nowego przełomu politycznego",
+      "lead": "Monitoring bez potwierdzonej zmiany.",
+      "whatHappened": "TVN24 i dostępne komunikaty nie przyniosły nowego rozstrzygnięcia.",
+      "keyFacts": [
+        "Brak potwierdzonego przełomu"
+      ],
+      "reactions": [
+        "Brak."
+      ],
+      "whyItMatters": "Unika się eskalowania niepotwierdzonych sygnałów.",
+      "context": "To karta obserwacyjna.",
+      "watchNext": [
+        "Sejm i oficjalne komunikaty."
+      ],
+      "sources": [
+        {
+          "title": "Source",
+          "url": "https://tvn24.pl/"
+        }
+      ],
+      "tags": [
+        "polityka"
+      ],
+      "priority": "2"
+    },
+    {
+      "id": "pol-economy-energy",
+      "section": "Gospodarka",
+      "title": "Rurociąg i ropa bez nowego rozstrzygnięcia",
+      "lead": "Ryzyko energetyczne pozostaje podwyższone.",
+      "whatHappened": "Nie potwierdzono wznowienia pracy saudyjskiego rurociągu ani nowej trwałej zmiany rynku.",
+      "keyFacts": [
+        "Brak potwierdzenia wznowienia"
+      ],
+      "reactions": [
+        "Rynek pozostaje wrażliwy."
+      ],
+      "whyItMatters": "Zakłócenia mogą wpływać na paliwa.",
+      "context": "Wątek był materialny w porannym runie.",
+      "watchNext": [
+        "Brent, diesel i żegluga."
+      ],
+      "sources": [
+        {
+          "title": "Source",
+          "url": "https://apnews.com/article/0b44bfb43960c6ae850567c0c4e5003a"
+        }
+      ],
+      "tags": [
+        "ropa",
+        "energia"
+      ],
+      "priority": "5"
+    },
+    {
+      "id": "world-yemen",
+      "section": "Świat",
+      "title": "Jemen: eskalacja nadal monitorowana",
+      "lead": "Brak nowego potwierdzonego bilansu.",
+      "whatHappened": "CNN Arabic podtrzymuje opis eskalacji Huti jako zagrożenia dla regionu i żeglugi.",
+      "keyFacts": [
+        "Rząd Jemenu mówi o szerokiej eskalacji"
+      ],
+      "reactions": [
+        "Władze apelują o ochronę żeglugi."
+      ],
+      "whyItMatters": "Bab al-Mandab jest ważnym szlakiem handlowym.",
+      "context": "Materiał nie zmienia ustaleń z 09:07.",
+      "watchNext": [
+        "Ataki i ruch statków."
+      ],
+      "sources": [
+        {
+          "title": "Source",
+          "url": "https://arabic.cnn.com/middle-east/article/2026/09/13/yemeni-government-houthi-escalation-widespread-and-dangerous-threatening-regional-security"
+        }
+      ],
+      "tags": [
+        "Jemen",
+        "Huti"
+      ],
+      "priority": "5"
+    },
+    {
+      "id": "world-ukraine",
+      "section": "Świat",
+      "title": "Ukraina: brak nowej zmiany w pakiecie",
+      "lead": "Wątek pozostaje w monitoringu.",
+      "whatHappened": "Nie znaleziono nowego potwierdzonego rozstrzygnięcia, które zmieniałoby poranny obraz sytuacji.",
+      "keyFacts": [
+        "Brak nowego oficjalnego bilansu"
+      ],
+      "reactions": [
+        "Brak nowej reakcji."
+      ],
+      "whyItMatters": "Sytuacja wpływa na bezpieczeństwo Polski.",
+      "context": "Część źródeł była niedostępna przez robots.txt.",
+      "watchNext": [
+        "Komunikaty władz Ukrainy i Polski."
+      ],
+      "sources": [
+        {
+          "title": "Source",
+          "url": "https://www.bbc.com/news"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "wojna"
+      ],
+      "priority": "4"
+    },
+    {
+      "id": "world-iran",
+      "section": "Świat",
+      "title": "Iran: brak pełnego potwierdzenia",
+      "lead": "Rozmowy i incydenty pozostają niejednoznaczne.",
+      "whatHappened": "Nie pojawiło się nowe wiarygodne potwierdzenie zmieniające wcześniejszy opis.",
+      "keyFacts": [
+        "Brak wspólnego komunikatu stron"
+      ],
+      "reactions": [
+        "Brak."
+      ],
+      "whyItMatters": "Region wpływa na energię i żeglugę.",
+      "context": "Karta ma charakter obserwacyjny.",
+      "watchNext": [
+        "Oficjalne komunikaty stron."
+      ],
+      "sources": [
+        {
+          "title": "Source",
+          "url": "https://www.cnn.com/"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "Bliski Wschód"
+      ],
+      "priority": "3"
+    },
+    {
+      "id": "world-shipping",
+      "section": "Gospodarka",
+      "title": "Żegluga pozostaje pod presją",
+      "lead": "Brak nowego potwierdzonego przełomu.",
+      "whatHappened": "Nie znaleziono informacji o trwałym powrocie normalnego ruchu na zagrożonych szlakach.",
+      "keyFacts": [
+        "Ryzyko pozostaje podwyższone"
+      ],
+      "reactions": [
+        "Brak nowej reakcji."
+      ],
+      "whyItMatters": "Zakłócenia mogą podnosić koszty dostaw.",
+      "context": "Wątek łączy się z Jemenem i energią.",
+      "watchNext": [
+        "Komunikaty armatorów."
+      ],
+      "sources": [
+        {
+          "title": "Source",
+          "url": "https://arabic.cnn.com/"
+        }
+      ],
+      "tags": [
+        "żegluga",
+        "handel"
+      ],
+      "priority": "4"
+    },
+    {
+      "id": "tech-cra",
+      "section": "Technologia",
+      "title": "CRA: obowiązki raportowania bez nowej zmiany",
+      "lead": "Art. 14 pozostaje stosowany.",
+      "whatHappened": "Nie znaleziono pierwszego nowego publicznego przypadku raportowania, który zmieniałby poranny obraz.",
+      "keyFacts": [
+        "UODO wskazuje na stosowanie art. 14"
+      ],
+      "reactions": [
+        "Brak nowego komunikatu."
+      ],
+      "whyItMatters": "Producenci muszą reagować na poważne podatności.",
+      "context": "Wymogi dotyczą produktów cyfrowych.",
+      "watchNext": [
+        "UODO i CSIRT."
+      ],
+      "sources": [
+        {
+          "title": "Source",
+          "url": "https://www.uodo.gov.pl/pl/138/4566"
+        }
+      ],
+      "tags": [
+        "CRA",
+        "cyberbezpieczeństwo"
+      ],
+      "priority": "4"
+    },
+    {
+      "id": "tech-anthropic",
+      "section": "Technologia",
+      "title": "Anthropic: ocena incydentów bez aktualizacji",
+      "lead": "Brak nowej oficjalnej oceny.",
+      "whatHappened": "Nie pojawiła się kolejna publikacja zmieniająca ocenę czterech incydentów cyberbezpieczeństwa.",
+      "keyFacts": [
+        "Poprzednia ocena pozostaje punktem odniesienia"
+      ],
+      "reactions": [
+        "Brak."
+      ],
+      "whyItMatters": "Incydenty pokazują potrzebę audytów modeli.",
+      "context": "To nie jest nowe prawo.",
+      "watchNext": [
+        "Anthropic i regulatorzy."
+      ],
+      "sources": [
+        {
+          "title": "Source",
+          "url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents"
+        }
+      ],
+      "tags": [
+        "AI",
+        "cyber"
+      ],
+      "priority": "4"
+    },
+    {
+      "id": "tech-ai-market",
+      "section": "Technologia",
+      "title": "AI i rynek: bez nowego sygnału",
+      "lead": "Brak nowej materialnej reakcji.",
+      "whatHappened": "Nie znaleziono nowej decyzji inwestycyjnej ani regulacyjnej, która zmieniałaby ostatni pakiet.",
+      "keyFacts": [
+        "Poprzednie ruchy rynku pozostają w tle"
+      ],
+      "reactions": [
+        "Brak."
+      ],
+      "whyItMatters": "Tempo rozwoju AI wpływa na wyceny i regulacje.",
+      "context": "Pojedyncze sygnały nie przesądzają trendu.",
+      "watchNext": [
+        "Oficjalne komunikaty firm i regulatorów."
+      ],
+      "sources": [
+        {
+          "title": "Source",
+          "url": "https://www.anthropic.com/"
+        }
+      ],
+      "tags": [
+        "AI",
+        "rynek"
+      ],
+      "priority": "3"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "BBC News",
+      "url": "https://www.bbc.com/news"
+    },
+    {
+      "title": "CNN",
+      "url": "https://www.cnn.com/"
+    },
+    {
+      "title": "CNN Arabic",
+      "url": "https://arabic.cnn.com/"
+    },
+    {
+      "title": "AP",
+      "url": "https://apnews.com/"
+    },
+    {
+      "title": "Anthropic",
+      "url": "https://www.anthropic.com/"
+    },
+    {
+      "title": "UODO",
+      "url": "https://www.uodo.gov.pl/"
+    },
+    {
+      "title": "RCB",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    }
+  ],
+  "topic": "puls-dnia-news"
+}
