@@ -1,0 +1,346 @@
+{
+  "schemaVersion": 1,
+  "topic": "aktualne-wydarzenia-mobile",
+  "runDate": "2026-09-15",
+  "runTime": "19:34",
+  "status": "Material update",
+  "headline": "Najważniejszą nową zmianą bezpieczeństwa jest zestrzelenie przez myśliwce NATO drona, który nocą wszedł w litewską przestrzeń powietrzną. Na południu utrzymuje się presja na Arabię Saudyjską: nowe ataki Hutich zbiegają się z wyłączeniem rurociągu East–West i obawami o dostawy ropy. Kijów nadal warunkuje ograniczenie uderzeń w rosyjską infrastrukturę wzajemnością i ochroną ukraińskiej energetyki. Polska pozostaje bez nowego krajowego przełomu w sprawdzonych kanałach.",
+  "leadParagraphs": [
+    "Najważniejszą nową zmianą bezpieczeństwa jest zestrzelenie przez myśliwce NATO drona, który nocą wszedł w litewską przestrzeń powietrzną. Na południu utrzymuje się presja na Arabię Saudyjską: nowe ataki Hutich zbiegają się z wyłączeniem rurociągu East–West i obawami o dostawy ropy. Kijów nadal warunkuje ograniczenie uderzeń w rosyjską infrastrukturę wzajemnością i ochroną ukraińskiej energetyki. Polska pozostaje bez nowego krajowego przełomu w sprawdzonych kanałach."
+  ],
+  "checkedSources": [
+    {
+      "title": "AP — incydent nad Litwą",
+      "url": "https://apnews.com/article/9671662649ebed2eca41879982f366ad"
+    },
+    {
+      "title": "Reuters — ropa i East–West",
+      "url": "https://au.marketscreener.com/news/oil-prices-rise-as-saudi-pipeline-outage-fresh-attacks-raise-supply-concerns-ce785bdcd08ef622"
+    },
+    {
+      "title": "Reuters — ataki Hutich",
+      "url": "https://ae.marketscreener.com/news/houthis-strike-saudi-targets-anew-as-talks-over-strait-of-hormuz-stall-ce785bdcd08ff721"
+    },
+    {
+      "title": "AP — warunki Ukrainy",
+      "url": "https://apnews.com/article/dbba56f09562f337aa731f7d4bbd1235"
+    },
+    {
+      "title": "RCB",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    },
+    {
+      "title": "KPRM",
+      "url": "https://www.gov.pl/web/premier/wydarzenia"
+    },
+    {
+      "title": "MON",
+      "url": "https://www.gov.pl/web/obrona-narodowa"
+    },
+    {
+      "title": "MSZ",
+      "url": "https://www.gov.pl/web/dyplomacja"
+    },
+    {
+      "title": "NIST",
+      "url": "https://www.nist.gov/artificial-intelligence/ai-standards"
+    },
+    {
+      "title": "Komisja Europejska",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/enforcement-ai-act"
+    }
+  ],
+  "sections": [
+    {
+      "id": "ogolne",
+      "title": "Ogólne",
+      "summary": "Wieczorny obraz łączy incydent na wschodniej flance z presją na energię i rozmowy pokojowe.",
+      "articles": [
+        {
+          "id": "ogolne-1-nato-reaguje-nad-litwa",
+          "section": "Ogólne",
+          "title": "NATO reaguje nad Litwą",
+          "lead": "Myśliwce NATO zestrzeliły drona po naruszeniu litewskiej przestrzeni powietrznej.",
+          "facts": [
+            "AP opisuje zestrzelenie drona i dodatkowy incydent na Bałtyku. AP",
+            "NATO wcześniej zapowiadało dalsze wsparcie Ukrainy po incydentach blisko terytorium sojuszu. AP"
+          ],
+          "analysis": "Reakcja była operacyjna i szybka, ale atrybucja pozostaje otwarta.",
+          "whyItMatters": "Incydent podnosi koszt błędnej kalkulacji na wschodniej flance.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/9671662649ebed2eca41879982f366ad"
+            }
+          ],
+          "tags": [
+            "Ogólne"
+          ],
+          "ttsText": "Myśliwce NATO zestrzeliły drona po naruszeniu litewskiej przestrzeni powietrznej. AP opisuje zestrzelenie drona i dodatkowy incydent na Bałtyku. AP NATO wcześniej zapowiadało dalsze wsparcie Ukrainy po incydentach blisko terytorium sojuszu. AP Reakcja była operacyjna i szybka, ale atrybucja pozostaje otwarta. Incydent podnosi koszt błędnej kalkulacji na wschodniej flance.",
+          "priority": "High"
+        },
+        {
+          "id": "ogolne-2-energia-i-zegluga-pod-presja",
+          "section": "Ogólne",
+          "title": "Energia i żegluga pod presją",
+          "lead": "Zakłócenia lądowe i morskie nakładają się na siebie.",
+          "facts": [
+            "East–West pozostaje wyłączony po atakach na saudyjską infrastrukturę. Reuters",
+            "Państwa Zatoki odłożyły rozmowy z Iranem. Reuters"
+          ],
+          "analysis": "Presja dotyczy jednocześnie przepustowości i dyplomacji.",
+          "whyItMatters": "Skutki mogą przejść na paliwa, fracht i ubezpieczenia.",
+          "sources": [
+            {
+              "title": "Reuters",
+              "url": "https://au.marketscreener.com/news/oil-prices-rise-as-saudi-pipeline-outage-fresh-attacks-raise-supply-concerns-ce785bdcd08ef622"
+            },
+            {
+              "title": "Reuters",
+              "url": "https://ae.marketscreener.com/news/houthis-strike-saudi-targets-anew-as-talks-over-strait-of-hormuz-stall-ce785bdcd08ff721"
+            }
+          ],
+          "tags": [
+            "Ogólne"
+          ],
+          "ttsText": "Zakłócenia lądowe i morskie nakładają się na siebie. East–West pozostaje wyłączony po atakach na saudyjską infrastrukturę. Reuters Państwa Zatoki odłożyły rozmowy z Iranem. Reuters Presja dotyczy jednocześnie przepustowości i dyplomacji. Skutki mogą przejść na paliwa, fracht i ubezpieczenia.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "polska",
+      "title": "Polska",
+      "summary": "Wieczorny przegląd polskich kanałów nie przyniósł nowej decyzji o wysokiej wadze publicznej.",
+      "articles": [
+        {
+          "id": "polska-1-co-sprawdzono-bez-przeomu-rcb",
+          "section": "Polska",
+          "title": "Co sprawdzono bez przełomu: RCB",
+          "lead": "Nie znaleziono nowego krajowego alertu do wykorzystania jako lead.",
+          "facts": [
+            "Sprawdzono bieżące komunikaty RCB. RCB",
+            "Wcześniejsze ostrzeżenia pozostają kontekstem, nie nową zmianą."
+          ],
+          "analysis": "Brak nowego komunikatu jest wynikiem weryfikacji, nie tezą o braku ryzyka.",
+          "whyItMatters": "Brief nie dopisuje krajowych faktów do zagranicznego incydentu.",
+          "sources": [
+            {
+              "title": "RCB",
+              "url": "https://www.gov.pl/web/rcb/komunikaty"
+            }
+          ],
+          "tags": [
+            "Polska"
+          ],
+          "ttsText": "Nie znaleziono nowego krajowego alertu do wykorzystania jako lead. Sprawdzono bieżące komunikaty RCB. RCB Wcześniejsze ostrzeżenia pozostają kontekstem, nie nową zmianą. Brak nowego komunikatu jest wynikiem weryfikacji, nie tezą o braku ryzyka. Brief nie dopisuje krajowych faktów do zagranicznego incydentu.",
+          "priority": "High"
+        },
+        {
+          "id": "polska-2-co-sprawdzono-bez-przeomu-kprm-mon-i-msz",
+          "section": "Polska",
+          "title": "Co sprawdzono bez przełomu: KPRM, MON i MSZ",
+          "lead": "Nie odnotowano nowego wykonawczego komunikatu o podobnej wadze.",
+          "facts": [
+            "Sprawdzono wydarzenia KPRM. KPRM",
+            "Sprawdzono publiczne kanały MON i MSZ. MON MSZ"
+          ],
+          "analysis": "Polski baseline bezpieczeństwa pozostaje bez nowego potwierdzonego przełomu.",
+          "whyItMatters": "Wschodnia flanka jest monitorowana także przez kanały sojusznicze.",
+          "sources": [
+            {
+              "title": "KPRM",
+              "url": "https://www.gov.pl/web/premier/wydarzenia"
+            },
+            {
+              "title": "MON",
+              "url": "https://www.gov.pl/web/obrona-narodowa"
+            },
+            {
+              "title": "MSZ",
+              "url": "https://www.gov.pl/web/dyplomacja"
+            }
+          ],
+          "tags": [
+            "Polska"
+          ],
+          "ttsText": "Nie odnotowano nowego wykonawczego komunikatu o podobnej wadze. Sprawdzono wydarzenia KPRM. KPRM Sprawdzono publiczne kanały MON i MSZ. MON MSZ Polski baseline bezpieczeństwa pozostaje bez nowego potwierdzonego przełomu. Wschodnia flanka jest monitorowana także przez kanały sojusznicze.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "polityka",
+      "title": "Polityka",
+      "summary": "Polityczne decyzje dnia dotyczą warunków deeskalacji oraz reakcji państw na ryzyko energii.",
+      "articles": [
+        {
+          "id": "polityka-1-kijow-zada-wzajemnosci",
+          "section": "Polityka",
+          "title": "Kijów żąda wzajemności",
+          "lead": "Ukraina może ograniczyć uderzenia, jeśli Rosja przestanie atakować infrastrukturę krytyczną.",
+          "facts": [
+            "Warunek przedstawił Wołodymyr Zełenski. AP",
+            "Publicznego, wiążącego porozumienia nadal nie ma. AP"
+          ],
+          "analysis": "Najtrudniejsza pozostaje weryfikacja i egzekwowanie.",
+          "whyItMatters": "Energetyka może stać się pierwszym testem rozmów.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/dbba56f09562f337aa731f7d4bbd1235"
+            }
+          ],
+          "tags": [
+            "Polityka"
+          ],
+          "ttsText": "Ukraina może ograniczyć uderzenia, jeśli Rosja przestanie atakować infrastrukturę krytyczną. Warunek przedstawił Wołodymyr Zełenski. AP Publicznego, wiążącego porozumienia nadal nie ma. AP Najtrudniejsza pozostaje weryfikacja i egzekwowanie. Energetyka może stać się pierwszym testem rozmów.",
+          "priority": "High"
+        },
+        {
+          "id": "polityka-2-zatoka-odkada-dialog",
+          "section": "Polityka",
+          "title": "Zatoka odkłada dialog",
+          "lead": "Rozmowy państw Zatoki z Iranem zostały przesunięte w czasie eskalacji.",
+          "facts": [
+            "Reuters łączy odłożenie rozmów z nowymi atakami Hutich. Reuters",
+            "Ropa zdrożała w reakcji na ryzyko podaży. Reuters"
+          ],
+          "analysis": "Okno dyplomatyczne kurczy się szybciej niż presja infrastrukturalna.",
+          "whyItMatters": "Decyzje regionalne mają globalny efekt gospodarczy.",
+          "sources": [
+            {
+              "title": "Reuters",
+              "url": "https://ae.marketscreener.com/news/houthis-strike-saudi-targets-anew-as-talks-over-strait-of-hormuz-stall-ce785bdcd08ff721"
+            },
+            {
+              "title": "Reuters",
+              "url": "https://au.marketscreener.com/news/oil-prices-rise-as-saudi-pipeline-outage-fresh-attacks-raise-supply-concerns-ce785bdcd08ef622"
+            }
+          ],
+          "tags": [
+            "Polityka"
+          ],
+          "ttsText": "Rozmowy państw Zatoki z Iranem zostały przesunięte w czasie eskalacji. Reuters łączy odłożenie rozmów z nowymi atakami Hutich. Reuters Ropa zdrożała w reakcji na ryzyko podaży. Reuters Okno dyplomatyczne kurczy się szybciej niż presja infrastrukturalna. Decyzje regionalne mają globalny efekt gospodarczy.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "sprawy-zagraniczne",
+      "title": "Sprawy zagraniczne",
+      "summary": "Największa dynamika wieczoru dotyczy wschodniej flanki NATO i Bliskiego Wschodu.",
+      "articles": [
+        {
+          "id": "sprawy-zagraniczne-1-incydent-na-wschodniej-flance",
+          "section": "Sprawy zagraniczne",
+          "title": "Incydent na wschodniej flance",
+          "lead": "Litwa stała się miejscem bezpośredniej reakcji obrony powietrznej NATO.",
+          "facts": [
+            "Dron został zestrzelony po wejściu w przestrzeń Litwy. AP",
+            "AP odnotowuje także napięcie na Bałtyku. AP"
+          ],
+          "analysis": "Wydarzenie pokazuje, że incydenty mogą szybko przejść z monitoringu do działania.",
+          "whyItMatters": "Zwiększa znaczenie procedur identyfikacji i proporcjonalnej reakcji.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/9671662649ebed2eca41879982f366ad"
+            }
+          ],
+          "tags": [
+            "Sprawy zagraniczne"
+          ],
+          "ttsText": "Litwa stała się miejscem bezpośredniej reakcji obrony powietrznej NATO. Dron został zestrzelony po wejściu w przestrzeń Litwy. AP AP odnotowuje także napięcie na Bałtyku. AP Wydarzenie pokazuje, że incydenty mogą szybko przejść z monitoringu do działania. Zwiększa znaczenie procedur identyfikacji i proporcjonalnej reakcji.",
+          "priority": "High"
+        },
+        {
+          "id": "sprawy-zagraniczne-2-huti-i-saudyjska-infrastruktura",
+          "section": "Sprawy zagraniczne",
+          "title": "Huti i saudyjska infrastruktura",
+          "lead": "Ataki zwiększają ryzyko dla eksportu ropy oraz żeglugi w regionie.",
+          "facts": [
+            "Reuters opisuje nową falę ataków na Arabię Saudyjską. Reuters",
+            "East–West pozostaje wyłączony. Reuters"
+          ],
+          "analysis": "Ryzyko obejmuje zarówno obiekty lądowe, jak i szlaki morskie.",
+          "whyItMatters": "Zakłócenia mogą podnieść koszty energii poza regionem.",
+          "sources": [
+            {
+              "title": "Reuters",
+              "url": "https://ae.marketscreener.com/news/houthis-strike-saudi-targets-anew-as-talks-over-strait-of-hormuz-stall-ce785bdcd08ff721"
+            },
+            {
+              "title": "Reuters",
+              "url": "https://au.marketscreener.com/news/oil-prices-rise-as-saudi-pipeline-outage-fresh-attacks-raise-supply-concerns-ce785bdcd08ef622"
+            }
+          ],
+          "tags": [
+            "Sprawy zagraniczne"
+          ],
+          "ttsText": "Ataki zwiększają ryzyko dla eksportu ropy oraz żeglugi w regionie. Reuters opisuje nową falę ataków na Arabię Saudyjską. Reuters East–West pozostaje wyłączony. Reuters Ryzyko obejmuje zarówno obiekty lądowe, jak i szlaki morskie. Zakłócenia mogą podnieść koszty energii poza regionem.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "technologia",
+      "title": "Technologia",
+      "summary": "Regulacja AI przechodzi od ogólnych zasad do dokumentacji i egzekwowania.",
+      "articles": [
+        {
+          "id": "technologia-1-nist-zamyka-okno-konsultacji",
+          "section": "Technologia",
+          "title": "NIST zamyka okno konsultacji",
+          "lead": "Projekt dokumentacji publicznych systemów AI czeka na uwagi do 16 września.",
+          "facts": [
+            "NIST wskazuje termin przyjmowania uwag. NIST",
+            "Dokument ma wspierać porównywalność informacji o systemach AI. NIST"
+          ],
+          "analysis": "To etap technicznego porządkowania dowodów, nie gotowy standard prawny.",
+          "whyItMatters": "Lepsza dokumentacja ułatwia audyt i odpowiedzialność.",
+          "sources": [
+            {
+              "title": "NIST",
+              "url": "https://www.nist.gov/artificial-intelligence/ai-standards"
+            }
+          ],
+          "tags": [
+            "Technologia"
+          ],
+          "ttsText": "Projekt dokumentacji publicznych systemów AI czeka na uwagi do 16 września. NIST wskazuje termin przyjmowania uwag. NIST Dokument ma wspierać porównywalność informacji o systemach AI. NIST To etap technicznego porządkowania dowodów, nie gotowy standard prawny. Lepsza dokumentacja ułatwia audyt i odpowiedzialność.",
+          "priority": "High"
+        },
+        {
+          "id": "technologia-2-ai-act-w-fazie-egzekwowania",
+          "section": "Technologia",
+          "title": "AI Act w fazie egzekwowania",
+          "lead": "Unijne organy mają już kompetencje do nadzoru nad stosowaniem AI Act.",
+          "facts": [
+            "Komisja opisuje role AI Office i organów krajowych. KE",
+            "Egzekwowanie wybranych przepisów działa od 2 sierpnia 2026 r. KE"
+          ],
+          "analysis": "Ciężar przesuwa się z deklaracji na dowody zgodności.",
+          "whyItMatters": "Obowiązki dotyczą produktów i usług używanych przez obywateli.",
+          "sources": [
+            {
+              "title": "KE",
+              "url": "https://digital-strategy.ec.europa.eu/en/policies/enforcement-ai-act"
+            }
+          ],
+          "tags": [
+            "Technologia"
+          ],
+          "ttsText": "Unijne organy mają już kompetencje do nadzoru nad stosowaniem AI Act. Komisja opisuje role AI Office i organów krajowych. KE Egzekwowanie wybranych przepisów działa od 2 sierpnia 2026 r. KE Ciężar przesuwa się z deklaracji na dowody zgodności. Obowiązki dotyczą produktów i usług używanych przez obywateli.",
+          "priority": "High"
+        }
+      ]
+    }
+  ],
+  "audioArtifacts": [
+    {
+      "variant": "female-piper",
+      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-09-15-1934/audio/female-piper/podcast.mp3"
+    }
+  ]
+}
