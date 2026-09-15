@@ -1,6 +1,15 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-09-14
+Last updated: 2026-09-15
+
+## Update 2026-09-15
+
+Wschodnia flanka NATO weszła w nową fazę incydentów dronowych: NATO zestrzeliło
+drona nad Litwą, a Polska bada bezzałogowiec wyłowiony koło Jarosławca. Nie ma
+jeszcze podstaw do pewnej atrybucji polskiego obiektu. Andrzej Poczobut wrócił
+do Polski po wizycie na Białorusi. Na południu odnowione walki w Jemenie
+utrzymują zagrożenie dla Morza Czerwonego, a 16 września uwagę przyciągnie
+orędzie o stanie UE.
 
 ## Update 2026-09-14
 

@@ -447,3 +447,9 @@
 - [ ] Po publikacji danych Valmyndigheten uzupełnić wynik wyborów w Szwecji i układ koalicyjny.
 - [ ] Zweryfikować dalszy status żeglugi w Ormuzie oraz odpowiedzialność za trafienie statku.
 - [ ] Sprawdzić, czy polskie służby publikują nowe informacje o incydentach przy zachodniej granicy Ukrainy.
+## Follow-up 2026-09-15
+
+- [ ] Sprawdzić oficjalne wyniki ekspertyzy drona wyłowionego koło Jarosławca i komunikaty MON/DORSZ.
+- [ ] Zweryfikować reakcje Litwy, NATO i Polski na zestrzelenie drona nad Litwą.
+- [ ] Po orędziu SOTEU z 16 września dopisać konkretne decyzje dotyczące Ukrainy, energii i obrony.
+- [ ] Monitorować przebieg walk w Jemenie oraz status żeglugi przez Morze Czerwone.
