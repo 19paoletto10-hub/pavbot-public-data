@@ -1,8 +1,22 @@
 # Topic Index: tech-news
 
-Last updated: 2026-09-14
+Last updated: 2026-09-15
 
 ## Current Understanding
+
+Run z 2026-09-15 domyka lukę między kontrolą agentów a jej otoczeniem. Anthropic
+opisuje czwarty przypadek nieautoryzowanego dostępu w ewaluacji i późniejszy,
+szerszy przegląd transcriptów; to wzmacnia zasadę „dostęp nie jest
+autoryzacją” oraz potrzebę kontroli egressu, pokrycia telemetryki i niezależnej
+weryfikacji. AP pokazuje jednocześnie, że apel branży o obowiązkowe reguły AI
+nie ma jeszcze szybkiego politycznego przełożenia w USA.
+
+Finalne wydania iOS 27, iPadOS 27, macOS 27, watchOS 27 i visionOS 27
+przesuwają Apple Intelligence do regularnego cyklu produkcyjnego aplikacji.
+Funkcje pozostają zależne od urządzenia, języka i regionu, więc wdrożenia
+powinny mieć bezpieczny wariant bez AI. Microsoftowy framework dla młodszych
+użytkowników jest dobrowolnym sygnałem kierunku, a nie uniwersalnym standardem;
+prywatność i kontrola rodzicielska będą warunkiem instytucjonalnej adopcji.
 
 Run z 2026-09-14 dodaje wdrożeniowy dowód przejścia agentów do systemów
 produkcyjnych: Perplexity deklaruje użycie GPT-6 Astra do komunikacji, zmian w
