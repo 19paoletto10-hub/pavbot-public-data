@@ -1,0 +1,8 @@
+{
+  "language": "pl",
+  "speed": 1.03,
+  "variants": [
+    {"id":"female-piper","engine":"piper","voice":"pl_PL-gosia-medium","status":"ok","output_file":"research/aktualne-wydarzenia-mobile/podcasts/2026-09-15-1018/audio/female-piper/podcast.mp3","render_json":"research/aktualne-wydarzenia-mobile/podcasts/2026-09-15-1018/audio/female-piper/render.json"},
+    {"id":"male-xtts","engine":"xtts","voice":"Andrew Chipper","status":"failed","output_file":null,"render_json":"research/aktualne-wydarzenia-mobile/podcasts/2026-09-15-1018/audio/male-xtts/render.json","error":"Kontrolowane przerwanie po długim CPU-only inference; nie powstał poprawny plik podcast.mp3."}
+  ]
+}
