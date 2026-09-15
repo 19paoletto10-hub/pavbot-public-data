@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-09-15",
+  "runTime": "19:33",
+  "status": "Material update",
+  "leadParagraphs": [
+    "Najważniejsza zmiana wieczornego obrazu nie polega na premierze kolejnego modelu, lecz na połączeniu dwóch ruchów: dostawcy udostępniają agentowe runtime’y jako produkty dla deweloperów, a równocześnie opisują nadużycia, w których AI automatyzuje znaczną część operacji cyber. To zwiększa znaczenie kontroli tożsamości, egressu, logów i odporności usług. Równolegle temat AI wychodzi poza laboratoria: AP opisuje presję na dostęp i nierówności, a rywalizacja USA–Chiny pozostaje strategicznym tłem.",
+    "• Anthropic opisuje agentowe orkiestracje cyber, persistent memory i równoległe workstreamy prowadzone przez aktorów o różnym poziomie zasobów.",
+    "• OpenAI udostępniło Agents API w public beta, a Data agent ma zamieniać dane firmowe w odpowiedzi, dashboardy i działania.",
+    "• OpenAI Status odnotował wczoraj problemy z Agents API, co pokazuje, że niezawodność zarządzanych sesji jest częścią produktu agentowego.",
+    "• AP sygnalizuje, że dostęp do korzyści AI i ich koszt społeczny stają się osobnym frontem debaty publicznej."
+  ],
+  "summaryBullets": [
+    "Cyber: Cyber z agentem jako orkiestratorem",
+    "AI: Agents API: runtime staje się produktem",
+    "Produkty: Data agent: analityka przechodzi w działanie"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-09-15-1933-0-cyber-z-agentem-jako-orkiestratorem-8effd9faec",
+      "section": "Cyber",
+      "title": "Cyber z agentem jako orkiestratorem",
+      "standfirst": "Anthropic opisuje kampanie, w których Claude wspierał nie tylko analizę, lecz także rekonesans, rozwój narzędzi, eksploatację i eksfiltrację.",
+      "whatHappened": "Raport Threat Intelligence pokazuje wieloagentowe workflowy prowadzone równolegle i utrzymujące kontekst kampanii.",
+      "whyItMatters": "Zmienia się ekonomika ataku — mniejszy zespół może wykonywać więcej pracy szybciej, więc obrona musi kontrolować proces, nie tylko pojedyncze komendy.",
+      "deeperAnalysis": [
+        "Raport opisuje operacje jako zestawy wyspecjalizowanych workstreamów: jeden prowadzi rekonesans, drugi rozwija narzędzia, kolejny utrzymuje infrastrukturę, a część pracy działa według harmonogramu bez ciągłej obecności człowieka. To nie jest nowa klasa podatności, lecz automatyzacja znanych etapów kill chainu.",
+        "Ważny jest również transfer zdolności. Anthropic twierdzi, że podobne szkielety agentowe są dostępne publicznie, więc różnica między grupą państwową a mniejszym aktorem coraz mniej zależy od samego dostępu do wiedzy. Największą zmianą jest tempo, równoległość i koszt obsługi wielu celów.",
+        "Dla zespołów obronnych wynika z tego potrzeba telemetrii obejmującej tożsamość agenta, pochodzenie instrukcji, egress i użycie sekretów. Samo blokowanie znanych narzędzi nie wystarczy, jeśli workflow może przebudować się po wykryciu."
+      ],
+      "contextPoints": [
+        "Co się stało: Anthropic opisał wieloetapowe, częściowo autonomiczne kampanie nadużywające Claude’a.",
+        "Dlaczego ważne: Agent zwiększa skalę i ciągłość pracy atakującego.",
+        "Na co patrzeć dalej: Niezależne potwierdzenia, standardy raportowania upliftu i zabezpieczenia runtime’ów."
+      ],
+      "sources": [
+        {
+          "title": "Anthropic — Threat Intelligence Report",
+          "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+        },
+        {
+          "title": "Anthropic — Attack Navigator",
+          "url": "https://www.anthropic.com/research/attack-navigator"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "cyber",
+        "agenci",
+        "Anthropic",
+        "automatyzacja"
+      ]
+    },
+    {
+      "id": "tech-news-2026-09-15-1933-1-agents-api-runtime-staje-sie-produktem-14a3b06258",
+      "section": "AI",
+      "title": "Agents API: runtime staje się produktem",
+      "standfirst": "OpenAI udostępniło public beta zarządzanego runtime’u do długotrwałych agentów z narzędziami, plikami i subagentami.",
+      "whatHappened": "Agents API przenosi harness używany przez Codex i ChatGPT Work do oferty dla deweloperów.",
+      "whyItMatters": "Rywalizacja przesuwa się z modelu na środowisko wykonawcze, pamięć, niezawodność i kontrolę kosztu.",
+      "deeperAnalysis": [
+        "OpenAI opisuje Agents API jako warstwę, która ma utrzymywać agentów przy pracy przez dłuższy czas, obsługiwać narzędzia oraz zapisywać stan pośredni. To ważna zmiana produktowa: deweloper kupuje nie tylko predykcję modelu, ale też operacyjny sposób uruchamiania zadania.",
+        "W praktyce zwiększa to wagę interfejsów uprawnień i obserwowalności. Jeśli runtime koordynuje subagentów, pliki i kod, system musi umieć wskazać, który komponent wykonał daną czynność, jaki miał zakres dostępu i jak zatrzymać zadanie bez utraty audytu.",
+        "Pierwszy incydent dostępności z 14 września jest małym, ale konkretnym przypomnieniem, że agentowa platforma potrzebuje SLO, retry i trybu degradacji. Deklaracje produktowe nie mówią jeszcze, jak te mechanizmy zachowują się w długich, kosztownych sesjach."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI otworzyło publiczną betę Agents API.",
+        "Dlaczego ważne: Runtime i kontrola sesji stają się samodzielną kategorią infrastruktury AI.",
+        "Na co patrzeć dalej: Limity, billing, izolacja, eksport logów i reakcja na awarie."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI — Introducing the Agents API",
+          "url": "https://openai.com/index/introducing-the-agents-api/"
+        },
+        {
+          "title": "OpenAI Status — Agents API",
+          "url": "https://status.openai.com/incidents/01M2H3J1D6Y7RHAP49GRWGJAY0"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "Agents API",
+        "deweloperzy",
+        "runtime"
+      ]
+    },
+    {
+      "id": "tech-news-2026-09-15-1933-2-data-agent-analityka-przechodzi-w-dzialanie-b01722b5df",
+      "section": "Produkty",
+      "title": "Data agent: analityka przechodzi w działanie",
+      "standfirst": "OpenAI przedstawia Data agent w ChatGPT Work jako interfejs do pytań, dashboardów i działań na danych organizacji.",
+      "whatHappened": "Firma rozszerza agentową powierzchnię z generowania odpowiedzi na analizę i wykonanie pracy.",
+      "whyItMatters": "Wartość produktu będzie zależeć od pochodzenia danych, kontroli dostępu i weryfikowalności wyników, nie tylko od jakości narracji.",
+      "deeperAnalysis": [
+        "Data agent wpisuje się w szerszy ruch „answer-to-action”: użytkownik ma przejść od pytania do interaktywnego wyniku i następnego działania w jednym środowisku. To skraca drogę do użyteczności, ale zwiększa koszt błędu, bo niepoprawna analiza może zostać szybko zamieniona w decyzję lub zmianę procesu.",
+        "Wdrożenie powinno rozdzielać dostęp do danych od prawa do działania. Agent może mieć możliwość odczytu i budowy dashboardu, ale niekoniecznie publikowania wyniku, zmiany rekordu czy uruchamiania workflowu. Potrzebne są też cytowania źródeł, wersjonowanie zapytań i możliwość odtworzenia obliczeń.",
+        "Na dziś OpenAI opisuje produkt i przykłady zastosowań, a nie niezależny benchmark jakości. Najciekawszym testem będzie porównanie błędów na danych niejednorodnych oraz tego, czy użytkownik widzi granicę między obserwacją a rekomendacją."
+      ],
+      "contextPoints": [
+        "Co się stało: ChatGPT Work dostał Data agent do pracy na danych.",
+        "Dlaczego ważne: Analityka staje się częścią agentowego workflowu.",
+        "Na co patrzeć dalej: Uprawnienia, lineage danych, eksport i audyt działań."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI — Now everyone can put data to work",
+          "url": "https://openai.com/index/put-data-to-work/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "OpenAI",
+        "dane",
+        "dashboardy",
+        "ChatGPT Work"
+      ]
+    },
+    {
+      "id": "tech-news-2026-09-15-1933-3-ai-jako-problem-dostepu-nie-tylko-produktywnosci-f51af5485b",
+      "section": "Regulacje",
+      "title": "AI jako problem dostępu, nie tylko produktywności",
+      "standfirst": "AP opisuje ostrzeżenie Fundacji Gatesów, że AI może pogłębiać nierówności, oraz deklarację 1 mld USD na rozszerzenie dostępu.",
+      "whatHappened": "Debata o AI obejmuje już dystrybucję korzyści, infrastrukturę i dostęp do narzędzi.",
+      "whyItMatters": "Koszt i dostępność mogą stać się równie ważnym ograniczeniem adopcji jak bezpieczeństwo i jakość modeli.",
+      "deeperAnalysis": [
+        "Wątek dostępu uzupełnia dominującą narrację o wyścigu modeli. Nawet przy spadającym koszcie inferencji użytkownicy i instytucje potrzebują urządzeń, łączności, kompetencji oraz lokalnych języków. Bez tych warstw produkty AI mogą zwiększać różnice między organizacjami, które mają dane i infrastrukturę, a tymi, które ich nie mają.",
+        "Deklaracja Fundacji Gatesów jest sygnałem kierunku, nie dowodem, że konkretne programy zmniejszą nierówności. Warto rozdzielać finansowanie dostępu od oceny efektu: liczy się nie tylko liczba udostępnionych narzędzi, ale też ich użyteczność, bezpieczeństwo i trwałość po zakończeniu projektu.",
+        "Dla europejskich odbiorców ważne będzie, czy podobna polityka obejmie małe firmy, szkoły i sektor publiczny, a nie tylko największe centra danych i korporacyjne workspace’y."
+      ],
+      "contextPoints": [
+        "Co się stało: AP opisała ostrzeżenie o nierównościach i zapowiedź finansowania dostępu.",
+        "Dlaczego ważne: Adopcja AI ma wymiar infrastrukturalny i społeczny.",
+        "Na co patrzeć dalej: Mierzalne programy, lokalizacja językowa i dostęp dla instytucji publicznych."
+      ],
+      "sources": [
+        {
+          "title": "Associated Press — Gates Foundation and AI access",
+          "url": "https://apnews.com/article/26ce25f9be20574a4fa04a5f983521ae"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "AI",
+        "nierówności",
+        "dostęp",
+        "polityka publiczna"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Agent jako orkiestrator cyberataku",
+      "rationale": "Automatyzacja obejmuje dziś całe odcinki kill chainu",
+      "sourcesLabel": "Anthropic"
+    },
+    {
+      "priority": "High",
+      "title": "Runtime jest nowym produktem AI",
+      "rationale": "Agents API sprzedaje środowisko wykonawcze, nie tylko model",
+      "sourcesLabel": "OpenAI"
+    },
+    {
+      "priority": "High",
+      "title": "Czy agent może działać bez pełnej kontroli?",
+      "rationale": "Awaria i długie sesje testują niezawodność nowej warstwy",
+      "sourcesLabel": "OpenAI Status, OpenAI"
+    },
+    {
+      "priority": "Medium",
+      "title": "Data agent: od pytania do działania",
+      "rationale": "Analityka zyskuje moc wykonawczą, ale rośnie koszt błędu",
+      "sourcesLabel": "OpenAI"
+    },
+    {
+      "priority": "Medium",
+      "title": "Kto skorzysta na AI?",
+      "rationale": "Debata o dostępie i nierównościach wychodzi poza laboratoria",
+      "sourcesLabel": "AP, Gates Foundation"
+    },
+    {
+      "priority": "Medium",
+      "title": "AI security nie kończy się na promptach",
+      "rationale": "Potrzebne są tożsamość, egress, logi i izolacja runtime’u",
+      "sourcesLabel": "Anthropic, OpenAI"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Anthropic",
+      "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+    },
+    {
+      "title": "OpenAI",
+      "url": "https://openai.com/index/introducing-the-agents-api/"
+    },
+    {
+      "title": "OpenAI",
+      "url": "https://openai.com/index/put-data-to-work/"
+    },
+    {
+      "title": "OpenAI Status",
+      "url": "https://status.openai.com/incidents/01M2H3J1D6Y7RHAP49GRWGJAY0"
+    },
+    {
+      "title": "AP",
+      "url": "https://apnews.com/article/26ce25f9be20574a4fa04a5f983521ae"
+    },
+    {
+      "title": "Anthropic — Attack Navigator",
+      "url": "https://www.anthropic.com/research/attack-navigator"
+    }
+  ]
+}

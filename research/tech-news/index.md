@@ -2,6 +2,15 @@
 
 Last updated: 2026-09-15
 
+## Wieczorny update 2026-09-15 19:33
+
+Anthropic pokazuje, że agentowe workflowy w cyber obejmują już równoległe
+workstreamy, pamięć kampanii i częściowo autonomiczną eksfiltrację; OpenAI
+równolegle udostępnia Agents API oraz Data agent. Wniosek pozostaje praktyczny:
+runtime, tożsamość, egress, logi i SLO trzeba traktować jako jedną warstwę
+produktu. Debata o dostępie do AI i nierównościach staje się drugim, społecznym
+testem adopcji obok bezpieczeństwa.
+
 ## Current Understanding
 
 Run z 2026-09-15 domyka lukę między kontrolą agentów a jej otoczeniem. Anthropic

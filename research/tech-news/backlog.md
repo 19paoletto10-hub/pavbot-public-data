@@ -540,3 +540,8 @@
 | High | Track agent incident reporting standards | Anthropic cases and the OpenAI wiki incident make disclosure and auditability concrete governance issues | Watch independent incident reports, company disclosure norms and congressional follow-up | Open |
 | High | Track AI-for-science quality metrics | Fields medalists challenge benchmark-first evaluation of AI mathematics | Watch Mathathon outcome, review practices and reproducibility of AI-generated proofs | Open |
 | Medium | Track AI infrastructure scale claims | Habitat shows storage and reliability are strategic surfaces for mass-market AI | Watch independent reliability data, costs and architecture follow-ups | Open |
+## 2026-09-15 evening
+
+- [ ] Track Agents API reliability, isolation and billing after public beta.
+- [ ] Compare Anthropic's agentic cyber claims with independent incident reporting.
+- [ ] Track measurable access programs following the Gates Foundation AI pledge.
