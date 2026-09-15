@@ -1,8 +1,10 @@
 # Topic Index: llm-ai-jobs-wroclaw
 
-Last updated: 2026-09-14 15:41 CEST
+Last updated: 2026-09-15 15:41 CEST
 
 ## Current Understanding
+
+Runda `2026-09-15-1541`: dodano DataArt Senior AI ML Engineer z OpenAI API/NLP oraz HIBERUS Squad Lead – AI Process Automation we Wrocławiu. EPAM, ITLT i SQUAD pozostają aktywne; Axabee nie wrócił na board po terminie 12 września.
 
 Runda `2026-09-14-1541`: dodano Link Group Python Developer AI, a CDQ zaktualizował znaną rodzinę do Senior Software Developer (AI) z widełkami oraz zakresem MCP/RAG/Ollama. AURA i ITDS z poprzedniej rundy nie zostały ponownie potwierdzone, ale nie ma jeszcze twardego sygnału zamknięcia.
 
@@ -129,6 +131,8 @@ konkretny platformowy, delivery lub toolingowy scope.
 
 ## Recent Reports
 
+- [2026-09-15 15:41 - Material update](runs/2026-09-15-1541.md): DataArt OpenAI API/NLP, HIBERUS AI Process Automation oraz kontrola EPAM/ITLT/SQUAD.
+
 - [2026-09-13 17:40 - Material update](runs/2026-09-13-1740.md): AURA i ITDS, plus kontrola Axabee/HIBERUS.
 
 - [2026-09-11 15:42 - Material update](runs/2026-09-11-1542.md): pięć nowych ról AI/LLM.
@@ -155,6 +159,8 @@ only when something meaningful changes.
 
 | Canonical key | Company | Title | Location / remote | First seen | Last seen | Status | Material changes | Source |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| https://justjoin.it/job-offer/dataart-senior-ai-ml-engineer-with-openai-api-nlp-enrichment-platform-wroclaw-ai | DataArt | Senior AI ML Engineer with OpenAI API, NLP Enrichment Platform | Wrocław / remote | 2026-09-15-1541 | 2026-09-15-1541 | Open | Nowa karta; OpenAI API, Python, NLP, semantic enrichment i produkcyjne pipeline’y danych; publiczne widełki 5 790,92–6 949,11 EUR netto B2B albo 4 632,74–5 790,92 EUR brutto UoP. | [Just Join IT](https://justjoin.it/job-offer/dataart-senior-ai-ml-engineer-with-openai-api-nlp-enrichment-platform-wroclaw-ai) |
+| https://justjoin.it/job-offer/hiberus-poland-squad-lead---ai-process-automation-wroclaw-ai | HIBERUS Poland | Squad Lead – AI Process Automation | Wrocław / remote | 2026-09-15-1541 | 2026-09-15-1541 | Open | Nowa karta; AI Agents, GenAI, prompt engineering, API, BPM, UiPath i prowadzenie squadu; brak publicznych widełek. | [Just Join IT](https://justjoin.it/job-offer/hiberus-poland-squad-lead---ai-process-automation-wroclaw-ai) |
 | https://justjoin.it/job-offer/aura-senior-software-engineer-ai-intelligence-platform-wroclaw-ai | AURA | Senior Software Engineer, AI Intelligence Platform | Wrocław + inne miasta / remote policy niepotwierdzona | 2026-09-13-1740 | 2026-09-13-1740 | Open | Nowa karta; produkcyjne AI/LLM, agenci, retrieval, ewaluacja, observability i AWS/IaC; termin 29 Sep. | [Just Join IT](https://justjoin.it/job-offer/aura-senior-software-engineer-ai-intelligence-platform-wroclaw-ai) |
 | https://justjoin.it/job-offer/itds-senior-ai-infrastructure-engineer---llm-retrieval-systems-wroclaw-devops | ITDS | Senior AI Infrastructure Engineer – LLM & Retrieval Systems | Wrocław / model pracy niepotwierdzony | 2026-09-13-1740 | 2026-09-13-1740 | Open | Nowa karta; infrastruktura AI, LLM, retrieval i systemy produkcyjne; termin 4 Oct. | [Just Join IT](https://justjoin.it/job-offer/itds-senior-ai-infrastructure-engineer---llm-retrieval-systems-wroclaw-devops) |
 | https://justjoin.it/job-offer/axabee-ai-engineer-with-python-wroclaw-python | Axabee | AI Engineer with Python | Wrocław / hybrid or remote | 2026-09-11-1542 | 2026-09-11-1542 | Open | New card; LLM, LangChain, LangGraph, Google ADK and agentic systems; deadline 12 Sep. | [Just Join IT](https://justjoin.it/job-offer/axabee-ai-engineer-with-python-wroclaw-python) |

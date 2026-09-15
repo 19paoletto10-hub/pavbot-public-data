@@ -5,6 +5,7 @@
 - CDQ Senior Software Developer (AI): potwierdzić zmianę seniority, walutę widełek i model pracy na stronie pracodawcy.
 - Link Group Python Developer AI: ustalić klienta końcowego, zakres LLM oraz remote policy.
 - AURA i ITDS: ponowić kontrolę statusu i poszukać kanonicznych stron.
+- 2026-09-15: DataArt Senior AI ML Engineer i HIBERUS Squad Lead wymagają weryfikacji kanonicznych stron, remote policy i stabilności widełek; Axabee nie wrócił po terminie 12 września.
 
 ## Active
 
