@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-09-15T07:01:49.693129+00:00",
+  "generatedAt": "2026-09-15T07:05:08.225925+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -155,6 +155,66 @@
       "path": "research/tech-news/data/2026-09-15-research.json",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/data/2026-09-15-research.json",
       "sizeBytes": 14366,
+      "date": "2026-09-15"
+    },
+    {
+      "id": "research/tech-news/podcasts/2026-09-15/sources.md",
+      "type": "podcastSources",
+      "topic": "tech-news",
+      "title": "Źródła — 15 września 2026",
+      "path": "research/tech-news/podcasts/2026-09-15/sources.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-09-15/sources.md",
+      "sizeBytes": 2103,
+      "date": "2026-09-15"
+    },
+    {
+      "id": "research/tech-news/podcasts/2026-09-15/script.md",
+      "type": "podcastScript",
+      "topic": "tech-news",
+      "title": "Pavbot Tech — 15 września 2026",
+      "path": "research/tech-news/podcasts/2026-09-15/script.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-09-15/script.md",
+      "sizeBytes": 9695,
+      "date": "2026-09-15"
+    },
+    {
+      "id": "research/tech-news/podcasts/2026-09-15/render.json",
+      "type": "podcastRender",
+      "topic": "tech-news",
+      "title": "render.json",
+      "path": "research/tech-news/podcasts/2026-09-15/render.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-09-15/render.json",
+      "sizeBytes": 282,
+      "date": "2026-09-15"
+    },
+    {
+      "id": "research/tech-news/podcasts/2026-09-15/draft.md",
+      "type": "podcastDraft",
+      "topic": "tech-news",
+      "title": "Pavbot Tech — 15 września 2026",
+      "path": "research/tech-news/podcasts/2026-09-15/draft.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-09-15/draft.md",
+      "sizeBytes": 1206,
+      "date": "2026-09-15"
+    },
+    {
+      "id": "research/tech-news/podcasts/2026-09-15/brief.pdf",
+      "type": "podcastBriefPdf",
+      "topic": "tech-news",
+      "title": "Podcast brief PDF",
+      "path": "research/tech-news/podcasts/2026-09-15/brief.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-09-15/brief.pdf",
+      "sizeBytes": 70974,
+      "date": "2026-09-15"
+    },
+    {
+      "id": "research/tech-news/podcasts/2026-09-15/podcast.mp3",
+      "type": "podcastAudio",
+      "topic": "tech-news",
+      "title": "Podcast audio",
+      "path": "research/tech-news/podcasts/2026-09-15/podcast.mp3",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-09-15/podcast.mp3",
+      "sizeBytes": 3820291,
       "date": "2026-09-15"
     },
     {
