@@ -2,6 +2,16 @@
 
 Last updated: 2026-09-16
 
+## Update 2026-09-16 wieczór
+
+Wieczorny run wzmacnia polski wątek bezpieczeństwa: prokuratura wstępnie
+zidentyfikowała dron z Rusinowa jako rosyjski Gerbera 2 i potwierdziła głowicę
+bojową z zapalnikiem, zneutralizowaną na miejscu. Nie rozstrzyga to jeszcze
+trasy lotu ani odpowiedzialności. Światowo Rosja uderzyła w autobus i pociąg w
+Ukrainie, USA przygotowują głosowanie nad sankcjami, a UE konkretyzuje odpowiedź
+na drony i sabotaż. W Polsce doszedł też materialny wątek 230 mln dolarów
+zaliczki Orlen Trading Switzerland na niedostarczoną ropę.
+
 ## Update 2026-09-16
 
 Poranny run 16 września łączy polski alarm po rosyjskim ataku na Ukrainę z

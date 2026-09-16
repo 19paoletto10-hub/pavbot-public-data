@@ -457,3 +457,8 @@
 - [ ] Zweryfikować reakcje Litwy, NATO i Polski na zestrzelenie drona nad Litwą.
 - [ ] Po orędziu SOTEU z 16 września dopisać konkretne decyzje dotyczące Ukrainy, energii i obrony.
 - [ ] Monitorować przebieg walk w Jemenie oraz status żeglugi przez Morze Czerwone.
+# Follow-up 2026-09-16 wieczór
+
+- [ ] Sprawdzić końcowe ustalenia prokuratury dotyczące trasy i pochodzenia drona z Rusinowa.
+- [ ] Zweryfikować wynik głosowania Izby Reprezentantów USA nad sankcjami wobec Rosji.
+- [ ] Śledzić stanowisko Orlenu i dokumenty postępowań w sprawie transakcji OTS.
