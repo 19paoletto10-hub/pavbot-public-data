@@ -1,5 +1,12 @@
 # Puls Dnia News Backlog
 
+# 2026-09-16 06:04
+
+- Potwierdzić pełny bilans i kwalifikację ataku przy granicy oraz reakcję NATO.
+- Sprawdzić końcowe ustalenia dotyczące drona z Rusinowa.
+- Monitorować naprawę rurociągu East–West, Brent, diesel i żeglugę przez Morze Czerwone.
+- Obserwować pierwsze zgłoszenia i wytyczne CRA SRP/CSIRT po 11 września.
+
 # 2026-09-15 21:18
 
 - Potwierdzić bilans i lokalizację incydentu kolejowego oraz reakcję Ukrainy, Polski i NATO.
