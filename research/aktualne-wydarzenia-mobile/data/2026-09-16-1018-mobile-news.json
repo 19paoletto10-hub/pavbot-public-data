@@ -1,0 +1,314 @@
+{
+  "schemaVersion": 1,
+  "topic": "aktualne-wydarzenia-mobile",
+  "runDate": "2026-09-16",
+  "runTime": "10:18",
+  "status": "Material update",
+  "headline": "Poranny alert RCB po nocnym ataku powietrznym na Ukrainę objął województwa lubelskie i podkarpackie, ale komunikat stwierdza brak zagrożenia na terenie Polski (RCB/PAP). W Europie Komisja sygnalizuje potrzebę silniejszego mechanizmu reagowania na incydenty dronowe, sabotaż i cyberataki (AP). W tle pozostają wczorajsze: zestrzelenie drona nad Litwą oraz presja na saudyjski eksport ropy.",
+  "leadParagraphs": [
+    "Poranny alert RCB po nocnym ataku powietrznym na Ukrainę objął województwa lubelskie i podkarpackie, ale komunikat stwierdza brak zagrożenia na terenie Polski (RCB/PAP). W Europie Komisja sygnalizuje potrzebę silniejszego mechanizmu reagowania na incydenty dronowe, sabotaż i cyberataki (AP). W tle pozostają wczorajsze: zestrzelenie drona nad Litwą oraz presja na saudyjski eksport ropy."
+  ],
+  "checkedSources": [
+    {
+      "title": "RCB/PAP",
+      "url": "https://pap-mediaroom.pl/polityka-i-spoleczenstwo/rcb-zakonczyl-sie-atak-powietrzny-na-ukraine-brak-zagrozenia-na-terenie"
+    },
+    {
+      "title": "AP — mechanizm UE",
+      "url": "https://apnews.com/article/4ce4fef2ba8e3866e436655075afc6d3"
+    },
+    {
+      "title": "AP — Litwa",
+      "url": "https://apnews.com/article/9671662649ebed2eca41879982f366ad"
+    },
+    {
+      "title": "AP — East–West",
+      "url": "https://apnews.com/article/8c18d82c109a8ea91347ce53c0096c53"
+    },
+    {
+      "title": "NIST",
+      "url": "https://www.nist.gov/artificial-intelligence/ai-standards"
+    },
+    {
+      "title": "Komisja Europejska",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/enforcement-ai-act"
+    }
+  ],
+  "sections": [
+    {
+      "id": "ogolne",
+      "title": "Ogólne",
+      "summary": "Poranek łączy ostrożność przy granicy z europejską debatą o odporności.",
+      "articles": [
+        {
+          "id": "ogolne-1-alert-po-ataku-na-ukraine",
+          "section": "Ogólne",
+          "title": "Alert po ataku na Ukrainę",
+          "lead": "RCB wysłało alert, a następnie potwierdziło brak zagrożenia w Polsce.",
+          "facts": [
+            "Komunikat obejmował Lubelskie i Podkarpackie (RCB/PAP).",
+            "Alert dotyczył zakończonego ataku, nie potwierdzonego incydentu w Polsce."
+          ],
+          "analysis": "To informacja ochronna i proceduralna.",
+          "whyItMatters": "Pokazuje działanie systemu ostrzegania przy zdarzeniach za wschodnią granicą.",
+          "sources": [
+            {
+              "title": "RCB/PAP",
+              "url": "https://pap-mediaroom.pl/polityka-i-spoleczenstwo/rcb-zakonczyl-sie-atak-powietrzny-na-ukraine-brak-zagrozenia-na-terenie"
+            }
+          ],
+          "tags": [
+            "Ogólne"
+          ],
+          "ttsText": "RCB wysłało alert, a następnie potwierdziło brak zagrożenia w Polsce. Komunikat obejmował Lubelskie i Podkarpackie (RCB/PAP). Alert dotyczył zakończonego ataku, nie potwierdzonego incydentu w Polsce. To informacja ochronna i proceduralna. Pokazuje działanie systemu ostrzegania przy zdarzeniach za wschodnią granicą.",
+          "priority": "High"
+        },
+        {
+          "id": "ogolne-2-europejska-odpowiedz-na-hybryde",
+          "section": "Ogólne",
+          "title": "Europejska odpowiedź na hybrydę",
+          "lead": "Komisja chce lepiej koordynować reakcję na drony, sabotaż i cyberataki.",
+          "facts": [
+            "Von der Leyen wskazała na potrzebę mechanizmu w stylu NATO (AP).",
+            "Wypowiedź nie ustanawia jeszcze nowej instytucji."
+          ],
+          "analysis": "Presja na wspólne narzędzia rośnie po kolejnych incydentach.",
+          "whyItMatters": "Polska należy do państw najbardziej zainteresowanych szybką wymianą danych.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/4ce4fef2ba8e3866e436655075afc6d3"
+            }
+          ],
+          "tags": [
+            "Ogólne"
+          ],
+          "ttsText": "Komisja chce lepiej koordynować reakcję na drony, sabotaż i cyberataki. Von der Leyen wskazała na potrzebę mechanizmu w stylu NATO (AP). Wypowiedź nie ustanawia jeszcze nowej instytucji. Presja na wspólne narzędzia rośnie po kolejnych incydentach. Polska należy do państw najbardziej zainteresowanych szybką wymianą danych.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "polska",
+      "title": "Polska",
+      "summary": "Krajowy obraz dnia jest zdominowany przez reakcję ostrzegawczą, bez nowej decyzji rządu.",
+      "articles": [
+        {
+          "id": "polska-1-rcb-zakonczony-atak-brak-zagrozenia",
+          "section": "Polska",
+          "title": "RCB: zakończony atak, brak zagrożenia",
+          "lead": "Służby zamknęły alert po nocnych wydarzeniach na Ukrainie.",
+          "facts": [
+            "RCB opublikowało komunikat 16 września o 7:43 (RCB/PAP).",
+            "Sprawdzony komunikat nie zgłasza szkód w Polsce."
+          ],
+          "analysis": "Najważniejsza jest granica między czujnością a potwierdzonym zagrożeniem.",
+          "whyItMatters": "Ogranicza ryzyko dezinformacji i niepotrzebnej paniki.",
+          "sources": [
+            {
+              "title": "RCB/PAP",
+              "url": "https://pap-mediaroom.pl/polityka-i-spoleczenstwo/rcb-zakonczyl-sie-atak-powietrzny-na-ukraine-brak-zagrozenia-na-terenie"
+            }
+          ],
+          "tags": [
+            "Polska"
+          ],
+          "ttsText": "Służby zamknęły alert po nocnych wydarzeniach na Ukrainie. RCB opublikowało komunikat 16 września o 7:43 (RCB/PAP). Sprawdzony komunikat nie zgłasza szkód w Polsce. Najważniejsza jest granica między czujnością a potwierdzonym zagrożeniem. Ogranicza ryzyko dezinformacji i niepotrzebnej paniki.",
+          "priority": "High"
+        },
+        {
+          "id": "polska-2-co-sprawdzono-bez-przeomu-kprm-i-mon",
+          "section": "Polska",
+          "title": "Co sprawdzono bez przełomu: KPRM i MON",
+          "lead": "Nie znaleziono nowego krajowego komunikatu o podobnej wadze.",
+          "facts": [
+            "Sprawdzono KPRM i MON.",
+            "Bieżący konkret pozostaje w komunikacie RCB."
+          ],
+          "analysis": "Brak nowego komunikatu jest wynikiem przeglądu.",
+          "whyItMatters": "Brief zachowuje proporcje między faktem a kontekstem.",
+          "sources": [
+            {
+              "title": "KPRM",
+              "url": "https://www.gov.pl/web/premier/wydarzenia"
+            },
+            {
+              "title": "MON",
+              "url": "https://www.gov.pl/web/obrona-narodowa"
+            }
+          ],
+          "tags": [
+            "Polska"
+          ],
+          "ttsText": "Nie znaleziono nowego krajowego komunikatu o podobnej wadze. Sprawdzono KPRM i MON. Bieżący konkret pozostaje w komunikacie RCB. Brak nowego komunikatu jest wynikiem przeglądu. Brief zachowuje proporcje między faktem a kontekstem.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "polityka",
+      "title": "Polityka",
+      "summary": "Dzisiejsza polityka bezpieczeństwa przesuwa się ku odporności infrastrukturalnej i koordynacji.",
+      "articles": [
+        {
+          "id": "polityka-1-mechanizm-bezpieczenstwa-ue",
+          "section": "Polityka",
+          "title": "Mechanizm bezpieczeństwa UE",
+          "lead": "Bruksela rozważa wspólną odpowiedź na zagrożenia hybrydowe.",
+          "facts": [
+            "Komisja wskazała drony, sabotaż i cyberataki jako wspólne wyzwania (AP).",
+            "Szczegóły propozycji nie są jeszcze znane."
+          ],
+          "analysis": "To etap budowania agendy, nie finalnej polityki.",
+          "whyItMatters": "Decyzje UE mogą wpłynąć na ochronę granic i infrastruktury.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/4ce4fef2ba8e3866e436655075afc6d3"
+            }
+          ],
+          "tags": [
+            "Polityka"
+          ],
+          "ttsText": "Bruksela rozważa wspólną odpowiedź na zagrożenia hybrydowe. Komisja wskazała drony, sabotaż i cyberataki jako wspólne wyzwania (AP). Szczegóły propozycji nie są jeszcze znane. To etap budowania agendy, nie finalnej polityki. Decyzje UE mogą wpłynąć na ochronę granic i infrastruktury.",
+          "priority": "High"
+        },
+        {
+          "id": "polityka-2-nist-konczy-konsultacje-ai",
+          "section": "Polityka",
+          "title": "NIST kończy konsultacje AI",
+          "lead": "Amerykański urząd zamyka dziś etap uwag do projektu dokumentacji AI.",
+          "facts": [
+            "Termin konsultacji to 16 września 2026 (NIST).",
+            "Projekt dotyczy systemów publicznie dostępnych."
+          ],
+          "analysis": "Standardy dokumentacyjne mają wspierać rozliczalność.",
+          "whyItMatters": "Wymogi dowodowe będą istotne dla dostawców i użytkowników.",
+          "sources": [
+            {
+              "title": "NIST",
+              "url": "https://www.nist.gov/artificial-intelligence/ai-standards"
+            }
+          ],
+          "tags": [
+            "Polityka"
+          ],
+          "ttsText": "Amerykański urząd zamyka dziś etap uwag do projektu dokumentacji AI. Termin konsultacji to 16 września 2026 (NIST). Projekt dotyczy systemów publicznie dostępnych. Standardy dokumentacyjne mają wspierać rozliczalność. Wymogi dowodowe będą istotne dla dostawców i użytkowników.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "sprawy-zagraniczne",
+      "title": "Sprawy zagraniczne",
+      "summary": "Największe ryzyka międzynarodowe pozostają skupione wokół wojny i szlaków energetycznych.",
+      "articles": [
+        {
+          "id": "sprawy-zagraniczne-1-litwa-i-dron-nato",
+          "section": "Sprawy zagraniczne",
+          "title": "Litwa i dron NATO",
+          "lead": "Wczorajsze zestrzelenie drona pozostaje najpoważniejszym incydentem wschodniej flanki.",
+          "facts": [
+            "Myśliwce NATO zestrzeliły drona po wejściu w litewską przestrzeń powietrzną (AP).",
+            "Pełne pochodzenie i intencja pozostają przedmiotem ustaleń."
+          ],
+          "analysis": "Reakcja operacyjna nie rozstrzyga atrybucji.",
+          "whyItMatters": "Incydenty powietrzne mogą szybko testować procedury sojuszu.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/9671662649ebed2eca41879982f366ad"
+            }
+          ],
+          "tags": [
+            "Sprawy zagraniczne"
+          ],
+          "ttsText": "Wczorajsze zestrzelenie drona pozostaje najpoważniejszym incydentem wschodniej flanki. Myśliwce NATO zestrzeliły drona po wejściu w litewską przestrzeń powietrzną (AP). Pełne pochodzenie i intencja pozostają przedmiotem ustaleń. Reakcja operacyjna nie rozstrzyga atrybucji. Incydenty powietrzne mogą szybko testować procedury sojuszu.",
+          "priority": "High"
+        },
+        {
+          "id": "sprawy-zagraniczne-2-arabia-saudyjska-i-ropa",
+          "section": "Sprawy zagraniczne",
+          "title": "Arabia Saudyjska i ropa",
+          "lead": "Uszkodzenie rurociągu i ataki Hutich nadal ograniczają margines bezpieczeństwa dostaw.",
+          "facts": [
+            "East–West ma pozostawać częściowo wyłączony przez tygodnie (AP).",
+            "Wątek dotyczy podaży i żeglugi, nie porady inwestycyjnej."
+          ],
+          "analysis": "Ryzyko infrastrukturalne kumuluje się z presją na szlaki morskie.",
+          "whyItMatters": "Zakłócenia mogą przełożyć się na transport i ceny energii.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/8c18d82c109a8ea91347ce53c0096c53"
+            }
+          ],
+          "tags": [
+            "Sprawy zagraniczne"
+          ],
+          "ttsText": "Uszkodzenie rurociągu i ataki Hutich nadal ograniczają margines bezpieczeństwa dostaw. East–West ma pozostawać częściowo wyłączony przez tygodnie (AP). Wątek dotyczy podaży i żeglugi, nie porady inwestycyjnej. Ryzyko infrastrukturalne kumuluje się z presją na szlaki morskie. Zakłócenia mogą przełożyć się na transport i ceny energii.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "technologia",
+      "title": "Technologia",
+      "summary": "Regulacja AI przechodzi od zasad ogólnych do praktycznej dokumentacji i egzekwowania.",
+      "articles": [
+        {
+          "id": "technologia-1-konsultacje-nist",
+          "section": "Technologia",
+          "title": "Konsultacje NIST",
+          "lead": "Dziś mija termin uwag do projektu dokumentacji publicznych systemów AI.",
+          "facts": [
+            "NIST opisał „Zero Draft” opublikowany 29 lipca 2026 (NIST).",
+            "Urząd zapowiada uwzględnienie nadesłanych uwag."
+          ],
+          "analysis": "To proces standaryzacyjny, a nie obowiązujące prawo.",
+          "whyItMatters": "Może ułatwić porównywanie ryzyka i jakości systemów.",
+          "sources": [
+            {
+              "title": "NIST",
+              "url": "https://www.nist.gov/artificial-intelligence/ai-standards"
+            }
+          ],
+          "tags": [
+            "Technologia"
+          ],
+          "ttsText": "Dziś mija termin uwag do projektu dokumentacji publicznych systemów AI. NIST opisał „Zero Draft” opublikowany 29 lipca 2026 (NIST). Urząd zapowiada uwzględnienie nadesłanych uwag. To proces standaryzacyjny, a nie obowiązujące prawo. Może ułatwić porównywanie ryzyka i jakości systemów.",
+          "priority": "High"
+        },
+        {
+          "id": "technologia-2-ai-act-egzekwowanie-trwa",
+          "section": "Technologia",
+          "title": "AI Act: egzekwowanie trwa",
+          "lead": "Unijne organy egzekwują już wybrane obowiązki przejrzystości AI.",
+          "facts": [
+            "Komisja wskazuje rolę AI Office i organów krajowych (KE).",
+            "Egzekwowanie wybranych przepisów rozpoczęło się 2 sierpnia 2026."
+          ],
+          "analysis": "Ciężar przesuwa się z deklaracji na zgodność możliwą do wykazania.",
+          "whyItMatters": "Dotyczy usług i produktów używanych bezpośrednio przez obywateli.",
+          "sources": [
+            {
+              "title": "KE",
+              "url": "https://digital-strategy.ec.europa.eu/en/policies/enforcement-ai-act"
+            }
+          ],
+          "tags": [
+            "Technologia"
+          ],
+          "ttsText": "Unijne organy egzekwują już wybrane obowiązki przejrzystości AI. Komisja wskazuje rolę AI Office i organów krajowych (KE). Egzekwowanie wybranych przepisów rozpoczęło się 2 sierpnia 2026. Ciężar przesuwa się z deklaracji na zgodność możliwą do wykazania. Dotyczy usług i produktów używanych bezpośrednio przez obywateli.",
+          "priority": "High"
+        }
+      ]
+    }
+  ],
+  "audioArtifacts": [
+    {
+      "variant": "female-piper",
+      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-09-16-1018/audio/female-piper/podcast.mp3"
+    }
+  ]
+}
