@@ -1,8 +1,10 @@
 # Topic Index: llm-ai-jobs-wroclaw
 
-Last updated: 2026-09-15 15:41 CEST
+Last updated: 2026-09-16 15:54 CEST
 
 ## Current Understanding
+
+Runda `2026-09-16-1554`: dodano kanonicznie potwierdzoną rolę Grid Dynamics Senior/Lead AI engineer dla Wrocławia i innych miast Polski oraz aktywną kartę UNIVIO AI Engineer z terminem 22 września i widełkami boardowymi. Board Just Join IT pozostaje na poziomie 131 ofert; EPAM, ITLT, SQUAD i DataArt nie wykazały materialnej zmiany.
 
 Runda `2026-09-15-1541`: dodano DataArt Senior AI ML Engineer z OpenAI API/NLP oraz HIBERUS Squad Lead – AI Process Automation we Wrocławiu. EPAM, ITLT i SQUAD pozostają aktywne; Axabee nie wrócił na board po terminie 12 września.
 
@@ -131,6 +133,8 @@ konkretny platformowy, delivery lub toolingowy scope.
 
 ## Recent Reports
 
+- [2026-09-16 15:54 - Material update](runs/2026-09-16-1554.md): Grid Dynamics Senior/Lead AI engineer oraz UNIVIO AI Engineer.
+
 - [2026-09-15 15:41 - Material update](runs/2026-09-15-1541.md): DataArt OpenAI API/NLP, HIBERUS AI Process Automation oraz kontrola EPAM/ITLT/SQUAD.
 
 - [2026-09-13 17:40 - Material update](runs/2026-09-13-1740.md): AURA i ITDS, plus kontrola Axabee/HIBERUS.
@@ -143,6 +147,18 @@ konkretny platformowy, delivery lub toolingowy scope.
 - [2026-08-26 15:41 CEST](runs/2026-08-26-1541.md)
 - [2026-08-24 15:40 CEST](runs/2026-08-24-1540.md)
 - [2026-08-20 15:43 CEST](runs/2026-08-20-1543.md)
+
+## Follow-up 2026-09-16 15:54
+
+- UNIVIO AI Engineer: potwierdzić walutę widełek, seniority i status przed terminem 22 września.
+- Grid Dynamics Senior/Lead AI engineer: potwierdzić szczegóły hybrydy i bezpośredni kanał aplikacji na stronie pracodawcy.
+
+## Seen Opportunities Added 2026-09-16
+
+| Canonical key | Company | Title | Location / mode | First seen | Status | Notes | Source |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| grid-dynamics-senior-lead-ai-engineer-wroclaw-poland | Grid Dynamics Poland | Senior/Lead AI engineer | Wrocław / hybrid; Poland multi-city | 2026-09-16-1554 | Open | Meta-prompting, context engineering, LLM apps, RAG, evaluation, observability, Python and TypeScript; canonical careers page. | [Grid Dynamics careers](https://www.griddynamics.com/careers/discover-openings) |
+| univio-ai-engineer-wroclaw-ai | UNIVIO | AI Engineer | Wrocław +6 / remote | 2026-09-16-1554 | Open | AI agents, LLM integrations, AI Gateway, document pipelines, Docker and CI/CD; 32,31–45,78 USD/h net B2B on board; deadline 2026-09-22. | [Just Join IT](https://justjoin.it/job-offer/univio-ai-engineer-wroclaw-ai) |
 - [2026-08-08 15:43 CEST](runs/2026-08-08-1543.md)
 - [2026-08-12 21:05 CEST](runs/2026-08-12-2105.md)
 - [2026-08-11 20:31 CEST](runs/2026-08-11-2031.md)

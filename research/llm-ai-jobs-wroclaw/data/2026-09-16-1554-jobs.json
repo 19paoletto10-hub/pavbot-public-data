@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-09-16",
+  "runTime": "15:54",
+  "executiveSummary": "Runda jest materialna. UNIVIO ma aktywną kartę AI Engineer dla Wrocławia i innych miast, z terminem 22 września 2026 oraz stawką 32,31–45,78 USD/h netto B2B; zakres obejmuje agentów AI, integrację LLM, AI Gateway, indeksowanie dokumentów, integracje narzędzi firmowych i konteneryzację. Grid Dynamics potwierdza na własnej stronie kariery nową rolę Senior/Lead AI engineer dla Wrocławia, Krakowa, Gdańska i Warszawy, skoncentrowaną na meta-promptingu, inżynierii kontekstu, RAG, ewaluacji LLM oraz infrastrukturze dla agentów kodujących.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "Grid Dynamics — Senior/Lead AI engineer",
+      "company": "Nieznana firma",
+      "location": "Wrocław, Kraków, Gdańsk lub Warszawa; model hybrydowy według publicznego boardu.",
+      "workMode": "Hybrid",
+      "compensation": "Brak widełek na kanonicznej stronie; publiczne agregatory podają niespójne dane, więc nie traktuję ich jako potwierdzone.",
+      "seniority": "Senior",
+      "fitSummary": "produkcyjne usługi LLM w Pythonie i TypeScripcie, meta-prompting, context engineering, RAG z bazami wektorowymi, LangChain/LlamaIndex, testy i ewaluacja LLM, obserwowalność, Docker i CI/CD.",
+      "whyInteresting": "bardzo mocny hands-on profil wokół narzędzi dla agentów kodujących, z połączeniem architektury kontekstu, jakości modeli i mentoringu technicznego.",
+      "uncertainty": "strona careers jest kanoniczna, ale nie pokazuje pełnej polityki pracy ani wynagrodzenia; szczegóły techniczne pochodzą z publicznego opisu roli.",
+      "sourceURLs": [
+        "https://www.griddynamics.com/careers/discover-openings",
+        "https://pl.linkedin.com/jobs/view/senior-lead-ai-engineer-at-grid-dynamics-4453693070",
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "Python"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "UNIVIO — AI Engineer",
+      "company": "Nieznana firma",
+      "location": "Wrocław, Strzegomska 2/4, oraz inne miasta; karta oznacza pracę zdalną.",
+      "workMode": "Remote",
+      "compensation": "32,31–45,78 USD/h netto B2B według karty; waluta jest prezentowana przez board i wymaga potwierdzenia z pracodawcą.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "agenci AI, pipeline’y agentowe, integracje OpenAI/Azure OpenAI/Gemini/Claude, AI Gateway/proxy, przetwarzanie dokumentów, Docker, CI/CD i monitoring kosztów.",
+      "whyInteresting": "konkretna rola inżynierska łącząca warstwę aplikacyjną LLM z integracjami enterprise i operacjonalizacją bezpiecznych narzędzi AI.",
+      "uncertainty": "karta boardowa; brak osobnej kanonicznej strony kariery znalezionej w tej rundzie. Termin aplikowania: 22 września 2026.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/univio-ai-engineer-wroclaw-ai"
+      ],
+      "tags": [
+        "LLM",
+        "Azure"
+      ]
+    }
+  ],
+  "changes": [
+    "Dodano Grid Dynamics Senior/Lead AI engineer: kanoniczna strona careers pokazuje rolę dla Wrocławia i innych polskich lokalizacji.",
+    "Dodano/odświeżono UNIVIO AI Engineer pod nowym aktywnym URL-em, z terminem 22 września i nowymi publicznymi widełkami boardowymi.",
+    "Board Just Join IT pozostaje na poziomie 131 ofert AI/ML dla Wrocławia.",
+    "EPAM, ITLT, SQUAD i DataArt pozostają widoczne, ale w tej rundzie nie wykazano materialnej zmiany ich tytułu, zakresu, lokalizacji, płacy ani statusu.",
+    "Nie powtórzono niezmienionych ofert z poprzednich raportów."
+  ],
+  "risks": [
+    "Just Join IT może odświeżać karty i waluty niezależnie od kanonicznego systemu pracodawcy; widełki UNIVIO wymagają weryfikacji.",
+    "Kanoniczna strona Grid Dynamics potwierdza istnienie roli, ale nie rozstrzyga szczegółów hybrydy ani terminu.",
+    "Publiczne agregatory i LinkedIn mogą mieć opóźnienie względem źródła pracodawcy."
+  ],
+  "recommendedActions": [
+    "Dla Grid Dynamics sprawdzić dopasowanie do Python/TypeScript, RAG, ewaluacji LLM i developer tooling; to najsilniejszy nowy sygnał techniczny tej rundy.",
+    "Dla UNIVIO potwierdzić walutę stawki, poziom seniority i proporcję budowy agentów do integracji enterprise przed aplikowaniem.",
+    "W następnej rundzie ponownie sprawdzić terminy UNIVIO oraz czy Grid Dynamics pokaże bezpośredni formularz lub bardziej szczegółową politykę pracy."
+  ],
+  "checkedSources": [
+    {
+      "title": "Just Join IT – AI/ML Wrocław",
+      "url": "https://justjoin.it/job-offers/wroclaw/ai",
+      "status": "checked"
+    },
+    {
+      "title": "UNIVIO – AI Engineer",
+      "url": "https://justjoin.it/job-offer/univio-ai-engineer-wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Grid Dynamics – careers",
+      "url": "https://www.griddynamics.com/careers/discover-openings",
+      "status": "checked"
+    },
+    {
+      "title": "Grid Dynamics – opis roli",
+      "url": "https://pl.linkedin.com/jobs/view/senior-lead-ai-engineer-at-grid-dynamics-4453693070",
+      "status": "checked"
+    },
+    {
+      "title": "EPAM – Senior AI Engineer",
+      "url": "https://careers.epam.com/en/vacancy/bltimzj3s4lsusq7gfo?country=Poland",
+      "status": "checked"
+    },
+    {
+      "title": "ITLT – AI Engineer / Senior AI Engineer",
+      "url": "https://justjoin.it/job-offer/itlt-ai-engineer-senior-ai-engineer-wroclaw-python",
+      "status": "checked"
+    },
+    {
+      "title": "SQUAD – Applied Scientist (LLM)",
+      "url": "https://justjoin.it/job-offer/squad-applied-scientist-llm--wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Pracuj.pl – machine learning engineer Wrocław",
+      "url": "https://www.pracuj.pl/praca/machine%20learning%20engineer%3Bkw/wroclaw%3Bwp",
+      "status": "checked"
+    }
+  ]
+}

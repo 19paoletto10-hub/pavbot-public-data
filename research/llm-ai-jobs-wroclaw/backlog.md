@@ -161,3 +161,8 @@
 
 - AURA i ITDS Senior AI Infrastructure Engineer: znaleźć kanoniczne strony, potwierdzić model pracy z Polski oraz widełki.
 - Axabee i HIBERUS: sprawdzić jeszcze raz w następnej rundzie; jeśli nie wrócą na publiczne źródła, zamknąć aktywną obserwację po terminach aplikowania.
+
+## Follow-up 2026-09-16 15:54
+
+- UNIVIO AI Engineer: potwierdzić walutę widełek, seniority i status przed terminem 22 września.
+- Grid Dynamics Senior/Lead AI engineer: potwierdzić szczegóły hybrydy i bezpośredni kanał aplikacji na stronie pracodawcy.
