@@ -1,0 +1,11 @@
+{
+  "variant_id": "male-xtts",
+  "engine_requested": "xtts",
+  "engine_used": null,
+  "model": "coqui/XTTS-v2",
+  "voice": "Andrew Chipper",
+  "language": "pl",
+  "status": "failed",
+  "error": "XTTS inference did not produce an MP3 within the unattended run window.",
+  "output_file": null
+}
