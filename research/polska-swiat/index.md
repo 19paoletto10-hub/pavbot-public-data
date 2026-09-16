@@ -1,6 +1,19 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-09-15
+Last updated: 2026-09-16
+
+## Update 2026-09-16
+
+Poranny run 16 września łączy polski alarm po rosyjskim ataku na Ukrainę z
+europejską odpowiedzią na drony i działania hybrydowe. Polska poderwała
+lotnictwo, RCB wysłało alert, a Lublin i Rzeszów-Jasionka czasowo wstrzymały
+operacje bez potwierdzonego naruszenia polskiej przestrzeni. SOTEU przesuwa
+UE w stronę kontrdronów, mechanizmu konsultacji hybrydowych i europejskiej
+rady bezpieczeństwa, a AP wzmacnia obraz rosyjskiego ryzyka hybrydowego przez
+opis sprawy zabójstw i sabotażu. Szwecja pozostaje przy niezamkniętej
+arytmetyce 176-173, Jemen i Bab al-Mandab utrzymują ryzyko dla energii, a
+UOKiK dodaje krajowy wątek gospodarczo-społeczny po karach za zmowę na rynku
+pracy.
 
 ## Update 2026-09-15
 
