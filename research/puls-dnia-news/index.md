@@ -2,6 +2,15 @@
 
 ## Current State
 
+2026-09-16 10:18 CEST: Slot nie przyniósł materialnej zmiany względem 06:04.
+Utrzymano 12 kart w siedmiu sekcjach; bezpieczeństwo Polski, energia, Jemen,
+CRA i alerty pozostają w monitoringu. BBC i CNN były częściowo ograniczone
+technicznie.
+
+Źródła i ograniczenia: [raport](runs/2026-09-16-1018.md).
+
+## Current State
+
 2026-09-16 06:04 CEST: materialna zmiana w bezpieczeństwie Polski po komunikacie KPRM o ataku 2 km od granicy polsko-ukraińskiej i wzmocnieniu pracy służb. Utrzymuje się presja Huti na saudyjską infrastrukturę i żeglugę; odnotowano też start platformy raportowania CRA.
 
 12 kart, wszystkie siedem sekcji. Źródła BBC/CNN były częściowo ograniczone technicznie.
