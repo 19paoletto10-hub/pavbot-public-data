@@ -1,6 +1,15 @@
 # Topic Index: tech-news
 
-Last updated: 2026-09-15
+Last updated: 2026-09-16
+
+## Poranny update 2026-09-16 08:00
+
+AP doprecyzowuje, że apel o spowolnienie frontier AI nie ma wspólnego mechanizmu
+egzekwowania. Najbardziej sprawdzalnym elementem propozycji jest ciągły dostęp
+niezależnych ewaluatorów, lecz trzeba oceniać go po mandacie, pokryciu i prawie
+do raportowania. W produktach AI rośnie znaczenie warstwy danych i dystrybucji:
+Anthropic lokuje monitoring w chmurze klienta, a Google wprowadza AI do
+Workspace i Androida zależnie od planu, regionu oraz urządzenia.
 
 ## Wieczorny update 2026-09-15 19:33
 

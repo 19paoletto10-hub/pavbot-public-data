@@ -1,0 +1,276 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-09-16",
+  "runTime": "08:00",
+  "status": "Material update",
+  "leadParagraphs": [
+    "Debata o wolniejszym rozwoju AI przesuwa się od apeli liderów do pytania o mandat niezależnych ewaluatorów i publiczne egzekwowanie. Równolegle AI staje się domyślną warstwą pakietów pracy, systemu telefonu oraz danych przedsiębiorstwa, więc jej wartość i ryzyko zależą od uprawnień, retencji, abonamentu i regionu.",
+    "• AP opisuje konkurencję, presję biznesową i polityczny opór wobec skoordynowanego pacingu AI.",
+    "• Anthropic proponuje monitoring nadużyć z danymi trzymanymi w chmurze kontrolowanej przez klienta.",
+    "• Google rozszerza płatne plany AI w Workspace i funkcje Gemini w Androidzie, z ograniczeniami planu, urządzenia i kraju.",
+    "• OpenAI wyznaczyło DevDay na 29 września; potwierdzona jest data wydarzenia, nie lista premier."
+  ],
+  "summaryBullets": [
+    "Regulacje: Safety AI potrzebuje mandatu, nie tylko deklaracji",
+    "AI: Prywatność i monitoring w jednej architekturze enterprise",
+    "Produkty: Google sprzedaje AI jako warstwę pracy"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-09-16-0-safety-ai-potrzebuje-mandatu-nie-tylko-deklaracji-ebbc05da6a",
+      "section": "Regulacje",
+      "title": "Safety AI potrzebuje mandatu, nie tylko deklaracji",
+      "standfirst": "Liderzy części laboratoriów mówią o spowolnieniu frontier AI, lecz realny mechanizm wymagałby niezależnych ewaluatorów i współpracy instytucji.",
+      "whatHappened": "Associated Press opisała konflikt między apelem o pacing AI a konkurencją i oporem wobec szybkiej regulacji.",
+      "whyItMatters": "Dobrowolne deklaracje nie tworzą porównywalnego standardu bez dostępu audytowego i jasnej odpowiedzialności.",
+      "deeperAnalysis": [
+        "Propozycja stałego dostępu zewnętrznych ewaluatorów jest konkretniejsza niż ogólne hasła o safety. Jej wiarygodność zależy jednak od zakresu danych, niezależności audytora i prawa do raportowania ustaleń.",
+        "Kontrola procesu laboratoryjnego nie zastępuje kontroli uprawnień agenta w produkcie. Obie warstwy są potrzebne: jedna ocenia praktyki dostawcy, druga ogranicza wykonanie konkretnego zadania.",
+        "AP opisuje przeszkody polityczne i ekonomiczne, nie gotowe porozumienie. Warto śledzić formalne mandaty, pokrycie testów i publiczne raporty, nie same deklaracje."
+      ],
+      "contextPoints": [
+        "Co się stało: Dyskutowany jest model ciągłego dostępu niezależnych ewaluatorów.",
+        "Dlaczego ważne: Jednorazowy audyt nie daje stałej kontroli nad szybko zmieniającym się systemem.",
+        "Na co patrzeć dalej: Umowy z ewaluatorami, uprawnienia i projekty regulacji."
+      ],
+      "sources": [
+        {
+          "title": "Associated Press — slowing down AI",
+          "url": "https://apnews.com/article/ai-slowdown-challenges-anthropic-openai-trump-b61f28b6212338e88c0baec31f661701"
+        },
+        {
+          "title": "OpenAI — AI policy window",
+          "url": "https://openai.com/index/ai-policy-window/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI",
+        "safety",
+        "governance",
+        "ewaluacje"
+      ]
+    },
+    {
+      "id": "tech-news-2026-09-16-1-prywatnosc-i-monitoring-w-jednej-architekturze-enterprise-3c793d786b",
+      "section": "AI",
+      "title": "Prywatność i monitoring w jednej architekturze enterprise",
+      "standfirst": "Anthropic zapowiada Enterprise Frontier Safeguards, które mają łączyć wykrywanie nadużyć z danymi przechowywanymi w chmurze klienta.",
+      "whatHappened": "Firma podała, że EFS będzie wdrażane etapami od jesieni dla produktów Claude i wybranych platform chmurowych.",
+      "whyItMatters": "Agentowe workflowy wymagają korelacji zdarzeń, ale organizacje regulowane potrzebują kontroli retencji i dostępu.",
+      "deeperAnalysis": [
+        "EFS jest odpowiedzią na napięcie między zero data retention a wykrywaniem zachowań rozłożonych na wiele sesji i kont. W deklarowanym modelu klient utrzymuje dane monitoringu pod własnymi kluczami, politykami i logami.",
+        "Nie usuwa to kompromisu, tylko przenosi odpowiedzialność do zespołu enterprise. Retencja, role dostępu i reakcja na alert stają się elementem projektu produktu, a nie wyłącznie usługą dostawcy modelu.",
+        "To komunikat producenta, nie niezależny test. Jest jednak sygnałem, że data plane, monitoring i compliance są już częścią oferty modeli frontier."
+      ],
+      "contextPoints": [
+        "Co się stało: Zapowiedziano etapowe EFS dla klientów enterprise.",
+        "Dlaczego ważne: Wielosesyjne nadużycia wymagają korelacji, a wrażliwe dane wymagają kontroli klienta.",
+        "Na co patrzeć dalej: Dostępność, alerty, koszty i niezależne testy."
+      ],
+      "sources": [
+        {
+          "title": "Anthropic — Enterprise Frontier Safeguards",
+          "url": "https://www.anthropic.com/news/enterprise-frontier-safeguards"
+        },
+        {
+          "title": "Anthropic Newsroom",
+          "url": "https://www.anthropic.com/news"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Anthropic",
+        "enterprise",
+        "prywatność",
+        "bezpieczeństwo"
+      ]
+    },
+    {
+      "id": "tech-news-2026-09-16-2-google-sprzedaje-ai-jako-warstwe-pracy-d0d397d4b3",
+      "section": "Produkty",
+      "title": "Google sprzedaje AI jako warstwę pracy",
+      "standfirst": "Google rozszerza płatne plany AI o głosowe funkcje Workspace, tworzenie grafik i promptowe „miniaplikacje” w Sheets.",
+      "whatHappened": "Firma wymieniła funkcje AI Plus, Pro i Ultra, przy czym część automatyzacji Gemini Spark ograniczyła do USA.",
+      "whyItMatters": "Konkurencja AI przesuwa się do integracji, abonamentu i kontekstu danych użytkownika.",
+      "deeperAnalysis": [
+        "Głos w Gmail, Docs i Keep oraz Sheets canvas wskazują, że interfejsem AI będzie istniejący dokument, skrzynka i arkusz. Wartość zależy wtedy od uprawnień do danych, jakości integracji i kontroli skutków automatyzacji.",
+        "Gemini Spark ma wykonywać zadania sieciowe i operacje na zdjęciach. Takie funkcje podnoszą wymagania wobec zgód, potwierdzeń akcji i śladu wykonania.",
+        "Google wyraźnie ogranicza część nowości planem i regionem. Polski odbiorca nie powinien utożsamiać komunikatu globalnego z lokalną dostępnością."
+      ],
+      "contextPoints": [
+        "Co się stało: Google dodał AI do produktów pracy i subskrypcji.",
+        "Dlaczego ważne: AI otrzymuje dystrybucję tam, gdzie istnieje kontekst użytkownika.",
+        "Na co patrzeć dalej: Regiony, admin controls i wykorzystanie Sheets canvas."
+      ],
+      "sources": [
+        {
+          "title": "Google — aktualizacje planów AI",
+          "url": "https://blog.google/products-and-platforms/products/google-one/fall-2026-ai-plan-updates/"
+        },
+        {
+          "title": "Google One",
+          "url": "https://one.google.com/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Google",
+        "Workspace",
+        "Gemini",
+        "subskrypcje"
+      ]
+    },
+    {
+      "id": "tech-news-2026-09-16-3-androidowa-pamiec-i-dostepnosc-maja-granice-urzadzenia-6488bf73fd",
+      "section": "Produkty",
+      "title": "Androidowa pamięć i dostępność mają granice urządzenia",
+      "standfirst": "September Android Drop dodaje pamięć lokalizacji przedmiotów przez Gemini oraz Guided vision dla opisu otoczenia z kamery.",
+      "whatHappened": "Google podał odrębne wymagania Androida i dostępności krajowej dla nowych funkcji.",
+      "whyItMatters": "Pamięć i kamera zwiększają użyteczność telefonu, ale wymagają jasnych granic danych, zgody i wsparcia urządzeń.",
+      "deeperAnalysis": [
+        "Find Hub ma zapisać położenie przedmiotu z opcjonalnym zdjęciem i później odtworzyć je przez Gemini. To przykład pamięci asystenta związanej z życiem codziennym, która powinna być łatwa do sprawdzenia i usunięcia.",
+        "Guided vision ma wspierać osoby niewidome i słabowidzące opisem obrazu oraz podpowiedziami kadrowania. Jakość modelu, opóźnienie i dostępność językowa mogą bezpośrednio wpłynąć na realną wartość tej funkcji.",
+        "Google rozdziela progi systemu oraz rynki: nie jest to jednolity rollout dla wszystkich telefonów. Test konkretnego urządzenia pozostaje ważniejszy niż sama zapowiedź."
+      ],
+      "contextPoints": [
+        "Co się stało: Android otrzymuje funkcje pamięci, wzroku i komfortu jazdy.",
+        "Dlaczego ważne: Systemowa AI przetwarza bliższy kontekst użytkownika niż zwykły chatbot.",
+        "Na co patrzeć dalej: Języki, kraje, retencję zapisów i testy dostępności."
+      ],
+      "sources": [
+        {
+          "title": "Google — September Android Drop",
+          "url": "https://blog.google/products-and-platforms/platforms/android/android-drop-september-2026/"
+        },
+        {
+          "title": "Android",
+          "url": "https://www.android.com/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Android",
+        "Gemini",
+        "dostępność",
+        "prywatność"
+      ]
+    },
+    {
+      "id": "tech-news-2026-09-16-4-devday-jest-data-obserwacji-nie-lista-premier-1d0c1423d4",
+      "section": "Produkty",
+      "title": "DevDay jest datą obserwacji, nie listą premier",
+      "standfirst": "OpenAI zapowiedziało DevDay 2026 na 29 września w San Francisco.",
+      "whatHappened": "Oficjalna strona wydarzenia prosi o zapis do powiadomień i nie zawiera programu premier.",
+      "whyItMatters": "Data pozwala przygotować pytania o API i wdrożenia, lecz nie uzasadnia spekulacji o produktach.",
+      "deeperAnalysis": [
+        "DevDay może zestawić ostatnie zmiany w API, agentach i narzędziach dla deweloperów. Po wrześniowych publikacjach o Agents API i GPT-6 Astra będzie to istotny punkt obserwacji ekosystemu.",
+        "Zespoły produktowe mogą już spisać pytania o limity, obserwowalność, ceny, przenośność workflowów i kontrole administratora. Są ważne niezależnie od ewentualnej nazwy modelu.",
+        "Na dziś potwierdzona jest wyłącznie data oraz miejsce wydarzenia. Każda informacja o premierze wymaga późniejszego, pierwotnego źródła."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI ogłosiło datę DevDay 2026.",
+        "Dlaczego ważne: Wydarzenie będzie punktem odniesienia dla deweloperów AI.",
+        "Na co patrzeć dalej: Program, dokumentację API i warunki dostępności."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI — DevDay 2026",
+          "url": "https://openai.com/index/devday-2026/"
+        },
+        {
+          "title": "OpenAI News",
+          "url": "https://openai.com/news/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "OpenAI",
+        "DevDay",
+        "deweloperzy",
+        "wydarzenia"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Czy niezależny audyt może spowolnić AI?",
+      "rationale": "Safety przechodzi od manifestów do pytania o dostęp ewaluatorów",
+      "sourcesLabel": "AP, OpenAI"
+    },
+    {
+      "priority": "High",
+      "title": "Prywatność kontra monitoring agentów",
+      "rationale": "Kontrola danych jest częścią architektury bezpieczeństwa",
+      "sourcesLabel": "Anthropic"
+    },
+    {
+      "priority": "High",
+      "title": "Google zmienia pakiet biurowy w powierzchnię AI",
+      "rationale": "Integracje, abonament i kontekst danych są nowym polem konkurencji",
+      "sourcesLabel": "Google"
+    },
+    {
+      "priority": "Medium",
+      "title": "Telefon, który pamięta, gdzie leżą klucze",
+      "rationale": "Pamięć i kamera wymagają przejrzystych granic danych",
+      "sourcesLabel": "Google Android"
+    },
+    {
+      "priority": "Medium",
+      "title": "Czego oczekiwać od DevDay bez spekulacji",
+      "rationale": "Data pomaga przygotować pytania o API i wdrożenia",
+      "sourcesLabel": "OpenAI"
+    },
+    {
+      "priority": "Medium",
+      "title": "Dlaczego rollout AI jest regionalny",
+      "rationale": "Plan, wersja systemu i kraj rozbijają mit jednego globalnego wdrożenia",
+      "sourcesLabel": "Google"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Associated Press",
+      "url": "https://apnews.com/article/ai-slowdown-challenges-anthropic-openai-trump-b61f28b6212338e88c0baec31f661701"
+    },
+    {
+      "title": "Anthropic",
+      "url": "https://www.anthropic.com/news/enterprise-frontier-safeguards"
+    },
+    {
+      "title": "Google",
+      "url": "https://blog.google/products-and-platforms/products/google-one/fall-2026-ai-plan-updates/"
+    },
+    {
+      "title": "Google",
+      "url": "https://blog.google/products-and-platforms/platforms/android/android-drop-september-2026/"
+    },
+    {
+      "title": "OpenAI",
+      "url": "https://openai.com/index/devday-2026/"
+    },
+    {
+      "title": "OpenAI — AI policy window",
+      "url": "https://openai.com/index/ai-policy-window/"
+    },
+    {
+      "title": "Anthropic Newsroom",
+      "url": "https://www.anthropic.com/news"
+    },
+    {
+      "title": "Google One",
+      "url": "https://one.google.com/"
+    },
+    {
+      "title": "Android",
+      "url": "https://www.android.com/"
+    },
+    {
+      "title": "OpenAI News",
+      "url": "https://openai.com/news/"
+    }
+  ]
+}
