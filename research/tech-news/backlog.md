@@ -547,3 +547,8 @@
 - [ ] Track Agents API reliability, isolation and billing after public beta.
 - [ ] Compare Anthropic's agentic cyber claims with independent incident reporting.
 - [ ] Track measurable access programs following the Gates Foundation AI pledge.
+# Wieczorny follow-up 2026-09-16
+
+- [ ] Zweryfikować zakres uprawnień i mechanizmy potwierdzania w WhatsApp Business Tools MCP.
+- [ ] Śledzić niezależne testy Muse Secure VM oraz regionalną dostępność Muse w UE.
+- [ ] Porównać metodykę ewaluacji Anthropic z zewnętrznymi testami targetowania i klasyfikatorów.

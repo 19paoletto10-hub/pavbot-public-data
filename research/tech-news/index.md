@@ -2,6 +2,15 @@
 
 Last updated: 2026-09-16
 
+## Wieczorny update 2026-09-16 19:33
+
+Meta przenosi agentów do operacyjnych interfejsów: WhatsApp Business Tools MCP
+może konfigurować konto, szablony i webhooki, a osobisty Muse działa w
+dedykowanej Muse Secure VM. Google rozwija głosowe Gemini 3.8 Live z narzędziami,
+a Anthropic publikuje ewaluacje targetowania i konwencjonalnych zastosowań
+wojskowych. Wspólny wniosek pozostaje wdrożeniowy: agent potrzebuje nie tylko
+modelu, lecz także izolacji, autoryzacji, śladu audytowego i kontroli skutku.
+
 ## Poranny update 2026-09-16 08:00
 
 AP doprecyzowuje, że apel o spowolnienie frontier AI nie ma wspólnego mechanizmu
