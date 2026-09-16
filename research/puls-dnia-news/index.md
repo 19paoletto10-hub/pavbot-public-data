@@ -2,6 +2,15 @@
 
 ## Current State
 
+2026-09-16 12:01 CEST: Slot nie przyniósł materialnej zmiany względem 10:18.
+Utrzymano 12 kart w siedmiu sekcjach; bezpieczeństwo Polski, energia, Jemen,
+CRA i alerty pozostają w monitoringu. BBC i CNN były częściowo ograniczone
+technicznie.
+
+Źródła i ograniczenia: [raport](runs/2026-09-16-1201.md).
+
+## Current State
+
 2026-09-16 10:18 CEST: Slot nie przyniósł materialnej zmiany względem 06:04.
 Utrzymano 12 kart w siedmiu sekcjach; bezpieczeństwo Polski, energia, Jemen,
 CRA i alerty pozostają w monitoringu. BBC i CNN były częściowo ograniczone
