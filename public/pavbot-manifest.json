@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-09-16T09:13:30.478906+00:00",
+  "generatedAt": "2026-09-16T09:54:23.883413+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -280,7 +280,7 @@
       "title": "Daily Research Report: Polska i Świat",
       "path": "research/polska-swiat/runs/2026-09-16.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/runs/2026-09-16.md",
-      "sizeBytes": 19956,
+      "sizeBytes": 19884,
       "date": "2026-09-16"
     },
     {
@@ -290,7 +290,7 @@
       "title": "Research data",
       "path": "research/polska-swiat/data/2026-09-16-research.json",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/data/2026-09-16-research.json",
-      "sizeBytes": 18895,
+      "sizeBytes": 18847,
       "date": "2026-09-16"
     },
     {
@@ -351,6 +351,16 @@
       "path": "research/polska-swiat/podcasts/2026-09-16/podcast.mp3",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-09-16/podcast.mp3",
       "sizeBytes": 3879257,
+      "date": "2026-09-16"
+    },
+    {
+      "id": "research/polska-swiat/pdfs/2026-09-16-polska-swiat.pdf",
+      "type": "pdf",
+      "topic": "polska-swiat",
+      "title": "2026-09-16-polska-swiat.pdf",
+      "path": "research/polska-swiat/pdfs/2026-09-16-polska-swiat.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/pdfs/2026-09-16-polska-swiat.pdf",
+      "sizeBytes": 92889,
       "date": "2026-09-16"
     },
     {
