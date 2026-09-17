@@ -2,6 +2,11 @@
 
 ## Active
 
+| High | Track Huawei Ascend 960DT and UnifiedBus | Earlier chip roadmap and larger superpods make Chinese AI infrastructure a live alternative-stack story | Watch independent benchmarks, delivery timing and adoption outside China | Open |
+| High | Track physical-world agent permissions | Google Home MCP exposes device state and actions through MCP while remaining early access | Watch revocation, confirmation UX, logs and sensitive-action policy | Open |
+| Medium | Track public RL observability | Xiaomi's MiMo-V2.6 dashboard exposes training progress and cost signals but not independent model quality | Watch released details, reproducibility and benchmark results | Open |
+| Medium | Track CUDA Rust maturity | Native Rust GPU kernels could improve safety in inference infrastructure but the toolchain is young | Watch stability, benchmarks and cross-vendor support | Open |
+
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
 | High | Track OpenAI misalignment disclosure framework | Six first reports turn safety disclosure into an operating process, but not an external standard | Watch report cadence, corrections, disclosure delays and uptake by other labs | Open |

@@ -1,0 +1,279 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-09-17",
+  "runTime": "19:33",
+  "status": "Material update",
+  "leadParagraphs": [
+    "Wieczorny obraz przesuwa uwagę z samego modelu na środowisko wykonania. Huawei przyspiesza premierę Ascend 960DT i rozwija łączenie dużych klastrów, Google daje agentom dostęp do urządzeń domowych, a Xiaomi pokazuje publicznie przebieg kosztownego treningu RL. Równolegle NVIDIA próbuje uczynić Rusta językiem pierwszej klasy dla kerneli GPU. Wspólny mianownik to kontrola zasobów: interconnect, uprawnienia, obserwowalność i bezpieczeństwo kodu.",
+    "• Huawei zapowiada Ascend 960DT na I kw. 2027 oraz Ascend 960PR na III kw. 2027; deklaruje ponad 1000 dostarczonych superwęzłów do ponad 370 klientów.",
+    "• Google Home MCP w early access pozwala agentom odczytywać stan i historię domu oraz wykonywać działania; Google blokuje m.in. odblokowanie drzwi, ale ostrzega przed niepożądanym zachowaniem agenta.",
+    "• Xiaomi prowadzi publiczny trening MiMo-V2.6 z logami RL; zewnętrzny opis podaje koszt przekraczający 1 mln USD, co jest sygnałem transparentności procesu, nie niezależnym testem jakości modelu.",
+    "• CUDA Rust obejmuje dwa tory: cuda-oxide dla kerneli SIMT i cutile-rs dla programowania tile; NVIDIA zapowiada interoperacyjność z CUDA C++ i Pythonem.",
+    "• Dzisiejszy Hacker News pokazuje, że GPU/Rust i płatności per-page dla agentów są bardziej produktywnym sygnałem adopcji niż kolejna ogólna deklaracja o chatbotach."
+  ],
+  "summaryBullets": [
+    "Infrastruktura: Huawei przyspiesza chipy AI i skalowanie superpodów",
+    "Produkty: Google Home MCP daje agentom dostęp do fizycznego domu",
+    "AI: Xiaomi streamuje trening MiMo-V2.6"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-09-17-1933-0-huawei-przyspiesza-chipy-ai-i-skalowanie-superpodow-14562d55b6",
+      "section": "Infrastruktura",
+      "title": "Huawei przyspiesza chipy AI i skalowanie superpodów",
+      "standfirst": "Huawei zapowiedział układy Ascend 960DT i 960PR na 2027 rok, wzmacniając własny stos AI mimo ograniczeń eksportowych.",
+      "whatHappened": "Firma przyspieszyła roadmapę i promuje UnifiedBus do łączenia dużych liczb akceleratorów.",
+      "whyItMatters": "Konkurencja z NVIDIĄ rozstrzyga się także w sieci, systemie i dostawach, nie tylko w parametrach pojedynczego GPU.",
+      "deeperAnalysis": [
+        "Huawei próbuje kompensować ograniczony dostęp do najbardziej zaawansowanych komponentów przez skalowanie całych systemów. To model konkurencji inny niż prosty pojedynek specyfikacji: liczy się ile akceleratorów można spiąć, jak utrzymać przepustowość i jak szybko dostarczyć klaster klientom.",
+        "Reuters podaje, że firma mówi o ponad 1000 superwęzłów u ponad 370 klientów. To twierdzenie producenta, ale wystarczające, by traktować Huawei jako dostawcę infrastruktury, a nie wyłącznie projektanta układów.",
+        "Najważniejszym testem będą niezależne wyniki treningu i inference, dostępność oprogramowania oraz to, czy UnifiedBus poprawi ekonomię dużych wdrożeń. Spotkanie przywódców USA i Chin nadaje tej roadmapie dodatkowy wymiar geopolityczny."
+      ],
+      "contextPoints": [
+        "Co się stało: Huawei przyspieszył premierę dwóch układów AI.",
+        "Dlaczego ważne: Ograniczenia eksportowe zwiększają znaczenie własnego interconnectu i systemów.",
+        "Na co patrzeć dalej: Benchmarki, dostawy 960DT i realna adopcja poza Chinami."
+      ],
+      "sources": [
+        {
+          "title": "AP",
+          "url": "https://apnews.com/article/26ab418df1339c518483918218ffbe57"
+        },
+        {
+          "title": "Reuters",
+          "url": "https://www.marketscreener.com/news/china-s-huawei-to-launch-two-new-ai-chips-in-2027-ce785bd3d98ff424"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Huawei",
+        "Ascend",
+        "chipy",
+        "interconnect",
+        "Chiny"
+      ]
+    },
+    {
+      "id": "tech-news-2026-09-17-1933-1-google-home-mcp-daje-agentom-dostep-do-fizycznego-domu-fc065f4c8c",
+      "section": "Produkty",
+      "title": "Google Home MCP daje agentom dostęp do fizycznego domu",
+      "standfirst": "Google udostępnia Home MCP w early access, pozwalając agentom czytać stan urządzeń, historię zdarzeń i wykonywać komendy.",
+      "whatHappened": "Standardowy interfejs MCP połączył agentów z fizycznym środowiskiem domu.",
+      "whyItMatters": "Błąd agenta ma teraz możliwy skutek fizyczny, więc model uprawnień i odwołanie dostępu są częścią produktu.",
+      "deeperAnalysis": [
+        "Dokumentacja Google wymienia odczyt struktury domu, stany urządzeń, historię i akcje wykonawcze. Google blokuje wrażliwe działanie, takie jak odblokowanie drzwi, ale nie usuwa to problemu błędnych komend dla pozostałych urządzeń.",
+        "Wczesny produkt pokazuje też nowy wzorzec integracji: agent nie musi być własnością dostawcy sprzętu. Może nim być narzędzie developerskie lub asystent obsługujący MCP, co zwiększa wybór, lecz komplikuje audyt danych i odpowiedzialność.",
+        "Praktyczny test dla użytkownika to możliwość cofnięcia dostępu, jawna lista narzędzi i potwierdzenie przed akcją o trwałym skutku. To ważniejsze niż sama płynność rozmowy."
+      ],
+      "contextPoints": [
+        "Co się stało: Google otworzył Home MCP dla agentów.",
+        "Dlaczego ważne: AI otrzymuje kontrolowany, ale realny interfejs do domu.",
+        "Na co patrzeć dalej: Potwierdzenia akcji, logi, revocation i wsparcie dla innych agentów."
+      ],
+      "sources": [
+        {
+          "title": "Google Home Developers",
+          "url": "https://developers.home.google.com/mcp/home"
+        },
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/16/your-ai-agents-can-now-control-your-google-home-devices/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Google Home",
+        "MCP",
+        "smart home",
+        "uprawnienia"
+      ]
+    },
+    {
+      "id": "tech-news-2026-09-17-1933-2-xiaomi-streamuje-trening-mimo-v2-6-a6edffb84e",
+      "section": "AI",
+      "title": "Xiaomi streamuje trening MiMo-V2.6",
+      "standfirst": "Xiaomi pokazuje publicznie logi i krzywe treningu RL dla MiMo-V2.6 wraz z informacjami o środowiskach agentowych.",
+      "whatHappened": "Proces post-trainingu został zamieniony w publiczny dashboard obserwacyjny.",
+      "whyItMatters": "Transparentność przesuwa się z gotowego benchmarku na obserwowalność kosztu, awarii i przebiegu eksperymentu.",
+      "deeperAnalysis": [
+        "Opis zespołu mówi o dwóch wariantach modelu, asynchronicznych rolloutach i mieszaniu wielu frameworków w środowisku agentowym. To daje wgląd w to, jak post-training staje się systemem obliczeniowym, a nie pojedynczym eksperymentem.",
+        "Według publicznych relacji koszt przekroczył milion dolarów. Tę liczbę należy traktować jako relację medialną i sygnał skali, nie audyt wydatków. Dashboard pokazuje proces, ale nie odpowiada na pytanie, czy końcowy model jest lepszy.",
+        "Wartością eksperymentu jest możliwość porównania obietnic z logami: czasu, awarii węzłów, zużycia zasobów i zmian pass rate. Jeśli taki format się przyjmie, może poprawić rozmowę o kosztach treningu bardziej niż pojedynczy wynik benchmarku."
+      ],
+      "contextPoints": [
+        "Co się stało: Xiaomi publicznie streamuje trening kolejnego MiMo.",
+        "Dlaczego ważne: Pokazuje infrastrukturę i koszt procesu, nie tylko wynik końcowy.",
+        "Na co patrzeć dalej: Publikacja szczegółów, powtarzalność i niezależne benchmarki."
+      ],
+      "sources": [
+        {
+          "title": "MiMo RL dashboard",
+          "url": "https://mimo.xiaomi.com/rl/"
+        },
+        {
+          "title": "IT之家",
+          "url": "https://www.ithome.com/1/003/555.htm"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Xiaomi",
+        "MiMo",
+        "reinforcement learning",
+        "transparentność"
+      ]
+    },
+    {
+      "id": "tech-news-2026-09-17-1933-3-nvidia-przenosi-bezpieczenstwo-rusta-do-kerneli-gpu-13d820067e",
+      "section": "Infrastruktura",
+      "title": "NVIDIA przenosi bezpieczeństwo Rusta do kerneli GPU",
+      "standfirst": "CUDA Rust oferuje cuda-oxide i cutile-rs do pisania kerneli GPU w Rust z naciskiem na bezpieczeństwo pamięci i interoperacyjność.",
+      "whatHappened": "NVIDIA otworzyła natywną ścieżkę kompilacji kodu Rust do PTX.",
+      "whyItMatters": "Warstwa kerneli była jednym z miejsc, gdzie systemy AI traciły część gwarancji bezpieczeństwa znanych z Rusta.",
+      "deeperAnalysis": [
+        "NVIDIA rozdziela klasyczny model SIMT od programowania tile. cuda-oxide korzysta z własnego backendu rustc, a cutile-rs działa na stabilnym Rust i kompiluje do CUDA Tile IR. To nie jest jeszcze dojrzały zamiennik CUDA C++, lecz rozszerzenie pola eksperymentów.",
+        "Znaczenie dla agentów jest pośrednie, ale istotne: inference, serving i runtime'y coraz częściej opierają się na kodzie systemowym, który musi być szybki i odporny na klasy błędów pamięci. Bezpieczeństwo języka nie zastąpi testów kerneli ani kontroli sterowników, ale może ograniczyć część ryzyka.",
+        "Największym pytaniem jest ekosystem. Interoperacyjność z C++ i Pythonem może ułatwić migrację, a brak wsparcia wielodostawczego może ograniczyć wartość dla zespołów budujących przenośne stosy."
+      ],
+      "contextPoints": [
+        "Co się stało: NVIDIA uruchomiła dwa tory CUDA Rust.",
+        "Dlaczego ważne: Rust zbliża się do najbardziej wydajnej warstwy obliczeń AI.",
+        "Na co patrzeć dalej: Stabilność, benchmarki, debugowanie i wsparcie AMD/Intel."
+      ],
+      "sources": [
+        {
+          "title": "NVIDIA Developer Blog",
+          "url": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/"
+        },
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/front?day=2026-09-17"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "NVIDIA",
+        "CUDA",
+        "Rust",
+        "GPU",
+        "developer tools"
+      ]
+    },
+    {
+      "id": "tech-news-2026-09-17-1933-4-cyberataki-wspierane-przez-ai-sa-pilniejsze-niz-scenariusze-science-fiction-2502a86010",
+      "section": "Cyber",
+      "title": "Cyberataki wspierane przez AI są pilniejsze niż scenariusze science fiction",
+      "standfirst": "Axios podsumowuje, że najbardziej bezpośrednim problemem jest przyspieszenie ataków przez ludzi używających AI, a nie autonomiczny koniec świata.",
+      "whatHappened": "Publiczna debata przesuwa się od hipotetycznych katastrof do mierzalnej redukcji kosztu ataku.",
+      "whyItMatters": "Obrona musi poprawić kontrolę tożsamości, egress i monitoring teraz, niezależnie od sporów o AGI.",
+      "deeperAnalysis": [
+        "Wątek łączy się z porannym raportem OpenAI o nieautoryzowanych działaniach modeli, lecz akcent jest inny: atakujący mogą używać modeli jako wzmacniacza rekonesansu, phishingu i iteracji. Nie trzeba zakładać pełnej autonomii, aby skala i tempo zagrożeń wzrosły.",
+        "Axios wskazuje, że podstawowe kontrole cyber nadal zapobiegłyby części zdarzeń. To ważna przeciwwaga dla narracji, w której jedyną odpowiedzią ma być badanie hipotetycznego superagenta.",
+        "Dla zespołów produktowych oznacza to priorytet dla deny-by-default, separacji sekretów, ograniczeń sieciowych i logów działań narzędzi. Pytanie nie brzmi wyłącznie, czy model jest „zły”, lecz jakie uprawnienia i kanały otrzymał."
+      ],
+      "contextPoints": [
+        "Co się stało: Cyberbezpieczeństwo opisuje pilne, wspierane przez AI kampanie.",
+        "Dlaczego ważne: Szkoda może rosnąć przy częściowej, ludzkiej kontroli.",
+        "Na co patrzeć dalej: Dane o skuteczności ataków, koszty obrony i niezależne incydenty."
+      ],
+      "sources": [
+        {
+          "title": "Axios",
+          "url": "https://www.axios.com/2026/09/17/ai-cyber-doomsday-hacking-threats"
+        },
+        {
+          "title": "AP",
+          "url": "https://apnews.com/article/089e75b95bc935af092da7b79d92706"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "cyberbezpieczeństwo",
+        "agenci",
+        "malware",
+        "risk"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Huawei buduje alternatywny stos AI",
+      "rationale": "Chip, interconnect i dostawy stają się równie ważne jak benchmark",
+      "sourcesLabel": "AP, Reuters"
+    },
+    {
+      "priority": "High",
+      "title": "Czy agent może sterować naszym domem?",
+      "rationale": "Home MCP przenosi agenta do fizycznego środowiska",
+      "sourcesLabel": "Google, TechCrunch"
+    },
+    {
+      "priority": "High",
+      "title": "Cyberatak bez autonomicznej superinteligencji",
+      "rationale": "Realne ryzyko rośnie przez tempo i koszt pracy atakujących",
+      "sourcesLabel": "Axios, AP"
+    },
+    {
+      "priority": "Medium",
+      "title": "Xiaomi pokazuje trening od kuchni",
+      "rationale": "Dashboard ujawnia koszt i awarie, nie tylko wynik",
+      "sourcesLabel": "Xiaomi, IT之家"
+    },
+    {
+      "priority": "Medium",
+      "title": "Rust wchodzi do kerneli CUDA",
+      "rationale": "Bezpieczeństwo pamięci trafia bliżej najdroższej warstwy obliczeń",
+      "sourcesLabel": "NVIDIA, HN"
+    },
+    {
+      "priority": "Medium",
+      "title": "Czy publiczne logi zmienią AI?",
+      "rationale": "Observability może stać się nową warstwą wiarygodności",
+      "sourcesLabel": "Xiaomi, NVIDIA"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "AP",
+      "url": "https://apnews.com/article/26ab418df1339c518483918218ffbe57"
+    },
+    {
+      "title": "Reuters/MarketScreener",
+      "url": "https://www.marketscreener.com/news/china-s-huawei-to-launch-two-new-ai-chips-in-2027-ce785bd3d98ff424"
+    },
+    {
+      "title": "Google Home Developers",
+      "url": "https://developers.home.google.com/mcp/home"
+    },
+    {
+      "title": "MiMo RL dashboard",
+      "url": "https://mimo.xiaomi.com/rl/"
+    },
+    {
+      "title": "IT之家",
+      "url": "https://www.ithome.com/1/003/555.htm"
+    },
+    {
+      "title": "NVIDIA Developer Blog",
+      "url": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/"
+    },
+    {
+      "title": "Axios",
+      "url": "https://www.axios.com/2026/09/17/ai-cyber-doomsday-hacking-threats"
+    },
+    {
+      "title": "TechCrunch",
+      "url": "https://techcrunch.com/2026/09/16/your-ai-agents-can-now-control-your-google-home-devices/"
+    },
+    {
+      "title": "Hacker News",
+      "url": "https://news.ycombinator.com/front?day=2026-09-17"
+    },
+    {
+      "title": "AP",
+      "url": "https://apnews.com/article/089e75b95bc935af092da7b79d92706"
+    }
+  ]
+}

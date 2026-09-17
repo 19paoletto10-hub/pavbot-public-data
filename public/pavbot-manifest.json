@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-09-17T16:03:42.743133+00:00",
+  "generatedAt": "2026-09-17T17:36:33.021867+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -148,6 +148,17 @@
       "date": "2026-09-17"
     },
     {
+      "id": "research/tech-news/runs/2026-09-17-1933.md",
+      "type": "run",
+      "topic": "tech-news",
+      "title": "Raport technologiczny: infrastruktura agentów wychodzi poza ekran",
+      "path": "research/tech-news/runs/2026-09-17-1933.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/runs/2026-09-17-1933.md",
+      "sizeBytes": 14056,
+      "date": "2026-09-17",
+      "time": "19:33"
+    },
+    {
       "id": "research/tech-news/data/2026-09-17-research.json",
       "type": "researchData",
       "topic": "tech-news",
@@ -156,6 +167,17 @@
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/data/2026-09-17-research.json",
       "sizeBytes": 16784,
       "date": "2026-09-17"
+    },
+    {
+      "id": "research/tech-news/data/2026-09-17-1933-research.json",
+      "type": "researchData",
+      "topic": "tech-news",
+      "title": "Research data",
+      "path": "research/tech-news/data/2026-09-17-1933-research.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/data/2026-09-17-1933-research.json",
+      "sizeBytes": 15249,
+      "date": "2026-09-17",
+      "time": "19:33"
     },
     {
       "id": "research/tech-news/podcasts/2026-09-17/sources.md",
@@ -226,6 +248,17 @@
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/pdfs/2026-09-17-tech-news.pdf",
       "sizeBytes": 88064,
       "date": "2026-09-17"
+    },
+    {
+      "id": "research/tech-news/pdfs/2026-09-17-1933-tech-news.pdf",
+      "type": "pdf",
+      "topic": "tech-news",
+      "title": "2026-09-17-1933-tech-news.pdf",
+      "path": "research/tech-news/pdfs/2026-09-17-1933-tech-news.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/pdfs/2026-09-17-1933-tech-news.pdf",
+      "sizeBytes": 87179,
+      "date": "2026-09-17",
+      "time": "19:33"
     },
     {
       "id": "research/puls-dnia-news/runs/2026-09-17-1801.md",
@@ -28073,7 +28106,7 @@
       "title": "Topic Index: tech-news",
       "path": "research/tech-news/index.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/index.md",
-      "sizeBytes": 98180
+      "sizeBytes": 98663
     },
     {
       "id": "research/tech-news/backlog.md",
@@ -28082,7 +28115,7 @@
       "title": "Topic Backlog: tech-news",
       "path": "research/tech-news/backlog.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/backlog.md",
-      "sizeBytes": 102400
+      "sizeBytes": 103284
     },
     {
       "id": "research/reddit-radar/index.md",

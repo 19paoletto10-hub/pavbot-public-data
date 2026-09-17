@@ -1,5 +1,9 @@
 # Topic Index: tech-news
 
+## Wieczorny update 2026-09-17 19:33
+
+Wieczór przesuwa temat agentów z warstwy rozmowy do infrastruktury i świata fizycznego. Huawei przyspiesza Ascend 960DT oraz rozwija UnifiedBus, Google Home MCP daje agentom kontrolowany dostęp do domu, a Xiaomi pokazuje publicznie koszt i przebieg treningu MiMo-V2.6. NVIDIA rozwija natywne kerneli CUDA w Rust. Wspólny wniosek: adopcja agentów wymaga interconnectu, obserwowalności, bezpiecznego kodu i precyzyjnego modelu uprawnień.
+
 Last updated: 2026-09-17
 
 ## Poranny update 2026-09-17 08:00
