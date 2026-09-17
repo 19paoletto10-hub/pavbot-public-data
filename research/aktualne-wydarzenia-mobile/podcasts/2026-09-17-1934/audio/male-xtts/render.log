@@ -8,7 +8,7 @@
   return torch.load(f, map_location=map_location, **kwargs)
  > Using model: xtts
  > Text splitted to sentences.
-['Dzień dobry.', 'Oto najważniejsze informacje z Polski i świata.', 'Zaczynamy od Ukrainy.', 'Według relacji Reuters, rosyjskie uderzenia w nocy raniły co najmniej trzynaście osób w Kijowie i Odessie.', 'W Kijowie ucierpiało dziesięć osób, a w Odessie trzy, w tym dziecko.', 'Uszkodzone zostały między innymi budynki mieszkalne.', 'To kolejny przypominający o sobie test obrony powietrznej i odporności infrastruktury cywilnej.', 'W Polsce premier Donald Tusk ma dziś spotkać się z kanclerzem Austrii Christianem Stockerem.', 'Według Kancelarii Prezesa Rady Ministrów rozmowy obejmą relacje gospodarcze oraz negocjacje przyszłego budżetu Unii Europejskiej na lata dwa tysiące dwadzieścia osiem–dwa tysiące trzydzieści cztery.', 'Wizycie ma towarzyszyć delegacja austriackiego biznesu.', 'Na razie znamy agendę, nie znamy jeszcze wyników — dyplomacja lubi najpierw kawę, potem komunikat.', 'NATO utrzymuje intensywny kalendarz konsultacji.', 'Sekretarz generalny Mark Rutte spotyka się dziś w Wielkiej Brytanii z premierem oraz ministrami spraw zagranicznych i obrony.', 'Sam harmonogram nie oznacza jeszcze nowej decyzji operacyjnej, dlatego na konkrety trzeba poczekać na oficjalne readouty.', 'W tle pozostaje europejska debata o reagowaniu na zagrożenia hybrydowe.', 'Komisja Europejska mówi o wspólnym playbooku obejmującym drony, sabotaż i cyberataki.', 'Mechanizm miałby pomagać państwom koordynować reakcję na zdarzenia poniżej progu otwartej agresji.', 'To nie jest europejski odpowiednik artykułu piątego NATO, lecz próba stworzenia wspólnej procedury.', 'Najważniejsze pytania brzmią: kiedy procedura się uruchamia i kto ocenia dowody?', 'Ważne doprecyzowanie dla Polski: sprawdzony wczorajszy komunikat RCB informował o zakończeniu ataku na Ukrainę i braku zagrożenia na terytorium Polski.', 'Nie znaleziono dziś nowego publicznego komunikatu, który zmieniałby ten obraz.', 'Na tym kończymy.', 'Śledzimy dalszy bilans ataków, wyniki spotkania Warszawa–Wiedeń i szczegóły europejskiego planu bezpieczeństwa.', 'Do usłyszenia.']
+['Dobry wieczór.', 'Oto najważniejsze wydarzenia z Polski i świata.', 'Zacznijmy od wschodniej Polski.', 'Po rosyjskich uderzeniach na Ukrainę aktywowano polskie lotnictwo.', 'Rządowe Centrum Bezpieczeństwa wysłało mieszkańcom części Lubelskiego i Podkarpackiego alert o zagrożeniu atakiem z powietrza.', 'Później alert odwołano, a RCB wyraźnie podało, że na terenie Polski nie ma zagrożenia.', 'To ważne rozróżnienie: działania prewencyjne tak, potwierdzone naruszenie polskiej przestrzeni — nie.', 'W Ukrainie nocne rosyjskie ataki rakietowe i dronowe zraniły co najmniej 19 osób, w tym dzieci — podała agencja Associated Press.', 'Ukraińskie siły powietrzne informują o zniszczeniu lub zakłóceniu 131 rosyjskich celów powietrznych.', 'Według tej samej relacji Ukraina uderzyła też w cele w Rosji, między innymi w rafinerię w Jarosławiu i lotnisko wojskowe w obwodzie rostowskim.', 'Wojna, jak widać, nadal bardzo niechętnie respektuje granice mapy.', 'Ważny europejski wątek dotyczy Bałtyku.', 'W Finlandii trwa MARSEC EU 26, unijne ćwiczenie poświęcone bezpieczeństwu morskiemu.', 'Uczestnicy testują ochronę kabli podmorskich, rurociągów, wymianę informacji oraz reakcję na podejrzaną aktywność i zagrożenia hybrydowe.', 'To praktyczne uzupełnienie politycznych deklaracji o odporności Europy.', 'W technologii nie ma dziś potwierdzonej nowej decyzji, która zmieniałaby obowiązki dostawców sztucznej inteligencji.', 'Jest za to coraz wyraźniejsze połączenie cyberbezpieczeństwa, dronów i fizycznej ochrony infrastruktury.', 'Nowoczesna infrastruktura ma dziś dwa problemy: można ją uszkodzić śrubokrętem albo kodem — i oba scenariusze trzeba traktować poważnie.', 'Podsumowanie: alert w Polsce został odwołany, bez potwierdzonego zagrożenia na naszym terytorium.', 'W Ukrainie rośnie bilans rannych po rosyjskich atakach, a Europa ćwiczy ochronę krytycznej infrastruktury Bałtyku.', 'To był wieczorny brief Pavbota.', 'Dobrego wieczoru i spokojnej nocy.']
 Traceback (most recent call last):
   File "/Users/promaczek/Documents/CODEX-Pavbot/.agents/scripts/podcast/render_xtts.py", line 105, in <module>
     main()
@@ -68,18 +68,18 @@ Traceback (most recent call last):
   File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
     return forward_call(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 427, in forward
-    feed_forward_hidden_states = self.mlp(hidden_states)
-                                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 390, in forward
+    attn_outputs = self.attn(
+                   ^^^^^^^^^^
   File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
     return self._call_impl(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
     return forward_call(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 356, in forward
-    hidden_states = self.c_proj(hidden_states)
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 312, in forward
+    query, key, value = self.c_attn(hidden_states).split(self.split_size, dim=2)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
     return self._call_impl(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
