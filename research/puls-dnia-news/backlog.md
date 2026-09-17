@@ -1,5 +1,13 @@
 # Puls Dnia News Backlog
 
+# 2026-09-17 21:00
+
+- Śledzić dokumenty Komisji Europejskiej i dalszy proces EU KIDS Act.
+- Sprawdzić wyniki badań drona z Rusinowa oraz komunikaty prokuratury, MON i KPRM.
+- Sprawdzić najnowsze alerty IMGW/RCB i regionalne zalecenia pogodowe.
+- Monitorować G20, rurociąg East–West, Brent, diesel i żeglugę przez Morze Czerwone.
+- Obserwować praktyczne zgłoszenia i wytyczne CRA/CSIRT.
+
 # 2026-09-17 18:01
 
 - Sprawdzić wyniki badań drona z Rusinowa oraz komunikaty prokuratury, MON i KPRM.

@@ -2,6 +2,12 @@
 
 ## Current State
 
+2026-09-17 21:00 CEST: materialna aktualizacja — Komisja Europejska opublikowała komunikat o EU KIDS Act, a wątki drona z Rusinowa, bezpieczeństwa granicy, energii i żeglugi pozostają w monitoringu. Utrzymano 12 kart w siedmiu sekcjach; BBC i CNN były częściowo ograniczone technicznie.
+
+Źródła i rozdzielenie faktów od interpretacji: [raport](runs/2026-09-17-2100.md).
+
+## Current State
+
 2026-09-17 18:01 CEST: materialna aktualizacja operacyjna — Ministerstwo Energii poinformowało o udziale Polski w debacie G20 o bezpieczeństwie dostaw, a WCZK Białystok opisało ćwiczebny charakter syren. Dron z Rusinowa nadal wymaga badań; utrzymano 12 kart w siedmiu sekcjach.
 
 Źródła i rozdzielenie faktów od interpretacji: [raport](runs/2026-09-17-1801.md).
