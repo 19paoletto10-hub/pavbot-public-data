@@ -2,6 +2,12 @@
 
 ## Current State
 
+2026-09-17 12:01 CEST: materialna aktualizacja dotyczy dalszej koordynacji sytuacji pogodowej przez RCB oraz praktycznych komunikatów regionalnych. Utrzymano 12 kart w siedmiu sekcjach; bezpieczeństwo Polski, energia, Jemen i CRA pozostają w monitoringu.
+
+Źródła i rozdzielenie faktów od interpretacji: [raport](runs/2026-09-17-1201.md).
+
+## Current State
+
 2026-09-17 09:01 CEST: Slot nie przyniósł materialnej zmiany względem 06:01.
 Utrzymano 12 kart w siedmiu sekcjach; bezpieczeństwo Polski, energia, Jemen,
 CRA i alerty pozostają w monitoringu. Oficjalnie potwierdzono trwające testy

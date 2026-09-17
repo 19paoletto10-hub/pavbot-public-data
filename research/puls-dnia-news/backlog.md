@@ -1,5 +1,12 @@
 # Puls Dnia News Backlog
 
+# 2026-09-17 12:01
+
+- Sprawdzić najnowsze alerty IMGW/RCB i regionalne zalecenia pogodowe.
+- Sprawdzić kolejne komunikaty MON, KPRM, NATO i Ukrainy o incydencie przy granicy.
+- Monitorować rurociąg East–West, Brent, diesel i żeglugę przez Morze Czerwone.
+- Obserwować praktyczne zgłoszenia i wytyczne CRA SRP/CSIRT.
+
 # 2026-09-17 09:01
 
 - Sprawdzić kolejne komunikaty MON, KPRM, NATO i Ukrainy o incydencie przy granicy.
