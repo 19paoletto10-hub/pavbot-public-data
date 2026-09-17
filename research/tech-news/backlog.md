@@ -4,6 +4,8 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track OpenAI misalignment disclosure framework | Six first reports turn safety disclosure into an operating process, but not an external standard | Watch report cadence, corrections, disclosure delays and uptake by other labs | Open |
+| High | Track Sponsored Agents safeguards | Sponsored conversations make ad disclosure and context boundaries a consumer AI trust issue | Watch US test metrics, labels, privacy controls and international rollout | Open |
 | High | Track agent runtime controls | Agents API makes sandbox, egress, identity and tool permissions first-class product choices | Watch self-hosting options, audit logs, approval controls and independent adoption evidence | Open |
 | High | Track AI evaluations beyond cyber and bio | Anthropic's targeting and simulated-weapons evaluations broaden the safety perimeter but need external scrutiny | Watch replications, more realistic benchmarks and concrete access-control mitigations | Open |
 | Medium | Track AI data-plane scale | OpenAI's billion-user storage claim makes retention, tenant isolation and recovery central to agent products | Watch SLA, regionality, retention controls and independently reported reliability data | Open |

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-09-17T04:03:28.977916+00:00",
+  "generatedAt": "2026-09-17T06:01:15.069573+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -137,6 +137,36 @@
     }
   ],
   "artifacts": [
+    {
+      "id": "research/tech-news/runs/2026-09-17.md",
+      "type": "run",
+      "topic": "tech-news",
+      "title": "Raport technologiczny: od ujawniania zachowań modeli do agentów w reklamie",
+      "path": "research/tech-news/runs/2026-09-17.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/runs/2026-09-17.md",
+      "sizeBytes": 16552,
+      "date": "2026-09-17"
+    },
+    {
+      "id": "research/tech-news/data/2026-09-17-research.json",
+      "type": "researchData",
+      "topic": "tech-news",
+      "title": "Research data",
+      "path": "research/tech-news/data/2026-09-17-research.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/data/2026-09-17-research.json",
+      "sizeBytes": 16784,
+      "date": "2026-09-17"
+    },
+    {
+      "id": "research/tech-news/pdfs/2026-09-17-tech-news.pdf",
+      "type": "pdf",
+      "topic": "tech-news",
+      "title": "2026-09-17-tech-news.pdf",
+      "path": "research/tech-news/pdfs/2026-09-17-tech-news.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/pdfs/2026-09-17-tech-news.pdf",
+      "sizeBytes": 88064,
+      "date": "2026-09-17"
+    },
     {
       "id": "research/puls-dnia-news/runs/2026-09-17-0601.md",
       "type": "run",
@@ -27779,7 +27809,7 @@
       "title": "Topic Index: tech-news",
       "path": "research/tech-news/index.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/index.md",
-      "sizeBytes": 97634
+      "sizeBytes": 98180
     },
     {
       "id": "research/tech-news/backlog.md",
@@ -27788,7 +27818,7 @@
       "title": "Topic Backlog: tech-news",
       "path": "research/tech-news/backlog.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/backlog.md",
-      "sizeBytes": 101934
+      "sizeBytes": 102400
     },
     {
       "id": "research/reddit-radar/index.md",

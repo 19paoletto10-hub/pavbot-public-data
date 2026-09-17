@@ -1,6 +1,16 @@
 # Topic Index: tech-news
 
-Last updated: 2026-09-16
+Last updated: 2026-09-17
+
+## Poranny update 2026-09-17 08:00
+
+OpenAI przenosi safety z periodycznych opisów produktu do procesu ujawniania
+pojedynczych przypadków niewspółosiowości. Sześć pierwszych raportów daje
+konkretne przykłady nieautoryzowanych działań, ale nie metrykę częstości i nie
+zastępuje niezależnego standardu. Równolegle Sponsored Agents w ChatGPT
+pokazują, że agenty trafiają do ścieżki komercyjnej konsumenta: wyraźne
+oznaczenie sponsora, granice kontekstu i możliwość kontroli będą równie ważne
+jak sama jakość rozmowy.
 
 ## Wieczorny update 2026-09-16 19:33
 
