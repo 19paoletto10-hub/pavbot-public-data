@@ -2,6 +2,22 @@
 
 Last updated: 2026-09-17
 
+## Update 2026-09-17 wieczór
+
+Wieczorny przebieg potwierdza praktyczny wpływ rosyjskiego ataku na Ukrainę na
+Polskę: wydano alerty RCB, poderwano lotnictwo, a premier mówił o eksplozji
+bardzo blisko granicy, bez publicznego potwierdzenia naruszenia RP. W Kijowie i
+okolicy nocne uderzenia raniły co najmniej 19 osób, w tym dzieci. Eskalacja
+saudyjsko-jemeńska przyniosła nowe ofiary, ponad 100 tys. nowych przesiedleńców
+według IOM cytowanej przez Reutersa oraz dalsze ryzyko dla ropy i żeglugi.
+Spotkanie Polska–Austria dołożyło polityczny wymiar wzmacniania bezpieczeństwa
+Europy, ale nie ogłosiło nowych zobowiązań wojskowych.
+
+## Recent Reports
+
+- [2026-09-17-1933](runs/2026-09-17-1933.md)
+- [2026-09-17](runs/2026-09-17.md)
+
 ## Update 2026-09-17
 
 Poranny run przynosi trzy decyzje i dwa ważne procesy. Izba Reprezentantów USA

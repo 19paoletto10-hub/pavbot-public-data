@@ -475,3 +475,10 @@
 - [ ] Po wyborach do Dumy zestawić oficjalne wyniki z niezależnymi ocenami frekwencji, represji i możliwych decyzji mobilizacyjnych.
 - [ ] Monitorować potwierdzone wsparcie obrony powietrznej dla Arabii Saudyjskiej oraz dane ONZ o przesiedleniach w Jemenie.
 - [ ] Uzupełnić wynik rozmów paryskich o Libanie, jeśli pojawią się konkretne deklaracje finansowe, sprzętowe lub mandat nowej misji.
+
+# Follow-up 2026-09-17 wieczór
+
+- [ ] High: Zweryfikować końcowe ustalenia polskich służb dotyczące eksplozji i ewentualnej trasy obiektu przy granicy z Ukrainą.
+- [ ] High: Śledzić bilans nocnych ataków na Kijów oraz potwierdzenia ukraińskich uderzeń na rosyjską rafinerię i lotnisko.
+- [ ] High: Monitorować przepływ statków przez Bab al-Mandab, naprawę rurociągu East–West i dane IOM/ONZ o przesiedleniach w Jemenie.
+- [ ] Medium: Sprawdzić, czy deklaracje Polska–Austria przełożą się na konkretne projekty bezpieczeństwa lub współpracy przemysłowej.
