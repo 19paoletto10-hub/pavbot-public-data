@@ -1,8 +1,10 @@
 # Topic Index: llm-ai-jobs-wroclaw
 
-Last updated: 2026-09-16 15:54 CEST
+Last updated: 2026-09-17 15:40 CEST
 
 ## Current Understanding
+
+Runda `2026-09-17-1540`: board nadal ma 131 ofert, ale odświeżył sygnały Grid Dynamics Senior/Staff Physical AI, Accenture GenAI Architect, HIBERUS Expert AI/ML Data Engineer i WSKZ AI Automatization Engineer. CDQ pozostaje aktywne do 30 września z zakresem MCP/RAG/Ollama i publicznymi widełkami; nowe karty są board-only i wymagają weryfikacji kanonicznej.
 
 Runda `2026-09-16-1554`: dodano kanonicznie potwierdzoną rolę Grid Dynamics Senior/Lead AI engineer dla Wrocławia i innych miast Polski oraz aktywną kartę UNIVIO AI Engineer z terminem 22 września i widełkami boardowymi. Board Just Join IT pozostaje na poziomie 131 ofert; EPAM, ITLT, SQUAD i DataArt nie wykazały materialnej zmiany.
 
@@ -152,6 +154,21 @@ konkretny platformowy, delivery lub toolingowy scope.
 
 - UNIVIO AI Engineer: potwierdzić walutę widełek, seniority i status przed terminem 22 września.
 - Grid Dynamics Senior/Lead AI engineer: potwierdzić szczegóły hybrydy i bezpośredni kanał aplikacji na stronie pracodawcy.
+
+## Follow-up 2026-09-17 15:40
+
+- Grid Dynamics Physical AI, Accenture GenAI Architect i HIBERUS Expert AI/ML Data Engineer: znaleźć kanoniczne strony i potwierdzić lokalizację/model pracy.
+- WSKZ AI Automatization Engineer: potwierdzić walutę widełek oraz zakres developmentu AI.
+- CDQ: potwierdzić walutę widełek i model pracy przed terminem 30 września.
+
+## Seen Opportunities Added 2026-09-17
+
+| Canonical key | Company | Title | Location / mode | First seen | Status | Notes | Source |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| grid-dynamics-senior-staff-ai-engineer-physical-ai-wroclaw-hybrid | Grid Dynamics Poland | Senior/Staff AI Engineer, Physical AI | Wrocław / hybrid | 2026-09-17-1540 | Open | Board refresh marked the role New; multimodal generative models, PyTorch, robotics/physical AI, GPU/Ray; salary undisclosed. | [Just Join IT](https://justjoin.it/job-offer/grid-dynamics-poland-senior-staff-ai-engineer-physical-ai-wroclaw-ai) |
+| justjoin-accenture-genai-architect-ai-data-wroclaw | Accenture | GenAI Architect (AI&Data) | Poland multi-city / hybrid; Wrocław unconfirmed | 2026-09-17-1540 | Open | Enterprise agentic AI, LLM strategy, cloud architecture, responsible-AI guardrails and A2A/MCP. | [Just Join IT](https://justjoin.it/job-offers/wroclaw/ai) |
+| justjoin-hiberus-expert-ai-ml-data-engineer-wroclaw-remote | HIBERUS Poland | Expert AI/ML Data Engineer | Wrocław / remote | 2026-09-17-1540 | Open | Board-only role; AI/ML, Python and data engineering; detailed LLM scope not confirmed. | [Just Join IT](https://justjoin.it/job-offers/all-locations/ai) |
+| justjoin-wskz-ai-automatization-engineer-wroclaw-office | Wyższa Szkoła Kształcenia Zawodowego | AI Automatization Engineer | Wrocław / office | 2026-09-17-1540 | Open | OpenAI API, Python, FastAPI, GraphQL; board shows 17 days left and a salary requiring currency confirmation. | [Just Join IT](https://justjoin.it/job-offers/wroclaw/ai) |
 
 ## Seen Opportunities Added 2026-09-16
 

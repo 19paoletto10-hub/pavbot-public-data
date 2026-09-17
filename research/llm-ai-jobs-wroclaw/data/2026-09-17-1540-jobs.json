@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-09-17",
+  "runTime": "15:40",
+  "executiveSummary": "Runda jest materialna, ale nie przyniosła nowego kanonicznego employer page. Publiczny board Just Join IT nadal pokazuje 131 ofert, a jego bieżący tail został odświeżony o role mocno związane z produkcyjnym AI: fizyczne/multimodalne AI, architekturę agentic AI, AI platform/data engineering oraz automatyzację z OpenAI API. Najciekawsze nowe sygnały są board-only i wymagają potwierdzenia u pracodawcy przed aplikowaniem. CDQ pozostaje aktywne do 30 września z publicznymi widełkami i zakresem MCP/RAG/Ollama.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "Grid Dynamics Poland — Senior/Staff AI Engineer, Physical AI",
+      "company": "Nieznana firma",
+      "location": "Wrocław, model hybrydowy; publiczny board pokazuje także inne lokalizacje.",
+      "workMode": "Hybrid",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Staff",
+      "fitSummary": "multimodalne modele generatywne, PyTorch, Python, robotyka/physical AI i praca z GPU/Ray.",
+      "whyInteresting": "łączy generative AI z inference/ML engineeringiem poza klasycznym chatbotowym use case’em; karta została oznaczona jako nowa w bieżącym board refreshu.",
+      "uncertainty": "oferta była już historycznie widoczna w indeksie; nowość dotyczy bieżącego odświeżenia/statusu boardu, nie nowego kanonicznego URL-a.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/grid-dynamics-poland-senior-staff-ai-engineer-physical-ai-wroclaw-ai"
+      ],
+      "tags": [
+        "Python"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "Accenture — GenAI Architect (AI&Data)",
+      "company": "Nieznana firma",
+      "location": "Warszawa i inne lokalizacje, hybrydowo; Wrocław pozostaje w zasięgu boardu, ale nie jest rozstrzygnięty na karcie.",
+      "workMode": "Hybrid",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "enterprise agentic AI, strategia LLM, architektura chmurowa, guardraile responsible AI oraz protokoły A2A/MCP.",
+      "whyInteresting": "wysokopoziomowa, ale nadal techniczna rola łącząca architekturę wdrożeń LLM z kontrolą bezpieczeństwa i interoperacyjnością agentów.",
+      "uncertainty": "board-only; dokładny udział Wrocławia i bezpośredni kanał aplikacji wymagają potwierdzenia.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "Agentic AI",
+        "LLM",
+        "GenAI"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "HIBERUS Poland — Expert AI/ML Data Engineer",
+      "company": "Nieznana firma",
+      "location": "Wrocław, zdalnie.",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "AI/ML, Python i inżynieria danych; rola jest bliżej platform/data engineeringu niż czystego researchu modeli.",
+      "whyInteresting": "może być dobrym wejściem do produkcyjnych pipeline’ów AI i warstwy danych wspierającej systemy generatywne.",
+      "uncertainty": "board-only; opis publiczny jest krótszy i nie potwierdza konkretnych technologii LLM/RAG.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/all-locations/ai"
+      ],
+      "tags": [
+        "Python"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "Wyższa Szkoła Kształcenia Zawodowego — AI Automatization Engineer",
+      "company": "Nieznana firma",
+      "location": "Wrocław, praca stacjonarna.",
+      "workMode": "Wrocław",
+      "compensation": "2 696,51–7 280,57 USD/mies. zależnie od umowy według boardu; jednostka wymaga potwierdzenia.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "OpenAI API, Python, FastAPI, GraphQL i automatyzacja procesów.",
+      "whyInteresting": "praktyczna rola integracyjna, w której LLM/API są częścią wdrażanych automatyzacji, a nie tylko eksperymentem.",
+      "uncertainty": "board-only; brak potwierdzonej strony kariery i niejednoznaczna prezentacja wynagrodzenia.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "LLM",
+        "Python"
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "CDQ — Senior Software Developer (AI)",
+      "company": "Nieznana firma",
+      "location": "Wrocław, Rysia 1a; model pracy nie został jednoznacznie opisany w bieżącym podglądzie.",
+      "workMode": "Wrocław",
+      "compensation": "5 294,42–6 853,18 USD netto/mies. B2B albo 4 300,03–5 912,55 USD brutto/mies. UoP według karty.",
+      "seniority": "Senior",
+      "fitSummary": "MCP, RAG, Ollama, vector search, Redis i MongoDB.",
+      "whyInteresting": "konkretna rola software-engineeringowa z lokalnym Wrocławiem i praktycznym zakresem LLM tooling.",
+      "uncertainty": "boardowa waluta może być przeliczona; termin 30 września jest publiczny, ale źródło nie jest kanoniczną stroną kariery.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/cdq-senior-software-developer-ai--wroclaw-java?promo=lal"
+      ],
+      "tags": [
+        "RAG",
+        "LLM"
+      ]
+    }
+  ],
+  "changes": [
+    "Board Just Join IT utrzymuje 131 ofert, ale pokazuje świeży status „New” dla Grid Dynamics Senior/Staff AI Engineer, Accenture GenAI Architect i kilku kart pokrewnych.",
+    "Do bieżącego raportu dodano HIBERUS Expert AI/ML Data Engineer oraz WSKZ AI Automatization Engineer jako nowe/odświeżone boardowe sygnały; nie były wcześniej zapisane pod tymi kluczami w indeksie.",
+    "CDQ jest nadal aktywne i ma termin 30 września oraz jawne widełki; nie traktuję tego jako nowej oferty, tylko jako potwierdzony status kontrolny.",
+    "UNIVIO, ITLT i SQUAD pozostają widoczne, ale bez potwierdzonej materialnej zmiany tytułu, zakresu lub kanonicznego URL-a."
+  ],
+  "risks": [
+    "Board może oznaczać „New” po odświeżeniu karty, nawet gdy oferta ma starszą historię; dlatego Grid Dynamics Physical AI jest opisane jako aktualizacja statusu, nie bezwarunkowo nowa oferta.",
+    "USD w kartach Just Join IT może być walutą prezentacyjną/przeliczeniem; wynagrodzenie CDQ i WSKZ wymaga potwierdzenia z pracodawcą.",
+    "Dla Accenture i HIBERUS nie potwierdzono w tej rundzie osobnej kanonicznej strony szczegółowej z polityką Wrocław/remote."
+  ],
+  "recommendedActions": [
+    "Najpierw sprawdzić Grid Dynamics Physical AI, jeśli profil obejmuje multimodalne modele, PyTorch i infrastrukturę GPU.",
+    "Dla Accenture potwierdzić, czy Wrocław jest realną lokalizacją tej konkretnej karty oraz jaki jest udział implementacji względem architektury.",
+    "Dla HIBERUS i WSKZ znaleźć bezpośrednie strony pracodawcy przed dalszą kwalifikacją.",
+    "Dla CDQ zweryfikować walutę widełek i model pracy przed terminem 30 września."
+  ],
+  "checkedSources": [
+    {
+      "title": "Just Join IT – AI/ML Wrocław",
+      "url": "https://justjoin.it/job-offers/wroclaw/ai",
+      "status": "checked"
+    },
+    {
+      "title": "Just Join IT – AI/ML wszystkie lokalizacje",
+      "url": "https://justjoin.it/job-offers/all-locations/ai",
+      "status": "checked"
+    },
+    {
+      "title": "Pracuj.pl – machine learning engineer Wrocław",
+      "url": "https://www.pracuj.pl/praca/machine%20learning%20engineer%3Bkw/wroclaw%3Bwp",
+      "status": "checked"
+    },
+    {
+      "title": "ITLT – AI Engineer / Senior AI Engineer",
+      "url": "https://justjoin.it/job-offer/itlt-ai-engineer-senior-ai-engineer-wroclaw-python",
+      "status": "checked"
+    },
+    {
+      "title": "CDQ – Senior Software Developer (AI)",
+      "url": "https://justjoin.it/job-offer/cdq-senior-software-developer-ai--wroclaw-java?promo=lal",
+      "status": "checked"
+    },
+    {
+      "title": "SQUAD – Applied Scientist (LLM)",
+      "url": "https://justjoin.it/job-offer/squad-applied-scientist-llm--wroclaw-ai",
+      "status": "checked"
+    }
+  ]
+}

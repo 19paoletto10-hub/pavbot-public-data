@@ -1,5 +1,11 @@
 # Topic Backlog: llm-ai-jobs-wroclaw
 
+## Follow-up 2026-09-17 15:40
+
+- Grid Dynamics Physical AI, Accenture GenAI Architect i HIBERUS Expert AI/ML Data Engineer: znaleźć kanoniczne strony i potwierdzić lokalizację/model pracy.
+- WSKZ AI Automatization Engineer: potwierdzić walutę widełek oraz realny udział developmentu AI.
+- CDQ: potwierdzić walutę widełek i model pracy przed terminem 30 września.
+
 ## Follow-up 2026-09-14 15:41
 
 - CDQ Senior Software Developer (AI): potwierdzić zmianę seniority, walutę widełek i model pracy na stronie pracodawcy.
