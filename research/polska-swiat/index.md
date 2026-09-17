@@ -1,6 +1,17 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-09-16
+Last updated: 2026-09-17
+
+## Update 2026-09-17
+
+Poranny run przynosi trzy decyzje i dwa ważne procesy. Izba Reprezentantów USA
+przyjęła szeroki pakiet sankcji wobec Rosji, Fed podniósł stopy po raz pierwszy
+od 2023 roku, a sejmowa komisja zarekomendowała odrzucenie prezydenckiego weta
+do ustaw o statusie osoby najbliższej. Rosja rozpoczyna kontrolowane wybory do
+Dumy bez realnej opozycji antywojennej. Na Bliskim Wschodzie ofensywa Huti
+spowodowała ponad 125 tys. przesiedleń i ujawniła presję na saudyjskie zapasy
+interceptorów, a Francja, Jordania i Liban zaczynają praktyczne planowanie
+bezpieczeństwa południowego Libanu po UNIFIL.
 
 ## Update 2026-09-16 wieczór
 

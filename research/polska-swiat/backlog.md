@@ -4,6 +4,11 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track U.S. Russia-sanctions implementation | The House passed the Lindsey Graham package 262-159, covering Russian officials, banks, the shadow fleet and possible tariffs on major energy importers | Watch White House signature, Treasury implementation, waivers, tariff targets and reactions from China, India and EU allies | Open |
+| High | Track Sejm vote on status-of-closest-person veto | The extraordinary committee recommended that the Sejm override the presidential veto, but the statutes still require a three-fifths majority in the full chamber | Watch the plenary calendar, attendance, vote count and any revised compromise proposal; do not treat the committee recommendation as final law | Open |
+| High | Track Russian Duma election and post-vote decisions | Russia begins its first full-scale-war parliamentary election without meaningful anti-war opposition, while economic strain and mobilization speculation remain active | Watch AP, independent monitors, Levada, official results, turnout, repression and any mobilization or budget decisions after the vote | Open |
+| High | Track Yemen displacement and Saudi interceptor gap | AP reports more than 125,000 displaced people and Saudi requests for foreign air-defense support as Houthi pressure reaches oil infrastructure and Red Sea routes | Watch UN OCHA/UNICEF, AP, Saudi and partner statements, confirmed deployments, oil prices and Bab al-Mandab shipping | Open |
+| Medium | Track Lebanon post-UNIFIL security mechanism | Paris talks move post-UNIFIL planning toward financing, equipment, intelligence and deployment of the Lebanese army | Watch France, Lebanon, Jordan, EU, UN and Israel/Hezbollah reactions for mandate, participants, funding and timeline | Open |
 | High | Track 16 September Polish air-alert and airport follow-up | The 16 September run adds a fresh Polish operational response after Russian strikes on Ukraine, including fighters, RCB alert and temporary pauses at Lublin and Rzeszów-Jasionka without confirmed Polish airspace violation | Recheck DORSZ, RCB, MON, airport NOTAM/operations and major Polish outlets for end-of-operation notices, airport normalization and any official attribution | Open |
 | High | Track EU SOTEU counter-drone and hybrid-response package | Von der Leyen moved SOTEU from general security language to specific counter-drone, hybrid-consultation and European security council proposals | Watch European Commission, Council, NATO, Poland/Lithuania/Denmark reactions, funding lines and implementation calendar | Open |
 | High | Track Russian sabotage and targeted-killing investigation | AP describes U.S. investigative material alleging Russian plans for killings, arson and infrastructure sabotage against Ukraine-supporting countries | Watch AP, U.S. court records, FBI/DOJ, European security-service reactions and any Polish infrastructure-protection follow-up; keep allegation/conviction language separate | Open |
@@ -460,5 +465,13 @@
 # Follow-up 2026-09-16 wieczór
 
 - [ ] Sprawdzić końcowe ustalenia prokuratury dotyczące trasy i pochodzenia drona z Rusinowa.
-- [ ] Zweryfikować wynik głosowania Izby Reprezentantów USA nad sankcjami wobec Rosji.
+- [x] Zweryfikować wynik głosowania Izby Reprezentantów USA nad sankcjami wobec Rosji: pakiet przyjęto 262 do 159 i skierowano do podpisu prezydenta.
 - [ ] Śledzić stanowisko Orlenu i dokumenty postępowań w sprawie transakcji OTS.
+
+# Follow-up 2026-09-17
+
+- [ ] Sprawdzić podpis Donalda Trumpa, przepisy wykonawcze i wyjątki w amerykańskim pakiecie sankcji wobec Rosji.
+- [ ] Zweryfikować termin i wynik pełnego głosowania Sejmu nad wetem do ustaw o statusie osoby najbliższej.
+- [ ] Po wyborach do Dumy zestawić oficjalne wyniki z niezależnymi ocenami frekwencji, represji i możliwych decyzji mobilizacyjnych.
+- [ ] Monitorować potwierdzone wsparcie obrony powietrznej dla Arabii Saudyjskiej oraz dane ONZ o przesiedleniach w Jemenie.
+- [ ] Uzupełnić wynik rozmów paryskich o Libanie, jeśli pojawią się konkretne deklaracje finansowe, sprzętowe lub mandat nowej misji.
