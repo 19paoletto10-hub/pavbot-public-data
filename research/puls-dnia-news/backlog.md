@@ -1,5 +1,12 @@
 # Puls Dnia News Backlog
 
+# 2026-09-17 15:01
+
+- Sprawdzić wyniki badań drona z Rusinowa oraz komunikaty prokuratury, MON i KPRM.
+- Sprawdzić najnowsze alerty IMGW/RCB i regionalne zalecenia pogodowe.
+- Monitorować rurociąg East–West, Brent, diesel i żeglugę przez Morze Czerwone.
+- Obserwować praktyczne zgłoszenia i wytyczne CRA SRP/CSIRT.
+
 # 2026-09-17 12:01
 
 - Sprawdzić najnowsze alerty IMGW/RCB i regionalne zalecenia pogodowe.

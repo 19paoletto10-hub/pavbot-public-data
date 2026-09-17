@@ -2,6 +2,12 @@
 
 ## Current State
 
+2026-09-17 15:01 CEST: materialna aktualizacja wątku drona z Rusinowa — według prokuratury odłączono i zneutralizowano około 4-kilogramową głowicę z detonatorem; pochodzenie i trasa obiektu pozostają do ustalenia. Utrzymano 12 kart w siedmiu sekcjach.
+
+Źródła i rozdzielenie faktów od interpretacji: [raport](runs/2026-09-17-1501.md).
+
+## Current State
+
 2026-09-17 12:01 CEST: materialna aktualizacja dotyczy dalszej koordynacji sytuacji pogodowej przez RCB oraz praktycznych komunikatów regionalnych. Utrzymano 12 kart w siedmiu sekcjach; bezpieczeństwo Polski, energia, Jemen i CRA pozostają w monitoringu.
 
 Źródła i rozdzielenie faktów od interpretacji: [raport](runs/2026-09-17-1201.md).
