@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-09-16T19:04:09.775461+00:00",
+  "generatedAt": "2026-09-17T04:03:28.977916+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -137,6 +137,29 @@
     }
   ],
   "artifacts": [
+    {
+      "id": "research/puls-dnia-news/runs/2026-09-17-0601.md",
+      "type": "run",
+      "topic": "puls-dnia-news",
+      "title": "Pavbot Puls Dnia — 2026-09-17, 06:01 CEST",
+      "path": "research/puls-dnia-news/runs/2026-09-17-0601.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/runs/2026-09-17-0601.md",
+      "sizeBytes": 3169,
+      "date": "2026-09-17",
+      "time": "06:01"
+    },
+    {
+      "id": "research/puls-dnia-news/data/2026-09-17-0601-pulse-news.json",
+      "type": "pulseNewsData",
+      "topic": "puls-dnia-news",
+      "title": "Pulse news data",
+      "path": "research/puls-dnia-news/data/2026-09-17-0601-pulse-news.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/data/2026-09-17-0601-pulse-news.json",
+      "sizeBytes": 9447,
+      "date": "2026-09-17",
+      "time": "06:01",
+      "itemCount": 12
+    },
     {
       "id": "research/tech-news/runs/2026-09-16.md",
       "type": "run",
@@ -27801,7 +27824,7 @@
       "title": "Puls Dnia News Index",
       "path": "research/puls-dnia-news/index.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/index.md",
-      "sizeBytes": 9882
+      "sizeBytes": 10299
     },
     {
       "id": "research/puls-dnia-news/backlog.md",
@@ -27810,7 +27833,7 @@
       "title": "Puls Dnia News Backlog",
       "path": "research/puls-dnia-news/backlog.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/backlog.md",
-      "sizeBytes": 19385
+      "sizeBytes": 19735
     },
     {
       "id": "research/polska-swiat/topic.md",

@@ -1,5 +1,12 @@
 # Puls Dnia News Backlog
 
+# 2026-09-17 06:01
+
+- Sprawdzić kolejne komunikaty MON, KPRM, NATO i Ukrainy o incydencie przy granicy.
+- Potwierdzić końcowe ustalenia dotyczące drona z Rusinowa.
+- Monitorować rurociąg East–West, Brent, diesel i żeglugę przez Morze Czerwone.
+- Obserwować nowe alerty RCB/IMGW, akcję „PRĘDKOŚĆ” i praktyczne zgłoszenia CRA SRP.
+
 # 2026-09-16 21:02
 
 - Sprawdzić kolejny komunikat MON, KPRM, NATO i Ukrainy o incydencie przy granicy.

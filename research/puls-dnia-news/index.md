@@ -2,6 +2,12 @@
 
 ## Current State
 
+2026-09-17 06:01 CEST: Poranny slot nie przyniósł materialnej zmiany względem 16 września 21:02. Utrzymano 12 kart w siedmiu sekcjach; bezpieczeństwo Polski, energia, Jemen, CRA i alerty pozostają w monitoringu. Potwierdzono datowane informacje praktyczne o akcji „PRĘDKOŚĆ” oraz ćwiczebnych syrenach w części Podlasia.
+
+Źródła i ograniczenia: [raport](runs/2026-09-17-0601.md).
+
+## Current State
+
 2026-09-16 21:02 CEST: Slot nie przyniósł materialnej zmiany względem 18:01. Utrzymano 12 kart w siedmiu sekcjach; bezpieczeństwo Polski, energia, Jemen, CRA i alerty pozostają w monitoringu. BBC i CNN były częściowo ograniczone technicznie.
 
 Źródła i ograniczenia: [raport](runs/2026-09-16-2102.md).
