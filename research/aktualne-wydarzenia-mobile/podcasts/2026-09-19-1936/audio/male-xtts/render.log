@@ -8,11 +8,11 @@
   return torch.load(f, map_location=map_location, **kwargs)
  > Using model: xtts
  > Text splitted to sentences.
-['Dobry wieczór.', 'Oto najważniejsze wydarzenia z Polski i świata.', 'Zacznijmy od wschodniej Polski.', 'Po rosyjskich uderzeniach na Ukrainę aktywowano polskie lotnictwo.', 'Rządowe Centrum Bezpieczeństwa wysłało mieszkańcom części Lubelskiego i Podkarpackiego alert o zagrożeniu atakiem z powietrza.', 'Później alert odwołano, a RCB wyraźnie podało, że na terenie Polski nie ma zagrożenia.', 'To ważne rozróżnienie: działania prewencyjne tak, potwierdzone naruszenie polskiej przestrzeni — nie.', 'W Ukrainie nocne rosyjskie ataki rakietowe i dronowe zraniły co najmniej 19 osób, w tym dzieci — podała agencja Associated Press.', 'Ukraińskie siły powietrzne informują o zniszczeniu lub zakłóceniu 131 rosyjskich celów powietrznych.', 'Według tej samej relacji Ukraina uderzyła też w cele w Rosji, między innymi w rafinerię w Jarosławiu i lotnisko wojskowe w obwodzie rostowskim.', 'Wojna, jak widać, nadal bardzo niechętnie respektuje granice mapy.', 'Ważny europejski wątek dotyczy Bałtyku.', 'W Finlandii trwa MARSEC EU 26, unijne ćwiczenie poświęcone bezpieczeństwu morskiemu.', 'Uczestnicy testują ochronę kabli podmorskich, rurociągów, wymianę informacji oraz reakcję na podejrzaną aktywność i zagrożenia hybrydowe.', 'To praktyczne uzupełnienie politycznych deklaracji o odporności Europy.', 'W technologii nie ma dziś potwierdzonej nowej decyzji, która zmieniałaby obowiązki dostawców sztucznej inteligencji.', 'Jest za to coraz wyraźniejsze połączenie cyberbezpieczeństwa, dronów i fizycznej ochrony infrastruktury.', 'Nowoczesna infrastruktura ma dziś dwa problemy: można ją uszkodzić śrubokrętem albo kodem — i oba scenariusze trzeba traktować poważnie.', 'Podsumowanie: alert w Polsce został odwołany, bez potwierdzonego zagrożenia na naszym terytorium.', 'W Ukrainie rośnie bilans rannych po rosyjskich atakach, a Europa ćwiczy ochronę krytycznej infrastruktury Bałtyku.', 'To był wieczorny brief Pavbota.', 'Dobrego wieczoru i spokojnej nocy.']
+['Dobry wieczór.', 'Oto najważniejsze wydarzenia z Polski i świata.', 'W Polsce zakończono prewencyjną operację lotniczą uruchomioną po rosyjskich atakach na Ukrainę.', 'Polskie lotnictwo, radary i naziemna obrona powietrzna wróciły do standardowej gotowości.', 'Wojsko podało, że nie odnotowano naruszenia polskiej przestrzeni powietrznej.', 'To ważne rozróżnienie: państwo zareagowało na ryzyko, ale nie potwierdzono ataku na Polskę.', 'W Ukrainie nocne rosyjskie bombardowania przyniosły co najmniej cztery ofiary śmiertelne i jedenaście osób rannych — według ukraińskich służb ratunkowych cytowanych przez Reuters.', 'Bilans może się zmienić wraz z przeszukiwaniem miejsc ataków.', 'W Waszyngtonie Donald Trump podpisał szeroki pakiet sankcji wobec Rosji.', 'Ustawa obejmuje między innymi rosyjskich urzędników, banki i tak zwaną flotę cieni, czyli statki wykorzystywane do obchodzenia ograniczeń w handlu energią.', 'Ustawa przeszła przez Kongres dużą większością.', 'Jej znaczenie zależy jednak od egzekwowania: sankcje działają wtedy, gdy można prześledzić własność, ubezpieczenia i przeładunki.', 'Rosja prowadzi wybory parlamentarne także na okupowanych częściach obwodów donieckiego, ługańskiego, chersońskiego i zaporoskiego.', 'Ukraina uznaje ten proces za nielegalny.', 'W praktyce głosowanie ma wzmacniać rosyjską narrację o trwałej kontroli, a nie rozwiązywać status terytoriów.', 'Francja przygotowuje plan ochrony infrastruktury krytycznej przed dronami i cyberatakami.', 'Paryż wskazuje na nasilające się zagrożenie hybrydowe.', 'To sygnał szerszy niż francuski: Europa coraz częściej traktuje ochronę kabli, energetyki, zakładów obronnych i systemów cyfrowych jako jeden problem bezpieczeństwa.', 'Na koniec najważniejsza zasada interpretacyjna tego wieczoru: aktywacja obrony nie oznacza jeszcze naruszenia granicy, a sankcje ogłoszone nie są tym samym co sankcje skutecznie wyegzekwowane.', 'Dziękuję za uwagę i życzę spokojnego wieczoru.']
 Traceback (most recent call last):
-  File "/Users/promaczek/Documents/CODEX-Pavbot/.agents/scripts/podcast/render_xtts.py", line 105, in <module>
+  File "/Users/promaczek/iCloud Drive (Archive)/Documents/CODEX-Pavbot/.agents/scripts/podcast/render_xtts.py", line 105, in <module>
     main()
-  File "/Users/promaczek/Documents/CODEX-Pavbot/.agents/scripts/podcast/render_xtts.py", line 96, in main
+  File "/Users/promaczek/iCloud Drive (Archive)/Documents/CODEX-Pavbot/.agents/scripts/podcast/render_xtts.py", line 96, in main
     tts.tts_to_file(**kwargs)
   File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/api.py", line 334, in tts_to_file
     wav = self.tts(
@@ -68,18 +68,18 @@ Traceback (most recent call last):
   File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
     return forward_call(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 390, in forward
-    attn_outputs = self.attn(
-                   ^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 427, in forward
+    feed_forward_hidden_states = self.mlp(hidden_states)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^
   File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
     return self._call_impl(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
     return forward_call(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 312, in forward
-    query, key, value = self.c_attn(hidden_states).split(self.split_size, dim=2)
-                        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 354, in forward
+    hidden_states = self.c_fc(hidden_states)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
   File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
     return self._call_impl(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
