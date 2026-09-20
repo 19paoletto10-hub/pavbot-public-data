@@ -28,6 +28,7 @@ Europy, ale nie ogłosiło nowych zobowiązań wojskowych.
 
 ## Recent Reports
 
+- [2026-09-20-1933](runs/2026-09-20-1933.md)
 - [2026-09-20](runs/2026-09-20.md)
 - [2026-09-17-1933](runs/2026-09-17-1933.md)
 - [2026-09-17](runs/2026-09-17.md)

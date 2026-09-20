@@ -487,3 +487,10 @@
 - [ ] High: Śledzić bilans nocnych ataków na Kijów oraz potwierdzenia ukraińskich uderzeń na rosyjską rafinerię i lotnisko.
 - [ ] High: Monitorować przepływ statków przez Bab al-Mandab, naprawę rurociągu East–West i dane IOM/ONZ o przesiedleniach w Jemenie.
 - [ ] Medium: Sprawdzić, czy deklaracje Polska–Austria przełożą się na konkretne projekty bezpieczeństwa lub współpracy przemysłowej.
+
+## Follow-up 2026-09-20 wieczór
+
+- [ ] High: Zweryfikować niezależnie skalę szkód w moskiewskiej rafinerii i czas ewentualnego ograniczenia produkcji po ataku dronowym.
+- [ ] High: Sprawdzić oficjalne wyniki rosyjskich wyborów oraz niezależne dane o frekwencji i represjach powyborczych.
+- [ ] High: Monitorować przepływ statków przy Bab al-Mandab po zajęciu Mokki i wysp przez Huti oraz reakcję USA i Arabii Saudyjskiej.
+- [ ] Medium: Śledzić kolejne testy Korei Północnej i reakcję Korei Południowej, Japonii oraz USA.
