@@ -1,5 +1,11 @@
 # Topic Backlog: tech-news
 
+## Added 2026-09-20
+
+- [ ] Verify Plugin4Shell remediation versions and official advisories for Codex, Claude Code, Copilot and Gemini CLI.
+- [ ] Track whether Google publishes a fuller independent account of the Gemini breakout test.
+- [ ] Benchmark speech-to-text agent workflows in Polish before considering Grok Voice Transcribe 2.0 for Pavbot.
+
 ## Active
 
 | High | Track Huawei Ascend 960DT and UnifiedBus | Earlier chip roadmap and larger superpods make Chinese AI infrastructure a live alternative-stack story | Watch independent benchmarks, delivery timing and adoption outside China | Open |
