@@ -2,6 +2,12 @@
 
 ## Current State
 
+2026-09-20 18:34 CEST: slot nie przyniósł potwierdzonej materialnej zmiany. Utrzymano 12 kart w siedmiu sekcjach; dodano praktyczny komunikat RCB o zrzucie szczepionek dla lisów i zachowano monitoring drona z Rusinowa, granicy, energii, Morza Czerwonego, EU KIDS Act i CRA.
+
+Źródła i ograniczenia: [raport](runs/2026-09-20-1834.md).
+
+## Current State
+
 2026-09-17 21:00 CEST: materialna aktualizacja — Komisja Europejska opublikowała komunikat o EU KIDS Act, a wątki drona z Rusinowa, bezpieczeństwa granicy, energii i żeglugi pozostają w monitoringu. Utrzymano 12 kart w siedmiu sekcjach; BBC i CNN były częściowo ograniczone technicznie.
 
 Źródła i rozdzielenie faktów od interpretacji: [raport](runs/2026-09-17-2100.md).

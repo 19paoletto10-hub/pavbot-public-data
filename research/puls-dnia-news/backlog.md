@@ -1,5 +1,12 @@
 # Puls Dnia News Backlog
 
+# 2026-09-20 18:34
+
+- Sprawdzić kolejne komunikaty prokuratury, MON i KPRM dotyczące Rusinowa.
+- Monitorować RCB i IMGW, odróżniając alerty od komunikatów praktycznych.
+- Śledzić komunikaty Komisji Europejskiej dotyczące EU KIDS Act i CRA.
+- Monitorować energię, Morze Czerwone oraz ewentualne nowe bilanse międzynarodowe.
+
 # 2026-09-17 21:00
 
 - Śledzić dokumenty Komisji Europejskiej i dalszy proces EU KIDS Act.
