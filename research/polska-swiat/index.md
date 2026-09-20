@@ -1,6 +1,19 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-09-17
+Last updated: 2026-09-20
+
+## Update 2026-09-20
+
+Poranny run przynosi równoległą zmianę w bezpieczeństwie i finansach Polski.
+Warszawa dołączyła do koalicji antybalistycznej z Ukrainą i partnerami, bez
+opublikowanego jeszcze kosztorysu lub harmonogramu, a Moody's obniżył rating
+Polski z A2 do A3 przy stabilnej perspektywie. Sejm jednomyślnie uchwalił
+ustawę o asystencji osobistej i skierował ją do Senatu. Globalnie amerykański
+pakiet sankcyjny wobec Rosji i Iranu został podpisany, rosyjskie wybory do Dumy
+weszły w ostatni dzień przy presji na obserwatorów i dużym ataku dronowym na
+region Moskwy, a Huti podjęli pierwszą w tej fazie eskalacji próbę ataku
+rakietowego na Rijad. Iran równolegle przekazał przez Katar warunki powrotu do
+rozmów z USA.
 
 ## Update 2026-09-17 wieczór
 
@@ -15,6 +28,7 @@ Europy, ale nie ogłosiło nowych zobowiązań wojskowych.
 
 ## Recent Reports
 
+- [2026-09-20](runs/2026-09-20.md)
 - [2026-09-17-1933](runs/2026-09-17-1933.md)
 - [2026-09-17](runs/2026-09-17.md)
 
