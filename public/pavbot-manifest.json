@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-09-20T16:36:09.322522+00:00",
+  "generatedAt": "2026-09-20T16:37:40.697994+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -178,6 +178,66 @@
       "path": "research/polska-swiat/data/2026-09-20-research.json",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/data/2026-09-20-research.json",
       "sizeBytes": 20528,
+      "date": "2026-09-20"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-09-20/sources.md",
+      "type": "podcastSources",
+      "topic": "polska-swiat",
+      "title": "Źródła — 20 września 2026",
+      "path": "research/polska-swiat/podcasts/2026-09-20/sources.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-09-20/sources.md",
+      "sizeBytes": 3189,
+      "date": "2026-09-20"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-09-20/script.md",
+      "type": "podcastScript",
+      "topic": "polska-swiat",
+      "title": "Pavbot — Polska i świat — 20 września 2026",
+      "path": "research/polska-swiat/podcasts/2026-09-20/script.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-09-20/script.md",
+      "sizeBytes": 7738,
+      "date": "2026-09-20"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-09-20/render.json",
+      "type": "podcastRender",
+      "topic": "polska-swiat",
+      "title": "render.json",
+      "path": "research/polska-swiat/podcasts/2026-09-20/render.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-09-20/render.json",
+      "sizeBytes": 281,
+      "date": "2026-09-20"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-09-20/draft.md",
+      "type": "podcastDraft",
+      "topic": "polska-swiat",
+      "title": "Draft podcastu — Polska i świat, 20 września 2026",
+      "path": "research/polska-swiat/podcasts/2026-09-20/draft.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-09-20/draft.md",
+      "sizeBytes": 1685,
+      "date": "2026-09-20"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-09-20/brief.pdf",
+      "type": "podcastBriefPdf",
+      "topic": "polska-swiat",
+      "title": "Podcast brief PDF",
+      "path": "research/polska-swiat/podcasts/2026-09-20/brief.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-09-20/brief.pdf",
+      "sizeBytes": 73777,
+      "date": "2026-09-20"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-09-20/podcast.mp3",
+      "type": "podcastAudio",
+      "topic": "polska-swiat",
+      "title": "Podcast audio",
+      "path": "research/polska-swiat/podcasts/2026-09-20/podcast.mp3",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-09-20/podcast.mp3",
+      "sizeBytes": 3614108,
       "date": "2026-09-20"
     },
     {
