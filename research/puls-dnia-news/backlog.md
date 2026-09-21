@@ -1,5 +1,12 @@
 # Puls Dnia News Backlog
 
+# 2026-09-21 21:01
+
+- Monitorować komunikaty RCB, IMGW, MON i KPRM oraz zmiany zasięgu ostrzeżeń.
+- Śledzić przebieg tygodnia ONZ i rozmowy USA–Chiny.
+- Monitorować energię, żeglugę i wpływ napięć na łańcuchy dostaw.
+- Obserwować aktualizacje UKE, CSIRT i instytucji UE.
+
 # 2026-09-20 18:34
 
 - Sprawdzić kolejne komunikaty prokuratury, MON i KPRM dotyczące Rusinowa.

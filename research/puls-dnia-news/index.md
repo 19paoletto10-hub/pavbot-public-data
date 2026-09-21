@@ -2,6 +2,12 @@
 
 ## Current State
 
+2026-09-21 21:01 CEST: slot nie przyniósł potwierdzonej materialnej zmiany względem 15:03. Utrzymano 12 kart w siedmiu sekcjach; monitoring obejmuje ONZ, relacje USA–Chiny, bezpieczeństwo Europy, energię, regionalne ostrzeżenia i komunikaty praktyczne służb.
+
+Źródła i ograniczenia: [raport](runs/2026-09-21-2101.md).
+
+## Current State
+
 2026-09-20 18:34 CEST: slot nie przyniósł potwierdzonej materialnej zmiany. Utrzymano 12 kart w siedmiu sekcjach; dodano praktyczny komunikat RCB o zrzucie szczepionek dla lisów i zachowano monitoring drona z Rusinowa, granicy, energii, Morza Czerwonego, EU KIDS Act i CRA.
 
 Źródła i ograniczenia: [raport](runs/2026-09-20-1834.md).
