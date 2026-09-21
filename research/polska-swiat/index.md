@@ -1,6 +1,18 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-09-20
+Last updated: 2026-09-21
+
+## Update 2026-09-21
+
+Wstępny wynik rosyjskich wyborów ma już konkretny wymiar: po przeliczeniu ponad
+95% lokali Jedna Rosja miała niespełna 58% głosów w części proporcjonalnej, a
+komisja wyborcza prognozowała dla niej rekordowe 355 z 450 mandatów. Wynik
+powstał bez realnej opozycji antywojennej, obserwacji OBWE i przy głosowaniu na
+okupowanych terytoriach Ukrainy. Rosja równolegle uderzyła dronami w Zaporoże i
+dziewięć innych regionów Ukrainy. Na Bliskim Wschodzie nieznany pocisk trafił
+tankowiec wpływający do Ormuzu, raniąc dwóch członków załogi. Polski wątek
+przenosi się do Nowego Jorku: prezydent realizuje agendę bezpieczeństwa,
+paliw i promocji przedsiębiorstw przed debatą generalną ONZ.
 
 ## Update 2026-09-20
 
@@ -28,6 +40,7 @@ Europy, ale nie ogłosiło nowych zobowiązań wojskowych.
 
 ## Recent Reports
 
+- [2026-09-21](runs/2026-09-21.md)
 - [2026-09-20-1933](runs/2026-09-20-1933.md)
 - [2026-09-20](runs/2026-09-20.md)
 - [2026-09-17-1933](runs/2026-09-17-1933.md)
