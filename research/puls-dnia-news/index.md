@@ -2,6 +2,12 @@
 
 ## Current State
 
+2026-09-22 18:03 CEST: slot nie przyniósł potwierdzonej materialnej zmiany względem 21 września 21:01. Utrzymano 12 kart w siedmiu sekcjach; monitoring obejmuje bezpieczeństwo Europy, energię, wydarzenia międzynarodowe oraz regionalne komunikaty służb.
+
+Źródła i ograniczenia: [raport](runs/2026-09-22-1803.md).
+
+## Current State
+
 2026-09-21 21:01 CEST: slot nie przyniósł potwierdzonej materialnej zmiany względem 15:03. Utrzymano 12 kart w siedmiu sekcjach; monitoring obejmuje ONZ, relacje USA–Chiny, bezpieczeństwo Europy, energię, regionalne ostrzeżenia i komunikaty praktyczne służb.
 
 Źródła i ograniczenia: [raport](runs/2026-09-21-2101.md).

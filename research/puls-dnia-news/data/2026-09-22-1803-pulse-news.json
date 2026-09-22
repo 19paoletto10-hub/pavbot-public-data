@@ -1,0 +1,410 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-09-22",
+  "runTime": "18:03",
+  "status": "No material change",
+  "headline": "Monitoring bezpieczeństwa, energii i alertów regionalnych",
+  "summary": "Wieczorny przegląd nie potwierdził nowej materialnej zmiany względem poprzedniego slotu. Nadal monitorowane są bezpieczeństwo Europy, energia, wydarzenia międzynarodowe oraz regionalne komunikaty służb.",
+  "items": [
+    {
+      "id": "pol-rcb-vaccines",
+      "section": "Alerty",
+      "title": "Zrzut szczepionek dla lisów",
+      "lead": "RCB opisało działanie sanitarne, nie nowy alarm.",
+      "whatHappened": "RCB opublikowało 19 września komunikat o zrzucie szczepionek dla lisów.",
+      "keyFacts": [
+        "Komunikat ma charakter praktyczny",
+        "Nie jest ostrzeżeniem o zagrożeniu dla ludzi"
+      ],
+      "reactions": [
+        "Należy stosować lokalne zalecenia sanitarne."
+      ],
+      "whyItMatters": "Informacja dotyczy zdrowia publicznego i kontaktu ze szczepionkami.",
+      "context": "To odrębny temat od alertów pogodowych i bezpieczeństwa.",
+      "watchNext": [
+        "RCB",
+        "lokalne służby"
+      ],
+      "sources": [
+        {
+          "title": "RCB",
+          "url": "https://www.gov.pl/web/rcb/"
+        }
+      ],
+      "tags": [
+        "RCB",
+        "zdrowie"
+      ],
+      "priority": "3"
+    },
+    {
+      "id": "pol-drone",
+      "section": "Bezpieczeństwo",
+      "title": "Dron z Rusinowa",
+      "lead": "Badania i ustalenia służb nadal trwają.",
+      "whatHappened": "Wątek drona z Rusinowa pozostaje w monitoringu; wcześniejsze ustalenia dotyczące głowicy nie przesądzają pochodzenia obiektu.",
+      "keyFacts": [
+        "Brak końcowej oceny sprawcy",
+        "Potrzebne są komunikaty pierwotne"
+      ],
+      "reactions": [
+        "Nie przedstawiamy hipotez jako faktów."
+      ],
+      "whyItMatters": "Dotyczy bezpieczeństwa państwa i infrastruktury.",
+      "context": "To kontynuacja wcześniej opisanego incydentu.",
+      "watchNext": [
+        "Prokuratura",
+        "MON",
+        "KPRM"
+      ],
+      "sources": [
+        {
+          "title": "KPRM",
+          "url": "https://redakcja.www.gov.pl/web/premier/eskalacja-rosyjskich-dzialan-staje-sie-faktem"
+        }
+      ],
+      "tags": [
+        "dron",
+        "bezpieczeństwo"
+      ],
+      "priority": "5"
+    },
+    {
+      "id": "pol-border",
+      "section": "Bezpieczeństwo",
+      "title": "Bezpieczeństwo granicy",
+      "lead": "Brak nowego potwierdzonego bilansu w tym slocie.",
+      "whatHappened": "Wcześniejszy komunikat KPRM pozostaje punktem odniesienia dla monitoringu bezpieczeństwa granicy.",
+      "keyFacts": [
+        "Nie znaleziono nowego bilansu",
+        "Brak aktualizacji nie oznacza rozstrzygnięcia"
+      ],
+      "reactions": [
+        "Sytuacja wymaga dalszych komunikatów."
+      ],
+      "whyItMatters": "Wpływa na ocenę ryzyka w Polsce.",
+      "context": "Część doniesień pozostaje niepotwierdzona.",
+      "watchNext": [
+        "KPRM",
+        "NATO"
+      ],
+      "sources": [
+        {
+          "title": "KPRM",
+          "url": "https://redakcja.www.gov.pl/web/premier/eskalacja-rosyjskich-dzialan-staje-sie-faktem"
+        }
+      ],
+      "tags": [
+        "granica",
+        "Polska"
+      ],
+      "priority": "5"
+    },
+    {
+      "id": "pol-weather",
+      "section": "Polska",
+      "title": "Pogoda i transport",
+      "lead": "Prognozy należy oddzielać od aktywnych alertów.",
+      "whatHappened": "Bieżącą sytuację pogodową należy sprawdzać w IMGW; w tym slocie nie potwierdzono nowego alertu o materialnym wpływie.",
+      "keyFacts": [
+        "Zasięg zjawisk jest regionalny",
+        "Prognoza nie jest automatycznie alertem"
+      ],
+      "reactions": [
+        "Kierowcy powinni sprawdzać lokalne ostrzeżenia."
+      ],
+      "whyItMatters": "Pogoda wpływa na transport i bezpieczeństwo.",
+      "context": "Monitoring kontynuuje wcześniejszy wątek pogodowy.",
+      "watchNext": [
+        "IMGW",
+        "RCB"
+      ],
+      "sources": [
+        {
+          "title": "RCB",
+          "url": "https://www.gov.pl/web/rcb/"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "IMGW"
+      ],
+      "priority": "3"
+    },
+    {
+      "id": "pol-politics",
+      "section": "Polityka",
+      "title": "Agenda rządu",
+      "lead": "Bieżące projekty wymagają dalszych etapów legislacyjnych.",
+      "whatHappened": "W tym slocie nie potwierdzono nowej decyzji politycznej o materialnym wpływie na wcześniejszy przegląd.",
+      "keyFacts": [
+        "Brak nowego rozstrzygnięcia",
+        "Agenda nie jest finalnym prawem"
+      ],
+      "reactions": [
+        "Należy czekać na oficjalne dokumenty."
+      ],
+      "whyItMatters": "Decyzje rządu mogą zmieniać regulacje i usługi publiczne.",
+      "context": "To karta obserwacyjna, nie nowe wydarzenie.",
+      "watchNext": [
+        "KPRM",
+        "Sejm"
+      ],
+      "sources": [
+        {
+          "title": "KPRM",
+          "url": "https://www.gov.pl/web/premier"
+        }
+      ],
+      "tags": [
+        "rząd",
+        "legislacja"
+      ],
+      "priority": "3"
+    },
+    {
+      "id": "pol-roads",
+      "section": "Polska",
+      "title": "Bezpieczeństwo na drogach",
+      "lead": "Działania prewencyjne pozostają w monitoringu.",
+      "whatHappened": "Wcześniejsza akcja kontroli drogowych pozostaje kontekstem bezpieczeństwa, bez nowej materialnej zmiany w tym slocie.",
+      "keyFacts": [
+        "To działania prewencyjne",
+        "Nie oznaczają nowego zagrożenia"
+      ],
+      "reactions": [
+        "Kierowcy powinni stosować się do limitów."
+      ],
+      "whyItMatters": "Ogranicza ryzyko wypadków.",
+      "context": "Kontynuacja wcześniejszego komunikatu Policji.",
+      "watchNext": [
+        "Policja"
+      ],
+      "sources": [
+        {
+          "title": "Policja",
+          "url": "https://policja.pl/"
+        }
+      ],
+      "tags": [
+        "drogi",
+        "Policja"
+      ],
+      "priority": "3"
+    },
+    {
+      "id": "world-energy",
+      "section": "Gospodarka",
+      "title": "Bezpieczeństwo energii",
+      "lead": "Nie potwierdzono nowej decyzji rynkowej.",
+      "whatHappened": "Bezpieczeństwo dostaw energii pozostaje w monitoringu; wcześniejsze komunikaty rządowe nie wskazują na bieżące zagrożenie ciągłości dostaw.",
+      "keyFacts": [
+        "Brak nowego bilansu",
+        "Nie utożsamiamy komentarzy z decyzją rynkową"
+      ],
+      "reactions": [
+        "Warto śledzić komunikaty operatorów i rządu."
+      ],
+      "whyItMatters": "Energia wpływa na gospodarkę i ceny.",
+      "context": "To kontynuacja wcześniejszego tematu.",
+      "watchNext": [
+        "Ministerstwo Energii",
+        "URE"
+      ],
+      "sources": [
+        {
+          "title": "Ministerstwo Energii",
+          "url": "https://redakcja.www.gov.pl/web/energia/wiadomosci"
+        }
+      ],
+      "tags": [
+        "energia",
+        "gospodarka"
+      ],
+      "priority": "4"
+    },
+    {
+      "id": "world-redsea",
+      "section": "Świat",
+      "title": "Morze Czerwone",
+      "lead": "Ryzyko dla żeglugi nadal wymaga obserwacji.",
+      "whatHappened": "Napięcia i możliwe zakłócenia żeglugi pozostają w monitoringu bez nowego potwierdzonego bilansu.",
+      "keyFacts": [
+        "Możliwy wpływ na handel",
+        "Brak nowego potwierdzenia w slocie"
+      ],
+      "reactions": [
+        "Armatorzy mogą korygować trasy."
+      ],
+      "whyItMatters": "Zakłócenia wpływają na czas i koszt dostaw.",
+      "context": "Kontynuacja wcześniejszego monitoringu regionu.",
+      "watchNext": [
+        "armatorzy",
+        "BBC",
+        "CNN"
+      ],
+      "sources": [
+        {
+          "title": "CNN",
+          "url": "https://www.cnn.com/"
+        }
+      ],
+      "tags": [
+        "żegluga",
+        "Jemen"
+      ],
+      "priority": "3"
+    },
+    {
+      "id": "world-diplomacy",
+      "section": "Świat",
+      "title": "Dyplomacja regionu",
+      "lead": "Kontakty polityczne nie oznaczają decyzji wojskowej.",
+      "whatHappened": "W tym slocie nie potwierdzono nowej decyzji o materialnym znaczeniu; rozmowy regionalne pozostają obserwowane.",
+      "keyFacts": [
+        "Brak nowej operacji",
+        "Potrzebne są komunikaty stron"
+      ],
+      "reactions": [
+        "Sygnały dyplomatyczne wymagają ostrożnej interpretacji."
+      ],
+      "whyItMatters": "Dyplomacja może ograniczać eskalację.",
+      "context": "Źródła BBC i CNN były częściowo ograniczone technicznie.",
+      "watchNext": [
+        "BBC News",
+        "CNN"
+      ],
+      "sources": [
+        {
+          "title": "BBC News",
+          "url": "https://www.bbc.com/news"
+        }
+      ],
+      "tags": [
+        "świat",
+        "dyplomacja"
+      ],
+      "priority": "3"
+    },
+    {
+      "id": "tech-kids",
+      "section": "Technologia",
+      "title": "EU KIDS Act",
+      "lead": "Inicjatywa ochrony dzieci online nie jest jeszcze prawem.",
+      "whatHappened": "Komunikacja Komisji Europejskiej o EU KIDS Act pozostaje etapem debaty i prac nad inicjatywą.",
+      "keyFacts": [
+        "Brak finalnego aktu",
+        "Szczegóły wymagają śledzenia dokumentów"
+      ],
+      "reactions": [
+        "Usługi cyfrowe powinny obserwować proces legislacyjny."
+      ],
+      "whyItMatters": "Może wpłynąć na zasady usług online.",
+      "context": "Komunikat nie przesądza finalnego kształtu prawa.",
+      "watchNext": [
+        "Komisja Europejska",
+        "Parlament Europejski"
+      ],
+      "sources": [
+        {
+          "title": "Komisja Europejska",
+          "url": "https://commission.europa.eu/topics/digital-economy-and-society_en"
+        }
+      ],
+      "tags": [
+        "EU KIDS Act",
+        "dzieci online"
+      ],
+      "priority": "4"
+    },
+    {
+      "id": "tech-cra",
+      "section": "Technologia",
+      "title": "Obowiązki CRA",
+      "lead": "Raportowanie incydentów pozostaje tematem zgodności.",
+      "whatHappened": "W tym slocie nie potwierdzono nowego incydentu; podmioty objęte CRA powinny śledzić wytyczne raportowania.",
+      "keyFacts": [
+        "Obowiązki zależą od roli produktu",
+        "Potrzebne są procedury wewnętrzne"
+      ],
+      "reactions": [
+        "Organizacje powinny monitorować regulatorów."
+      ],
+      "whyItMatters": "Wpływa na cyberodporność produktów.",
+      "context": "To monitoring regulacyjny, nie nowe zdarzenie.",
+      "watchNext": [
+        "Komisja Europejska",
+        "CSIRT"
+      ],
+      "sources": [
+        {
+          "title": "Komisja Europejska",
+          "url": "https://digital-strategy.ec.europa.eu/en/policies/cra-reporting"
+        }
+      ],
+      "tags": [
+        "CRA",
+        "cyberbezpieczeństwo"
+      ],
+      "priority": "3"
+    },
+    {
+      "id": "pol-alarm-levels",
+      "section": "Alerty",
+      "title": "Stopnie alarmowe",
+      "lead": "Wcześniej ogłoszone stopnie pozostają obowiązujące.",
+      "whatHappened": "Kontynuowany jest monitoring BRAVO, CHARLIE i BRAVO-CRP zgodnie z wcześniejszymi komunikatami; nie ogłoszono nowego poziomu w tym slocie.",
+      "keyFacts": [
+        "To kontynuacja procedur",
+        "Nie jest to nowy alert dla mieszkańców"
+      ],
+      "reactions": [
+        "Służby działają w istniejących ramach."
+      ],
+      "whyItMatters": "Wyznacza poziom czujności instytucji.",
+      "context": "Brak nowej decyzji nie zmienia wcześniejszego stanu.",
+      "watchNext": [
+        "RCB",
+        "KPRM"
+      ],
+      "sources": [
+        {
+          "title": "RCB",
+          "url": "https://www.gov.pl/web/rcb/"
+        }
+      ],
+      "tags": [
+        "BRAVO",
+        "CHARLIE"
+      ],
+      "priority": "3"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24",
+      "url": "https://tvn24.pl/najnowsze"
+    },
+    {
+      "title": "BBC News",
+      "url": "https://www.bbc.com/news"
+    },
+    {
+      "title": "CNN",
+      "url": "https://edition.cnn.com/"
+    },
+    {
+      "title": "RCB",
+      "url": "https://www.gov.pl/web/rcb/"
+    },
+    {
+      "title": "KPRM",
+      "url": "https://www.gov.pl/web/premier"
+    },
+    {
+      "title": "Komisja Europejska",
+      "url": "https://commission.europa.eu/topics/digital-economy-and-society_en"
+    }
+  ]
+}
