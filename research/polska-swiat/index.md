@@ -1,6 +1,17 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-09-21
+Last updated: 2026-09-22
+
+## Update 2026-09-22
+
+Debata generalna ONZ zaczyna się dziś w warunkach równoległych kryzysów w
+Ukrainie, Iranie, Ormuzie i Bab al-Mandab. Polska ma za sobą spotkania z
+kierownictwem ONZ i prezydentami państw bałtyckich oraz przedstawiła w USA
+postulat europejskiego centrum serwisowego PAC-3, lecz środowa wizyta szefa
+MON w Pentagonie została przełożona. Do Waszyngtonu jadą dwaj wiceministrowie.
+W UE brak jednomyślności przed środowym terminem przedłużenia sankcji osobowych
+wobec Rosji. Wielka Brytania ogłosiła natomiast ograniczone wsparcie tankowania
+w powietrzu dla saudyjskich misji obronnych przeciw Huti.
 
 ## Update 2026-09-21
 
@@ -40,11 +51,11 @@ Europy, ale nie ogłosiło nowych zobowiązań wojskowych.
 
 ## Recent Reports
 
+- [2026-09-22](runs/2026-09-22.md)
 - [2026-09-21](runs/2026-09-21.md)
 - [2026-09-20-1933](runs/2026-09-20-1933.md)
 - [2026-09-20](runs/2026-09-20.md)
 - [2026-09-17-1933](runs/2026-09-17-1933.md)
-- [2026-09-17](runs/2026-09-17.md)
 
 ## Update 2026-09-17
 
