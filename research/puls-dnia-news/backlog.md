@@ -1,5 +1,12 @@
 # Puls Dnia News Backlog
 
+# 2026-09-23 18:01
+
+- Śledzić aktualizowany bilans uderzeń na Kijów i reakcje Ukrainy, UE oraz NATO.
+- Monitorować wystąpienia i dokumenty 81. sesji ONZ, zwłaszcza Iran, Ukraina i Gaza.
+- Sprawdzić wynik briefingu OpenAI, Anthropic i Hugging Face dla Rady Bezpieczeństwa.
+- Kontynuować monitoring RCB, IMGW, MON, Redzikowa, energii, żeglugi i CSIRT NASK.
+
 # 2026-09-23 15:01
 
 - Monitorować komunikaty RCB, IMGW i wojewodów po odprawie pogodowej.

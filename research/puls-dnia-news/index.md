@@ -2,6 +2,12 @@
 
 ## Current State
 
+2026-09-23 18:01 CEST: materialna aktualizacja międzynarodowa — potwierdzono rosyjskie uderzenia na Kijów, drugi dzień tygodnia wysokiego szczebla ONZ oraz zapowiedziany briefing liderów AI dla Rady Bezpieczeństwa. Utrzymano 14 kart w siedmiu sekcjach; krajowy monitoring obejmuje odprawę pogodową i Redzikowo.
+
+Źródła i ograniczenia: [raport](runs/2026-09-23-1801.md).
+
+## Current State
+
 2026-09-23 15:01 CEST: materialna aktualizacja krajowa — RCB odnotowało odprawę służb i wojewodów w związku z sytuacją pogodową, a MON wyjaśnił, że cywilny dron wykryty przy Redzikowie nie stanowił zagrożenia. Utrzymano 14 kart w siedmiu sekcjach.
 
 Źródła i ograniczenia: [raport](runs/2026-09-23-1501.md).
