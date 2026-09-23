@@ -2,6 +2,12 @@
 
 ## Current State
 
+2026-09-23 15:01 CEST: materialna aktualizacja krajowa — RCB odnotowało odprawę służb i wojewodów w związku z sytuacją pogodową, a MON wyjaśnił, że cywilny dron wykryty przy Redzikowie nie stanowił zagrożenia. Utrzymano 14 kart w siedmiu sekcjach.
+
+Źródła i ograniczenia: [raport](runs/2026-09-23-1501.md).
+
+## Current State
+
 2026-09-22 18:03 CEST: slot nie przyniósł potwierdzonej materialnej zmiany względem 21 września 21:01. Utrzymano 12 kart w siedmiu sekcjach; monitoring obejmuje bezpieczeństwo Europy, energię, wydarzenia międzynarodowe oraz regionalne komunikaty służb.
 
 Źródła i ograniczenia: [raport](runs/2026-09-22-1803.md).

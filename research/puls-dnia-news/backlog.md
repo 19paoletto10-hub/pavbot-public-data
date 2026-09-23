@@ -1,5 +1,12 @@
 # Puls Dnia News Backlog
 
+# 2026-09-23 15:01
+
+- Monitorować komunikaty RCB, IMGW i wojewodów po odprawie pogodowej.
+- Śledzić dalsze wyjaśnienia MON i prokuratury dotyczące dronów przy Redzikowie i w Rusinowie.
+- Sprawdzać lokalne komunikaty o wodzie i wpływie pogody na transport.
+- Monitorować energię, żeglugę, ONZ, CSIRT NASK i regulacje cyfrowe UE.
+
 # 2026-09-22 18:03
 
 - Monitorować komunikaty RCB, IMGW, MON i KPRM oraz zmiany zasięgu ostrzeżeń.
