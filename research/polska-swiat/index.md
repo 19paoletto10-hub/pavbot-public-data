@@ -1,6 +1,20 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-09-22
+Last updated: 2026-09-24
+
+## Update 2026-09-24
+
+Rosyjski wojskowy Mi-8 naruszył 23 września polską przestrzeń powietrzną na
+północ od Braniewa, wlatując około 300 metrów w głąb kraju na około 42 sekundy.
+Dziś rano polska obrona powietrzna uruchamiała procedury dwukrotnie podczas
+rosyjskich ataków na Ukrainę; o 08:39 druga operacja trwała. Prezydent Karol
+Nawrocki przedstawił w ONZ program odpowiedzialności Rosji, odstraszania i
+wzmocnienia pozycji Polski przez stałą obecność USA oraz starania o G20, ale
+szczegóły wykonawcze pozostają otwarte. UE przedłużyła sankcje osobowe do 2029
+roku, usuwając z listy Usmanowa i Fridmana. Ukraina zaoferowała wzajemny rozejm
+energetyczny i rozmawia z USA o zimowym pakiecie obrony powietrznej, podczas
+gdy nocny atak na Kijów zabił dwie osoby i ranił 41. ORLEN zapowiedział pełny
+wykup akcji Energi po 27,60 zł.
 
 ## Update 2026-09-22
 
@@ -51,11 +65,11 @@ Europy, ale nie ogłosiło nowych zobowiązań wojskowych.
 
 ## Recent Reports
 
+- [2026-09-24](runs/2026-09-24.md)
 - [2026-09-22](runs/2026-09-22.md)
 - [2026-09-21](runs/2026-09-21.md)
 - [2026-09-20-1933](runs/2026-09-20-1933.md)
 - [2026-09-20](runs/2026-09-20.md)
-- [2026-09-17-1933](runs/2026-09-17-1933.md)
 
 ## Update 2026-09-17
 
