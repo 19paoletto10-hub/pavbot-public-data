@@ -1,5 +1,12 @@
 # Puls Dnia News Backlog
 
+# 2026-09-24 11:11
+
+- Ponownie sprawdzić TVN24, BBC i CNN w następnym slocie, zwracając uwagę na datowanie materiałów.
+- Monitorować komunikaty MON, RCB, IMGW i wojewodów dotyczące bezpieczeństwa oraz pogody.
+- Śledzić dokumenty ONZ o Ukrainie i AI.
+- Kontynuować monitoring energii, żeglugi, cyberbezpieczeństwa i regulacji cyfrowych.
+
 # 2026-09-23 18:01
 
 - Śledzić aktualizowany bilans uderzeń na Kijów i reakcje Ukrainy, UE oraz NATO.
