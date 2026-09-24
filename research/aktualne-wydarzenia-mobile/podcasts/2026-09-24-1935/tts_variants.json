@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-09-24T15:12:00+02:00",
+  "generatedAt": "2026-09-24T19:35:00+02:00",
   "variants": [
     {
       "voice": "female-piper",
       "id": "female-piper",
       "status": "ok",
-      "output_file": "podcasts/2026-09-24-1508/audio/female-piper/podcast.mp3"
+      "output_file": "podcasts/2026-09-24-1935/audio/female-piper/podcast.mp3"
     },
     {
       "voice": "male-xtts",
       "id": "male-xtts",
       "status": "failed",
-      "output_file": "podcasts/2026-09-24-1508/audio/male-xtts/podcast.mp3",
+      "output_file": "podcasts/2026-09-24-1935/audio/male-xtts/podcast.mp3",
       "error": "Controlled interruption after prolonged CPU-only inference; no final podcast.mp3 was created."
     }
   ]
