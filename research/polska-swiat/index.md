@@ -1,6 +1,19 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-09-24
+Last updated: 2026-09-25
+
+## Update 2026-09-25
+
+Nocna operacja polskiego lotnictwa zakończyła się o 02:57 bez naruszenia
+przestrzeni RP, ale rosyjska salwa obejmowała 295 dronów, a ukraiński komunikat
+poranny mówił o trwającym ataku. W Polsce CBZC bada incydent Qbusoft/Medyc,
+który mógł objąć dane kontaktowe i numery PESEL, a śledztwo PFN przeszło do
+zarzutów wobec Anny P. i Piotra M.; Onet ujawnił wcześniejsze przesłuchanie
+Jarosława Kaczyńskiego jako świadka. Rządowy projekt podnosi opłatę cukrową,
+zaś raport BGK wskazuje 23,7 mld dolarów jako możliwą wartość polskiego rynku
+półprzewodników w 2035 roku. Globalnie USA i Chiny przedłużyły rozejm celny
+tylko do 10 stycznia 2027 roku, a rozmowy USA-Iran o etapowym otwarciu Ormuzu
+mają konkretną sekwencję i warunki, lecz nadal nie zakończyły się umową.
 
 ## Update 2026-09-24
 
@@ -65,6 +78,7 @@ Europy, ale nie ogłosiło nowych zobowiązań wojskowych.
 
 ## Recent Reports
 
+- [2026-09-25](runs/2026-09-25.md)
 - [2026-09-24](runs/2026-09-24.md)
 - [2026-09-22](runs/2026-09-22.md)
 - [2026-09-21](runs/2026-09-21.md)
