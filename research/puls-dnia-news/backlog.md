@@ -1,5 +1,12 @@
 # Puls Dnia News Backlog
 
+# 2026-09-25 12:03
+
+- Śledzić kolejne komunikaty RCB i bilanse wydarzeń w Ukrainie.
+- Sprawdzić komunikaty MON po wydarzeniach 25 września i zakończeniu ćwiczeń.
+- Monitorować Redzikowo, stopnie alarmowe, cyberbezpieczeństwo oraz lokalne ostrzeżenia IMGW.
+- Ponownie sprawdzić TVN24, BBC i CNN w następnym slocie.
+
 # 2026-09-24 11:11
 
 - Ponownie sprawdzić TVN24, BBC i CNN w następnym slocie, zwracając uwagę na datowanie materiałów.

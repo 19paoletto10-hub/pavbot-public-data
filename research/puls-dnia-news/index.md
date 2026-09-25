@@ -2,6 +2,12 @@
 
 ## Current State
 
+2026-09-25 12:03 CEST: materialna aktualizacja alertowa — RCB potwierdziło zakończenie ataku powietrznego na Ukrainę i brak zagrożenia w Polsce. Utrzymano 14 kart w siedmiu sekcjach; MON, Redzikowo, ćwiczenia obronne, cyberbezpieczeństwo i pogoda pozostają w monitoringu.
+
+Źródła i ograniczenia: [raport](runs/2026-09-25-1203.md).
+
+## Current State
+
 2026-09-24 11:11 CEST: slot nie przyniósł potwierdzonej materialnej zmiany. Utrzymano 14 kart w siedmiu sekcjach; BBC i CNN były częściowo ograniczone technicznie, a materiały TVN24 wymagały ostrożnego datowania.
 
 Źródła i ograniczenia: [raport](runs/2026-09-24-1111.md).
