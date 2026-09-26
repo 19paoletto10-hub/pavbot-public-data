@@ -1,0 +1,565 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-09-26",
+  "runTime": "21:03",
+  "status": "Material update",
+  "headline": "Puls Dnia: treningi ochrony ludności i świat",
+  "summary": "MSWiA zapowiedziało regionalne treningi reagowania na zagrożenie z powietrza; pozostałe karty utrzymują monitoring bezpieczeństwa Polski, świata, gospodarki, technologii i alertów.",
+  "items": [
+    {
+      "id": "pl-siatkowka",
+      "section": "Polska",
+      "title": "Polska gra ze Słowenią o finał ME",
+      "lead": "Półfinał mistrzostw Europy siatkarzy przypada na 26 września.",
+      "whatHappened": "TVN24/Eurosport zapowiada mecz Polska–Słowenia w półfinale mistrzostw Europy.",
+      "keyFacts": [
+        "Mecz zaplanowano w Mediolanie.",
+        "Polska wcześniej pokonała Niemcy 3:0 w ćwierćfinale."
+      ],
+      "reactions": [
+        "To informacja sportowa, bez implikacji dla bezpieczeństwa państwa."
+      ],
+      "whyItMatters": "Wynik jest bieżącym wydarzeniem o wysokim zainteresowaniu krajowym.",
+      "context": "Turniej rozgrywany jest w dniach 25–26 września.",
+      "watchNext": [
+        "Końcowy wynik meczu.",
+        "Wynik finału i meczu o brąz."
+      ],
+      "sources": [
+        {
+          "title": "TVN24/Eurosport — Polska–Słowenia",
+          "url": "https://eurosport.tvn24.pl/siatkowka/mistrzostwa-europy/2026/polska-slowenia-kiedy-i-o-ktorej-godzinie-mecz-polakow-w-polfinale-mistrzostw-europy-siatkarzy-2026_sto23339786/story.shtml"
+        }
+      ],
+      "tags": [
+        "sport",
+        "Polska",
+        "ME siatkarzy"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-rcb",
+      "section": "Alerty",
+      "title": "RCB: brak potwierdzonego zagrożenia w Polsce",
+      "lead": "Komunikaty RCB pozostają punktem odniesienia po wydarzeniach w Ukrainie.",
+      "whatHappened": "RCB utrzymuje wcześniejszy komunikat o zakończeniu ataku powietrznego na Ukrainę i braku zagrożenia na terytorium Polski.",
+      "keyFacts": [
+        "Komunikat nie oznacza ataku na Polskę.",
+        "Ocena może zmienić się wraz z nowymi komunikatami służb."
+      ],
+      "reactions": [
+        "Brak podstaw do eskalowania tonu bez nowego potwierdzenia."
+      ],
+      "whyItMatters": "To najważniejszy filtr informacyjny dla odbiorców w Polsce.",
+      "context": "Wątek pozostaje w monitoringu od poprzednich runów.",
+      "watchNext": [
+        "Nowe komunikaty RCB.",
+        "Bilanse wydarzeń w Ukrainie."
+      ],
+      "sources": [
+        {
+          "title": "RCB",
+          "url": "https://www.gov.pl/web/rcb/"
+        }
+      ],
+      "tags": [
+        "RCB",
+        "Ukraina",
+        "alerty"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-redzikowo",
+      "section": "Bezpieczeństwo",
+      "title": "Redzikowo pozostaje w monitoringu",
+      "lead": "MON utrzymuje wcześniejsze ustalenia dotyczące cywilnego drona.",
+      "whatHappened": "Według wcześniejszego komunikatu MON cywilny dron wykryty przy Redzikowie nie stanowił zagrożenia dla bazy.",
+      "keyFacts": [
+        "To ustalenie oficjalne, nie nowy incydent.",
+        "Brak potwierdzenia zmiany oceny w tym slocie."
+      ],
+      "reactions": [
+        "Wymagana jest ostrożność wobec nieoficjalnych interpretacji."
+      ],
+      "whyItMatters": "Redzikowo jest wrażliwym punktem bezpieczeństwa regionalnego.",
+      "context": "Temat powraca w monitoringu topicu.",
+      "watchNext": [
+        "Komunikaty MON.",
+        "Ewentualne ustalenia prokuratury."
+      ],
+      "sources": [
+        {
+          "title": "MON — komunikat",
+          "url": "https://redakcja.www.gov.pl/web/obrona-narodowa/komunikat-mon40"
+        }
+      ],
+      "tags": [
+        "MON",
+        "Redzikowo",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-cwiczenia",
+      "section": "Bezpieczeństwo",
+      "title": "Ćwiczenia obronne pozostają działaniem prewencyjnym",
+      "lead": "Aktywność ćwiczebna nie jest sama w sobie nowym zagrożeniem.",
+      "whatHappened": "Wątek ćwiczeń i przygotowania ochrony ludności pozostaje w krajowym monitoringu.",
+      "keyFacts": [
+        "Nie potwierdzono nowej sytuacji kryzysowej.",
+        "Ćwiczenia mają charakter przygotowawczy."
+      ],
+      "reactions": [
+        "Komunikaty należy czytać razem z informacjami służb."
+      ],
+      "whyItMatters": "Zmniejsza ryzyko błędnej interpretacji rutynowych działań.",
+      "context": "W poprzednich runach odnotowano ćwiczenie Czarny Obrońca.",
+      "watchNext": [
+        "Komunikaty MON i wojewodów.",
+        "Informacje o zakończeniu ćwiczeń."
+      ],
+      "sources": [
+        {
+          "title": "MON",
+          "url": "https://www.gov.pl/web/obrona-narodowa"
+        }
+      ],
+      "tags": [
+        "ćwiczenia",
+        "ochrona ludności"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "pl-granica",
+      "section": "Polska",
+      "title": "Wschodnia granica pozostaje w monitoringu",
+      "lead": "Brak nowego potwierdzonego przełomu w tym slocie.",
+      "whatHappened": "Monitoring obejmuje bezpieczeństwo wschodniej granicy i komunikaty służb.",
+      "keyFacts": [
+        "Nie dodano niepotwierdzonych doniesień.",
+        "Ocena opiera się na źródłach oficjalnych."
+      ],
+      "reactions": [
+        "Sytuacja wymaga ciągłej obserwacji, nie alarmizmu."
+      ],
+      "whyItMatters": "Granica jest elementem szerszego obrazu bezpieczeństwa Polski.",
+      "context": "Temat utrzymywany od wcześniejszych raportów.",
+      "watchNext": [
+        "Komunikaty MSWiA i Straży Granicznej."
+      ],
+      "sources": [
+        {
+          "title": "MSWiA",
+          "url": "https://www.gov.pl/web/mswia"
+        }
+      ],
+      "tags": [
+        "granica",
+        "Polska"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "pl-sejm",
+      "section": "Polityka",
+      "title": "Sejm kontynuuje prace ustawodawcze",
+      "lead": "Nie potwierdzono dziś przełomowej decyzji w monitorowanym zakresie.",
+      "whatHappened": "Bieżący przegląd obejmuje prace Sejmu i zapowiedzi legislacyjne.",
+      "keyFacts": [
+        "Brak zweryfikowanej materialnej zmiany w tym slocie.",
+        "Ważne projekty wymagają śledzenia dokumentów źródłowych."
+      ],
+      "reactions": [
+        "Nie podnoszę priorytetu bez konkretnego aktu lub głosowania."
+      ],
+      "whyItMatters": "Decyzje legislacyjne mogą szybko zmienić kontekst krajowy.",
+      "context": "Karta obserwacyjna topicu.",
+      "watchNext": [
+        "Porządek obrad.",
+        "Komunikaty komisji i wynik głosowań."
+      ],
+      "sources": [
+        {
+          "title": "Sejm RP",
+          "url": "https://www.sejm.gov.pl/"
+        }
+      ],
+      "tags": [
+        "Sejm",
+        "polityka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "pl-abw",
+      "section": "Bezpieczeństwo",
+      "title": "Komunikaty ABW wymagają ostrożnej interpretacji",
+      "lead": "Monitoring cyberbezpieczeństwa trwa bez nowego potwierdzonego alarmu.",
+      "whatHappened": "Przegląd obejmuje komunikaty ABW i bezpieczeństwo informacyjne.",
+      "keyFacts": [
+        "Nie znaleziono nowego komunikatu zmieniającego ocenę.",
+        "Brak podstaw do łączenia niesprawdzonych wpisów."
+      ],
+      "reactions": [
+        "Priorytet mają komunikaty instytucjonalne."
+      ],
+      "whyItMatters": "Weryfikacja źródeł jest kluczowa przy informacjach bezpieczeństwa.",
+      "context": "ABW pozostaje źródłem pierwotnym dla wybranych wątków.",
+      "watchNext": [
+        "Nowe ostrzeżenia ABW.",
+        "Komunikaty CSIRT."
+      ],
+      "sources": [
+        {
+          "title": "ABW",
+          "url": "https://www.abw.gov.pl/"
+        }
+      ],
+      "tags": [
+        "ABW",
+        "cyberbezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "pl-pogoda",
+      "section": "Alerty",
+      "title": "Pogodę sprawdzaj lokalnie",
+      "lead": "IMGW pozostaje podstawowym źródłem ostrzeżeń regionalnych.",
+      "whatHappened": "Bieżący run nie potwierdził nowego ogólnopolskiego alarmu pogodowego.",
+      "keyFacts": [
+        "Ostrzeżenia mogą różnić się regionalnie.",
+        "Brak alertu nie zastępuje lokalnej prognozy."
+      ],
+      "reactions": [
+        "Nie należy uogólniać komunikatów pogodowych."
+      ],
+      "whyItMatters": "Pogoda wpływa na bezpieczeństwo i transport lokalnie.",
+      "context": "W topicu utrzymywany jest monitoring RCB i IMGW.",
+      "watchNext": [
+        "Mapa ostrzeżeń IMGW.",
+        "Komunikaty RCB i wojewodów."
+      ],
+      "sources": [
+        {
+          "title": "IMGW Meteo",
+          "url": "https://meteo.imgw.pl/"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "IMGW",
+        "alerty"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "world-xi",
+      "section": "Świat",
+      "title": "Xi Jinping w centrum uwagi w Waszyngtonie",
+      "lead": "CNN Transcripts odnotowuje wizytę Xi i spotkania w USA.",
+      "whatHappened": "CNN wskazuje na wizytę Xi Jinpinga w Waszyngtonie i jego spotkanie z Donaldem Trumpem.",
+      "keyFacts": [
+        "Wątek dotyczy relacji USA–Chiny.",
+        "Bezpośrednia strona CNN była częściowo ograniczona."
+      ],
+      "reactions": [
+        "Znaczenie zależy od konkretnych ustaleń i komunikatów po spotkaniach."
+      ],
+      "whyItMatters": "Relacje USA–Chiny wpływają na bezpieczeństwo i gospodarkę.",
+      "context": "Materiał pochodzi z aktualizowanych transkryptów CNN.",
+      "watchNext": [
+        "Komunikaty Białego Domu.",
+        "Reakcje Pekinu i rynków."
+      ],
+      "sources": [
+        {
+          "title": "CNN Transcripts",
+          "url": "https://transcripts.cnn.com/show/ctw"
+        }
+      ],
+      "tags": [
+        "USA",
+        "Chiny",
+        "Xi Jinping"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-wh-access",
+      "section": "Świat",
+      "title": "Spór o dostęp mediów do Białego Domu",
+      "lead": "CNN opisuje ograniczenia dostępu dziennikarzy podczas wizyty Xi.",
+      "whatHappened": "Transkrypt CNN odnotowuje blokowanie dostępu części mediów do wydarzeń z udziałem Xi.",
+      "keyFacts": [
+        "Wątek dotyczy relacji administracji USA z mediami.",
+        "Szczegóły wymagają potwierdzenia w komunikatach i relacjach pierwotnych."
+      ],
+      "reactions": [
+        "To informacja o procesie medialnym, nie potwierdzenie szerszego kryzysu konstytucyjnego."
+      ],
+      "whyItMatters": "Dostęp mediów wpływa na przejrzystość informacji publicznej.",
+      "context": "Wątek jest częścią materiału CNN z 25 września.",
+      "watchNext": [
+        "Decyzje sądów i Białego Domu.",
+        "Stanowiska organizacji medialnych."
+      ],
+      "sources": [
+        {
+          "title": "CNN Transcripts",
+          "url": "https://transcripts.cnn.com/show/ctw"
+        }
+      ],
+      "tags": [
+        "USA",
+        "media",
+        "Biały Dom"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "world-gaza-un",
+      "section": "Świat",
+      "title": "ONZ i Gaza pozostają w centrum uwagi",
+      "lead": "Wydarzenia ONZ nadal należą do głównych tematów międzynarodowych.",
+      "whatHappened": "Przegląd BBC/CNN utrzymuje monitoring wystąpień i działań dyplomatycznych dotyczących Gazy.",
+      "keyFacts": [
+        "Nie dodano nowego potwierdzonego bilansu w tym runie.",
+        "Ważne są komunikaty ONZ i stron konfliktu."
+      ],
+      "reactions": [
+        "Brak nowego bilansu oznacza ostrożność, nie rozstrzygnięcie sytuacji."
+      ],
+      "whyItMatters": "Decyzje i wystąpienia ONZ wpływają na reakcje międzynarodowe.",
+      "context": "Temat utrzymywany od poprzednich raportów.",
+      "watchNext": [
+        "Komunikaty ONZ.",
+        "Aktualizacje humanitarne."
+      ],
+      "sources": [
+        {
+          "title": "ONZ",
+          "url": "https://news.un.org/"
+        }
+      ],
+      "tags": [
+        "ONZ",
+        "Gaza",
+        "dyplomacja"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "world-storm",
+      "section": "Świat",
+      "title": "Sztorm na wschodnim wybrzeżu USA",
+      "lead": "CNN zapowiada silny wiatr i deszcz na wschodnim wybrzeżu USA.",
+      "whatHappened": "CNN Transcripts wskazuje na nor’easter z ciężkim deszczem i wiatrem.",
+      "keyFacts": [
+        "Ryzyko dotyczy przede wszystkim wschodniego wybrzeża USA.",
+        "Zakres skutków zależy od lokalnych ostrzeżeń."
+      ],
+      "reactions": [
+        "Nie należy przenosić tego alertu na Polskę."
+      ],
+      "whyItMatters": "Zdarzenia pogodowe mogą zakłócać transport i infrastrukturę.",
+      "context": "Informacja pochodzi z materiału CNN z 25 września.",
+      "watchNext": [
+        "Komunikaty NWS.",
+        "Wpływ na loty i infrastrukturę."
+      ],
+      "sources": [
+        {
+          "title": "CNN Transcripts",
+          "url": "https://transcripts.cnn.com/show/ctw"
+        }
+      ],
+      "tags": [
+        "USA",
+        "pogoda",
+        "sztorm"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "tech-ai",
+      "section": "Technologia",
+      "title": "Bezpieczeństwo AI wymaga dalszej weryfikacji",
+      "lead": "Wątki cyberbezpieczeństwa AI pozostają obserwacyjne.",
+      "whatHappened": "CNN odnotowuje nowe dyskusje o agentach AI i bezpieczeństwie systemów, ale bez wystarczającego potwierdzenia do ogłoszenia incydentu w Polsce.",
+      "keyFacts": [
+        "Nie potwierdzono krajowego incydentu.",
+        "Wnioski należy opierać na komunikatach dostawców i CSIRT."
+      ],
+      "reactions": [
+        "Nie utożsamiam doniesienia medialnego z potwierdzonym atakiem."
+      ],
+      "whyItMatters": "Systemy agentowe mogą mieć znaczenie dla bezpieczeństwa publicznego.",
+      "context": "CNN był dostępny głównie przez transkrypty.",
+      "watchNext": [
+        "Komunikaty CSIRT i dostawców.",
+        "Techniczne szczegóły incydentów."
+      ],
+      "sources": [
+        {
+          "title": "CNN Transcripts",
+          "url": "https://transcripts.cnn.com/show/ctw"
+        }
+      ],
+      "tags": [
+        "AI",
+        "cyberbezpieczeństwo",
+        "technologia"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "economy-energy",
+      "section": "Gospodarka",
+      "title": "Energia pozostaje w monitoringu",
+      "lead": "Nie potwierdzono nowego krajowego przełomu energetycznego.",
+      "whatHappened": "Bieżący przegląd utrzymuje monitoring infrastruktury energetycznej i wpływu wydarzeń międzynarodowych.",
+      "keyFacts": [
+        "Brak nowej decyzji o bezpośrednim wpływie na odbiorców.",
+        "Wątek jest powiązany z bezpieczeństwem dostaw."
+      ],
+      "reactions": [
+        "Ocena wymaga danych operatorów i administracji."
+      ],
+      "whyItMatters": "Energia łączy bezpieczeństwo, gospodarkę i odporność państwa.",
+      "context": "Karta ciągłego monitoringu topicu.",
+      "watchNext": [
+        "Komunikaty operatorów.",
+        "Ceny i decyzje regulacyjne."
+      ],
+      "sources": [
+        {
+          "title": "Ministerstwo Energii",
+          "url": "https://www.gov.pl/web/energia"
+        }
+      ],
+      "tags": [
+        "energia",
+        "gospodarka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "world-bbc",
+      "section": "Świat",
+      "title": "BBC World Service: ciągły przegląd wydarzeń",
+      "lead": "BBC pozostaje źródłem wykrywania, lecz strona newsowa była ograniczona.",
+      "whatHappened": "Dostępny materiał BBC Partners potwierdza bieżący cykl biuletynów World Service, ale nie dostarczył nowego faktu o Polsce.",
+      "keyFacts": [
+        "BBC News było częściowo zablokowane technicznie.",
+        "Nie uzupełniam luk niezweryfikowanymi streszczeniami."
+      ],
+      "reactions": [
+        "Ograniczenie zapisuję jawnie w raporcie."
+      ],
+      "whyItMatters": "Transparentne wskazanie ograniczeń poprawia jakość digestu.",
+      "context": "BBC pozostaje obowiązkowym źródłem wykrywania tematów.",
+      "watchNext": [
+        "Bezpośredni dostęp do BBC News.",
+        "Nowe komunikaty źródeł pierwotnych."
+      ],
+      "sources": [
+        {
+          "title": "BBC World Service Partners",
+          "url": "https://wspartners.bbc.com/episode/w1730nkv07lg3gn"
+        }
+      ],
+      "tags": [
+        "BBC",
+        "świat",
+        "źródła"
+      ],
+      "priority": "low"
+    },
+    {
+      "id": "pl-treningi-ociol",
+      "section": "Bezpieczeństwo",
+      "title": "Treningi reagowania na zagrożenie z powietrza",
+      "lead": "W sobotę mieszkańcy dwóch województw przećwiczą procedury alarmowe.",
+      "whatHappened": "MSWiA podało, że 26 września w województwach podlaskim i warmińsko-mazurskim odbędą się specjalne treningi reagowania na zagrożenie atakiem z powietrza.",
+      "keyFacts": [
+        "Treningi zaplanowano w godz. 11:00–14:00.",
+        "MSWiA wskazuje udział co najmniej 260 jednostek ratowniczo-gaśniczych, remiz i lokalnych punktów edukacyjnych.",
+        "Program obejmuje rozpoznawanie sygnałów alarmowych i właściwe postępowanie po komunikatach ostrzegawczych."
+      ],
+      "reactions": [
+        "To zapowiedziane ćwiczenia ochrony ludności, a nie komunikat o trwającym zagrożeniu."
+      ],
+      "whyItMatters": "Wzmacnia praktyczną znajomość procedur alarmowych w regionach położonych przy wschodniej granicy.",
+      "context": "Wydarzenie jest elementem Akademii ochrony ludności i obrony cywilnej.",
+      "watchNext": [
+        "Komunikaty wojewódzkich komend PSP o punktach treningowych.",
+        "Czy ćwiczenia przebiegły zgodnie z planem i czy pojawiły się nowe zalecenia praktyczne."
+      ],
+      "sources": [
+        {
+          "title": "MSWiA — treningi reagowania 26 września",
+          "url": "https://www.gov.pl/web/mswia/w-sobote-specjalne-treningi-reagowania-na-zagrozenie-atakiem-z-powietrza-dla-mieszkancow-woj-podlaskiego-i-warminsko-mazurskich"
+        }
+      ],
+      "tags": [
+        "bezpieczeństwo",
+        "ochrona ludności",
+        "ćwiczenia",
+        "Polska"
+      ],
+      "priority": "high"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24",
+      "url": "https://tvn24.pl/najnowsze"
+    },
+    {
+      "title": "BBC News",
+      "url": "https://www.bbc.com/news"
+    },
+    {
+      "title": "BBC World Service Partners",
+      "url": "https://wspartners.bbc.com/episode/w1730nkv07lg3gn"
+    },
+    {
+      "title": "CNN",
+      "url": "https://www.cnn.com/"
+    },
+    {
+      "title": "CNN Transcripts",
+      "url": "https://transcripts.cnn.com/show/ctw"
+    },
+    {
+      "title": "RCB",
+      "url": "https://www.gov.pl/web/rcb/"
+    },
+    {
+      "title": "MON",
+      "url": "https://www.gov.pl/web/obrona-narodowa"
+    },
+    {
+      "title": "IMGW",
+      "url": "https://meteo.imgw.pl/"
+    },
+    {
+      "title": "Sejm RP",
+      "url": "https://www.sejm.gov.pl/"
+    },
+    {
+      "title": "ABW",
+      "url": "https://www.abw.gov.pl/"
+    },
+    {
+      "title": "MSWiA",
+      "url": "https://www.gov.pl/web/mswia"
+    }
+  ]
+}
