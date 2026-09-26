@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-09-25T13:03:11.283068+00:00",
+  "generatedAt": "2026-09-26T16:05:31.905814+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -137,6 +137,29 @@
     }
   ],
   "artifacts": [
+    {
+      "id": "research/puls-dnia-news/runs/2026-09-26-1803.md",
+      "type": "run",
+      "topic": "puls-dnia-news",
+      "title": "Pavbot Puls Dnia — 2026-09-26 18:03 CEST",
+      "path": "research/puls-dnia-news/runs/2026-09-26-1803.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/runs/2026-09-26-1803.md",
+      "sizeBytes": 2612,
+      "date": "2026-09-26",
+      "time": "18:03"
+    },
+    {
+      "id": "research/puls-dnia-news/data/2026-09-26-1803-pulse-news.json",
+      "type": "pulseNewsData",
+      "topic": "puls-dnia-news",
+      "title": "Pulse news data",
+      "path": "research/puls-dnia-news/data/2026-09-26-1803-pulse-news.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/data/2026-09-26-1803-pulse-news.json",
+      "sizeBytes": 14472,
+      "date": "2026-09-26",
+      "time": "18:03",
+      "itemCount": 16
+    },
     {
       "id": "research/tech-news/podcasts/2026-09-25/sources.md",
       "type": "podcastSources",
