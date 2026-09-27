@@ -1,6 +1,20 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-09-25
+Last updated: 2026-09-27
+
+## Update 2026-09-27
+
+Polska przygotowuje specustawę dla stałej bazy USA, analizuje dwie lokalizacje
+na zachodzie kraju i czeka na amerykański przegląd strategiczny zaplanowany na
+listopad i grudzień; finalnej decyzji Waszyngtonu nadal nie ma. Kraków prowadzi
+przedterminowe wybory po majowym referendum, bez wyniku przed zamknięciem lokali
+o 21:00. Rosyjskie uderzenia przyniosły kolejne ofiary w Ukrainie i dwukrotnie
+trafiły centrum danych w Kijowie. Donald Trump publicznie odrzucił siedmiodniowy
+plan Iranu dla Ormuzu, choć kanał mediacyjny formalnie pozostaje otwarty, a
+irańskie twierdzenie o przejęciu REMUS 600 nie ma potwierdzenia USA. Brytyjskie
+służby zatrzymały pięciu mężczyzn przy RAF Fairford, wstępne wyniki w Szwajcarii
+wskazują na odrzucenie twardszej neutralności, a kardynał Matteo Zuppi rozpoczął
+w Moskwie kolejną misję dotyczącą dzieci, jeńców i cywilów.
 
 ## Update 2026-09-25
 
@@ -78,6 +92,7 @@ Europy, ale nie ogłosiło nowych zobowiązań wojskowych.
 
 ## Recent Reports
 
+- [2026-09-27](runs/2026-09-27.md)
 - [2026-09-25](runs/2026-09-25.md)
 - [2026-09-24](runs/2026-09-24.md)
 - [2026-09-22](runs/2026-09-22.md)
