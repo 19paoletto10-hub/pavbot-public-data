@@ -2,6 +2,18 @@
 
 Last updated: 2026-09-28
 
+## Update 2026-09-28 wieczór
+
+Po południowych rosyjskich atakach na zachodnią Ukrainę Dowództwo Operacyjne
+RSZ uruchomiło polskie lotnictwo oraz podniosło gotowość obrony powietrznej i
+rozpoznania; alert RCB dla Lubelszczyzny odwołano, bez potwierdzonego naruszenia
+polskiej przestrzeni. Prokuratura powołała specjalny zespół do sprawy
+Zondacrypto. Weryfikacja źródła pierwotnego potwierdziła, że Enel-Med zgłosił
+incydent także do CBZC, CESIRT, CERT Polska i UODO, lecz zakres danych nadal
+pozostaje nieustalony.
+
+Raport: [2026-09-28-1933](runs/2026-09-28-1933.md)
+
 ## Update 2026-09-28
 
 Pełne wyniki pierwszej tury przedterminowych wyborów w Krakowie dały Łukaszowi
