@@ -1,6 +1,20 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-09-27
+Last updated: 2026-09-28
+
+## Update 2026-09-28
+
+Pełne wyniki pierwszej tury przedterminowych wyborów w Krakowie dały Łukaszowi
+Gibale 36,38 proc., Monice Piątkowskiej 29,91 proc. i potwierdziły drugą turę
+11 października. Enel-Med poinformował osobno o nieuprawnionym dostępie do
+części infrastruktury i danych szacowanych na około 3 proc. bazy pacjentów.
+Rosyjskie uderzenia raniły 25 osób, w tym dziewięcioro dzieci, w bloku w
+Charkowie i zabiły dwie osoby na targowisku pod Kijowem. W Ormuzie kanał rozmów
+USA-Iran pozostaje otwarty mimo odrzucenia planu przez Trumpa, ropa drożeje, a
+doniesienie o ośmiu rannych marines nie ma potwierdzenia Pentagonu. Szwajcaria
+ostatecznie odrzuciła twardszą neutralność 70,15 do 29,85 proc., RN i UDR po raz
+pierwszy uzyskały liczebność klubu we francuskim Senacie, a Seul zażądał od
+Kijowa przeprosin za ujawnienie transferu północnokoreańskich jeńców.
 
 ## Update 2026-09-27
 
@@ -92,6 +106,7 @@ Europy, ale nie ogłosiło nowych zobowiązań wojskowych.
 
 ## Recent Reports
 
+- [2026-09-28](runs/2026-09-28.md)
 - [2026-09-27](runs/2026-09-27.md)
 - [2026-09-25](runs/2026-09-25.md)
 - [2026-09-24](runs/2026-09-24.md)
