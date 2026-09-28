@@ -1,4 +1,4 @@
-# Wieczorny brief — 27 września 2026
+# Poranny brief — 28 września 2026
 
 Dzień dobry wieczorem. To krótki, źródłowany przegląd najważniejszych wydarzeń.
 
@@ -12,5 +12,5 @@ A co z Polską? Ostatni dostępny komunikat Rządowego Centrum Bezpieczeństwa p
 
 W skrócie: eskalacja w Ukrainie jest realna, kanał dyplomatyczny pozostaje ograniczony, a polski status bezpieczeństwa wymaga opierania się na komunikatach służb. Dziś najcenniejszym gadżetem nie jest kolejny alarmowy nagłówek, tylko sprawdzone źródło.
 
-To był wieczorny brief Pavbota. Do usłyszenia.
+To był poranny brief Pavbota. Do usłyszenia.
 
