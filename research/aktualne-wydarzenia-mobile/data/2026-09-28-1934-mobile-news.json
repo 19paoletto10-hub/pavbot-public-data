@@ -1,0 +1,322 @@
+{
+  "schemaVersion": 1,
+  "topic": "aktualne-wydarzenia-mobile",
+  "runDate": "2026-09-28",
+  "runTime": "19:34",
+  "status": "Material update",
+  "headline": "Najważniejsza zmiana dla Polski to alert RCB dla mieszkańców Lubelszczyzny podczas rosyjskich ataków na Ukrainę. Alert został później odwołany, a RCB przekazało, że na terytorium Polski nie ma zagrożenia. To istotne rozróżnienie: aktywność polskiego lotnictwa i ostrzeżenie były reakcją na sytuację za granicą, nie potwierdzeniem naruszenia RP. W Ukrainie ataki zabiły co najmniej sześć osób i raniły 53, a uszkodzenia objęły także centralę operatora Kyivstar.",
+  "leadParagraphs": [
+    "Najważniejsza zmiana dla Polski to alert RCB dla mieszkańców Lubelszczyzny podczas rosyjskich ataków na Ukrainę. Alert został później odwołany, a RCB przekazało, że na terytorium Polski nie ma zagrożenia. To istotne rozróżnienie: aktywność polskiego lotnictwa i ostrzeżenie były reakcją na sytuację za granicą, nie potwierdzeniem naruszenia RP. W Ukrainie ataki zabiły co najmniej sześć osób i raniły 53, a uszkodzenia objęły także centralę operatora Kyivstar."
+  ],
+  "checkedSources": [
+    {
+      "title": "RCB — komunikaty",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    },
+    {
+      "title": "Reuters — alert w Lubelskiem",
+      "url": "https://www.marketscreener.com/news/poland-tells-people-in-east-to-take-shelter-as-russia-strikes-ukraine-ce785adcde8ef027"
+    },
+    {
+      "title": "Reuters — odwołanie alertu",
+      "url": "https://www.devdiscourse.com/article/international/3983322-poland-lifts-warning-to-take-shelter-following-russia-strikes-on-ukraine"
+    },
+    {
+      "title": "AP",
+      "url": "https://www.ksat.com/news/world/2026/09/28/russian-drones-pound-civilian-areas-as-ukraine-claims-battlefield-breakthroughs/"
+    },
+    {
+      "title": "The Guardian",
+      "url": "https://www.theguardian.com/world/2026/sep/28/ukraine-war-briefing-zelenskyy-moscow-terrorising-kyiv-latest-strikes"
+    },
+    {
+      "title": "Consilium",
+      "url": "https://www.consilium.europa.eu/lt/press/press-releases/2026/09/25/media-advisory-foreign-affairs-council-defence-of-28-september-2026/"
+    }
+  ],
+  "sections": [
+    {
+      "id": "ogolne",
+      "title": "Ogólne",
+      "summary": "Wieczorne informacje łączą krótkotrwały alert w Polsce z ciężkimi rosyjskimi atakami na Ukrainę.",
+      "articles": [
+        {
+          "id": "ogolne-1-alert-w-lubelskiem-zosta-odwoany",
+          "section": "Ogólne",
+          "title": "Alert w Lubelskiem został odwołany",
+          "lead": "Mieszkańcy wschodniej Polski otrzymali ostrzeżenie, a następnie komunikat o braku zagrożenia.",
+          "facts": [
+            "RCB zaleciło schronienie podczas ataków na Ukrainę.",
+            "Ostrzeżenie odwołano; Reuters podał, że nie było zagrożenia na terytorium Polski. Reuters"
+          ],
+          "analysis": "Państwo zastosowało eskalowalny model ostrzegania i odwołania.",
+          "whyItMatters": "Precyzyjny status ogranicza panikę i dezinformację.",
+          "sources": [
+            {
+              "title": "Reuters",
+              "url": "https://www.devdiscourse.com/article/international/3983322-poland-lifts-warning-to-take-shelter-following-russia-strikes-on-ukraine"
+            }
+          ],
+          "tags": [
+            "Ogólne"
+          ],
+          "ttsText": "Mieszkańcy wschodniej Polski otrzymali ostrzeżenie, a następnie komunikat o braku zagrożenia. RCB zaleciło schronienie podczas ataków na Ukrainę. Ostrzeżenie odwołano; Reuters podał, że nie było zagrożenia na terytorium Polski. Reuters Państwo zastosowało eskalowalny model ostrzegania i odwołania. Precyzyjny status ogranicza panikę i dezinformację.",
+          "priority": "High"
+        },
+        {
+          "id": "ogolne-2-cywilny-koszt-rosyjskich-uderzen-rosnie",
+          "section": "Ogólne",
+          "title": "Cywilny koszt rosyjskich uderzeń rośnie",
+          "lead": "Ukraińskie władze raportują ofiary i rany w wielu regionach.",
+          "facts": [
+            "AP podała sześć zabitych osób i 53 rannych.",
+            "Ataki dotknęły obszary cywilne. AP"
+          ],
+          "analysis": "Rozproszenie uderzeń obciąża lokalne służby.",
+          "whyItMatters": "Kryzys pozostaje bezpośrednim problemem bezpieczeństwa Europy.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://www.ksat.com/news/world/2026/09/28/russian-drones-pound-civilian-areas-as-ukraine-claims-battlefield-breakthroughs/"
+            }
+          ],
+          "tags": [
+            "Ogólne"
+          ],
+          "ttsText": "Ukraińskie władze raportują ofiary i rany w wielu regionach. AP podała sześć zabitych osób i 53 rannych. Ataki dotknęły obszary cywilne. AP Rozproszenie uderzeń obciąża lokalne służby. Kryzys pozostaje bezpośrednim problemem bezpieczeństwa Europy.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "polska",
+      "title": "Polska",
+      "summary": "Krajowy obraz dnia jest operacyjny, z reakcją obronną bez potwierdzonego naruszenia granicy.",
+      "articles": [
+        {
+          "id": "polska-1-polskie-lotnictwo-dziaao-w-zwiazku-z-atakami",
+          "section": "Polska",
+          "title": "Polskie lotnictwo działało w związku z atakami",
+          "lead": "Reuters odnotował operowanie polskich samolotów w polskiej przestrzeni.",
+          "facts": [
+            "Aktywność była reakcją na rosyjskie ataki na Ukrainę.",
+            "Nie podano o naruszeniu polskiej przestrzeni przez obcy statek. Reuters"
+          ],
+          "analysis": "Reakcja obronna nie jest równoznaczna z wejściem Polski do konfliktu.",
+          "whyItMatters": "To kluczowe rozróżnienie dla odbiorców mobilnego briefu.",
+          "sources": [
+            {
+              "title": "Reuters",
+              "url": "https://www.marketscreener.com/news/poland-tells-people-in-east-to-take-shelter-as-russia-strikes-ukraine-ce785adcde8ef027"
+            }
+          ],
+          "tags": [
+            "Polska"
+          ],
+          "ttsText": "Reuters odnotował operowanie polskich samolotów w polskiej przestrzeni. Aktywność była reakcją na rosyjskie ataki na Ukrainę. Nie podano o naruszeniu polskiej przestrzeni przez obcy statek. Reuters Reakcja obronna nie jest równoznaczna z wejściem Polski do konfliktu. To kluczowe rozróżnienie dla odbiorców mobilnego briefu.",
+          "priority": "High"
+        },
+        {
+          "id": "polska-2-rcb-pozostaje-podstawowym-kanaem",
+          "section": "Polska",
+          "title": "RCB pozostaje podstawowym kanałem",
+          "lead": "Status bezpieczeństwa należy sprawdzać w komunikatach służb, nie w niesprawdzonych wpisach.",
+          "facts": [
+            "RCB publikuje bieżące alerty i ich odwołania.",
+            "Oficjalna lista komunikatów jest dostępna publicznie. RCB"
+          ],
+          "analysis": "Źródło pierwotne ma pierwszeństwo przed interpretacją medialną.",
+          "whyItMatters": "Pozwala szybko odróżnić ostrzeżenie od potwierdzonego incydentu.",
+          "sources": [
+            {
+              "title": "RCB",
+              "url": "https://www.gov.pl/web/rcb/komunikaty"
+            }
+          ],
+          "tags": [
+            "Polska"
+          ],
+          "ttsText": "Status bezpieczeństwa należy sprawdzać w komunikatach służb, nie w niesprawdzonych wpisach. RCB publikuje bieżące alerty i ich odwołania. Oficjalna lista komunikatów jest dostępna publicznie. RCB Źródło pierwotne ma pierwszeństwo przed interpretacją medialną. Pozwala szybko odróżnić ostrzeżenie od potwierdzonego incydentu.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "polityka",
+      "title": "Polityka",
+      "summary": "Polityczny wymiar dnia obejmuje odpowiedź obronną Polski i unijne decyzje dotyczące wsparcia Ukrainy.",
+      "articles": [
+        {
+          "id": "polityka-1-ue-omawia-obronne-wsparcie-ukrainy",
+          "section": "Polityka",
+          "title": "UE omawia obronne wsparcie Ukrainy",
+          "lead": "Ministrowie obrony państw UE mają w agendzie bieżące wsparcie dla Ukrainy.",
+          "facts": [
+            "Posiedzenie Rady ds. Zagranicznych w formule obronnej zaplanowano na 28 września.",
+            "Program obejmuje punkt „EU defence support to Ukraine”. Consilium"
+          ],
+          "analysis": "Wsparcie jest elementem bieżącej koordynacji ministerialnej.",
+          "whyItMatters": "Decyzje UE wpływają na zdolność Ukrainy do ochrony miast.",
+          "sources": [
+            {
+              "title": "Consilium",
+              "url": "https://www.consilium.europa.eu/lt/press/press-releases/2026/09/25/media-advisory-foreign-affairs-council-defence-of-28-september-2026/"
+            }
+          ],
+          "tags": [
+            "Polityka"
+          ],
+          "ttsText": "Ministrowie obrony państw UE mają w agendzie bieżące wsparcie dla Ukrainy. Posiedzenie Rady ds. Zagranicznych w formule obronnej zaplanowano na 28 września. Program obejmuje punkt „EU defence support to Ukraine”. Consilium Wsparcie jest elementem bieżącej koordynacji ministerialnej. Decyzje UE wpływają na zdolność Ukrainy do ochrony miast.",
+          "priority": "High"
+        },
+        {
+          "id": "polityka-2-dyplomacja-nie-zatrzymaa-atakow",
+          "section": "Polityka",
+          "title": "Dyplomacja nie zatrzymała ataków",
+          "lead": "Tydzień rozmów przy ONZ nie przyniósł widocznego ograniczenia rosyjskiej presji.",
+          "facts": [
+            "AP wiąże nowe ataki z trwającymi wysiłkami dyplomatycznymi.",
+            "Guardian relacjonuje dalsze wezwania Ukrainy do presji sankcyjnej. AP, The Guardian"
+          ],
+          "analysis": "Kanały rozmów istnieją, ale nie zmieniły dziś obrazu pola walki.",
+          "whyItMatters": "Wyjaśnia, dlaczego decyzje obronne pozostają pilne.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://www.ksat.com/news/world/2026/09/28/russian-drones-pound-civilian-areas-as-ukraine-claims-battlefield-breakthroughs/"
+            },
+            {
+              "title": "The Guardian",
+              "url": "https://www.theguardian.com/world/2026/sep/28/ukraine-war-briefing-zelenskyy-moscow-terrorising-kyiv-latest-strikes"
+            }
+          ],
+          "tags": [
+            "Polityka"
+          ],
+          "ttsText": "Tydzień rozmów przy ONZ nie przyniósł widocznego ograniczenia rosyjskiej presji. AP wiąże nowe ataki z trwającymi wysiłkami dyplomatycznymi. Guardian relacjonuje dalsze wezwania Ukrainy do presji sankcyjnej. AP, The Guardian Kanały rozmów istnieją, ale nie zmieniły dziś obrazu pola walki. Wyjaśnia, dlaczego decyzje obronne pozostają pilne.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "sprawy-zagraniczne",
+      "title": "Sprawy zagraniczne",
+      "summary": "Zagraniczny ciężar wydania stanowią rosyjskie ataki na miasta, infrastrukturę i łączność Ukrainy.",
+      "articles": [
+        {
+          "id": "sprawy-zagraniczne-1-uderzenia-objey-miasta-i-infrastrukture",
+          "section": "Sprawy zagraniczne",
+          "title": "Uderzenia objęły miasta i infrastrukturę",
+          "lead": "AP i Guardian opisują ofiary cywilne oraz szkody w wielu regionach.",
+          "facts": [
+            "AP podała 53 osoby ranne i co najmniej sześć zabitych.",
+            "W Kijowie trafiona została siedziba Kyivstar. AP, The Guardian"
+          ],
+          "analysis": "Uderzenia mają wymiar zarówno humanitarny, jak i infrastrukturalny.",
+          "whyItMatters": "Awaria łączności może utrudniać reakcję cywilną i wojskową.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://www.ksat.com/news/world/2026/09/28/russian-drones-pound-civilian-areas-as-ukraine-claims-battlefield-breakthroughs/"
+            },
+            {
+              "title": "The Guardian",
+              "url": "https://www.theguardian.com/world/2026/sep/28/ukraine-war-briefing-zelenskyy-moscow-terrorising-kyiv-latest-strikes"
+            }
+          ],
+          "tags": [
+            "Sprawy zagraniczne"
+          ],
+          "ttsText": "AP i Guardian opisują ofiary cywilne oraz szkody w wielu regionach. AP podała 53 osoby ranne i co najmniej sześć zabitych. W Kijowie trafiona została siedziba Kyivstar. AP, The Guardian Uderzenia mają wymiar zarówno humanitarny, jak i infrastrukturalny. Awaria łączności może utrudniać reakcję cywilną i wojskową.",
+          "priority": "High"
+        },
+        {
+          "id": "sprawy-zagraniczne-2-ukraina-zgasza-postepy-na-froncie",
+          "section": "Sprawy zagraniczne",
+          "title": "Ukraina zgłasza postępy na froncie",
+          "lead": "Ukraińska armia twierdzi, że wykorzystała sytuację do odzyskania terenu.",
+          "facts": [
+            "AP odnotowała deklaracje o battlefield breakthroughs.",
+            "Twierdzenia wojskowe nie mają pełnej niezależnej weryfikacji. AP"
+          ],
+          "analysis": "Równoczesna presja powietrzna i lokalne działania lądowe utrudniają ocenę trendu.",
+          "whyItMatters": "Nie należy mylić deklaracji operacyjnych z rozstrzygnięciem wojny.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://www.ksat.com/news/world/2026/09/28/russian-drones-pound-civilian-areas-as-ukraine-claims-battlefield-breakthroughs/"
+            }
+          ],
+          "tags": [
+            "Sprawy zagraniczne"
+          ],
+          "ttsText": "Ukraińska armia twierdzi, że wykorzystała sytuację do odzyskania terenu. AP odnotowała deklaracje o battlefield breakthroughs. Twierdzenia wojskowe nie mają pełnej niezależnej weryfikacji. AP Równoczesna presja powietrzna i lokalne działania lądowe utrudniają ocenę trendu. Nie należy mylić deklaracji operacyjnych z rozstrzygnięciem wojny.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "technologia",
+      "title": "Technologia",
+      "summary": "Technologiczny wymiar dnia obejmuje drony, obronę powietrzną i odporność sieci telekomunikacyjnych.",
+      "articles": [
+        {
+          "id": "technologia-1-kyivstar-trafiony-podczas-rosyjskich-uderzen",
+          "section": "Technologia",
+          "title": "Kyivstar trafiony podczas rosyjskich uderzeń",
+          "lead": "Uszkodzenie siedziby największego operatora komórkowego pokazuje wrażliwość infrastruktury cyfrowej.",
+          "facts": [
+            "Guardian podał, że centrala Kyivstar została trafiona bez ofiar.",
+            "Uderzenia objęły także infrastrukturę komunikacyjną. The Guardian"
+          ],
+          "analysis": "Odporność telekomunikacji jest częścią bezpieczeństwa cywilnego.",
+          "whyItMatters": "Łączność pomaga służbom i mieszkańcom reagować podczas ataków.",
+          "sources": [
+            {
+              "title": "The Guardian",
+              "url": "https://www.theguardian.com/world/2026/sep/28/ukraine-war-briefing-zelenskyy-moscow-terrorising-kyiv-latest-strikes"
+            }
+          ],
+          "tags": [
+            "Technologia"
+          ],
+          "ttsText": "Uszkodzenie siedziby największego operatora komórkowego pokazuje wrażliwość infrastruktury cyfrowej. Guardian podał, że centrala Kyivstar została trafiona bez ofiar. Uderzenia objęły także infrastrukturę komunikacyjną. The Guardian Odporność telekomunikacji jest częścią bezpieczeństwa cywilnego. Łączność pomaga służbom i mieszkańcom reagować podczas ataków.",
+          "priority": "High"
+        },
+        {
+          "id": "technologia-2-drony-zwiekszaja-presje-na-obrone-powietrzna",
+          "section": "Technologia",
+          "title": "Drony zwiększają presję na obronę powietrzną",
+          "lead": "AP opisuje całodobowe użycie dronów i innych środków napadu.",
+          "facts": [
+            "Ataki objęły obszary cywilne w wielu regionach.",
+            "Polska uruchomiła reakcję ochronną na własnym terytorium. AP, Reuters"
+          ],
+          "analysis": "Drony łączą niski koszt ataku z wysokim kosztem obrony i alarmowania.",
+          "whyItMatters": "To jeden z powodów, dla których UE omawia dalsze wsparcie obronne.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://www.ksat.com/news/world/2026/09/28/russian-drones-pound-civilian-areas-as-ukraine-claims-battlefield-breakthroughs/"
+            },
+            {
+              "title": "Reuters",
+              "url": "https://www.marketscreener.com/news/poland-tells-people-in-east-to-take-shelter-as-russia-strikes-ukraine-ce785adcde8ef027"
+            }
+          ],
+          "tags": [
+            "Technologia"
+          ],
+          "ttsText": "AP opisuje całodobowe użycie dronów i innych środków napadu. Ataki objęły obszary cywilne w wielu regionach. Polska uruchomiła reakcję ochronną na własnym terytorium. AP, Reuters Drony łączą niski koszt ataku z wysokim kosztem obrony i alarmowania. To jeden z powodów, dla których UE omawia dalsze wsparcie obronne.",
+          "priority": "High"
+        }
+      ]
+    }
+  ],
+  "audioArtifacts": [
+    {
+      "variant": "female-piper",
+      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-09-28-1934/audio/female-piper/podcast.mp3"
+    }
+  ]
+}
