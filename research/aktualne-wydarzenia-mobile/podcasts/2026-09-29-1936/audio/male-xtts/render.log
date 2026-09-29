@@ -8,7 +8,7 @@
   return torch.load(f, map_location=map_location, **kwargs)
  > Using model: xtts
  > Text splitted to sentences.
-['Dzień dobry, a właściwie dobry wieczór.', 'Oto najważniejsze wiadomości z Polski i świata.', 'Zaczynamy od bezpieczeństwa Polski.', 'W związku z rosyjskimi atakami na Ukrainę Rządowe Centrum Bezpieczeństwa ostrzegło mieszkańców wschodniej Lubelszczyzny, by znaleźli bezpieczne miejsce.', 'Wcześniej informowano także o operowaniu polskich samolotów w polskiej przestrzeni.', 'Później alert odwołano.', 'Według komunikatu przywołanego przez Reutersa na terytorium Polski nie było zagrożenia.', 'To ważne rozróżnienie: reakcja obronna i ostrzeżenie nie oznaczają automatycznie naruszenia granicy.', 'W Ukrainie rosyjskie ataki przyniosły ofiary cywilne.', 'Associated Press podała co najmniej sześć osób zabitych i pięćdziesiąt trzy ranne.', 'Relacje obejmują wiele regionów, a Guardian poinformował również o uszkodzeniu siedziby Kyivstar, największego ukraińskiego operatora komórkowego.', 'W czasie wojny sieć telekomunikacyjna nie jest luksusem ani dodatkiem.', 'To część infrastruktury ratunkowej — trochę jak latarka, tylko z rachunkiem abonamentowym.', 'Unia Europejska zajmuje się dziś praktyką obrony, nie tylko deklaracjami.', 'Rada Unii zaplanowała posiedzenie ministrów obrony z punktem dotyczącym wsparcia obronnego dla Ukrainy.', 'Tydzień rozmów dyplomatycznych przy Organizacji Narodów Zjednoczonych nie przyniósł jednak widocznego ograniczenia rosyjskich ataków.', 'Ukraina zgłasza również postępy na froncie.', 'To twierdzenie strony konfliktu i wymaga niezależnego potwierdzenia, dlatego nie należy przedstawiać go jako rozstrzygnięcia wojny.', 'Pewniejsze są dane o skutkach ataków: rannych, uszkodzonych budynkach i przeciążonych służbach.', 'Najważniejsze wnioski na dziś są trzy.', 'Po pierwsze, sytuacja na wschodniej flance wymaga szybkiego i precyzyjnego alarmowania.', 'Po drugie, ochrona Ukrainy obejmuje również łączność i infrastrukturę cywilną.', 'Po trzecie, warto sprawdzać końcowy komunikat RCB, a nie zatrzymywać się na pierwszym, alarmowym nagłówku.', 'To był wieczorny briefing Pavbota.', 'Spokojnego wieczoru i do usłyszenia.']
+['Dzień dobry, a właściwie dobry wieczór.', 'Oto najważniejsze informacje.', 'Po pierwsze: Unia Europejska podsumowała posiedzenie ministrów obrony.', 'Priorytetem pozostaje obrona powietrzna Ukrainy.', 'Rada podała, że zatwierdzone plany zakupowe w ramach Ukraine Support Loan sięgają 28,3 miliarda euro, a mobilizacja środków z Europejskiego Instrumentu na rzecz Pokoju — 6,6 miliarda euro.', 'Ministrowie rozmawiali też o misji EUMAM Ukraine i rosyjskiej flocie cieni.', 'Źródło: Consilium.', 'Rada Unii Europejskiej poinformowała również o sankcjach wobec dziesięciu osób i siedemnastu podmiotów za bezprawne deportacje ukraińskich dzieci do Rosji.', 'To kolejny sygnał, że europejska odpowiedź na wojnę obejmuje nie tylko broń i pieniądze, ale także odpowiedzialność za naruszenia prawa.', 'Źródło: Consilium.', 'W Polsce Ministerstwo Obrony Narodowej wyjaśniło procedurę zmiany kategorii zdrowia w sprawie ćwiczeń rezerwy.', 'Resort podkreśla, że potrzebny jest wniosek zainteresowanej osoby i badanie wojskowej komisji lekarskiej.', 'To procedura administracyjno-lekarska, a nie komunikat o powszechnej mobilizacji — warto zachować tu więcej precyzji niż internetowe nagłówki.', 'Źródło: MON.', 'RCB nie publikuje dziś nowego alertu powietrznego.', 'W rejestrze pozostają jednak wcześniejsze komunikaty związane z rosyjskimi atakami na Ukrainę oraz późniejszym potwierdzeniem braku zagrożenia w Polsce.', 'W sytuacji alarmowej liczy się aktualny komunikat służb, nie najgłośniejszy komentarz w sieci.', 'Źródło: RCB.', 'Na koniec: Europa próbuje jednocześnie dostarczać rozwiązania tu i teraz oraz budować własną bazę przemysłową.', 'To mniej efektowna część wiadomości, ale właśnie od niej zależy, czy systemy obronne będą miały amunicję, serwis i części.', 'Tyle na dziś.', 'Źródło: Consilium.']
 Traceback (most recent call last):
   File "/Users/promaczek/iCloud Drive (Archive)/Documents/CODEX-Pavbot/.agents/scripts/podcast/render_xtts.py", line 105, in <module>
     main()
@@ -68,18 +68,18 @@ Traceback (most recent call last):
   File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
     return forward_call(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 427, in forward
-    feed_forward_hidden_states = self.mlp(hidden_states)
-                                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 390, in forward
+    attn_outputs = self.attn(
+                   ^^^^^^^^^^
   File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
     return self._call_impl(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
     return forward_call(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 354, in forward
-    hidden_states = self.c_fc(hidden_states)
-                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 312, in forward
+    query, key, value = self.c_attn(hidden_states).split(self.split_size, dim=2)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
     return self._call_impl(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
