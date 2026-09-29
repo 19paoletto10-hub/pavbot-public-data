@@ -1,0 +1,534 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-09-29",
+  "runTime": "15:03",
+  "status": "gotowy do publikacji",
+  "headline": "Puls Dnia: bez potwierdzonej materialnej zmiany",
+  "summary": "Sprawdzenie TVN24, BBC i CNN nie przyniosło wystarczająco świeżej, niezależnie potwierdzonej zmiany. Utrzymano 14 kart monitoringu w siedmiu sekcjach; BBC i CNN były częściowo ograniczone technicznie.",
+  "checkedSources": [
+    {
+      "title": "TVN24",
+      "url": "https://tvn24.pl/najnowsze"
+    },
+    {
+      "title": "BBC",
+      "url": "https://www.bbc.com/news"
+    },
+    {
+      "title": "CNN",
+      "url": "https://edition.cnn.com/"
+    },
+    {
+      "title": "RCB",
+      "url": "https://www.gov.pl/web/rcb"
+    }
+  ],
+  "items": [
+    {
+      "id": "pl-granica-20260929",
+      "section": "Polska",
+      "title": "Wojsko dłużej pomoże Straży Granicznej",
+      "lead": "Nocne alerty RCB po rosyjskich atakach w Ukrainie; polskie służby monitorowały przestrzeń przy granicy.",
+      "whatHappened": "W nocy po rosyjskich atakach na Ukrainę RCB wysyłało alerty dla województw przygranicznych. Według dostępnych relacji nie potwierdzono naruszenia polskiej przestrzeni powietrznej; działania obronne i monitoring zostały podniesione.",
+      "keyFacts": [
+        "Decyzję odnotowano 28 września 2026 r.",
+        "Zakres dotyczy pomocy Straży Granicznej, a nie ogłoszenia nowego alarmu wojennego."
+      ],
+      "reactions": [
+        "BBN opisało decyzję jako element bieżącego systemu bezpieczeństwa państwa."
+      ],
+      "whyItMatters": "Przedłużenie utrzymuje wojskowe wsparcie ochrony wschodniej granicy i wpływa na planowanie służb.",
+      "context": "W poprzednich wydaniach granica pozostawała w monitoringu bez nowej decyzji tego szczebla.",
+      "watchNext": [
+        "Komunikaty Dowództwa Operacyjnego i RCB",
+        "Ewentualne nowe alerty dla województw wschodnich"
+      ],
+      "sources": [
+        {
+          "title": "TVN24 — najnowsze wiadomości",
+          "url": "https://tvn24.pl/najnowsze"
+        },
+        {
+          "title": "RCB — strona główna",
+          "url": "https://www.gov.pl/web/rcb"
+        },
+        {
+          "title": "WP — rosyjskie ataki przy granicy i alerty RCB",
+          "url": "https://wiadomosci.wp.pl/rosyjskie-ataki-przy-granicy-alerty-rcb-co-dzialo-sie-w-poniedzialek-7334368505895168a"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "granica",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-apache-20260929",
+      "section": "Polska",
+      "title": "Dęblin z kompetencjami serwisowymi Apache",
+      "lead": "MON poinformował o umowie z GE Aerospace dotyczącej serwisowania silników AH-64.",
+      "whatHappened": "W Dęblinie podpisano umowę dotyczącą serwisowania silników w ramach programu zakupu śmigłowców AH-64 oraz zaprezentowano Team Apache dla Polski.",
+      "keyFacts": [
+        "Wydarzenie odbyło się 28 września 2026 r.",
+        "MON wskazał na transfer kompetencji i krajowe zaplecze obsługowe."
+      ],
+      "reactions": [
+        "MON łączy umowę z budową polskiego przemysłu obronnego i offsetem."
+      ],
+      "whyItMatters": "Krajowe zdolności serwisowe mogą skrócić zależność od zagranicznego zaplecza technicznego.",
+      "context": "Polska ma zakontraktowane 96 śmigłowców AH-64E Apache; szczegóły harmonogramu zdolności wymagają dalszych komunikatów.",
+      "watchNext": [
+        "Sprawdzić zakres techniczny i harmonogram umowy.",
+        "Monitorować rozwój centrów obsługowych w Dęblinie i Łodzi."
+      ],
+      "sources": [
+        {
+          "title": "MON — aktualności",
+          "url": "https://redakcja.www.gov.pl/web/obrona-narodowa/aktualnosci5"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "MON",
+        "Apache",
+        "obronność"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-zdrowie-rzad-20260929",
+      "section": "Polityka",
+      "title": "Pakiet zmian w ochronie zdrowia pozostaje w pracach",
+      "lead": "Rząd przyjął wcześniej projekty dotyczące jawności zatrudnienia i finansowania NFZ.",
+      "whatHappened": "Rada Ministrów przyjęła pakiet projektów dotyczących przejrzystości wynagrodzeń i zatrudniania w ochronie zdrowia oraz przedłużenia sieci szpitali.",
+      "keyFacts": [
+        "Komunikat CIR datowany jest na 22 września 2026 r.",
+        "Jedna z ustaw ma przedłużyć obowiązywanie sieci szpitali do 30 czerwca 2029 r.",
+        "CIR wskazał także plan podwyższonych stawek akcyzy na alkohol od 2027 r."
+      ],
+      "reactions": [
+        "Rząd kieruje dodatkowe wpływy do NFZ; skutki zależą od dalszego procesu legislacyjnego."
+      ],
+      "whyItMatters": "Zmiany mogą wpływać na finansowanie publicznej ochrony zdrowia i zasady zarządzania placówkami.",
+      "context": "To temat kontynuowany, a nie nowa decyzja z bieżącego popołudnia.",
+      "watchNext": [
+        "Sprawdzić skierowanie projektów do Sejmu.",
+        "Monitorować treść ustaw i ocenę skutków regulacji."
+      ],
+      "sources": [
+        {
+          "title": "KPRM — komunikaty CIR",
+          "url": "https://www.gov.pl/web/premier/komunikaty-cir"
+        }
+      ],
+      "tags": [
+        "polityka",
+        "zdrowie",
+        "NFZ"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "pl-szkola-20260929",
+      "section": "Bezpieczeństwo",
+      "title": "Zatrzymano 13-latka podejrzewanego o planowanie ataku w szkole",
+      "lead": "Policjanci z Wąbrzeźna zatrzymali nastolatka; sprawa jest na etapie czynności wyjaśniających.",
+      "whatHappened": "Według informacji przekazanych przez lokalną policję 13-latek miał planować atak w swojej szkole. W plecaku znaleziono bagnet, a w mieszkaniu tasak.",
+      "keyFacts": [
+        "Zatrzymanie nastąpiło rano 28 września 2026 r.",
+        "W czynności zaangażowano także policjantów zajmujących się przestępczością cyfrową.",
+        "Sprawa dotyczy osoby małoletniej i wymaga ostrożnego opisu."
+      ],
+      "reactions": [
+        "Służby prowadzą czynności z udziałem nastolatka i rodzica; nie ma podstaw do uogólniania sprawy na wszystkie szkoły."
+      ],
+      "whyItMatters": "Incydent dotyczy bezpieczeństwa uczniów i procedur wczesnego reagowania na groźby przemocy.",
+      "context": "Opis nie przesądza o zamiarze ani odpowiedzialności prawnej; dalsze ustalenia należą do służb i sądu rodzinnego.",
+      "watchNext": [
+        "Czekać na oficjalny komunikat właściwej komendy lub prokuratury.",
+        "Nie rozpowszechniać danych umożliwiających identyfikację małoletniego."
+      ],
+      "sources": [
+        {
+          "title": "Gra.fm — relacja oparta na informacji policji",
+          "url": "https://gra.fm/13-latek-planowal-atak-w-szkole-mial-bagnet-w-plecaku.html"
+        },
+        {
+          "title": "TOK FM — relacja",
+          "url": "https://www.tokfm.pl/polska/13-latek-planowal-zamach-w-szkole-skad-sie-biora-przemocowe-zachowania-wsrod-mlodziezy"
+        }
+      ],
+      "tags": [
+        "bezpieczeństwo",
+        "szkoła",
+        "Kujawsko-Pomorskie"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "eu-sabotaż-20260929",
+      "section": "Bezpieczeństwo",
+      "title": "UE ostrzega przed kolejnymi aktami sabotażu",
+      "lead": "Kaja Kallas powiedziała, że Rosja planuje działania wymierzone w Europę i demokracje.",
+      "whatHappened": "W Brukseli wysoka przedstawicielka UE Kaja Kallas powiedziała, że według informacji wywiadowczych Rosja planuje kolejne akty sabotażu i ataki na demokracje.",
+      "keyFacts": [
+        "Wypowiedź padła 28 września 2026 r. przed posiedzeniem Rady do Spraw Zagranicznych w formule obronnej.",
+        "UE omawia wsparcie dla Ukrainy, obronę powietrzną i zagrożenia hybrydowe."
+      ],
+      "reactions": [
+        "Kallas wezwała państwa do czujności i zdolności reagowania przed wystąpieniem ataków."
+      ],
+      "whyItMatters": "Ocena UE może przełożyć się na współpracę wywiadowczą, ochronę infrastruktury i politykę sankcyjną.",
+      "context": "To ocena zagrożenia, nie potwierdzenie konkretnego nowego incydentu na terytorium Polski.",
+      "watchNext": [
+        "Sprawdzić końcowe komunikaty Rady UE.",
+        "Monitorować komunikaty NATO i krajowych służb o konkretnych zdarzeniach."
+      ],
+      "sources": [
+        {
+          "title": "EEAS — wypowiedź Kaji Kallas",
+          "url": "https://www.eeas.europa.eu/eeas/foreign-affairs-council-defence-press-remarks-high-representative-kaja-kallas-upon-arrival-2_en"
+        }
+      ],
+      "tags": [
+        "UE",
+        "Rosja",
+        "hybrydowe",
+        "sabotage"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "rcb-opady-20260929",
+      "section": "Alerty",
+      "title": "RCB: alert na intensywne opady deszczu",
+      "lead": "Komunikaty RCB obejmują intensywne opady deszczu w nocy z 28 na 29 września.",
+      "whatHappened": "Mapa komunikatów RCB wskazuje alert dotyczący intensywnych opadów deszczu 28/29 września; szczegóły obszaru należy sprawdzać w bieżącym komunikacie i prognozach IMGW.",
+      "keyFacts": [
+        "Alert ma charakter praktyczny i pogodowy.",
+        "Zasięg oraz lokalne skutki mogą zmieniać się wraz z aktualizacją ostrzeżeń IMGW."
+      ],
+      "reactions": [
+        "Służby pozostają w gotowości; mieszkańcy powinni stosować się do lokalnych zaleceń."
+      ],
+      "whyItMatters": "Intensywne opady mogą powodować lokalne podtopienia, utrudnienia transportowe i zagrożenia na drogach.",
+      "context": "To nie jest komunikat o zagrożeniu militarnym; należy odróżnić go od wcześniejszych alertów związanych z sytuacją w Ukrainie.",
+      "watchNext": [
+        "Sprawdzić obszar obowiązywania alertu RCB.",
+        "Monitorować ostrzeżenia IMGW i komunikaty wojewodów."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 — najnowsze wiadomości",
+          "url": "https://tvn24.pl/najnowsze"
+        },
+        {
+          "title": "RCB — strona główna",
+          "url": "https://www.gov.pl/web/rcb"
+        },
+        {
+          "title": "WP — rosyjskie ataki przy granicy i alerty RCB",
+          "url": "https://wiadomosci.wp.pl/rosyjskie-ataki-przy-granicy-alerty-rcb-co-dzialo-sie-w-poniedzialek-7334368505895168a"
+        }
+      ],
+      "tags": [
+        "alert",
+        "pogoda",
+        "deszcz"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "rcb-monitoring-20260929",
+      "section": "Alerty",
+      "title": "Po opadach potrzebny lokalny monitoring",
+      "lead": "W kolejnych godzinach kluczowe będą lokalne ostrzeżenia i komunikaty służb.",
+      "whatHappened": "RCB publikuje równolegle komunikaty pogodowe i praktyczne, a IMGW aktualizuje ostrzeżenia regionalne. W tym slocie nie potwierdzono ogólnopolskiego zagrożenia wykraczającego poza bieżący alert opadowy.",
+      "keyFacts": [
+        "Zagrożenia pogodowe są zależne od regionu.",
+        "Najbardziej aktualne informacje operacyjne pochodzą z RCB, IMGW i wojewódzkich centrów zarządzania kryzysowego."
+      ],
+      "reactions": [
+        "Brak potwierdzonego powodu do ogólnokrajowej paniki; zalecana jest ostrożność lokalna."
+      ],
+      "whyItMatters": "Dobre rozróżnienie między alertem a skutkiem lokalnym ogranicza dezinformację i pomaga podejmować praktyczne decyzje.",
+      "context": "Karta jest obserwacyjna i nie zastępuje oficjalnych instrukcji służb.",
+      "watchNext": [
+        "Sprawdzić komunikaty o wodzie, drogach i transporcie.",
+        "Nie traktować niedatowanych materiałów w mediach społecznościowych jako potwierdzenia."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 — najnowsze wiadomości",
+          "url": "https://tvn24.pl/najnowsze"
+        },
+        {
+          "title": "RCB — strona główna",
+          "url": "https://www.gov.pl/web/rcb"
+        },
+        {
+          "title": "WP — rosyjskie ataki przy granicy i alerty RCB",
+          "url": "https://wiadomosci.wp.pl/rosyjskie-ataki-przy-granicy-alerty-rcb-co-dzialo-sie-w-poniedzialek-7334368505895168a"
+        }
+      ],
+      "tags": [
+        "alert",
+        "IMGW",
+        "monitoring"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "pl-naftoport-20260929",
+      "section": "Gospodarka",
+      "title": "Naftoport raportuje wysoki przeładunek paliw",
+      "lead": "Według bieżącego zestawienia PAP Naftoport przeładował 26 mln ton paliw płynnych od stycznia do sierpnia.",
+      "whatHappened": "PAP podała, że gdański Naftoport przeładował 26 mln ton paliw płynnych w okresie styczeń–sierpień 2026 r.",
+      "keyFacts": [
+        "Wartość dotyczy ośmiu miesięcy 2026 r.",
+        "To informacja o skali przeładunków, a nie prognoza cen paliw."
+      ],
+      "reactions": [
+        "Dane wspierają ocenę znaczenia infrastruktury morskiej dla bezpieczeństwa dostaw."
+      ],
+      "whyItMatters": "Naftoport jest jednym z elementów dywersyfikacji dostaw surowców energetycznych do Polski.",
+      "context": "Wpływ sytuacji na rynku zależy także od cen ropy, transportu morskiego i wydarzeń na Bliskim Wschodzie.",
+      "watchNext": [
+        "Sprawdzić pełny komunikat operatora i porównanie rok do roku.",
+        "Monitorować koszty frachtu i przepływy przez Bałtyk."
+      ],
+      "sources": [
+        {
+          "title": "PAP — lista artykułów",
+          "url": "https://infopakiety.pap.pl/temat-dnia"
+        }
+      ],
+      "tags": [
+        "gospodarka",
+        "energia",
+        "Naftoport"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "world-ormuz-20260929",
+      "section": "Gospodarka",
+      "title": "Rozmowy o ponownym otwarciu Ormuz pozostają niepewne",
+      "lead": "Iran proponuje warunki otwarcia Cieśniny Ormuz, a USA zapowiadają dalsze rozmowy.",
+      "whatHappened": "BBC opisało irańską propozycję ponownego otwarcia Cieśniny Ormuz w ciągu tygodnia pod określonymi warunkami. CNN podało, że Donald Trump oczekuje kolejnych rozmów, ale na innej podstawie niż pierwsza propozycja.",
+      "keyFacts": [
+        "Nie ma potwierdzonego zawartego porozumienia.",
+        "Cieśnina Ormuz jest kluczowym szlakiem dla handlu i transportu energii."
+      ],
+      "reactions": [
+        "Strony publicznie przedstawiają odmienne warunki; mediacja ma być kontynuowana."
+      ],
+      "whyItMatters": "Każde ograniczenie żeglugi może oddziaływać na ceny ropy, ubezpieczenia i koszty transportu.",
+      "context": "To wątek międzynarodowy i energetyczny; publikowane deklaracje nie przesądzają o przebiegu rozmów.",
+      "watchNext": [
+        "Czekać na oficjalne komunikaty USA i Iranu.",
+        "Monitorować dane o ruchu statków i ceny ropy."
+      ],
+      "sources": [
+        {
+          "title": "Reuters — rozmowy USA i Iranu przez mediatorów",
+          "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/09/29/us-iran-set-to-hold-separate-talks-with-mediators-on-monday-or-tuesday-official-says"
+        },
+        {
+          "title": "CNN — transcripts 28 September 2026",
+          "url": "https://transcripts.cnn.com/date/2026-09-28"
+        }
+      ],
+      "tags": [
+        "gospodarka",
+        "energia",
+        "Iran",
+        "Ormuz"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-iran-20260929",
+      "section": "Świat",
+      "title": "USA–Iran: możliwe dalsze negocjacje",
+      "lead": "USA i Iran osobno rozmawiają z mediatorami o zakończeniu wojny; przełomu jeszcze nie ma.",
+      "whatHappened": "Według Reutersa przedstawiciele USA i Iranu prowadzili osobne rozmowy z mediatorami w nowej próbie zakończenia siedmiomiesięcznej wojny. Możliwe są dalsze kontakty, ale stanowiska pozostają rozbieżne.",
+      "keyFacts": [
+        "Rozmowy są zapowiadane, a nie zakończone.",
+        "Spór obejmuje warunki bezpieczeństwa, program nuklearny i żeglugę."
+      ],
+      "reactions": [
+        "Iran deklaruje gotowość do rozwiązania negocjowanego, ale czeka na jednoznaczną odpowiedź USA."
+      ],
+      "whyItMatters": "Rozwój konfliktu wpływa na bezpieczeństwo Bliskiego Wschodu, rynek energii i politykę sojuszników.",
+      "context": "BBC i CNN potwierdzają kierunek wydarzeń, ale nie dają podstaw do ogłoszenia przełomu dyplomatycznego.",
+      "watchNext": [
+        "Oficjalne potwierdzenie kolejnej rundy rozmów",
+        "Wpływ rozmów na żeglugę i ceny ropy"
+      ],
+      "sources": [
+        {
+          "title": "Reuters — rozmowy USA i Iranu przez mediatorów",
+          "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/09/29/us-iran-set-to-hold-separate-talks-with-mediators-on-monday-or-tuesday-official-says"
+        },
+        {
+          "title": "CNN — transcripts 28 September 2026",
+          "url": "https://transcripts.cnn.com/date/2026-09-28"
+        }
+      ],
+      "tags": [
+        "świat",
+        "Iran",
+        "USA",
+        "dyplomacja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "eu-ukraina-sankcje-20260929",
+      "section": "Świat",
+      "title": "UE rozszerza sankcje za deportacje ukraińskich dzieci",
+      "lead": "Rada UE dodała osoby i podmioty odpowiedzialne za bezprawne deportacje i przymusowe przesiedlenia.",
+      "whatHappened": "Rada UE poinformowała o sankcjach wobec kolejnych 10 osób i 17 podmiotów odpowiedzialnych za systematyczne bezprawne deportacje i przymusowe transfery ukraińskich dzieci do Rosji.",
+      "keyFacts": [
+        "Decyzję opublikowano 28 września 2026 r.",
+        "Sankcje są elementem unijnej reakcji na rosyjską agresję przeciw Ukrainie."
+      ],
+      "reactions": [
+        "UE łączy decyzję z odpowiedzialnością za naruszenia praw człowieka."
+      ],
+      "whyItMatters": "Wzmacnia presję prawną i polityczną na osoby oraz struktury zaangażowane w przymusowe transfery.",
+      "context": "To formalna decyzja sankcyjna, odrębna od bieżących negocjacji USA–Iran.",
+      "watchNext": [
+        "Sprawdzić nazwiska i zakres ograniczeń w pełnym komunikacie Rady UE.",
+        "Monitorować kolejne decyzje dotyczące Ukrainy."
+      ],
+      "sources": [
+        {
+          "title": "Rada UE — komunikaty 28 września",
+          "url": "https://www.consilium.europa.eu/en/press/press-releases/?CouncilConfiguration=122512"
+        }
+      ],
+      "tags": [
+        "świat",
+        "Ukraina",
+        "UE",
+        "sankcje"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "world-eu-hybrid-20260929",
+      "section": "Świat",
+      "title": "UE omawia obronę powietrzną i zagrożenia hybrydowe",
+      "lead": "Ministrowie obrony UE omawiają wsparcie Ukrainy i odporność Europy.",
+      "whatHappened": "Porządek posiedzenia Rady do Spraw Zagranicznych w formule obronnej obejmuje wsparcie dla Ukrainy, obronę powietrzną, współpracę przemysłową i zagrożenia hybrydowe.",
+      "keyFacts": [
+        "Posiedzenie zaplanowano na 28 września 2026 r.",
+        "Kaja Kallas wskazała na potrzebę szybszego wykrywania i reagowania na działania hybrydowe."
+      ],
+      "reactions": [
+        "Państwa UE zwiększają wydatki obronne, ale nadal wskazują na luki zdolności."
+      ],
+      "whyItMatters": "Decyzje UE wpływają na bezpieczeństwo wschodniej flanki i wspólne zakupy obronne.",
+      "context": "Wypowiedzi o zagrożeniach są oceną strategiczną; nie oznaczają automatycznie nowego incydentu.",
+      "watchNext": [
+        "Sprawdzić końcowe wnioski Rady.",
+        "Monitorować zapowiedzi dotyczące Patriotów, Ukrainy i przemysłu obronnego."
+      ],
+      "sources": [
+        {
+          "title": "Rada UE — agenda spotkania",
+          "url": "https://www.consilium.europa.eu/en/meetings/fac/2026/09/28/"
+        },
+        {
+          "title": "EEAS — Kaja Kallas",
+          "url": "https://www.eeas.europa.eu/eeas/foreign-affairs-council-defence-press-remarks-high-representative-kaja-kallas-upon-arrival-2_en"
+        }
+      ],
+      "tags": [
+        "świat",
+        "UE",
+        "obrona",
+        "Ukraina"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "tech-starship-20260929",
+      "section": "Technologia",
+      "title": "Starship celuje w pierwszy lot orbitalny",
+      "lead": "Test Starship jest planowany na 28 września, ale zależy od zgód i warunków technicznych.",
+      "whatHappened": "CNN wymienia próbę wyniesienia Starship jako bieżący temat, a materiały branżowe wskazują 28 września jako najwcześniejszy termin pierwszego lotu orbitalnego.",
+      "keyFacts": [
+        "Termin ma charakter planowany, nie gwarantowany.",
+        "Lot ma być pierwszą próbą orbitalną tej konfiguracji systemu."
+      ],
+      "reactions": [
+        "Ostateczna decyzja zależy od regulatora, pogody i gotowości technicznej."
+      ],
+      "whyItMatters": "Udany test byłby ważnym krokiem dla ciężkiego transportu orbitalnego i programu księżycowego.",
+      "context": "Wcześniejsze terminy były przesuwane; nie należy przedstawiać planu jako potwierdzonego startu.",
+      "watchNext": [
+        "Sprawdzić komunikat SpaceX i regulatora.",
+        "Po próbie zweryfikować wynik oraz ewentualne opóźnienie."
+      ],
+      "sources": [
+        {
+          "title": "CNN Newsroom — transkrypcja",
+          "url": "https://transcripts.cnn.com/show/cnr/date/2026-09-28/segment/18"
+        },
+        {
+          "title": "Space.com — termin Starship",
+          "url": "https://www.space.com/space-exploration/launches-spacecraft/spacex-next-starship-launch-now-on-sept-28-for-1st-orbital-flight"
+        }
+      ],
+      "tags": [
+        "technologia",
+        "kosmos",
+        "SpaceX",
+        "Starship"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "tech-ai-cyber-20260929",
+      "section": "Technologia",
+      "title": "Bezpieczeństwo AI pozostaje w monitoringu",
+      "lead": "Wątek autonomicznych systemów i cyberzagrożeń wymaga dalszego potwierdzania w źródłach pierwotnych.",
+      "whatHappened": "CNN w bieżącym przeglądzie wskazuje na temat rogue AI agents atakujących strony rządowe; w tym slocie nie znaleziono wystarczającego komunikatu pierwotnego, aby przedstawiać go jako potwierdzony incydent w Polsce.",
+      "keyFacts": [
+        "Wątek pochodzi z agendy CNN, ale jego zakres i sprawcy wymagają weryfikacji.",
+        "Nie potwierdzono wpływu na polskie systemy publiczne."
+      ],
+      "reactions": [
+        "Karta pozostaje obserwacyjna i nie jest alarmem cyberbezpieczeństwa."
+      ],
+      "whyItMatters": "Rozwój autonomicznych narzędzi może zwiększać tempo i skalę ataków, ale ocena wymaga danych technicznych.",
+      "context": "Ważne jest oddzielenie medialnego sygnału od potwierdzonego raportu technicznego lub komunikatu służb.",
+      "watchNext": [
+        "Sprawdzić komunikaty CISA, CERT Polska i operatorów zaatakowanych usług.",
+        "Nie rozpowszechniać niezweryfikowanych szczegółów ataku."
+      ],
+      "sources": [
+        {
+          "title": "CNN News Central — transkrypcja",
+          "url": "https://transcripts.cnn.com/show/cnc/date/2026-09-28/segment/03"
+        },
+        {
+          "title": "CERT Polska",
+          "url": "https://cert.pl/"
+        }
+      ],
+      "tags": [
+        "technologia",
+        "AI",
+        "cyberbezpieczeństwo"
+      ],
+      "priority": "low"
+    }
+  ]
+}
