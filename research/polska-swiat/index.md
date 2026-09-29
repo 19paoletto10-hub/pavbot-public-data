@@ -1,6 +1,19 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-09-28
+Last updated: 2026-09-29
+
+## Update 2026-09-29
+
+Nocny rosyjski atak na Odessę ranił co najmniej sześć osób i uszkodził port
+oraz obiekty cywilne. Putin po raz czwarty w ciągu siedmiu miesięcy zwiększył
+etat armii, tym razem do 1 550 500 wojskowych, a rosyjskie aktywa Metro trafiły
+pod tymczasowy zarząd. Wielka Brytania sygnalizuje jądrowe wsparcie przyszłych
+sił JEF, USA i Iran odbyły osobne rozmowy z mediatorami, a amerykański zakaz
+importu części towarów z Kanady wszedł w życie. W Polsce WZL-1 podpisały z GE
+Aerospace umowę lokalizującą serwis silników T700/CT7, zaś Eurostat pokazał
+dalszy spadek częstego spożywania alkoholu.
+
+Raport: [2026-09-29](runs/2026-09-29.md)
 
 ## Update 2026-09-28 wieczór
 
@@ -118,6 +131,7 @@ Europy, ale nie ogłosiło nowych zobowiązań wojskowych.
 
 ## Recent Reports
 
+- [2026-09-29](runs/2026-09-29.md)
 - [2026-09-28](runs/2026-09-28.md)
 - [2026-09-27](runs/2026-09-27.md)
 - [2026-09-25](runs/2026-09-25.md)
