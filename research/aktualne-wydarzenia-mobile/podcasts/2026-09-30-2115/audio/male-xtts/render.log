@@ -8,7 +8,7 @@
   return torch.load(f, map_location=map_location, **kwargs)
  > Using model: xtts
  > Text splitted to sentences.
-['Dzień dobry, a właściwie dobry wieczór.', 'Oto najważniejsze informacje.', 'Po pierwsze: Unia Europejska podsumowała posiedzenie ministrów obrony.', 'Priorytetem pozostaje obrona powietrzna Ukrainy.', 'Rada podała, że zatwierdzone plany zakupowe w ramach Ukraine Support Loan sięgają 28,3 miliarda euro, a mobilizacja środków z Europejskiego Instrumentu na rzecz Pokoju — 6,6 miliarda euro.', 'Ministrowie rozmawiali też o misji EUMAM Ukraine i rosyjskiej flocie cieni.', 'Źródło: Consilium.', 'Rada Unii Europejskiej poinformowała również o sankcjach wobec dziesięciu osób i siedemnastu podmiotów za bezprawne deportacje ukraińskich dzieci do Rosji.', 'To kolejny sygnał, że europejska odpowiedź na wojnę obejmuje nie tylko broń i pieniądze, ale także odpowiedzialność za naruszenia prawa.', 'Źródło: Consilium.', 'W Polsce Ministerstwo Obrony Narodowej wyjaśniło procedurę zmiany kategorii zdrowia w sprawie ćwiczeń rezerwy.', 'Resort podkreśla, że potrzebny jest wniosek zainteresowanej osoby i badanie wojskowej komisji lekarskiej.', 'To procedura administracyjno-lekarska, a nie komunikat o powszechnej mobilizacji — warto zachować tu więcej precyzji niż internetowe nagłówki.', 'Źródło: MON.', 'RCB nie publikuje dziś nowego alertu powietrznego.', 'W rejestrze pozostają jednak wcześniejsze komunikaty związane z rosyjskimi atakami na Ukrainę oraz późniejszym potwierdzeniem braku zagrożenia w Polsce.', 'W sytuacji alarmowej liczy się aktualny komunikat służb, nie najgłośniejszy komentarz w sieci.', 'Źródło: RCB.', 'Na koniec: Europa próbuje jednocześnie dostarczać rozwiązania tu i teraz oraz budować własną bazę przemysłową.', 'To mniej efektowna część wiadomości, ale właśnie od niej zależy, czy systemy obronne będą miały amunicję, serwis i części.', 'Tyle na dziś.', 'Źródło: Consilium.']
+['Dzień dobry.', 'To najważniejsze wydarzenia z Polski i świata.', 'Zaczynamy od Ukrainy.', 'Rosja przeprowadziła zmasowany atak rakietami i dronami, uderzając przede wszystkim w infrastrukturę energetyczną.', 'Associated Press podała, że zginęło co najmniej siedem osób, w tym dziecko.', 'Ukraińskie władze mówią o wyjątkowo dużym, połączonym ataku od zakończenia poprzedniego sezonu grzewczego.', 'Zima, jak widać, nie dostała zaproszenia do spokojnego kalendarza.', 'W związku z atakiem Polska uruchomiła prewencyjnie lotnictwo i naziemne systemy obrony powietrznej.', 'Rządowe Centrum Bezpieczeństwa wysłało alert mieszkańcom województw lubelskiego i podkarpackiego.', 'Później, po zakończeniu ataku, alert odwołano i przekazano, że na terytorium Polski nie ma zagrożenia.', 'To ważne rozróżnienie: reakcja ochronna nie jest równoznaczna z potwierdzonym naruszeniem polskiej przestrzeni.', 'W Warszawie podpisano umowy offsetowe dotyczące programu śmigłowców Apache.', 'Partnerami Wojskowej Akademii Technicznej są GE Aerospace i Boeing.', 'Polska kupuje dziewięćdziesiąt sześć maszyn, a planowane dostawy mają przypadać na lata dwa tysiące dwadzieścia osiem–dwa tysiące trzydzieści dwa.', 'O wartości takiego programu decyduje nie tylko liczba śmigłowców, lecz także serwis, szkolenie i kompetencje przemysłowe.', 'Dziś rozpoczęło się również Forum Cyberbezpieczeństwa.', 'Wydarzenie otwiera Miesiąc Cyberbezpieczeństwa i przypomina, że odporność państwa to nie tylko radary i samoloty.', 'To także działające systemy, kopie zapasowe i ktoś, kto pamięta hasło administratora.', 'Na świecie nadal odczuwalne są skutki kryzysu wokół cieśniny Ormuz.', 'Associated Press szacuje, że państwa Unii Europejskiej wydały od początku wojny z Iranem ponad sto miliardów euro więcej na import energii.', 'Zamknięcie ważnego szlaku transportu ropy szybko staje się problemem gospodarstw domowych, firm i budżetów państw.', 'Najkrócej: Ukraina potrzebuje ochrony energetyki, Polska wzmacnia reakcję na zagrożenia, a Europa płaci za niestabilność szlaków energetycznych.', 'Warto dziś śledzić komunikaty RCB, Dowództwa Operacyjnego i instytucji europejskich, oddzielając potwierdzone fakty od alarmistycznych skrótów.', 'To był poranny, choć nagrany już wieczorem, brief Pavbot.', 'Do usłyszenia.']
 Traceback (most recent call last):
   File "/Users/promaczek/iCloud Drive (Archive)/Documents/CODEX-Pavbot/.agents/scripts/podcast/render_xtts.py", line 105, in <module>
     main()
@@ -68,18 +68,18 @@ Traceback (most recent call last):
   File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
     return forward_call(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 390, in forward
-    attn_outputs = self.attn(
-                   ^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 427, in forward
+    feed_forward_hidden_states = self.mlp(hidden_states)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^
   File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
     return self._call_impl(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
     return forward_call(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 312, in forward
-    query, key, value = self.c_attn(hidden_states).split(self.split_size, dim=2)
-                        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 356, in forward
+    hidden_states = self.c_proj(hidden_states)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
     return self._call_impl(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
