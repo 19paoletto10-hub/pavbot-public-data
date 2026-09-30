@@ -1,6 +1,21 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-09-29
+Last updated: 2026-09-30
+
+## Update 2026-09-30
+
+Rosja przeprowadziła zmasowany atak na ukraińską energetykę, zabijając siedem
+osób i raniąc 24; Polska prewencyjnie uruchomiła lotnictwo i obronę powietrzną,
+bez stwierdzonego naruszenia przestrzeni RP. Moskwa przesłała NATO warunkową
+groźbę użycia pełnego arsenału w razie odcięcia Kaliningradu, a Sojusz odrzucił
+tezę o blokadzie i nie widzi zagrożenia bezpośredniego. Od 1 października
+szwedzkie Gripeny rozpoczynają dwumiesięczną misję nad Polską. Iran otrzymał
+oficjalną, ale niejawną odpowiedź USA na plan zakończenia wojny. Estonia
+przypisała rosyjskim służbom podpalenie Milrem, a parlament Rumunii ponownie
+nie zatwierdził rządu. W Polsce szybki szacunek inflacji wzrósł do 4,0 proc.,
+zaś finalny rządowy projekt budżetu zakłada 282,6 mld zł deficytu.
+
+Raport: [2026-09-30](runs/2026-09-30.md)
 
 ## Update 2026-09-29
 
@@ -131,6 +146,7 @@ Europy, ale nie ogłosiło nowych zobowiązań wojskowych.
 
 ## Recent Reports
 
+- [2026-09-30](runs/2026-09-30.md)
 - [2026-09-29](runs/2026-09-29.md)
 - [2026-09-28](runs/2026-09-28.md)
 - [2026-09-27](runs/2026-09-27.md)
