@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-10-01T22:40:59.733458+00:00",
+  "generatedAt": "2026-10-01T22:41:44.694652+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -159,6 +159,96 @@
       "date": "2026-10-02",
       "time": "00:38",
       "itemCount": 14
+    },
+    {
+      "id": "research/polska-swiat/runs/2026-10-02.md",
+      "type": "run",
+      "topic": "polska-swiat",
+      "title": "Daily Research Report: Polska i Świat",
+      "path": "research/polska-swiat/runs/2026-10-02.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/runs/2026-10-02.md",
+      "sizeBytes": 10089,
+      "date": "2026-10-02"
+    },
+    {
+      "id": "research/polska-swiat/data/2026-10-02-research.json",
+      "type": "researchData",
+      "topic": "polska-swiat",
+      "title": "Research data",
+      "path": "research/polska-swiat/data/2026-10-02-research.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/data/2026-10-02-research.json",
+      "sizeBytes": 9600,
+      "date": "2026-10-02"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-10-02/sources.md",
+      "type": "podcastSources",
+      "topic": "polska-swiat",
+      "title": "Źródła i weryfikacja — 2 października 2026",
+      "path": "research/polska-swiat/podcasts/2026-10-02/sources.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-10-02/sources.md",
+      "sizeBytes": 2961,
+      "date": "2026-10-02"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-10-02/script.md",
+      "type": "podcastScript",
+      "topic": "polska-swiat",
+      "title": "script.md",
+      "path": "research/polska-swiat/podcasts/2026-10-02/script.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-10-02/script.md",
+      "sizeBytes": 7421,
+      "date": "2026-10-02"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-10-02/render.json",
+      "type": "podcastRender",
+      "topic": "polska-swiat",
+      "title": "render.json",
+      "path": "research/polska-swiat/podcasts/2026-10-02/render.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-10-02/render.json",
+      "sizeBytes": 281,
+      "date": "2026-10-02"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-10-02/draft.md",
+      "type": "podcastDraft",
+      "topic": "polska-swiat",
+      "title": "Projekt scenariusza — Polska i Świat, 2 października 2026",
+      "path": "research/polska-swiat/podcasts/2026-10-02/draft.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-10-02/draft.md",
+      "sizeBytes": 1518,
+      "date": "2026-10-02"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-10-02/brief.pdf",
+      "type": "podcastBriefPdf",
+      "topic": "polska-swiat",
+      "title": "Podcast brief PDF",
+      "path": "research/polska-swiat/podcasts/2026-10-02/brief.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-10-02/brief.pdf",
+      "sizeBytes": 73823,
+      "date": "2026-10-02"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-10-02/podcast.mp3",
+      "type": "podcastAudio",
+      "topic": "polska-swiat",
+      "title": "Podcast audio",
+      "path": "research/polska-swiat/podcasts/2026-10-02/podcast.mp3",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-10-02/podcast.mp3",
+      "sizeBytes": 3468308,
+      "date": "2026-10-02"
+    },
+    {
+      "id": "research/polska-swiat/pdfs/2026-10-02-polska-swiat.pdf",
+      "type": "pdf",
+      "topic": "polska-swiat",
+      "title": "2026-10-02-polska-swiat.pdf",
+      "path": "research/polska-swiat/pdfs/2026-10-02-polska-swiat.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/pdfs/2026-10-02-polska-swiat.pdf",
+      "sizeBytes": 77773,
+      "date": "2026-10-02"
     },
     {
       "id": "research/llm-ai-jobs-wroclaw/runs/2026-10-02-0039.md",
