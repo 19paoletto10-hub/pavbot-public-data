@@ -4,6 +4,8 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track implementation of 28 September EU sanctions on deported Ukrainian children | The package covers deportation, forced transfer, assimilation and militarised education | Watch Council implementation, asset freezes, new listings and child-return mechanisms | Open |
+| Medium | Track EU sanctions over barring Yabloko from State Duma elections | The measure targets institutional repression and electoral exclusion, not only military activity | Watch further EU listings, Russian legal response and evidence used in national cases | Open |
 | High | Track 30 September Ukraine energy-strike and Polish readiness aftermath | The combined attack killed seven people, wounded 24, hit the power grid and prompted a preventive Polish air operation without a detected airspace violation | Watch Ukraine, DORSZ, RCB, grid operators and reliable media for final casualties, restoration progress and repeated Polish activations | Open |
 | High | Track Kaliningrad nuclear-warning follow-up | Russia sent NATO a written warning threatening its full arsenal if Kaliningrad were cut off, while NATO denied planning a blockade and assessed no imminent threat | Watch NATO, Kremlin, Poland, Lithuania and military movements for clarification, de-escalation or changes in eastern-flank posture | Open |
 | Medium | Track Swedish Gripen mission over Poland | A two-month NATO mission starts 1 October to protect the southeastern logistics route supporting Ukraine | Watch Swedish Armed Forces, NATO, MON and CAOC Uedem for mission start, scope, incidents and any extension without publishing unnecessary operational detail | Open |

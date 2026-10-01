@@ -1,6 +1,17 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-09-30
+Last updated: 2026-10-02
+
+## Update 2026-10-02
+
+UE nałożyła 28 września sankcje na osoby i podmioty związane z deportacją i
+przymusową asymilacją ukraińskich dzieci oraz na osoby odpowiedzialne za
+blokowanie udziału Jabłoka w wyborach do Dumy. Wielka Brytania rozszerzyła
+presję na rosyjskie finansowanie wojny i osoby związane z torturami. W Polsce
+nie potwierdzono nowego naruszenia przestrzeni powietrznej w bieżącym oknie,
+ale stopień BRAVO na całym terytorium pozostaje przedłużony do 30 listopada.
+
+Raport: [2026-10-02](runs/2026-10-02.md)
 
 ## Update 2026-09-30
 
