@@ -1,8 +1,10 @@
 # Topic Index: llm-ai-jobs-wroclaw
 
-Last updated: 2026-09-17 15:40 CEST
+Last updated: 2026-10-02 00:39 CEST
 
 ## Current Understanding
+
+Runda `2026-10-02-0039`: nowa publiczna oferta TU Europa AI Engineer we Wrocławiu (hybryda, GenAI/LLM, Python/SQL/FastAPI) oraz odświeżone role DataArt OpenAI/NLP i Spyrosoft MCP/LangGraph. CDQ pozostaje aktywne do 30 października, ITDS do 4 października, a SQUAD Applied Scientist (LLM) ma termin 2 października.
 
 Runda `2026-09-17-1540`: board nadal ma 131 ofert, ale odświeżył sygnały Grid Dynamics Senior/Staff Physical AI, Accenture GenAI Architect, HIBERUS Expert AI/ML Data Engineer i WSKZ AI Automatization Engineer. CDQ pozostaje aktywne do 30 września z zakresem MCP/RAG/Ollama i publicznymi widełkami; nowe karty są board-only i wymagają weryfikacji kanonicznej.
 
@@ -134,6 +136,8 @@ konkretny platformowy, delivery lub toolingowy scope.
   location.
 
 ## Recent Reports
+
+- [2026-10-02 00:39 - Material update](runs/2026-10-02-0039.md): TU Europa oraz odświeżony tail DataArt/Spyrosoft/CDQ/ITDS/SQUAD.
 
 - [2026-09-16 15:54 - Material update](runs/2026-09-16-1554.md): Grid Dynamics Senior/Lead AI engineer oraz UNIVIO AI Engineer.
 

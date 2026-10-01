@@ -172,3 +172,9 @@
 
 - UNIVIO AI Engineer: potwierdzić walutę widełek, seniority i status przed terminem 22 września.
 - Grid Dynamics Senior/Lead AI engineer: potwierdzić szczegóły hybrydy i bezpośredni kanał aplikacji na stronie pracodawcy.
+
+## Follow-up 2026-10-02 00:39
+
+- TU Europa AI Engineer: sprawdzić podczas kontaktu rekrutacyjnego stack modeli, chmurę, widełki i częstotliwość pracy hybrydowej.
+- SQUAD Applied Scientist (LLM) i ITDS Senior AI Infrastructure Engineer: potwierdzić status po terminach 2 i 4 października.
+- DataArt i Spyrosoft: znaleźć kanoniczne strony pracodawców oraz potwierdzić remote policy i jednostki wynagrodzenia.
