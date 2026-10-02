@@ -4,12 +4,15 @@ Last updated: 2026-10-02
 
 ## Update 2026-10-02
 
-UE nałożyła 28 września sankcje na osoby i podmioty związane z deportacją i
-przymusową asymilacją ukraińskich dzieci oraz na osoby odpowiedzialne za
-blokowanie udziału Jabłoka w wyborach do Dumy. Wielka Brytania rozszerzyła
-presję na rosyjskie finansowanie wojny i osoby związane z torturami. W Polsce
-nie potwierdzono nowego naruszenia przestrzeni powietrznej w bieżącym oknie,
-ale stopień BRAVO na całym terytorium pozostaje przedłużony do 30 listopada.
+Donald Trump publicznie potwierdził analizę stałej bazy USA w Polsce, nadal
+bez decyzji o lokalizacji, liczebności i finansowaniu. Pentagon przygotowuje
+w Polsce ograniczone spotkanie o przyszłości NATO, według relacji bez Wielkiej
+Brytanii, Francji i państw bałtyckich. USA odrzuciły najnowszą ofertę Iranu i
+wysyłają trzeci lotniskowiec oraz około 9 tys. żołnierzy na Bliski Wschód,
+a Putin rozszerzył warunkową groźbę użycia pełnego arsenału na każdy atak na
+terytorium Rosji. Polska złożyła ostatni wniosek KPO na ponad 55 mld zł;
+prezydent podpisał ustawę paliwową i skierował ją następczo do TK, a cały
+zarząd PKP Cargo zrezygnował po utracie zarządu własnego w sanacji.
 
 Raport: [2026-10-02](runs/2026-10-02.md)
 
