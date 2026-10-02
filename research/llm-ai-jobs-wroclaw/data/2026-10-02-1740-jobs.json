@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-10-02",
+  "runTime": "17:40",
+  "executiveSummary": "Runda jest materialna: pojawił się mocny zestaw zdalnych ról produkcyjnych wokół agentów, RAG, MCP, ewaluacji i LLMOps. Najbardziej konkretne aplikacyjnie są Experis (LangGraph/FastAPI, termin 16 października), YND (jawne 25–33 tys. PLN netto + VAT B2B, termin 24 października) oraz DXC/Luxoft (senior/ekspert Azure OpenAI, MCP i ewaluacja). Deepsense.ai i Antal dodają alternatywy konsultingowo-wdrożeniowe z dostępnością Wrocławia lub pracy zdalnej z Polski.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "AI Engineer (LLM & Agentic Systems)",
+      "company": "Experis",
+      "location": "100% zdalnie w Polsce; kontrakt; start ASAP / do 30 dni.",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Produkcyjne aplikacje LLM, LangGraph, FastAPI, RAG, tool calling, ewaluacja regresji, obserwowalność i optymalizacja kosztu.",
+      "whyInteresting": "Bardzo dobry hands-on match dla osoby budującej całe systemy agentowe, z jasno opisanym stackiem Python/FastAPI/LangGraph/Azure OpenAI/FAISS/Langfuse.",
+      "uncertainty": "Oferta agencji/rekrutera; klient końcowy nieujawniony.",
+      "sourceURLs": [
+        "https://www.experis.pl/pl/jobb/29215/aiengineerllmagenticsystems"
+      ],
+      "tags": [
+        "Agentic AI",
+        "RAG",
+        "LLM",
+        "Python",
+        "Azure"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "Senior AI Engineer",
+      "company": "YND Technologies",
+      "location": "100% zdalnie z Polski; możliwa współpraca z klientami międzynarodowymi; termin 24 października 2026.",
+      "workMode": "Remote",
+      "compensation": "25 000–33 000 PLN netto + VAT miesięcznie na B2B.",
+      "seniority": "Senior",
+      "fitSummary": "Produkcyjne integracje LLM, backend, CI/CD, monitoring, discovery, ewaluacja, obserwowalność i bezpieczeństwo AI.",
+      "whyInteresting": "Rzadkie połączenie jawnych widełek z realnym ownershipem wdrożeń i publicznym komponentem pracy nad praktykami AI w zespołach.",
+      "uncertainty": "Rola konsultingowa; karta wskazuje remote i Warszawę, ale nie osobny wrocławski hub.",
+      "sourceURLs": [
+        "https://entrypoint-prod.nofluffjobs.com/job/senior-ai-engineer-ynd-technologies-remote"
+      ],
+      "tags": [
+        "LLM"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "GenAI Engineer (LLM Applications on Azure)",
+      "company": "DXC Luxoft",
+      "location": "Remote Poland; data publikacji 23 września 2026; requisition VR-125168.",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Azure OpenAI, LangGraph/LangChain/Semantic Kernel, RAG, MCP, multi-agent, ewaluacja, guardrails, obserwowalność i inference cost control.",
+      "whyInteresting": "Najpełniejszy w rundzie zakres enterprise GenAI — od ingestion i retrievalu po evals, fine-tuning, PII redaction i FinOps.",
+      "uncertainty": "Wymagane 10+ lat software/data engineering i 2+ lata produkcyjnych aplikacji LLM; poziom bardzo senioralny.",
+      "sourceURLs": [
+        "https://career.luxoft.com/jobs/genai-engineer-llm-applications-on-azure-27793"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "GenAI",
+        "Azure"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "Senior AI Engineer (Remote, Contract)",
+      "company": "INFUSE",
+      "location": "Zdalnie; kontrakt; praca dla zespołu budującego własne systemy agentowe.",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Senior",
+      "fitSummary": "Agenci LLM, MCP servers, RAG, multi-provider gateway, evals/golden sets, telemetry kosztu i jakości, AWS, Python oraz TypeScript/Node.js.",
+      "whyInteresting": "Rola jest blisko platformy AI, a nie tylko integracji pojedynczego modelu — obejmuje routing providerów, failover, CI/CD, observability i wspólne komponenty.",
+      "uncertainty": "Publiczna karta nie podaje wprost ograniczenia „Polska”; kwalifikację remote-Poland traktuję jako do potwierdzenia przed aplikacją.",
+      "sourceURLs": [
+        "https://job-boards.greenhouse.io/infuse/jobs/4734597005"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "Python",
+        "AWS"
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "Senior Applied AI Engineer",
+      "company": "deepsense.ai",
+      "location": "100% zdalnie; karta obejmuje Wrocław wśród lokalizacji; oferta ważna do 10 października 2026.",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Senior",
+      "fitSummary": "Produkcyjne LLM, context engineering, agenci, tool use, RAG, evals, MCP, LLMOps oraz inference; Python.",
+      "whyInteresting": "Mocne połączenie konsultingu technicznego z implementacją — od discovery i POC do produkcyjnego agenta i transferu wiedzy.",
+      "uncertainty": "No Fluff Jobs jest źródłem pośrednim; lokalizacja Wrocław/remote wymaga potwierdzenia w procesie.",
+      "sourceURLs": [
+        "https://entrypoint-prod.nofluffjobs.com/pl/job/senior-applied-ai-engineer-deepsense-ai-lodz-1"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "LLMOps",
+        "Python"
+      ]
+    },
+    {
+      "rank": 6,
+      "title": "Senior AI Software Engineer (GenAI & Agentic AI)",
+      "company": "Antal",
+      "location": "100% zdalnie z Polski; karta obejmuje Dolnośląskie; oferta ważna do 18 października 2026.",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Senior",
+      "fitSummary": "GenAI, LLM, agentic AI, LangChain, Hugging Face, OpenAI, Azure/AWS, MLOps i wdrożenia produkcyjne.",
+      "whyInteresting": "Szeroki zakres od architektury i PoC do produkcji, z praktycznym naciskiem na chmurę, bezpieczeństwo, skalowanie i koszty.",
+      "uncertainty": "Oferta rekrutacyjna; klient końcowy nieujawniony.",
+      "sourceURLs": [
+        "https://entrypoint-prod.nofluffjobs.com/pl/job/senior-ai-software-engineer-antal-remote"
+      ],
+      "tags": [
+        "Agentic AI",
+        "LLM",
+        "GenAI",
+        "MLOps",
+        "AWS",
+        "Azure"
+      ]
+    }
+  ],
+  "changes": [
+    "Nowy, silny klaster remote-Poland: Experis, DXC/Luxoft, INFUSE, YND, deepsense.ai i Antal.",
+    "W porównaniu z poprzednim raportem większy nacisk przypada na MCP, agentic workflows, evals, observability i kontrolę kosztu inference.",
+    "Najkrótsze terminy: deepsense.ai — 10 października; Experis — 16 października; Antal — 18 października; YND — 24 października."
+  ],
+  "risks": [
+    "Część ofert pochodzi od pośredników lub boardów; klient końcowy i dokładny model zatrudnienia mogą wymagać potwierdzenia.",
+    "Brak widełek w większości ofert; jedyne jawne widełki w tej rundzie to YND.",
+    "Publiczne boardy mogą utrzymywać kartę po zamknięciu rekrutacji; przed aplikacją sprawdzić przycisk aplikowania i aktualny termin."
+  ],
+  "recommendedActions": [
+    "Priorytetowo sprawdzić deepsense.ai i Experis przed 10/16 października.",
+    "Dla profilu senior/enterprise porównać DXC/Luxoft z INFUSE pod kątem Azure vs AWS i zakresu platformowego.",
+    "Przy ofertach pośredników poprosić o nazwę klienta, formę umowy, widełki i potwierdzenie pracy z Polski."
+  ],
+  "checkedSources": [
+    {
+      "title": "Experis",
+      "url": "https://www.experis.pl/pl/jobb/29215/aiengineerllmagenticsystems",
+      "status": "checked"
+    },
+    {
+      "title": "DXC/Luxoft",
+      "url": "https://career.luxoft.com/jobs/genai-engineer-llm-applications-on-azure-27793",
+      "status": "checked"
+    },
+    {
+      "title": "EPAM",
+      "url": "https://careers.epam.com/en/vacancy/bltfuun168yb6pyy1lp?country=Poland",
+      "status": "checked"
+    },
+    {
+      "title": "No Fluff Jobs",
+      "url": "https://entrypoint-prod.nofluffjobs.com/job/senior-ai-engineer-ynd-technologies-remote",
+      "status": "checked"
+    },
+    {
+      "title": "board Infolet",
+      "url": "https://infolet.pl/en/jobs/",
+      "status": "checked"
+    }
+  ]
+}

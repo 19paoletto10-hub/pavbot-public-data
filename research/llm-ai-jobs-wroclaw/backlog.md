@@ -1,5 +1,11 @@
 # Topic Backlog: llm-ai-jobs-wroclaw
 
+## Follow-up 2026-10-02 17:40
+
+- Pilnie sprawdzić terminy deepsense.ai (10 października), Experis (16 października), Antal (18 października) i YND (24 października).
+- Dla ofert agencyjnych Experis, Antal i INFUSE potwierdzić klienta końcowego, model umowy i możliwość pracy z Polski.
+- Porównać zakres platformowy DXC/Luxoft i INFUSE: Azure OpenAI versus AWS/provider gateway, MCP, evals i observability.
+
 ## Follow-up 2026-09-17 15:40
 
 - Grid Dynamics Physical AI, Accenture GenAI Architect i HIBERUS Expert AI/ML Data Engineer: znaleźć kanoniczne strony i potwierdzić lokalizację/model pracy.

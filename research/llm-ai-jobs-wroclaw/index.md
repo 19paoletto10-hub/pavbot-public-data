@@ -1,8 +1,14 @@
 # Topic Index: llm-ai-jobs-wroclaw
 
-Last updated: 2026-10-02 00:39 CEST
+Last updated: 2026-10-02 17:40 CEST
 
 ## Current Understanding
+
+Runda `2026-10-02-1740`: nowy klaster remote-Poland wokół agentów, RAG, MCP, ewaluacji i LLMOps. Najmocniejsze sygnały to Experis AI Engineer (termin 16 października), YND Senior AI Engineer (25–33 tys. PLN netto + VAT B2B, termin 24 października), DXC/Luxoft GenAI Engineer oraz role INFUSE, deepsense.ai i Antal. Wrocław jest jawnie dostępny na karcie deepsense.ai; pozostałe role są zdalne z Polski.
+
+### Material changes
+
+- 2026-10-02 17:40: dodano sześć nowych lub ponownie potwierdzonych ofert remote-Poland; największą zmianą są jawne widełki YND oraz terminy Experis, deepsense.ai, Antal i YND.
 
 Runda `2026-10-02-0039`: nowa publiczna oferta TU Europa AI Engineer we Wrocławiu (hybryda, GenAI/LLM, Python/SQL/FastAPI) oraz odświeżone role DataArt OpenAI/NLP i Spyrosoft MCP/LangGraph. CDQ pozostaje aktywne do 30 października, ITDS do 4 października, a SQUAD Applied Scientist (LLM) ma termin 2 października.
 
