@@ -1,6 +1,21 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-10-02
+Last updated: 2026-10-03
+
+## Update 2026-10-03
+
+Od 3 października obowiązują obniżone stawki VAT i akcyzy na paliwa, a
+NFOŚiGW uruchomił program dopłat do domowych magazynów energii o budżecie
+1 mld zł. PiS formalizuje wniosek o wotum nieufności wobec ministra finansów i
+gospodarki Andrzeja Domańskiego. G7 i IEA rozpoczynają uwalnianie 100 mln
+baryłek zapasów paliwowych, z dużą pulą diesla w pierwszych 20 dniach. Ukraina
+otrzymała cztery odrębne propozycje częściowego rozejmu, ale bez wspólnego
+tekstu i bez rosyjskiej zgody, podczas gdy ataki zakłóciły ruch na trzech
+kijowskich mostach. We Francji protesty uczniowskie nadal obejmują setki szkół,
+Brazylia przygotowuje się do pierwszej tury wyborów 4 października, a bilans
+epidemii eboli w DR Konga przekroczył 4 tys. zgonów.
+
+Raport: [2026-10-03](runs/2026-10-03.md)
 
 ## Update 2026-10-02
 
@@ -160,6 +175,8 @@ Europy, ale nie ogłosiło nowych zobowiązań wojskowych.
 
 ## Recent Reports
 
+- [2026-10-03](runs/2026-10-03.md)
+- [2026-10-02](runs/2026-10-02.md)
 - [2026-09-30](runs/2026-09-30.md)
 - [2026-09-29](runs/2026-09-29.md)
 - [2026-09-28](runs/2026-09-28.md)
