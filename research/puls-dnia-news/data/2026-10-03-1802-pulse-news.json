@@ -1,0 +1,472 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-10-03",
+  "runTime": "18:02",
+  "status": "ready",
+  "headline": "Puls Dnia: rosyjski atak uszkodził północny most w Kijowie",
+  "summary": "AP potwierdziła, że rosyjski atak uszkodził północny most w Kijowie i utrzymał zakłócenia ruchu trzeci dzień. G7 nadal realizuje zapowiedź uwolnienia 100 mln baryłek ropy i paliw; w Polsce RCB utrzymuje komunikaty o ćwiczeniach.",
+  "checkedSources": [
+    {
+      "title": "TVN24 — najnowsze wiadomości",
+      "url": "https://tvn24.pl/najnowsze"
+    },
+    {
+      "title": "BBC News",
+      "url": "https://www.bbc.com/news"
+    },
+    {
+      "title": "CNN",
+      "url": "https://edition.cnn.com/"
+    },
+    {
+      "title": "RCB — strona główna",
+      "url": "https://www.gov.pl/web/rcb"
+    },
+    {
+      "title": "MON — aktualności",
+      "url": "https://www.gov.pl/web/obrona-narodowa/aktualnosci5"
+    },
+    {
+      "title": "AP — rozwój sytuacji USA–Iran",
+      "url": "https://apnews.com/article/af2443646cf96ff01b8b1becff3f3e0e"
+    },
+    {
+      "title": "AP — rosyjski dron uderzył w szkołę w Kijowie",
+      "url": "https://apnews.com/article/1c4ea39898c03a432c8f005cb6b1f32c"
+    },
+    {
+      "title": "AP — ataki dronowe zakłóciły ruch w Kijowie",
+      "url": "https://apnews.com/article/1949f2a68b6b8b4bfeba5a86878c79bd"
+    },
+    {
+      "title": "AP — decyzja G7 o uwolnieniu ropy i paliw",
+      "url": "https://apnews.com/article/774a360d1646d9ce8aba764fdd9951d2"
+    },
+    {
+      "title": "AP — uszkodzenie północnego mostu w Kijowie",
+      "url": "https://apnews.com/article/2cb9344e23445f69d5072ce661231eb3"
+    }
+  ],
+  "items": [
+    {
+      "id": "pl-granica-20260929",
+      "section": "Polska",
+      "title": "Wojsko dłużej pomoże Straży Granicznej",
+      "lead": "Monitoring wschodniej granicy pozostaje aktywny.",
+      "whatHappened": "Utrzymano wcześniej potwierdzoną informację o wojskowym wsparciu Straży Granicznej.",
+      "keyFacts": [
+        "Brak nowej decyzji w tym slocie."
+      ],
+      "reactions": [
+        "Służby monitorują sytuację."
+      ],
+      "whyItMatters": "Dotyczy odporności i bezpieczeństwa granicy.",
+      "context": "Temat kontynuowany.",
+      "watchNext": [
+        "Komunikaty RCB i MON"
+      ],
+      "sources": [
+        {
+          "title": "RCB",
+          "url": "https://www.gov.pl/web/rcb"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "granica"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-apache-20260929",
+      "section": "Polska",
+      "title": "Dęblin rozwija serwis Apache",
+      "lead": "MON podtrzymuje temat krajowych kompetencji serwisowych.",
+      "whatHappened": "Umowa dotycząca serwisowania silników AH-64 pozostaje w monitoringu.",
+      "keyFacts": [
+        "Brak nowego harmonogramu w tym slocie."
+      ],
+      "reactions": [
+        "MON wskazuje na zaplecze przemysłowe."
+      ],
+      "whyItMatters": "Wpływa na gotowość techniczną floty.",
+      "context": "Wątek z poprzedniego wydania.",
+      "watchNext": [
+        "Zakres i harmonogram umowy"
+      ],
+      "sources": [
+        {
+          "title": "MON",
+          "url": "https://www.gov.pl/web/obrona-narodowa/aktualnosci5"
+        }
+      ],
+      "tags": [
+        "MON",
+        "Apache"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-zdrowie-rzad-20260929",
+      "section": "Polityka",
+      "title": "Zmiany w ochronie zdrowia pozostają w pracach",
+      "lead": "Pakiet projektów rządowych czeka na dalszy proces.",
+      "whatHappened": "Nie odnotowano nowego etapu legislacyjnego.",
+      "keyFacts": [
+        "Brak nowego komunikatu w tym slocie."
+      ],
+      "reactions": [
+        "Dalsze decyzje wymagają prac parlamentarnych."
+      ],
+      "whyItMatters": "Może zmienić finansowanie zdrowia.",
+      "context": "Temat kontynuowany.",
+      "watchNext": [
+        "Sejm i CIR"
+      ],
+      "sources": [
+        {
+          "title": "KPRM",
+          "url": "https://www.gov.pl/web/premier/komunikaty-cir"
+        }
+      ],
+      "tags": [
+        "polityka",
+        "zdrowie"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "pl-szkola-20260929",
+      "section": "Bezpieczeństwo",
+      "title": "Sprawa 13-latka pozostaje w wyjaśnianiu",
+      "lead": "Czynności służb trwają; nie ma nowego bilansu.",
+      "whatHappened": "Wątek podejrzenia planowania ataku w szkole pozostaje bez nowego oficjalnego rozstrzygnięcia.",
+      "keyFacts": [
+        "Sprawa dotyczy osoby małoletniej."
+      ],
+      "reactions": [
+        "Należy unikać identyfikacji dziecka."
+      ],
+      "whyItMatters": "Dotyczy procedur bezpieczeństwa uczniów.",
+      "context": "Nie przesądza odpowiedzialności prawnej.",
+      "watchNext": [
+        "Komunikat policji lub prokuratury"
+      ],
+      "sources": [
+        {
+          "title": "Policja",
+          "url": "https://www.policja.pl/"
+        }
+      ],
+      "tags": [
+        "bezpieczeństwo",
+        "szkoła"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "eu-sabotaz-20260929",
+      "section": "Bezpieczeństwo",
+      "title": "UE monitoruje zagrożenia hybrydowe",
+      "lead": "Europejskie służby i instytucje utrzymują podwyższoną czujność.",
+      "whatHappened": "Nie potwierdzono nowego konkretnego incydentu w Polsce.",
+      "keyFacts": [
+        "Wątek dotyczy oceny zagrożenia, nie ataku."
+      ],
+      "reactions": [
+        "UE akcentuje odporność infrastruktury."
+      ],
+      "whyItMatters": "Może wpływać na ochronę infrastruktury krytycznej.",
+      "context": "Monitoring z poprzednich wydań.",
+      "watchNext": [
+        "Komunikaty UE i NATO"
+      ],
+      "sources": [
+        {
+          "title": "EEAS",
+          "url": "https://www.eeas.europa.eu/"
+        }
+      ],
+      "tags": [
+        "UE",
+        "hybrydowe"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "rcb-pyrzyce-20261001",
+      "section": "Alerty",
+      "title": "Ćwiczenia służb w powiecie pyrzyckim",
+      "lead": "RCB: działania 2–3 października mają charakter ćwiczebny.",
+      "whatHappened": "RCB utrzymuje komunikat o ćwiczeniach służb w powiecie pyrzyckim.",
+      "keyFacts": [
+        "Komunikat dotyczy ćwiczeń.",
+        "RCB zaleca zachowanie spokoju."
+      ],
+      "reactions": [
+        "Mieszkańcy powinni śledzić lokalne komunikaty."
+      ],
+      "whyItMatters": "Zapobiega błędnej interpretacji sygnałów służb.",
+      "context": "Nie jest to alert o realnym ataku.",
+      "watchNext": [
+        "Komunikaty lokalnych służb"
+      ],
+      "sources": [
+        {
+          "title": "RCB",
+          "url": "https://www.gov.pl/web/rcb"
+        }
+      ],
+      "tags": [
+        "alert",
+        "ćwiczenia"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "rcb-wadowice-20261001",
+      "section": "Alerty",
+      "title": "Trening systemu alarmowania w Wadowickiem",
+      "lead": "RCB opisuje trening syren jako ćwiczenie.",
+      "whatHappened": "Komunikat o treningu systemu alarmowania pozostaje aktualnym punktem praktycznego monitoringu.",
+      "keyFacts": [
+        "Komunikat ma charakter ćwiczebny."
+      ],
+      "reactions": [
+        "Nie należy traktować go jako potwierdzenia zagrożenia."
+      ],
+      "whyItMatters": "Mieszkańcy otrzymują jasny kontekst użycia syren.",
+      "context": "Wątek z 1 października.",
+      "watchNext": [
+        "RCB i lokalne centra zarządzania kryzysowego"
+      ],
+      "sources": [
+        {
+          "title": "RCB",
+          "url": "https://www.gov.pl/web/rcb"
+        }
+      ],
+      "tags": [
+        "alert",
+        "syreny"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "g7-ropa-20261002",
+      "section": "Gospodarka",
+      "title": "G7 uwolni ropę i paliwa z rezerw",
+      "lead": "Państwa G7 zapowiedziały uwolnienie 100 mln baryłek po wzroście cen.",
+      "whatHappened": "G7 ogłosiła po wideokonferencji, że uwolni 100 mln baryłek ropy i paliw z rezerw, reagując na wzrost cen związany z wojną z Iranem.",
+      "keyFacts": [
+        "Zapowiedziano uwolnienie 100 mln baryłek.",
+        "Decyzję ogłoszono po rozmowach państw G7."
+      ],
+      "reactions": [
+        "Rynki obserwują wpływ decyzji na ceny energii."
+      ],
+      "whyItMatters": "Może ograniczyć krótkoterminową presję cenową na paliwa i transport.",
+      "context": "To reakcja na szok podażowy i podwyższone ryzyko geopolityczne.",
+      "watchNext": [
+        "Termin i sposób uwolnienia zapasów",
+        "Ceny ropy i paliw"
+      ],
+      "sources": [
+        {
+          "title": "AP",
+          "url": "https://apnews.com/article/774a360d1646d9ce8aba764fdd9951d2"
+        }
+      ],
+      "tags": [
+        "G7",
+        "ropa",
+        "energia"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-ormuz-20260929",
+      "section": "Gospodarka",
+      "title": "Otwarcie Ormuzu nadal niepewne",
+      "lead": "Ryzyko dla żeglugi i energii pozostaje pod obserwacją.",
+      "whatHappened": "Nie ma nowego potwierdzenia trwałego powrotu żeglugi do normalnego poziomu.",
+      "keyFacts": [
+        "Brak rozstrzygnięcia w tym slocie."
+      ],
+      "reactions": [
+        "Rynek pozostaje wrażliwy na komunikaty regionu."
+      ],
+      "whyItMatters": "Może wpływać na ceny paliw i transport.",
+      "context": "Powiązane z napięciem USA–Iran.",
+      "watchNext": [
+        "Komunikaty państw regionu i armatorów"
+      ],
+      "sources": [
+        {
+          "title": "AP",
+          "url": "https://apnews.com/article/af2443646cf96ff01b8b1becff3f3e0e"
+        }
+      ],
+      "tags": [
+        "energia",
+        "żegluga"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-iran-20260929",
+      "section": "Świat",
+      "title": "USA–Iran: ryzyko eskalacji pozostaje wysokie",
+      "lead": "Nie potwierdzono nowej decyzji o wznowieniu uderzeń.",
+      "whatHappened": "Utrzymano kartę opisującą napięcie wokół oferty Iranu i przerzutu sił USA.",
+      "keyFacts": [
+        "Brak nowego oficjalnego rozstrzygnięcia."
+      ],
+      "reactions": [
+        "Strony nadal komunikują odmienne stanowiska."
+      ],
+      "whyItMatters": "Może zmienić bezpieczeństwo regionu i rynki energii.",
+      "context": "Stan na poprzednie wydanie.",
+      "watchNext": [
+        "Biały Dom, Pentagon i Iran"
+      ],
+      "sources": [
+        {
+          "title": "AP",
+          "url": "https://apnews.com/article/af2443646cf96ff01b8b1becff3f3e0e"
+        },
+        {
+          "title": "AP — rozwój sytuacji USA–Iran",
+          "url": "https://apnews.com/article/af2443646cf96ff01b8b1becff3f3e0e"
+        }
+      ],
+      "tags": [
+        "USA",
+        "Iran"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "eu-ukraina-sankcje-20260929",
+      "section": "Świat",
+      "title": "UE utrzymuje sankcje za deportacje ukraińskich dzieci",
+      "lead": "Polityka sankcyjna UE pozostaje elementem wsparcia Ukrainy.",
+      "whatHappened": "Nie odnotowano nowej listy sankcyjnej w tym slocie.",
+      "keyFacts": [
+        "Temat dotyczy odpowiedzialności za deportacje."
+      ],
+      "reactions": [
+        "UE deklaruje dalsze wsparcie Ukrainy."
+      ],
+      "whyItMatters": "Wzmacnia presję prawną i polityczną na Rosję.",
+      "context": "Wątek kontynuowany.",
+      "watchNext": [
+        "Komunikaty Rady UE"
+      ],
+      "sources": [
+        {
+          "title": "Rada UE",
+          "url": "https://www.consilium.europa.eu/pl/policies/eu-sanctions-against-russia/"
+        }
+      ],
+      "tags": [
+        "UE",
+        "Ukraina"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "world-kyiv-bridge-20261003",
+      "section": "Świat",
+      "title": "Atak uszkodził północny most w Kijowie",
+      "lead": "Rosyjski atak uszkodził most; ruch pozostaje zakłócony trzeci dzień.",
+      "whatHappened": "Według AP rosyjski atak nad ranem uszkodził północny most w Kijowie. Ruch został zawieszony, a na trasach dojazdowych powstały zatory.",
+      "keyFacts": [
+        "AP datuje informację na 3 października 2026 r.",
+        "Uszkodzony został Northern Bridge.",
+        "Zakłócenia ruchu trwają trzeci dzień."
+      ],
+      "reactions": [
+        "Władze miejskie przywracają organizację ruchu etapami; pełny bilans szkód nie jest jeszcze znany."
+      ],
+      "whyItMatters": "Mosty są kluczową infrastrukturą miejską; kolejne uszkodzenia zwiększają presję na transport i logistykę stolicy.",
+      "context": "To kolejna aktualizacja po wcześniejszych atakach, które zakłóciły ruch na trzech kijowskich mostach.",
+      "watchNext": [
+        "Oficjalny bilans szkód i decyzje władz Kijowa dotyczące ruchu.",
+        "Kolejne ataki na infrastrukturę transportową i energetyczną."
+      ],
+      "sources": [
+        {
+          "title": "AP",
+          "url": "https://apnews.com/article/2cb9344e23445f69d5072ce661231eb3"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Kijów",
+        "wojna",
+        "infrastruktura"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "tech-starship-20260929",
+      "section": "Technologia",
+      "title": "Starship celuje w pierwszy lot orbitalny",
+      "lead": "Program pozostaje w monitoringu bez nowej decyzji.",
+      "whatHappened": "Nie potwierdzono nowego terminu lub wyniku testu w tym slocie.",
+      "keyFacts": [
+        "Brak nowego komunikatu operacyjnego."
+      ],
+      "reactions": [
+        "SpaceX kontynuuje przygotowania."
+      ],
+      "whyItMatters": "Lot będzie istotnym testem ciężkiego systemu nośnego.",
+      "context": "Temat technologiczny o znaczeniu publicznym.",
+      "watchNext": [
+        "Komunikaty SpaceX i FAA"
+      ],
+      "sources": [
+        {
+          "title": "SpaceX",
+          "url": "https://www.spacex.com/launches/"
+        }
+      ],
+      "tags": [
+        "technologia",
+        "kosmos"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "tech-ai-cyber-20260929",
+      "section": "Technologia",
+      "title": "Bezpieczeństwo AI pozostaje w monitoringu",
+      "lead": "Nie ma nowego potwierdzonego incydentu w tym slocie.",
+      "whatHappened": "Utrzymano kartę dotyczącą bezpieczeństwa modeli AI i cyberzagrożeń.",
+      "keyFacts": [
+        "Brak nowego publicznego bilansu."
+      ],
+      "reactions": [
+        "Organizacje technologiczne rozwijają zabezpieczenia."
+      ],
+      "whyItMatters": "Ryzyka AI mogą wpływać na usługi publiczne i gospodarkę.",
+      "context": "Monitoring długoterminowy.",
+      "watchNext": [
+        "CSIRT i komunikaty dostawców"
+      ],
+      "sources": [
+        {
+          "title": "CISA",
+          "url": "https://www.cisa.gov/news-events/cybersecurity-advisories"
+        }
+      ],
+      "tags": [
+        "AI",
+        "cyberbezpieczeństwo"
+      ],
+      "priority": "medium"
+    }
+  ]
+}
