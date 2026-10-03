@@ -4,16 +4,14 @@ Last updated: 2026-10-03
 
 ## Update 2026-10-03
 
-Od 3 października obowiązują obniżone stawki VAT i akcyzy na paliwa, a
-NFOŚiGW uruchomił program dopłat do domowych magazynów energii o budżecie
-1 mld zł. PiS formalizuje wniosek o wotum nieufności wobec ministra finansów i
-gospodarki Andrzeja Domańskiego. G7 i IEA rozpoczynają uwalnianie 100 mln
-baryłek zapasów paliwowych, z dużą pulą diesla w pierwszych 20 dniach. Ukraina
-otrzymała cztery odrębne propozycje częściowego rozejmu, ale bez wspólnego
-tekstu i bez rosyjskiej zgody, podczas gdy ataki zakłóciły ruch na trzech
-kijowskich mostach. We Francji protesty uczniowskie nadal obejmują setki szkół,
-Brazylia przygotowuje się do pierwszej tury wyborów 4 października, a bilans
-epidemii eboli w DR Konga przekroczył 4 tys. zgonów.
+Rosyjskie ataki zabiły co najmniej sześć osób i uszkodziły Most Północny w
+Kijowie; wcześniejsze uderzenia ograniczyły ruch na trzech z sześciu
+przepraw przez Dniepr. Rosyjska dyplomacja zarzuciła Polsce wzrost
+„militarystycznej retoryki” i powtórzyła ostrzeżenia związane z Kaliningradem,
+bez publicznego dowodu nowej decyzji operacyjnej. Polska utrzymuje stopnie
+alarmowe CHARLIE, BRAVO i BRAVO-CRP do 30 listopada. Na Łotwie odbyły się
+wybory parlamentarne w warunkach podwyższonych obaw o rosyjską ingerencję; na
+moment zamknięcia raportu nie było jeszcze podstaw do oceny przyszłej koalicji.
 
 Raport: [2026-10-03](runs/2026-10-03.md)
 
@@ -175,8 +173,6 @@ Europy, ale nie ogłosiło nowych zobowiązań wojskowych.
 
 ## Recent Reports
 
-- [2026-10-03](runs/2026-10-03.md)
-- [2026-10-02](runs/2026-10-02.md)
 - [2026-09-30](runs/2026-09-30.md)
 - [2026-09-29](runs/2026-09-29.md)
 - [2026-09-28](runs/2026-09-28.md)
