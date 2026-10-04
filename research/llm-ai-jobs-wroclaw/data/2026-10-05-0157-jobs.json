@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-10-05",
+  "runTime": "01:57",
+  "executiveSummary": "Runda jest materialna: pojawił się świeży, mocny zestaw ofert wokół produkcyjnych systemów LLM, agentic AI, RAG i ewaluacji. Najbardziej lokalny sygnał to ASTEK we Wrocławiu z publiczną stawką 1 100–1 300 PLN + VAT/dzień B2B. Najlepsze dopasowanie platformowe mają Radbrackets (evale agentów, RAG i LLMOps), Scalo (MCP, multi-agent i AI-SDLC) oraz Holisticon (GenAI/LLM połączone z automatyzacją i platform engineering).",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "ASTEK Polska — Senior Software Engineer AI",
+      "company": "Nieznana firma",
+      "location": "Wrocław, hybrydowo; 2 dni z biura i 3 dni zdalnie.",
+      "workMode": "Remote",
+      "compensation": "1 100–1 300 PLN + VAT/dzień B2B.",
+      "seniority": "Senior",
+      "fitSummary": "budowa aplikacji AI/LLM, integracje z API i systemami, produkcyjne testowanie; mile widziane Azure, Kubernetes/OpenShift i MLOps.",
+      "whyInteresting": "najmocniejszy lokalny sygnał z jawną stawką i praktycznym zakresem wdrożeniowym.",
+      "uncertainty": "karta jest ofertą rekrutacyjną, klient końcowy nieujawniony.",
+      "sourceURLs": [
+        "https://entrypoint-prod.nofluffjobs.com/pl/job/senior-software-engineer-ai-k-m-astek-polska-wroclaw"
+      ],
+      "tags": [
+        "LLM",
+        "MLOps",
+        "Azure"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "Scalo — Senior Java Developer (AI)",
+      "company": "Nieznana firma",
+      "location": "zdalnie z Polski, z okazjonalnymi wizytami we Wrocławiu, około raz na 2 miesiące; oferta do 18 października 2026.",
+      "workMode": "Remote",
+      "compensation": "do 160 PLN/h B2B.",
+      "seniority": "Senior",
+      "fitSummary": "ReAct, MCP, orkiestracja agentów, Spring AI/LangChain4j, embeddingi, bazy wektorowe, observability i AI-SDLC.",
+      "whyInteresting": "łączy implementację backendu z wdrażaniem agentic workflows i narzędzi AI dla developerów.",
+      "uncertainty": "rola konsultingowa; szczegóły klienta i projektu są ograniczone.",
+      "sourceURLs": [
+        "https://entrypoint-prod.nofluffjobs.com/pl/job/senior-java-developer-ai-scalo-remote"
+      ],
+      "tags": [
+        "Agentic AI"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "Radbrackets — Senior AI Engineer",
+      "company": "Nieznana firma",
+      "location": "100% zdalnie z Polski; siedziba Wrocław; oferta do 15 października 2026.",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Senior",
+      "fitSummary": "agenci AI w TypeScript, ewaluacja agentów i RAG, LLM-as-judge, testy regresyjne promptów, tracing i monitoring kosztów/latencji.",
+      "whyInteresting": "wyjątkowo konkretny zakres jakości, ewaluacji i LLMOps, a nie tylko integracja API modelu.",
+      "uncertainty": "publiczna karta nie precyzuje formy umowy ani pełnego poziomu wynagrodzenia.",
+      "sourceURLs": [
+        "https://entrypoint-prod.nofluffjobs.com/pl/job/senior-ai-engineer-radbrackets-remote"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "LLMOps"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "Holisticon Insight — Remote AI & Automation Engineer",
+      "company": "Nieznana firma",
+      "location": "100% zdalnie; karta obejmuje Wrocław; oferta do 31 października 2026.",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "GenAI/LLM, RAG i agentic AI w połączeniu z Pythonem, automatyzacją, IaC, cloud i security.",
+      "whyInteresting": "dobry profil dla osoby łączącej AI platform engineering z automatyzacją enterprise.",
+      "uncertainty": "nacisk na automation/infrastructure może oznaczać mniej pracy przy samych modelach.",
+      "sourceURLs": [
+        "https://entrypoint-prod.nofluffjobs.com/pl/job/remote-ai-automation-engineer-holisticon-insight"
+      ],
+      "tags": [
+        "Agentic AI",
+        "RAG",
+        "LLM",
+        "GenAI",
+        "Python"
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "Micro Solutions — AI Engineer",
+      "company": "Nieznana firma",
+      "location": "Wrocław, praca zdalna z całej Polski lub hybrydowa; oferta do 31 października 2026.",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Python, LangChain, LangGraph, RAG, embeddingi, bazy wektorowe, FastAPI i CI/CD.",
+      "whyInteresting": "klarowny mid-level hands-on stack do budowy aplikacji LLM od retrievalu po API i deployment.",
+      "uncertainty": "źródło pracodawcy to publiczna karta Pracuj.pl, ale klient/projekt nie jest opisany szczegółowo.",
+      "sourceURLs": [
+        "https://www.pracuj.pl/praca/ai-engineer-wroclaw-legnicka-55f%2Coferta%2C1005129991"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "Python"
+      ]
+    },
+    {
+      "rank": 6,
+      "title": "Square One Resources — Generative AI / Machine Learning Engineer",
+      "company": "Nieznana firma",
+      "location": "zdalnie z Polski, w tym Dolnośląskie; oferta do 31 października 2026.",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "ML i GenAI, LLM/RAG/AI agents, Python, PyTorch, Azure i architektura mikroserwisowa.",
+      "whyInteresting": "szeroka rola łącząca klasyczne ML z produkcyjnymi systemami generative AI.",
+      "uncertainty": "oferta agencyjna; karta nie podaje pełnego projektu ani klienta końcowego.",
+      "sourceURLs": [
+        "https://entrypoint-prod.nofluffjobs.com/pl/job/generative-ai-machine-learning-engineer-llm-rag-ai-agents-square-one-resources-remote"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "GenAI",
+        "Python",
+        "Azure"
+      ]
+    }
+  ],
+  "changes": [
+    "Doszły nowe, publicznie widoczne karty ASTEK, Scalo, Radbrackets, Holisticon Insight, Micro Solutions i Square One Resources.",
+    "Wrocławski sygnał jest silniejszy niż w poprzedniej rundzie dzięki ASTEK, Micro Solutions i lokalizacji/siedzibie Radbrackets oraz Holisticon.",
+    "Najkrótsze terminy: Radbrackets — 15 października; Scalo — 18 października; ASTEK — 1 listopada."
+  ],
+  "risks": [
+    "Część ofert pochodzi od agencji lub boardów; klient końcowy, forma umowy i status aplikowania wymagają potwierdzenia przed aplikacją.",
+    "Widełki są publiczne tylko dla ASTEK i Scalo; pozostałe role wymagają negocjacji.",
+    "Karty boardowe mogą zmienić termin lub zniknąć bez uprzedzenia."
+  ],
+  "recommendedActions": [
+    "Najpierw zweryfikować ASTEK pod kątem klienta, domeny projektu i wymaganego udziału w biurze we Wrocławiu.",
+    "Dla profilu agentic/LLMOps priorytetowo porównać Radbrackets ze Scalo; dla platform/automatyzacji sprawdzić Holisticon.",
+    "Przed aplikacją do ofert agencyjnych poprosić o klienta końcowego, formę umowy, widełki i potwierdzenie pracy z Polski."
+  ],
+  "checkedSources": [
+    {
+      "title": "No Fluff Jobs",
+      "url": "https://nofluffjobs.com/pl/llm",
+      "status": "checked"
+    },
+    {
+      "title": "Pracuj.pl",
+      "url": "https://www.pracuj.pl/praca/ai-engineer-wroclaw-legnicka-55f%2Coferta%2C1005129991",
+      "status": "checked"
+    },
+    {
+      "title": "Experis",
+      "url": "https://www.experis.pl/pl/jobb/29215/aiengineerllmagenticsystems",
+      "status": "checked"
+    },
+    {
+      "title": "DXC/Luxoft",
+      "url": "https://career.luxoft.com/jobs/genai-engineer-llm-applications-on-azure-27793",
+      "status": "checked"
+    },
+    {
+      "title": "INFUSE",
+      "url": "https://job-boards.greenhouse.io/infuse/jobs/4734597005",
+      "status": "checked"
+    }
+  ]
+}

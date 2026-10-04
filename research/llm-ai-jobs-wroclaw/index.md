@@ -1,13 +1,16 @@
 # Topic Index: llm-ai-jobs-wroclaw
 
-Last updated: 2026-10-02 17:40 CEST
+Last updated: 2026-10-05 01:57 CEST
 
 ## Current Understanding
+
+Runda `2026-10-05-0157`: świeży klaster wokół produkcyjnych systemów LLM, agentic AI, RAG i ewaluacji. Najmocniejsze sygnały to ASTEK Senior Software Engineer AI we Wrocławiu (1 100–1 300 PLN + VAT/dzień B2B), Scalo z MCP/AI-SDLC (do 160 PLN/h), Radbrackets z eval/RAG/LLMOps oraz Holisticon Insight, Micro Solutions i Square One.
 
 Runda `2026-10-02-1740`: nowy klaster remote-Poland wokół agentów, RAG, MCP, ewaluacji i LLMOps. Najmocniejsze sygnały to Experis AI Engineer (termin 16 października), YND Senior AI Engineer (25–33 tys. PLN netto + VAT B2B, termin 24 października), DXC/Luxoft GenAI Engineer oraz role INFUSE, deepsense.ai i Antal. Wrocław jest jawnie dostępny na karcie deepsense.ai; pozostałe role są zdalne z Polski.
 
 ### Material changes
 
+- 2026-10-05 01:57: dodano sześć nowych kart: ASTEK, Scalo, Radbrackets, Holisticon Insight, Micro Solutions i Square One Resources; najmocniejszy lokalny sygnał to ASTEK z jawną stawką.
 - 2026-10-02 17:40: dodano sześć nowych lub ponownie potwierdzonych ofert remote-Poland; największą zmianą są jawne widełki YND oraz terminy Experis, deepsense.ai, Antal i YND.
 
 Runda `2026-10-02-0039`: nowa publiczna oferta TU Europa AI Engineer we Wrocławiu (hybryda, GenAI/LLM, Python/SQL/FastAPI) oraz odświeżone role DataArt OpenAI/NLP i Spyrosoft MCP/LangGraph. CDQ pozostaje aktywne do 30 października, ITDS do 4 października, a SQUAD Applied Scientist (LLM) ma termin 2 października.
@@ -556,6 +559,9 @@ only when something meaningful changes.
 
 ## Recent Reports
 
+- [2026-10-05 01:57 CEST](runs/2026-10-05-0157.md)
+- [2026-10-02 17:40 CEST](runs/2026-10-02-1740.md)
+- [2026-10-02 00:39 CEST](runs/2026-10-02-0039.md)
 - [2026-08-26 15:41 CEST](runs/2026-08-26-1541.md)
 - [2026-08-25-2308](runs/2026-08-25-2308.md)
 - [2026-07-18-1544](runs/2026-07-18-1544.md)
@@ -593,6 +599,17 @@ only when something meaningful changes.
 | epam-senior-ai-ml-solution-engineer-agentic-security-testing-wroclaw-remote | EPAM Systems | Senior AI/ML Solution Engineer (AI Agentic Security Testing) | Wrocław / remote | 2026-08-07-1910 | 2026-08-07-1910 | Open | Initial capture: board-first role with Python, Rust, AI solution engineering, Anthropic Claude Code, Cursor and security-testing methods. | [Just Join IT Wrocław AI board](https://justjoin.it/job-offers/wroclaw/ai) |
 | cloudatus-genai-solution-architect-wroclaw-remote | cloudatus | GenAI Solution Architect | Wrocław / remote | 2026-08-07-1910 | 2026-08-07-1910 | Open | Initial capture: 3 892,40 - 6 054,84 CHF/month; GenAI, AWS, Security, Azure, cloud architecture, solution architecture, AI agents and prompt engineering. | [Just Join IT Wrocław AI board](https://justjoin.it/job-offers/wroclaw/ai) |
 | team-up-ai-developer-net-microsoft-agent-framework-wroclaw-hybrid | Team Up | AI Developer with .NET and Microsoft Agent Framework (f/m/x) | Wrocław / hybrid | 2026-08-07-1910 | 2026-08-07-1910 | Open | Initial capture: C#, Microsoft Agent Framework, Microsoft Azure, .NET, LLM and GenAI; new Microsoft-native delivery signal. | [Just Join IT Wrocław AI board](https://justjoin.it/job-offers/wroclaw/ai) |
+
+## Seen Opportunities Added 2026-10-05
+
+| Canonical key | Company | Title | Location / remote | First seen | Last seen | Status | Material changes | Source |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| https://entrypoint-prod.nofluffjobs.com/pl/job/senior-software-engineer-ai-k-m-astek-polska-wroclaw | ASTEK Polska | Senior Software Engineer AI | Wrocław / hybrid | 2026-10-05-0157 | 2026-10-05-0157 | Open | AI/LLM applications and production delivery; 1 100–1 300 PLN + VAT/day B2B. | [No Fluff Jobs](https://entrypoint-prod.nofluffjobs.com/pl/job/senior-software-engineer-ai-k-m-astek-polska-wroclaw) |
+| https://entrypoint-prod.nofluffjobs.com/pl/job/senior-java-developer-ai-scalo-remote | Scalo | Senior Java Developer (AI) | Poland remote / occasional Wrocław | 2026-10-05-0157 | 2026-10-05-0157 | Open | MCP, agentic workflows, Spring AI/LangChain4j and AI-SDLC; up to 160 PLN/h B2B. | [No Fluff Jobs](https://entrypoint-prod.nofluffjobs.com/pl/job/senior-java-developer-ai-scalo-remote) |
+| https://entrypoint-prod.nofluffjobs.com/pl/job/senior-ai-engineer-radbrackets-remote | Radbrackets | Senior AI Engineer | Poland remote / Wrocław company | 2026-10-05-0157 | 2026-10-05-0157 | Open | Agent/RAG evaluation, LLM-as-judge, regression tests and LLMOps. | [No Fluff Jobs](https://entrypoint-prod.nofluffjobs.com/pl/job/senior-ai-engineer-radbrackets-remote) |
+| https://entrypoint-prod.nofluffjobs.com/pl/job/remote-ai-automation-engineer-holisticon-insight | Holisticon Insight | Remote AI & Automation Engineer | Poland remote / Wrocław | 2026-10-05-0157 | 2026-10-05-0157 | Open | GenAI/LLM, RAG and agentic AI with automation, cloud and security. | [No Fluff Jobs](https://entrypoint-prod.nofluffjobs.com/pl/job/remote-ai-automation-engineer-holisticon-insight) |
+| https://www.pracuj.pl/praca/ai-engineer-wroclaw-legnicka-55f%2Coferta%2C1005129991 | Micro Solutions | AI Engineer | Wrocław / Poland remote or hybrid | 2026-10-05-0157 | 2026-10-05-0157 | Open | Python, LangChain, LangGraph, RAG, vector search and FastAPI. | [Pracuj.pl](https://www.pracuj.pl/praca/ai-engineer-wroclaw-legnicka-55f%2Coferta%2C1005129991) |
+| https://entrypoint-prod.nofluffjobs.com/pl/job/generative-ai-machine-learning-engineer-llm-rag-ai-agents-square-one-resources-remote | Square One Resources | Generative AI / Machine Learning Engineer | Poland remote / Dolnośląskie | 2026-10-05-0157 | 2026-10-05-0157 | Open | LLM/RAG/agents with Python, PyTorch, Azure and microservices. | [No Fluff Jobs](https://entrypoint-prod.nofluffjobs.com/pl/job/generative-ai-machine-learning-engineer-llm-rag-ai-agents-square-one-resources-remote) |
 
 ## Review Notes
 

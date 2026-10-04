@@ -1,5 +1,9 @@
 # Topic Backlog: llm-ai-jobs-wroclaw
 
+## Follow-up 2026-10-05 01:57
+
+- ASTEK, Scalo, Radbrackets, Holisticon Insight, Micro Solutions i Square One: potwierdzić kanoniczne strony pracodawców, klienta końcowego oraz szczegóły umowy; przed aplikacją sprawdzić, czy karty i terminy nadal są aktywne.
+
 ## Follow-up 2026-10-02 17:40
 
 - Pilnie sprawdzić terminy deepsense.ai (10 października), Experis (16 października), Antal (18 października) i YND (24 października).
