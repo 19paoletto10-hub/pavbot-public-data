@@ -1,6 +1,20 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-10-03
+Last updated: 2026-10-04
+
+## Update 2026-10-04
+
+Przy 97 proc. przetworzonych protokołów listowych Zjednoczona Lista prowadzi
+w wyborach na Łotwie z 35,305 proc. i 42 mandatami, bez samodzielnej większości.
+W Brazylii oraz Bośni i Hercegowinie rozpoczęły się wybory powszechne; w Bośni
+pierwsze ogólnokrajowe użycie biometrii i skanerów przyniosło opóźnienia w
+części lokali. Wakacje.pl ujawniły incydent mogący obejmować dane kontaktowe,
+paszportowe i rezerwacyjne klientów, bez podania liczby osób. Ukraina
+zapowiedziała zwiększenie uderzeń na rosyjskie rafinerie, Chiny otworzyły
+postępowanie antydumpingowe wobec produktu chemicznego z UE, a w Hiszpanii
+odrzucenie dekretów mieszkaniowych wywołało duże protesty.
+
+Raport: [2026-10-04](runs/2026-10-04.md)
 
 ## Update 2026-10-03
 
