@@ -1,8 +1,10 @@
 # Topic Index: llm-ai-jobs-wroclaw
 
-Last updated: 2026-10-05 01:57 CEST
+Last updated: 2026-10-05 15:41 CEST
 
 ## Current Understanding
+
+Runda `2026-10-05-1541`: dodano HORIZON-AUTOMATION Senior AI Engineer we Wrocławiu (15 000–26 000 zł/mies.), z RAG, agentic AI, MCP/tool calling, ewaluacją jakości i LLMOps. Oferta wzmacnia lokalny klaster ról produkcyjnych wokół knowledge layer i systemów agentowych.
 
 Runda `2026-10-05-0157`: świeży klaster wokół produkcyjnych systemów LLM, agentic AI, RAG i ewaluacji. Najmocniejsze sygnały to ASTEK Senior Software Engineer AI we Wrocławiu (1 100–1 300 PLN + VAT/dzień B2B), Scalo z MCP/AI-SDLC (do 160 PLN/h), Radbrackets z eval/RAG/LLMOps oraz Holisticon Insight, Micro Solutions i Square One.
 
@@ -10,6 +12,7 @@ Runda `2026-10-02-1740`: nowy klaster remote-Poland wokół agentów, RAG, MCP, 
 
 ### Material changes
 
+- 2026-10-05 15:41: dodano HORIZON-AUTOMATION Senior AI Engineer we Wrocławiu z widełkami 15 000–26 000 zł/mies. oraz zakresem RAG, MCP, agentic AI i ewaluacji.
 - 2026-10-05 01:57: dodano sześć nowych kart: ASTEK, Scalo, Radbrackets, Holisticon Insight, Micro Solutions i Square One Resources; najmocniejszy lokalny sygnał to ASTEK z jawną stawką.
 - 2026-10-02 17:40: dodano sześć nowych lub ponownie potwierdzonych ofert remote-Poland; największą zmianą są jawne widełki YND oraz terminy Experis, deepsense.ai, Antal i YND.
 
@@ -559,6 +562,7 @@ only when something meaningful changes.
 
 ## Recent Reports
 
+- [2026-10-05 15:41 CEST](runs/2026-10-05-1541.md)
 - [2026-10-05 01:57 CEST](runs/2026-10-05-0157.md)
 - [2026-10-02 17:40 CEST](runs/2026-10-02-1740.md)
 - [2026-10-02 00:39 CEST](runs/2026-10-02-0039.md)
@@ -649,3 +653,9 @@ only when something meaningful changes.
 | 2026-07-08 | Re-check Wrocław AI cluster | Confirmed new ITDS/EY/Sii/GFT signals and marked Tooploox tooling expired. |
 | 2026-06-19 | Identify recurring Wroclaw employers | Added Holisticon and deepsense.ai to `index.md` watchlist after first relevant official openings. |
 | 2026-06-21 | Re-check KYOTU hiring signal | Public Pracuj.pl page now shows the listing as expired and confirms the employer ended collecting applications. |
+
+## Seen Opportunities Added 2026-10-05 15:41
+
+| Canonical key | Company | Title | Location / remote | First seen | Last seen | Status | Material changes | Source |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| https://www.atlantisjobs.pl/praca/ai/senior-ai-engineer-6248 | HORIZON-AUTOMATION | Senior AI Engineer | Wrocław / hybrid | 2026-10-05-1541 | 2026-10-05-1541 | Open | LLM, RAG, Agentic AI, MCP/tool calling, evaluation and LLMOps; 15 000–26 000 zł/mies. | [AtlantisJobs](https://www.atlantisjobs.pl/praca/ai/senior-ai-engineer-6248) |

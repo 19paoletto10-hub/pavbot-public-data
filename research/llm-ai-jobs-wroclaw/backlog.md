@@ -188,3 +188,7 @@
 - TU Europa AI Engineer: sprawdzić podczas kontaktu rekrutacyjnego stack modeli, chmurę, widełki i częstotliwość pracy hybrydowej.
 - SQUAD Applied Scientist (LLM) i ITDS Senior AI Infrastructure Engineer: potwierdzić status po terminach 2 i 4 października.
 - DataArt i Spyrosoft: znaleźć kanoniczne strony pracodawców oraz potwierdzić remote policy i jednostki wynagrodzenia.
+
+## Follow-up 2026-10-05 15:41
+
+- HORIZON-AUTOMATION Senior AI Engineer: potwierdzić liczbę dni onsite we Wrocławiu, typ umowy oraz czy zakres MCP/evaluacji obejmuje produkcyjny system już działający u klientów.
