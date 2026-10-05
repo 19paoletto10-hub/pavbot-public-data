@@ -15,6 +15,9 @@ spotkaniu USA–Ukraina–Rosja do końca października, ale bez uzgodnionego fo
 
 Raport: [2026-10-05](runs/2026-10-05.md)
 
+Ukraina podała dodatkowo, że ostatnie uderzenia wyłączyły 51 proc. rosyjskich
+mocy rafineryjnych; AP zaznacza brak niezależnego potwierdzenia tej wartości.
+
 ## Update 2026-10-03
 
 Rosyjskie ataki zabiły co najmniej sześć osób i uszkodziły Most Północny w
