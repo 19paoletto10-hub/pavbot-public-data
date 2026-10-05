@@ -1,0 +1,16 @@
+{
+  "stamp": "2026-10-05-0158",
+  "variants": [
+    {
+      "id": "female-piper",
+      "status": "ok",
+      "output_file": "research/aktualne-wydarzenia-mobile/podcasts/2026-10-05-0158/audio/female-piper/podcast.mp3"
+    },
+    {
+      "id": "male-xtts",
+      "status": "failed",
+      "path": null,
+      "error": "CPU-only XTTS inference exceeded unattended window; no podcast.mp3 was created."
+    }
+  ]
+}
