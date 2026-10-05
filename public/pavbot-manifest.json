@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-10-04T23:59:47.356991+00:00",
+  "generatedAt": "2026-10-05T00:00:49.279663+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -161,6 +161,36 @@
       "itemCount": 14
     },
     {
+      "id": "research/polska-swiat/runs/2026-10-05.md",
+      "type": "run",
+      "topic": "polska-swiat",
+      "title": "Daily Research Report: Polska i Świat",
+      "path": "research/polska-swiat/runs/2026-10-05.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/runs/2026-10-05.md",
+      "sizeBytes": 11822,
+      "date": "2026-10-05"
+    },
+    {
+      "id": "research/polska-swiat/data/2026-10-05-research.json",
+      "type": "researchData",
+      "topic": "polska-swiat",
+      "title": "Research data",
+      "path": "research/polska-swiat/data/2026-10-05-research.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/data/2026-10-05-research.json",
+      "sizeBytes": 12304,
+      "date": "2026-10-05"
+    },
+    {
+      "id": "research/polska-swiat/pdfs/2026-10-05-polska-swiat.pdf",
+      "type": "pdf",
+      "topic": "polska-swiat",
+      "title": "2026-10-05-polska-swiat.pdf",
+      "path": "research/polska-swiat/pdfs/2026-10-05-polska-swiat.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/pdfs/2026-10-05-polska-swiat.pdf",
+      "sizeBytes": 81341,
+      "date": "2026-10-05"
+    },
+    {
       "id": "research/llm-ai-jobs-wroclaw/runs/2026-10-05-0157.md",
       "type": "run",
       "topic": "llm-ai-jobs-wroclaw",
@@ -238,36 +268,6 @@
       "date": "2026-10-04",
       "time": "09:03",
       "itemCount": 14
-    },
-    {
-      "id": "research/polska-swiat/runs/2026-10-04.md",
-      "type": "run",
-      "topic": "polska-swiat",
-      "title": "Daily Research Report: Polska i Świat",
-      "path": "research/polska-swiat/runs/2026-10-04.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/runs/2026-10-04.md",
-      "sizeBytes": 24118,
-      "date": "2026-10-04"
-    },
-    {
-      "id": "research/polska-swiat/data/2026-10-04-research.json",
-      "type": "researchData",
-      "topic": "polska-swiat",
-      "title": "Research data",
-      "path": "research/polska-swiat/data/2026-10-04-research.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/data/2026-10-04-research.json",
-      "sizeBytes": 22918,
-      "date": "2026-10-04"
-    },
-    {
-      "id": "research/polska-swiat/pdfs/2026-10-04-polska-swiat.pdf",
-      "type": "pdf",
-      "topic": "polska-swiat",
-      "title": "2026-10-04-polska-swiat.pdf",
-      "path": "research/polska-swiat/pdfs/2026-10-04-polska-swiat.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/pdfs/2026-10-04-polska-swiat.pdf",
-      "sizeBytes": 97352,
-      "date": "2026-10-04"
     },
     {
       "id": "research/tech-news/podcasts/2026-10-03/sources.md",
@@ -30240,7 +30240,7 @@
       "title": "Topic Index: polska-swiat",
       "path": "research/polska-swiat/index.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/index.md",
-      "sizeBytes": 74599
+      "sizeBytes": 74532
     },
     {
       "id": "research/polska-swiat/backlog.md",
@@ -30249,7 +30249,7 @@
       "title": "Topic Backlog: polska-swiat",
       "path": "research/polska-swiat/backlog.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/backlog.md",
-      "sizeBytes": 113918
+      "sizeBytes": 112719
     },
     {
       "id": "research/llm-ai-jobs-wroclaw/topic.md",

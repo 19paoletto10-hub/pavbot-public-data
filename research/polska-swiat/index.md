@@ -1,20 +1,19 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-10-04
+Last updated: 2026-10-03
 
-## Update 2026-10-04
+## Update 2026-10-05
 
-Przy 97 proc. przetworzonych protokołów listowych Zjednoczona Lista prowadzi
-w wyborach na Łotwie z 35,305 proc. i 42 mandatami, bez samodzielnej większości.
-W Brazylii oraz Bośni i Hercegowinie rozpoczęły się wybory powszechne; w Bośni
-pierwsze ogólnokrajowe użycie biometrii i skanerów przyniosło opóźnienia w
-części lokali. Wakacje.pl ujawniły incydent mogący obejmować dane kontaktowe,
-paszportowe i rezerwacyjne klientów, bez podania liczby osób. Ukraina
-zapowiedziała zwiększenie uderzeń na rosyjskie rafinerie, Chiny otworzyły
-postępowanie antydumpingowe wobec produktu chemicznego z UE, a w Hiszpanii
-odrzucenie dekretów mieszkaniowych wywołało duże protesty.
+Niemcy ogłosiły w Kijowie pakiet pomocy dla Ukrainy przekraczający 1,3 mld
+euro, w tym około 1 mld euro na pomoc wojskową i około 350 mln euro na
+energetykę. Rosja zapowiedziała dalsze uderzenia po deklaracji Ukrainy o
+zwiększeniu ataków na rosyjskie rafinerie. RCB po kolejnym ataku na Ukrainę
+podało brak zagrożenia na terytorium Polski, bez potwierdzonego naruszenia RP.
+Na Łotwie pro-ukraińska koalicja zdobyła około 35 proc. głosów i rozpoczęła
+rozmowy koalicyjne. Pojawiła się też deklaracja o możliwym technicznym
+spotkaniu USA–Ukraina–Rosja do końca października, ale bez uzgodnionego formatu.
 
-Raport: [2026-10-04](runs/2026-10-04.md)
+Raport: [2026-10-05](runs/2026-10-05.md)
 
 ## Update 2026-10-03
 
