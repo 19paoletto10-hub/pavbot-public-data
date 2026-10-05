@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-10-04T23:58:49.551731+00:00",
+  "generatedAt": "2026-10-04T23:59:47.356991+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -137,6 +137,29 @@
     }
   ],
   "artifacts": [
+    {
+      "id": "research/puls-dnia-news/runs/2026-10-05-0158.md",
+      "type": "run",
+      "topic": "puls-dnia-news",
+      "title": "Pavbot Puls Dnia — 2026-10-05 01:58 CEST",
+      "path": "research/puls-dnia-news/runs/2026-10-05-0158.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/runs/2026-10-05-0158.md",
+      "sizeBytes": 2894,
+      "date": "2026-10-05",
+      "time": "01:58"
+    },
+    {
+      "id": "research/puls-dnia-news/data/2026-10-05-0158-pulse-news.json",
+      "type": "pulseNewsData",
+      "topic": "puls-dnia-news",
+      "title": "Pulse news data",
+      "path": "research/puls-dnia-news/data/2026-10-05-0158-pulse-news.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/data/2026-10-05-0158-pulse-news.json",
+      "sizeBytes": 15140,
+      "date": "2026-10-05",
+      "time": "01:58",
+      "itemCount": 14
+    },
     {
       "id": "research/llm-ai-jobs-wroclaw/runs/2026-10-05-0157.md",
       "type": "run",
