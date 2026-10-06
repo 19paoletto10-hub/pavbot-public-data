@@ -1,6 +1,25 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-10-03
+Last updated: 2026-10-06
+
+## Update 2026-10-06
+
+Parti Québécois wygrała wybory w Quebecu i wraca do władzy po ponad dekadzie,
+ale nie zdobyła większości potrzebnej do samodzielnego rządzenia. W Brazylii
+Flávio Bolsonaro wygrał pierwszą turę 47,03 do 45,16 proc. nad Lulą, a druga
+tura odbędzie się 25 października; jego Partia Liberalna została największym
+ugrupowaniem w obu izbach Kongresu. W Bośni nacjonaliści umocnili wpływy,
+Hiszpania wyznaczyła przedterminowe wybory na 29 listopada, a rosyjska strona
+zgłosiła dwa uderzenia na terenie Zaporoskiej Elektrowni Jądrowej bez
+niezależnego potwierdzenia odpowiedzialności.
+
+W Polsce od 6 października obowiązują limity 6,79 zł za litr benzyny 95,
+7,66 zł za litr benzyny 98 i 7,82 zł za litr oleju napędowego. Rada Ministrów
+ma omówić procedurę nadmiernego deficytu i program ochrony ludności, a Sejm
+rozpoczyna posiedzenie z pierwszym czytaniem budżetu na 2027 rok zaplanowanym
+na 8 października. Finalny projekt budżetu zakłada deficyt do 281,2 mld zł.
+
+Raport: [2026-10-06](runs/2026-10-06.md)
 
 ## Update 2026-10-05
 
@@ -189,6 +208,10 @@ Europy, ale nie ogłosiło nowych zobowiązań wojskowych.
 
 ## Recent Reports
 
+- [2026-10-06](runs/2026-10-06.md)
+- [2026-10-05](runs/2026-10-05.md)
+- [2026-10-03](runs/2026-10-03.md)
+- [2026-10-02](runs/2026-10-02.md)
 - [2026-09-30](runs/2026-09-30.md)
 - [2026-09-29](runs/2026-09-29.md)
 - [2026-09-28](runs/2026-09-28.md)
