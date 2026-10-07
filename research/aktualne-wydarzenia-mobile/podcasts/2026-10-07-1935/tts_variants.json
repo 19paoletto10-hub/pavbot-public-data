@@ -1,0 +1,16 @@
+{
+  "variants": [
+    {
+      "id": "female-piper",
+      "engine_requested": "piper",
+      "engine_used": "piper",
+      "model": "rhasspy/piper-voices:pl_PL-gosia-medium",
+      "voice": "pl_PL-gosia-medium",
+      "language": "pl",
+      "speed": 1.03,
+      "duration_seconds": 119.303356,
+      "status": "ok",
+      "output_file": "research/aktualne-wydarzenia-mobile/podcasts/2026-10-07-1935/audio/female-piper/podcast.mp3"
+    }
+  ]
+}
