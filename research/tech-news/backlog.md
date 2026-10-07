@@ -565,3 +565,8 @@
 - [ ] Zweryfikować zakres uprawnień i mechanizmy potwierdzania w WhatsApp Business Tools MCP.
 - [ ] Śledzić niezależne testy Muse Secure VM oraz regionalną dostępność Muse w UE.
 - [ ] Porównać metodykę ewaluacji Anthropic z zewnętrznymi testami targetowania i klasyfikatorów.
+| High | Track cyber-AI access tiers | Anthropic's CVP makes verification, retention and authorization explicit product controls | Watch approval times, EFS availability, abuse reporting and independent evidence of safety outcomes | Open |
+| High | Track enterprise agent context controls | OpenAI–Atlassian integrations make permissions and provenance of Jira/Confluence context a deployment issue | Watch granular consent, action approvals, source citations and audit APIs | Open |
+| High | Track EU text provenance rollout | OpenAI will introduce text watermarking in the EU, but detection has known limits | Watch editing resilience, detector governance, user disclosure and interoperability | Open |
+| Medium | Validate Mistral Large 4 independently | Mistral's open-weight model is announced before the planned weight release and independent testing | Watch license, red-team results, external benchmarks and serving cost | Open |
+| Medium | Evaluate independent agent guardrails | NVIDIA's OpenShell/Sentry pattern separates agent authority from runtime monitoring | Watch source audit, IAM/SIEM integrations, false positives and external deployments | Open |

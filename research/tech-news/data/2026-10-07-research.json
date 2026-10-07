@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-10-07",
+  "runTime": "08:00",
+  "status": "Material update",
+  "leadParagraphs": [
+    "Najnowsze komunikaty pokazują, że rynek agentów przechodzi z pytania „czy model potrafi wykonać zadanie?” do trzech pytań operacyjnych: kto może uruchomić zdolność, jaki kontekst organizacyjny dostaje agent i jak wykazać pochodzenie jego wyniku. Anthropic formalizuje dostęp do zaawansowanych możliwości cyber w trzech poziomach weryfikacji. OpenAI łączy modele z grafem pracy Atlassiana oraz przygotowuje unijne oznaczanie tekstu. Mistral wraca do wyścigu open-weight, lecz deklaracje jakości wymagają niezależnych testów.",
+    "• Anthropic rozszerzyło Cyber Verification Program o poziomy Defense, Red Team i Specialized Access; różnią się one zakresem dozwolonych zadań, weryfikacją i kontrolami.",
+    "• OpenAI i Atlassian zapowiadają agentów w Rovo oraz integracje Codex/ChatGPT z Jira, Confluence i Teamwork Graph — pod warunkiem odpowiednich uprawnień.",
+    "• OpenAI uruchamia opcjonalne watermarking tekstu w API i planuje niewidoczny znak dla kwalifikujących się użytkowników ChatGPT oraz Codex w UE; detektor nie będzie publiczny na starcie.",
+    "• Mistral Large 4 ma być otwartym modelem flagowym pod koniec października. Wstępne wyniki i parametry pochodzą od firmy, więc nie są jeszcze dowodem niezależnej przewagi.",
+    "• NVIDIA przedstawiła Open Agent Safety Platform; relacja AP opisuje mechanizm najmniejszych uprawnień i oddzielne monitorowanie działań agenta, ale deklaracje wdrożeń wymagają dalszej weryfikacji."
+  ],
+  "summaryBullets": [
+    "Cyber: Anthropic wprowadza poziomy dostępu do cyber-AI",
+    "AI: Agenci OpenAI dostają kontekst z Jira i Confluence",
+    "Regulacje: UE testuje znak pochodzenia dla tekstu AI"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-10-07-0-anthropic-wprowadza-poziomy-dostepu-do-cyber-ai-0174b0dd6b",
+      "section": "Cyber",
+      "title": "Anthropic wprowadza poziomy dostępu do cyber-AI",
+      "standfirst": "Anthropic połączył dotychczasowe programy zaufanego dostępu w Cyber Verification Program z trzema poziomami: Defense, Red Team i Specialized Access.",
+      "whatHappened": "Zweryfikowane zespoły obronne i red-teamowe mogą wnioskować o szerszy dostęp do możliwości cyber modeli Claude, przy różnych wymaganiach kontroli.",
+      "whyItMatters": "Zdolność modelu staje się produktem zarządzanym polityką dostępu, a nie tylko przełącznikiem „model dostępny albo zablokowany”.",
+      "deeperAnalysis": [
+        "Program rozdziela pracę defensywną, autoryzowane testy penetracyjne i najbardziej wrażliwe zastosowania infrastrukturalne. To praktyczny model dla organizacji, które muszą dowieść zarówno celu testu, jak i własności lub zgody na badany system.",
+        "Anthropic wymaga retencji danych uczestników, aby monitorować nadużycia, a dopiero planowane Enterprise Frontier Safeguards mają połączyć silne zabezpieczenia z danymi trzymanymi w infrastrukturze klienta. To pokazuje realny kompromis między prywatnością, audytowalnością i użytecznością.",
+        "W testach dostawcy ograniczenia na poziomie Defense blokowały większość wieloetapowych scenariuszy, natomiast poziom Red Team miał dużo mniej blokad. Liczby są własnym pomiarem firmy, więc nie należy traktować ich jako niezależnego benchmarku bezpieczeństwa."
+      ],
+      "contextPoints": [
+        "Co się stało: Powstała trójpoziomowa ścieżka weryfikowanego dostępu do cyber-AI.",
+        "Dlaczego ważne: Kontrola powinna obejmować tożsamość, mandat i telemetrię, nie tylko prompt.",
+        "Na co patrzeć dalej: Czas weryfikacji, skuteczność kontroli i dostępność EFS."
+      ],
+      "sources": [
+        {
+          "title": "Anthropic — Cyber Verification Program",
+          "url": "https://www.anthropic.com/news/cyber-verification-program"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Anthropic",
+        "cyberbezpieczeństwo",
+        "red-team",
+        "governance"
+      ]
+    },
+    {
+      "id": "tech-news-2026-10-07-1-agenci-openai-dostaja-kontekst-z-jira-i-confluence-fbbaac0829",
+      "section": "AI",
+      "title": "Agenci OpenAI dostają kontekst z Jira i Confluence",
+      "standfirst": "Rozszerzona współpraca OpenAI i Atlassiana ma zasilać agentów Rovo modelami GPT-6 oraz kontekstem Teamwork Graph.",
+      "whatHappened": "Integracje mają pozwalać ChatGPT i Codex odwoływać się do zadań, dokumentacji i decyzji w istniejących workflowach Atlassiana.",
+      "whyItMatters": "Prawdziwą powierzchnią ryzyka staje się teraz jakość kontekstu i granice uprawnień, nie samo wywołanie modelu.",
+      "deeperAnalysis": [
+        "Teamwork Graph łączy ludzi, projekty, dokumenty i decyzje. To umożliwia agentowi składanie oceny stanu projektu z rozproszonych danych, ale podnosi konsekwencje błędnego mapowania tożsamości, zbyt szerokiego dostępu czy nieaktualnej dokumentacji.",
+        "W praktyce warto rozdzielić uprawnienia do odczytu od uprawnień do zmiany. Każda rekomendacja agenta powinna wskazywać źródłowe zadania i dokumenty, a czynności zewnętrzne wymagać zatwierdzenia zgodnego z rolą użytkownika.",
+        "Firmy nie powinny mylić demonstracji integracji z automatyczną poprawą produktywności. Sensowne wdrożenie potrzebuje miar jakości, czasu cyklu, błędnych eskalacji oraz audytu dostępu do wiedzy organizacyjnej."
+      ],
+      "contextPoints": [
+        "Co się stało: GPT-6 i Rovo mają łączyć modele z grafem pracy Atlassiana.",
+        "Dlaczego ważne: Kontekst firmowy jest zarazem przewagą produktu i powierzchnią kontroli dostępu.",
+        "Na co patrzeć dalej: Granularność uprawnień, logi cytowanych źródeł i metryki jakości workflowu."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI — Atlassian partnership",
+          "url": "https://openai.com/index/atlassian-partnership/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "Atlassian",
+        "Rovo",
+        "Codex",
+        "enterprise"
+      ]
+    },
+    {
+      "id": "tech-news-2026-10-07-2-ue-testuje-znak-pochodzenia-dla-tekstu-ai-4e328eb9fd",
+      "section": "Regulacje",
+      "title": "UE testuje znak pochodzenia dla tekstu AI",
+      "standfirst": "OpenAI zapowiada opt-in watermarking tekstu w API i etapowy niewidoczny znak w kwalifikujących się wynikach ChatGPT oraz Codex w Unii Europejskiej.",
+      "whatHappened": "Firma udostępnia technologię textGrain, ale ogranicza dostęp do detektora do zatwierdzonych badaczy i organizacji eksperckich.",
+      "whyItMatters": "Pochodzenie treści staje się wymogiem produktowym, lecz sygnał statystyczny nie jest dowodem autorstwa, jakości ani zgodności z prawem.",
+      "deeperAnalysis": [
+        "Mechanizm ma wspierać spełnienie unijnych reguł rozpoznawalności tekstu generowanego przez AI. Model wdrożenia jest celowo ostrożny: API pozostaje dobrowolne, rollout konsumencki jest regionalny, a detekcja nie będzie na początku otwarta dla każdego.",
+        "OpenAI wyraźnie wymienia granice narzędzia. Brak znaku nie potwierdza autorstwa człowieka, zaś obecność nie mówi, ile w treści było ludzkiej redakcji ani czy materiał jest prawdziwy. Redakcje i organizacje muszą więc łączyć provenance z weryfikacją faktów oraz własnym oznaczaniem procesu powstawania treści.",
+        "Najtrudniejszym testem będą transformacje tekstu: skracanie, parafraza, tłumaczenie i mieszane autorstwo. Wdrożenie w UE może stać się użytecznym eksperymentem interoperacyjności, ale nie zastąpi standardów między dostawcami."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI rozpoczęło etapowe wdrożenie znakowania tekstu pod wymagania UE.",
+        "Dlaczego ważne: Provenance musi być interpretowane jako ograniczony sygnał, nie werdykt.",
+        "Na co patrzeć dalej: Odporność na edycję, zasady dostępu do detektora i interoperacyjność."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI — EU text provenance",
+          "url": "https://openai.com/index/eu-text-provenance/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "UE",
+        "AI Act",
+        "watermarking",
+        "Codex",
+        "transparentność"
+      ]
+    },
+    {
+      "id": "tech-news-2026-10-07-3-mistral-large-4-wraca-do-wyscigu-open-weight-1d179ffa12",
+      "section": "AI",
+      "title": "Mistral Large 4 wraca do wyścigu open-weight",
+      "standfirst": "Mistral zapowiada Large 4 jako nowy model flagowy, którego wagi mają pojawić się pod koniec października po testach bezpieczeństwa.",
+      "whatHappened": "Francuska firma deklaruje konkurencyjność wobec czołowych modeli otwartych w zadaniach kodowych, cyber i geospatial.",
+      "whyItMatters": "Europejska opcja open-weight zwiększa wybór wdrożeniowy, ale deklaracje producenta muszą przejść niezależne testy przed decyzją produkcyjną.",
+      "deeperAnalysis": [
+        "Otwarte wagi dają organizacjom większą kontrolę nad miejscem uruchomienia, dostosowaniem i ciągłością dostępu. Równocześnie przenoszą większą część odpowiedzialności za bezpieczeństwo, red-teaming i aktualizacje na wdrażającego.",
+        "Le Monde podaje, że udostępnione wyniki są wstępne, a publikacja wag ma nastąpić dopiero po zakończeniu testów. To prawidłowy moment na przygotowanie planu oceny: reprezentatywne zadania, koszt inference, bezpieczeństwo promptów i polityka danych — nie na ogłaszanie przewagi.",
+        "Popularność premiery na Hacker News jest sygnałem zainteresowania deweloperów, nie niezależną walidacją benchmarków. Warto obserwować wyniki po publicznym wydaniu oraz jakość ekosystemu narzędziowego."
+      ],
+      "contextPoints": [
+        "Co się stało: Mistral zapowiedział Large 4 i późniejsze udostępnienie wag.",
+        "Dlaczego ważne: Suwerenność wdrożeniowa rośnie wraz z kosztami własnej kontroli bezpieczeństwa.",
+        "Na co patrzeć dalej: Niezależne benchmarki, licencję, testy red-team i koszt serwowania."
+      ],
+      "sources": [
+        {
+          "title": "Le Monde — Mistral Large 4",
+          "url": "https://www.lemonde.fr/en/economy/article/2026/10/06/mistral-ai-unveils-new-ai-model-aimed-at-narrowing-the-gap-with-top-chinese-competitors_6758318_19.html"
+        },
+        {
+          "title": "Hacker News — front page, 6 października",
+          "url": "https://news.ycombinator.com/front?day=2026-09-26-0"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Mistral",
+        "open-weight",
+        "Europa",
+        "modele",
+        "infrastruktura"
+      ]
+    },
+    {
+      "id": "tech-news-2026-10-07-4-nvidia-proponuje-niezalezny-bezpiecznik-dla-agentow-51510bcc47",
+      "section": "Cyber",
+      "title": "NVIDIA proponuje niezależny bezpiecznik dla agentów",
+      "standfirst": "NVIDIA zaprezentowała według AP otwartą platformę łączącą formalne ograniczanie uprawnień agenta z niezależnym monitoringiem jego aktywności.",
+      "whatHappened": "OpenShell ma wyznaczać zakres autoryzacji, a warstwa Sentry obserwować zachowanie i izolować podejrzane działania.",
+      "whyItMatters": "Rozdzielenie wykonania od kontroli jest bardziej wiarygodnym wzorcem niż poleganie na deklarowanej ostrożności modelu.",
+      "deeperAnalysis": [
+        "Opisany wzorzec odpowiada na problem znany z poprzednich incydentów: agent potrzebuje rzeczywistych zasobów, ale zakres „wystarczający do zadania” jest trudny do poprawnego zdefiniowania. Kontrola powinna być zewnętrzna wobec modelu i zdolna przerwać akcję.",
+        "Open source może ułatwić audyt i wdrożenia na różnych platformach, ale nie usuwa konieczności pisania polityk. Błędna polityka najmniejszych uprawnień nadal może dać agentowi za szeroki dostęp lub blokować pracę operacyjną.",
+        "Należy odróżnić deklaracje producenta o prewencji i liczbie wdrożeń od niezależnych wyników. Przy ocenie warto testować pokrycie logów, czas reakcji, zachowanie podczas awarii oraz odporność na obejście polityki."
+      ],
+      "contextPoints": [
+        "Co się stało: NVIDIA przedstawiła oddzielne warstwy autoryzacji i nadzoru nad agentem.",
+        "Dlaczego ważne: Guardrail musi działać poza wnioskowaniem modelu.",
+        "Na co patrzeć dalej: Audyt kodu, niezależne testy oraz integracje z IAM i SIEM."
+      ],
+      "sources": [
+        {
+          "title": "Associated Press — NVIDIA agent safety platform",
+          "url": "https://apnews.com/article/nvidia-ai-agent-artificial-intelligence-safety-3c4d7c1cfde82851c0577d1fa29b8621"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "NVIDIA",
+        "agenci",
+        "least-privilege",
+        "monitoring",
+        "OpenShell"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Kto dostaje dostęp do cyber-AI?",
+      "rationale": "Dostęp do mocnych zdolności staje się procesem weryfikacji i audytu",
+      "sourcesLabel": "Anthropic"
+    },
+    {
+      "priority": "High",
+      "title": "Agent zna firmę — czy zna swoje granice?",
+      "rationale": "Jira, Confluence i graf pracy zwiększają użyteczność oraz ryzyko nadmiarowych uprawnień",
+      "sourcesLabel": "OpenAI, Atlassian"
+    },
+    {
+      "priority": "High",
+      "title": "Czy da się rozpoznać tekst AI?",
+      "rationale": "Unijny watermark pomoże w transparentności, ale nie rozstrzyga autorstwa ani prawdziwości",
+      "sourcesLabel": "OpenAI, EU AI Act"
+    },
+    {
+      "priority": "Medium",
+      "title": "Europejski powrót do open-weight",
+      "rationale": "Mistral Large 4 zwiększa wybór, a publiczne benchmarki dopiero zweryfikują obietnice",
+      "sourcesLabel": "Le Monde, Hacker News"
+    },
+    {
+      "priority": "Medium",
+      "title": "Bezpiecznik poza modelem",
+      "rationale": "Architektura autoryzacji i niezależnego nadzoru może stać się standardem agentowych workflowów",
+      "sourcesLabel": "AP, NVIDIA"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Anthropic",
+      "url": "https://www.anthropic.com/news/cyber-verification-program"
+    },
+    {
+      "title": "OpenAI i Atlassian",
+      "url": "https://openai.com/index/atlassian-partnership/"
+    },
+    {
+      "title": "OpenAI",
+      "url": "https://openai.com/index/eu-text-provenance/"
+    },
+    {
+      "title": "Le Monde",
+      "url": "https://www.lemonde.fr/en/economy/article/2026/10/06/mistral-ai-unveils-new-ai-model-aimed-at-narrowing-the-gap-with-top-chinese-competitors_6758318_19.html"
+    },
+    {
+      "title": "Hacker News",
+      "url": "https://news.ycombinator.com/front?day=2026-09-26-0"
+    },
+    {
+      "title": "Associated Press",
+      "url": "https://apnews.com/article/nvidia-ai-agent-artificial-intelligence-safety-3c4d7c1cfde82851c0577d1fa29b8621"
+    }
+  ]
+}
