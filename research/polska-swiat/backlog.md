@@ -4,6 +4,13 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track 7 October Russian mass strike and Ukrainian civilian toll | AP reports at least 24 killed and around 60 wounded across Kyiv and other regions | Watch Ukrainian authorities, AP/Reuters, energy operators and Polish DORSZ/RCB for final toll, infrastructure damage and any RP-related activation | Open |
+| High | Track implementation of Poland's 2027–2031 civil-protection programme | Government allocated PLN 102.4bn, including about PLN 30bn for regions and local governments | Watch implementation acts, local projects, shelter capacity, warning systems and transparent spending metrics | Open |
+| High | Track Orlen fuel-price investigation | Prosecutors allege over PLN 4.1bn damage and charged five current/former managers | Watch procedural decisions, defence statements, evidence and whether an indictment follows | Open |
+| Medium | Verify Black Sea merchant-vessel incident | A reported allegation of attacks near Bulgaria lacks independent primary confirmation in this run | Check Bulgarian authorities, operators, IMO, maritime advisories and independent wire reports before escalation | Open |
+
+| Priority | Item | Reason | Next Step | Status |
+| --- | --- | --- | --- | --- |
 | High | Track Kyiv bridge damage and civilian casualty balance | Russian attacks killed at least six people and damaged the Northern Bridge after earlier strikes disrupted three Kyiv bridges | Watch Kyiv authorities, emergency services and AP/Reuters for final casualties, reopening times, route changes and further attacks | Open |
 | High | Track Russian diplomatic threats toward Poland | Moscow's public message repeats Kaliningrad warnings and frames Polish security reporting as militaristic rhetoric | Watch MSZ, NATO, MON, Russian diplomatic channels and cyber/infrastructure incidents; separate information pressure from operational evidence | Open |
 | High | Track Latvian parliamentary election result | Latvia voted under heightened concern about Russian hybrid interference and the outcome may affect Baltic security policy | Watch official election commission results, turnout, coalition talks and party positions on NATO, Ukraine and Russia | Open |

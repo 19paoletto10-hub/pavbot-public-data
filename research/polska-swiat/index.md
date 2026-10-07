@@ -1,6 +1,12 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-10-03
+Last updated: 2026-10-07
+
+## Update 2026-10-07
+
+Rosja przeprowadziła szeroki atak na Kijów i kilkanaście regionów Ukrainy; według władz ukraińskich zginęły co najmniej 24 osoby, w tym czworo dzieci, a około 60 zostało rannych. Polska przyjęła program ochrony ludności i obrony cywilnej na lata 2027–2031 o wartości 102,4 mld zł, z około 30 mld zł dla regionów i samorządów. Prokuratura poinformowała o zarzutach wobec pięciu obecnych i byłych menedżerów Orlenu w sprawie cen paliw z 2023 r. i szkody szacowanej na ponad 4,1 mld zł. Bank Światowy podniósł prognozę wzrostu Polski w 2026 r. do 3,6 proc., ale przewiduje spowolnienie w latach 2027–2028. Doniesienia o ataku na statki handlowe u wybrzeży Bułgarii pozostają niepotwierdzone.
+
+Raport: [2026-10-07](runs/2026-10-07.md)
 
 ## Update 2026-10-05
 
