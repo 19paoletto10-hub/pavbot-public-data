@@ -1,0 +1,455 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-10-07",
+  "runTime": "14:24",
+  "status": "Brak nowej materialnej zmiany",
+  "headline": "Puls Dnia: bez potwierdzonej nowej zmiany",
+  "summary": "Kontrola TVN24, BBC i CNN nie potwierdziła nowego materialnego faktu. RCB nadal wskazuje komunikaty z 5 października dotyczące operowania polskiego lotnictwa po ataku na Ukrainę oraz neutralizacji niewybuchów na Bałtyku.",
+  "checkedSources": [
+    {
+      "url": "https://tvn24.pl/najnowsze",
+      "status": "sprawdzono; brak wystarczająco potwierdzonej nowej zmiany",
+      "title": "TVN24"
+    },
+    {
+      "url": "https://www.bbc.com/news",
+      "status": "sprawdzono; częściowo ograniczone technicznie",
+      "title": "BBC News"
+    },
+    {
+      "url": "https://edition.cnn.com/",
+      "status": "sprawdzono; częściowo ograniczone technicznie",
+      "title": "CNN"
+    },
+    {
+      "url": "https://www.gov.pl/web/rcb/komunikaty",
+      "status": "źródło oficjalne; najnowsze widoczne komunikaty z 5 października",
+      "title": "RCB"
+    },
+    {
+      "url": "https://www.gov.pl/web/obrona-narodowa/aktualnosci5",
+      "status": "sprawdzono",
+      "title": "MON"
+    }
+  ],
+  "items": [
+    {
+      "id": "pl-granica-20260929",
+      "section": "Polska",
+      "title": "Wojsko wspiera ochronę wschodniej granicy",
+      "lead": "Monitoring wschodniej granicy pozostaje aktywny.",
+      "whatHappened": "Utrzymano wcześniej potwierdzony wątek wojskowego wsparcia Straży Granicznej.",
+      "keyFacts": [
+        "Brak nowej decyzji w tym slocie."
+      ],
+      "reactions": [
+        "Służby monitorują sytuację."
+      ],
+      "whyItMatters": "Dotyczy odporności i bezpieczeństwa granicy.",
+      "context": "Temat kontynuowany bez nowego potwierdzenia.",
+      "watchNext": [
+        "Komunikaty RCB i MON"
+      ],
+      "sources": [
+        {
+          "title": "MON",
+          "url": "https://www.gov.pl/web/obrona-narodowa/aktualnosci5"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "granica"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-apache-20260929",
+      "section": "Polska",
+      "title": "Dęblin rozwija serwis Apache",
+      "lead": "Krajowe kompetencje serwisowe pozostają w monitoringu.",
+      "whatHappened": "Wątek umowy dotyczącej serwisowania silników AH-64 nie ma nowej aktualizacji.",
+      "keyFacts": [
+        "Brak nowego harmonogramu."
+      ],
+      "reactions": [
+        "MON akcentuje zaplecze przemysłowe."
+      ],
+      "whyItMatters": "Wpływa na gotowość techniczną floty.",
+      "context": "Kontynuacja wcześniejszego wydania.",
+      "watchNext": [
+        "Zakres i harmonogram umowy"
+      ],
+      "sources": [
+        {
+          "title": "MON",
+          "url": "https://www.gov.pl/web/obrona-narodowa/aktualnosci5"
+        }
+      ],
+      "tags": [
+        "MON",
+        "Apache"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-zdrowie-rzad-20260929",
+      "section": "Polityka",
+      "title": "Zmiany w ochronie zdrowia pozostają w pracach",
+      "lead": "Pakiet projektów rządowych czeka na dalszy proces.",
+      "whatHappened": "Nie odnotowano nowego etapu legislacyjnego.",
+      "keyFacts": [
+        "Brak nowego komunikatu w tym slocie."
+      ],
+      "reactions": [
+        "Dalsze decyzje wymagają prac parlamentarnych."
+      ],
+      "whyItMatters": "Może zmienić organizację i finansowanie zdrowia.",
+      "context": "Temat kontynuowany.",
+      "watchNext": [
+        "Sejm i komunikaty rządu"
+      ],
+      "sources": [
+        {
+          "title": "KPRM",
+          "url": "https://www.gov.pl/web/premier/komunikaty-cir"
+        }
+      ],
+      "tags": [
+        "polityka",
+        "zdrowie"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "pl-szkola-20260929",
+      "section": "Bezpieczeństwo",
+      "title": "Sprawa małoletniego pozostaje w wyjaśnianiu",
+      "lead": "Czynności służb trwają; brak nowego bilansu.",
+      "whatHappened": "Wątek podejrzenia planowania ataku w szkole pozostaje bez nowego oficjalnego rozstrzygnięcia.",
+      "keyFacts": [
+        "Sprawa dotyczy osoby małoletniej."
+      ],
+      "reactions": [
+        "Należy unikać identyfikacji dziecka."
+      ],
+      "whyItMatters": "Dotyczy procedur bezpieczeństwa uczniów.",
+      "context": "Nie przesądza odpowiedzialności prawnej.",
+      "watchNext": [
+        "Komunikat policji lub prokuratury"
+      ],
+      "sources": [
+        {
+          "title": "Policja",
+          "url": "https://www.policja.pl/"
+        }
+      ],
+      "tags": [
+        "bezpieczeństwo",
+        "szkoła"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "eu-hybrydowe-20260929",
+      "section": "Bezpieczeństwo",
+      "title": "UE monitoruje zagrożenia hybrydowe",
+      "lead": "Europejskie instytucje utrzymują podwyższoną czujność.",
+      "whatHappened": "Nie potwierdzono nowego konkretnego incydentu w Polsce.",
+      "keyFacts": [
+        "To monitoring ryzyka, nie potwierdzenie ataku."
+      ],
+      "reactions": [
+        "UE akcentuje odporność infrastruktury."
+      ],
+      "whyItMatters": "Może wpływać na ochronę infrastruktury krytycznej.",
+      "context": "Monitoring z poprzednich wydań.",
+      "watchNext": [
+        "Komunikaty UE i NATO"
+      ],
+      "sources": [
+        {
+          "title": "EEAS",
+          "url": "https://www.eeas.europa.eu/"
+        }
+      ],
+      "tags": [
+        "UE",
+        "hybrydowe"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "rcb-air-threat-20261005",
+      "section": "Alerty",
+      "title": "RCB: polskie lotnictwo operowało po ataku",
+      "lead": "RCB nadal wskazuje komunikat o operowaniu polskiego lotnictwa po rosyjskim ataku na Ukrainę.",
+      "whatHappened": "5 października RCB podało, że po rosyjskim ataku powietrznym na Ukrainę w przestrzeni RP operuje polskie lotnictwo.",
+      "keyFacts": [
+        "Komunikat datowany jest na 5 października 2026 r.",
+        "Nie potwierdza ataku na terytorium Polski."
+      ],
+      "reactions": [
+        "RCB zaleciło oczekiwanie na dalsze komunikaty."
+      ],
+      "whyItMatters": "To sygnał podwyższonej aktywności obronnej Polski.",
+      "context": "Kolejny komunikat RCB o analogicznym zagrożeniu.",
+      "watchNext": [
+        "Sprawdzić kolejny komunikat RCB/MON i ewentualny bilans operacji."
+      ],
+      "sources": [
+        {
+          "title": "RCB",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        }
+      ],
+      "tags": [
+        "alert",
+        "bezpieczeństwo",
+        "Ukraina"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "rcb-baltyk-20261005",
+      "section": "Alerty",
+      "title": "Bałtyk: komunikat o neutralizacji niewybuchów",
+      "lead": "RCB informuje o ograniczeniach na odcinku Świnoujście–Międzyzdroje w związku z neutralizacją niewybuchów.",
+      "whatHappened": "RCB podało, że od 5 do 8 października trwa neutralizacja niewybuchów w Bałtyku.",
+      "keyFacts": [
+        "Obowiązuje zakaz wchodzenia do wody na wskazanym odcinku.",
+        "Należy stosować się do poleceń lokalnych służb."
+      ],
+      "reactions": [
+        "To praktyczny komunikat dla mieszkańców i turystów."
+      ],
+      "whyItMatters": "Ograniczenia dotyczą bezpieczeństwa nad Bałtykiem.",
+      "context": "Odrębny komunikat praktyczny, niezwiązany z alertem powietrznym.",
+      "watchNext": [
+        "Sprawdzić komunikat po zakończeniu działań 8 października."
+      ],
+      "sources": [
+        {
+          "title": "RCB",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        }
+      ],
+      "tags": [
+        "alert",
+        "Bałtyk",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-ukraine-bridge-20261002",
+      "section": "Świat",
+      "title": "Kijów pozostaje pod presją ataków dronowych",
+      "lead": "Skutki ataków i zakłócenia transportu pozostają w monitoringu.",
+      "whatHappened": "Utrzymano wcześniej potwierdzony wątek rosyjskich ataków dronowych i szkód w infrastrukturze Kijowa.",
+      "keyFacts": [
+        "Brak nowego bilansu w tym slocie."
+      ],
+      "reactions": [
+        "Ukraina i partnerzy monitorują skutki."
+      ],
+      "whyItMatters": "Dotyczy bezpieczeństwa ludności i transportu.",
+      "context": "Wątek z poprzednich wydań.",
+      "watchNext": [
+        "Nowe bilanse władz Ukrainy"
+      ],
+      "sources": [
+        {
+          "title": "AP — Kijów",
+          "url": "https://apnews.com/"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "wojna",
+        "drony"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-usa-iran-20261002",
+      "section": "Świat",
+      "title": "Rozmowy USA–Iran pozostają w monitoringu",
+      "lead": "Brak nowego potwierdzonego przełomu dyplomatycznego.",
+      "whatHappened": "Wątek rozmów i stanowisk USA oraz Iranu nie przyniósł nowej potwierdzonej aktualizacji.",
+      "keyFacts": [
+        "Brak nowego komunikatu w tym slocie."
+      ],
+      "reactions": [
+        "Kanały mediacyjne pozostają obserwowane."
+      ],
+      "whyItMatters": "Wpływa na bezpieczeństwo regionalne i rynki energii.",
+      "context": "Kontynuacja wcześniejszego monitoringu.",
+      "watchNext": [
+        "Komunikaty stron i mediatorów"
+      ],
+      "sources": [
+        {
+          "title": "AP — USA i Iran",
+          "url": "https://apnews.com/"
+        }
+      ],
+      "tags": [
+        "USA",
+        "Iran",
+        "dyplomacja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-g7-fuels-20261002",
+      "section": "Gospodarka",
+      "title": "G7 monitoruje uwolnienie rezerw paliw",
+      "lead": "Decyzja o rezerwach pozostaje ważnym sygnałem dla rynku energii.",
+      "whatHappened": "Utrzymano wcześniej potwierdzony wątek planu G7 dotyczącego uwolnienia ropy i paliw.",
+      "keyFacts": [
+        "Brak nowego harmonogramu w tym slocie."
+      ],
+      "reactions": [
+        "Rynek obserwuje wpływ na ceny i podaż."
+      ],
+      "whyItMatters": "Może ograniczać skutki napięć geopolitycznych dla energii.",
+      "context": "Wątek międzynarodowy z poprzedniego wydania.",
+      "watchNext": [
+        "Komunikaty państw G7 i dane rynkowe"
+      ],
+      "sources": [
+        {
+          "title": "AP — G7",
+          "url": "https://apnews.com/"
+        }
+      ],
+      "tags": [
+        "G7",
+        "energia",
+        "ropa"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-energy-20260929",
+      "section": "Gospodarka",
+      "title": "Bezpieczeństwo dostaw energii pozostaje priorytetem",
+      "lead": "Polska monitoruje odporność dostaw i infrastruktury.",
+      "whatHappened": "Nie potwierdzono nowej decyzji dotyczącej krajowego rynku energii.",
+      "keyFacts": [
+        "Brak nowego komunikatu w slocie 16:02."
+      ],
+      "reactions": [
+        "Instytucje utrzymują monitoring ryzyka."
+      ],
+      "whyItMatters": "Energia wpływa na ceny i odporność gospodarki.",
+      "context": "Temat kontynuowany.",
+      "watchNext": [
+        "Ministerstwo Energii i operatorzy sieci"
+      ],
+      "sources": [
+        {
+          "title": "Ministerstwo Energii",
+          "url": "https://www.gov.pl/web/energia"
+        }
+      ],
+      "tags": [
+        "energia",
+        "Polska",
+        "gospodarka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "tech-ai-security-20260929",
+      "section": "Technologia",
+      "title": "Bezpieczeństwo AI pozostaje tematem publicznym",
+      "lead": "Monitoring obejmuje odporność i odpowiedzialne użycie AI.",
+      "whatHappened": "Nie odnotowano nowego przełomu regulacyjnego ani incydentu.",
+      "keyFacts": [
+        "Brak nowej decyzji w tym slocie."
+      ],
+      "reactions": [
+        "Instytucje i firmy rozwijają wytyczne bezpieczeństwa."
+      ],
+      "whyItMatters": "Technologia wpływa na usługi publiczne i cyberodporność.",
+      "context": "Wątek długoterminowy.",
+      "watchNext": [
+        "Komunikaty UE, UODO i CSIRT NASK"
+      ],
+      "sources": [
+        {
+          "title": "CSIRT NASK",
+          "url": "https://www.gov.pl/web/cyfryzacja/csirt-nask"
+        }
+      ],
+      "tags": [
+        "technologia",
+        "AI",
+        "cyberbezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "tech-cra-20260929",
+      "section": "Technologia",
+      "title": "CRA: firmy przygotowują się do wymagań cyberbezpieczeństwa",
+      "lead": "Wymogi dla produktów cyfrowych pozostają w monitoringu.",
+      "whatHappened": "Nie potwierdzono nowego terminu ani krajowej zmiany wdrożeniowej.",
+      "keyFacts": [
+        "Brak nowego komunikatu w tym slocie."
+      ],
+      "reactions": [
+        "Producenci muszą śledzić obowiązki zgodności."
+      ],
+      "whyItMatters": "Wpływa na bezpieczeństwo produktów cyfrowych.",
+      "context": "Temat regulacyjny kontynuowany.",
+      "watchNext": [
+        "Komunikaty Komisji Europejskiej i UKE"
+      ],
+      "sources": [
+        {
+          "title": "Komisja Europejska — Cyber Resilience Act",
+          "url": "https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act"
+        }
+      ],
+      "tags": [
+        "CRA",
+        "cyberbezpieczeństwo",
+        "UE"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "alert-weather-20260929",
+      "section": "Alerty",
+      "title": "Komunikaty pogodowe pozostają w monitoringu",
+      "lead": "Brak nowego potwierdzonego alertu ogólnopolskiego.",
+      "whatHappened": "Nie znaleziono nowego komunikatu RCB wykraczającego poza aktywne informacje z 5 października.",
+      "keyFacts": [
+        "Należy sprawdzać komunikaty regionalne i IMGW."
+      ],
+      "reactions": [
+        "Służby publikują ostrzeżenia zależnie od regionu."
+      ],
+      "whyItMatters": "Warunki pogodowe mogą szybko zmieniać sytuację lokalną.",
+      "context": "To monitoring, nie nowe zagrożenie.",
+      "watchNext": [
+        "RCB i IMGW"
+      ],
+      "sources": [
+        {
+          "title": "IMGW — ostrzeżenia",
+          "url": "https://meteo.imgw.pl/dyn/index.html"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "alerty",
+        "IMGW"
+      ],
+      "priority": "medium"
+    }
+  ]
+}
