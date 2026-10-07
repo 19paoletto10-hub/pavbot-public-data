@@ -1,0 +1,486 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-10-07",
+  "runTime": "17:20",
+  "status": "Materialna aktualizacja krajowa",
+  "headline": "Puls Dnia: nowe komunikaty RCB i MON",
+  "summary": "Potwierdzono nowe komunikaty RCB dotyczące wody niezdatnej do picia oraz zapowiadanych alertów pogodowych, a MON opublikował informację o rozpoczęciu roku akademickiego Lotniczej Akademii Wojskowej. TVN24 nie dostarczył wystarczająco potwierdzonej nowej zmiany; BBC i CNN były częściowo ograniczone technicznie.",
+  "checkedSources": [
+    {
+      "title": "TVN24 — najnowsze wiadomości",
+      "url": "https://tvn24.pl/najnowsze",
+      "status": "sprawdzono; brak wystarczająco potwierdzonej nowej zmiany"
+    },
+    {
+      "title": "BBC News",
+      "url": "https://www.bbc.com/news",
+      "status": "sprawdzono; częściowo ograniczone technicznie"
+    },
+    {
+      "title": "CNN",
+      "url": "https://edition.cnn.com/",
+      "status": "sprawdzono; częściowo ograniczone technicznie"
+    },
+    {
+      "title": "BBC World Service",
+      "url": "https://wspartners.bbc.com/schedules/bbc_world_service_news_internet/week/2026-10-03",
+      "status": "źródło oficjalne; nowe wpisy o wodzie i alertach pogodowych"
+    },
+    {
+      "title": "RCB — komunikaty",
+      "url": "https://www.gov.pl/web/rcb/komunikaty",
+      "status": "źródło oficjalne; nowy komunikat z 7 października"
+    },
+    {
+      "title": "MON — aktualności",
+      "url": "https://www.gov.pl/web/obrona-narodowa/aktualnosci5"
+    }
+  ],
+  "items": [
+    {
+      "id": "pl-granica-20260929",
+      "section": "Polska",
+      "title": "Wojsko wspiera ochronę wschodniej granicy",
+      "lead": "Monitoring wschodniej granicy pozostaje aktywny.",
+      "whatHappened": "Utrzymano wcześniej potwierdzony wątek wojskowego wsparcia Straży Granicznej.",
+      "keyFacts": [
+        "Brak nowej decyzji w tym slocie."
+      ],
+      "reactions": [
+        "Służby monitorują sytuację."
+      ],
+      "whyItMatters": "Dotyczy odporności i bezpieczeństwa granicy.",
+      "context": "Temat kontynuowany bez nowego potwierdzenia.",
+      "watchNext": [
+        "Komunikaty RCB i MON"
+      ],
+      "sources": [
+        {
+          "title": "MON",
+          "url": "https://www.gov.pl/web/obrona-narodowa/aktualnosci5"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "granica"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-apache-20260929",
+      "section": "Polska",
+      "title": "Dęblin rozwija serwis Apache",
+      "lead": "Krajowe kompetencje serwisowe pozostają w monitoringu.",
+      "whatHappened": "Wątek umowy dotyczącej serwisowania silników AH-64 nie ma nowej aktualizacji.",
+      "keyFacts": [
+        "Brak nowego harmonogramu."
+      ],
+      "reactions": [
+        "MON akcentuje zaplecze przemysłowe."
+      ],
+      "whyItMatters": "Wpływa na gotowość techniczną floty.",
+      "context": "Kontynuacja wcześniejszego wydania.",
+      "watchNext": [
+        "Zakres i harmonogram umowy"
+      ],
+      "sources": [
+        {
+          "title": "MON",
+          "url": "https://www.gov.pl/web/obrona-narodowa/aktualnosci5"
+        }
+      ],
+      "tags": [
+        "MON",
+        "Apache"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-zdrowie-rzad-20260929",
+      "section": "Polityka",
+      "title": "Zmiany w ochronie zdrowia pozostają w pracach",
+      "lead": "Pakiet projektów rządowych czeka na dalszy proces.",
+      "whatHappened": "Nie odnotowano nowego etapu legislacyjnego.",
+      "keyFacts": [
+        "Brak nowego komunikatu w tym slocie."
+      ],
+      "reactions": [
+        "Dalsze decyzje wymagają prac parlamentarnych."
+      ],
+      "whyItMatters": "Może zmienić organizację i finansowanie zdrowia.",
+      "context": "Temat kontynuowany.",
+      "watchNext": [
+        "Sejm i komunikaty rządu"
+      ],
+      "sources": [
+        {
+          "title": "KPRM",
+          "url": "https://www.gov.pl/web/premier/komunikaty-cir"
+        }
+      ],
+      "tags": [
+        "polityka",
+        "zdrowie"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "pl-mon-law-20261007",
+      "section": "Bezpieczeństwo",
+      "title": "Lotnicza Akademia Wojskowa rozpoczęła rok akademicki",
+      "lead": "MON wskazuje na rolę kadr i nowych technologii dla bezpieczeństwa.",
+      "whatHappened": "MON opublikował 7 października informację o inauguracji roku akademickiego 2026/2027 w Lotniczej Akademii Wojskowej.",
+      "keyFacts": [
+        "Komunikat podkreśla przygotowanie przyszłych oficerów i specjalistów.",
+        "MON łączy kształcenie z wyzwaniami wojny za wschodnią granicą, rozwojem technologii i zmieniającym się charakterem zagrożeń."
+      ],
+      "reactions": [
+        "Wicepremier Władysław Kosiniak-Kamysz wskazał na znaczenie szybkiego reagowania, nowoczesnego wyposażenia i kadr."
+      ],
+      "whyItMatters": "Rozwój kadr wojskowych wpływa na długoterminową odporność i zdolności obronne państwa.",
+      "context": "To komunikat instytucjonalny i edukacyjny, nie informacja o bezpośrednim nowym zagrożeniu.",
+      "watchNext": [
+        "Program kształcenia i inwestycje LAW",
+        "Komunikaty MON o rozwoju zdolności lotniczych"
+      ],
+      "sources": [
+        {
+          "title": "MON — aktualności",
+          "url": "https://redakcja.www.gov.pl/web/obrona-narodowa/aktualnosci5"
+        }
+      ],
+      "tags": [
+        "MON",
+        "LAW",
+        "bezpieczeństwo",
+        "lotnictwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-mon-law-20261007",
+      "section": "Bezpieczeństwo",
+      "title": "Lotnicza Akademia Wojskowa rozpoczęła rok akademicki",
+      "lead": "MON wskazuje na rolę kadr i nowych technologii dla bezpieczeństwa.",
+      "whatHappened": "MON opublikował 7 października informację o inauguracji roku akademickiego 2026/2027 w Lotniczej Akademii Wojskowej.",
+      "keyFacts": [
+        "Komunikat podkreśla przygotowanie przyszłych oficerów i specjalistów.",
+        "MON łączy kształcenie z wyzwaniami wojny za wschodnią granicą, rozwojem technologii i zmieniającym się charakterem zagrożeń."
+      ],
+      "reactions": [
+        "Wicepremier Władysław Kosiniak-Kamysz wskazał na znaczenie szybkiego reagowania, nowoczesnego wyposażenia i kadr."
+      ],
+      "whyItMatters": "Rozwój kadr wojskowych wpływa na długoterminową odporność i zdolności obronne państwa.",
+      "context": "To komunikat instytucjonalny i edukacyjny, nie informacja o bezpośrednim nowym zagrożeniu.",
+      "watchNext": [
+        "Program kształcenia i inwestycje LAW",
+        "Komunikaty MON o rozwoju zdolności lotniczych"
+      ],
+      "sources": [
+        {
+          "title": "MON — aktualności",
+          "url": "https://redakcja.www.gov.pl/web/obrona-narodowa/aktualnosci5"
+        }
+      ],
+      "tags": [
+        "MON",
+        "LAW",
+        "bezpieczeństwo",
+        "lotnictwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "alerty-rcb-20261007",
+      "section": "Alerty",
+      "title": "RCB: nowe komunikaty praktyczne i pogodowe",
+      "lead": "Sprawdź komunikaty o wodzie i silnym wietrze.",
+      "whatHappened": "RCB wskazuje nowy komunikat o wodzie niezdatnej do picia w rejonie Jordanowa Śląskiego i Karolina oraz zapowiadane alerty dotyczące silnego wiatru i ćwiczeń systemu alarmowania.",
+      "keyFacts": [
+        "Komunikat o wodzie niezdatnej do picia dotyczy wodociągu Jordanów Śląski/Karolin i został opublikowany 6 października.",
+        "Mapa RCB wskazuje alerty o silnym wietrze 8/9 i 10 października oraz ćwiczenia systemu alarmowania 8 i 9 października."
+      ],
+      "reactions": [
+        "Mieszkańcy powinni stosować się do lokalnych zaleceń służb i wodociągów."
+      ],
+      "whyItMatters": "To bezpośrednia informacja praktyczna dla bezpieczeństwa i zdrowia mieszkańców.",
+      "context": "Komunikaty mają różny status: część dotyczy bieżącego ograniczenia jakości wody, a część przyszłych ostrzeżeń lub ćwiczeń.",
+      "watchNext": [
+        "Pełne treści i zasięg alertów RCB",
+        "Komunikaty lokalnych władz i IMGW"
+      ],
+      "sources": [
+        {
+          "title": "RCB — komunikaty",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        },
+        {
+          "title": "RCB — mapa strony",
+          "url": "https://www.gov.pl/web/rcb/mapa-strony"
+        }
+      ],
+      "tags": [
+        "RCB",
+        "alerty",
+        "pogoda",
+        "woda"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "alerty-rcb-20261007",
+      "section": "Alerty",
+      "title": "RCB: nowe komunikaty praktyczne i pogodowe",
+      "lead": "Sprawdź komunikaty o wodzie i silnym wietrze.",
+      "whatHappened": "RCB wskazuje nowy komunikat o wodzie niezdatnej do picia w rejonie Jordanowa Śląskiego i Karolina oraz zapowiadane alerty dotyczące silnego wiatru i ćwiczeń systemu alarmowania.",
+      "keyFacts": [
+        "Komunikat o wodzie niezdatnej do picia dotyczy wodociągu Jordanów Śląski/Karolin i został opublikowany 6 października.",
+        "Mapa RCB wskazuje alerty o silnym wietrze 8/9 i 10 października oraz ćwiczenia systemu alarmowania 8 i 9 października."
+      ],
+      "reactions": [
+        "Mieszkańcy powinni stosować się do lokalnych zaleceń służb i wodociągów."
+      ],
+      "whyItMatters": "To bezpośrednia informacja praktyczna dla bezpieczeństwa i zdrowia mieszkańców.",
+      "context": "Komunikaty mają różny status: część dotyczy bieżącego ograniczenia jakości wody, a część przyszłych ostrzeżeń lub ćwiczeń.",
+      "watchNext": [
+        "Pełne treści i zasięg alertów RCB",
+        "Komunikaty lokalnych władz i IMGW"
+      ],
+      "sources": [
+        {
+          "title": "RCB — komunikaty",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        },
+        {
+          "title": "RCB — mapa strony",
+          "url": "https://www.gov.pl/web/rcb/mapa-strony"
+        }
+      ],
+      "tags": [
+        "RCB",
+        "alerty",
+        "pogoda",
+        "woda"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-ukraine-bridge-20261002",
+      "section": "Świat",
+      "title": "Kijów pozostaje pod presją ataków dronowych",
+      "lead": "Skutki ataków i zakłócenia transportu pozostają w monitoringu.",
+      "whatHappened": "Utrzymano wcześniej potwierdzony wątek rosyjskich ataków dronowych i szkód w infrastrukturze Kijowa.",
+      "keyFacts": [
+        "Brak nowego bilansu w tym slocie."
+      ],
+      "reactions": [
+        "Ukraina i partnerzy monitorują skutki."
+      ],
+      "whyItMatters": "Dotyczy bezpieczeństwa ludności i transportu.",
+      "context": "Wątek z poprzednich wydań.",
+      "watchNext": [
+        "Nowe bilanse władz Ukrainy"
+      ],
+      "sources": [
+        {
+          "title": "AP — Kijów",
+          "url": "https://apnews.com/"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "wojna",
+        "drony"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-usa-iran-20261002",
+      "section": "Świat",
+      "title": "Rozmowy USA–Iran pozostają w monitoringu",
+      "lead": "Brak nowego potwierdzonego przełomu dyplomatycznego.",
+      "whatHappened": "Wątek rozmów i stanowisk USA oraz Iranu nie przyniósł nowej potwierdzonej aktualizacji.",
+      "keyFacts": [
+        "Brak nowego komunikatu w tym slocie."
+      ],
+      "reactions": [
+        "Kanały mediacyjne pozostają obserwowane."
+      ],
+      "whyItMatters": "Wpływa na bezpieczeństwo regionalne i rynki energii.",
+      "context": "Kontynuacja wcześniejszego monitoringu.",
+      "watchNext": [
+        "Komunikaty stron i mediatorów"
+      ],
+      "sources": [
+        {
+          "title": "AP — USA i Iran",
+          "url": "https://apnews.com/"
+        }
+      ],
+      "tags": [
+        "USA",
+        "Iran",
+        "dyplomacja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-g7-fuels-20261002",
+      "section": "Gospodarka",
+      "title": "G7 monitoruje uwolnienie rezerw paliw",
+      "lead": "Decyzja o rezerwach pozostaje ważnym sygnałem dla rynku energii.",
+      "whatHappened": "Utrzymano wcześniej potwierdzony wątek planu G7 dotyczącego uwolnienia ropy i paliw.",
+      "keyFacts": [
+        "Brak nowego harmonogramu w tym slocie."
+      ],
+      "reactions": [
+        "Rynek obserwuje wpływ na ceny i podaż."
+      ],
+      "whyItMatters": "Może ograniczać skutki napięć geopolitycznych dla energii.",
+      "context": "Wątek międzynarodowy z poprzedniego wydania.",
+      "watchNext": [
+        "Komunikaty państw G7 i dane rynkowe"
+      ],
+      "sources": [
+        {
+          "title": "AP — G7",
+          "url": "https://apnews.com/"
+        }
+      ],
+      "tags": [
+        "G7",
+        "energia",
+        "ropa"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-energy-20260929",
+      "section": "Gospodarka",
+      "title": "Bezpieczeństwo dostaw energii pozostaje priorytetem",
+      "lead": "Polska monitoruje odporność dostaw i infrastruktury.",
+      "whatHappened": "Nie potwierdzono nowej decyzji dotyczącej krajowego rynku energii.",
+      "keyFacts": [
+        "Brak nowego komunikatu w slocie 16:02."
+      ],
+      "reactions": [
+        "Instytucje utrzymują monitoring ryzyka."
+      ],
+      "whyItMatters": "Energia wpływa na ceny i odporność gospodarki.",
+      "context": "Temat kontynuowany.",
+      "watchNext": [
+        "Ministerstwo Energii i operatorzy sieci"
+      ],
+      "sources": [
+        {
+          "title": "Ministerstwo Energii",
+          "url": "https://www.gov.pl/web/energia"
+        }
+      ],
+      "tags": [
+        "energia",
+        "Polska",
+        "gospodarka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "tech-ai-security-20260929",
+      "section": "Technologia",
+      "title": "Bezpieczeństwo AI pozostaje tematem publicznym",
+      "lead": "Monitoring obejmuje odporność i odpowiedzialne użycie AI.",
+      "whatHappened": "Nie odnotowano nowego przełomu regulacyjnego ani incydentu.",
+      "keyFacts": [
+        "Brak nowej decyzji w tym slocie."
+      ],
+      "reactions": [
+        "Instytucje i firmy rozwijają wytyczne bezpieczeństwa."
+      ],
+      "whyItMatters": "Technologia wpływa na usługi publiczne i cyberodporność.",
+      "context": "Wątek długoterminowy.",
+      "watchNext": [
+        "Komunikaty UE, UODO i CSIRT NASK"
+      ],
+      "sources": [
+        {
+          "title": "CSIRT NASK",
+          "url": "https://www.gov.pl/web/cyfryzacja/csirt-nask"
+        }
+      ],
+      "tags": [
+        "technologia",
+        "AI",
+        "cyberbezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "tech-cra-20260929",
+      "section": "Technologia",
+      "title": "CRA: firmy przygotowują się do wymagań cyberbezpieczeństwa",
+      "lead": "Wymogi dla produktów cyfrowych pozostają w monitoringu.",
+      "whatHappened": "Nie potwierdzono nowego terminu ani krajowej zmiany wdrożeniowej.",
+      "keyFacts": [
+        "Brak nowego komunikatu w tym slocie."
+      ],
+      "reactions": [
+        "Producenci muszą śledzić obowiązki zgodności."
+      ],
+      "whyItMatters": "Wpływa na bezpieczeństwo produktów cyfrowych.",
+      "context": "Temat regulacyjny kontynuowany.",
+      "watchNext": [
+        "Komunikaty Komisji Europejskiej i UKE"
+      ],
+      "sources": [
+        {
+          "title": "Komisja Europejska — Cyber Resilience Act",
+          "url": "https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act"
+        }
+      ],
+      "tags": [
+        "CRA",
+        "cyberbezpieczeństwo",
+        "UE"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "alerty-rcb-20261007",
+      "section": "Alerty",
+      "title": "RCB: nowe komunikaty praktyczne i pogodowe",
+      "lead": "Sprawdź komunikaty o wodzie i silnym wietrze.",
+      "whatHappened": "RCB wskazuje nowy komunikat o wodzie niezdatnej do picia w rejonie Jordanowa Śląskiego i Karolina oraz zapowiadane alerty dotyczące silnego wiatru i ćwiczeń systemu alarmowania.",
+      "keyFacts": [
+        "Komunikat o wodzie niezdatnej do picia dotyczy wodociągu Jordanów Śląski/Karolin i został opublikowany 6 października.",
+        "Mapa RCB wskazuje alerty o silnym wietrze 8/9 i 10 października oraz ćwiczenia systemu alarmowania 8 i 9 października."
+      ],
+      "reactions": [
+        "Mieszkańcy powinni stosować się do lokalnych zaleceń służb i wodociągów."
+      ],
+      "whyItMatters": "To bezpośrednia informacja praktyczna dla bezpieczeństwa i zdrowia mieszkańców.",
+      "context": "Komunikaty mają różny status: część dotyczy bieżącego ograniczenia jakości wody, a część przyszłych ostrzeżeń lub ćwiczeń.",
+      "watchNext": [
+        "Pełne treści i zasięg alertów RCB",
+        "Komunikaty lokalnych władz i IMGW"
+      ],
+      "sources": [
+        {
+          "title": "RCB — komunikaty",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        },
+        {
+          "title": "RCB — mapa strony",
+          "url": "https://www.gov.pl/web/rcb/mapa-strony"
+        }
+      ],
+      "tags": [
+        "RCB",
+        "alerty",
+        "pogoda",
+        "woda"
+      ],
+      "priority": "medium"
+    }
+  ]
+}
