@@ -4,17 +4,10 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
-| High | Track Bulgarian investigation of Black Sea ship attacks | Bulgaria confirmed two ships were struck, one sank and one burned, but attribution remains open | Watch Bulgarian authorities, IMO, operators, AP/Reuters and NATO for forensic findings, crew status and shipping advisories | Open |
-| High | Track follow-up to Polish drone investigation and SIM findings | The military prosecutor closed the September 2025 case without identifying individual perpetrators and press reports point to Polish SIM cards | Watch the prosecutor, MON, telecom regulators and operators for declassified findings, card-origin controls and operational lessons | Open |
-| High | Track possible resumption of U.S.-Israel operations against Iran | Pentagon instructed CENTCOM to finish preparations, but Trump has not made a final decision | Watch White House, Pentagon, CENTCOM, Israel, Iran, Qatar and maritime advisories for orders, deployments and diplomatic response | Open |
-| High | Track 2027 Polish budget through first reading | Final bill has PLN 696.4bn revenue, PLN 977.6bn spending and deficit capped at PLN 281.2bn | Check Sejm debate, committee referral, amendments and Fiscal Council or EDP-related objections | Open |
-| Medium | Recheck abortion committee after 09:00 meeting | Two stalled projects return to committee after the morning research cutoff | Verify amendments, votes, PSL position and next plenary date before podcast | Open |
-| Medium | Track Isaias intensity and northern Gulf landfall | NHC expects a strong hurricane and life-threatening storm surge along parts of the U.S. Gulf Coast | Watch NHC advisories, evacuation orders, landfall intensity and infrastructure effects | Open |
-| High | Track Ukraine manpower reforms and updated attack toll | AP reports some units at half strength while the 7 October strike toll rose to 25 killed and around 100 wounded | Watch Ukrainian authorities, AP and defense partners for mobilization changes, rotation capacity and air-defense deliveries | Open |
 | High | Track 7 October Russian mass strike and Ukrainian civilian toll | AP reports at least 24 killed and around 60 wounded across Kyiv and other regions | Watch Ukrainian authorities, AP/Reuters, energy operators and Polish DORSZ/RCB for final toll, infrastructure damage and any RP-related activation | Open |
 | High | Track implementation of Poland's 2027–2031 civil-protection programme | Government allocated PLN 102.4bn, including about PLN 30bn for regions and local governments | Watch implementation acts, local projects, shelter capacity, warning systems and transparent spending metrics | Open |
 | High | Track Orlen fuel-price investigation | Prosecutors allege over PLN 4.1bn damage and charged five current/former managers | Watch procedural decisions, defence statements, evidence and whether an indictment follows | Open |
-| Medium | Verify Black Sea merchant-vessel incident | AP and Bulgarian authorities confirmed two ships were attacked; attribution remains under investigation | Follow-up moved to the active Bulgarian-investigation item above | Superseded 2026-10-08 |
+| Medium | Verify Black Sea merchant-vessel incident | A reported allegation of attacks near Bulgaria lacks independent primary confirmation in this run | Check Bulgarian authorities, operators, IMO, maritime advisories and independent wire reports before escalation | Open |
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |

@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-08",
+  "title": "Polska i Świat — 8 października 2026",
+  "audio_file": "podcast.mp3",
+  "duration_seconds": 493.269478,
+  "word_count": 1030,
+  "engine_used": "say",
+  "model": "macOS say:Zosia",
+  "tts_engine": "say",
+  "voice": "Zosia",
+  "rate": 170,
+  "fallback_chain": [
+    "xtts_failed",
+    "piper_failed"
+  ]
+}
