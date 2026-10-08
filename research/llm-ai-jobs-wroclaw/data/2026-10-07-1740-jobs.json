@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-10-07",
+  "runTime": "17:40",
+  "executiveSummary": "Runda jest materialna dzięki trzem nowym, konkretnym sygnałom dla Wrocławia lub Polski zdalnej. Najmocniej wyróżniają się CloudFide z agentic workflows i MCP, Datali z wysokimi widełkami za end-to-end wdrożenia AI oraz in4ge z produkcyjnym GenAI na GCP, fine-tuningiem i RAG. Experis pozostaje pilnym leadem remote-Poland z terminem 16 października.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "CloudFide — AI Engineer – Agentic Workflows (Node.js/React)",
+      "company": "Nieznana firma",
+      "location": "Warszawa, Wrocław, Katowice, Kraków, Poznań; praca zdalna.",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "agenci i workflow agentowe, GitHub Agentic Workflows, prompting, tool/function calling, RAG, ewaluacja oraz MCP.",
+      "whyInteresting": "praktyczne połączenie warstwy agentowej z Node.js/React i MCP dla klienta enterprise.",
+      "uncertainty": "karta boardowa; brak stawki i kanonicznej strony pracodawcy.",
+      "sourceURLs": [
+        "https://atlantisjobs.pl/praca/frontend/ai-engineer-agentic-workflows-node-js-react-4432"
+      ],
+      "tags": [
+        "Agentic AI",
+        "RAG"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "Datali — AI Engineer (Forward-Deployed) 80–100%",
+      "company": "Nieznana firma",
+      "location": "zdalnie z Polski; Wrocław wymieniony w lokalizacjach.",
+      "workMode": "Remote",
+      "compensation": "21 840–31 920 PLN netto B2B.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "LangChain, LangGraph, RAG, agenci konwersacyjni, NLP, architektura AI i ewaluacja.",
+      "whyInteresting": "end-to-end delivery od architektury do produkcji, z wysokimi jawnymi widełkami.",
+      "uncertainty": "„forward-deployed” może oznaczać podróże lub pracę u klienta.",
+      "sourceURLs": [
+        "https://atlantisjobs.pl/praca/ai/ai-engineer-forward-deployed-80-100-5958"
+      ],
+      "tags": [
+        "RAG"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "in4ge — AI Engineer (GCP)",
+      "company": "Nieznana firma",
+      "location": "Warszawa, Wrocław, Poznań, Gdańsk, Kraków; 100% zdalnie.",
+      "workMode": "Remote",
+      "compensation": "16 800–25 200 PLN netto B2B.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Generative AI, LangChain, LangGraph, Transformers, fine-tuning, RLHF, Vertex AI, wektory/RAG, opcjonalnie LLMOps i evaluation.",
+      "whyInteresting": "łączy aplikacje GenAI z GCP, fine-tuningiem i pipeline'ami danych.",
+      "uncertainty": "karta boardowa; brak potwierdzonej osobnej strony kariery.",
+      "sourceURLs": [
+        "https://atlantisjobs.pl/praca/ai/ai-engineer-gcp-6486"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "GenAI",
+        "LLMOps",
+        "GCP"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "Experis — AI Engineer (LLM & Agentic Systems)",
+      "company": "Nieznana firma",
+      "location": "zdalnie, Polska only; kontrakt, start ASAP / do 30 dni.",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "LangGraph, FastAPI, agentic workflows, RAG, tool calling, ewaluacja/regresja, observability oraz optymalizacja kosztu i latency.",
+      "whyInteresting": "kompletna rola produkcyjna z odpowiedzialnością za jakość i niezawodność systemów LLM.",
+      "uncertainty": "termin aplikowania 16 października 2026; źródło agencyjne.",
+      "sourceURLs": [
+        "https://www.experis.pl/pl/jobb/29215/aiengineerllmagenticsystems"
+      ],
+      "tags": [
+        "Agentic AI",
+        "RAG",
+        "LLM"
+      ]
+    }
+  ],
+  "changes": [
+    "Dodano CloudFide, Datali i in4ge GCP jako nowe karty o wyraźnym dopasowaniu do agentów, RAG, MCP, fine-tuningu i LLMOps.",
+    "Experis ma potwierdzony termin aplikowania 16 października 2026.",
+    "Nie powielono niezmienionych ofert HORIZON-AUTOMATION, TU Europa, UNIVIO, Spyrosoft i Yard Corporate."
+  ],
+  "risks": [
+    "AtlantisJobs jest źródłem boardowym; przed aplikacją należy potwierdzić aktywność i kanał pracodawcy.",
+    "Datali wymaga sprawdzenia podróży i proporcji implementacji do kontaktu z klientem.",
+    "Widełki Datali i in4ge wymagają potwierdzenia zakresu B2B oraz netto na fakturze."
+  ],
+  "recommendedActions": [
+    "Najpierw sprawdzić Experis z uwagi na termin 16 października.",
+    "Dla Datali dopytać o podróże i udział presales.",
+    "Dla CloudFide i in4ge potwierdzić kanoniczną stronę, długość projektu i produkcyjny ownership."
+  ],
+  "checkedSources": [
+    {
+      "title": "AtlantisJobs — CloudFide",
+      "url": "https://atlantisjobs.pl/praca/frontend/ai-engineer-agentic-workflows-node-js-react-4432",
+      "status": "checked"
+    },
+    {
+      "title": "AtlantisJobs — Datali",
+      "url": "https://atlantisjobs.pl/praca/ai/ai-engineer-forward-deployed-80-100-5958",
+      "status": "checked"
+    },
+    {
+      "title": "AtlantisJobs — in4ge",
+      "url": "https://atlantisjobs.pl/praca/ai/ai-engineer-gcp-6486",
+      "status": "checked"
+    },
+    {
+      "title": "Experis — AI Engineer",
+      "url": "https://www.experis.pl/pl/jobb/29215/aiengineerllmagenticsystems",
+      "status": "checked"
+    }
+  ]
+}

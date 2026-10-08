@@ -1,8 +1,34 @@
 # Topic Index: llm-ai-jobs-wroclaw
 
-Last updated: 2026-10-05 15:41 CEST
+Last updated: 2026-10-08 17:40 CEST
+
+## Seen Opportunities Added 2026-10-08 17:40
+
+| Canonical key | Company | Title | Location / remote | First seen | Last seen | Status | Material changes | Source |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| nofluffjobs-deepsense-senior-machine-learning-engineer-llms-wroclaw | deepsense.ai | Senior Machine Learning Engineer (LLMs) | Wrocław +4 / policy unclear | 2026-10-08-1740 | 2026-10-08-1740 | Open | New public card; LLM/GenAI integration, inference optimization, fine-tuning and production APIs; deadline 29 Oct 2026. | [No Fluff Jobs](https://nofluffjobs.com/pl/job/senior-machine-learning-engineer-llms-deepsense-ai-wroclaw-1) |
+
+## Seen Opportunities Added 2026-10-07 17:40
+
+| Canonical key | Company | Title | Location / remote | First seen | Last seen | Status | Material changes | Source |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| atlantis-cloudfide-ai-engineer-agentic-workflows-node-react-4432 | CloudFide | AI Engineer – Agentic Workflows (Node.js/React) | Wrocław / remote Poland | 2026-10-07-1740 | 2026-10-07-1740 | Open | New public card with agentic workflows, RAG, evaluation and MCP. | [AtlantisJobs](https://atlantisjobs.pl/praca/frontend/ai-engineer-agentic-workflows-node-js-react-4432) |
+| atlantis-datali-ai-engineer-forward-deployed-5958 | Datali | AI Engineer (Forward-Deployed) 80–100% | Remote Poland, Wrocław listed | 2026-10-07-1740 | 2026-10-07-1740 | Open | New public card; 21 840–31 920 PLN netto B2B; LangGraph/RAG and production delivery. | [AtlantisJobs](https://atlantisjobs.pl/praca/ai/ai-engineer-forward-deployed-80-100-5958) |
+| atlantis-in4ge-ai-engineer-gcp-6486 | in4ge | AI Engineer (GCP) | Wrocław / 100% remote | 2026-10-07-1740 | 2026-10-07-1740 | Open | New public card; 16 800–25 200 PLN netto B2B; Vertex AI, fine-tuning and RAG. | [AtlantisJobs](https://atlantisjobs.pl/praca/ai/ai-engineer-gcp-6486) |
 
 ## Current Understanding
+
+Runda `2026-10-08-1740`: dodano deepsense.ai Senior Machine Learning Engineer (LLMs) dla Wrocławia i innych lokalizacji, z naciskiem na inference optimization, fine-tuning i produkcyjne API; termin 29 października 2026.
+
+### Material changes
+
+- 2026-10-08 17:40: nowy wysokosygnałowy lead ML/LLM systems; brak publicznych widełek i niejednoznaczna polityka remote.
+
+Runda `2026-10-07-1740`: dodano CloudFide Agentic Workflows/MCP, Datali Forward-Deployed AI Engineer z widełkami 21 840–31 920 PLN netto B2B oraz in4ge AI Engineer GCP z widełkami 16 800–25 200 PLN netto B2B. Experis AI Engineer (LLM & Agentic Systems) ma termin aplikowania 16 października 2026.
+
+### Material changes
+
+- 2026-10-07 17:40: nowy klaster agentic workflows/MCP, produkcyjnego GenAI na GCP i end-to-end AI delivery; Experis ma pilny termin 16 października.
 
 Runda `2026-10-05-1541`: dodano HORIZON-AUTOMATION Senior AI Engineer we Wrocławiu (15 000–26 000 zł/mies.), z RAG, agentic AI, MCP/tool calling, ewaluacją jakości i LLMOps. Oferta wzmacnia lokalny klaster ról produkcyjnych wokół knowledge layer i systemów agentowych.
 
@@ -148,6 +174,8 @@ konkretny platformowy, delivery lub toolingowy scope.
   location.
 
 ## Recent Reports
+
+- [2026-10-08 17:40 CEST](runs/2026-10-08-1740.md): deepsense.ai Senior Machine Learning Engineer (LLMs), inference/fine-tuning, termin 29 października.
 
 - [2026-10-02 00:39 - Material update](runs/2026-10-02-0039.md): TU Europa oraz odświeżony tail DataArt/Spyrosoft/CDQ/ITDS/SQUAD.
 

@@ -192,3 +192,9 @@
 ## Follow-up 2026-10-05 15:41
 
 - HORIZON-AUTOMATION Senior AI Engineer: potwierdzić liczbę dni onsite we Wrocławiu, typ umowy oraz czy zakres MCP/evaluacji obejmuje produkcyjny system już działający u klientów.
+
+## Follow-up 2026-10-07 17:40
+
+- CloudFide, Datali i in4ge: znaleźć kanoniczne strony pracodawców i potwierdzić status, typ umowy oraz zakres projektu.
+- Datali: dopytać o podróże i proporcję pracy implementacyjnej do customer-facing/presales.
+- Experis: sprawdzić status przed terminem 16 października 2026 oraz ustalić klienta końcowego i warunki kontraktu.
