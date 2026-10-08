@@ -1,6 +1,23 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-10-07
+Last updated: 2026-10-08
+
+## Update 2026-10-08
+
+Bułgaria potwierdziła atak dronów na dwa statki handlowe w swojej wyłącznej
+strefie ekonomicznej: `Alfa Watan` zatonął, `Able` stanął w ogniu, a 18 osób z
+drugiej jednostki ewakuowano; sprawca nadal nie został ustalony. Polska
+prokuratura umorzyła z powodu niewykrycia sprawców śledztwo dotyczące ponad 30
+rosyjskich dronów z września 2025 roku, uznała reakcję wojska za prawidłową i
+potwierdziła prasowy wątek kart SIM polskich operatorów. Bilans rosyjskiego
+ataku z 7 października wzrósł do co najmniej 25 zabitych i około 100 rannych,
+a AP opisała pogłębiający się niedobór personelu w części ukraińskich
+jednostek. Pentagon polecił CENTCOM dokończyć przygotowania opcji wznowienia
+dużych operacji przeciw Iranowi, bez finalnej decyzji o ataku. Sejm zaczyna
+prace nad budżetem 2027 z finalnym limitem deficytu 281,2 mld zł; komisja do
+spraw prawa aborcyjnego ma zebrać się po porannym cutoffie.
+
+Raport: [2026-10-08](runs/2026-10-08.md)
 
 ## Update 2026-10-07
 
