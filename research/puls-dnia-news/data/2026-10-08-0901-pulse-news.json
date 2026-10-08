@@ -1,0 +1,391 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-10-08",
+  "runTime": "09:01",
+  "status": "Potwierdzono materialną aktualizację alertową",
+  "headline": "Poranny puls: nowe komunikaty RCB o wietrze i ćwiczeniach alarmowych",
+  "summary": "RCB opublikowało nowe komunikaty praktyczne dotyczące silnego wiatru 8/9 października oraz ćwiczeń systemu alarmowania 8 października. Pozostałe tematy pozostają w monitoringu; TVN24 nie dostarczył niezależnego potwierdzenia większej zmiany, a BBC i CNN były częściowo ograniczone technicznie.",
+  "checkedSources": [
+    {
+      "title": "TVN24 — najnowsze",
+      "url": "https://tvn24.pl/najnowsze"
+    },
+    {
+      "title": "BBC News",
+      "url": "https://www.bbc.com/news"
+    },
+    {
+      "title": "CNN",
+      "url": "https://edition.cnn.com/"
+    },
+    {
+      "title": "RCB — komunikaty",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    },
+    {
+      "title": "MON — aktualności",
+      "url": "https://www.gov.pl/web/obrona-narodowa/aktualnosci5"
+    }
+  ],
+  "items": [
+    {
+      "id": "alerty-rcb-pozar-20261007",
+      "section": "Alerty",
+      "title": "RCB: zalecenia po pożarze sklepu",
+      "lead": "Pożar może zanieczyszczać powietrze.",
+      "whatHappened": "RCB opublikowało komunikat o trwającej akcji gaszenia sklepu Biedronka na osiedlu Bzie Dolne.",
+      "keyFacts": [
+        "Komunikat opublikowano 7 października 2026 r.",
+        "RCB zaleciło pozostanie w domu i nieotwieranie okien."
+      ],
+      "reactions": [
+        "Mieszkańcy powinni stosować się do poleceń służb."
+      ],
+      "whyItMatters": "To bezpośrednia, praktyczna informacja bezpieczeństwa dla lokalnej społeczności.",
+      "context": "Alert lokalny pozostaje w monitoringu; nie należy przedstawiać go jako zagrożenia ogólnokrajowego.",
+      "watchNext": [
+        "Zakończenie akcji",
+        "Komunikaty lokalnych służb"
+      ],
+      "sources": [
+        {
+          "title": "RCB",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        }
+      ],
+      "tags": [
+        "alert",
+        "pożar",
+        "powietrze"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "alerty-rcb-wiatr-20261008",
+      "section": "Alerty",
+      "title": "RCB: silny wiatr 8/9 października",
+      "lead": "Sprawdź lokalne ostrzeżenia przed silnym wiatrem.",
+      "whatHappened": "RCB opublikowało komunikat o silnym wietrze obowiązującym 8/9 października.",
+      "keyFacts": [
+        "Komunikat dotyczy okresu 8/9 października 2026 r.",
+        "Zakres regionalny należy sprawdzić w najnowszym komunikacie RCB."
+      ],
+      "reactions": [
+        "Służby zalecają śledzenie lokalnych ostrzeżeń."
+      ],
+      "whyItMatters": "Silny wiatr może wpływać na transport i bezpieczeństwo infrastruktury.",
+      "context": "To monitoring pogodowy; komunikat nie oznacza jednolitego zagrożenia w całym kraju.",
+      "watchNext": [
+        "Nowe alerty RCB i IMGW"
+      ],
+      "sources": [
+        {
+          "title": "RCB",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "wiatr"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "alerty-rcb-cwiczenia-20261008",
+      "section": "Alerty",
+      "title": "RCB: ćwiczenia systemu alarmowania",
+      "lead": "W wybranych miejscach zabrzmią syreny ćwiczebne.",
+      "whatHappened": "RCB opublikowało komunikat o ćwiczeniach systemu alarmowania zaplanowanych na 8 października.",
+      "keyFacts": [
+        "Komunikat dotyczy ćwiczeń, a nie potwierdzonego zagrożenia.",
+        "Mieszkańcy powinni sprawdzić lokalny termin i zalecenia służb."
+      ],
+      "reactions": [
+        "Ćwiczenia mają sprawdzić działanie systemu i przygotowanie służb."
+      ],
+      "whyItMatters": "Znajomość ćwiczebnego charakteru sygnału ogranicza ryzyko niepotrzebnej paniki.",
+      "context": "RCB rozróżnia ćwiczenia systemu alarmowania od realnego alertu bezpieczeństwa.",
+      "watchNext": [
+        "Lokalny komunikat organizatora ćwiczeń",
+        "Ewentualne zmiany terminu"
+      ],
+      "sources": [
+        {
+          "title": "RCB — mapa komunikatów",
+          "url": "https://www.gov.pl/web/rcb/mapa-strony"
+        }
+      ],
+      "tags": [
+        "alert",
+        "ćwiczenia",
+        "syreny"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "pl-granica-20260929",
+      "section": "Polska",
+      "title": "Wojsko wspiera ochronę wschodniej granicy",
+      "lead": "Monitoring wschodniej granicy pozostaje aktywny.",
+      "whatHappened": "Utrzymano wcześniej potwierdzony wątek wojskowego wsparcia Straży Granicznej.",
+      "keyFacts": [
+        "W tym slocie nie potwierdzono nowej decyzji."
+      ],
+      "reactions": [
+        "Służby monitorują sytuację."
+      ],
+      "whyItMatters": "Dotyczy odporności i bezpieczeństwa granicy.",
+      "context": "Temat kontynuowany bez nowego potwierdzenia.",
+      "watchNext": [
+        "Komunikaty RCB i MON"
+      ],
+      "sources": [
+        {
+          "title": "MON",
+          "url": "https://www.gov.pl/web/obrona-narodowa/aktualnosci5"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "granica"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-apache-20260929",
+      "section": "Polska",
+      "title": "Dęblin rozwija serwis Apache",
+      "lead": "Krajowe kompetencje serwisowe pozostają w monitoringu.",
+      "whatHappened": "Wątek umowy dotyczącej serwisowania silników AH-64 nie ma nowej aktualizacji.",
+      "keyFacts": [
+        "Brak nowego harmonogramu."
+      ],
+      "reactions": [
+        "MON akcentuje zaplecze przemysłowe."
+      ],
+      "whyItMatters": "Wzmacnia krajowe zdolności utrzymania sprzętu wojskowego.",
+      "context": "To kontynuacja wcześniej opublikowanej informacji.",
+      "watchNext": [
+        "Komunikaty MON"
+      ],
+      "sources": [
+        {
+          "title": "MON",
+          "url": "https://www.gov.pl/web/obrona-narodowa/aktualnosci5"
+        }
+      ],
+      "tags": [
+        "obrona",
+        "Apache"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "pl-mon-law-20261007",
+      "section": "Bezpieczeństwo",
+      "title": "LAW rozpoczęła rok akademicki",
+      "lead": "MON wskazuje na rolę kadr i nowych technologii.",
+      "whatHappened": "Lotnicza Akademia Wojskowa rozpoczęła rok akademicki; temat pozostaje w monitoringu bezpieczeństwa kadr.",
+      "keyFacts": [
+        "Brak nowej decyzji operacyjnej w tym slocie."
+      ],
+      "reactions": [
+        "MON podkreśla znaczenie edukacji wojskowej."
+      ],
+      "whyItMatters": "Kadry i kompetencje są częścią długoterminowej odporności państwa.",
+      "context": "Wątek ma charakter instytucjonalny, nie alarmowy.",
+      "watchNext": [
+        "Informacje MON o szkoleniu"
+      ],
+      "sources": [
+        {
+          "title": "MON",
+          "url": "https://www.gov.pl/web/obrona-narodowa/aktualnosci5"
+        }
+      ],
+      "tags": [
+        "MON",
+        "bezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "world-ukraine-bridge-20261002",
+      "section": "Świat",
+      "title": "Kijów pozostaje pod presją ataków dronowych",
+      "lead": "Skutki ataków i transport pozostają w monitoringu.",
+      "whatHappened": "Wcześniej potwierdzone informacje dotyczyły rosyjskich ataków i zakłóceń transportu w Kijowie.",
+      "keyFacts": [
+        "W tym slocie brak nowego potwierdzonego bilansu."
+      ],
+      "reactions": [
+        "Ukraina i partnerzy monitorują skutki."
+      ],
+      "whyItMatters": "Wojna wpływa na bezpieczeństwo regionu i odporność infrastruktury.",
+      "context": "Brak nowego potwierdzenia nie oznacza ustania działań.",
+      "watchNext": [
+        "Komunikaty władz Ukrainy"
+      ],
+      "sources": [
+        {
+          "title": "Associated Press",
+          "url": "https://apnews.com/"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "wojna"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-usa-iran-20261002",
+      "section": "Świat",
+      "title": "Rozmowy USA–Iran pozostają w monitoringu",
+      "lead": "Nie ma nowego potwierdzonego przełomu.",
+      "whatHappened": "Wcześniej obserwowany kanał rozmów USA–Iran nie przyniósł w tym slocie potwierdzonej zmiany.",
+      "keyFacts": [
+        "Brak nowego oficjalnego porozumienia."
+      ],
+      "reactions": [
+        "Dyplomacja pozostaje przedmiotem obserwacji."
+      ],
+      "whyItMatters": "Ewentualne porozumienie wpływałoby na bezpieczeństwo i rynki energii.",
+      "context": "To monitoring procesu dyplomatycznego.",
+      "watchNext": [
+        "Komunikaty rządów USA i Iranu"
+      ],
+      "sources": [
+        {
+          "title": "Associated Press",
+          "url": "https://apnews.com/"
+        }
+      ],
+      "tags": [
+        "USA",
+        "Iran",
+        "dyplomacja"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "world-g7-fuels-20261002",
+      "section": "Gospodarka",
+      "title": "G7 monitoruje uwolnienie rezerw paliw",
+      "lead": "Rezerwy paliw pozostają ważnym sygnałem rynkowym.",
+      "whatHappened": "Wcześniejsza decyzja G7 o uwolnieniu rezerw paliw pozostaje w monitoringu.",
+      "keyFacts": [
+        "Brak nowej decyzji w tym slocie."
+      ],
+      "reactions": [
+        "Rynek obserwuje wpływ na ceny energii."
+      ],
+      "whyItMatters": "Rezerwy mogą ograniczać skutki szoków podażowych.",
+      "context": "To kontynuacja istniejącego wątku gospodarczego.",
+      "watchNext": [
+        "Komunikaty G7 i dane rynku ropy"
+      ],
+      "sources": [
+        {
+          "title": "Associated Press",
+          "url": "https://apnews.com/"
+        }
+      ],
+      "tags": [
+        "G7",
+        "energia",
+        "paliwa"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "pl-energy-20260929",
+      "section": "Gospodarka",
+      "title": "Bezpieczeństwo dostaw energii pozostaje priorytetem",
+      "lead": "Polska monitoruje odporność dostaw i infrastruktury.",
+      "whatHappened": "Nie potwierdzono nowej decyzji dotyczącej krajowych dostaw energii.",
+      "keyFacts": [
+        "Brak nowego komunikatu operacyjnego."
+      ],
+      "reactions": [
+        "Instytucje monitorują odporność infrastruktury."
+      ],
+      "whyItMatters": "Stabilne dostawy energii są ważne dla gospodarstw i przemysłu.",
+      "context": "Wątek pozostaje obserwacyjny.",
+      "watchNext": [
+        "Komunikaty Ministerstwa Energii"
+      ],
+      "sources": [
+        {
+          "title": "Ministerstwo Energii",
+          "url": "https://www.gov.pl/web/energia"
+        }
+      ],
+      "tags": [
+        "energia",
+        "Polska"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "tech-ai-security-20260929",
+      "section": "Technologia",
+      "title": "Bezpieczeństwo AI pozostaje tematem publicznym",
+      "lead": "Monitoring obejmuje odporność i odpowiedzialne użycie AI.",
+      "whatHappened": "Nie potwierdzono nowej decyzji regulacyjnej ani incydentu o dużej skali.",
+      "keyFacts": [
+        "Wątek pozostaje w monitoringu CSIRT i administracji."
+      ],
+      "reactions": [
+        "Instytucje rozwijają praktyki bezpieczeństwa."
+      ],
+      "whyItMatters": "Systemy AI mogą wpływać na bezpieczeństwo usług publicznych.",
+      "context": "Brak nowej materialnej zmiany w tym slocie.",
+      "watchNext": [
+        "Komunikaty CSIRT NASK"
+      ],
+      "sources": [
+        {
+          "title": "CSIRT NASK",
+          "url": "https://www.gov.pl/web/cyfryzacja/csirt-nask"
+        }
+      ],
+      "tags": [
+        "AI",
+        "cyberbezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "tech-cra-20260929",
+      "section": "Technologia",
+      "title": "CRA: firmy przygotowują się do wymagań cyberbezpieczeństwa",
+      "lead": "Wymogi dla produktów cyfrowych pozostają w monitoringu.",
+      "whatHappened": "Proces wdrażania Cyber Resilience Act nie przyniósł nowej zmiany w tym slocie.",
+      "keyFacts": [
+        "Obowiązki producentów pozostają przedmiotem przygotowań."
+      ],
+      "reactions": [
+        "Firmy i regulatorzy śledzą harmonogram wdrożenia."
+      ],
+      "whyItMatters": "Regulacja wpływa na bezpieczeństwo produktów cyfrowych w UE.",
+      "context": "To monitoring regulacyjny, nie nowy alert.",
+      "watchNext": [
+        "Dokumenty Komisji Europejskiej"
+      ],
+      "sources": [
+        {
+          "title": "Komisja Europejska",
+          "url": "https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act"
+        }
+      ],
+      "tags": [
+        "CRA",
+        "UE",
+        "cyberbezpieczeństwo"
+      ],
+      "priority": "medium"
+    }
+  ]
+}
