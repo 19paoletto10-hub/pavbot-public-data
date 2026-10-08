@@ -1,6 +1,18 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-10-07
+Last updated: 2026-10-08
+
+## Update 2026-10-08
+
+Rosyjska bomba kierowana uderzyła przy przystanku w Kramatorsku; według władz
+lokalnych cytowanych przez AP zginęło co najmniej 30 osób, a kolejne ataki
+utrudniały ratowanie rannych. W Sejmie rozpoczęło się pierwsze czytanie budżetu
+2027: projekt zakłada 696,4 mld zł dochodów, 977,6 mld zł wydatków i deficyt do
+281,2 mld zł. Reuters podał o uderzeniu dronów w centrum danych Yandex w obwodzie
+riazańskim. AP potwierdziła atak na dwa statki handlowe w bułgarskiej strefie
+ekonomicznej, w tym zatonięcie jednego; sprawca pozostaje nieustalony.
+
+Raport: [2026-10-08](runs/2026-10-08.md)
 
 ## Update 2026-10-07
 

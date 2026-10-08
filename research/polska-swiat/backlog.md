@@ -566,3 +566,9 @@
 - **High — Zweryfikować kanał rozmów USA–Ukraina–Rosja:** monitorować, czy techniczne spotkanie do końca października otrzyma oficjalny termin, format i agendę.
 - **High — Monitorować łotewskie negocjacje koalicyjne:** po publikacji pełnych mandatów ocenić wpływ nowego rządu na Ukrainę, NATO i odporność na ingerencję.
 - **Medium — Kontynuować obserwację alertów RCB:** odróżniać działania prewencyjne od potwierdzonych naruszeń polskiej przestrzeni powietrznej.
+## Follow-up 2026-10-08
+
+- **High — Monitor investigation into Black Sea commercial-vessel attack:** AP confirms two vessels were struck in Bulgaria's exclusive economic zone and one sank, but drone origin remains under investigation. Track Bulgarian authorities, IMO, operators, NATO and independent maritime evidence.
+- **High — Track Kramatorsk casualty and infrastructure updates:** AP reports at least 30 dead and worsening Kyiv blackouts. Track local authorities, energy operators, UN/OHCHR and follow-up casualty figures.
+- **Medium — Track Poland 2027 budget process:** Sejm first reading began on 8 October. Watch amendments, committee work, deficit financing, energy-intensive-industry support and local-government effects.
+- **Medium — Track Yandex data-centre strike:** Reuters reports the first major attack on a Russian data hub, based on the company statement. Seek independent confirmation, outage duration and response from Russian authorities.
