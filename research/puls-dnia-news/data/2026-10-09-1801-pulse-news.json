@@ -1,0 +1,500 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-10-09",
+  "runTime": "1801",
+  "status": "published",
+  "headline": "Puls Dnia: brak nowej materialnej zmiany — alerty RCB i Rijad",
+  "summary": "Slot 18:01 nie przyniósł nowej, niezależnie potwierdzonej materialnej zmiany względem wydania 16:57. Utrzymano 14 kart iOS; RCB nadal raportuje wiatr, suszę hydrologiczną oraz wcześniejsze alerty bezpieczeństwa.",
+  "checkedSources": [
+    {
+      "title": "TVN24",
+      "url": "https://tvn24.pl/najnowsze"
+    },
+    {
+      "title": "BBC News",
+      "url": "https://www.bbc.com/news"
+    },
+    {
+      "title": "CNN",
+      "url": "https://edition.cnn.com/"
+    },
+    {
+      "title": "RCB — raport dobowy 09.10.2026",
+      "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+    },
+    {
+      "title": "AP — Riyadh airport attacks",
+      "url": "https://apnews.com/article/4aba968d517041a89ae2284f0e00bd87"
+    },
+    {
+      "title": "RCB — raport dobowy 09.10.2026 (weryfikacja slotu 18:01)",
+      "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+    }
+  ],
+  "items": [
+    {
+      "id": "alerty-rcb-powietrze-20261008",
+      "section": "Alerty",
+      "title": "Alert RCB: zagrożenie z powietrza 8 października",
+      "lead": "RCB monitoruje rosyjski atak na Ukrainę; w RP operuje polskie lotnictwo.",
+      "whatHappened": "RCB opublikowało 8 października komunikat o rosyjskim ataku powietrznym na Ukrainę i operowaniu polskiego lotnictwa w przestrzeni RP.",
+      "keyFacts": [
+        "Komunikat RCB wskazuje na monitoring sytuacji.",
+        "RCB zapowiada dalsze komunikaty."
+      ],
+      "reactions": [
+        "Służby i wojsko monitorują sytuację."
+      ],
+      "whyItMatters": "To bezpośredni komunikat bezpieczeństwa dla mieszkańców Polski.",
+      "context": "Należy śledzić dalsze komunikaty RCB, MON i lokalnych służb.",
+      "watchNext": [
+        "Kolejne komunikaty RCB i MON",
+        "Komunikaty wojewodów i służb"
+      ],
+      "sources": [
+        {
+          "title": "Rządowe Centrum Bezpieczeństwa",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        }
+      ],
+      "tags": [
+        "RCB",
+        "bezpieczeństwo",
+        "Ukraina"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "alerty-rcb-lotnictwo-20261008",
+      "section": "Polska",
+      "title": "Polskie lotnictwo operuje w przestrzeni RP",
+      "lead": "RCB informuje o działaniach polskiego lotnictwa po ataku na Ukrainę.",
+      "whatHappened": "W komunikacie z 8 października RCB podało, że w przestrzeni RP operuje polskie lotnictwo w związku z rosyjskim atakiem powietrznym na Ukrainę.",
+      "keyFacts": [
+        "Sytuacja jest monitorowana.",
+        "RCB zapowiada dalsze komunikaty."
+      ],
+      "reactions": [
+        "Mieszkańcy powinni zachować spokój i korzystać z oficjalnych źródeł."
+      ],
+      "whyItMatters": "Informacja dotyczy krajowego monitoringu bezpieczeństwa powietrznego.",
+      "context": "To element tego samego alertu RCB; nie należy dopowiadać niepotwierdzonych szczegółów operacyjnych.",
+      "watchNext": [
+        "Komunikaty RCB",
+        "Komunikaty MON"
+      ],
+      "sources": [
+        {
+          "title": "Rządowe Centrum Bezpieczeństwa",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        }
+      ],
+      "tags": [
+        "lotnictwo",
+        "MON",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-france-protests-20261009",
+      "section": "Świat",
+      "title": "Protesty licealne we Francji trwają",
+      "lead": "Demonstracje uczniów i studentów weszły w kolejny etap.",
+      "whatHappened": "BBC wskazuje na dalsze protesty szkolne we Francji, a AP i francuskie władze potwierdzają napięcia oraz interwencje związane z demonstracjami.",
+      "keyFacts": [
+        "Protesty obejmują szkoły średnie i część środowisk akademickich.",
+        "Francuskie ministerstwo edukacji opublikowało dane o uczestnictwie w proteście 8 października.",
+        "Skala i przebieg kolejnych demonstracji pozostają zmienne regionalnie."
+      ],
+      "reactions": [
+        "Władze zapowiadają monitorowanie porządku publicznego i sytuacji w szkołach."
+      ],
+      "whyItMatters": "Ruch wpływa na funkcjonowanie szkół, debatę o bezpieczeństwie demonstracji i stabilność polityczną we Francji.",
+      "context": "Nie należy utożsamiać danych o uczestnictwie w strajku z pełną frekwencją na ulicznych demonstracjach.",
+      "watchNext": [
+        "Kolejne demonstracje zapowiadane przez organizatorów",
+        "Oficjalne dane francuskiego MSW i ministerstwa edukacji"
+      ],
+      "sources": [
+        {
+          "title": "BBC World Service — program 9 października",
+          "url": "https://wspartners.bbc.com/schedules/bbc_world_service_news_internet/week/2026-10-03"
+        },
+        {
+          "title": "Francuskie Ministerstwo Edukacji",
+          "url": "https://www.education.gouv.fr/mouvement-social-du-jeudi-8-octobre-2026-506191"
+        },
+        {
+          "title": "AP — protesty w Paryżu",
+          "url": "https://apnews.com/article/2f8ce76dbcf1bce398b6f513d49f325f"
+        }
+      ],
+      "tags": [
+        "Francja",
+        "protesty",
+        "szkoły"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "alerty-rcb-wiatr-20261008",
+      "section": "Alerty",
+      "title": "RCB: silny wiatr i susza hydrologiczna",
+      "lead": "RCB podało 9 października ostrzeżenia o silnym wietrze oraz suszy hydrologicznej w całym kraju.",
+      "whatHappened": "Raport dobowy RCB wskazuje ostrzeżenia drugiego stopnia do 16:00 i pierwszego stopnia do 18:00 w północnej Polsce oraz suszę hydrologiczną obowiązującą do odwołania.",
+      "keyFacts": [
+        "Porywy wiatru mogą osiągać 105 km/h na części wybrzeża.",
+        "Ostrzeżenia obejmują województwa zachodniopomorskie, pomorskie, warmińsko-mazurskie i podlaskie.",
+        "RCB nie odnotowało przekroczeń stanów alarmowych ani ostrzegawczych."
+      ],
+      "reactions": [
+        "Służby zalecają śledzenie lokalnych ostrzeżeń."
+      ],
+      "whyItMatters": "Silny wiatr może wpływać na transport i bezpieczeństwo infrastruktury.",
+      "context": "To monitoring pogodowy; komunikat nie oznacza jednolitego zagrożenia w całym kraju.",
+      "watchNext": [
+        "Nowe alerty RCB i IMGW"
+      ],
+      "sources": [
+        {
+          "title": "RCB",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "wiatr"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "alerty-rcb-cwiczenia-20261008",
+      "section": "Alerty",
+      "title": "RCB: ćwiczenia systemu alarmowania",
+      "lead": "W wybranych miejscach zabrzmią syreny ćwiczebne.",
+      "whatHappened": "RCB opublikowało komunikat o ćwiczeniach systemu alarmowania zaplanowanych na 8 października.",
+      "keyFacts": [
+        "Komunikat dotyczy ćwiczeń, a nie potwierdzonego zagrożenia.",
+        "Mieszkańcy powinni sprawdzić lokalny termin i zalecenia służb."
+      ],
+      "reactions": [
+        "Ćwiczenia mają sprawdzić działanie systemu i przygotowanie służb."
+      ],
+      "whyItMatters": "Znajomość ćwiczebnego charakteru sygnału ogranicza ryzyko niepotrzebnej paniki.",
+      "context": "RCB rozróżnia ćwiczenia systemu alarmowania od realnego alertu bezpieczeństwa.",
+      "watchNext": [
+        "Lokalny komunikat organizatora ćwiczeń",
+        "Ewentualne zmiany terminu"
+      ],
+      "sources": [
+        {
+          "title": "RCB — mapa komunikatów",
+          "url": "https://www.gov.pl/web/rcb/mapa-strony"
+        }
+      ],
+      "tags": [
+        "alert",
+        "ćwiczenia",
+        "syreny"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "pl-granica-20260929",
+      "section": "Polska",
+      "title": "Wojsko wspiera ochronę wschodniej granicy",
+      "lead": "Monitoring wschodniej granicy pozostaje aktywny.",
+      "whatHappened": "Utrzymano wcześniej potwierdzony wątek wojskowego wsparcia Straży Granicznej.",
+      "keyFacts": [
+        "W tym slocie nie potwierdzono nowej decyzji."
+      ],
+      "reactions": [
+        "Służby monitorują sytuację."
+      ],
+      "whyItMatters": "Dotyczy odporności i bezpieczeństwa granicy.",
+      "context": "Temat kontynuowany bez nowego potwierdzenia.",
+      "watchNext": [
+        "Komunikaty RCB i MON"
+      ],
+      "sources": [
+        {
+          "title": "MON",
+          "url": "https://www.gov.pl/web/obrona-narodowa/aktualnosci5"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "granica"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-raf-fairford-20261009",
+      "section": "Bezpieczeństwo",
+      "title": "RAF Fairford po incydencie bezpieczeństwa",
+      "lead": "USA wycofały bombowce z brytyjskiej bazy po śledztwie.",
+      "whatHappened": "BBC i AP informują o dalszych następstwach śledztwa dotyczącego planowanego ataku na RAF Fairford; amerykańskie bombowce zostały wcześniej wycofane z bazy.",
+      "keyFacts": [
+        "W śledztwie zatrzymywano osoby podejrzewane o udział w planowaniu ataku.",
+        "RAF Fairford była wykorzystywana przez amerykańskie bombowce operujące przeciw Iranowi.",
+        "Brytyjskie służby kontynuują postępowanie."
+      ],
+      "reactions": [
+        "Władze brytyjskie i amerykańskie wzmacniają ocenę bezpieczeństwa instalacji."
+      ],
+      "whyItMatters": "Incydent dotyczy bezpieczeństwa infrastruktury wojskowej i operacji USA w Europie.",
+      "context": "Publicznie dostępne informacje nie przesądzają o pełnym obrazie sprawy ani odpowiedzialności konkretnych osób.",
+      "watchNext": [
+        "Komunikaty brytyjskich służb",
+        "Dalsze decyzje USA dotyczące baz i rozmieszczenia lotnictwa"
+      ],
+      "sources": [
+        {
+          "title": "BBC World Service — RAF Fairford",
+          "url": "https://wspartners.bbc.com/schedules/bbc_world_service_news_internet/week/2026-10-03"
+        },
+        {
+          "title": "AP — incydent przy RAF Fairford",
+          "url": "https://apnews.com/article/348eda57abd7554ce7b9924afecc530d"
+        },
+        {
+          "title": "CBS News — wycofanie bombowców",
+          "url": "https://www.cbsnews.com/news/us-bombers-raf-fairford-removed/"
+        }
+      ],
+      "tags": [
+        "Wielka Brytania",
+        "USA",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-israel-october7-20261009",
+      "section": "Świat",
+      "title": "Izrael upamiętnia trzecią rocznicę 7 października",
+      "lead": "Oficjalne uroczystości przypominają o ofiarach ataku i wojny.",
+      "whatHappened": "Prezydent Izraela Isaac Herzog rozpoczął 7 października oficjalne obchody trzeciej rocznicy ataku, a izraelski urząd ubezpieczeń społecznych opublikował aktualne dane dotyczące ofiar i osób poszkodowanych.",
+      "keyFacts": [
+        "Uroczystości rozpoczęły się o 6:29 w rezydencji prezydenta.",
+        "Państwowe dane obejmują ofiary ataku oraz osoby uznane za poszkodowane w działaniach wojennych.",
+        "Rocznica jest obchodzona w warunkach powojennych napięć i długofalowej odbudowy."
+      ],
+      "reactions": [
+        "Władze Izraela i partnerzy międzynarodowi składają hołd ofiarom i podkreślają potrzebę stabilizacji regionu."
+      ],
+      "whyItMatters": "Rocznica pozostaje ważnym punktem odniesienia dla polityki bezpieczeństwa i rozmów o przyszłości regionu.",
+      "context": "Dane o ofiarach pochodzą z izraelskich instytucji publicznych; porównania między źródłami wymagają ostrożności metodologicznej.",
+      "watchNext": [
+        "Komunikaty władz Izraela i organizacji międzynarodowych",
+        "Wpływ rocznicy na sytuację bezpieczeństwa w regionie"
+      ],
+      "sources": [
+        {
+          "title": "Office of the President of Israel",
+          "url": "https://www.gov.il/en/pages/president-herzog-marks-the-third-anniversary-of-october-7th-7-oct-2026"
+        },
+        {
+          "title": "National Insurance Institute of Israel",
+          "url": "https://www.btl.gov.il/English%20Homepage/About/PressReleases/Pages/Oct7-info2026.aspx"
+        },
+        {
+          "title": "BBC World Service — rocznica 7 października",
+          "url": "https://wspartners.bbc.com/schedules/bbc_world_service_news_internet/week/2026-10-03"
+        }
+      ],
+      "tags": [
+        "Izrael",
+        "Bliski Wschód",
+        "rocznica"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-ukraine-bridge-20261002",
+      "section": "Świat",
+      "title": "Kijów pozostaje pod presją ataków dronowych",
+      "lead": "Skutki ataków i transport pozostają w monitoringu.",
+      "whatHappened": "Wcześniej potwierdzone informacje dotyczyły rosyjskich ataków i zakłóceń transportu w Kijowie.",
+      "keyFacts": [
+        "W tym slocie brak nowego potwierdzonego bilansu."
+      ],
+      "reactions": [
+        "Ukraina i partnerzy monitorują skutki."
+      ],
+      "whyItMatters": "Wojna wpływa na bezpieczeństwo regionu i odporność infrastruktury.",
+      "context": "Brak nowego potwierdzenia nie oznacza ustania działań.",
+      "watchNext": [
+        "Komunikaty władz Ukrainy"
+      ],
+      "sources": [
+        {
+          "title": "Associated Press",
+          "url": "https://apnews.com/"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "wojna"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-usa-iran-20261002",
+      "section": "Świat",
+      "title": "Rozmowy USA–Iran pozostają w monitoringu",
+      "lead": "Nie ma nowego potwierdzonego przełomu.",
+      "whatHappened": "Wcześniej obserwowany kanał rozmów USA–Iran nie przyniósł w tym slocie potwierdzonej zmiany.",
+      "keyFacts": [
+        "Brak nowego oficjalnego porozumienia."
+      ],
+      "reactions": [
+        "Dyplomacja pozostaje przedmiotem obserwacji."
+      ],
+      "whyItMatters": "Ewentualne porozumienie wpływałoby na bezpieczeństwo i rynki energii.",
+      "context": "To monitoring procesu dyplomatycznego.",
+      "watchNext": [
+        "Komunikaty rządów USA i Iranu"
+      ],
+      "sources": [
+        {
+          "title": "Associated Press",
+          "url": "https://apnews.com/"
+        }
+      ],
+      "tags": [
+        "USA",
+        "Iran",
+        "dyplomacja"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "world-g7-fuels-20261002",
+      "section": "Gospodarka",
+      "title": "G7 monitoruje uwolnienie rezerw paliw",
+      "lead": "Rezerwy paliw pozostają ważnym sygnałem rynkowym.",
+      "whatHappened": "Wcześniejsza decyzja G7 o uwolnieniu rezerw paliw pozostaje w monitoringu.",
+      "keyFacts": [
+        "Brak nowej decyzji w tym slocie."
+      ],
+      "reactions": [
+        "Rynek obserwuje wpływ na ceny energii."
+      ],
+      "whyItMatters": "Rezerwy mogą ograniczać skutki szoków podażowych.",
+      "context": "To kontynuacja istniejącego wątku gospodarczego.",
+      "watchNext": [
+        "Komunikaty G7 i dane rynku ropy"
+      ],
+      "sources": [
+        {
+          "title": "Associated Press",
+          "url": "https://apnews.com/"
+        }
+      ],
+      "tags": [
+        "G7",
+        "energia",
+        "paliwa"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "pl-energy-20260929",
+      "section": "Gospodarka",
+      "title": "Bezpieczeństwo dostaw energii pozostaje priorytetem",
+      "lead": "Polska monitoruje odporność dostaw i infrastruktury.",
+      "whatHappened": "Nie potwierdzono nowej decyzji dotyczącej krajowych dostaw energii.",
+      "keyFacts": [
+        "Brak nowego komunikatu operacyjnego."
+      ],
+      "reactions": [
+        "Instytucje monitorują odporność infrastruktury."
+      ],
+      "whyItMatters": "Stabilne dostawy energii są ważne dla gospodarstw i przemysłu.",
+      "context": "Wątek pozostaje obserwacyjny.",
+      "watchNext": [
+        "Komunikaty Ministerstwa Energii"
+      ],
+      "sources": [
+        {
+          "title": "Ministerstwo Energii",
+          "url": "https://www.gov.pl/web/energia"
+        }
+      ],
+      "tags": [
+        "energia",
+        "Polska"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "tech-ai-security-20260929",
+      "section": "Technologia",
+      "title": "Bezpieczeństwo AI pozostaje tematem publicznym",
+      "lead": "Monitoring obejmuje odporność i odpowiedzialne użycie AI.",
+      "whatHappened": "Nie potwierdzono nowej decyzji regulacyjnej ani incydentu o dużej skali.",
+      "keyFacts": [
+        "Wątek pozostaje w monitoringu CSIRT i administracji."
+      ],
+      "reactions": [
+        "Instytucje rozwijają praktyki bezpieczeństwa."
+      ],
+      "whyItMatters": "Systemy AI mogą wpływać na bezpieczeństwo usług publicznych.",
+      "context": "Brak nowej materialnej zmiany w tym slocie.",
+      "watchNext": [
+        "Komunikaty CSIRT NASK"
+      ],
+      "sources": [
+        {
+          "title": "CSIRT NASK",
+          "url": "https://www.gov.pl/web/cyfryzacja/csirt-nask"
+        }
+      ],
+      "tags": [
+        "AI",
+        "cyberbezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "world-riyadh-attacks-20261009",
+      "section": "Świat",
+      "title": "Ataki w Rijadzie zabiły trzy osoby",
+      "lead": "Ataki wymierzone w lotnisko w Rijadzie i samolot Saudia spowodowały trzy ofiary śmiertelne.",
+      "whatHappened": "Władze Arabii Saudyjskiej poinformowały o atakach na międzynarodowe lotnisko im. Króla Chalida w Rijadzie oraz samolot Saudia. Zginęło trzech obywateli Arabii Saudyjskiej, w tym pilot.",
+      "keyFacts": [
+        "Informację podały saudyjskie władze lotnicze i opisała ją Associated Press 9 października 2026.",
+        "Wydarzenie zwiększa napięcie na kolejnym froncie konfliktu wokół Iranu i Jemenu.",
+        "Nie ma potwierdzenia wpływu zdarzenia na bezpieczeństwo Polski."
+      ],
+      "reactions": [
+        "Władze saudyjskie przekazały bilans ofiar; odpowiedzialność za atak przypisano w relacjach AP bojownikom Huti, którzy rościli sobie do niego prawa."
+      ],
+      "whyItMatters": "Atak dotyczy infrastruktury lotniczej i może wpływać na ocenę ryzyka dla transportu oraz rynków energii w regionie.",
+      "context": "Wątek wpisuje się w trwającą eskalację na Bliskim Wschodzie i wcześniejsze incydenty dotyczące żeglugi oraz infrastruktury krytycznej.",
+      "watchNext": [
+        "Śledzić oficjalne komunikaty Arabii Saudyjskiej, bilans strat, ewentualne zakłócenia lotów i reakcje międzynarodowe."
+      ],
+      "sources": [
+        {
+          "title": "Associated Press — ataki w Rijadzie",
+          "url": "https://apnews.com/article/4aba968d517041a89ae2284f0e00bd87"
+        },
+        {
+          "title": "Associated Press — bilans ofiar",
+          "url": "https://apnews.com/article/5226e214e7c50ceff68915379ec3a714"
+        }
+      ],
+      "tags": [
+        "Arabia Saudyjska",
+        "Rijad",
+        "Jemen",
+        "bezpieczeństwo"
+      ],
+      "priority": "2"
+    }
+  ]
+}
