@@ -4,14 +4,14 @@ Last updated: 2026-10-09
 
 ## Update 2026-10-09
 
-Po serii ataków w mazowieckich szkołach rząd polecił zwiększyć patrole Policji
-przy wszystkich placówkach i kontrole wewnętrzne. Sejm skierował budżet 2027 do
-komisji, a także uchwalił ogólnopolski zakaz nocnej sprzedaży alkoholu i zakaz
-jego reklamy. Komisja nadzwyczajna poparła dwa projekty dotyczące aborcji.
-Nocny alert RCB zakończył się komunikatem o braku zagrożenia w Polsce. Donald
-Trump wykluczył wznowienie uderzeń na Iran przed 3 listopada, Włochy przyjęły
-reformę wyborczą z premią mandatową, a Isaias zbliżał się do północnego wybrzeża
-Zatoki Meksykańskiej jako huragan drugiej kategorii.
+Kolejna fala rosyjskich ataków zabiła według władz regionalnych cytowanych przez AP
+co najmniej trzy osoby i raniła co najmniej osiem; skumulowany bilans trzech dni
+przekroczył 50 ofiar śmiertelnych. Polska i Litwa podpisały techniczną umowę
+PSE–Litgrid dotyczącą Harmony Link oraz wspólne oświadczenie o bezpieczeństwie
+infrastruktury. W Polsce policja prowadziła szerokie kontrole szkół po groźbach,
+a Komisja Odpowiedzialności Konstytucyjnej procedowała sprawozdanie w sprawie
+wniosku wobec Adama Glapińskiego. Pokojową Nagrodę Nobla 2026 otrzymała
+Navanethem „Navi” Pillay za działania na rzecz pokoju i prawa międzynarodowego.
 
 Raport: [2026-10-09](runs/2026-10-09.md)
 
