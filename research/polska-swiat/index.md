@@ -1,6 +1,19 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-10-08
+Last updated: 2026-10-09
+
+## Update 2026-10-09
+
+Po serii ataków w mazowieckich szkołach rząd polecił zwiększyć patrole Policji
+przy wszystkich placówkach i kontrole wewnętrzne. Sejm skierował budżet 2027 do
+komisji, a także uchwalił ogólnopolski zakaz nocnej sprzedaży alkoholu i zakaz
+jego reklamy. Komisja nadzwyczajna poparła dwa projekty dotyczące aborcji.
+Nocny alert RCB zakończył się komunikatem o braku zagrożenia w Polsce. Donald
+Trump wykluczył wznowienie uderzeń na Iran przed 3 listopada, Włochy przyjęły
+reformę wyborczą z premią mandatową, a Isaias zbliżał się do północnego wybrzeża
+Zatoki Meksykańskiej jako huragan drugiej kategorii.
+
+Raport: [2026-10-09](runs/2026-10-09.md)
 
 ## Update 2026-10-08
 

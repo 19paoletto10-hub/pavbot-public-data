@@ -572,3 +572,15 @@
 - **High — Track Kramatorsk casualty and infrastructure updates:** AP reports at least 30 dead and worsening Kyiv blackouts. Track local authorities, energy operators, UN/OHCHR and follow-up casualty figures.
 - **Medium — Track Poland 2027 budget process:** Sejm first reading began on 8 October. Watch amendments, committee work, deficit financing, energy-intensive-industry support and local-government effects.
 - **Medium — Track Yandex data-centre strike:** Reuters reports the first major attack on a Russian data hub, based on the company statement. Seek independent confirmation, outage duration and response from Russian authorities.
+
+## Follow-up 2026-10-09
+
+- [x] Medium - Zweryfikować wynik pierwszego czytania budżetu 2027: Sejm odrzucił wniosek o odrzucenie projektu i skierował go do komisji; kolejne czytania zaplanowano na 2 i 4 grudnia.
+- [ ] High - Monitorować realizację ogólnokrajowych patroli przy szkołach, ustalenia śledczych oraz ostateczny zakres przepisów o blokowaniu nielegalnych treści.
+- [ ] High - Śledzić odpowiedź Iranu, bezpieczeństwo żeglugi i rozmieszczenie sił USA; odróżniać deklarowane moratorium do 3 listopada od przygotowań wojskowych.
+- [ ] High - Sprawdzić wejście Isaias nad ląd, falę sztormową, ofiary, ewakuacje i wpływ na porty oraz infrastrukturę energetyczną.
+- [ ] Medium - Zweryfikować termin głosowań plenarnych nad dwoma projektami aborcyjnymi i arytmetykę większości.
+- [ ] Medium - Śledzić poprawki Senatu oraz decyzję prezydenta w sprawie ustawy o nocnej sprzedaży i reklamie alkoholu.
+- [ ] Medium - Monitorować skargę konstytucyjną i przepisy wykonawcze do włoskiej reformy wyborczej.
+- [ ] Medium - Uzupełnić oficjalny bilans nocnego ataku na Ukrainę, zachowując rozróżnienie między polskim alarmem a potwierdzonym naruszeniem przestrzeni RP.
+- [ ] Review - Pełny scripts/verify-research-workspace.sh zatrzymuje się na repozytoryjnym oczekiwaniu tekstu interfejsu CloudKit w pliku iOS SettingsView.swift; nie zmieniać aplikacji ani weryfikatora w przebiegu researchowym, tylko zweryfikować zgodność w osobnym zadaniu rozwojowym.
