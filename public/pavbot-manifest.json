@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-10-09T14:59:38.348724+00:00",
+  "generatedAt": "2026-10-09T15:02:09.222622+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -228,6 +228,66 @@
       "date": "2026-10-09",
       "time": "06:25",
       "itemCount": 14
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-10-09/sources.md",
+      "type": "podcastSources",
+      "topic": "polska-swiat",
+      "title": "Źródła — 9 października 2026",
+      "path": "research/polska-swiat/podcasts/2026-10-09/sources.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-10-09/sources.md",
+      "sizeBytes": 2279,
+      "date": "2026-10-09"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-10-09/script.md",
+      "type": "podcastScript",
+      "topic": "polska-swiat",
+      "title": "script.md",
+      "path": "research/polska-swiat/podcasts/2026-10-09/script.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-10-09/script.md",
+      "sizeBytes": 7659,
+      "date": "2026-10-09"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-10-09/render.json",
+      "type": "podcastRender",
+      "topic": "polska-swiat",
+      "title": "render.json",
+      "path": "research/polska-swiat/podcasts/2026-10-09/render.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-10-09/render.json",
+      "sizeBytes": 333,
+      "date": "2026-10-09"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-10-09/draft.md",
+      "type": "podcastDraft",
+      "topic": "polska-swiat",
+      "title": "Podcast Polska–Świat — 9 października 2026",
+      "path": "research/polska-swiat/podcasts/2026-10-09/draft.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-10-09/draft.md",
+      "sizeBytes": 866,
+      "date": "2026-10-09"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-10-09/brief.pdf",
+      "type": "podcastBriefPdf",
+      "topic": "polska-swiat",
+      "title": "Podcast brief PDF",
+      "path": "research/polska-swiat/podcasts/2026-10-09/brief.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-10-09/brief.pdf",
+      "sizeBytes": 71131,
+      "date": "2026-10-09"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-10-09/podcast.mp3",
+      "type": "podcastAudio",
+      "topic": "polska-swiat",
+      "title": "Podcast audio",
+      "path": "research/polska-swiat/podcasts/2026-10-09/podcast.mp3",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-10-09/podcast.mp3",
+      "sizeBytes": 3586586,
+      "date": "2026-10-09"
     },
     {
       "id": "research/llm-ai-jobs-wroclaw/runs/2026-10-09-1740.md",
