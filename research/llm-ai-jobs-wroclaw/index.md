@@ -1,6 +1,21 @@
 # Topic Index: llm-ai-jobs-wroclaw
 
-Last updated: 2026-10-08 17:40 CEST
+Last updated: 2026-10-09 17:40 CEST
+
+## Seen Opportunities Added 2026-10-09 17:40
+
+| Canonical key | Company | Title | Location / remote | First seen | Last seen | Status | Material changes | Source |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| https://nofluffjobs.com/pl/job/senior-java-developer-ai-llm-k-m-neontri-wroclaw | Neontri | Senior Java Developer (AI & LLM) (K/M) | Wrocław / hybrydowo, 1–2 dni/mies. onsite | 2026-10-09-1740 | 2026-10-09-1740 | Open | Produkcyjne LLM, ReAct/MCP, Spring AI, LangChain4j, embeddingi i bazy wektorowe; termin 11.10.2026. | [No Fluff Jobs](https://nofluffjobs.com/pl/job/senior-java-developer-ai-llm-k-m-neontri-wroclaw) |
+| https://entrypoint-prod.nofluffjobs.com/pl/job/senior-genai-engineer-tech-lead-koda-wroclaw | KODA | Senior GenAI Engineer / Tech Lead | Wrocław, Sikorskiego 26 | 2026-10-09-1740 | 2026-10-09-1740 | Status do potwierdzenia | RAG, context engineering, tool/function calling, ewaluacja; 18 000–26 000 PLN + VAT B2B; karta pokazuje termin 03.10.2026. | [No Fluff Jobs](https://entrypoint-prod.nofluffjobs.com/pl/job/senior-genai-engineer-tech-lead-koda-wroclaw) |
+
+## Current Understanding
+
+Runda `2026-10-09-1740`: Neontri wnosi nowy lokalny sygnał backend/LLM z bardzo lekką hybrydą, a KODA — mocną rolę GenAI/Tech Lead z jawnymi widełkami, lecz niespójnym terminem wymagającym potwierdzenia.
+
+### Material changes
+
+- 2026-10-09 17:40: dodano Neontri i KODA; priorytet aplikacyjny ma Neontri z terminem 11 października, natomiast KODA jest watch itemem statusowym.
 
 ## Seen Opportunities Added 2026-10-08 17:40
 
