@@ -1,20 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-10-10
-
-## Update 2026-10-10
-
-RCB uruchomiło alert dla Lubelszczyzny i Podkarpacia podczas rosyjskiego ataku
-na Ukrainę, a po zakończeniu działań podało brak zagrożenia na terytorium
-Polski. MSWiA zaktualizowało bilans działań przy szkołach do ponad 24 tys.
-zaangażowanych policjantów, ponad 15 tys. sprawdzonych placówek, 19 zatrzymanych
-i ponad 300 zgłoszeń. Sejm uchwalił ogólnopolski nocny zakaz sprzedaży alkoholu
-poza gastronomią i skierował projekt budżetu na 2027 r. do dalszych prac.
-Donald Trump ogłosił porozumienie o zakupie rosyjskiego diesla, zaś presja USA
-na Iran zbiegła się z walkami o rejon Bab al-Mandab. Isaias wszedł na ląd na
-Florydzie jako huragan kategorii 2, a Simon kategorii 3 zbliża się do Meksyku.
-
-Raport: [2026-10-10](runs/2026-10-10.md)
+Last updated: 2026-10-09
 
 ## Update 2026-10-09
 
