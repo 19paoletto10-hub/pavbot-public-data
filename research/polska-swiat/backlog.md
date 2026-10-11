@@ -578,3 +578,15 @@
 - Monitorować harmonogram i kamienie milowe realizacji Harmony Link przez PSE i Litgrid.
 - Zweryfikować oficjalne sprawozdanie Komisji Odpowiedzialności Konstytucyjnej oraz dalsze głosowania w sprawie Adama Glapińskiego.
 - Śledzić wyniki postępowań dotyczących gróźb wobec szkół i aktualne wytyczne służb dla placówek.
+
+# Follow-up 2026-10-11
+
+- Sprawdzić oficjalne decyzje po odprawie premiera w sprawie przemocy w szkołach i dezinformacji.
+- Monitorować patrole policji w szkołach od poniedziałku, dalsze zatrzymania i wyniki postępowań.
+- Śledzić reakcję Ukrainy, UE i Kongresu USA na wezwanie Trumpa do zmiany prezydenta Ukrainy oraz realizację umowy na rosyjski diesel.
+- Sprawdzić końcowy bilans ataku w Zaporożu i dalsze komunikaty o ochronie ukraińskiej energetyki.
+- Monitorować odpowiedź Arabii Saudyjskiej i USA na atak w Rijadzie oraz potwierdzenie odpowiedzialności za uderzenie.
+- Śledzić wejście huraganu Simon na ląd, ewakuacje i potwierdzony bilans szkód w Meksyku.
+- Sprawdzić końcowy bilans Isaiasa, liczbę odbiorców bez prądu oraz zagrożenie powodziowe w Appalachach.
+- Po zakończeniu ciszy wyborczej odnotować frekwencję i oficjalny wynik drugiej tury wyborów w Krakowie.
+- Monitorować Senat i decyzję prezydenta w sprawie ustawy alkoholowej oraz prace komisji nad budżetem na 2027 r.

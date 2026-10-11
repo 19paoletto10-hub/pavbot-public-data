@@ -1,6 +1,19 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-10-09
+Last updated: 2026-10-11
+
+## Update 2026-10-11
+
+Premier rozpoczął odprawę z ministrami i szefami służb dotyczącą przemocy w
+szkołach oraz dezinformacji; policja podała bilans blisko 50 tys. sprawdzonych
+placówek i 76 zatrzymanych. Rosyjskie bomby zabiły w obwodzie zaporoskim co
+najmniej 20 osób, a Donald Trump publicznie wezwał Ukrainę do wyboru nowego
+prezydenta. Wielka Brytania zapowiedziała dalsze sankcje wobec Rosji i wsparcie
+dla Kijowa. Atak na lotnisko w Rijadzie zabił 12 osób i ranił ponad 300. Simon
+osiągnął kategorię 4 tuż przed zachodnim wybrzeżem Meksyku, a bilans Isaiasa
+wzrósł do czterech ofiar. W Krakowie trwa druga tura wyborów prezydenta miasta.
+
+Raport: [2026-10-11](runs/2026-10-11.md)
 
 ## Update 2026-10-09
 
