@@ -1,19 +1,17 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-10-11
+Last updated: 2026-10-09
 
-## Update 2026-10-11
+## Update 2026-10-10
 
-Premier rozpoczął odprawę z ministrami i szefami służb dotyczącą przemocy w
-szkołach oraz dezinformacji; policja podała bilans blisko 50 tys. sprawdzonych
-placówek i 76 zatrzymanych. Rosyjskie bomby zabiły w obwodzie zaporoskim co
-najmniej 20 osób, a Donald Trump publicznie wezwał Ukrainę do wyboru nowego
-prezydenta. Wielka Brytania zapowiedziała dalsze sankcje wobec Rosji i wsparcie
-dla Kijowa. Atak na lotnisko w Rijadzie zabił 12 osób i ranił ponad 300. Simon
-osiągnął kategorię 4 tuż przed zachodnim wybrzeżem Meksyku, a bilans Isaiasa
-wzrósł do czterech ofiar. W Krakowie trwa druga tura wyborów prezydenta miasta.
+Rosyjski atak na Zaporoże zabił według AP i Reutersa co najmniej 20 osób, w tym
+troje dzieci, i ranił 18 osób; był trzecim masowym atakiem na Ukrainę w tym
+tygodniu. Donald Trump ogłosił porozumienie z Rosją w sprawie dostaw diesla do
+USA, a następnie publicznie wezwał do zmiany prezydenta Ukrainy. W Polsce trwa
+ogólnokrajowa akcja ochrony szkół po atakach i groźbach; Sejm przyjął też
+nowelizację dotyczącą szybszego blokowania części nielegalnych treści w sieci.
 
-Raport: [2026-10-11](runs/2026-10-11.md)
+Raport: [2026-10-10](runs/2026-10-10.md)
 
 ## Update 2026-10-09
 
