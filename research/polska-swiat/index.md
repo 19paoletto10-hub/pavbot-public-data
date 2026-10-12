@@ -4,13 +4,15 @@ Last updated: 2026-10-12
 
 ## Update 2026-10-12
 
-Ukraina twierdzi, że Rosja nadal atakuje infrastrukturę energetyczną mimo
-deklarowanego przez Donalda Trumpa rozejmu energetycznego; Reuters opisał
-trafienie elektrociepłowni w Charkowie. UE objęła sankcjami prawie 1600 osób i
-firm powiązanych z rosyjską produkcją dronów i pocisków oraz 77 osób związanych
-z pozorowanymi wyborami na okupowanych terenach. W Warszawie dowódca NATO
-podkreślił gotowość Sojuszu do odpowiedzi na atak. Na Mazowszu trwa ćwiczenie
-„Syrena-26”, którego sygnały są wyłącznie testowe.
+W Polsce uspokoiła się sytuacja wokół szkół, choć rząd utrzymuje patrole i
+przygotowuje zmiany w kontroli dostępu do placówek. Łukasz Gibała wygrał
+przedterminowe wybory prezydenta Krakowa z wynikiem 62,12 proc., a komisja
+śledcza do spraw Pegasusa przedstawiła jawną część raportu i 11 zawiadomień do
+prokuratury. W Warszawie SACEUR zaprezentował koncepcję obrony NATO „block,
+blunt, break”. Ukraina poinformowała o rosyjskich uderzeniach w energetykę mimo
+zapowiadanego rozejmu; Arabia Saudyjska bada nieskuteczność obrony podczas
+ataku na lotnisko w Rijadzie. UE uzgodniła limit importu chińskich hybryd, a
+Korea Północna przeprowadziła kolejne testy rakiet balistycznych.
 
 Raport: [2026-10-12](runs/2026-10-12.md)
 
