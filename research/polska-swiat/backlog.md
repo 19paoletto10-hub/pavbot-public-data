@@ -585,3 +585,8 @@
 - **Medium — school-safety data:** porównać kolejne meldunki policji, MEN i prokuratury, rozdzielając ataki, groźby, zgłoszenia i kontrole.
 - **Medium — digital-content bill:** sprawdzić finalny tekst sejmowy, przebieg w Senacie, podpis prezydenta i środki odwoławcze.
 - **Medium — MGCS:** zweryfikować sprzeczne doniesienia o zakończeniu programu w komunikatach Berlina, Paryża i przemysłu.
+## Follow-up 2026-10-12
+
+- **High — verify energy ceasefire implementation:** sprawdzić, czy Rosja i Ukraina opublikują wspólne warunki, kanał weryfikacji lub kolejne potwierdzone naruszenia.
+- **High — track EU sanctions enforcement:** monitorować obwieszczenia wykonawcze, obchodzenie sankcji i reakcje firm z łańcucha dostaw dronów.
+- **Medium — close Syrena-26 after exercise:** po 16 października sprawdzić oficjalne podsumowanie ćwiczenia i ewentualne problemy systemu alarmowego.

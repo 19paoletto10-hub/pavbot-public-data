@@ -1,6 +1,18 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-10-09
+Last updated: 2026-10-12
+
+## Update 2026-10-12
+
+Ukraina twierdzi, że Rosja nadal atakuje infrastrukturę energetyczną mimo
+deklarowanego przez Donalda Trumpa rozejmu energetycznego; Reuters opisał
+trafienie elektrociepłowni w Charkowie. UE objęła sankcjami prawie 1600 osób i
+firm powiązanych z rosyjską produkcją dronów i pocisków oraz 77 osób związanych
+z pozorowanymi wyborami na okupowanych terenach. W Warszawie dowódca NATO
+podkreślił gotowość Sojuszu do odpowiedzi na atak. Na Mazowszu trwa ćwiczenie
+„Syrena-26”, którego sygnały są wyłącznie testowe.
+
+Raport: [2026-10-12](runs/2026-10-12.md)
 
 ## Update 2026-10-10
 
