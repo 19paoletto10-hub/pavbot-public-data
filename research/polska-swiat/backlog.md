@@ -585,8 +585,23 @@
 - **Medium — school-safety data:** porównać kolejne meldunki policji, MEN i prokuratury, rozdzielając ataki, groźby, zgłoszenia i kontrole.
 - **Medium — digital-content bill:** sprawdzić finalny tekst sejmowy, przebieg w Senacie, podpis prezydenta i środki odwoławcze.
 - **Medium — MGCS:** zweryfikować sprzeczne doniesienia o zakończeniu programu w komunikatach Berlina, Paryża i przemysłu.
+
 ## Follow-up 2026-10-12
 
-- **High — verify energy ceasefire implementation:** sprawdzić, czy Rosja i Ukraina opublikują wspólne warunki, kanał weryfikacji lub kolejne potwierdzone naruszenia.
-- **High — track EU sanctions enforcement:** monitorować obwieszczenia wykonawcze, obchodzenie sankcji i reakcje firm z łańcucha dostaw dronów.
-- **Medium — close Syrena-26 after exercise:** po 16 października sprawdzić oficjalne podsumowanie ćwiczenia i ewentualne problemy systemu alarmowego.
+- [ ] **High — bezpieczeństwo szkół:** po piątkowym spotkaniu z platformami sprawdzić konkretne zobowiązania, terminy reakcji, projekt zmian prawa oraz kolejne bilanse MEN i policji.
+- [x] **Wynik wyborów w Krakowie:** oficjalny protokół potwierdził zwycięstwo Łukasza Gibały wynikiem 62,12 proc.; dalszy monitoring dotyczy zaprzysiężenia i wdrażania programu.
+- [ ] **High — raport Pegasusa:** śledzić przyjęcie pełnego raportu, posiedzenie niejawne Sejmu i decyzje prokuratury dotyczące 11 zawiadomień.
+- [ ] **High — rozejm energetyczny:** weryfikować codzienne dane o uderzeniach, stanowisko Moskwy oraz ewentualny wspólny tekst i mechanizm egzekwowania.
+- [ ] **High — Rijad i Huti:** aktualizować bilans, wyniki saudyjskiego śledztwa w sprawie obrony powietrznej i oznaki dalszej eskalacji.
+- [ ] **Medium — wykonanie koncepcji NATO:** monitorować ćwiczenia, wymagania siłowe i decyzje dla wschodniej flanki po wystąpieniu SACEUR w Warszawie.
+- [ ] **Medium — limit UE na chińskie hybrydy:** znaleźć formalny akt, harmonogram celny oraz ocenę skutków dla Polski i europejskiej produkcji.
+- [ ] **Medium — Korea Północna:** śledzić kolejne testy i reakcje Korei Południowej, Japonii oraz USA.
+
+## Follow-up 2026-10-13
+
+- [ ] **High — Senat:** po 66. posiedzeniu uzupełnić wyniki głosowań nad asystencją osobistą, zmianą ustawy antyterrorystycznej i ratyfikacją traktatu Polska–Wielka Brytania.
+- [ ] **High — rosyjski diesel:** zweryfikować podstawę prawną, dokumenty wykonawcze, płatności, harmonogram i faktyczne dostawy do USA.
+- [ ] **High — Jemen i Taiz:** szukać niezależnych potwierdzeń nalotów, monitorować drogi zaopatrzenia, przesiedlenia i reakcję Arabii Saudyjskiej.
+- [ ] **High — Indie:** śledzić decyzje Sądu Najwyższego oraz liczbę skutecznych odwołań i ponownych wpisów do spisów wyborców.
+- [ ] **Medium — alerty RCB:** nadal rozdzielać działania prewencyjne od potwierdzonych naruszeń polskiej przestrzeni powietrznej.
+- [ ] **Medium — Meksyk:** zaktualizować bilans ofiar, osób zaginionych i szkód po Simonie i Rachel.
