@@ -1,29 +1,46 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-10-13
+Last updated: 2026-10-14
+
+## Update 2026-10-14
+
+Prokuratura Krajowa prowadzi śledztwo dotyczące podpalenia stacji Starlink w
+Woli Krobowskiej jako podejrzenie dywersji na rzecz obcego wywiadu; AP podała
+o zatrzymaniu dwóch obywateli Turcji w Niemczech. Senat przyjął z poprawkami
+ustawę o asystencji osobistej i zmianę ustawy antyterrorystycznej, a bez zmian
+ustawę ratyfikującą traktat obronny z Wielką Brytanią. PEJ i PGE podzieliły
+zadania przy przygotowaniu drugiej elektrowni jądrowej. Rosyjski atak trafił
+wszystkie trzy kijowskie elektrociepłownie, zabił pięć osób i pozbawił energii
+co najmniej 600 tys. odbiorców. Huti trafili biura kierownictwa Saudi Aramco,
+a w Hamburgu rozpoczął się proces dotyczący sabotażu Nord Stream.
+
+Raport: [2026-10-14](runs/2026-10-14.md)
 
 ## Update 2026-10-13
 
-Reuters odnotował pierwszą noc bez zgłoszonych rosyjskich trafień w ukraińskie
-cele energetyczne po deklaracji „rozejmu energetycznego”, ale Rosja nadal
-uderzała w miasta, transport i logistykę. AP opisała atak dronów na dwa statki
-handlowe w bułgarskiej wyłącznej strefie ekonomicznej, w tym zatonięcie jednego.
-Polska przypisała rosyjskim służbom podpalenie stacji Starlink na Mazowszu, a
-Polska i Norwegia podpisały deklarację partnerstwa strategicznego. MON zlecił
-pilny przegląd potrzeb armii; szczegółowy zakres nie został jeszcze publicznie
-opublikowany.
+RCB zakończyło poranny alert dla województw lubelskiego i podkarpackiego
+komunikatem o braku zagrożenia na terytorium Polski. Minister Energii
+podniósł dzienne limity cen benzyn i obniżył limit diesla, a Senat rozpoczął
+posiedzenie z ustawą o asystencji osobistej oraz ratyfikacją traktatu
+obronnego z Wielką Brytanią. W USA narasta dwupartyjny sprzeciw wobec importu
+rosyjskiego diesla. W Jemenie pojawiły się nowe doniesienia o nalotach i
+okrążaniu Taizu, w Indiach spór o 130 mln usuniętych wpisów wyborczych dotarł
+do Sądu Najwyższego, a cyklony Simon i Rachel spowodowały w Meksyku co
+najmniej pięć ofiar śmiertelnych.
 
 Raport: [2026-10-13](runs/2026-10-13.md)
 
 ## Update 2026-10-12
 
-Ukraina twierdzi, że Rosja nadal atakuje infrastrukturę energetyczną mimo
-deklarowanego przez Donalda Trumpa rozejmu energetycznego; Reuters opisał
-trafienie elektrociepłowni w Charkowie. UE objęła sankcjami prawie 1600 osób i
-firm powiązanych z rosyjską produkcją dronów i pocisków oraz 77 osób związanych
-z pozorowanymi wyborami na okupowanych terenach. W Warszawie dowódca NATO
-podkreślił gotowość Sojuszu do odpowiedzi na atak. Na Mazowszu trwa ćwiczenie
-„Syrena-26”, którego sygnały są wyłącznie testowe.
+W Polsce uspokoiła się sytuacja wokół szkół, choć rząd utrzymuje patrole i
+przygotowuje zmiany w kontroli dostępu do placówek. Łukasz Gibała wygrał
+przedterminowe wybory prezydenta Krakowa z wynikiem 62,12 proc., a komisja
+śledcza do spraw Pegasusa przedstawiła jawną część raportu i 11 zawiadomień do
+prokuratury. W Warszawie SACEUR zaprezentował koncepcję obrony NATO „block,
+blunt, break”. Ukraina poinformowała o rosyjskich uderzeniach w energetykę mimo
+zapowiadanego rozejmu; Arabia Saudyjska bada nieskuteczność obrony podczas
+ataku na lotnisko w Rijadzie. UE uzgodniła limit importu chińskich hybryd, a
+Korea Północna przeprowadziła kolejne testy rakiet balistycznych.
 
 Raport: [2026-10-12](runs/2026-10-12.md)
 
