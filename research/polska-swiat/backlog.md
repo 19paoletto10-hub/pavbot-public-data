@@ -4,6 +4,14 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track implementation of the Ukraine energy ceasefire | Reuters reported no Russian energy-target strikes on 13 October, but attacks continued against cities and logistics | Compare the next 24–48 hours, official statements and any published verification mechanism | Open |
+| High | Track Bulgaria Black Sea merchant-vessel attack | AP reported two ships hit in Bulgaria's EEZ, one sunk, with responsibility still unresolved | Check Bulgarian authorities, NATO, IMO, operators and maritime advisories for attribution and route impact | Open |
+| High | Track Starlink sabotage case and Russian attribution | Polish authorities attribute the arson to Russian intelligence while suspects face proceedings | Check prosecutor, extradition, evidence and confirmation of the reported third arrest | Open |
+| High | Track Poland–Norway strategic partnership implementation | The declaration covers security, resilience, energy and Ukraine support but is not itself an execution plan | Watch for bilateral agreements, exercises, funding and industrial projects | Open |
+| Medium | Track MON urgent army-needs review | The minister announced a review without a public list of priorities or budget impact | Watch MON for scope, deadlines, procurement changes and financing | Open |
+
+| Priority | Item | Reason | Next Step | Status |
+| --- | --- | --- | --- | --- |
 | High | Track 7 October Russian mass strike and Ukrainian civilian toll | AP reports at least 24 killed and around 60 wounded across Kyiv and other regions | Watch Ukrainian authorities, AP/Reuters, energy operators and Polish DORSZ/RCB for final toll, infrastructure damage and any RP-related activation | Open |
 | High | Track implementation of Poland's 2027–2031 civil-protection programme | Government allocated PLN 102.4bn, including about PLN 30bn for regions and local governments | Watch implementation acts, local projects, shelter capacity, warning systems and transparent spending metrics | Open |
 | High | Track Orlen fuel-price investigation | Prosecutors allege over PLN 4.1bn damage and charged five current/former managers | Watch procedural decisions, defence statements, evidence and whether an indictment follows | Open |
@@ -585,23 +593,8 @@
 - **Medium — school-safety data:** porównać kolejne meldunki policji, MEN i prokuratury, rozdzielając ataki, groźby, zgłoszenia i kontrole.
 - **Medium — digital-content bill:** sprawdzić finalny tekst sejmowy, przebieg w Senacie, podpis prezydenta i środki odwoławcze.
 - **Medium — MGCS:** zweryfikować sprzeczne doniesienia o zakończeniu programu w komunikatach Berlina, Paryża i przemysłu.
-
 ## Follow-up 2026-10-12
 
-- [ ] **High — bezpieczeństwo szkół:** po piątkowym spotkaniu z platformami sprawdzić konkretne zobowiązania, terminy reakcji, projekt zmian prawa oraz kolejne bilanse MEN i policji.
-- [x] **Wynik wyborów w Krakowie:** oficjalny protokół potwierdził zwycięstwo Łukasza Gibały wynikiem 62,12 proc.; dalszy monitoring dotyczy zaprzysiężenia i wdrażania programu.
-- [ ] **High — raport Pegasusa:** śledzić przyjęcie pełnego raportu, posiedzenie niejawne Sejmu i decyzje prokuratury dotyczące 11 zawiadomień.
-- [ ] **High — rozejm energetyczny:** weryfikować codzienne dane o uderzeniach, stanowisko Moskwy oraz ewentualny wspólny tekst i mechanizm egzekwowania.
-- [ ] **High — Rijad i Huti:** aktualizować bilans, wyniki saudyjskiego śledztwa w sprawie obrony powietrznej i oznaki dalszej eskalacji.
-- [ ] **Medium — wykonanie koncepcji NATO:** monitorować ćwiczenia, wymagania siłowe i decyzje dla wschodniej flanki po wystąpieniu SACEUR w Warszawie.
-- [ ] **Medium — limit UE na chińskie hybrydy:** znaleźć formalny akt, harmonogram celny oraz ocenę skutków dla Polski i europejskiej produkcji.
-- [ ] **Medium — Korea Północna:** śledzić kolejne testy i reakcje Korei Południowej, Japonii oraz USA.
-
-## Follow-up 2026-10-13
-
-- [ ] **High — Senat:** po 66. posiedzeniu uzupełnić wyniki głosowań nad asystencją osobistą, zmianą ustawy antyterrorystycznej i ratyfikacją traktatu Polska–Wielka Brytania.
-- [ ] **High — rosyjski diesel:** zweryfikować podstawę prawną, dokumenty wykonawcze, płatności, harmonogram i faktyczne dostawy do USA.
-- [ ] **High — Jemen i Taiz:** szukać niezależnych potwierdzeń nalotów, monitorować drogi zaopatrzenia, przesiedlenia i reakcję Arabii Saudyjskiej.
-- [ ] **High — Indie:** śledzić decyzje Sądu Najwyższego oraz liczbę skutecznych odwołań i ponownych wpisów do spisów wyborców.
-- [ ] **Medium — alerty RCB:** nadal rozdzielać działania prewencyjne od potwierdzonych naruszeń polskiej przestrzeni powietrznej.
-- [ ] **Medium — Meksyk:** zaktualizować bilans ofiar, osób zaginionych i szkód po Simonie i Rachel.
+- **High — verify energy ceasefire implementation:** sprawdzić, czy Rosja i Ukraina opublikują wspólne warunki, kanał weryfikacji lub kolejne potwierdzone naruszenia.
+- **High — track EU sanctions enforcement:** monitorować obwieszczenia wykonawcze, obchodzenie sankcji i reakcje firm z łańcucha dostaw dronów.
+- **Medium — close Syrena-26 after exercise:** po 16 października sprawdzić oficjalne podsumowanie ćwiczenia i ewentualne problemy systemu alarmowego.
