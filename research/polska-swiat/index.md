@@ -1,6 +1,20 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-10-14
+Last updated: 2026-10-15
+
+## Update 2026-10-15
+
+KPRM i Kancelaria Prezydenta przedstawiły sprzeczne oceny statusu Macieja
+Berka w Trybunale Konstytucyjnym, a spór objął wejście do siedziby TK i protest
+przed budynkiem. MON zleciło pilny przegląd dronów, systemów antydronowych,
+taniego rażenia dalekiego zasięgu i AI oraz zapowiedziało Dron Legion dla
+operatorów cywilnych. Senat zamknął 66. posiedzenie bilansem 14 ustaw. W
+Brukseli rozpoczyna się Rada Europejska bez opublikowanych jeszcze konkluzji.
+Ukraina zapowiedziała wznowienie ataków na rosyjskie rafinerie. Pożar Yara J
+na wodach Rumunii pozostaje niewyjaśniony, a w rejonie Ormuzu zatonęły GFS
+Pride i Cape Dao.
+
+Raport: [2026-10-15](runs/2026-10-15.md)
 
 ## Update 2026-10-14
 

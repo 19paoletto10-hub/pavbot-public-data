@@ -610,10 +610,19 @@
 
 - [ ] **High — Starlink i dywersja:** śledzić przekazanie zatrzymanych, ewentualne zarzuty, dowody łączące wykonawców ze zleceniodawcami oraz techniczne skutki pożaru.
 - [x] **Senat, pierwszy dzień:** potwierdzono przyjęcie z poprawkami ustaw o asystencji osobistej i działaniach antyterrorystycznych oraz przyjęcie bez poprawek ustawy ratyfikującej traktat Polska–Wielka Brytania.
-- [ ] **Medium — Senat, dalszy tryb:** po zakończeniu posiedzenia sprawdzić pełny bilans i decyzje Sejmu wobec poprawek.
+- [x] **Medium — Senat, dalszy tryb:** oficjalny bilans potwierdził 14 ustaw, w tym osiem z poprawkami i sześć bez; dalszy monitoring dotyczy decyzji Sejmu wobec poprawek.
 - [ ] **High — druga elektrownia jądrowa:** monitorować analizy lokalizacji, wybór technologii, model finansowania, harmonogram i udział polskiego przemysłu.
 - [ ] **High — energetyka Kijowa:** aktualizować bilans ofiar, tempo napraw wszystkich trzech elektrociepłowni i skalę przerw w dostawach energii oraz ciepła.
 - [ ] **High — Starlink w Ukrainie:** szukać stanowiska SpaceX i sprawdzać operacyjny wpływ ograniczenia prędkości terminali używanych na dronach.
 - [ ] **High — Saudi Aramco i Huti:** zweryfikować wpływ uderzenia na produkcję, lotniska, rynek ropy i rozmowy o zawieszeniu ognia przez Oman.
 - [ ] **Medium — Nord Stream:** śledzić decyzję sądu o wniosku obrony, ujawniany materiał dowodowy i reakcje Niemiec oraz Ukrainy.
 - [ ] **High — Rada Europejska:** po 16 października porównać konkluzje z polskimi postulatami dotyczącymi Ukrainy, sankcji, obronności, energii i budżetu.
+
+## Follow-up 2026-10-15
+
+- [ ] **High — Trybunał Konstytucyjny:** śledzić formalne decyzje dotyczące statusu Macieja Berka, dostęp do składów orzekających, reakcje sądów i postępowania po wydarzeniach przed TK.
+- [ ] **High — Dron Legion:** pozyskać podstawę prawną, regulamin naboru, zasady szkolenia, odpowiedzialności, ubezpieczenia i użycia operatorów cywilnych.
+- [ ] **High — Rada Europejska:** po publikacji konkluzji porównać je z agendą i polskimi postulatami dotyczącymi Ukrainy, obronności, energii, migracji i budżetu 2028–2034.
+- [ ] **High — Ukraina i rafinerie:** potwierdzić faktyczne wznowienie uderzeń, ich skutki oraz stanowiska Białego Domu i SpaceX wobec zarzutów o ograniczenie wsparcia.
+- [ ] **High — Morze Czarne:** zweryfikować przyczynę pożaru Yara J, dowody atrybucyjne Bułgarii, bilans zaginionych marynarzy i reakcję NATO.
+- [ ] **High — Ormuz:** monitorować ostrzeżenia IMO i UKMTO, sprawstwo uderzeń, dryfujące kontenery, ruch statków i koszty ubezpieczeń po zatonięciu GFS Pride oraz Cape Dao.
