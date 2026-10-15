@@ -4,6 +4,14 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track implementation of the Ukraine energy ceasefire | Reuters reported no Russian energy-target strikes on 13 October, but attacks continued against cities and logistics | Compare the next 24–48 hours, official statements and any published verification mechanism | Open |
+| High | Track Bulgaria Black Sea merchant-vessel attack | AP reported two ships hit in Bulgaria's EEZ, one sunk, with responsibility still unresolved | Check Bulgarian authorities, NATO, IMO, operators and maritime advisories for attribution and route impact | Open |
+| High | Track Starlink sabotage case and Russian attribution | Polish authorities attribute the arson to Russian intelligence while suspects face proceedings | Check prosecutor, extradition, evidence and confirmation of the reported third arrest | Open |
+| High | Track Poland–Norway strategic partnership implementation | The declaration covers security, resilience, energy and Ukraine support but is not itself an execution plan | Watch for bilateral agreements, exercises, funding and industrial projects | Open |
+| Medium | Track MON urgent army-needs review | The minister announced a review without a public list of priorities or budget impact | Watch MON for scope, deadlines, procurement changes and financing | Open |
+
+| Priority | Item | Reason | Next Step | Status |
+| --- | --- | --- | --- | --- |
 | High | Track 7 October Russian mass strike and Ukrainian civilian toll | AP reports at least 24 killed and around 60 wounded across Kyiv and other regions | Watch Ukrainian authorities, AP/Reuters, energy operators and Polish DORSZ/RCB for final toll, infrastructure damage and any RP-related activation | Open |
 | High | Track implementation of Poland's 2027–2031 civil-protection programme | Government allocated PLN 102.4bn, including about PLN 30bn for regions and local governments | Watch implementation acts, local projects, shelter capacity, warning systems and transparent spending metrics | Open |
 | High | Track Orlen fuel-price investigation | Prosecutors allege over PLN 4.1bn damage and charged five current/former managers | Watch procedural decisions, defence statements, evidence and whether an indictment follows | Open |
@@ -578,6 +586,13 @@
 - Monitorować harmonogram i kamienie milowe realizacji Harmony Link przez PSE i Litgrid.
 - Zweryfikować oficjalne sprawozdanie Komisji Odpowiedzialności Konstytucyjnej oraz dalsze głosowania w sprawie Adama Glapińskiego.
 - Śledzić wyniki postępowań dotyczących gróźb wobec szkół i aktualne wytyczne służb dla placówek.
+## Follow-up 2026-10-14
+
+- **High — verify energy ceasefire failure:** śledzić kolejne rosyjskie i ukraińskie uderzenia w energetykę, publiczne warunki rozejmu oraz niezależny bilans szkód.
+- **High — track Starlink restrictions:** sprawdzić wyjaśnienia SpaceX, zakres techniczny ograniczeń i wpływ na ukraińskie zdolności dronowe.
+- **High — follow Bulgaria maritime investigation:** monitorować dowody przypisania ataków, akcję ratunkową, stanowisko NATO i posiedzenie parlamentu.
+- **Medium — monitor Poland TK dispute:** rozdzielać komunikaty polityczne od decyzji procesowych, orzeczeń i działań prezydenta oraz Trybunału.
+
 ## 2026-10-10 follow-upy
 
 - **High — verify USA–Rosja diesel deal:** sprawdzić oficjalny dokument, podstawę sankcyjną, wolumeny, płatności i faktyczne dostawy; na razie traktować jako zapowiedź polityczną.
@@ -585,44 +600,8 @@
 - **Medium — school-safety data:** porównać kolejne meldunki policji, MEN i prokuratury, rozdzielając ataki, groźby, zgłoszenia i kontrole.
 - **Medium — digital-content bill:** sprawdzić finalny tekst sejmowy, przebieg w Senacie, podpis prezydenta i środki odwoławcze.
 - **Medium — MGCS:** zweryfikować sprzeczne doniesienia o zakończeniu programu w komunikatach Berlina, Paryża i przemysłu.
-
 ## Follow-up 2026-10-12
 
-- [ ] **High — bezpieczeństwo szkół:** po piątkowym spotkaniu z platformami sprawdzić konkretne zobowiązania, terminy reakcji, projekt zmian prawa oraz kolejne bilanse MEN i policji.
-- [x] **Wynik wyborów w Krakowie:** oficjalny protokół potwierdził zwycięstwo Łukasza Gibały wynikiem 62,12 proc.; dalszy monitoring dotyczy zaprzysiężenia i wdrażania programu.
-- [ ] **High — raport Pegasusa:** śledzić przyjęcie pełnego raportu, posiedzenie niejawne Sejmu i decyzje prokuratury dotyczące 11 zawiadomień.
-- [ ] **High — rozejm energetyczny:** weryfikować codzienne dane o uderzeniach, stanowisko Moskwy oraz ewentualny wspólny tekst i mechanizm egzekwowania.
-- [ ] **High — Rijad i Huti:** aktualizować bilans, wyniki saudyjskiego śledztwa w sprawie obrony powietrznej i oznaki dalszej eskalacji.
-- [ ] **Medium — wykonanie koncepcji NATO:** monitorować ćwiczenia, wymagania siłowe i decyzje dla wschodniej flanki po wystąpieniu SACEUR w Warszawie.
-- [ ] **Medium — limit UE na chińskie hybrydy:** znaleźć formalny akt, harmonogram celny oraz ocenę skutków dla Polski i europejskiej produkcji.
-- [ ] **Medium — Korea Północna:** śledzić kolejne testy i reakcje Korei Południowej, Japonii oraz USA.
-
-## Follow-up 2026-10-13
-
-- [ ] **High — Senat:** po 66. posiedzeniu uzupełnić wyniki głosowań nad asystencją osobistą, zmianą ustawy antyterrorystycznej i ratyfikacją traktatu Polska–Wielka Brytania.
-- [ ] **High — rosyjski diesel:** zweryfikować podstawę prawną, dokumenty wykonawcze, płatności, harmonogram i faktyczne dostawy do USA.
-- [ ] **High — Jemen i Taiz:** szukać niezależnych potwierdzeń nalotów, monitorować drogi zaopatrzenia, przesiedlenia i reakcję Arabii Saudyjskiej.
-- [ ] **High — Indie:** śledzić decyzje Sądu Najwyższego oraz liczbę skutecznych odwołań i ponownych wpisów do spisów wyborców.
-- [ ] **Medium — alerty RCB:** nadal rozdzielać działania prewencyjne od potwierdzonych naruszeń polskiej przestrzeni powietrznej.
-- [ ] **Medium — Meksyk:** zaktualizować bilans ofiar, osób zaginionych i szkód po Simonie i Rachel.
-
-## Follow-up 2026-10-14
-
-- [ ] **High — Starlink i dywersja:** śledzić przekazanie zatrzymanych, ewentualne zarzuty, dowody łączące wykonawców ze zleceniodawcami oraz techniczne skutki pożaru.
-- [x] **Senat, pierwszy dzień:** potwierdzono przyjęcie z poprawkami ustaw o asystencji osobistej i działaniach antyterrorystycznych oraz przyjęcie bez poprawek ustawy ratyfikującej traktat Polska–Wielka Brytania.
-- [x] **Medium — Senat, dalszy tryb:** oficjalny bilans potwierdził 14 ustaw, w tym osiem z poprawkami i sześć bez; dalszy monitoring dotyczy decyzji Sejmu wobec poprawek.
-- [ ] **High — druga elektrownia jądrowa:** monitorować analizy lokalizacji, wybór technologii, model finansowania, harmonogram i udział polskiego przemysłu.
-- [ ] **High — energetyka Kijowa:** aktualizować bilans ofiar, tempo napraw wszystkich trzech elektrociepłowni i skalę przerw w dostawach energii oraz ciepła.
-- [ ] **High — Starlink w Ukrainie:** szukać stanowiska SpaceX i sprawdzać operacyjny wpływ ograniczenia prędkości terminali używanych na dronach.
-- [ ] **High — Saudi Aramco i Huti:** zweryfikować wpływ uderzenia na produkcję, lotniska, rynek ropy i rozmowy o zawieszeniu ognia przez Oman.
-- [ ] **Medium — Nord Stream:** śledzić decyzję sądu o wniosku obrony, ujawniany materiał dowodowy i reakcje Niemiec oraz Ukrainy.
-- [ ] **High — Rada Europejska:** po 16 października porównać konkluzje z polskimi postulatami dotyczącymi Ukrainy, sankcji, obronności, energii i budżetu.
-
-## Follow-up 2026-10-15
-
-- [ ] **High — Trybunał Konstytucyjny:** śledzić formalne decyzje dotyczące statusu Macieja Berka, dostęp do składów orzekających, reakcje sądów i postępowania po wydarzeniach przed TK.
-- [ ] **High — Dron Legion:** pozyskać podstawę prawną, regulamin naboru, zasady szkolenia, odpowiedzialności, ubezpieczenia i użycia operatorów cywilnych.
-- [ ] **High — Rada Europejska:** po publikacji konkluzji porównać je z agendą i polskimi postulatami dotyczącymi Ukrainy, obronności, energii, migracji i budżetu 2028–2034.
-- [ ] **High — Ukraina i rafinerie:** potwierdzić faktyczne wznowienie uderzeń, ich skutki oraz stanowiska Białego Domu i SpaceX wobec zarzutów o ograniczenie wsparcia.
-- [ ] **High — Morze Czarne:** zweryfikować przyczynę pożaru Yara J, dowody atrybucyjne Bułgarii, bilans zaginionych marynarzy i reakcję NATO.
-- [ ] **High — Ormuz:** monitorować ostrzeżenia IMO i UKMTO, sprawstwo uderzeń, dryfujące kontenery, ruch statków i koszty ubezpieczeń po zatonięciu GFS Pride oraz Cape Dao.
+- **High — verify energy ceasefire implementation:** sprawdzić, czy Rosja i Ukraina opublikują wspólne warunki, kanał weryfikacji lub kolejne potwierdzone naruszenia.
+- **High — track EU sanctions enforcement:** monitorować obwieszczenia wykonawcze, obchodzenie sankcji i reakcje firm z łańcucha dostaw dronów.
+- **Medium — close Syrena-26 after exercise:** po 16 października sprawdzić oficjalne podsumowanie ćwiczenia i ewentualne problemy systemu alarmowego.
