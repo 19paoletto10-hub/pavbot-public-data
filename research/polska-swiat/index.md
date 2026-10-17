@@ -1,6 +1,47 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-10-14
+Last updated: 2026-10-17
+
+## Update 2026-10-17
+
+Pełne konkluzje Rady Europejskiej przewidują pożyczkę 90 mld euro dla Ukrainy,
+pilne wzmocnienie obrony powietrznej oraz rozwój Eastern Flank Watch, wspólnych
+zakupów i mobilności wojskowej. Polska podkreśla ochronę wydatków na
+bezpieczeństwo, spójność i rolnictwo, ale negocjacje budżetu UE nadal trwają.
+Biały Dom zawiesił zastosowanie kluczowych sankcji ustawy Grahama, podczas gdy
+UE przyjęła 21. pakiet restrykcji i skrytykowała poluzowanie ograniczeń na
+rosyjski diesel. Starshield wciąż ogranicza szybkie ukraińskie platformy, a ONZ
+odnotowała najtragiczniejszy wrzesień pełnoskalowej wojny dla cywilów. Poza
+Europą rosną napięcia wokół list wyborców w Indiach, referendum w Albercie i
+serii ataków na żeglugę w rejonie Ormuz.
+
+Raport: [2026-10-17](runs/2026-10-17.md)
+
+## Update 2026-10-16
+
+Prezydent podpisał osiem ustaw i zawetował trzy, zatrzymując zmiany w Kodeksie
+wyborczym, nadzorze nad reklamą polityczną i ustawowym trybie wykonywania
+orzeczeń ETPC. Pierwszy dzień Rady Europejskiej przyniósł konkluzje o energii i
+konkurencyjności, ale nie porozumienie w sprawie budżetu 2028–2034. Ukraina
+potwierdziła uderzenie w rafinerię w obwodzie riazańskim, Starlink wrócił do
+działania, a Rosja wznowiła eksport diesla z Primorska. Seria ataków na Morzu
+Czarnym objęła co najmniej siedem statków i trafi na forum NATO. Obserwatorzy
+ostrzegają przed warunkami wyborów w Serbii, a w Oregonie 16-latek zabił troje
+dzieci i nauczyciela w szkole podstawowej.
+
+Raport: [2026-10-16](runs/2026-10-16.md)
+
+## Update 2026-10-15
+
+W Polsce zaostrzył się spór instytucjonalny wokół statusu Macieja Berka w
+Trybunale Konstytucyjnym. MON zleciło przegląd strategiczny dronów, systemów
+antydronowych, taniego rażenia dalekiego zasięgu i AI oraz zapowiedziało Dron
+Legion. Senat zamknął posiedzenie bilansem 14 ustaw. Rada Europejska rozpoczęła
+dwudniowe obrady, Ukraina zapowiedziała wznowienie ataków na rosyjskie
+rafinerie, a nowe incydenty na Morzu Czarnym i w cieśninie Ormuz zwiększyły
+ryzyko dla żeglugi handlowej.
+
+Raport: [2026-10-15](runs/2026-10-15.md)
 
 ## Update 2026-10-14
 

@@ -605,3 +605,36 @@
 - **High — verify energy ceasefire implementation:** sprawdzić, czy Rosja i Ukraina opublikują wspólne warunki, kanał weryfikacji lub kolejne potwierdzone naruszenia.
 - **High — track EU sanctions enforcement:** monitorować obwieszczenia wykonawcze, obchodzenie sankcji i reakcje firm z łańcucha dostaw dronów.
 - **Medium — close Syrena-26 after exercise:** po 16 października sprawdzić oficjalne podsumowanie ćwiczenia i ewentualne problemy systemu alarmowego.
+
+## Follow-up 2026-10-15
+
+- [ ] **High — Trybunał Konstytucyjny:** śledzić formalne decyzje dotyczące statusu Macieja Berka, dostęp do składów orzekających, reakcje sądów i postępowania po wydarzeniach przed TK.
+- [ ] **High — Dron Legion:** pozyskać podstawę prawną, regulamin naboru, zasady szkolenia, odpowiedzialności, ubezpieczenia i użycia operatorów cywilnych.
+- [ ] **High — Rada Europejska:** po publikacji konkluzji porównać je z agendą i polskimi postulatami dotyczącymi Ukrainy, obronności, energii, migracji i budżetu 2028–2034.
+- [ ] **High — Ukraina i rafinerie:** potwierdzić skutki wznowionych uderzeń oraz dalsze stanowiska Białego Domu i SpaceX wobec ograniczenia wsparcia.
+- [ ] **High — Morze Czarne:** zweryfikować dowody atrybucyjne, bilans zaginionych marynarzy i decyzje NATO.
+- [ ] **High — Ormuz:** monitorować ostrzeżenia IMO i UKMTO, sprawstwo uderzeń, ruch statków i koszty ubezpieczeń po zatonięciu GFS Pride oraz Cape Dao.
+
+## Follow-up 2026-10-16
+
+- [ ] **High — pakiet ustaw prezydenckich:** śledzić publikację i wykonanie ośmiu podpisanych ustaw oraz ewentualne głosowania Sejmu nad trzema wetami.
+- [x] **High — Rada Europejska, dzień drugi:** zamknięte 17 października po publikacji pełnych konkluzji; dalsze wdrożenie pożyczki, Eastern Flank Watch i mobilności wojskowej przechodzi do nowego punktu.
+- [ ] **High — Starlink i rafinerie:** sprawdzić stabilność usługi, stanowisko SpaceX i Białego Domu, skalę szkód w Riazaniu oraz kolejne uderzenia obu stron w energetykę.
+- [ ] **High — rosyjski diesel:** monitorować kolejne załadunki, licencje sankcyjne, końcowych odbiorców, płatności i wpływ na ceny; pierwszy transport nie potwierdza wykonania całej umowy.
+- [ ] **High — Morze Czarne i NATO:** aktualizować bilans Wine Trader, Yara J i pozostałych jednostek oraz wyniki śledztw Rumunii i Bułgarii przed posiedzeniem Rady Północnoatlantyckiej.
+- [ ] **Medium — wybory w Serbii:** przed 25 października śledzić przemoc, dostęp do mediów i działania komisji, a po głosowaniu porównać wyniki z raportem ODIHR.
+- [ ] **High — strzelanina w Oregonie:** aktualizować stan rannych, pochodzenie broni, motyw i oficjalne ustalenia policji bez spekulacji o sprawcy lub ofiarach.
+- [ ] **Medium — Syrena-26:** ćwiczenie kończy się 16 października; zamknąć punkt po publikacji oficjalnego podsumowania i informacji o ewentualnych problemach systemu alarmowego.
+- [ ] **Medium — publikacja współbieżna:** rozpatrzyć propozycję `proposals/2026-10-16-preserve-concurrent-topic-publications.md`, ponieważ późniejszy pakiet podcastowy usunął wcześniej opublikowane artefakty researchowe z 15 października.
+
+## Follow-up 2026-10-17
+
+- [ ] **High — wdrożenie decyzji UE:** śledzić uruchomienie pożyczki 90 mld euro, wypłatę 6,6 mld euro z Europejskiego Instrumentu na rzecz Pokoju, dostawy obrony powietrznej, Eastern Flank Watch i propozycję mobilności wojskowej.
+- [ ] **High — sankcje USA i UE:** monitorować, czy Biały Dom cofnie zawieszenie środków ustawy Grahama, oraz porównywać egzekwowanie 21. pakietu UE z przepływami rosyjskiego diesla.
+- [ ] **High — Starshield i obrona powietrzna Ukrainy:** sprawdzić decyzje SpaceX i Pentagonu o limicie 160 km/h, alternatywne sieci satelitarne oraz wielkość kolejnych dostaw Patriotów.
+- [ ] **High — ofiary cywilne w Ukrainie:** aktualizować październikowy bilans ONZ i udział broni dalekiego zasięgu oraz dronów, oddzielając liczby zweryfikowane od komunikatów stron.
+- [ ] **High — listy wyborców w Indiach:** śledzić dane Komisji Wyborczej, tryb odwołań, orzeczenia sądowe i wpływ rewizji na mniejszości.
+- [ ] **Medium — referendum w Albercie:** po 19 października porównać wynik nieoficjalny z certyfikacją 29 października i ocenić, czy uruchamia dalszy proces prawny.
+- [ ] **High — Ormuz i Aden:** monitorować komunikaty UKMTO i IMO, atrybucję dziesięciu ataków, los załóg, trasy statków oraz wpływ na fracht i ubezpieczenia.
+- [ ] **High — strzelanina w Oregonie:** śledzić motyw, pochodzenie broni, stan rannych i końcowy raport policji; nie łączyć historii edukacyjnej napastnika z motywem bez dowodów.
+- [ ] **Medium — Syrena-26:** do 08:30 nie znaleziono oficjalnego podsumowania zakończonego ćwiczenia; ponowić sprawdzenie stron wojewody, RCB i służb przed zamknięciem punktu.
