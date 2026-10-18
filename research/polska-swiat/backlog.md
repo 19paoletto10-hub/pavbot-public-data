@@ -638,3 +638,15 @@
 - [ ] **High — Ormuz i Aden:** monitorować komunikaty UKMTO i IMO, atrybucję dziesięciu ataków, los załóg, trasy statków oraz wpływ na fracht i ubezpieczenia.
 - [ ] **High — strzelanina w Oregonie:** śledzić motyw, pochodzenie broni, stan rannych i końcowy raport policji; nie łączyć historii edukacyjnej napastnika z motywem bez dowodów.
 - [ ] **Medium — Syrena-26:** do 08:30 nie znaleziono oficjalnego podsumowania zakończonego ćwiczenia; ponowić sprawdzenie stron wojewody, RCB i służb przed zamknięciem punktu.
+
+## Follow-up 2026-10-18
+
+- [ ] **High — rumuńskie zestrzelenia dronów:** pozyskać wyniki analizy szczątków, pełniejszą trajektorię, ocenę celu lotu i reakcję NATO po zestrzeleniu dwóch odrzutowych Geranów nad wodami terytorialnymi.
+- [ ] **High — atak na dyplomatów w Tajbie:** śledzić izraelskie dochodzenie, identyfikację sprawców, wspólne stanowisko Polski, Francji i Belgii oraz środki ochrony delegacji na Zachodnim Brzegu.
+- [ ] **High — Trybunał Konstytucyjny:** oddzielać decyzje procesowe o statusie Macieja Berka od deklaracji politycznych; monitorować dopuszczenie do składów, działania KPRP, Sejmu i kolejne protesty.
+- [ ] **High — sankcje USA wobec Rosji:** po ponadpartyjnej krytyce sprawdzić działania Kongresu po powrocie z przerwy, ewentualne ograniczenie zawieszenia i szczegółowe uzasadnienie Białego Domu.
+- [ ] **Medium — czeski Senat:** sprawdzić wpływ utrzymania większości opozycyjnej na ustawę o finansowaniu mediów publicznych, zmiany konstytucyjne i nominacje do Sądu Konstytucyjnego.
+- [ ] **High — protesty we Francji:** aktualizować bilans zatrzymań i obrażeń, śledztwa dotyczące użycia środków policyjnych oraz wpływ ruchu szkolnego na kampanię prezydencką.
+- [ ] **High — Ormuz i Morze Arabskie:** zweryfikować identyfikację statków, szkody, atrybucję ataków i irańskie twierdzenie o wejściu supertankowca na minę przez UKMTO, IMO, państwa bandery i operatorów.
+- [ ] **Medium — debata o obowiązkowej służbie:** czekać na konkretne propozycje MON lub rządu; rozdzielać pobór, powszechne szkolenie obronne i dobrowolną służbę oraz sprawdzać możliwości szkoleniowe.
+- [ ] **Medium — Syrena-26:** 18 października nadal nie znaleziono oficjalnego podsumowania; ponowić sprawdzenie stron wojewody, RCB i służb bez zakładania, że brak publikacji oznacza brak oceny wewnętrznej.

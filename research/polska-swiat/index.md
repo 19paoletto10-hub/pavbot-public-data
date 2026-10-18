@@ -1,6 +1,22 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-10-17
+Last updated: 2026-10-18
+
+## Update 2026-10-18
+
+Rumunia zestrzeliła nad swoimi wodami terytorialnymi dwa odrzutowe drony
+uderzeniowe rodziny Geran po kolejnych naruszeniach przestrzeni na wschodniej
+flance NATO. Na okupowanym Zachodnim Brzegu zaatakowano konwój dyplomatyczny z
+przedstawicielami Polski, Francji i Belgii; polskim dyplomatom nic się nie
+stało, a izraelska policja wszczęła dochodzenie. W Polsce kolejny protest przed
+Trybunałem Konstytucyjnym rozszerzył spór o status Macieja Berka, zaś sondaż o
+obowiązkowej służbie wojskowej pokazał niemal równy podział opinii. Kongres USA
+ponadpartyjnie krytykuje zawieszenie sankcji wobec Rosji, ale nie ma szybkiej
+ścieżki jego odwrócenia. Prozachodnia opozycja utrzymała kontrolę nad czeskim
+Senatem, we Francji około 550 tys. osób wyszło na ulice, a nowe ataki na
+statki zwiększyły ryzyko w rejonie Ormuz.
+
+Raport: [2026-10-18](runs/2026-10-18.md)
 
 ## Update 2026-10-17
 
