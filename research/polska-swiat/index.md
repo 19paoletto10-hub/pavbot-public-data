@@ -1,63 +1,16 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-10-18
-
-## Update 2026-10-18
-
-Rumunia zestrzeliła nad swoimi wodami terytorialnymi dwa odrzutowe drony
-uderzeniowe rodziny Geran po kolejnych naruszeniach przestrzeni na wschodniej
-flance NATO. Na okupowanym Zachodnim Brzegu zaatakowano konwój dyplomatyczny z
-przedstawicielami Polski, Francji i Belgii; polskim dyplomatom nic się nie
-stało, a izraelska policja wszczęła dochodzenie. W Polsce kolejny protest przed
-Trybunałem Konstytucyjnym rozszerzył spór o status Macieja Berka, zaś sondaż o
-obowiązkowej służbie wojskowej pokazał niemal równy podział opinii. Kongres USA
-ponadpartyjnie krytykuje zawieszenie sankcji wobec Rosji, ale nie ma szybkiej
-ścieżki jego odwrócenia. Prozachodnia opozycja utrzymała kontrolę nad czeskim
-Senatem, we Francji około 550 tys. osób wyszło na ulice, a nowe ataki na
-statki zwiększyły ryzyko w rejonie Ormuz.
-
-Raport: [2026-10-18](runs/2026-10-18.md)
+Last updated: 2026-10-17
 
 ## Update 2026-10-17
 
-Pełne konkluzje Rady Europejskiej przewidują pożyczkę 90 mld euro dla Ukrainy,
-pilne wzmocnienie obrony powietrznej oraz rozwój Eastern Flank Watch, wspólnych
-zakupów i mobilności wojskowej. Polska podkreśla ochronę wydatków na
-bezpieczeństwo, spójność i rolnictwo, ale negocjacje budżetu UE nadal trwają.
-Biały Dom zawiesił zastosowanie kluczowych sankcji ustawy Grahama, podczas gdy
-UE przyjęła 21. pakiet restrykcji i skrytykowała poluzowanie ograniczeń na
-rosyjski diesel. Starshield wciąż ogranicza szybkie ukraińskie platformy, a ONZ
-odnotowała najtragiczniejszy wrzesień pełnoskalowej wojny dla cywilów. Poza
-Europą rosną napięcia wokół list wyborców w Indiach, referendum w Albercie i
-serii ataków na żeglugę w rejonie Ormuz.
+AP podała, że Donald Trump uchylił nowe sankcje wobec Rosji mimo poparcia
+Kongresu; Reuters opisał szerszy kryzys relacji USA–Ukraina. Ukraina rozmawia
+ze SpaceX i Pentagonem o limicie prędkości Starlink, a AP odnotowała co najmniej
+siedem ataków dronowych na statki przy wybrzeżach Rumunii i Bułgarii. W Polsce
+odbył się krajowy trening rodzinny w ponad 1500 punktach.
 
 Raport: [2026-10-17](runs/2026-10-17.md)
-
-## Update 2026-10-16
-
-Prezydent podpisał osiem ustaw i zawetował trzy, zatrzymując zmiany w Kodeksie
-wyborczym, nadzorze nad reklamą polityczną i ustawowym trybie wykonywania
-orzeczeń ETPC. Pierwszy dzień Rady Europejskiej przyniósł konkluzje o energii i
-konkurencyjności, ale nie porozumienie w sprawie budżetu 2028–2034. Ukraina
-potwierdziła uderzenie w rafinerię w obwodzie riazańskim, Starlink wrócił do
-działania, a Rosja wznowiła eksport diesla z Primorska. Seria ataków na Morzu
-Czarnym objęła co najmniej siedem statków i trafi na forum NATO. Obserwatorzy
-ostrzegają przed warunkami wyborów w Serbii, a w Oregonie 16-latek zabił troje
-dzieci i nauczyciela w szkole podstawowej.
-
-Raport: [2026-10-16](runs/2026-10-16.md)
-
-## Update 2026-10-15
-
-W Polsce zaostrzył się spór instytucjonalny wokół statusu Macieja Berka w
-Trybunale Konstytucyjnym. MON zleciło przegląd strategiczny dronów, systemów
-antydronowych, taniego rażenia dalekiego zasięgu i AI oraz zapowiedziało Dron
-Legion. Senat zamknął posiedzenie bilansem 14 ustaw. Rada Europejska rozpoczęła
-dwudniowe obrady, Ukraina zapowiedziała wznowienie ataków na rosyjskie
-rafinerie, a nowe incydenty na Morzu Czarnym i w cieśninie Ormuz zwiększyły
-ryzyko dla żeglugi handlowej.
-
-Raport: [2026-10-15](runs/2026-10-15.md)
 
 ## Update 2026-10-14
 
@@ -1219,3 +1172,9 @@ konfliktowaniu Polaków i Ukraińców.
 - [2026-06-19](runs/2026-06-19.md)
 - [2026-06-18](runs/2026-06-18.md)
 - [2026-06-17](runs/2026-06-17.md)
+# Stan na 2026-10-18
+
+- 18 października 2026 Polska prowadziła prewencyjne działania lotnictwa w związku z rosyjskim atakiem na Ukrainę; czasowo ograniczono operacje na lotniskach w Lublinie i Rzeszowie, bez potwierdzonego w dostępnych komunikatach nowego naruszenia polskiej przestrzeni powietrznej.
+- Skala ukraińskiego ataku dronowego na Rosję i pożary infrastruktury naftowej w rejonie Petersburga zwiększają ryzyko dalszej eskalacji uderzeń w zaplecze energetyczne.
+- Według strony ukraińskiej USA wznowiły przekazywanie danych wywiadowczych; informację traktować jako wymagającą potwierdzenia i monitorować jej trwałość.
+
