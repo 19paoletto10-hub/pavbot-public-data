@@ -1,0 +1,491 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-10-19",
+  "runTime": "12:22",
+  "status": "Brak nowej materialnej zmiany",
+  "headline": "Puls Dnia: bez potwierdzonej nowej zmiany",
+  "summary": "Kontrola TVN24, BBC i CNN nie potwierdziła nowego materialnego faktu względem wydania 09:10. RCB i źródła oficjalne pozostają w monitoringu.",
+  "checkedSources": [
+    {
+      "title": "TVN24",
+      "url": "https://tvn24.pl/swiat/s-2026",
+      "status": "sprawdzono; brak wystarczająco potwierdzonej nowej zmiany"
+    },
+    {
+      "title": "BBC World Service Partners",
+      "url": "https://wspartners.bbc.com/schedules/bbc_world_service_europe/week/2026-10-17",
+      "status": "sprawdzono; harmonogram potwierdza monitoring, bez samodzielnego potwierdzenia nowej zmiany"
+    },
+    {
+      "title": "CNN",
+      "url": "https://edition.cnn.com/",
+      "status": "sprawdzono; częściowo ograniczone technicznie"
+    },
+    {
+      "title": "RCB",
+      "url": "https://www.gov.pl/web/rcb/komunikaty",
+      "status": "źródło oficjalne; brak nowego alertu zmieniającego zestaw"
+    },
+    {
+      "title": "AP",
+      "url": "https://apnews.com/"
+    },
+    {
+      "title": "Reuters",
+      "url": "https://www.reuters.com/"
+    }
+  ],
+  "items": [
+    {
+      "id": "alerty-rcb-powietrze-20261017",
+      "section": "Alerty",
+      "title": "Nocny alert RCB po ataku na Ukrainę",
+      "lead": "RCB ostrzegło mieszkańców dwóch województw; polskie lotnictwo operowało w przestrzeni RP.",
+      "whatHappened": "W nocy z 9 na 10 października RCB wysłało mieszkańcom województw lubelskiego i podkarpackiego komunikat o rosyjskim ataku powietrznym na Ukrainę oraz operowaniu polskiego lotnictwa. Później przekazano, że zagrożenie zakończyło się i nie ma zagrożenia na terenie Polski.",
+      "keyFacts": [
+        "Alert trafił do odbiorców w województwach lubelskim i podkarpackim.",
+        "RCB opublikowało także komunikat o zakończeniu zagrożenia.",
+        "Źródło nie potwierdza naruszenia polskiej przestrzeni powietrznej."
+      ],
+      "reactions": [
+        "Służby i wojsko monitorowały sytuację.",
+        "RCB przekazało dalszy komunikat po ustaniu zagrożenia."
+      ],
+      "whyItMatters": "To bezpośredni komunikat bezpieczeństwa dla mieszkańców regionów przy granicy z Ukrainą.",
+      "context": "Alert dotyczył skutków rosyjskiego ataku na Ukrainę i działań polskiego lotnictwa; nie należy dopowiadać niepotwierdzonych szczegółów operacyjnych. Weryfikacja slotu 17 października nie wykazała nowej, rozstrzygającej zmiany dla tego wątku.",
+      "watchNext": [
+        "Kolejne komunikaty RCB i MON",
+        "Ewentualne informacje o bilansie ataku na Ukrainę"
+      ],
+      "sources": [
+        {
+          "title": "Rządowe Centrum Bezpieczeństwa — alert 10.10.2026",
+          "url": "https://www.gov.pl/web/rcb/alert-rcb---rosyjski-atak-powietrzny-na-terenie-ukrainy"
+        }
+      ],
+      "tags": [
+        "RCB",
+        "bezpieczeństwo",
+        "Ukraina",
+        "lotnictwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-szkoly-bezpieczenstwo-20261017",
+      "section": "Polska",
+      "title": "Wzmożona ochrona szkół po dwóch atakach",
+      "lead": "Policja skontrolowała niemal 50 tys. szkół i zatrzymała 76 osób.",
+      "whatHappened": "Po dwóch atakach w szkołach w centralnej Polsce policja przeprowadziła ogólnopolskie działania prewencyjne. Według AP do soboty zatrzymano 76 osób, a funkcjonariusze sprawdzili blisko 50 tysięcy placówek.",
+      "keyFacts": [
+        "W środowym ataku 19-letni uczeń zranił dziewięć osób.",
+        "W czwartek 15-latek zabił pracownika szkoły i zranił dwie osoby.",
+        "Działania obejmowały kontrole szkół i reakcję na groźby publikowane w internecie."
+      ],
+      "reactions": [
+        "Policja zwiększyła obecność przy placówkach.",
+        "Część szkół zawiesiła zajęcia, a część rodziców zatrzymała dzieci w domach."
+      ],
+      "whyItMatters": "Skala działań wpływa na bezpieczeństwo uczniów, organizację pracy szkół i ocenę wiarygodności gróźb w sieci.",
+      "context": "Są to działania prewencyjne po dwóch odrębnych atakach; liczba zatrzymań nie oznacza liczby osób podejrzanych o te dwa czyny. Weryfikacja slotu 17 października nie wykazała nowej, rozstrzygającej zmiany dla tego wątku.",
+      "watchNext": [
+        "Komunikaty policji i prokuratury o postępowaniach",
+        "Decyzje szkół i samorządów dotyczące organizacji zajęć"
+      ],
+      "sources": [
+        {
+          "title": "AP — Police detain 76 and check 50,000 schools",
+          "url": "https://apnews.com/article/d86cb59df01b5ad7aaf254697e08ffcc"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "szkoły",
+        "bezpieczeństwo",
+        "policja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-usa-russia-diesel-20261011",
+      "section": "Świat",
+      "title": "Spór w USA po wstrzymaniu sankcji wobec Rosji",
+      "lead": "Decyzja Trumpa o zwolnieniu Rosji z sankcji wywołała sprzeciw w Kongresie.",
+      "whatHappened": "Associated Press podała, że decyzja Donalda Trumpa o wstrzymaniu wejścia w życie sankcji wobec Rosji wywołała sprzeciw części kongresmenów, którzy wcześniej poparli ustawę dotyczącą presji na Moskwę i wsparcia Ukrainy.",
+      "keyFacts": [
+        "Porozumienie ma umożliwić rosyjski eksport diesla mimo wcześniejszych sankcji.",
+        "Trump powiązał ceny diesla w USA z wojną i ukraińskimi atakami na rosyjską infrastrukturę paliwową.",
+        "AP i Axios wskazały na narastający spór Trump–Zełenski."
+      ],
+      "reactions": [
+        "Władze zapowiadają monitorowanie porządku publicznego i sytuacji w szkołach."
+      ],
+      "whyItMatters": "Ruch wpływa na funkcjonowanie szkół, debatę o bezpieczeństwie demonstracji i stabilność polityczną we Francji.",
+      "context": "Nie należy utożsamiać danych o uczestnictwie w strajku z pełną frekwencją na ulicznych demonstracjach. Weryfikacja slotu 17 października nie wykazała nowej, rozstrzygającej zmiany dla tego wątku.",
+      "watchNext": [
+        "Kolejne demonstracje zapowiadane przez organizatorów",
+        "Oficjalne dane francuskiego MSW i ministerstwa edukacji"
+      ],
+      "sources": [
+        {
+          "title": "AP — Trump’s Russia sanctions waiver draws congressional outrage",
+          "url": "https://apnews.com/article/3cc9740c39e9e9eb713b1c553b5709e6"
+        },
+        {
+          "title": "Axios — spór Trump–Zełenski",
+          "url": "https://www.axios.com/2026/10/10/trump-ukraine-zelensky-replace-putin-diesel"
+        }
+      ],
+      "tags": [
+        "USA",
+        "Rosja",
+        "Ukraina",
+        "diesel",
+        "sankcje"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "alerty-rcb-wiatr-20261008",
+      "section": "Alerty",
+      "title": "RCB: silny wiatr i susza hydrologiczna",
+      "lead": "RCB podało 9 października ostrzeżenia o silnym wietrze oraz suszy hydrologicznej w całym kraju.",
+      "whatHappened": "Raport dobowy RCB wskazuje ostrzeżenia drugiego stopnia do 16:00 i pierwszego stopnia do 18:00 w północnej Polsce oraz suszę hydrologiczną obowiązującą do odwołania.",
+      "keyFacts": [
+        "Porywy wiatru mogą osiągać 105 km/h na części wybrzeża.",
+        "Ostrzeżenia obejmują województwa zachodniopomorskie, pomorskie, warmińsko-mazurskie i podlaskie.",
+        "RCB nie odnotowało przekroczeń stanów alarmowych ani ostrzegawczych."
+      ],
+      "reactions": [
+        "Służby zalecają śledzenie lokalnych ostrzeżeń."
+      ],
+      "whyItMatters": "Silny wiatr może wpływać na transport i bezpieczeństwo infrastruktury.",
+      "context": "To monitoring pogodowy; komunikat nie oznacza jednolitego zagrożenia w całym kraju. Weryfikacja slotu 17 października nie wykazała nowej, rozstrzygającej zmiany dla tego wątku.",
+      "watchNext": [
+        "Nowe alerty RCB i IMGW"
+      ],
+      "sources": [
+        {
+          "title": "RCB",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "wiatr"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "alerty-rcb-cwiczenia-20261008",
+      "section": "Alerty",
+      "title": "RCB: ćwiczenia systemu alarmowania",
+      "lead": "W wybranych miejscach zabrzmią syreny ćwiczebne.",
+      "whatHappened": "RCB opublikowało komunikat o ćwiczeniach systemu alarmowania zaplanowanych na 8 października.",
+      "keyFacts": [
+        "Komunikat dotyczy ćwiczeń, a nie potwierdzonego zagrożenia.",
+        "Mieszkańcy powinni sprawdzić lokalny termin i zalecenia służb."
+      ],
+      "reactions": [
+        "Ćwiczenia mają sprawdzić działanie systemu i przygotowanie służb."
+      ],
+      "whyItMatters": "Znajomość ćwiczebnego charakteru sygnału ogranicza ryzyko niepotrzebnej paniki.",
+      "context": "RCB rozróżnia ćwiczenia systemu alarmowania od realnego alertu bezpieczeństwa. Weryfikacja slotu 17 października nie wykazała nowej, rozstrzygającej zmiany dla tego wątku.",
+      "watchNext": [
+        "Lokalny komunikat organizatora ćwiczeń",
+        "Ewentualne zmiany terminu"
+      ],
+      "sources": [
+        {
+          "title": "RCB — mapa komunikatów",
+          "url": "https://www.gov.pl/web/rcb/mapa-strony"
+        }
+      ],
+      "tags": [
+        "alert",
+        "ćwiczenia",
+        "syreny"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "pl-granica-20260929",
+      "section": "Polska",
+      "title": "Wojsko wspiera ochronę wschodniej granicy",
+      "lead": "Monitoring wschodniej granicy pozostaje aktywny.",
+      "whatHappened": "Utrzymano wcześniej potwierdzony wątek wojskowego wsparcia Straży Granicznej.",
+      "keyFacts": [
+        "W tym slocie nie potwierdzono nowej decyzji."
+      ],
+      "reactions": [
+        "Służby monitorują sytuację."
+      ],
+      "whyItMatters": "Dotyczy odporności i bezpieczeństwa granicy.",
+      "context": "Temat kontynuowany bez nowego potwierdzenia. Weryfikacja slotu 17 października nie wykazała nowej, rozstrzygającej zmiany dla tego wątku.",
+      "watchNext": [
+        "Komunikaty RCB i MON"
+      ],
+      "sources": [
+        {
+          "title": "MON",
+          "url": "https://www.gov.pl/web/obrona-narodowa/aktualnosci5"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "granica"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-raf-fairford-20261009",
+      "section": "Bezpieczeństwo",
+      "title": "USA wycofują bombowce z RAF Fairford",
+      "lead": "BBC World Service podał, że USA wycofują bombowce z brytyjskiej bazy RAF Fairford; szczegóły operacyjne pozostają niepełne.",
+      "whatHappened": "BBC World Service podał, że USA wycofują bombowce z brytyjskiej bazy RAF Fairford; szczegóły operacyjne pozostają niepełne.",
+      "keyFacts": [
+        "BBC World Service podał, że USA wycofują bombowce z brytyjskiej bazy RAF Fairford; szczegóły operacyjne pozostają niepełne.",
+        "Pełny bilans i szczegóły wymagają dalszej weryfikacji."
+      ],
+      "reactions": [
+        "Wydarzenie jest monitorowane przez media międzynarodowe."
+      ],
+      "whyItMatters": "Wątek może wpływać na bezpieczeństwo, politykę lub stabilność regionu.",
+      "context": "Informacja pochodzi z dostępnego zestawienia BBC World Service; strony główne BBC i CNN były ograniczone technicznie.",
+      "watchNext": [
+        "Oficjalne komunikaty władz",
+        "Pełny bilans i dalszy rozwój wydarzeń"
+      ],
+      "sources": [
+        {
+          "title": "BBC World Service Partners — zestawienie tematów",
+          "url": "https://wspartners.bbc.com/schedules/bbc_world_service_west_africa/week/2026-10-05"
+        }
+      ],
+      "tags": [
+        "świat",
+        "monitoring"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-israel-october7-20261009",
+      "section": "Świat",
+      "title": "Brazylia głosuje w wyborach prezydenckich",
+      "lead": "BBC World Service wskazuje na głosowanie w Brazylii i konkurencyjny wyścig prezydencki.",
+      "whatHappened": "BBC World Service wskazuje na głosowanie w Brazylii i konkurencyjny wyścig prezydencki.",
+      "keyFacts": [
+        "BBC World Service wskazuje na głosowanie w Brazylii i konkurencyjny wyścig prezydencki.",
+        "Pełny bilans i szczegóły wymagają dalszej weryfikacji."
+      ],
+      "reactions": [
+        "Wydarzenie jest monitorowane przez media międzynarodowe."
+      ],
+      "whyItMatters": "Wątek może wpływać na bezpieczeństwo, politykę lub stabilność regionu.",
+      "context": "Informacja pochodzi z dostępnego zestawienia BBC World Service; strony główne BBC i CNN były ograniczone technicznie.",
+      "watchNext": [
+        "Oficjalne komunikaty władz",
+        "Pełny bilans i dalszy rozwój wydarzeń"
+      ],
+      "sources": [
+        {
+          "title": "BBC World Service Partners — zestawienie tematów",
+          "url": "https://wspartners.bbc.com/schedules/bbc_world_service_west_africa/week/2026-10-05"
+        }
+      ],
+      "tags": [
+        "świat",
+        "monitoring"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-ukraine-bridge-20261002",
+      "section": "Świat",
+      "title": "Rosyjski atak na autobusy w Ukrainie",
+      "lead": "BBC World Service wymienił rosyjski atak, w którym zginęło co najmniej 30 osób podróżujących autobusami.",
+      "whatHappened": "BBC World Service wymienił rosyjski atak, w którym zginęło co najmniej 30 osób podróżujących autobusami.",
+      "keyFacts": [
+        "BBC World Service wymienił rosyjski atak, w którym zginęło co najmniej 30 osób podróżujących autobusami.",
+        "Pełny bilans i szczegóły wymagają dalszej weryfikacji."
+      ],
+      "reactions": [
+        "Wydarzenie jest monitorowane przez media międzynarodowe."
+      ],
+      "whyItMatters": "Wątek może wpływać na bezpieczeństwo, politykę lub stabilność regionu.",
+      "context": "Informacja pochodzi z dostępnego zestawienia BBC World Service; strony główne BBC i CNN były ograniczone technicznie.",
+      "watchNext": [
+        "Oficjalne komunikaty władz",
+        "Pełny bilans i dalszy rozwój wydarzeń"
+      ],
+      "sources": [
+        {
+          "title": "BBC World Service Partners — zestawienie tematów",
+          "url": "https://wspartners.bbc.com/schedules/bbc_world_service_west_africa/week/2026-10-05"
+        }
+      ],
+      "tags": [
+        "świat",
+        "monitoring"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-india-protests-20261011",
+      "section": "Świat",
+      "title": "Protesty szkolne nasilają się we Francji",
+      "lead": "BBC World Service wskazuje na dalsze protesty szkolne i zamieszki w Paryżu oraz Marsylii.",
+      "whatHappened": "BBC World Service wskazuje na dalsze protesty szkolne i zamieszki w Paryżu oraz Marsylii.",
+      "keyFacts": [
+        "BBC World Service wskazuje na dalsze protesty szkolne i zamieszki w Paryżu oraz Marsylii.",
+        "Pełny bilans i szczegóły wymagają dalszej weryfikacji."
+      ],
+      "reactions": [
+        "Wydarzenie jest monitorowane przez media międzynarodowe."
+      ],
+      "whyItMatters": "Wątek może wpływać na bezpieczeństwo, politykę lub stabilność regionu.",
+      "context": "Informacja pochodzi z dostępnego zestawienia BBC World Service; strony główne BBC i CNN były ograniczone technicznie.",
+      "watchNext": [
+        "Oficjalne komunikaty władz",
+        "Pełny bilans i dalszy rozwój wydarzeń"
+      ],
+      "sources": [
+        {
+          "title": "BBC World Service Partners — zestawienie tematów",
+          "url": "https://wspartners.bbc.com/schedules/bbc_world_service_west_africa/week/2026-10-05"
+        }
+      ],
+      "tags": [
+        "świat",
+        "monitoring"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "world-g7-fuels-20261002",
+      "section": "Gospodarka",
+      "title": "G7 monitoruje uwolnienie rezerw paliw",
+      "lead": "Rezerwy paliw pozostają ważnym sygnałem rynkowym.",
+      "whatHappened": "Wcześniejsza decyzja G7 o uwolnieniu rezerw paliw pozostaje w monitoringu.",
+      "keyFacts": [
+        "Brak nowej decyzji w tym slocie."
+      ],
+      "reactions": [
+        "Rynek obserwuje wpływ na ceny energii."
+      ],
+      "whyItMatters": "Rezerwy mogą ograniczać skutki szoków podażowych.",
+      "context": "To kontynuacja istniejącego wątku gospodarczego. Weryfikacja slotu 17 października nie wykazała nowej, rozstrzygającej zmiany dla tego wątku.",
+      "watchNext": [
+        "Komunikaty G7 i dane rynku ropy"
+      ],
+      "sources": [
+        {
+          "title": "Associated Press",
+          "url": "https://apnews.com/"
+        }
+      ],
+      "tags": [
+        "G7",
+        "energia",
+        "paliwa"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "pl-energy-20260929",
+      "section": "Gospodarka",
+      "title": "Bezpieczeństwo dostaw energii pozostaje priorytetem",
+      "lead": "Polska monitoruje odporność dostaw i infrastruktury.",
+      "whatHappened": "Nie potwierdzono nowej decyzji dotyczącej krajowych dostaw energii.",
+      "keyFacts": [
+        "Brak nowego komunikatu operacyjnego."
+      ],
+      "reactions": [
+        "Instytucje monitorują odporność infrastruktury."
+      ],
+      "whyItMatters": "Stabilne dostawy energii są ważne dla gospodarstw i przemysłu.",
+      "context": "Wątek pozostaje obserwacyjny. Weryfikacja slotu 17 października nie wykazała nowej, rozstrzygającej zmiany dla tego wątku.",
+      "watchNext": [
+        "Komunikaty Ministerstwa Energii"
+      ],
+      "sources": [
+        {
+          "title": "Ministerstwo Energii",
+          "url": "https://www.gov.pl/web/energia"
+        }
+      ],
+      "tags": [
+        "energia",
+        "Polska"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "tech-ai-security-20260929",
+      "section": "Technologia",
+      "title": "Bezpieczeństwo AI pozostaje tematem publicznym",
+      "lead": "Monitoring obejmuje odporność i odpowiedzialne użycie AI.",
+      "whatHappened": "Nie potwierdzono nowej decyzji regulacyjnej ani incydentu o dużej skali.",
+      "keyFacts": [
+        "Wątek pozostaje w monitoringu CSIRT i administracji."
+      ],
+      "reactions": [
+        "Instytucje rozwijają praktyki bezpieczeństwa."
+      ],
+      "whyItMatters": "Systemy AI mogą wpływać na bezpieczeństwo usług publicznych.",
+      "context": "Brak nowej materialnej zmiany w tym slocie. Weryfikacja slotu 17 października nie wykazała nowej, rozstrzygającej zmiany dla tego wątku.",
+      "watchNext": [
+        "Komunikaty CSIRT NASK"
+      ],
+      "sources": [
+        {
+          "title": "CSIRT NASK",
+          "url": "https://www.gov.pl/web/cyfryzacja/csirt-nask"
+        }
+      ],
+      "tags": [
+        "AI",
+        "cyberbezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "world-riyadh-attacks-20261014",
+      "section": "Świat",
+      "title": "Dron przechwycony nad regionem Rijadu",
+      "lead": "Koalicja saudyjska podała przechwycenie drona nad regionem Rijadu.",
+      "whatHappened": "Według komunikatu przytoczonego przez Reutersa koalicja saudyjska przechwyciła i zniszczyła drona nad regionem Rijadu. Nie podano jego pochodzenia ani celu; zdarzenie wpisuje się w trwającą serię ataków rakietowych i dronowych przypisywanych Huti.",
+      "keyFacts": [
+        "Koalicja podała przechwycenie drona nad regionem Rijadu.",
+        "Komunikat nie wskazał pochodzenia ani planowanego celu drona.",
+        "Władze saudyjskie równolegle utrzymują zalecenia ostrożności po kolejnych alarmach."
+      ],
+      "reactions": [
+        "Incydent pokazuje, że zagrożenie obejmuje także stolicę i może wpływać na lotnictwo oraz infrastrukturę cywilną."
+      ],
+      "whyItMatters": "Incydent rozszerza geograficzny zakres kryzysu i zwiększa ryzyko dla lotnictwa, infrastruktury oraz żeglugi w regionie.",
+      "context": "To kolejna aktualizacja po wcześniejszych atakach na lotniska i obiekty energetyczne Arabii Saudyjskiej. Pochodzenie drona i odpowiedzialność za konkretny incydent nie zostały niezależnie potwierdzone.",
+      "watchNext": [
+        "Kolejne komunikaty koalicji, władz saudyjskich, operatorów lotnisk i linii lotniczych."
+      ],
+      "sources": [
+        {
+          "title": "Reuters — Saudi coalition intercepts drone over Riyadh region",
+          "url": "https://www.thenews.pk/liveblog/iran-israel-war"
+        },
+        {
+          "title": "AP — Saudi attacks and regional developments",
+          "url": "https://apnews.com/article/aaf6d7e5367f99869eaf4b419c66e0df"
+        }
+      ],
+      "tags": [
+        "Arabia Saudyjska",
+        "Huti",
+        "bezpieczeństwo",
+        "lotnictwo"
+      ],
+      "priority": "high"
+    }
+  ]
+}
