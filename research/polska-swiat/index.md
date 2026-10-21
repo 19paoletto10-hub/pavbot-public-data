@@ -1,6 +1,29 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-10-17
+Last updated: 2026-10-20
+
+## Update 2026-10-20
+
+AP podała, że kolejny rosyjski atak rakietowo-dronowy zabił co najmniej dziewięć
+osób. W Oslo Zełenski rozmawia z wysłannikiem USA Steve’em Witkoffem i
+partnerami europejskimi o obronie powietrznej, produkcji broni i możliwym torze
+negocjacji. Reuters raportował planowany udział Polski w formacie E4, ale premier
+Donald Tusk temu zaprzeczył; status udziału Warszawy pozostaje nierozstrzygnięty.
+RCB utrzymuje komunikat z 19 października o braku zagrożenia na terytorium RP.
+
+Raport: [2026-10-20](runs/2026-10-20.md)
+
+## Update 2026-10-19
+
+Incydent dronowy na Litwie stał się nowym wątkiem bezpieczeństwa Polski i NATO.
+Litwa podała, że ukraiński dron nadleciał od strony Polski, a polskie MON
+potwierdziło ukraińskie pochodzenie obiektu, lecz zdementowało niepotwierdzone
+informacje o jego trasie. Reuters i AP opisały szeroki rosyjski atak na
+ukraińską energetykę oraz deklarowany przez Ukrainę brak wcześniejszego
+ostrzeżenia od partnerów. Polska policja uznała sytuację w szkołach za
+ustabilizowaną.
+
+Raport: [2026-10-19](runs/2026-10-19.md)
 
 ## Update 2026-10-17
 

@@ -1,5 +1,13 @@
 # Topic Backlog: polska-swiat
 
+## 2026-10-20 follow-up
+
+| Priority | Item | Reason | Next Step | Status |
+| --- | --- | --- | --- | --- |
+| High | Verify Poland's participation in Oslo talks | Reuters reported Polish participation in E4 while Prime Minister Tusk denied it | Check KPRM, MSZ, Norway, EU and NATO readouts and participant lists | Open |
+| High | Track 20 October Russian strike and Oslo diplomacy | AP reports at least nine killed during renewed talks on air defence and peace | Check final casualty balance, infrastructure damage, air-defence commitments and Witkoff's Russia itinerary | Open |
+| Medium | Track RCB/MON response after 20 October attacks | RCB's 19 October notice says no threat in Poland, but it is tied to the earlier incident | Recheck RCB, MON and DORSZ for any new alert or airspace statement | Open |
+
 ## Active
 
 | Priority | Item | Reason | Next Step | Status |
@@ -617,4 +625,10 @@
 - Sprawdzić, czy administracja USA oficjalnie potwierdziła zakres i trwałość wznowionego udostępniania danych wywiadowczych Ukrainie.
 - Monitorować komunikaty Dowództwa Operacyjnego RSZ, RCB i PAŻP po dzisiejszych prewencyjnych działaniach lotnictwa oraz ewentualne powtórzenie ograniczeń na lotniskach wschodniej Polski.
 - Zweryfikować niezależnie skalę szkód w rosyjskiej infrastrukturze naftowej po ukraińskim ataku dronowym; nie utożsamiać pożarów z trwałym wyłączeniem obiektów bez danych operacyjnych.
+
+## 2026-10-19
+
+- [ ] Ustalić wspólnie z komunikatów Litwy, Polski i Ukrainy trasę drona, który eksplodował na Litwie; nie przedstawiać przejścia przez Polskę jako potwierdzonego.
+- [ ] Sprawdzić, czy NATO opublikuje techniczne ustalenia lub zwoła konsultacje po incydencie litewskim.
+- [ ] Monitorować przywracanie dostaw energii w Ukrainie i oficjalne wyjaśnienia dotyczące braku wcześniejszego ostrzeżenia.
 
