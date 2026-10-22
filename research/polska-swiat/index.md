@@ -1,15 +1,39 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-10-20
+Last updated: 2026-10-22
+
+## Update 2026-10-22
+
+Rosja zaakceptowała co do zasady wznowienie po 10 listopada trójstronnych
+rozmów technicznych z Ukrainą i USA, ale bez uzgodnionej daty i zawieszenia
+broni. NATO ma otworzyć Ukrainie scentralizowany kanał zakupów uzbrojenia.
+Polska chce zabezpieczeń dla rynku rolnego w negocjacjach akcesyjnych Ukrainy,
+a RMF24 ujawniło umowę o poufności MON z Palantirem; resort zaprzecza
+przekazywaniu danych niejawnych lub wrażliwych.
+
+Raport: [2026-10-22](runs/2026-10-22.md)
+
+## Update 2026-10-21
+
+Rozmowy w Oslo przyniosły deklarację postępu w sprawach gwarancji
+bezpieczeństwa i odbudowy, ale nie zakończyły się porozumieniem pokojowym.
+Ukraina poinformowała o przywróceniu danych wczesnego ostrzegania, podczas gdy
+USA wskazują na ograniczoną dostępność pocisków Patriot. Sejm przyjął dwa
+projekty łagodzące prawo aborcyjne, a NATO zapowiedziało dodatkowe zdolności
+na Morzu Czarnym.
+
+Raport: [2026-10-21](runs/2026-10-21.md)
 
 ## Update 2026-10-20
 
-AP podała, że kolejny rosyjski atak rakietowo-dronowy zabił co najmniej dziewięć
-osób. W Oslo Zełenski rozmawia z wysłannikiem USA Steve’em Witkoffem i
-partnerami europejskimi o obronie powietrznej, produkcji broni i możliwym torze
-negocjacji. Reuters raportował planowany udział Polski w formacie E4, ale premier
-Donald Tusk temu zaprzeczył; status udziału Warszawy pozostaje nierozstrzygnięty.
-RCB utrzymuje komunikat z 19 października o braku zagrożenia na terytorium RP.
+Polska została wymieniona jako uczestnik planowanych rozmów o Ukrainie w Oslo
+w formacie E4, obok Wielkiej Brytanii, Francji i Niemiec. Poranny rosyjski
+atak na Ukrainę uruchomił polskie lotnictwo, alert RCB i czasowe ograniczenia
+na lotniskach w Lublinie i Rzeszowie; alert odwołano bez potwierdzenia
+zagrożenia w Polsce. Ukraina zarzuca Pentagonowi opóźnianie przekazania rakiet
+przechwytujących opłaconych przez Europę. Cersanit i Barlinek wstrzymały
+produkcję w Ukrainie, a Bułgaria wydała europejskie nakazy aresztowania po
+podpaleniu anten Starlink.
 
 Raport: [2026-10-20](runs/2026-10-20.md)
 
