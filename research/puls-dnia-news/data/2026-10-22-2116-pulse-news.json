@@ -1,0 +1,521 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-10-22",
+  "runTime": "21:16",
+  "status": "Brak materialnej zmiany względem wydania 2026-10-22 14:58; utrzymano 14 kart po ponownym sprawdzeniu TVN24, BBC, CNN i źródeł oficjalnych.",
+  "headline": "Puls Dnia: monitoring napięć i bezpieczeństwa",
+  "summary": "Ponowny przegląd nie przyniósł nowej, niezależnie potwierdzonej zmiany. Utrzymano monitoring bezpieczeństwa Polski, Ukrainy, napięć wokół Arabii Saudyjskiej, rozmów USA–Rosja–Ukraina, energii, AI i cyberbezpieczeństwa.",
+  "checkedSources": [
+    {
+      "title": "TVN24 — najnowsze",
+      "url": "https://tvn24.pl/najnowsze"
+    },
+    {
+      "title": "TVN24 — świat",
+      "url": "https://tvn24.pl/swiat/s-2"
+    },
+    {
+      "title": "BBC World Service",
+      "url": "https://wspartners.bbc.com/schedules/bbc_world_service_europe/week/2026-10-10"
+    },
+    {
+      "title": "CNN",
+      "url": "https://edition.cnn.com/"
+    },
+    {
+      "title": "KW PSP Katowice — Wind Strike 26",
+      "url": "https://www.gov.pl/web/kwpsp-katowice/wojewodzkie-cwiczenia-z-zakresu-zarzadzania-kryzysowego-ochrony-ludnosci-i-obrony-cywilnej-wind-strike-26"
+    },
+    {
+      "title": "RCB — mapa komunikatów",
+      "url": "https://www.gov.pl/web/rcb/mapa-strony"
+    },
+    {
+      "title": "AP — rozmowy i Bliski Wschód",
+      "url": "https://apnews.com/"
+    }
+  ],
+  "items": [
+    {
+      "id": "rcb-alert-20261021",
+      "section": "Alerty",
+      "title": "Alert RCB po ataku na Ukrainę",
+      "lead": "RCB ostrzegło mieszkańców wschodniej Polski.",
+      "whatHappened": "RCB poinformowało o rosyjskim ataku na Ukrainę i operowaniu polskiego lotnictwa.",
+      "keyFacts": [
+        "Komunikat dotyczył 21 października.",
+        "Objęto nim wskazane powiaty Lubelszczyzny i Podkarpacia.",
+        "Sytuacja była monitorowana."
+      ],
+      "reactions": [
+        "Służby prowadzą obserwację."
+      ],
+      "whyItMatters": "To bezpośrednia informacja bezpieczeństwa dla mieszkańców.",
+      "context": "Alert nie oznacza potwierdzonego zagrożenia w RP.",
+      "watchNext": [
+        "RCB",
+        "MON",
+        "Dowództwo Operacyjne"
+      ],
+      "sources": [
+        {
+          "title": "RCB/PAP",
+          "url": "https://pap-mediaroom.pl/polityka-i-spoleczenstwo/rcb-rosyjski-atak-powietrzny-na-terenie-ukrainy-komunikat-17"
+        }
+      ],
+      "tags": [
+        "RCB",
+        "bezpieczeństwo",
+        "Ukraina"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "wind-strike-20261021",
+      "section": "Bezpieczeństwo",
+      "title": "Ćwiczenia Wind Strike 26",
+      "lead": "Śląskie służby testują reagowanie kryzysowe.",
+      "whatHappened": "Na Śląsku zaplanowano ćwiczenia ochrony ludności i zarządzania kryzysowego.",
+      "keyFacts": [
+        "Ćwiczenia obejmują około 1400 osób.",
+        "Zaplanowano 20 epizodów.",
+        "Mają charakter szkoleniowy."
+      ],
+      "reactions": [
+        "Administracja testuje koordynację służb."
+      ],
+      "whyItMatters": "Ćwiczenia skracają reakcję podczas realnych zdarzeń.",
+      "context": "To nie jest komunikat o realnym zagrożeniu.",
+      "watchNext": [
+        "Śląski Urząd Wojewódzki",
+        "PSP"
+      ],
+      "sources": [
+        {
+          "title": "Śląski Urząd Wojewódzki",
+          "url": "https://www.katowice.uw.gov.pl/aktualnosci/wojewodzkie-cwiczenia-wind-strike-26-wezmie-w-nich-udzial-okolo-1400-osob"
+        }
+      ],
+      "tags": [
+        "Śląsk",
+        "ćwiczenia",
+        "ochrona ludności"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "ukraine-warning-20261021",
+      "section": "Świat",
+      "title": "Ukraina i system wczesnego ostrzegania",
+      "lead": "Kijów informuje o wznowieniu wsparcia ostrzegania.",
+      "whatHappened": "Po rozmowie Zełenskiego z Rubio wznowiono system wczesnego ostrzegania przed atakami.",
+      "keyFacts": [
+        "System wspiera ostrzeganie ludności.",
+        "Informację podała AP.",
+        "Zakres wsparcia nie jest pełny."
+      ],
+      "reactions": [
+        "Kijów zabiega o utrzymanie pomocy USA."
+      ],
+      "whyItMatters": "Wczesne ostrzeganie może ograniczać straty cywilne.",
+      "context": "To relacja o komunikacie strony ukraińskiej.",
+      "watchNext": [
+        "Kijów",
+        "Waszyngton"
+      ],
+      "sources": [
+        {
+          "title": "AP",
+          "url": "https://apnews.com/article/140895c6c0a1682c46f4fe197e056996"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "obrona",
+        "technologia"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "russia-ukraine-talks-20261021",
+      "section": "Polityka",
+      "title": "Kreml deklaruje gotowość do rozmów trójstronnych",
+      "lead": "Moskwa sygnalizuje powrót do formatu USA–Rosja–Ukraina.",
+      "whatHappened": "Według AP doradca Kremla przekazał, że Władimir Putin zgodził się na wznowienie trójstronnych rozmów z udziałem Rosji, Ukrainy i Stanów Zjednoczonych. Rozmowy mają dotyczyć powojennego systemu bezpieczeństwa.",
+      "keyFacts": [
+        "Informację podała AP 21 października 2026.",
+        "To deklaracja strony rosyjskiej, a nie podpisane porozumienie.",
+        "Nie ustalono jeszcze publicznie terminu ani warunków spotkania."
+      ],
+      "reactions": [
+        "Waszyngton i Kijów muszą potwierdzić format oraz agendę.",
+        "Dotychczasowe stanowiska stron pozostają rozbieżne."
+      ],
+      "whyItMatters": "Może powstać nowy kanał dyplomatyczny, ale sama deklaracja nie oznacza zawieszenia walk ani przełomu negocjacyjnego.",
+      "context": "Witkoff spotkał się wcześniej z Putinem, a administracja USA zabiega o rozmowy dotyczące zakończenia wojny.",
+      "watchNext": [
+        "Potwierdzenie przez USA i Ukrainę.",
+        "Termin i skład rozmów.",
+        "Ewentualne warunki dotyczące bezpieczeństwa Ukrainy."
+      ],
+      "sources": [
+        {
+          "title": "Kreml i rozmowy trójstronne",
+          "url": "https://apnews.com/article/3f00c0c6fd10bab948c2c3f8502e0a91"
+        }
+      ],
+      "tags": [
+        "Rosja",
+        "Ukraina",
+        "USA",
+        "dyplomacja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "us-ukraine-20261021",
+      "section": "Polityka",
+      "title": "Presja USA na zakończenie wojny",
+      "lead": "Waszyngton i Kijów utrzymują kanał rozmów.",
+      "whatHappened": "AP i Reuters opisały presję Trumpa oraz rozmowy Zełenskiego z przedstawicielami USA.",
+      "keyFacts": [
+        "Nie ma potwierdzonego porozumienia.",
+        "Rozmowy dotyczą dalszego wsparcia.",
+        "Stanowisko USA pozostaje zmienne."
+      ],
+      "reactions": [
+        "Europejscy sojusznicy obserwują Waszyngton."
+      ],
+      "whyItMatters": "Polityka USA wpływa na bezpieczeństwo Europy.",
+      "context": "Nie ma harmonogramu rozmów pokojowych.",
+      "watchNext": [
+        "Biały Dom",
+        "Kijów",
+        "UE"
+      ],
+      "sources": [
+        {
+          "title": "Reuters",
+          "url": "https://www.marketscreener.com/news/zelenskiy-to-meet-witkoff-as-trump-praises-russia-and-rebukes-ukraine-ce785cd8d989f52d"
+        },
+        {
+          "title": "AP",
+          "url": "https://apnews.com/article/140895c6c0a1682c46f4fe197e056996"
+        }
+      ],
+      "tags": [
+        "USA",
+        "Ukraina",
+        "dyplomacja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "ukraine-casualties-20261021",
+      "section": "Świat",
+      "title": "Skutki ataków w Ukrainie",
+      "lead": "Bilans ofiar i zniszczeń pozostaje niepełny.",
+      "whatHappened": "AP opisała ofiary i uszkodzenia budynków po rosyjskich atakach.",
+      "keyFacts": [
+        "Wśród rannych są dzieci.",
+        "Dane są bieżącym bilansem medialnym.",
+        "Akcja ratunkowa trwała."
+      ],
+      "reactions": [
+        "Służby oceniają szkody."
+      ],
+      "whyItMatters": "Ataki uderzają w ludność cywilną.",
+      "context": "To nie jest końcowe podsumowanie władz.",
+      "watchNext": [
+        "władze Ukrainy",
+        "PAP"
+      ],
+      "sources": [
+        {
+          "title": "AP",
+          "url": "https://apnews.com/article/140895c6c0a1682c46f4fe197e056996"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Rosja",
+        "cywile"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "saudi-airport-20261022",
+      "section": "Bezpieczeństwo",
+      "title": "Obrona Arabii Saudyjskiej",
+      "lead": "Londyn zapowiada defensywne patrole RAF.",
+      "whatHappened": "Wielka Brytania rozszerza wsparcie obronne Arabii Saudyjskiej przeciw atakom Huti.",
+      "keyFacts": [
+        "Misja ma charakter defensywny.",
+        "Celem jest ochrona infrastruktury.",
+        "Region pozostaje napięty."
+      ],
+      "reactions": [
+        "Londyn podkreśla potrzebę rozwiązania politycznego."
+      ],
+      "whyItMatters": "Napięcia mogą wpływać na żeglugę i energię.",
+      "context": "To kolejny etap umiędzynarodowienia obrony Zatoki.",
+      "watchNext": [
+        "Londyn",
+        "Rijad",
+        "żegluga"
+      ],
+      "sources": [
+        {
+          "title": "AP",
+          "url": "https://apnews.com/article/3e56f4679565c985fd036302168a4f79"
+        }
+      ],
+      "tags": [
+        "Arabia Saudyjska",
+        "Huti",
+        "Wielka Brytania"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "riyadh-airport-ormuz-20261021",
+      "section": "Gospodarka",
+      "title": "Rijad częściowo wznawia ruch lotniczy",
+      "lead": "Lotnisko w stolicy Arabii Saudyjskiej działa w ograniczonym trybie.",
+      "whatHappened": "AP podała, że lotnisko w Rijadzie wznowiło ograniczony ruch po wcześniejszych zakłóceniach związanych z napięciami w regionie. Jednocześnie utrzymuje się ryzyko dla statków próbujących przepływać przez cieśninę Ormuz.",
+      "keyFacts": [
+        "Ruch lotniczy wznowiono częściowo.",
+        "Napięcia dotyczą także żeglugi handlowej w Ormuzie.",
+        "W regionie utrzymuje się presja bezpieczeństwa i energetyczna."
+      ],
+      "reactions": [
+        "Przewoźnicy i operatorzy statków aktualizują procedury bezpieczeństwa.",
+        "Zakłócenia mogą wpływać na transport i ceny energii."
+      ],
+      "whyItMatters": "Normalizacja transportu jest niepełna, a Ormuz pozostaje wąskim gardłem dla światowych dostaw energii.",
+      "context": "Wcześniejsze ataki i ostrzeżenia ograniczały ruch lotniczy oraz morski w regionie.",
+      "watchNext": [
+        "Komunikaty lotniska i linii lotniczych.",
+        "Bezpieczeństwo statków w Ormuzie.",
+        "Wpływ na ceny ropy i ubezpieczenia transportu."
+      ],
+      "sources": [
+        {
+          "title": "Rijad i Ormuz",
+          "url": "https://apnews.com/article/f9b9c553a5b3c689fc3c8c5be1d75b94"
+        }
+      ],
+      "tags": [
+        "Arabia Saudyjska",
+        "Ormuz",
+        "energia",
+        "transport"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "gaza-20261021",
+      "section": "Świat",
+      "title": "Sytuacja humanitarna w Gazie",
+      "lead": "Bieżące doniesienia mówią o kolejnych ofiarach.",
+      "whatHappened": "AP opisała śmiertelny atak na mieszkanie w Gazie.",
+      "keyFacts": [
+        "Nie ma pełnego bilansu dnia.",
+        "Sytuacja ludności cywilnej pozostaje niestabilna.",
+        "Informacja dotyczy pojedynczego zdarzenia."
+      ],
+      "reactions": [
+        "Agencje monitorują skutki dla cywilów."
+      ],
+      "whyItMatters": "Incydenty utrudniają pomoc humanitarną.",
+      "context": "Wątek wymaga dalszego potwierdzania.",
+      "watchNext": [
+        "ONZ",
+        "WFP",
+        "lokalne służby"
+      ],
+      "sources": [
+        {
+          "title": "AP",
+          "url": "https://apnews.com/article/6f69abd6470c9b43b75de7b223011486"
+        }
+      ],
+      "tags": [
+        "Gaza",
+        "Bliski Wschód",
+        "cywile"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "un-ai-20261021",
+      "section": "Technologia",
+      "title": "ONZ i wojskowe zastosowania AI",
+      "lead": "Rozpoczęto debatę nad ryzykami militarnej AI.",
+      "whatHappened": "ONZ uruchomiła inicjatywę dotyczącą bezpieczeństwa i odpowiedzialnego użycia AI.",
+      "keyFacts": [
+        "Proces ma charakter międzynarodowy.",
+        "Nie ma jeszcze wiążących reguł.",
+        "Temat dotyczy obronności."
+      ],
+      "reactions": [
+        "Państwa debatują nad odpowiedzialnością."
+      ],
+      "whyItMatters": "Reguły mogą wpłynąć na doktryny obronne.",
+      "context": "To początek procesu, nie przyjęte prawo.",
+      "watchNext": [
+        "ONZ",
+        "państwa członkowskie"
+      ],
+      "sources": [
+        {
+          "title": "AP",
+          "url": "https://apnews.com/article/e0a3c48c91a9de89cab72609d185f658"
+        }
+      ],
+      "tags": [
+        "AI",
+        "ONZ",
+        "obronność"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "deepseek-20261021",
+      "section": "Technologia",
+      "title": "Spór USA–Chiny o DeepSeek",
+      "lead": "Pekin krytykuje ograniczenia chińskiego AI.",
+      "whatHappened": "Chiny protestują przeciw ograniczeniu używania DeepSeek przez federalne agencje USA.",
+      "keyFacts": [
+        "Spór dotyczy administracji publicznej.",
+        "Nie ogłoszono konkretnej retorsji.",
+        "Rywalizacja technologiczna trwa."
+      ],
+      "reactions": [
+        "Pekin zapowiada odpowiedź polityczną."
+      ],
+      "whyItMatters": "Ograniczenia mogą rozdzielać ekosystemy AI.",
+      "context": "To konflikt regulacyjny i geopolityczny.",
+      "watchNext": [
+        "Waszyngton",
+        "Pekin",
+        "regulatorzy AI"
+      ],
+      "sources": [
+        {
+          "title": "AP",
+          "url": "https://apnews.com/article/2bffa5b0131808735280b2c0e6f0d856"
+        }
+      ],
+      "tags": [
+        "DeepSeek",
+        "AI",
+        "USA",
+        "Chiny"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "spacex-ai-20261021",
+      "section": "Gospodarka",
+      "title": "SpaceX rozwija biznes AI",
+      "lead": "AI rośnie w strukturze przychodów spółki.",
+      "whatHappened": "AP opisała wyższy od oczekiwań zysk SpaceX i rosnącą rolę AI.",
+      "keyFacts": [
+        "Starlink pozostaje kluczowy.",
+        "Dane dotyczą wyników kwartalnych.",
+        "Sugestia fuzji z Teslą nie jest transakcją."
+      ],
+      "reactions": [
+        "Rynek obserwuje wpływ AI na biznes."
+      ],
+      "whyItMatters": "AI przenika do infrastruktury satelitarnej.",
+      "context": "Nie ma potwierdzonej fuzji.",
+      "watchNext": [
+        "SpaceX",
+        "Tesla"
+      ],
+      "sources": [
+        {
+          "title": "AP",
+          "url": "https://apnews.com/article/67064446bf0afdf529db55bdec82af69"
+        }
+      ],
+      "tags": [
+        "SpaceX",
+        "AI",
+        "biznes"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "energy-ormuz-20261021",
+      "section": "Gospodarka",
+      "title": "Ormuz pozostaje kluczowy dla energii",
+      "lead": "Napięcia w Zatoce zwiększają wagę obserwacji rynku.",
+      "whatHappened": "Znaczenie cieśniny Ormuz i napięcia wokół Arabii Saudyjskiej utrzymują ryzyko dla transportu energii.",
+      "keyFacts": [
+        "Ormuz jest kluczowym szlakiem ropy.",
+        "Nie potwierdzono nowego skoku cen.",
+        "To karta obserwacyjna."
+      ],
+      "reactions": [
+        "Rynek reaguje na sygnały geopolityczne."
+      ],
+      "whyItMatters": "Energia wpływa na transport i inflację.",
+      "context": "To nie jest prognoza cenowa.",
+      "watchNext": [
+        "Brent",
+        "żegluga",
+        "Rijad"
+      ],
+      "sources": [
+        {
+          "title": "AP",
+          "url": "https://apnews.com/article/68da7d9fc080e0726a2589047466933b"
+        }
+      ],
+      "tags": [
+        "energia",
+        "ropa",
+        "żegluga"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "cyber-monitoring-20261021",
+      "section": "Polityka",
+      "title": "Cyberbezpieczeństwo bez nowego incydentu",
+      "lead": "Nie potwierdzono szerokiego ataku w Polsce.",
+      "whatHappened": "Przegląd źródeł publicznych nie potwierdził nowego cyberataku o skutkach ogólnokrajowych.",
+      "keyFacts": [
+        "Karta ma charakter obserwacyjny.",
+        "Ważne są komunikaty CSIRT NASK.",
+        "Brak potwierdzonego incydentu krajowego."
+      ],
+      "reactions": [
+        "Służby zalecają ostrożność wobec plotek."
+      ],
+      "whyItMatters": "Cyberincydenty mogą szybko zakłócać usługi.",
+      "context": "To nie jest opis nowego zdarzenia.",
+      "watchNext": [
+        "CSIRT NASK",
+        "gov.pl",
+        "UKE"
+      ],
+      "sources": [
+        {
+          "title": "TVN24 — najnowsze",
+          "url": "https://tvn24.pl/najnowsze"
+        }
+      ],
+      "tags": [
+        "cyberbezpieczeństwo",
+        "CSIRT",
+        "monitoring"
+      ],
+      "priority": "low"
+    }
+  ]
+}
