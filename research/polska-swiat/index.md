@@ -1,38 +1,51 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-10-22
+Last updated: 2026-10-23
+
+## Update 2026-10-23
+
+Katarzyna Pełczyńska-Nałęcz zapowiedziała odejście z rządu po sporze o
+dwukadencyjność samorządowców, ale formalne skutki dla gabinetu i Polski 2050
+nie są jeszcze przesądzone. Sejm uchwalił pakiet zmian PIT, CIT i ryczałtu
+oraz przyjął poprawki do ustawy wdrażającej DSA. AP opisała sprzeczne
+komunikaty o ograniczeniach Starshield, a Rosja kontynuowała masowe ataki po
+zgodzie na rozmowy. W Tybecie co najmniej 16 osób zginęło w trzęsieniu ziemi;
+w Cieśninie Ormuz wzrosło ryzyko dla żeglugi i dostaw energii.
+
+Raport: [2026-10-23](runs/2026-10-23.md)
 
 ## Update 2026-10-22
 
-AP opisała ciężki rosyjski ostrzał Kijowa, który zabił co najmniej cztery osoby
-i ranił dziesiątki, kilka godzin po sygnale o możliwym wznowieniu rozmów
-trójstronnych. Wątek Ormuzu wszedł w kolejną fazę ryzyka: Iran zgłosił siedem
-zaatakowanych lub uszkodzonych tankowców, ale AP nie potwierdziła niezależnie
-sprawstwa ani pełnej liczby. W Polsce utrzymują się stopnie CHARLIE, BRAVO i
-BRAVO-CRP do 30 listopada; nie potwierdzono dziś nowego incydentu na terytorium
-RP.
+Rosja zaakceptowała co do zasady wznowienie po 10 listopada trójstronnych
+rozmów technicznych z Ukrainą i USA, ale bez uzgodnionej daty i zawieszenia
+broni. NATO ma otworzyć Ukrainie scentralizowany kanał zakupów uzbrojenia.
+Polska chce zabezpieczeń dla rynku rolnego w negocjacjach akcesyjnych Ukrainy,
+a RMF24 ujawniło umowę o poufności MON z Palantirem; resort zaprzecza
+przekazywaniu danych niejawnych lub wrażliwych.
 
 Raport: [2026-10-22](runs/2026-10-22.md)
 
 ## Update 2026-10-21
 
-AP podała, że Władimir Putin zgodził się co do zasady na wznowienie
-trójstronnych rozmów Rosja–Ukraina–USA po spotkaniu ze Steve’em Witkoffem.
-Równolegle Reuters raportował cztery ofiary nocnych rosyjskich ataków oraz
-uderzenia w ukraińską energetykę, więc nie ma podstaw do uznania, że kanał
-dyplomatyczny oznacza deeskalację. W Polsce od 21 do 23 października trwają na
-Śląsku ćwiczenia ochrony ludności „Wind Strike 26”.
+Rozmowy w Oslo przyniosły deklarację postępu w sprawach gwarancji
+bezpieczeństwa i odbudowy, ale nie zakończyły się porozumieniem pokojowym.
+Ukraina poinformowała o przywróceniu danych wczesnego ostrzegania, podczas gdy
+USA wskazują na ograniczoną dostępność pocisków Patriot. Sejm przyjął dwa
+projekty łagodzące prawo aborcyjne, a NATO zapowiedziało dodatkowe zdolności
+na Morzu Czarnym.
 
 Raport: [2026-10-21](runs/2026-10-21.md)
 
 ## Update 2026-10-20
 
-AP podała, że kolejny rosyjski atak rakietowo-dronowy zabił co najmniej dziewięć
-osób. W Oslo Zełenski rozmawia z wysłannikiem USA Steve’em Witkoffem i
-partnerami europejskimi o obronie powietrznej, produkcji broni i możliwym torze
-negocjacji. Reuters raportował planowany udział Polski w formacie E4, ale premier
-Donald Tusk temu zaprzeczył; status udziału Warszawy pozostaje nierozstrzygnięty.
-RCB utrzymuje komunikat z 19 października o braku zagrożenia na terytorium RP.
+Polska została wymieniona jako uczestnik planowanych rozmów o Ukrainie w Oslo
+w formacie E4, obok Wielkiej Brytanii, Francji i Niemiec. Poranny rosyjski
+atak na Ukrainę uruchomił polskie lotnictwo, alert RCB i czasowe ograniczenia
+na lotniskach w Lublinie i Rzeszowie; alert odwołano bez potwierdzenia
+zagrożenia w Polsce. Ukraina zarzuca Pentagonowi opóźnianie przekazania rakiet
+przechwytujących opłaconych przez Europę. Cersanit i Barlinek wstrzymały
+produkcję w Ukrainie, a Bułgaria wydała europejskie nakazy aresztowania po
+podpaleniu anten Starlink.
 
 Raport: [2026-10-20](runs/2026-10-20.md)
 

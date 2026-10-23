@@ -1,34 +1,27 @@
 # Topic Backlog: polska-swiat
 
-## 2026-10-22 follow-up
-
-| Priority | Item | Reason | Next Step | Status |
-| --- | --- | --- | --- | --- |
-| High | Verify trilateral talks after Kyiv strike | AP reports a heavy attack hours after Putin's agreement in principle | Check White House, Kremlin and Ukraine readouts for date, agenda and any operational de-escalation | Open |
-| High | Verify Hormuz tanker incidents | Iran reports seven damaged or attacked tankers; AP says the claims are not independently confirmed | Check UKMTO, operators, maritime data and insurer advisories for vessel identities, damage and attribution | Open |
-| Medium | Track Polish alarm-level and flank-security updates | CHARLIE, BRAVO and BRAVO-CRP remain active while no new RP incident is confirmed | Recheck MSWiA, RCB, MON and KPRM for changes or verified incidents | Open |
-
-## 2026-10-21 follow-up
-
-| Priority | Item | Reason | Next Step | Status |
-| --- | --- | --- | --- | --- |
-| High | Verify Putin–Witkoff–Ukraine trilateral format | AP reports agreement in principle, but no public agenda, date or Ukrainian confirmation | Check White House, Kremlin, President of Ukraine and European readouts for format and conditions | Open |
-| High | Track whether diplomacy changes Russian attacks | Reuters reports four deaths and energy strikes during the renewed diplomatic channel | Compare the next 24–48 hours of attacks, official statements and any verified pause | Open |
-| Medium | Review Wind Strike 26 outcomes | Śląski Urząd Wojewódzki announced 21–23 October crisis-management exercises | Check the official after-action summary for procedural findings and public-safety changes | Open |
-| High | Verify Sudan market attack casualty count and attribution | The Guardian reports more than 150 killed in one strike and over 250 in recent attacks | Seek independent confirmation from UN, humanitarian agencies and additional reputable wires | Open |
-
-## 2026-10-20 follow-up
-
-| Priority | Item | Reason | Next Step | Status |
-| --- | --- | --- | --- | --- |
-| High | Verify Poland's participation in Oslo talks | Reuters reported Polish participation in E4 while Prime Minister Tusk denied it | Check KPRM, MSZ, Norway, EU and NATO readouts and participant lists | Open |
-| High | Track 20 October Russian strike and Oslo diplomacy | AP reports at least nine killed during renewed talks on air defence and peace | Check final casualty balance, infrastructure damage, air-defence commitments and Witkoff's Russia itinerary | Open |
-| Medium | Track RCB/MON response after 20 October attacks | RCB's 19 October notice says no threat in Poland, but it is tied to the earlier incident | Recheck RCB, MON and DORSZ for any new alert or airspace statement | Open |
-
 ## Active
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track Pełczyńska-Nałęcz departure and coalition consequences | The minister announced she is leaving the government and suggested handing Poland 2050 back to its founder, but formal steps and parliamentary effects are unresolved | Watch the prime minister, president, ministry, Poland 2050 and coalition clubs for the formal dismissal, successor and voting commitments | Open |
+| High | Track 2027 tax package through Senate and presidency | The Sejm changed PIT thresholds and rates while raising the solidarity levy and large-company CIT; business and presidential opposition is expected | Watch Senate amendments, fiscal estimates, business impact assessments and the president's decision | Open |
+| High | Establish responsibility and actual status of Starshield restrictions | U.S. officials, SpaceX and a European official give conflicting accounts; a Senate inquiry has been announced | Watch congressional requests, Pentagon and SpaceX records, technical measurements and any contractual explanation | Open |
+| High | Verify Hormuz tanker incidents and shipping impact | Iran claims seven new tanker incidents, while AP and UKMTO have not independently confirmed them; October attacks and costs are nevertheless elevated | Check UKMTO, operators, insurers, shipping data, CENTCOM and UN diplomacy for verification and market impact | Open |
+| High | Track Tibet earthquake rescue and final toll | A magnitude-7 quake killed at least 16 people, injured dozens and forced mass evacuation in a remote high-altitude area | Watch Reuters, AP, Xinhua and rescue agencies for casualties, isolated settlements, shelter needs and infrastructure damage | Open |
+| Medium | Track Poland–India strategic partnership implementation | The leaders reaffirmed the 2024–2028 action plan and cooperation in defence, technology and critical minerals without a public list of completed contracts | Watch KPRM, India, PAIH and participating firms for signed deals, trade milestones and G20 cooperation | Open |
+| Medium | Track DSA implementation bill at the presidency | Parliament accepted most Senate amendments, including immediate enforcement for selected illegal content, after the president vetoed an earlier version | Watch the 21-day presidential deadline, legal safeguards, regulator procedures and EU response | Open |
+| High | Track post-Oslo trilateral talks and Poland's E4 role | Russia accepted in principle a U.S. proposal for technical U.S.–Russia–Ukraine talks after 10 November, following Oslo consultations that included Poland in E4 | Watch for an official date, delegations, mandate, ceasefire conditions, E4 consultations and any signed text | Open |
+| High | Track NATO procurement channel for Ukraine | NATO has confirmed case-by-case access to its central procurement agency, but implementation details remain limited | Watch NATO and the procurement agency for eligibility, financing, product scope, first contracts and delivery schedules | Open |
+| High | Track Polish safeguards for Ukrainian agriculture in EU accession | Poland has not formally blocked the agriculture cluster but wants protections before automatic market opening, while Hungary has withheld consent | Watch the Council, Commission, Polish government and Ukraine for the common position, transition periods, quotas and support mechanisms | Open |
+| High | Track MON–Palantir confidentiality and data governance | RMF24 disclosed a still-active NDA; MON says no classified or sensitive data were transferred | Seek official project scope, data categories, retention rules, procurement basis, audits and parliamentary oversight | Open |
+| High | Track Sejm abortion bills | The Sejm passed partial decriminalisation and restoration of the fetal-defect ground, but neither bill is yet law | Watch Senate amendments, the president's decision, constitutional review and implementation guidance | Open |
+| High | Track NATO Black Sea reinforcement | NATO announced additional surveillance, reconnaissance and forensic capacity after repeated attacks on merchant shipping | Watch NATO, Bulgaria, Romania and maritime authorities for assets, deployment, investigations and navigation advisories | Open |
+| Medium | Track military training-object incident reviews | Two separate training objects fell outside exercise areas within two days without casualties | Watch Military Police and MON findings on communications, geofencing, emergency termination and public warning procedures | Open |
+| High | Track U.S. approval of European-funded interceptors for Ukraine | Zelenskyy says the Pentagon is delaying missiles already paid for by European partners, while the U.S. reason remains unexplained | Watch Pentagon, White House, Ukraine and donor governments for approval, quantities, delivery and any stockpile constraints | Open |
+| High | Track Cersanit and Barlinek production suspensions in Ukraine | Two major Polish-owned plants have stopped production after attacks, power instability and repeated alerts | Watch company statements, worker support, insurance, damage assessments and conditions for restarting production | Open |
+| Medium | Track Bulgaria Starlink arson arrests and attribution | European arrest warrants were approved for two German suspects, but motive and state sponsorship are not established | Watch Bulgarian and German prosecutors, extradition proceedings, charges, evidence and any independently supported attribution | Open |
+| Medium | Track repeated Polish RCB and airport activations during Russian strikes | Alerts on 20 and 21 October ended without a confirmed threat in Poland, while local governments and disability advocates are asking for better long-term support and accessibility | Watch DORSZ, RCB and PAŻP for repeated activations, operational impact, accessibility changes and any confirmed airspace violation | Open |
 | High | Track implementation of the Ukraine energy ceasefire | Reuters reported no Russian energy-target strikes on 13 October, but attacks continued against cities and logistics | Compare the next 24–48 hours, official statements and any published verification mechanism | Open |
 | High | Track Bulgaria Black Sea merchant-vessel attack | AP reported two ships hit in Bulgaria's EEZ, one sunk, with responsibility still unresolved | Check Bulgarian authorities, NATO, IMO, operators and maritime advisories for attribution and route impact | Open |
 | High | Track Starlink sabotage case and Russian attribution | Polish authorities attribute the arson to Russian intelligence while suspects face proceedings | Check prosecutor, extradition, evidence and confirmation of the reported third arrest | Open |
