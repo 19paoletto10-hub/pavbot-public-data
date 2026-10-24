@@ -1,6 +1,18 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-10-23
+Last updated: 2026-10-24
+
+## Update 2026-10-24
+
+Spór po odejściu Katarzyny Pełczyńskiej-Nałęcz objął obsadę resortu funduszy:
+Donald Tusk ma dwie kandydatki, a Polska 2050 grozi wycofaniem ministrów, lecz
+deklaruje dalsze poparcie parlamentarne dla rządu. Wizyta w Indiach przyniosła
+13 porozumień, cel potrojenia handlu i indyjskie poparcie dla stałej obecności
+Polski w G20. Rosja i Ukraina uzgodniły lokalną operację humanitarną w
+Oleszkach oraz wymieniły po 270 osób. Dron zatopił statek handlowy przy
+Rumunii, a pierwszy transport rosyjskiego diesla wyruszył do USA.
+
+Raport: [2026-10-24](runs/2026-10-24.md)
 
 ## Update 2026-10-23
 
