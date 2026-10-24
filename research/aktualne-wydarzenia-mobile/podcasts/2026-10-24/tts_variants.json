@@ -1,0 +1,21 @@
+{
+  "generated_at": "2026-10-24T10:15:00+02:00",
+  "language": "pl-PL",
+  "speed": 1.1,
+  "variants": [
+    {
+      "id": "female-piper",
+      "status": "success",
+      "path": "audio/female-piper/podcast.mp3",
+      "engine": "piper",
+      "note": "Wygenerowany i zapisany lokalnie."
+    },
+    {
+      "id": "male-xtts",
+      "status": "failed",
+      "path": null,
+      "engine": "xtts-v2",
+      "error": "Kontrolowane przerwanie po przekroczeniu bounded run podczas CPU-only inference; nie utworzono MP3."
+    }
+  ]
+}
