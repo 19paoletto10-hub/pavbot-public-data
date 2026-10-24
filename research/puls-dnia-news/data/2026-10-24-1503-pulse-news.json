@@ -1,0 +1,555 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-10-24",
+  "runTime": "15:03",
+  "status": "Materialna aktualizacja międzynarodowa względem wydania 12:03.",
+  "headline": "Puls Dnia: nowe fakty z Jordanii, Kenii i Wielkiej Brytanii",
+  "summary": "Potwierdzono wzrost bilansu ataku w Jordanii do ośmiu ofiar, drugi zgon w kenijskim ognisku Bundibugyo oraz aktualizację bursztynowego ostrzeżenia Met Office dla sztormu Boelo. Krajowy monitoring RCB pozostaje aktywny.",
+  "checkedSources": [
+    {
+      "title": "TVN24 — najnowsze (24.10.2026)",
+      "url": "https://tvn24.pl/najnowsze"
+    },
+    {
+      "title": "TVN24 — świat",
+      "url": "https://tvn24.pl/swiat/s-2"
+    },
+    {
+      "title": "BBC World Service",
+      "url": "https://wspartners.bbc.com/episode/w1730nlpx1g8fds"
+    },
+    {
+      "title": "CNN",
+      "url": "https://edition.cnn.com/"
+    },
+    {
+      "title": "KW PSP Katowice — Wind Strike 26",
+      "url": "https://www.gov.pl/web/kwpsp-katowice/wojewodzkie-cwiczenia-z-zakresu-zarzadzania-kryzysowego-ochrony-ludnosci-i-obrony-cywilnej-wind-strike-26"
+    },
+    {
+      "title": "RCB — mapa komunikatów",
+      "url": "https://www.gov.pl/web/rcb/mapa-strony"
+    },
+    {
+      "title": "AP — rozmowy i Bliski Wschód",
+      "url": "https://apnews.com/"
+    },
+    {
+      "title": "AP — atak w kościele w Jordanii",
+      "url": "https://apnews.com/article/19599ce75b9ab6749a1e1bf2ff66f2ab"
+    },
+    {
+      "title": "WHO — Ebola w Afryce Wschodniej i Środkowej",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON622"
+    },
+    {
+      "title": "Met Office — ostrzeżenie Storm Boelo",
+      "url": "https://www.metoffice.gov.uk/about-us/news-and-media/media-centre/weather-and-climate-news/2026/amber-warning-issued-for-storm-boelo-as-storm-austen-moves-through"
+    },
+    {
+      "title": "AP — Middle East update",
+      "url": "https://apnews.com/article/707ad41a79d384ff4715902ce3d60df5"
+    },
+    {
+      "title": "Kenya News Agency — Ebola",
+      "url": "https://www.kenyanews.go.ke/kenya-records-second-ebola-death-as-confirmed-cases-rise-to-nine/"
+    },
+    {
+      "title": "Met Office — UK warnings",
+      "url": "https://weather.metoffice.gov.uk/warnings-and-advice/uk-warnings?ampsn=1A27D0CC-8669-6400-7563-0CDB03782707_3_WM"
+    }
+  ],
+  "items": [
+    {
+      "id": "jordan-church-attack-20261024",
+      "section": "Świat",
+      "title": "Bilans ataku w kościele w Jordanii wzrósł do ośmiu ofiar",
+      "lead": "Po strzelaninie podczas pogrzebu zmarła kolejna osoba.",
+      "whatHappened": "Władze Jordanii poinformowały, że liczba ofiar strzelaniny podczas pogrzebu w kościele w Karaku wzrosła do ośmiu.",
+      "keyFacts": [
+        "Atak wydarzył się podczas pogrzebu w południowej Jordanii.",
+        "AP podała wcześniej siedem ofiar i 40 rannych; w sobotę poinformowano o ósmej ofierze.",
+        "Władze prowadzą postępowanie, a Jordania ogłosiła żałobę."
+      ],
+      "reactions": [
+        "Władze zapowiedziały zdecydowaną reakcję i dalsze śledztwo."
+      ],
+      "whyItMatters": "To poważna aktualizacja bilansu ataku i sytuacji bezpieczeństwa w Jordanii.",
+      "context": "Aktualizacja nie oznacza potwierdzenia rozszerzenia zagrożenia poza miejsce ataku.",
+      "watchNext": [
+        "władze Jordanii",
+        "bilans rannych",
+        "ustalenia śledztwa"
+      ],
+      "sources": [
+        {
+          "title": "AP — aktualizacja z Jordanii",
+          "url": "https://apnews.com/article/707ad41a79d384ff4715902ce3d60df5"
+        }
+      ],
+      "tags": [
+        "Jordania",
+        "bezpieczeństwo",
+        "Bliski Wschód"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "kenya-ebola-20261024",
+      "section": "Świat",
+      "title": "Kenia: drugi zgon w ognisku wirusa Bundibugyo",
+      "lead": "Liczba ofiar w Kenii wzrosła do dwóch.",
+      "whatHappened": "Kenijskie Ministerstwo Zdrowia poinformowało o śmierci 65-letniej kobiety, bliskiej krewnej pierwszego pacjenta; to drugi zgon w kraju.",
+      "keyFacts": [
+        "Kenia zgłosiła dziewięć potwierdzonych przypadków.",
+        "Zmarła pacjentka była wcześniej objęta kwarantanną.",
+        "Władze podają, że przypadki pozostają w jednym klastrze znanych kontaktów."
+      ],
+      "reactions": [
+        "Służby zdrowia kontynuują izolację i dochodzenie epidemiologiczne."
+      ],
+      "whyItMatters": "Wzrost liczby zgonów zwiększa znaczenie monitoringu transgranicznego i komunikatów zdrowotnych.",
+      "context": "Bundibugyo to rzadka odmiana wirusa Ebola; nie ma potwierdzenia transmisji społecznej w Kenii.",
+      "watchNext": [
+        "komunikaty kenijskiego ministerstwa zdrowia",
+        "WHO",
+        "nowe przypadki poza klastrem"
+      ],
+      "sources": [
+        {
+          "title": "Kenya News Agency — komunikat o drugim zgonie",
+          "url": "https://www.kenyanews.go.ke/kenya-records-second-ebola-death-as-confirmed-cases-rise-to-nine/"
+        },
+        {
+          "title": "AP — Kenya announces 2nd Ebola death",
+          "url": "https://apnews.com/article/c96067b4b2fc8d3e35a97e32455e996c"
+        }
+      ],
+      "tags": [
+        "Kenia",
+        "Ebola",
+        "zdrowie publiczne"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "storm-boelo-uk-20261024",
+      "section": "Alerty",
+      "title": "Storm Boelo: bursztynowe ostrzeżenie w Wielkiej Brytanii",
+      "lead": "Silny wiatr może powodować przerwy w dostawach i zakłócenia transportu.",
+      "whatHappened": "Met Office zaktualizował bursztynowe ostrzeżenie w związku ze sztormem Boelo; najsilniejsze porywy są prognozowane w Szkocji i części północnej Anglii.",
+      "keyFacts": [
+        "Ostrzeżenie obowiązuje od sobotniego wieczoru do niedzieli.",
+        "Prognozowane są porywy 60–70 mph, lokalnie do 80 mph.",
+        "Możliwe są odwołania i opóźnienia drogowe, kolejowe, lotnicze i promowe."
+      ],
+      "reactions": [
+        "Służby transportowe ostrzegają przed utrudnieniami i możliwymi przerwami w dostawach."
+      ],
+      "whyItMatters": "Ostrzeżenie wskazuje na wysokie ryzyko lokalnych zakłóceń infrastruktury i podróży.",
+      "context": "To ostrzeżenie pogodowe dla Wielkiej Brytanii, bez bezpośredniego związku z sytuacją w Polsce.",
+      "watchNext": [
+        "Met Office",
+        "komunikaty przewoźników",
+        "lokalne ostrzeżenia powodziowe"
+      ],
+      "sources": [
+        {
+          "title": "Met Office — UK warnings",
+          "url": "https://weather.metoffice.gov.uk/warnings-and-advice/uk-warnings?ampsn=1A27D0CC-8669-6400-7563-0CDB03782707_3_WM"
+        },
+        {
+          "title": "Traffic Scotland — Storm Boelo",
+          "url": "https://www.traffic.gov.scot/travel-news/projects-and-events/amber-wind-warning-storm-boelo"
+        }
+      ],
+      "tags": [
+        "Wielka Brytania",
+        "pogoda",
+        "transport"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "russia-ukraine-talks-20261021",
+      "section": "Polityka",
+      "title": "Kreml deklaruje gotowość do rozmów trójstronnych",
+      "lead": "Moskwa sygnalizuje powrót do formatu USA–Rosja–Ukraina.",
+      "whatHappened": "Według AP doradca Kremla przekazał, że Władimir Putin zgodził się na wznowienie trójstronnych rozmów z udziałem Rosji, Ukrainy i Stanów Zjednoczonych. Rozmowy mają dotyczyć powojennego systemu bezpieczeństwa.",
+      "keyFacts": [
+        "Informację podała AP 21 października 2026.",
+        "To deklaracja strony rosyjskiej, a nie podpisane porozumienie.",
+        "Nie ustalono jeszcze publicznie terminu ani warunków spotkania."
+      ],
+      "reactions": [
+        "Waszyngton i Kijów muszą potwierdzić format oraz agendę.",
+        "Dotychczasowe stanowiska stron pozostają rozbieżne."
+      ],
+      "whyItMatters": "Może powstać nowy kanał dyplomatyczny, ale sama deklaracja nie oznacza zawieszenia walk ani przełomu negocjacyjnego.",
+      "context": "Witkoff spotkał się wcześniej z Putinem, a administracja USA zabiega o rozmowy dotyczące zakończenia wojny.",
+      "watchNext": [
+        "Potwierdzenie przez USA i Ukrainę.",
+        "Termin i skład rozmów.",
+        "Ewentualne warunki dotyczące bezpieczeństwa Ukrainy."
+      ],
+      "sources": [
+        {
+          "title": "Kreml i rozmowy trójstronne",
+          "url": "https://apnews.com/article/3f00c0c6fd10bab948c2c3f8502e0a91"
+        }
+      ],
+      "tags": [
+        "Rosja",
+        "Ukraina",
+        "USA",
+        "dyplomacja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "us-ukraine-20261021",
+      "section": "Polityka",
+      "title": "Presja USA na zakończenie wojny",
+      "lead": "Waszyngton i Kijów utrzymują kanał rozmów.",
+      "whatHappened": "AP i Reuters opisały presję Trumpa oraz rozmowy Zełenskiego z przedstawicielami USA.",
+      "keyFacts": [
+        "Nie ma potwierdzonego porozumienia.",
+        "Rozmowy dotyczą dalszego wsparcia.",
+        "Stanowisko USA pozostaje zmienne."
+      ],
+      "reactions": [
+        "Europejscy sojusznicy obserwują Waszyngton."
+      ],
+      "whyItMatters": "Polityka USA wpływa na bezpieczeństwo Europy.",
+      "context": "Nie ma harmonogramu rozmów pokojowych.",
+      "watchNext": [
+        "Biały Dom",
+        "Kijów",
+        "UE"
+      ],
+      "sources": [
+        {
+          "title": "Reuters",
+          "url": "https://www.marketscreener.com/news/zelenskiy-to-meet-witkoff-as-trump-praises-russia-and-rebukes-ukraine-ce785cd8d989f52d"
+        },
+        {
+          "title": "AP",
+          "url": "https://apnews.com/article/140895c6c0a1682c46f4fe197e056996"
+        }
+      ],
+      "tags": [
+        "USA",
+        "Ukraina",
+        "dyplomacja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "ukraine-casualties-20261021",
+      "section": "Świat",
+      "title": "Skutki ataków w Ukrainie",
+      "lead": "Bilans ofiar i zniszczeń pozostaje niepełny.",
+      "whatHappened": "AP opisała ofiary i uszkodzenia budynków po rosyjskich atakach.",
+      "keyFacts": [
+        "Wśród rannych są dzieci.",
+        "Dane są bieżącym bilansem medialnym.",
+        "Akcja ratunkowa trwała."
+      ],
+      "reactions": [
+        "Służby oceniają szkody."
+      ],
+      "whyItMatters": "Ataki uderzają w ludność cywilną.",
+      "context": "To nie jest końcowe podsumowanie władz.",
+      "watchNext": [
+        "władze Ukrainy",
+        "PAP"
+      ],
+      "sources": [
+        {
+          "title": "AP",
+          "url": "https://apnews.com/article/140895c6c0a1682c46f4fe197e056996"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Rosja",
+        "cywile"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "saudi-airport-20261022",
+      "section": "Bezpieczeństwo",
+      "title": "Obrona Arabii Saudyjskiej",
+      "lead": "Londyn zapowiada defensywne patrole RAF.",
+      "whatHappened": "Wielka Brytania rozszerza wsparcie obronne Arabii Saudyjskiej przeciw atakom Huti.",
+      "keyFacts": [
+        "Misja ma charakter defensywny.",
+        "Celem jest ochrona infrastruktury.",
+        "Region pozostaje napięty."
+      ],
+      "reactions": [
+        "Londyn podkreśla potrzebę rozwiązania politycznego."
+      ],
+      "whyItMatters": "Napięcia mogą wpływać na żeglugę i energię.",
+      "context": "To kolejny etap umiędzynarodowienia obrony Zatoki.",
+      "watchNext": [
+        "Londyn",
+        "Rijad",
+        "żegluga"
+      ],
+      "sources": [
+        {
+          "title": "AP",
+          "url": "https://apnews.com/article/3e56f4679565c985fd036302168a4f79"
+        }
+      ],
+      "tags": [
+        "Arabia Saudyjska",
+        "Huti",
+        "Wielka Brytania"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "riyadh-airport-ormuz-20261021",
+      "section": "Gospodarka",
+      "title": "Rijad częściowo wznawia ruch lotniczy",
+      "lead": "Lotnisko w stolicy Arabii Saudyjskiej działa w ograniczonym trybie.",
+      "whatHappened": "AP podała, że lotnisko w Rijadzie wznowiło ograniczony ruch po wcześniejszych zakłóceniach związanych z napięciami w regionie. Jednocześnie utrzymuje się ryzyko dla statków próbujących przepływać przez cieśninę Ormuz.",
+      "keyFacts": [
+        "Ruch lotniczy wznowiono częściowo.",
+        "Napięcia dotyczą także żeglugi handlowej w Ormuzie.",
+        "W regionie utrzymuje się presja bezpieczeństwa i energetyczna."
+      ],
+      "reactions": [
+        "Przewoźnicy i operatorzy statków aktualizują procedury bezpieczeństwa.",
+        "Zakłócenia mogą wpływać na transport i ceny energii."
+      ],
+      "whyItMatters": "Normalizacja transportu jest niepełna, a Ormuz pozostaje wąskim gardłem dla światowych dostaw energii.",
+      "context": "Wcześniejsze ataki i ostrzeżenia ograniczały ruch lotniczy oraz morski w regionie.",
+      "watchNext": [
+        "Komunikaty lotniska i linii lotniczych.",
+        "Bezpieczeństwo statków w Ormuzie.",
+        "Wpływ na ceny ropy i ubezpieczenia transportu."
+      ],
+      "sources": [
+        {
+          "title": "Rijad i Ormuz",
+          "url": "https://apnews.com/article/f9b9c553a5b3c689fc3c8c5be1d75b94"
+        }
+      ],
+      "tags": [
+        "Arabia Saudyjska",
+        "Ormuz",
+        "energia",
+        "transport"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "gaza-20261021",
+      "section": "Świat",
+      "title": "Sytuacja humanitarna w Gazie",
+      "lead": "Bieżące doniesienia mówią o kolejnych ofiarach.",
+      "whatHappened": "AP opisała śmiertelny atak na mieszkanie w Gazie.",
+      "keyFacts": [
+        "Nie ma pełnego bilansu dnia.",
+        "Sytuacja ludności cywilnej pozostaje niestabilna.",
+        "Informacja dotyczy pojedynczego zdarzenia."
+      ],
+      "reactions": [
+        "Agencje monitorują skutki dla cywilów."
+      ],
+      "whyItMatters": "Incydenty utrudniają pomoc humanitarną.",
+      "context": "Wątek wymaga dalszego potwierdzania.",
+      "watchNext": [
+        "ONZ",
+        "WFP",
+        "lokalne służby"
+      ],
+      "sources": [
+        {
+          "title": "AP",
+          "url": "https://apnews.com/article/6f69abd6470c9b43b75de7b223011486"
+        }
+      ],
+      "tags": [
+        "Gaza",
+        "Bliski Wschód",
+        "cywile"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "un-ai-20261021",
+      "section": "Technologia",
+      "title": "ONZ i wojskowe zastosowania AI",
+      "lead": "Rozpoczęto debatę nad ryzykami militarnej AI.",
+      "whatHappened": "ONZ uruchomiła inicjatywę dotyczącą bezpieczeństwa i odpowiedzialnego użycia AI.",
+      "keyFacts": [
+        "Proces ma charakter międzynarodowy.",
+        "Nie ma jeszcze wiążących reguł.",
+        "Temat dotyczy obronności."
+      ],
+      "reactions": [
+        "Państwa debatują nad odpowiedzialnością."
+      ],
+      "whyItMatters": "Reguły mogą wpłynąć na doktryny obronne.",
+      "context": "To początek procesu, nie przyjęte prawo.",
+      "watchNext": [
+        "ONZ",
+        "państwa członkowskie"
+      ],
+      "sources": [
+        {
+          "title": "AP",
+          "url": "https://apnews.com/article/e0a3c48c91a9de89cab72609d185f658"
+        }
+      ],
+      "tags": [
+        "AI",
+        "ONZ",
+        "obronność"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "deepseek-20261021",
+      "section": "Technologia",
+      "title": "Spór USA–Chiny o DeepSeek",
+      "lead": "Pekin krytykuje ograniczenia chińskiego AI.",
+      "whatHappened": "Chiny protestują przeciw ograniczeniu używania DeepSeek przez federalne agencje USA.",
+      "keyFacts": [
+        "Spór dotyczy administracji publicznej.",
+        "Nie ogłoszono konkretnej retorsji.",
+        "Rywalizacja technologiczna trwa."
+      ],
+      "reactions": [
+        "Pekin zapowiada odpowiedź polityczną."
+      ],
+      "whyItMatters": "Ograniczenia mogą rozdzielać ekosystemy AI.",
+      "context": "To konflikt regulacyjny i geopolityczny.",
+      "watchNext": [
+        "Waszyngton",
+        "Pekin",
+        "regulatorzy AI"
+      ],
+      "sources": [
+        {
+          "title": "AP",
+          "url": "https://apnews.com/article/2bffa5b0131808735280b2c0e6f0d856"
+        }
+      ],
+      "tags": [
+        "DeepSeek",
+        "AI",
+        "USA",
+        "Chiny"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "spacex-ai-20261021",
+      "section": "Gospodarka",
+      "title": "SpaceX rozwija biznes AI",
+      "lead": "AI rośnie w strukturze przychodów spółki.",
+      "whatHappened": "AP opisała wyższy od oczekiwań zysk SpaceX i rosnącą rolę AI.",
+      "keyFacts": [
+        "Starlink pozostaje kluczowy.",
+        "Dane dotyczą wyników kwartalnych.",
+        "Sugestia fuzji z Teslą nie jest transakcją."
+      ],
+      "reactions": [
+        "Rynek obserwuje wpływ AI na biznes."
+      ],
+      "whyItMatters": "AI przenika do infrastruktury satelitarnej.",
+      "context": "Nie ma potwierdzonej fuzji.",
+      "watchNext": [
+        "SpaceX",
+        "Tesla"
+      ],
+      "sources": [
+        {
+          "title": "AP",
+          "url": "https://apnews.com/article/67064446bf0afdf529db55bdec82af69"
+        }
+      ],
+      "tags": [
+        "SpaceX",
+        "AI",
+        "biznes"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "energy-ormuz-20261021",
+      "section": "Gospodarka",
+      "title": "Ormuz pozostaje kluczowy dla energii",
+      "lead": "Napięcia w Zatoce zwiększają wagę obserwacji rynku.",
+      "whatHappened": "Znaczenie cieśniny Ormuz i napięcia wokół Arabii Saudyjskiej utrzymują ryzyko dla transportu energii.",
+      "keyFacts": [
+        "Ormuz jest kluczowym szlakiem ropy.",
+        "Nie potwierdzono nowego skoku cen.",
+        "To karta obserwacyjna."
+      ],
+      "reactions": [
+        "Rynek reaguje na sygnały geopolityczne."
+      ],
+      "whyItMatters": "Energia wpływa na transport i inflację.",
+      "context": "To nie jest prognoza cenowa.",
+      "watchNext": [
+        "Brent",
+        "żegluga",
+        "Rijad"
+      ],
+      "sources": [
+        {
+          "title": "AP",
+          "url": "https://apnews.com/article/68da7d9fc080e0726a2589047466933b"
+        }
+      ],
+      "tags": [
+        "energia",
+        "ropa",
+        "żegluga"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "cyber-monitoring-20261021",
+      "section": "Polityka",
+      "title": "Cyberbezpieczeństwo bez nowego incydentu",
+      "lead": "Nie potwierdzono szerokiego ataku w Polsce.",
+      "whatHappened": "Przegląd źródeł publicznych nie potwierdził nowego cyberataku o skutkach ogólnokrajowych.",
+      "keyFacts": [
+        "Karta ma charakter obserwacyjny.",
+        "Ważne są komunikaty CSIRT NASK.",
+        "Brak potwierdzonego incydentu krajowego."
+      ],
+      "reactions": [
+        "Służby zalecają ostrożność wobec plotek."
+      ],
+      "whyItMatters": "Cyberincydenty mogą szybko zakłócać usługi.",
+      "context": "To nie jest opis nowego zdarzenia.",
+      "watchNext": [
+        "CSIRT NASK",
+        "gov.pl",
+        "UKE"
+      ],
+      "sources": [
+        {
+          "title": "TVN24 — najnowsze",
+          "url": "https://tvn24.pl/najnowsze"
+        }
+      ],
+      "tags": [
+        "cyberbezpieczeństwo",
+        "CSIRT",
+        "monitoring"
+      ],
+      "priority": "low"
+    }
+  ]
+}
